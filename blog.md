@@ -7,20 +7,17 @@ permalink: /blog/
   <div>
     <p class="section-label">Separate track</p>
     <h1>Blog</h1>
-    <p>Essays, notes, videos, podcasts, and fragments. A living notebook beside the more stable academic sections of this website.</p>
+    <p class="tagline small">Essays, notes, videos, podcasts, and fragments, a living notebook on Ottoman history, intellectual life, and public writing.</p>
   </div>
-  <div class="blog-mini-card">
-    <span>Browse by</span>
-    <strong>theme · format · date · series</strong>
-  </div>
+  <div class="blog-mark">B</div>
 </section>
 
-<section class="blog-toolbar" aria-label="Blog search and browsing tools">
-  <label class="search-box">
+<section class="blog-tools">
+  <label class="search-box" for="post-search">
     <span>Search</span>
-    <input id="blogSearch" type="search" placeholder="Search essays, notes, podcasts, videos...">
+    <input id="post-search" type="search" placeholder="Search essays, notes, podcasts, videos..." autocomplete="off">
   </label>
-  <div class="toolbar-links">
+  <div class="tool-row">
     <a href="#themes">Themes</a>
     <a href="#formats">Formats</a>
     <a href="#archive">Date</a>
@@ -29,89 +26,69 @@ permalink: /blog/
   </div>
 </section>
 
-<section class="browse-board">
-  <div id="themes" class="browse-box">
-    <p class="browse-title">Themes</p>
-    <button data-filter="ottoman">Ottoman Empire</button>
-    <button data-filter="caucasus">Caucasus</button>
-    <button data-filter="archives">Archives</button>
-    <button data-filter="public life">Public Life</button>
-    <button data-filter="books">Books</button>
+<section class="browse-wall">
+  <div id="themes">
+    <h3>Themes</h3>
+    <a href="#">Ottoman Empire</a>
+    <a href="#">Intellectual Life</a>
+    <a href="#">Print Culture</a>
+    <a href="#">Caucasus</a>
+    <a href="#">Public Life</a>
   </div>
-  <div id="formats" class="browse-box">
-    <p class="browse-title">Formats</p>
-    <button data-filter="essay">Essays</button>
-    <button data-filter="note">Notes</button>
-    <button data-filter="video">Videos</button>
-    <button data-filter="podcast">Podcast</button>
+  <div id="formats">
+    <h3>Formats</h3>
+    <a href="#essays">Essays</a>
+    <a href="#podcasts">Podcasts</a>
+    <a href="#videos">Videos</a>
+    <a href="#notes">Notes and Fragments</a>
   </div>
-  <div id="archive" class="browse-box">
-    <p class="browse-title">Date</p>
-    <button data-filter="2026">2026</button>
-    <button data-filter="2025">2025</button>
-    <button data-filter="2024">2024</button>
+  <div id="archive">
+    <h3>By Date</h3>
+    <a href="#">2026</a>
+    <a href="#">2025</a>
+    <a href="#">2024</a>
   </div>
-</section>
-
-<section class="featured-section">
-  <div class="section-headline">
-    <p class="section-label">Featured</p>
-    <h2>Essays</h2>
-  </div>
-  <div class="feature-grid">
-    {% assign essay_posts = site.posts | where: "format", "essay" %}
-    {% for post in essay_posts limit:3 %}
-    {% include post-card.html post=post %}
-    {% else %}
-    <p class="muted">Featured essays will appear here.</p>
-    {% endfor %}
+  <div id="series">
+    <h3>Series</h3>
+    <a href="#">Archive Notes</a>
+    <a href="#">Publics and Print</a>
+    <a href="#">Roads and Borderlands</a>
   </div>
 </section>
 
-<section class="featured-section two-col">
-  <div>
-    <div class="section-headline">
-      <p class="section-label">Featured</p>
-      <h2>Podcasts</h2>
-    </div>
-    {% assign podcast_posts = site.posts | where: "format", "podcast" %}
-    {% for post in podcast_posts limit:2 %}
-    {% include post-card.html post=post %}
-    {% else %}
-    <p class="muted">Podcast episodes will appear here.</p>
-    {% endfor %}
-  </div>
-  <div>
-    <div class="section-headline">
-      <p class="section-label">Featured</p>
-      <h2>Videos</h2>
-    </div>
-    {% assign video_posts = site.posts | where: "format", "video" %}
-    {% for post in video_posts limit:2 %}
-    {% include post-card.html post=post %}
-    {% else %}
-    <p class="muted">Videos will appear here.</p>
-    {% endfor %}
+<section id="essays" class="featured-section">
+  <div class="section-heading-row"><h2>Featured Essays</h2><a href="#">View all essays →</a></div>
+  <div class="card-grid post-search-area">
+    {% assign essays = site.posts | where: 'format', 'essay' %}
+    {% for post in essays limit:3 %}{% include post-card.html post=post %}{% endfor %}
   </div>
 </section>
 
-<section class="featured-section" id="all-posts">
-  <div class="section-headline">
-    <p class="section-label">Archive</p>
-    <h2>Latest notes and fragments</h2>
-  </div>
-  <div class="post-list" id="postList">
-    {% for post in site.posts %}
-    <article class="post-card searchable" data-search="{{ post.title | downcase }} {{ post.excerpt | strip_html | downcase }} {{ post.tags | join: ' ' | downcase }} {{ post.format | downcase }} {{ post.date | date: '%Y' }}">
-      <p class="post-meta">{{ post.format | default: post.category | upcase }} · {{ post.date | date: "%B %-d, %Y" }}</p>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-      {% if post.tags %}<div class="tag-row">{% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
-    </article>
-    {% else %}
-    <p class="muted">No posts yet. The first entry will appear here once published.</p>
-    {% endfor %}
+<section id="podcasts" class="featured-section">
+  <div class="section-heading-row"><h2>Featured Podcasts</h2><a href="#">View all podcasts →</a></div>
+  <div class="media-row post-search-area">
+    {% assign podcasts = site.posts | where: 'format', 'podcast' %}
+    {% for post in podcasts limit:3 %}{% include post-card.html post=post %}{% endfor %}
   </div>
 </section>
 
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<section id="videos" class="featured-section">
+  <div class="section-heading-row"><h2>Featured Videos</h2><a href="#">View all videos →</a></div>
+  <div class="card-grid post-search-area">
+    {% assign videos = site.posts | where: 'format', 'video' %}
+    {% for post in videos limit:3 %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+
+<section id="notes" class="featured-section">
+  <div class="section-heading-row"><h2>Latest Notes and Fragments</h2><a href="#">View all notes →</a></div>
+  <div class="note-list post-search-area">
+    {% for post in site.posts limit:6 %}
+      <article class="note-item" data-search="{{ post.title | downcase }} {{ post.tags | join: ' ' | downcase }} {{ post.description | downcase }}">
+        <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 100 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

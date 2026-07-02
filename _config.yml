@@ -1,36 +1,18 @@
 title: Muhammet Topal
-description: >-
-  Historian of the late Ottoman world: political opposition, print culture,
-  biography, empire, and the Caucasus.
-url: "https://muhammettopal.com"
-# For your current GitHub preview at https://m-topal.github.io/muhammettopal, use:
-baseurl: "/muhammettopal"
-# When you connect muhammettopal.com, change baseurl to: ""
-
-author: Muhammet Topal
 email: muhammettopal29@arizona.edu
-
+description: >-
+  Historian of the late Ottoman world: political opposition, print culture, biography, and the Caucasus.
+baseurl: "/muhammettopal"
+url: "https://m-topal.github.io"
 markdown: kramdown
-permalink: /blog/:categories/:title/
-
+permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
-
-feed:
-  path: blog/feed.xml
-
+collections: []
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
       layout: post
-  - scope:
-      path: ""
-    values:
-      layout: page
-
-exclude:
-  - README.md
-  - README_INSTALL.md
-  
+      author: Muhammet Topal

@@ -1,6 +1,10 @@
-<article class="feature-card searchable" data-search="{{ include.post.title | downcase }} {{ include.post.excerpt | strip_html | downcase }} {{ include.post.tags | join: ' ' | downcase }} {{ include.post.format | downcase }} {{ include.post.date | date: '%Y' }}">
-  <p class="post-meta">{{ include.post.format | default: include.post.category | upcase }} · {{ include.post.date | date: "%B %-d, %Y" }}</p>
-  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
-  <p>{{ include.post.excerpt | strip_html | truncate: 130 }}</p>
-  {% if include.post.tags %}<div class="tag-row">{% for tag in include.post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
+{% assign post = include.post %}
+<article class="post-card" data-search="{{ post.title | downcase }} {{ post.tags | join: ' ' | downcase }} {{ post.description | downcase }} {{ post.format | downcase }}">
+  <div class="post-thumb {{ post.format | default: 'essay' }}">
+    {% if post.format == 'podcast' %}<span>Podcast</span>{% elsif post.format == 'video' %}<span>▶</span>{% else %}<span>Essay</span>{% endif %}
+  </div>
+  <p class="post-meta">{{ post.format | default: post.category | upcase }} · {{ post.date | date: "%b %-d, %Y" }}</p>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+  {% if post.tags %}<p class="tags">{% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}</p>{% endif %}
 </article>
