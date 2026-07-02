@@ -1,38 +1,28 @@
-# Muhammet Topal site revision
+# Muhammet Topal website revision
 
-This version changes the site into a one-page academic homepage with anchor sections, plus a separate Blog page.
+This package is a clean, almost white, one page academic site for GitHub Pages.
 
 ## What changed
 
-- Almost-white background instead of straw/old paper color.
-- Centered masthead: name above, keywords below.
-- Navigation tabs sit in the middle.
-- Research, Teaching, Publications, CV, and Contact are homepage sections reached by scrolling.
-- Clicking the navigation jumps directly to the relevant section.
-- Blog is a separate visual track, shown as an outlined pill on the right.
-- CV section includes a download button and an embedded PDF frame.
-- Blog page includes search, browse tools, featured essays, podcasts, videos, and latest notes.
+- The homepage uses a centered name, keyword line, and centered navigation.
+- Research, Teaching, Publications, CV, and Contact appear as scroll sections on the homepage.
+- The top navigation jumps to the correct section.
+- Blog is separate and visually distinct, but it keeps the same clean white style.
+- The color palette is white, black, gray, and very soft lines. There is no red or beige paper tone.
+- The CV is included as a downloadable and embedded PDF.
+- Your portrait photo is included in `assets/images/muhammet-topal.jpg`.
 
-## How to install
+## Uploading to GitHub
 
-1. Unzip this folder.
-2. Copy the contents into your GitHub repository, replacing the existing files.
-3. Commit the changes.
-4. Put your CV PDF at:
+Replace your current site files with everything in this folder.
 
-   assets/cv/Muhammet_Topal_CV.pdf
-
-5. Replace the portrait placeholder in `index.md` with a real image later.
-
-## Custom domain note
-
-Current preview setting in `_config.yml`:
+For the current preview URL `https://m-topal.github.io/muhammettopal/`, keep this in `_config.yml`:
 
 ```yaml
 baseurl: "/muhammettopal"
 ```
 
-When you connect `muhammettopal.com`, change it to:
+When you later connect `muhammettopal.com`, change it to:
 
 ```yaml
 baseurl: ""
@@ -40,26 +30,27 @@ baseurl: ""
 
 ## Adding a blog post
 
-Create a new file inside `_posts/` with this naming pattern:
+Create a new Markdown file in `_posts`, using this naming pattern:
 
-`YYYY-MM-DD-title.md`
+```text
+YYYY-MM-DD-title-of-post.md
+```
 
-Example:
+Use this template:
 
 ```markdown
 ---
-title: "A Note on Ottoman Anti-Imperialism"
-date: 2026-07-10
+layout: post
+title: "Post title"
+date: 2026-07-02
 format: essay
-category: Essays
-tags: [Ottoman Empire, anti-imperialism, press]
-description: "A short note on Ottoman responses to European imperialism."
-read_time: "6 min read"
+category: essay
+tags: [Ottoman Empire, print culture]
+description: "One sentence description."
+read_time: "8 min read"
 ---
 
 Write the post here.
 ```
 
-
-## Color revision
-This package uses an almost white newspaper background: `#fdfdfc`, light gray rules, white cards, and deep red accent. It removes the yellow straw/paper tone from the previous version.
+Formats can be: `essay`, `note`, `podcast`, `video`, or `fragment`.

@@ -3,39 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
+  <meta name="description" content="Historian of the late Ottoman world, intellectual life, political opposition, print culture, and the Caucasus.">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
+  <meta property="og:description" content="Historian of the late Ottoman world, intellectual life, political opposition, print culture, and the Caucasus.">
+  <meta property="og:image" content="{{ '/assets/images/muhammet-topal-square.jpg' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="Muhammet Topal Blog" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="masthead">
-      <a class="site-title" href="{{ '/' | relative_url }}">Muhammet Topal</a>
-      <p class="site-keywords">Late Ottoman Empire · intellectual history · print culture · political opposition · Caucasus</p>
-    </div>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <div class="nav-main">
-        <a href="{{ '/#home' | relative_url }}">Home</a>
+  <main class="site-wrap">
+    <header class="masthead">
+      <div class="site-title">Muhammet Topal</div>
+      <div class="keywords">Late Ottoman history · intellectual life · print culture · political opposition · Caucasus</div>
+    </header>
+    <nav class="nav-line" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/#research' | relative_url }}">Research</a>
         <a href="{{ '/#teaching' | relative_url }}">Teaching</a>
         <a href="{{ '/#publications' | relative_url }}">Publications</a>
         <a href="{{ '/#cv' | relative_url }}">CV</a>
         <a href="{{ '/#contact' | relative_url }}">Contact</a>
+        <a class="nav-blog {% if page.url contains '/blog/' %}current{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
       </div>
-      <a class="blog-portal {% if page.url contains '/blog' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
     </nav>
-  </header>
-
-  <main class="site-main">
     {{ content }}
+    <footer class="footer">
+      <div>© {{ site.time | date: '%Y' }} Muhammet Topal</div>
+      <div><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a></div>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
-    <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
-    <span><a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
-  </footer>
-  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
 </body>
 </html>

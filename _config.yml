@@ -1,18 +1,8 @@
 title: Muhammet Topal
 email: muhammettopal29@arizona.edu
-description: >-
-  Historian of the late Ottoman world: political opposition, print culture, biography, and the Caucasus.
+description: Historian of the late Ottoman world, intellectual life, print culture, political opposition, and the Caucasus.
+url: ""
 baseurl: "/muhammettopal"
-url: "https://m-topal.github.io"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-plugins:
-  - jekyll-feed
-collections: []
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      author: Muhammet Topal
+plugins: []
