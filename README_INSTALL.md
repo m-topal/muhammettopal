@@ -59,3 +59,7 @@ read_time: "6 min read"
 
 Write the post here.
 ```
+
+
+## Color revision
+This package uses an almost white newspaper background: `#fdfdfc`, light gray rules, white cards, and deep red accent. It removes the yellow straw/paper tone from the previous version.
