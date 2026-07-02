@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="post-meta">{{ page.category | upcase }} · {{ page.date | date: "%B %-d, %Y" }}</p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.tags %}
+  <div class="tag-row">
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.format == "video" and page.video %}
+  <div class="embed"><iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe></div>
+  {% endif %}
+  {% if page.format == "podcast" and page.audio %}
+  <div class="embed embed-audio"><iframe src="{{ page.audio }}" frameborder="0"></iframe></div>
+  {% endif %}
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  {% include share.html title=page.title url=page.url %}
+  {% include comments.html %}
+</article>

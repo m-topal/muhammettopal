@@ -1,0 +1,36 @@
+title: Muhammet Topal
+description: >-
+  Historian of the late Ottoman world: political opposition, print culture,
+  biography, and the Caucasus.
+url: "https://muhammettopal.com"
+baseurl: ""
+
+author: Muhammet Topal
+email: muhammettopal29@arizona.edu
+
+markdown: kramdown
+permalink: /blog/:categories/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: blog/feed.xml
+
+exclude:
+  - README.md

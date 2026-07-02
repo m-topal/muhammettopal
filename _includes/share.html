@@ -1,0 +1,11 @@
+<div class="share">
+  <button class="share-toggle" type="button" aria-expanded="false">Share</button>
+  <div class="share-options" hidden>
+    <a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u={{ include.url | absolute_url | url_encode }}">Facebook</a>
+    <a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url={{ include.url | absolute_url | url_encode }}&text={{ include.title | url_encode }}">X</a>
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url={{ include.url | absolute_url | url_encode }}">LinkedIn</a>
+    <a target="_blank" rel="noopener" href="https://www.academia.edu/">Academia.edu</a>
+    <a target="_blank" rel="noopener" href="https://wa.me/?text={{ include.title | url_encode }}%20{{ include.url | absolute_url | url_encode }}">WhatsApp</a>
+    <button class="share-copy" type="button" data-url="{{ include.url | absolute_url }}">Copy link</button>
+  </div>
+</div>
