@@ -1,26 +1,22 @@
 ---
 layout: default
 ---
-<article class="post">
-  <p class="post-meta">{{ page.category | upcase }} · {{ page.date | date: "%B %-d, %Y" }}</p>
-  <h1 class="post-title">{{ page.title }}</h1>
+<article class="post-shell">
+  <p class="section-label">{{ page.category | default: page.format | default: 'Blog' }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="post-byline">{{ page.date | date: "%B %-d, %Y" }}{% if page.format %} · {{ page.format | capitalize }}{% endif %}{% if page.reading_time %} · {{ page.reading_time }}{% endif %}</p>
   {% if page.tags %}
-  <div class="tag-row">
+  <div class="tag-row post-tags">
     {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
   </div>
   {% endif %}
-
-  {% if page.format == "video" and page.video %}
-  <div class="embed"><iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe></div>
-  {% endif %}
-  {% if page.format == "podcast" and page.audio %}
-  <div class="embed embed-audio"><iframe src="{{ page.audio }}" frameborder="0"></iframe></div>
-  {% endif %}
-
-  <div class="post-body">
+  <div class="post-content">
     {{ content }}
   </div>
-
-  {% include share.html title=page.title url=page.url %}
-  {% include comments.html %}
+  <div class="post-share">
+    <span>Share</span>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}">LinkedIn</a>
+    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | uri_escape }}">X</a>
+    <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}">Email</a>
+  </div>
 </article>

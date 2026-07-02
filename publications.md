@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 title: Publications
 permalink: /publications/
 ---
 <p class="section-label">Publications</p>
 <h1>Publications</h1>
 
-<h2 style="margin-top:32px;">Books &amp; translations</h2>
+<h2>Books &amp; translations</h2>
 <div class="pub-list">
   <div class="pub-row">
     <div class="pub-year">2026</div>
@@ -14,7 +14,7 @@ permalink: /publications/
   </div>
 </div>
 
-<h2 style="margin-top:40px;">Articles &amp; chapters</h2>
+<h2>Articles &amp; chapters</h2>
 <div class="pub-list">
   <div class="pub-row">
     <div class="pub-year">2026</div>
@@ -30,7 +30,7 @@ permalink: /publications/
   </div>
 </div>
 
-<h2 style="margin-top:40px;">Selected conference presentations</h2>
+<h2>Selected conference presentations</h2>
 <div class="pub-list">
   <div class="pub-row"><div class="pub-year">2026</div><div class="pub-entry">"Mountaineering as the Covenant Experience of the Dual," University of Lorraine, Metz.</div></div>
   <div class="pub-row"><div class="pub-year">2026</div><div class="pub-entry">"Organizing Exit: Political Agency Beyond State-Centered Muslim Politics," MEHAT, University of Chicago.</div></div>
@@ -38,4 +38,4 @@ permalink: /publications/
   <div class="pub-row"><div class="pub-year">2025</div><div class="pub-entry">"Speaking Truth to Power: Mehmed Murad Bey's Individuation and Political Socialization," MESA Annual Meeting, Washington DC.</div></div>
 </div>
 
-<p style="margin-top:32px;"><a href="{{ '/cv/' | relative_url }}">See the full CV for complete publication and conference lists →</a></p>
+<p class="muted">For a complete list of publications, presentations, awards, and teaching, see the full CV.</p>

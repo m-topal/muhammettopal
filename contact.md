@@ -1,18 +1,17 @@
 ---
-layout: default
+layout: page
 title: Contact
 permalink: /contact/
 ---
 <p class="section-label">Contact</p>
 <h1>Contact</h1>
-<p>Email: <a href="mailto:muhammettopal29@arizona.edu">muhammettopal29@arizona.edu</a><br>
-University of Arizona, Marshall Building, #456R, 845 Park Ave, Tucson, AZ 85719</p>
 
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" rows="5" placeholder="Message" required></textarea>
-  <button type="submit">Send message</button>
-</form>
-<!-- Before publishing: replace YOUR_FORM_ID above with your real Formspree form ID (formspree.io) -->
+<p class="lead">For academic correspondence, teaching inquiries, conference invitations, or writing-related matters, please contact me by email.</p>
 
+<div class="contact-card">
+  <p><strong>Email</strong><br><a href="mailto:muhammettopal29@arizona.edu">muhammettopal29@arizona.edu</a></p>
+  <p><strong>Affiliation</strong><br>Department of History and Middle Eastern &amp; North African Studies, University of Arizona</p>
+  <p><strong>Office</strong><br>Marshall Building, #456R, 845 Park Ave, Tucson, AZ 85719</p>
+</div>
+
+<p class="muted">Add ORCID, Academia.edu, Google Scholar, LinkedIn, or other professional profiles here when ready.</p>

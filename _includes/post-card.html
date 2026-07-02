@@ -1,0 +1,6 @@
+<article class="feature-card searchable" data-search="{{ include.post.title | downcase }} {{ include.post.excerpt | strip_html | downcase }} {{ include.post.tags | join: ' ' | downcase }} {{ include.post.format | downcase }} {{ include.post.date | date: '%Y' }}">
+  <p class="post-meta">{{ include.post.format | default: include.post.category | upcase }} · {{ include.post.date | date: "%B %-d, %Y" }}</p>
+  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+  <p>{{ include.post.excerpt | strip_html | truncate: 130 }}</p>
+  {% if include.post.tags %}<div class="tag-row">{% for tag in include.post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
+</article>
