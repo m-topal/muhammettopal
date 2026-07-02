@@ -9,6 +9,11 @@ permalink: /
     <h1>Muhammet Topal</h1>
     <p class="hero-tagline">Historian of the late Ottoman world: political opposition, print culture, biography, and the Caucasus.</p>
     <p>PhD candidate in History and Middle Eastern and North African Studies, University of Arizona, completed jointly with INALCO, Paris. This site holds my research, teaching, publications, and CV. The <a href="{{ '/blog/' | relative_url }}">Blog</a>, alongside it, is a running notebook of essays, notes, video, and audio.</p>
+    <div class="social-links">
+      <a href="https://orcid.org/0009-0001-3403-0414" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://arizona.academia.edu/MuhammetTopal" target="_blank" rel="noopener">Academia.edu</a>
+      <a href="mailto:muhammettopal29@arizona.edu">Email</a>
+    </div>
   </div>
   <div class="hero-photo">Portrait photo<br>(coming soon)</div>
 </section>

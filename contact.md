@@ -14,4 +14,5 @@ University of Arizona, Marshall Building, #456R, 845 Park Ave, Tucson, AZ 85719<
   <textarea name="message" rows="5" placeholder="Message" required></textarea>
   <button type="submit">Send message</button>
 </form>
-<p style="font-size:12px; color:var(--muted); margin-top:8px;">Note: replace YOUR_FORM_ID above with your real Formspree form ID before this goes live.</p>
+<!-- Before publishing: replace YOUR_FORM_ID above with your real Formspree form ID (formspree.io) -->
+
