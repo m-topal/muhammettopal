@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<article class="post-page">
-  <p class="post-meta">{{ page.format | default: page.category | upcase }} · {{ page.date | date: "%B %-d, %Y" }}</p>
+<article class="page narrow">
+  <p class="meta">{{ page.format | default: page.category | upcase }} · {{ page.date | date: "%B %-d, %Y" }}</p>
   <h1>{{ page.title }}</h1>
   {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
-  <div class="post-content">
+  <div class="prose">
     {{ content }}
   </div>
 </article>

@@ -4,35 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
-  <meta name="description" content="Historian of the late Ottoman world, intellectual life, political opposition, print culture, and the Caucasus.">
+  <meta name="description" content="Late Ottoman history, intellectual history, political opposition, biography, public life, and the Caucasus.">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
-  <meta property="og:description" content="Historian of the late Ottoman world, intellectual life, political opposition, print culture, and the Caucasus.">
-  <meta property="og:image" content="{{ '/assets/images/muhammet-topal-square.jpg' | absolute_url }}">
+  <meta property="og:description" content="Late Ottoman history, intellectual history, political opposition, biography, public life, and the Caucasus.">
+  <meta property="og:image" content="{{ '/assets/img/muhammet-topal-square.jpg' | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="Muhammet Topal Blog" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
-  <main class="site-wrap">
-    <header class="masthead">
-      <div class="site-title">Muhammet Topal</div>
-      <div class="keywords">Late Ottoman history · intellectual life · print culture · political opposition · Caucasus</div>
-    </header>
-    <nav class="nav-line" aria-label="Main navigation">
-      <div class="nav-inner">
+  <div class="site-shell">
+    <header class="top">
+      <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
+      <p class="keywords">late Ottoman world · intellectual history · political opposition · biography · public life · Caucasus</p>
+      <nav class="nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/#research' | relative_url }}">Research</a>
-        <a href="{{ '/#teaching' | relative_url }}">Teaching</a>
-        <a href="{{ '/#publications' | relative_url }}">Publications</a>
-        <a href="{{ '/#cv' | relative_url }}">CV</a>
-        <a href="{{ '/#contact' | relative_url }}">Contact</a>
-        <a class="nav-blog {% if page.url contains '/blog/' %}current{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
-      </div>
-    </nav>
-    {{ content }}
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
     <footer class="footer">
-      <div>© {{ site.time | date: '%Y' }} Muhammet Topal</div>
-      <div><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a></div>
+      <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
+      <span>
+        <a href="mailto:muhammettopal29@arizona.edu">Email</a> ·
+        <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> ·
+        <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a>
+      </span>
     </footer>
-  </main>
+  </div>
 </body>
 </html>

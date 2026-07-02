@@ -3,9 +3,9 @@ layout: post
 title: "Episode 1: Intellectuals in Exile"
 date: 2026-07-08
 format: podcast
-category: podcast
-tags: [exile, intellectual history, Ottoman Empire]
-description: "A sample podcast episode page for conversations on exile, translation, and political imagination."
+category: Podcast
+tags: [exile, intellectual life, Ottoman world]
+description: "A placeholder podcast entry for future audio conversations."
 read_time: "32 min"
 ---
-Embed a podcast player here later, for example from Spotify, SoundCloud, or another podcast host.
+Embed your podcast player here when ready.

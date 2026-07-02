@@ -1,23 +1,20 @@
 ---
-layout: page
+layout: default
 title: Research
 permalink: /research/
 ---
-<p class="section-label">Research</p>
-<h1>Research</h1>
+<article class="page">
+  <p class="label">Research</p>
+  <h1>The making of intellectual and political life in the late Ottoman world.</h1>
+  <div class="prose">
+    <p>My research examines how political thought and intellectual life took shape in the late Ottoman Empire through networks that connected multiple imperial and intellectual centers. I study intellectuals, journalists, scholars, reformers, and bureaucrats not as passive recipients of European ideas, but as active participants in the making and remaking of the global language of modernity. My work brings together intellectual history, biography, historical sociology, and comparative empire studies in order to understand how ideas moved through texts, institutions, personal ties, administrative practices, and political crises.</p>
 
-<p class="lead">My work examines the making of public intellectual life, political opposition, and historical consciousness in the late Ottoman world, with particular attention to biography, print culture, imperial borderlands, and the Caucasus.</p>
+    <p>My dissertation, <em>The Making of an Ottoman Public Intellectual: Mehmed Murad Bey Between Friendly Advisor and Critical Opponent</em>, traces the intellectual and political transformation of Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, bureaucrat, political exile, Young Turk leader, and later a marginalized critic. Murad’s trajectory offers a way to study the broader conditions that made public intellectual life and oppositional politics possible in the late Ottoman world. Moving between the Caucasus, Istanbul, Paris, Geneva, and Cairo, he occupied shifting positions between loyalty and dissent, state service and public criticism, advisory intimacy and political distance.</p>
 
-<h2>Current project</h2>
-<p>My dissertation follows the intellectual and political trajectory of Mizancı Mehmed Murad Bey from the Russian Caucasus to Istanbul, Paris, Geneva, and Cairo. It uses biography not as an end in itself, but as a method for reconstructing the conditions under which a late Ottoman public intellectual could be formed, recognized, displaced, and contested.</p>
+    <p>Methodologically, I combine close archival work with intellectual biography, global microhistory, social network analysis, and comparative historical perspectives. I work across Ottoman Turkish, French, Russian, English, Arabic, and Persian materials, including newspapers, personal correspondence, diplomatic reports, archival registers, memoirs, and institutional records. This allows me to connect individual trajectories to broader structures of power, while also showing how those structures were experienced, negotiated, and sometimes contested by historical actors.</p>
 
-<h2>Research areas</h2>
-<div class="topic-grid">
-  <div><h3>Late Ottoman intellectual history</h3><p>Political thought, opposition, public opinion, constitutionalism, and the intellectual life of the press.</p></div>
-  <div><h3>Biography and microhistory</h3><p>Life-writing, individuation, mobility, and the use of a single trajectory to open wider imperial questions.</p></div>
-  <div><h3>Caucasus and empire</h3><p>Russian imperial education, Muslim highland societies, migration, exile, and Ottoman borderland politics.</p></div>
-  <div><h3>Print culture and public life</h3><p>Journalism, translation, historical writing, literary form, and the making of political publics.</p></div>
-</div>
+    <p>The dissertation makes three main interventions. First, it challenges teleological and nationalist narratives that treat the Young Turk movement as an inevitable precursor to the Turkish Republic. Instead, it situates late Ottoman opposition within a transimperial field shaped by Ottoman, Russian, Mediterranean, and European currents. Second, it contributes to the study of political subjectivity by examining how feelings of loyalty, disappointment, betrayal, and obligation shaped intellectual life. Third, it argues for the value of biography as a method for studying the relationship between structures and lived experience.</p>
 
-<h2>Methods and sources</h2>
-<p>I work across Ottoman Turkish, Turkish, French, Arabic, Persian, Russian, and English materials, including newspapers, memoirs, petitions, administrative records, literary texts, and historical works.</p>
+    <p>My future research extends these questions in three directions. The first turns more fully to the long nineteenth century, especially the Tanzimat reforms, earlier Ottoman conceptions of authority and justice, and the relationship between reform and political belonging. The second connects Ottoman and Middle Eastern history to the political sociology of the contemporary region, asking how imperial and post-imperial legacies continue to shape public life. The third develops biographical and transnational approaches as both research methods and pedagogical tools, using individual lives to illuminate larger historical processes.</p>
+  </div>
+</article>
