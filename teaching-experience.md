@@ -6,61 +6,155 @@ permalink: /teaching/experience/
 <article class="page wide teaching-experience-page">
   <p class="label">Teaching</p>
   <h1>Teaching Experience</h1>
+
   <div class="subnav">
-  <a href="{{ '/teaching/experience/' | relative_url }}">Teaching Experience</a>
-  <a href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
-  <a href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
-</div>
+    <a href="{{ '/teaching/experience/' | relative_url }}">Teaching Experience</a>
+    <a href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
+    <a href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
+  </div>
 
-  <div class="experience-grid">
-    <section class="experience-card">
+  <section class="teaching-shelf">
+    <div class="teaching-shelf-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true">🎓</span>
       <h2>Instructor of Record</h2>
-      <h3>Introduction to Political Islam</h3>
-      <p class="meta-line">HIST, MENA, POL 385 · University of Arizona</p>
-      <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. It examines religion and politics through questions of modernity, colonialism, state power, social movements, ideology, media, and public life.</p>
+    </div>
 
-      <h3>Middle East Ethnic and Religious Minorities</h3>
-      <p class="meta-line">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
-      <p>This course examines the histories and contemporary experiences of ethnic and religious minorities in the Middle East through empire, nationalism, citizenship, violence, memory, migration, and coexistence.</p>
+    <div class="teaching-shelf-row">
+      <a class="teaching-course-card featured-course-card" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">
+        <p class="meta">HIST, MENA, POL 385 · University of Arizona</p>
+        <h3>Introduction to Political Islam</h3>
+        <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. Course site, schedule, and materials will live here.</p>
+        <span class="course-card-action">Open course site</span>
+      </a>
 
-      <h3>Religion of Islam</h3>
-      <p class="meta-line">MENA, REL 160B · University of Arizona</p>
-      <p>This course introduces students to Islamic traditions, texts, practices, institutions, and historical debates while emphasizing the diversity of Muslim societies across time and place.</p>
-    </section>
+      <a class="teaching-course-card" href="#middle-east-minorities">
+        <p class="meta">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
+        <h3>Middle East Ethnic and Religious Minorities</h3>
+        <p>Histories and contemporary experiences of ethnic and religious minorities in the Middle East through empire, nationalism, citizenship, violence, memory, migration, and coexistence.</p>
+      </a>
 
-    <section class="experience-card">
-      <h2>Course Design</h2>
-      <p>My teaching experience includes independent course design, full semester instruction, recurring instruction of Political Islam, and sample lectures in related fields. This experience trained me to design courses around clear learning objectives, weekly themes, reading arcs, classroom activities, and assignments that build over time.</p>
-      <p>My teaching portfolio prepares me to offer concrete survey and upper level courses, including World History, World Civilizations, Europe from 1789 to 1914, The Interwar Period, The Cold War World, The World from the Atomic Bomb to the Internet, The Middle East since 1800, The Ottoman Empire to 1800, The Ottoman Empire in the Long Nineteenth Century, Political Islam, Islamic Civilization, MENA Methods, Ottoman Biographies, and Historical Methods.</p>
-    </section>
+      <a class="teaching-course-card" href="#religion-of-islam">
+        <p class="meta">MENA, REL 160B · University of Arizona</p>
+        <h3>Religion of Islam</h3>
+        <p>An introduction to Islamic traditions, texts, practices, institutions, and historical debates, with attention to the diversity of Muslim societies across time and place.</p>
+      </a>
+    </div>
+  </section>
 
-    <section class="experience-card">
-      <h2>Teaching Sensitive Subjects</h2>
-      <p>Several of my courses ask students to discuss subjects that can be intellectually, politically, or personally sensitive: religion and politics, Islam and public life, sectarianism, ethnic and religious minorities, colonialism, nationalism, migration, war, political violence, gender, racism, Islamophobia, antisemitism, and contemporary conflicts in the Middle East and beyond.</p>
-      <p>I treat these subjects as historical and analytical problems rather than as occasions for debate without structure. I set clear expectations for discussion, distinguish criticism of ideas and institutions from attacks on persons or communities, provide historical context before asking students to evaluate arguments, and use primary sources, media analysis, maps, timelines, and guided questions to slow down judgment. My aim is to create a classroom where disagreement is possible without turning complexity into hostility.</p>
-    </section>
+  <section class="teaching-shelf">
+    <div class="teaching-shelf-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true">🧭</span>
+      <h2>Teaching Assistantship</h2>
+    </div>
 
-    <section class="experience-card">
-      <h2>Graduate Teaching Associate</h2>
-      <ul class="clean-list">
-        <li>Middle Eastern Humanities, University of Arizona</li>
-        <li>History of the Modern Middle East, University of Arizona</li>
-        <li>Islamic Civilization: Traditional and Modern, University of Arizona</li>
-        <li>What is Politics?, University of Arizona</li>
-        <li>The Roman Empire: Rulers and Ruled, University of Arizona</li>
-      </ul>
-      <p>These assignments gave me experience across Middle Eastern studies, Islamic studies, political thought, ancient history, and general education teaching.</p>
-    </section>
+    <div class="teaching-shelf-row">
+      <a class="teaching-course-card" href="#middle-eastern-humanities">
+        <p class="meta">University of Arizona</p>
+        <h3>Middle Eastern Humanities</h3>
+        <p>Teaching support in Middle Eastern humanities, discussion, reading, and student work.</p>
+      </a>
 
-    <section class="experience-card">
-      <h2>Earlier Teaching in Istanbul</h2>
-      <p class="meta-line">Eylül Academy, Istanbul</p>
-      <p>Before my doctoral work, I taught world history, human geography, and continental philosophy to senior high school students and recent graduates preparing for Turkey’s competitive university entrance exams. This experience taught me how to explain difficult concepts clearly, sustain attention, and move between large historical narratives and concrete examples.</p>
-    </section>
+      <a class="teaching-course-card" href="#modern-middle-east">
+        <p class="meta">University of Arizona</p>
+        <h3>History of the Modern Middle East</h3>
+        <p>Teaching support for modern Middle Eastern history, historical context, sources, and interpretation.</p>
+      </a>
 
-    <section class="experience-card">
-      <h2>Classroom Practices</h2>
-      <p>I regularly use rotating group discussion, primary source workshops, maps, timelines, vocabulary sheets, low stakes reading questions, media analysis, short lectures, and student led comparison. These activities help students move from unfamiliar material to interpretation without treating historical complexity as inaccessible.</p>
-    </section>
+      <a class="teaching-course-card" href="#islamic-civilization">
+        <p class="meta">University of Arizona</p>
+        <h3>Islamic Civilization: Traditional and Modern</h3>
+        <p>Teaching support across Islamic studies, historical change, institutions, texts, and traditions.</p>
+      </a>
+
+      <a class="teaching-course-card" href="#what-is-politics">
+        <p class="meta">University of Arizona</p>
+        <h3>What is Politics?</h3>
+        <p>Teaching support in political thought, concepts, institutions, and public life.</p>
+      </a>
+
+      <a class="teaching-course-card" href="#roman-empire">
+        <p class="meta">University of Arizona</p>
+        <h3>The Roman Empire: Rulers and Ruled</h3>
+        <p>Teaching support in ancient history, empire, rule, society, and historical comparison.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="teaching-shelf">
+    <div class="teaching-shelf-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true">📚</span>
+      <h2>Other Teaching Experience</h2>
+    </div>
+
+    <div class="teaching-shelf-row">
+      <a class="teaching-course-card" href="#eylul-world-history">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3>World History</h3>
+        <p>Instruction for senior high school students and recent graduates preparing for competitive university entrance exams.</p>
+      </a>
+
+      <a class="teaching-course-card" href="#eylul-human-geography">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3>Human Geography</h3>
+        <p>Conceptual and exam oriented instruction connecting space, society, population, environment, and historical change.</p>
+      </a>
+
+      <a class="teaching-course-card" href="#eylul-continental-philosophy">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3>Continental Philosophy</h3>
+        <p>Teaching difficult concepts clearly while moving between broad intellectual narratives and concrete examples.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="teaching-shelf">
+    <div class="teaching-shelf-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true">📜</span>
+      <h2>College Teaching Certificate</h2>
+    </div>
+
+    <div class="teaching-shelf-row">
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>Course Design</h3>
+        <p>Designing courses around clear learning objectives, weekly arcs, assignments, classroom activities, and transparent expectations.</p>
+      </a>
+
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>Learner Centered Teaching</h3>
+        <p>Thinking from the perspective of student learning, participation, skills, and accessible but demanding classroom design.</p>
+      </a>
+
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>Teaching Sensitive Subjects</h3>
+        <p>Structured discussion around religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and public debate.</p>
+      </a>
+
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>Teaching and Learning Technologies</h3>
+        <p>Using digital tools deliberately for media analysis, presentations, collaborative work, accessibility, and course materials.</p>
+      </a>
+
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>Teaching as Research</h3>
+        <p>Treating classroom design, participation, and assessment as practices that can be studied, revised, and improved.</p>
+      </a>
+
+      <a class="teaching-course-card" href="{{ '/teaching/certificate/' | relative_url }}">
+        <p class="meta">Graduate Certificate in College Teaching</p>
+        <h3>College Teaching Practice</h3>
+        <p>Refining syllabi, assignments, rubrics, classroom activities, and student feedback practices.</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="teaching-detail-notes">
+    <h2>Teaching approach</h2>
+    <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
+    <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
   </div>
 </article>

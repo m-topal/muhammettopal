@@ -1,0 +1,70 @@
+# Upload only these changed files
+
+Do NOT upload the full site ZIP.
+
+This patch contains only the files changed for the teaching/blog update:
+
+Root folder:
+- teaching.md
+- teaching-experience.md
+- blog.md
+- SAFE_UPDATE_MANIFEST.md
+
+Inside assets/css:
+- style.css
+
+Inside assets/js:
+- site.js
+
+## Browser upload instructions
+
+### Step 1: root files
+Go to:
+https://github.com/m-topal/muhammettopal
+
+Click:
+Add file > Upload files
+
+Upload only these files from this patch root:
+- teaching.md
+- teaching-experience.md
+- blog.md
+- SAFE_UPDATE_MANIFEST.md
+
+Commit message:
+safe teaching and blog update root files
+
+Click Commit changes.
+
+### Step 2: CSS file
+Go to:
+https://github.com/m-topal/muhammettopal/tree/main/assets/css
+
+Click:
+Add file > Upload files
+
+Upload only:
+- style.css
+
+Commit message:
+update site css for teaching and blog
+
+Click Commit changes.
+
+### Step 3: JS file
+Go to:
+https://github.com/m-topal/muhammettopal/tree/main/assets/js
+
+Click:
+Add file > Upload files
+
+Upload only:
+- site.js
+
+Commit message:
+update blog filtering script
+
+Click Commit changes.
+
+Then wait 2 or 3 minutes and hard refresh:
+Cmd + Shift + R
