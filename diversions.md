@@ -27,8 +27,10 @@ permalink: /diversions/
       <img src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
       <figcaption>Feeding the squirrels in the Grand Canyon.</figcaption>
     </figure>
+  </div>
 
-    <figure>
+  <div class="diversions-feature-grid">
+    <figure class="diversions-feature-large">
       <img src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Riding a mustang named Sequoia in Tucson">
       <figcaption>Riding a mustang in Tucson. Her name is Sequoia.</figcaption>
     </figure>
@@ -36,6 +38,11 @@ permalink: /diversions/
     <figure>
       <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with Clìo and Eryka">
       <figcaption>Fishing trip with Clìo and Eryka.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
+      <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
   </div>
 </article>

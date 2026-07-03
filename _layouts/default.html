@@ -15,7 +15,22 @@
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
 
   <div class="site-shell">
-    <header class="top">
+    <header class="top site-top">
+      <div class="site-utility-bar" aria-label="Site tools">
+        <details class="language-menu language-menu-top">
+          <summary>Language</summary>
+          <div class="language-panel">
+            <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
+            <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
+            <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
+            <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
+            <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
+            <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
+            <span>Machine translation</span>
+          </div>
+        </details>
+      </div>
+
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
     </header>
@@ -32,21 +47,6 @@
         <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
         <a href="{{ '/cv/' | relative_url }}">CV</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
-        <a href="{{ '/search/' | relative_url }}">Search</a>
-
-        <details class="language-menu">
-          <summary>Language</summary>
-          <div class="language-panel">
-            <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
-            <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
-            <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
-            <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
-            <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
-            <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
-            <span>Machine translation</span>
-          </div>
-        </details>
-
         <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
       </nav>
     </div>
