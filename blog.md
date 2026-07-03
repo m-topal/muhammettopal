@@ -14,26 +14,25 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
 
     <div class="blog-filter-row" aria-label="Blog categories">
       <button class="blog-filter active" data-filter="all" type="button">All</button>
-      <button class="blog-filter" data-filter="essay" type="button">Essays</button>
-      <button class="blog-filter" data-filter="podcast" type="button">Podcasts</button>
-      <button class="blog-filter" data-filter="video" type="button">Videos</button>
-    </div>
-
-    <div class="blog-sort-row">
-      <label for="blogSort">Sort</label>
-      <select id="blogSort">
-        <option value="newest">Newest first</option>
-        <option value="oldest">Oldest first</option>
-        <option value="title">Title</option>
-      </select>
+      <a class="blog-filter blog-filter-link" href="{{ '/blog/essays/' | relative_url }}">Essays</a>
+      <a class="blog-filter blog-filter-link" href="{{ '/blog/podcasts/' | relative_url }}">Podcasts</a>
+      <a class="blog-filter blog-filter-link" href="{{ '/blog/videos/' | relative_url }}">Videos</a>
     </div>
   </section>
 
   <section class="blog-shelf" data-blog-section="essay">
-    <div class="blog-shelf-heading">
-      <span class="blog-shelf-icon" aria-hidden="true">📝</span>
+    <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/essays/' | relative_url }}">
+      <span class="blog-shelf-icon typewriter-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" focusable="false">
+          <path d="M13 6h22v12H13z"></path>
+          <path d="M8 22h32a4 4 0 0 1 4 4v12H4V26a4 4 0 0 1 4-4z"></path>
+          <path d="M11 38h26v4H11z"></path>
+          <path d="M15 27h3M22 27h3M29 27h3M36 27h3M12 32h24"></path>
+        </svg>
+      </span>
       <h2>Essays</h2>
-    </div>
+      <span class="view-all">View all</span>
+    </a>
 
     <div class="blog-shelf-row">
       {% for post in site.posts %}
@@ -49,6 +48,7 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             {% if post.description %}
               <p>{{ post.description }}</p>
             {% endif %}
+
             <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
               <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
               <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
@@ -63,10 +63,11 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
   </section>
 
   <section class="blog-shelf" data-blog-section="podcast">
-    <div class="blog-shelf-heading">
+    <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/podcasts/' | relative_url }}">
       <span class="blog-shelf-icon" aria-hidden="true">🎙️</span>
       <h2>Podcasts</h2>
-    </div>
+      <span class="view-all">View all</span>
+    </a>
 
     <div class="blog-shelf-row">
       {% for post in site.posts %}
@@ -82,6 +83,7 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             {% if post.description %}
               <p>{{ post.description }}</p>
             {% endif %}
+
             <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
               <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
               <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
@@ -96,10 +98,11 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
   </section>
 
   <section class="blog-shelf" data-blog-section="video">
-    <div class="blog-shelf-heading">
+    <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/videos/' | relative_url }}">
       <span class="blog-shelf-icon" aria-hidden="true">🎬</span>
       <h2>Videos</h2>
-    </div>
+      <span class="view-all">View all</span>
+    </a>
 
     <div class="blog-shelf-row">
       {% for post in site.posts %}
