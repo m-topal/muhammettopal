@@ -3,11 +3,8 @@ layout: default
 title: Home
 permalink: /
 ---
-<div class="home-ornament" aria-hidden="true">
-  <svg viewBox="0 0 860 70" preserveAspectRatio="none">
-    <path d="M20 39 C170 18 355 5 455 20 C475 23 482 28 482 35 L845 35" />
-    <path d="M44 58 L845 58" />
-  </svg>
+<div class="home-site-note">
+  This website brings together my research, teaching, publications, presentations, CV, and public writing. My Blog is a separate space for essays, notes, videos, podcasts, and fragments.
 </div>
 
 <section class="home-wrap-section">
@@ -19,8 +16,6 @@ permalink: /
     <p>I am a PhD candidate in History and Middle Eastern and North African Studies at the University of Arizona. My current project examines the making of Ottoman public intellectual life through the life and writings of Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, novelist, teacher of history, bureaucrat, and public figure in the late Ottoman world.</p>
 
     <p>My academic training has taken me through Istanbul, Paris, and Tucson. I received my BA in History from Boğaziçi University, studied political science at Sciences Po, completed an MA at the École pratique des hautes études in Paris, and continued my doctoral work at the University of Arizona. Across these places, my work has remained centered on Ottoman intellectual life, historical writing, biography, and the relationship between texts, institutions, and public life.</p>
-
-    <p>This website brings together my research, teaching, publications, presentations, CV, and public writing. My Blog is a separate space for essays, notes, videos, podcasts, and fragments.</p>
 
     <p class="home-links">For more details, see my <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
   </div>

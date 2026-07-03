@@ -402,3 +402,29 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
     stroke-width: 4;
   }
 }
+
+
+/* v11 correction: replace mistaken drawn divider with subtle homepage note */
+.home-ornament {
+  display: none !important;
+}
+
+.home-site-note {
+  max-width: 830px;
+  margin: -14px auto 34px;
+  padding: 0 18px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: center;
+  letter-spacing: .01em;
+}
+
+@media (max-width: 700px) {
+  .home-site-note {
+    margin: -6px auto 24px;
+    font-size: 13px;
+    text-align: left;
+  }
+}

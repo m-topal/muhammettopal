@@ -29,3 +29,8 @@ This version adds Extra Curricular in place of Service, adds uploaded colloquium
 ## Version 10 update
 
 This version fixes the visible publication titles, adds the MENAS department profile link under the contact address, justifies long text on desktop, removes the duplicate Grand Canyon image from the bottom of Diversions, and adds a small hand-drawn divider between the navigation tabs and the homepage text/image section.
+
+
+## Version 11 correction
+
+This version removes the mistaken drawn line from the homepage and relocates the website description sentence from the lower body text to the subtle header space between the navigation area and the homepage image/text section.
