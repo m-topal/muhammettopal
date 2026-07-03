@@ -2,9 +2,10 @@
 layout: post
 title: "Mountaineering as a Critique of Modernity and Colonialism"
 date: 2026-07-03
-categories: video
+category: video
 format: video
 youtube_id: MzwBaoCErMo
+image: https://img.youtube.com/vi/MzwBaoCErMo/maxresdefault.jpg
 description: "A short video reflection on mountaineering as a practice through which modernity along with its colonial dimensions, environmental imagination, and the sublime can be critically examined."
 ---
 

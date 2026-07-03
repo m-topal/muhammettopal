@@ -9,18 +9,73 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
   <h1>My Blog</h1>
   <p class="lead">Essays, notes, videos, podcasts, and fragments.</p>
 
-  <section class="blog-tools" aria-label="Blog tools">
-    <input id="blogSearch" class="search-input" type="search" placeholder="Search the blog">
+
+  <section class="blog-tools blog-advanced-tools" aria-label="Advanced blog search">
+    <div class="advanced-blog-grid">
+      <label>
+        <span>Search</span>
+        <input id="blogSearch" class="search-input" type="search" placeholder="Search title, description, text, tags">
+      </label>
+
+      <label>
+        <span>Format</span>
+        <select id="blogFormatFilter" class="search-input">
+          <option value="all">All formats</option>
+          <option value="essay">Essays</option>
+          <option value="podcast">Podcasts</option>
+          <option value="video">Videos</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Tag</span>
+        <select id="blogTagFilter" class="search-input">
+          <option value="all">All tags</option>
+          {% assign all_tags = "" | split: "" %}
+          {% for post in site.posts %}
+            {% for tag in post.tags %}
+              {% assign all_tags = all_tags | push: tag %}
+            {% endfor %}
+          {% endfor %}
+          {% assign all_tags = all_tags | uniq | sort %}
+          {% for tag in all_tags %}
+            <option value="{{ tag | downcase | escape }}">{{ tag }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label>
+        <span>From</span>
+        <input id="blogDateFrom" class="search-input" type="date">
+      </label>
+
+      <label>
+        <span>To</span>
+        <input id="blogDateTo" class="search-input" type="date">
+      </label>
+
+      <label>
+        <span>Sort</span>
+        <select id="blogSort" class="search-input">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="title">Title A to Z</option>
+        </select>
+      </label>
+    </div>
 
     <div class="blog-filter-row" aria-label="Blog categories">
-      <button class="blog-filter active" data-filter="all" type="button">All</button>
-      <a class="blog-filter blog-filter-link" href="{{ '/blog/essays/' | relative_url }}">Essays</a>
-      <a class="blog-filter blog-filter-link" href="{{ '/blog/podcasts/' | relative_url }}">Podcasts</a>
-      <a class="blog-filter blog-filter-link" href="{{ '/blog/videos/' | relative_url }}">Videos</a>
+      <button class="blog-filter active" data-format-shortcut="all" type="button">All</button>
+      <button class="blog-filter" data-format-shortcut="essay" type="button">Essays</button>
+      <button class="blog-filter" data-format-shortcut="podcast" type="button">Podcasts</button>
+      <button class="blog-filter" data-format-shortcut="video" type="button">Videos</button>
+      <button class="blog-filter" id="blogResetFilters" type="button">Reset</button>
     </div>
+
+    <p id="blogSearchSummary" class="blog-search-summary" aria-live="polite"></p>
   </section>
 
-  <section class="blog-shelf" data-blog-section="essay">
+<section class="blog-shelf" data-blog-section="essay">
     <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/essays/' | relative_url }}">
       <span class="blog-shelf-icon typewriter-icon" aria-hidden="true">
         <svg viewBox="0 0 48 48" focusable="false">
@@ -40,9 +95,11 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
         {% if post_kind == "essay" %}
           <article class="blog-card"
             data-category="{{ post_kind }}"
+            data-format="{{ post_kind }}"
             data-date="{{ post.date | date: '%Y-%m-%d' }}"
             data-title="{{ post.title | escape }}"
-            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            data-tags="{{ post.tags | join: ' ' | downcase | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.tags | join: ' ' | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
             <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             {% if post.description %}
@@ -75,9 +132,11 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
         {% if post_kind == "podcast" %}
           <article class="blog-card"
             data-category="{{ post_kind }}"
+            data-format="{{ post_kind }}"
             data-date="{{ post.date | date: '%Y-%m-%d' }}"
             data-title="{{ post.title | escape }}"
-            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            data-tags="{{ post.tags | join: ' ' | downcase | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.tags | join: ' ' | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
             <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             {% if post.description %}
@@ -110,9 +169,11 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
         {% if post_kind == "video" %}
           <article class="blog-card video-card"
             data-category="{{ post_kind }}"
+            data-format="{{ post_kind }}"
             data-date="{{ post.date | date: '%Y-%m-%d' }}"
             data-title="{{ post.title | escape }}"
-            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            data-tags="{{ post.tags | join: ' ' | downcase | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.tags | join: ' ' | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
             <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             {% if post.description %}

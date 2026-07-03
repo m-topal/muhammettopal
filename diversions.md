@@ -44,6 +44,12 @@ permalink: /diversions/
       <img src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
+
+<figure>
+  <img src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
+  <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
+</figure>
+
   </div>
 
 

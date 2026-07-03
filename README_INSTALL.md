@@ -134,3 +134,17 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 - Fixes Diversions gallery gaps.
 - Hides fake placeholder posts with `published: false`.
 - Includes contact form thank-you redirect and `thanks.md`.
+
+
+## v27 update
+
+- Removes top share bar on post pages.
+- Keeps bottom share/comment/action row only.
+- Adds YouTube thumbnail social preview metadata for video posts.
+
+
+## v28 update
+
+- Adds Mt. Lemmon photo next to the cats photo on Diversions.
+- Adds advanced Blog search by text, format, tag, date, and sort.
+- Includes v27 share-bar and YouTube-preview fixes.

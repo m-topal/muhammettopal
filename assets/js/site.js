@@ -159,3 +159,125 @@ window.addEventListener("resize", updateReadingProgress);
     setupPostLikes();
   }
 })();
+
+
+/* v28: advanced blog search by text, format, tag, date, and sort */
+(function () {
+  function setupAdvancedBlogSearch() {
+    var blogPage = document.querySelector('.blog-advanced-tools');
+    if (!blogPage) return;
+
+    var search = document.getElementById('blogSearch');
+    var format = document.getElementById('blogFormatFilter');
+    var tag = document.getElementById('blogTagFilter');
+    var dateFrom = document.getElementById('blogDateFrom');
+    var dateTo = document.getElementById('blogDateTo');
+    var sort = document.getElementById('blogSort');
+    var reset = document.getElementById('blogResetFilters');
+    var summary = document.getElementById('blogSearchSummary');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+
+    function normalize(value) {
+      return (value || '').toString().trim().toLowerCase();
+    }
+
+    function cardMatches(card) {
+      var q = normalize(search && search.value);
+      var fmt = normalize(format && format.value);
+      var tg = normalize(tag && tag.value);
+      var from = dateFrom && dateFrom.value ? dateFrom.value : '';
+      var to = dateTo && dateTo.value ? dateTo.value : '';
+
+      var cardText = normalize(card.getAttribute('data-search'));
+      var cardFormat = normalize(card.getAttribute('data-format') || card.getAttribute('data-category'));
+      var cardTags = normalize(card.getAttribute('data-tags'));
+      var cardDate = card.getAttribute('data-date') || '';
+
+      if (q && cardText.indexOf(q) === -1) return false;
+      if (fmt && fmt !== 'all' && cardFormat !== fmt) return false;
+      if (tg && tg !== 'all' && cardTags.split(/\s+/).indexOf(tg) === -1) return false;
+      if (from && cardDate < from) return false;
+      if (to && cardDate > to) return false;
+
+      return true;
+    }
+
+    function applySort() {
+      var mode = sort ? sort.value : 'newest';
+      document.querySelectorAll('.blog-shelf-row').forEach(function (row) {
+        var rowCards = Array.prototype.slice.call(row.querySelectorAll('.blog-card'));
+        rowCards.sort(function (a, b) {
+          if (mode === 'oldest') {
+            return (a.getAttribute('data-date') || '').localeCompare(b.getAttribute('data-date') || '');
+          }
+          if (mode === 'title') {
+            return normalize(a.getAttribute('data-title')).localeCompare(normalize(b.getAttribute('data-title')));
+          }
+          return (b.getAttribute('data-date') || '').localeCompare(a.getAttribute('data-date') || '');
+        });
+        rowCards.forEach(function (card) { row.appendChild(card); });
+      });
+    }
+
+    function updateSections() {
+      document.querySelectorAll('.blog-shelf').forEach(function (section) {
+        var visible = section.querySelectorAll('.blog-card:not([hidden])').length;
+        section.hidden = visible === 0;
+      });
+    }
+
+    function applyFilters() {
+      applySort();
+      var count = 0;
+      cards.forEach(function (card) {
+        var show = cardMatches(card);
+        card.hidden = !show;
+        if (show) count += 1;
+      });
+      updateSections();
+      if (summary) {
+        summary.textContent = count + (count === 1 ? ' result' : ' results');
+      }
+    }
+
+    [search, format, tag, dateFrom, dateTo, sort].forEach(function (el) {
+      if (!el) return;
+      el.addEventListener('input', applyFilters);
+      el.addEventListener('change', applyFilters);
+    });
+
+    document.querySelectorAll('[data-format-shortcut]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var value = button.getAttribute('data-format-shortcut') || 'all';
+        if (format) format.value = value;
+        document.querySelectorAll('[data-format-shortcut]').forEach(function (b) {
+          b.classList.toggle('active', b === button);
+        });
+        applyFilters();
+      });
+    });
+
+    if (reset) {
+      reset.addEventListener('click', function () {
+        if (search) search.value = '';
+        if (format) format.value = 'all';
+        if (tag) tag.value = 'all';
+        if (dateFrom) dateFrom.value = '';
+        if (dateTo) dateTo.value = '';
+        if (sort) sort.value = 'newest';
+        document.querySelectorAll('[data-format-shortcut]').forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-format-shortcut') === 'all');
+        });
+        applyFilters();
+      });
+    }
+
+    applyFilters();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupAdvancedBlogSearch);
+  } else {
+    setupAdvancedBlogSearch();
+  }
+})();
