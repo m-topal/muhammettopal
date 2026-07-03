@@ -52,6 +52,19 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
           {% if post.description %}
             <p>{{ post.description }}</p>
           {% endif %}
+          
+          {% if post.format == "video" and post.youtube_id %}
+  <div class="video-embed blog-video-preview">
+    <iframe
+      src="https://www.youtube.com/embed/{{ post.youtube_id }}"
+      title="{{ post.title | escape }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+{% endif %}
+          
         </article>
       {% endfor %}
     {% else %}
