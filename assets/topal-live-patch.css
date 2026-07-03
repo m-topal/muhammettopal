@@ -1,0 +1,193 @@
+/* TOPAL LIVE PATCH
+   This file is intentionally broad because the earlier snippet selectors did not attach
+   to the real site components. */
+
+/* 1. Sticky navigation logo */
+.topal-live-wordmark-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 22px !important;
+  text-decoration: none !important;
+  flex: 0 0 auto !important;
+  line-height: 1 !important;
+}
+
+.topal-live-wordmark {
+  width: 118px !important;
+  height: auto !important;
+  display: block !important;
+  max-height: 42px !important;
+  object-fit: contain !important;
+}
+
+/* The JS adds this class to the real nav container. */
+.topal-live-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.topal-live-nav,
+.topal-live-nav > *,
+.topal-live-nav ul,
+.topal-live-nav div {
+  align-items: center;
+}
+
+/* 2. About divider */
+.topal-live-about-divider {
+  width: min(1100px, calc(100vw - 48px)) !important;
+  margin: 42px auto 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 28px !important;
+  clear: both !important;
+}
+
+.topal-live-about-divider-line {
+  height: 2px !important;
+  background: #007a80 !important;
+  flex: 1 1 auto !important;
+  max-width: 430px !important;
+}
+
+.topal-live-about-divider-logo {
+  width: 170px !important;
+  height: auto !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+}
+
+/* Hide only the large repeated About Me h1 after JS marks it. */
+.topal-live-hide-about-title {
+  display: none !important;
+}
+
+/* 3. Blog filter widening */
+.topal-live-blog-filter,
+.topal-live-blog-filter form,
+.topal-live-blog-filter > div {
+  box-sizing: border-box !important;
+}
+
+.topal-live-blog-filter {
+  width: min(1100px, calc(100vw - 48px)) !important;
+  max-width: 1100px !important;
+  padding: 28px 32px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.topal-live-blog-filter input[type="search"],
+.topal-live-blog-filter input[type="text"],
+.topal-live-blog-filter input[type="date"],
+.topal-live-blog-filter select {
+  min-width: 150px !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.topal-live-blog-filter input[type="search"],
+.topal-live-blog-filter input[placeholder*="Search"],
+.topal-live-blog-filter input[placeholder*="search"] {
+  min-width: 330px !important;
+}
+
+.topal-live-blog-filter select {
+  min-width: 155px !important;
+}
+
+.topal-live-blog-filter input[type="date"],
+.topal-live-blog-filter input[placeholder*="mm/dd"],
+.topal-live-blog-filter input[placeholder*="yyyy"] {
+  min-width: 170px !important;
+}
+
+/* If the real filter row is flex, prevent squeezing. */
+.topal-live-blog-filter * {
+  flex-shrink: 0;
+}
+
+/* If there is a form row, let it wrap naturally instead of clipping. */
+.topal-live-blog-filter form,
+.topal-live-blog-filter .filter-grid,
+.topal-live-blog-filter .search-filter-grid,
+.topal-live-blog-filter .blog-filter-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  align-items: end !important;
+}
+
+/* 4. Empty blog sections */
+.topal-live-empty-section {
+  width: min(1100px, calc(100vw - 48px)) !important;
+  margin: 46px auto !important;
+}
+
+.topal-live-empty-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 22px !important;
+}
+
+.topal-live-empty-header h2 {
+  margin: 0 !important;
+  font-size: clamp(28px, 3vw, 40px) !important;
+  line-height: 1.1 !important;
+}
+
+.topal-live-empty-msg {
+  color: #777 !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  margin: 10px 0 32px !important;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .topal-live-wordmark-link {
+    margin-right: 12px !important;
+  }
+
+  .topal-live-wordmark {
+    width: 88px !important;
+  }
+
+  .topal-live-about-divider {
+    gap: 18px !important;
+    width: min(1000px, calc(100vw - 32px)) !important;
+  }
+
+  .topal-live-about-divider-logo {
+    width: 122px !important;
+  }
+
+  .topal-live-about-divider-line {
+    max-width: 180px !important;
+  }
+
+  .topal-live-blog-filter {
+    width: min(1000px, calc(100vw - 32px)) !important;
+    padding: 22px 18px !important;
+  }
+
+  .topal-live-blog-filter input[type="search"],
+  .topal-live-blog-filter input[placeholder*="Search"],
+  .topal-live-blog-filter input[placeholder*="search"] {
+    min-width: 260px !important;
+  }
+}
