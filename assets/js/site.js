@@ -306,3 +306,77 @@ window.addEventListener("resize", updateReadingProgress);
     setupAdvancedBlogSearch();
   }
 })();
+/* v32: share dropdowns for blog cards and post pages */
+(function () {
+  function closeShareMenus(exceptPanel) {
+    document.querySelectorAll('.share-menu-panel').forEach(function (panel) {
+      if (panel !== exceptPanel) {
+        panel.hidden = true;
+        var toggle = panel.closest('.share-menu-wrap') && panel.closest('.share-menu-wrap').querySelector('.share-menu-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  function copyText(value) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(value);
+    }
+
+    var temp = document.createElement('textarea');
+    temp.value = value;
+    temp.setAttribute('readonly', '');
+    temp.style.position = 'absolute';
+    temp.style.left = '-9999px';
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    document.body.removeChild(temp);
+    return Promise.resolve();
+  }
+
+  function setupShareMenus() {
+    document.addEventListener('click', function (event) {
+      var toggle = event.target.closest('.share-menu-toggle');
+      if (toggle) {
+        var wrap = toggle.closest('.share-menu-wrap');
+        var panel = wrap && wrap.querySelector('.share-menu-panel');
+        if (!panel) return;
+
+        var willOpen = panel.hidden;
+        closeShareMenus(panel);
+        panel.hidden = !willOpen;
+        toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        return;
+      }
+
+      var copyButton = event.target.closest('.share-copy');
+      if (copyButton) {
+        var url = copyButton.getAttribute('data-url') || window.location.href;
+        copyText(url).then(function () {
+          var old = copyButton.textContent;
+          copyButton.textContent = 'Copied';
+          setTimeout(function () {
+            copyButton.textContent = old;
+          }, 1400);
+        });
+        closeShareMenus();
+        return;
+      }
+
+      if (!event.target.closest('.share-menu-wrap')) {
+        closeShareMenus();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeShareMenus();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupShareMenus);
+  } else {
+    setupShareMenus();
+  }
+})();

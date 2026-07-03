@@ -106,12 +106,20 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
               <p>{{ post.description }}</p>
             {% endif %}
 
-            <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
-              <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
-              <a href="{{ post.url | relative_url }}#comments">Comment</a>
+            <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+              <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
+              <div class="share-menu-wrap">
+                <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
+                <div class="share-menu-panel" hidden>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                  <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                  <a href="https://wa.me/?text={{ post.title | url_encode }}%20{{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">WhatsApp</a>
+                  <button class="share-copy" type="button" data-url="{{ post.url | absolute_url }}">Copy link</button>
+                </div>
+              </div>
             </div>
           </article>
         {% endif %}
@@ -144,12 +152,20 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
               <p>{{ post.description }}</p>
             {% endif %}
 
-            <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
-              <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
-              <a href="{{ post.url | relative_url }}#comments">Comment</a>
+            <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+              <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
+              <div class="share-menu-wrap">
+                <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
+                <div class="share-menu-panel" hidden>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                  <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                  <a href="https://wa.me/?text={{ post.title | url_encode }}%20{{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">WhatsApp</a>
+                  <button class="share-copy" type="button" data-url="{{ post.url | absolute_url }}">Copy link</button>
+                </div>
+              </div>
             </div>
           </article>
         {% endif %}
@@ -194,12 +210,20 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
               </div>
             {% endif %}
 
-            <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
-              <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
-              <a href="{{ post.url | relative_url }}#comments">Comment</a>
+            <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+              <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
+              <div class="share-menu-wrap">
+                <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
+                <div class="share-menu-panel" hidden>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                  <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                  <a href="https://wa.me/?text={{ post.title | url_encode }}%20{{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">WhatsApp</a>
+                  <button class="share-copy" type="button" data-url="{{ post.url | absolute_url }}">Copy link</button>
+                </div>
+              </div>
             </div>
           </article>
         {% endif %}
