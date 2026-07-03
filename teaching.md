@@ -13,12 +13,31 @@ permalink: /teaching/
     <p>Source-based learning is central to my pedagogy. I regularly incorporate primary sources such as newspapers, political texts, memoirs, visual materials, travel accounts, and historical documents. I guide students through close reading and contextual analysis so that they learn how historical arguments are constructed from incomplete and contested evidence. I also design assignments that connect historical study to contemporary public debates. In my <em>Introduction to Political Islam</em> course, for example, students complete a media analysis project in which they compare how different outlets present political and historical themes related to the Middle East. They analyze authorship, perspective, framing, and bias in relation to course concepts, and may present their findings through essays, podcasts, videos, or digital projects.</p>
     <p>My formal training in college teaching at the University of Arizona has deepened my commitment to learner-centered pedagogy, backward design, and evidence-based teaching practices. I design courses around clear learning objectives and align readings, discussions, assignments, and assessments to those goals. I use educational technologies selectively, not as decoration, but to support collaboration, organization, accessibility, and creative engagement. For me, teaching is a form of research and reflection: I observe what works, gather feedback, adjust my methods, and continually refine the relationship between historical knowledge, classroom practice, and student learning.</p>
   </div>
+
   <div class="rule"></div>
   <h2>Courses taught</h2>
-  <div class="list">
-    <div class="row"><div class="year">Spring 2026</div><div><strong>Introduction to Political Islam</strong>, HIST/MENA/POL 385, Instructor of Record</div></div>
-    <div class="row"><div class="year">Fall 2025</div><div><strong>Middle East Ethnic and Religious Minorities</strong>, ANTH/HIST/MENA/JUS/POL/RELI 389, Instructor of Record</div></div>
-    <div class="row"><div class="year">2023 to 2025</div><div><strong>Introduction to Political Islam</strong>, multiple semesters, Instructor of Record</div></div>
-    <div class="row"><div class="year">2021 to 2023</div><div>Graduate Teaching Associate in Middle Eastern Humanities, What is Politics?, Modern Middle East, Roman Empire, and Islamic Civilization</div></div>
+
+  <div class="course-block">
+    <h3>Introduction to Political Islam</h3>
+    <div class="course-meta">HIST/MENA/POL 385 · Instructor of Record · University of Arizona</div>
+    <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. It emphasizes historical change, ideological diversity, social movements, state power, and media representation.</p>
+  </div>
+
+  <div class="course-block">
+    <h3>Middle East Ethnic and Religious Minorities</h3>
+    <div class="course-meta">ANTH/HIST/MENA/JUS/POL/RELI 389 · Instructor of Record · University of Arizona</div>
+    <p>This course examines the histories and contemporary experiences of ethnic and religious minorities in the Middle East through questions of empire, nationalism, citizenship, violence, memory, and coexistence.</p>
+  </div>
+
+  <div class="course-block">
+    <h3>Religion of Islam</h3>
+    <div class="course-meta">MENA/REL 160B · Instructor of Record · University of Arizona</div>
+    <p>This course introduces students to Islamic traditions, texts, practices, institutions, and historical debates, while also addressing the diversity of Muslim societies across time and place.</p>
+  </div>
+
+  <div class="course-block">
+    <h3>Teaching Assistantships</h3>
+    <div class="course-meta">University of Arizona · 2021 to 2023</div>
+    <p>I have also supported courses in Middle Eastern Humanities, What is Politics?, History of the Modern Middle East, The Roman Empire, and Islamic Civilization.</p>
   </div>
 </article>

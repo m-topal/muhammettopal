@@ -1,9 +1,8 @@
 title: Muhammet Topal
 email: muhammettopal29@arizona.edu
-description: Ottoman intellectual history, political opposition, biography, public life, and the Caucasus.
+description: Ottoman intellectual history, political opposition, biography, and the Caucasus.
 url: ""
 baseurl: "/muhammettopal"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 plugins: []
-
