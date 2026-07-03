@@ -56,3 +56,19 @@ Drafts can be kept in `_drafts`. They will not appear publicly until moved into 
 ## Note on future dated posts
 
 GitHub Pages does not publish posts with future dates. Use today's date or an earlier date if you want a post to appear immediately.
+
+
+## v14 update
+
+- Removed the Search tab from the main navigation bar.
+- Removed the embedded advanced search box from the Blog page.
+- Added an Advanced Search button in the upper-right site utility area, next to Language.
+- Added a magnifying-glass-style icon for Advanced Search.
+- Added a Google-Translate-style icon next to Language.
+- The Advanced Search button opens `/search/`.
+
+
+## v15 update
+
+- Replaced the simple G language icon with a custom translation-style icon using overlapping A and 文 symbols.
+- This keeps the visual association with translation without copying an external logo.

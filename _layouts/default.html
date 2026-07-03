@@ -17,8 +17,16 @@
   <div class="site-shell">
     <header class="top site-top">
       <div class="site-utility-bar" aria-label="Site tools">
+        <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
+          <span class="utility-icon" aria-hidden="true">⌕</span>
+          <span>Advanced Search</span>
+        </a>
+
         <details class="language-menu language-menu-top">
-          <summary>Language</summary>
+          <summary>
+            <span class="translation-symbol" aria-hidden="true"><span>A</span><span>文</span></span>
+            <span>Language</span>
+          </summary>
           <div class="language-panel">
             <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
             <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>

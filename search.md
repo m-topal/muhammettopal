@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Search
+title: Advanced Search
 permalink: /search/
 description: Search Muhammet Topal's academic website and blog.
 ---
 <article class="page narrow">
-  <p class="label">Search</p>
-  <h1>Search</h1>
+  <p class="label">Site tool</p>
+  <h1>Advanced Search</h1>
   <p class="lead">Search the website, research pages, teaching pages, publications, presentations, and blog posts.</p>
 
   <section class="site-search-box" aria-label="Advanced site search">
