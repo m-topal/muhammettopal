@@ -14,7 +14,7 @@ permalink: /publications/
         <button class="accordion-trigger publication-trigger"><span class="accordion-title">Biyografi, by Melanie Nolan, Turkish translation <span class="publication-visible-date">2026, forthcoming</span></span><span class="accordion-plus">+</span></button>
         <div class="accordion-panel">
           <div class="accordion-meta">Book translation</div>
-          <p class="pub-reference">Topal, Muhammet, trans. <em>Biyografi</em>, by Melanie Nolan. İstanbul: Vakıf Bank Kültür Yayınları, 2026. Originally published as <em>Biography: An Historiography</em>. London: Routledge, 2023. Forthcoming.</p>
+          <p class="pub-reference">Topal, Muhammet, trans. <em>Biyografi</em>, by Melanie Nolan. İstanbul: Vakıf Bank Kültür Yayınları, 2026. Originally published as Biography: An Historiography. London: Routledge, 2023. Forthcoming.</p>
         </div>
       </div>
     </div>

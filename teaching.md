@@ -14,14 +14,18 @@ permalink: /teaching/
     <img src="{{ '/assets/img/teaching-auditorium.jpg' | relative_url }}" alt="Classroom and lecture hall">
   </div>
 
-  <div class="option-grid">
+  <div class="option-grid teaching-options">
     <a class="option-card" href="{{ '/teaching/experience/' | relative_url }}">
       <span>Teaching Experience</span>
-      <p>Courses taught, course design, teaching assistantships, sample lectures, and certificate training.</p>
+      <p>Courses taught, course design, teaching assistantships, sample lectures, and classroom practice.</p>
     </a>
     <a class="option-card" href="{{ '/teaching/statement/' | relative_url }}">
       <span>Teaching Statement</span>
       <p>My teaching philosophy, classroom activities, assessment practices, and future teaching range.</p>
+    </a>
+    <a class="option-card" href="{{ '/teaching/certificate/' | relative_url }}">
+      <span>College Teaching Certificate</span>
+      <p>Formal pedagogical training in learner centered teaching, technology, teaching as research, and college teaching practice.</p>
     </a>
   </div>
 </article>

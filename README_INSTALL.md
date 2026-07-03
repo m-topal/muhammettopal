@@ -20,3 +20,7 @@ The first time the form is used, FormSubmit may send a confirmation email to muh
 ## Version 8 merged update
 
 This package merges the previous prepared version with the new structure: About Me, Service, Research subpages, Teaching subpages, two column long text layouts, homepage headshot, cleaner Diversions, and Facebook and WhatsApp share buttons for the blog.
+
+## Version 9 update
+
+This version adds Extra Curricular in place of Service, adds uploaded colloquium and MENASA workshop flyers, moves Beyond Academia from the home page to Diversions, adds College Teaching Certificate as a separate Teaching subpage, removes the numeric teaching summary, and makes the home page text wrap around the headshot.
