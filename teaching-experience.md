@@ -156,5 +156,6 @@ permalink: /teaching/experience/
     <h2>Teaching approach</h2>
     <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
     <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
+    <a class="teaching-approach-statement-tag" href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
   </div>
 </article>
