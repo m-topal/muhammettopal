@@ -42,10 +42,6 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
   <section id="blogList" class="blog-list" aria-label="Blog archive">
     {% if site.posts.size > 0 %}
 
-    {% assign essays = site.posts | where_exp: "post", "post.category == 'essay' or post.categories contains 'essay' or post.format == 'essay'" %}
-    {% assign podcasts = site.posts | where_exp: "post", "post.category == 'podcast' or post.categories contains 'podcast' or post.format == 'podcast'" %}
-    {% assign videos = site.posts | where_exp: "post", "post.category == 'video' or post.categories contains 'video' or post.format == 'video'" %}
-
     <section class="blog-shelf" data-blog-section="essay">
       <div class="blog-shelf-heading">
         <span class="blog-shelf-icon" aria-hidden="true">📝</span>
@@ -53,17 +49,191 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
       </div>
 
       <div class="blog-shelf-row">
-        {% for post in essays %}
-          <article class="blog-card"
-            data-category="{{ post.category | default: post.format | downcase }}"
-            data-date="{{ post.date | date: '%Y-%m-%d' }}"
-            data-title="{{ post.title | escape }}"
-            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
-            <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {% if post.description %}
-              <p>{{ post.description }}</p>
-            {% endif %}
+        {% for post in site.posts %}
+          {% assign post_kind = post.category | default: post.format | downcase %}
+          {% if post_kind == "essay" %}
+            <article class="blog-card"
+              data-category="{{ post_kind }}"
+              data-date="{{ post.date | date: '%Y-%m-%d' }}"
+              data-title="{{ post.title | escape }}"
+              data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+              <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+              <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+                <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                <a href="mailto:muhammet.topal@sciencespo.fr?subject=Comment on {{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Comment</a>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="blog-shelf" data-blog-section="podcast">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎙️</span>
+        <h2>Podcasts</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in site.posts %}
+          {% assign post_kind = post.category | default: post.format | downcase %}
+          {% if post_kind == "podcast" %}
+            <article class="blog-card"
+              data-category="{{ post_kind }}"
+              data-date="{{ post.date | date: '%Y-%m-%d' }}"
+              data-title="{{ post.title | escape }}"
+              data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+              <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+              <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+                <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                <a href="mailto:muhammet.topal@sciencespo.fr?subject=Comment on {{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Comment</a>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="blog-shelf" data-blog-section="video">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎬</span>
+        <h2>Videos</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in site.posts %}
+          {% assign post_kind = post.category | default: post.format | downcase %}
+          {% if post_kind == "video" %}
+            <article class="blog-card video-card"
+              data-category="{{ post_kind }}"
+              data-date="{{ post.date | date: '%Y-%m-%d' }}"
+              data-title="{{ post.title | escape }}"
+              data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+              <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+
+              {% if post.youtube_id %}
+                <div class="video-embed blog-video-preview">
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ post.youtube_id }}"
+                    title="{{ post.title | escape }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              {% endif %}
+
+              <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
+                <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
+                <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
+                <a href="mailto:muhammet.topal@sciencespo.fr?subject=Comment on {{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Comment</a>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+  {% else %}
+    <div class="blog-coming">
+      <h2>Posts coming soon.</h2>
+    </div>
+  {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="blog-shelf" data-blog-section="podcast">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎙️</span>
+        <h2>Podcasts</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in site.posts %}
+          {% assign post_kind = post.category | default: post.format | downcase %}
+          {% if post_kind == "podcast" %}
+            <article class="blog-card"
+              data-category="{{ post_kind }}"
+              data-date="{{ post.date | date: '%Y-%m-%d' }}"
+              data-title="{{ post.title | escape }}"
+              data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+              <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="blog-shelf" data-blog-section="video">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎬</span>
+        <h2>Videos</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in site.posts %}
+          {% assign post_kind = post.category | default: post.format | downcase %}
+          {% if post_kind == "video" %}
+            <article class="blog-card video-card"
+              data-category="{{ post_kind }}"
+              data-date="{{ post.date | date: '%Y-%m-%d' }}"
+              data-title="{{ post.title | escape }}"
+              data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+              <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              {% if post.description %}
+                <p>{{ post.description }}</p>
+              {% endif %}
+
+              {% if post.youtube_id %}
+                <div class="video-embed blog-video-preview">
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ post.youtube_id }}"
+                    title="{{ post.title | escape }}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+  {% else %}
+    <div class="blog-coming">
+      <h2>Posts coming soon.</h2>
+    </div>
+  {% endif %}
           </article>
         {% endfor %}
       </div>

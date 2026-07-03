@@ -37,31 +37,28 @@ permalink: /diversions/
 
     <figure>
       <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with Clìo and Eryka">
-      <figcaption>Fishing trip with Eryka and her dog Clìo.</figcaption>
+      <figcaption>Fishing trip with Clìo and Eryka.</figcaption>
     </figure>
 
     <figure>
       <img src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
-    
-    </div>
+  </div>
+
 
 <div class="gallery-grid caption-gallery">
-  
-    <figure>
-  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences-New Mexico with my partner Eryka">
-  <figcaption>
-   In Truth or Consequences, New Mexico with my partner Eryka
-  </figcaption>
+
+<figure>
+  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner Eryka">
+  <figcaption>In Truth or Consequences, New Mexico with my partner Eryka.</figcaption>
 </figure>
 
 <figure>
   <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner Eryka">
-  <figcaption>
-In White Sands National Park with my partner Eryka
-  </figcaption>
+  <figcaption>In White Sands National Park with my partner Eryka.</figcaption>
 </figure>
 
-  </div>
+</div>
+
 </article>

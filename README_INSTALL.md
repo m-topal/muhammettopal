@@ -88,3 +88,19 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 
 - Teaching Experience remains one column, but it is now centered and constrained to a medium width, about one and a half former columns.
 - On the main Teaching page, the three teaching cards now appear before the large image so they are visible earlier.
+
+
+## v18 update
+
+- Removed placeholder draft and empty placeholder files.
+- Removed placeholder cards and helper placeholder text from the Blog page.
+- Added a CSS safety rule so leftover placeholder UI classes stay hidden.
+
+
+## v21 update
+
+- Combines the safe blog shelves fix with the Diversions image lightbox and spacing fix.
+- Blog homepage is organized into horizontal shelves: Essays, Podcasts, Videos.
+- Blog cards now have post-specific sharing links, email comment link, and a local like button.
+- Individual blog posts also have sharing, comment by email, and local like controls.
+- Diversions images open larger in a centered lightbox when clicked.
