@@ -44,6 +44,11 @@ permalink: /diversions/
       <img src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
+    
+    </div>
+
+<div class="gallery-grid caption-gallery">
+  
     <figure>
   <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences-New Mexico with my partner Eryka">
   <figcaption>
