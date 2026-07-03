@@ -5,11 +5,23 @@ permalink: /research/
 ---
 <article class="page">
   <p class="label">Research</p>
-  <h1>The making of Ottoman public intellectual life.</h1>
+  <h1>Research</h1>
   <div class="prose">
-    <p>My research examines late Ottoman intellectual life through biography, journalism, historiography, and public writing. I study intellectuals, journalists, historians, bureaucrats, and teachers not as abstract representatives of ideologies, but as historical actors whose lives moved through institutions, languages, genres, and imperial settings.</p>
-    <p>My dissertation traces the intellectual and political life of Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, novelist, and teacher of history in Istanbul. Murad’s life offers a way to study the broader conditions under which Ottoman public intellectual life was made. His writings and career connect the Caucasus, Russian education, late Ottoman Istanbul, journalism, historical writing, state service, exile, and public debate.</p>
-    <p>Methodologically, I combine close archival work with intellectual biography, global microhistory, and comparative historical perspectives. I work across Ottoman Turkish, French, Russian, English, Arabic, and Persian materials, including newspapers, memoirs, correspondence, diplomatic reports, archival registers, and printed works.</p>
-    <p>Beyond the dissertation, my work is concerned with the relationship between biography and historical method, the formation of intellectual authority, and the ways writing, teaching, journalism, and historical thought shaped public life in the late Ottoman world.</p>
+    <p>My research examines the making of Ottoman intellectual authority, public life, historical writing, journalism, and political judgment from the late Ottoman Empire to modern Turkey and the broader Middle East. The Research section is divided into three parts.</p>
+  </div>
+
+  <div class="option-grid">
+    <a class="option-card" href="{{ '/research/dissertation/' | relative_url }}">
+      <span>Dissertation</span>
+      <p>My current PhD project on Mehmed Murad Bey, biography as method, and the making of Ottoman public intellectual life.</p>
+    </a>
+    <a class="option-card" href="{{ '/research/trajectory/' | relative_url }}">
+      <span>Research Trajectory</span>
+      <p>A chronological account of my earlier work, from Ottoman Qajar borderlands to Murad’s journalism and public life.</p>
+    </a>
+    <a class="option-card" href="{{ '/research/future/' | relative_url }}">
+      <span>Future Directions</span>
+      <p>Future research on the long nineteenth century, the late Ottoman world, Turkey, MENA, the Mediterranean, biography, and historical sociology.</p>
+    </a>
   </div>
 </article>

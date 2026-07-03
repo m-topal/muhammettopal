@@ -7,7 +7,7 @@
   <meta name="description" content="Academic Portfolio and Personal Blog">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
-  <meta property="og:image" content="{{ '/assets/img/main-library.jpg' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/main-headshot.jpg' | absolute_url }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
@@ -16,15 +16,19 @@
     <header class="top">
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
-      <div class="nav-wrap"><nav class="nav" aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a>
+      <div class="nav-wrap"><nav class="nav" aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about/' | relative_url }}">About Me</a>
           <a href="{{ '/research/' | relative_url }}">Research</a>
           <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
           <a href="{{ '/publications/' | relative_url }}">Publications</a>
           <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
+          <a href="{{ '/service/' | relative_url }}">Service</a>
           <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
           <a href="{{ '/cv/' | relative_url }}">CV</a>
           <a href="{{ '/contact/' | relative_url }}">Contact</a>
-          <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a></nav></div>
+          <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
+      </nav></div>
     </header>
     <main>{{ content }}</main>
     <footer class="footer">

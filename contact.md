@@ -18,6 +18,7 @@ permalink: /contact/
   <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST">
     <input type="hidden" name="_subject" value="Message from muhammettopal.com">
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
     <input type="text" name="_honey" style="display:none">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Your email" required>

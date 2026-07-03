@@ -15,7 +15,9 @@ permalink: /blog/
 
   <div class="share-row" aria-label="Share this page">
     <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on LinkedIn</a>
-    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text=My Blog | Muhammet Topal" target="_blank" rel="noopener">Share on X</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on Facebook</a>
+    <a href="https://api.whatsapp.com/send?text=My%20Blog%20%7C%20Muhammet%20Topal%20{{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text=My%20Blog%20%7C%20Muhammet%20Topal" target="_blank" rel="noopener">Share on X</a>
     <a href="mailto:?subject=My Blog | Muhammet Topal&body={{ page.url | absolute_url }}" target="_blank" rel="noopener">Email</a>
     <button id="copyLinkButton" onclick="copyCurrentLink()">Copy link</button>
   </div>
