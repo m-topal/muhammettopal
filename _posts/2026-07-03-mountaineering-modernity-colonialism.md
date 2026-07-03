@@ -2,8 +2,7 @@
 layout: post
 title: "Mountaineering as a Critique of Modernity and Colonialism"
 date: 2026-07-03
-categories:
-  - videos
+categories: video
 format: video
 ---
 
