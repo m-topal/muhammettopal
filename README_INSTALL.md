@@ -1,18 +1,17 @@
-# Muhammet Topal website v4
+# Muhammet Topal website v5
 
-Latest fixes:
-- LinkedIn link is included everywhere.
-- Navigation includes Presentations on all pages.
-- Publications and Presentations are separate.
-- Publications uses the CV content, not only selected items.
-- The homepage sentence is rewritten to avoid the old generic Cairo/INALCO phrasing.
-- Photo caption under the image removed.
-- Teaching page now has narrative plus separate space for course descriptions.
-- Contact address is broken into clean lines.
-- Contact form uses FormSubmit instead of the broken Formspree placeholder.
-- Blog page says content coming soon and includes share buttons.
-- Future post layout includes share buttons and Utterances comments.
-- Sticky navigation remains at the top while scrolling.
+Major changes:
+- Header subtitle is now exactly: Academic Portfolio and Personal Blog.
+- Main homepage image is the library/books photo.
+- Homepage text is rebuilt around academic identity, schools, and trajectory.
+- “Beyond academia” section added with Arizona landscape, mountains, creative writing, Italo Calvino, and Oğuz Atay.
+- Squirrel photo is used on the homepage.
+- New Diversions tab added.
+- Blog page includes a search box, even while empty.
+- Teaching page uses expandable plus sections.
+- Presentations page has a slideshow plus expandable entries.
+- Presentation photos are included in assets.
+- Domain connection is prepared for muhammettopal.com with CNAME and README_DOMAIN_CLOUDFLARE.md.
 
-Important: upload the CONTENTS of this folder to the repository root, not the folder itself.
-Keep `baseurl: "/muhammettopal"` for the current GitHub preview. When connecting `muhammettopal.com`, change it to `baseurl: ""`.
+Important:
+Upload the CONTENTS of this folder to the repository root, not the folder itself.

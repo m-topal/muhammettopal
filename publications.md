@@ -21,7 +21,7 @@ permalink: /publications/
 
   <h2>Dissertations and theses</h2>
   <div class="list">
-    <div class="row"><div class="year">2026</div><div>Topal, Muhammet. <strong><em>The Making of an Ottoman Opposition: Mizancı Mehmed Murad Bey between Loyalty and Dissent.</em></strong> PhD dissertation in progress, University of Arizona.</div></div>
+    <div class="row"><div class="year">2026</div><div>Topal, Muhammet. <strong><em>The Making of an Ottoman Public Intellectual: Mehmed Murad Bey Between Friendly Advisor and Critical Opponent.</em></strong> PhD dissertation in progress, University of Arizona.</div></div>
     <div class="row"><div class="year">2020</div><div>Topal, Muhammet. <strong><em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste.</em></strong> Master’s thesis, École pratique des hautes études.</div></div>
     <div class="row"><div class="year">2018</div><div>Topal, Muhammet. <strong><em>Uncertainty of the Persian Border: The Making of an Ottoman-Qajar Borderland from 1823 to 1913.</em></strong> BA graduation project, Boğaziçi University.</div></div>
   </div>

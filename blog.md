@@ -8,6 +8,11 @@ permalink: /blog/
   <h1>My Blog</h1>
   <p class="lead">Essays, notes, videos, podcasts, and fragments.</p>
 
+  <div class="search-box">
+    <input id="blogSearch" class="search-input" type="search" placeholder="Search the blog archive">
+    <div id="blogSearchResult" class="search-results">Blog archive is not yet published.</div>
+  </div>
+
   <div class="share-row" aria-label="Share this page">
     <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on LinkedIn</a>
     <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text=My Blog | Muhammet Topal" target="_blank" rel="noopener">Share on X</a>
