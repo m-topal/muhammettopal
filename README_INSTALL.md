@@ -82,3 +82,9 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 - Added teaching sensitive subjects to the Teaching overview, Teaching Experience, and Teaching Statement.
 - Changed Teaching Experience to a one-column layout.
 - Kept Teaching Statement and College Teaching Certificate unchanged in their two-column prose layout.
+
+
+## v17 update
+
+- Teaching Experience remains one column, but it is now centered and constrained to a medium width, about one and a half former columns.
+- On the main Teaching page, the three teaching cards now appear before the large image so they are visible earlier.

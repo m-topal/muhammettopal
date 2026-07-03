@@ -988,3 +988,85 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
     justify-content: center;
   }
 }
+
+
+/* v17: teaching experience centered, one-column but not too wide */
+.teaching-experience-page .experience-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 780px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.teaching-experience-page .experience-card {
+  max-width: 780px !important;
+  width: 100%;
+}
+
+.teaching-experience-page .experience-card p {
+  max-width: 68ch;
+}
+
+.teaching-experience-page .lead {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teaching-experience-page .label,
+.teaching-experience-page h1 {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Put Teaching cards visually before the image with tighter spacing */
+.teaching-page .subpage-grid,
+.teaching-page .card-grid {
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.teaching-page .photo-text,
+.teaching-page .page-image,
+.teaching-page figure {
+  margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+  .teaching-experience-page .experience-grid,
+  .teaching-experience-page .experience-card,
+  .teaching-experience-page .lead,
+  .teaching-experience-page .label,
+  .teaching-experience-page h1 {
+    max-width: 100% !important;
+  }
+}
+
+
+/* v17 corrected: actual Teaching page card and image order spacing */
+.teaching-page .teaching-options {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.teaching-page .teaching-photo {
+  margin-top: 26px;
+}
+
+/* v17 corrected: Teaching Experience should be one centered medium-width column */
+.teaching-experience-page .experience-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 820px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.teaching-experience-page .experience-card {
+  max-width: 820px !important;
+  width: 100%;
+}
+
+.teaching-experience-page .experience-card p {
+  max-width: 72ch;
+}
