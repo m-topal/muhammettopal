@@ -72,3 +72,13 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 
 - Replaced the simple G language icon with a custom translation-style icon using overlapping A and 文 symbols.
 - This keeps the visual association with translation without copying an external logo.
+
+
+## v16 update
+
+- Removed the homepage explanatory sentence while keeping a small amount of blank space.
+- Moved the Advanced Search button to the left side of the top utility area.
+- Kept the Language button on the right side of the top utility area.
+- Added teaching sensitive subjects to the Teaching overview, Teaching Experience, and Teaching Statement.
+- Changed Teaching Experience to a one-column layout.
+- Kept Teaching Statement and College Teaching Certificate unchanged in their two-column prose layout.

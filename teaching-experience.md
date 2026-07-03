@@ -3,7 +3,7 @@ layout: default
 title: Teaching Experience
 permalink: /teaching/experience/
 ---
-<article class="page wide">
+<article class="page wide teaching-experience-page">
   <p class="label">Teaching</p>
   <h1>Teaching Experience</h1>
   <div class="subnav">
@@ -32,6 +32,12 @@ permalink: /teaching/experience/
       <h2>Course Design</h2>
       <p>My teaching experience includes independent course design, full semester instruction, recurring instruction of Political Islam, and sample lectures in related fields. This experience trained me to design courses around clear learning objectives, weekly themes, reading arcs, classroom activities, and assignments that build over time.</p>
       <p>My teaching portfolio prepares me to offer concrete survey and upper level courses, including World History, World Civilizations, Europe from 1789 to 1914, The Interwar Period, The Cold War World, The World from the Atomic Bomb to the Internet, The Middle East since 1800, The Ottoman Empire to 1800, The Ottoman Empire in the Long Nineteenth Century, Political Islam, Islamic Civilization, MENA Methods, Ottoman Biographies, and Historical Methods.</p>
+    </section>
+
+    <section class="experience-card">
+      <h2>Teaching Sensitive Subjects</h2>
+      <p>Several of my courses ask students to discuss subjects that can be intellectually, politically, or personally sensitive: religion and politics, Islam and public life, sectarianism, ethnic and religious minorities, colonialism, nationalism, migration, war, political violence, gender, racism, Islamophobia, antisemitism, and contemporary conflicts in the Middle East and beyond.</p>
+      <p>I treat these subjects as historical and analytical problems rather than as occasions for debate without structure. I set clear expectations for discussion, distinguish criticism of ideas and institutions from attacks on persons or communities, provide historical context before asking students to evaluate arguments, and use primary sources, media analysis, maps, timelines, and guided questions to slow down judgment. My aim is to create a classroom where disagreement is possible without turning complexity into hostility.</p>
     </section>
 
     <section class="experience-card">

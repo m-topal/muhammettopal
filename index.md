@@ -3,9 +3,7 @@ layout: default
 title: Home
 permalink: /
 ---
-<div class="home-site-note">
-  This website brings together my research, teaching, publications, presentations, CV, and public writing. My Blog is a separate space for essays, notes, videos, podcasts, and fragments.
-</div>
+<div class="home-site-note home-site-note-empty" aria-hidden="true"></div>
 
 <section class="home-wrap-section">
   <div class="prose home-wrap-prose">

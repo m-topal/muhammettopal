@@ -933,3 +933,58 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   color: var(--ink);
   border-color: var(--ink);
 }
+
+
+/* v16: homepage note removed, teaching experience one column, search left and language right */
+.home-site-note-empty {
+  height: 8px;
+  margin: -14px auto 14px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.split-utility-bar {
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.utility-left,
+.utility-right {
+  display: flex;
+  align-items: center;
+}
+
+.utility-left {
+  justify-content: flex-start;
+}
+
+.utility-right {
+  justify-content: flex-end;
+}
+
+.teaching-experience-page .experience-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 900px;
+}
+
+.teaching-experience-page .experience-card {
+  max-width: 900px;
+}
+
+@media (max-width: 700px) {
+  .home-site-note-empty {
+    height: 6px;
+    margin: -6px auto 12px;
+  }
+
+  .split-utility-bar {
+    justify-content: center !important;
+    gap: 10px;
+  }
+
+  .utility-left,
+  .utility-right {
+    justify-content: center;
+  }
+}

@@ -16,27 +16,31 @@
 
   <div class="site-shell">
     <header class="top site-top">
-      <div class="site-utility-bar" aria-label="Site tools">
-        <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
-          <span class="utility-icon" aria-hidden="true">⌕</span>
-          <span>Advanced Search</span>
-        </a>
+      <div class="site-utility-bar split-utility-bar" aria-label="Site tools">
+        <div class="utility-left">
+          <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
+            <span class="utility-icon" aria-hidden="true">⌕</span>
+            <span>Advanced Search</span>
+          </a>
+        </div>
 
-        <details class="language-menu language-menu-top">
-          <summary>
-            <span class="translation-symbol" aria-hidden="true"><span>A</span><span>文</span></span>
-            <span>Language</span>
-          </summary>
-          <div class="language-panel">
-            <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
-            <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
-            <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
-            <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
-            <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
-            <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
-            <span>Machine translation</span>
-          </div>
-        </details>
+        <div class="utility-right">
+          <details class="language-menu language-menu-top">
+            <summary>
+              <span class="translation-symbol" aria-hidden="true"><span>A</span><span>文</span></span>
+              <span>Language</span>
+            </summary>
+            <div class="language-panel">
+              <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
+              <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
+              <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
+              <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
+              <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
+              <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
+              <span>Machine translation</span>
+            </div>
+          </details>
+        </div>
       </div>
 
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
