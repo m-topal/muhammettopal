@@ -1070,3 +1070,99 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 .teaching-experience-page .experience-card p {
   max-width: 72ch;
 }
+
+
+/* v18: remove/hide placeholder UI */
+.placeholder-grid,
+.blog-placeholder-grid,
+.placeholder-posts,
+.empty-posts,
+.blog-empty,
+.placeholder-card,
+.blog-help,
+[class*="placeholder"] {
+  display: none !important;
+}
+
+
+/* v19: Blog shelves, essays, podcasts, videos */
+.blog-shelf {
+  margin: 42px 0 52px;
+}
+
+.blog-shelf-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.blog-shelf-heading h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.blog-shelf-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.blog-shelf-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 360px);
+  gap: 22px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+}
+
+.blog-card {
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  background: #fff;
+  min-height: 190px;
+}
+
+.blog-card h3 {
+  margin: 8px 0 10px;
+  font-size: 24px;
+  line-height: 1.08;
+}
+
+.blog-card p {
+  margin-bottom: 0;
+}
+
+.blog-card .meta {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.blog-card .blog-video-preview {
+  margin-top: 16px;
+}
+
+.blog-card .video-embed iframe,
+.blog-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .blog-shelf-row {
+    grid-auto-columns: minmax(250px, 82vw);
+  }
+
+  .blog-shelf-heading h2 {
+    font-size: 24px;
+  }
+}

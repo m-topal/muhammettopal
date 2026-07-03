@@ -41,61 +41,97 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
 
   <section id="blogList" class="blog-list" aria-label="Blog archive">
     {% if site.posts.size > 0 %}
-      {% for post in site.posts %}
-        <article class="blog-list-item"
-                 data-category="{{ post.category | default: post.format | downcase }}"
-                 data-date="{{ post.date | date: '%Y-%m-%d' }}"
-                 data-title="{{ post.title | escape }}"
-                 data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
-          <p class="meta">{{ post.date | date: "%B %-d, %Y" }} · {{ post.format | default: post.category | capitalize }}</p>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          {% if post.description %}
-            <p>{{ post.description }}</p>
-          {% endif %}
-          
-          {% if post.format == "video" and post.youtube_id %}
-  <div class="video-embed blog-video-preview">
-    <iframe
-      src="https://www.youtube.com/embed/{{ post.youtube_id }}"
-      title="{{ post.title | escape }}"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-{% endif %}
-          
-        </article>
-      {% endfor %}
-    {% else %}
-      <div class="blog-coming">
-        <h2>Content coming soon.</h2>
-        <p>This section is ready for essays, notes, videos, podcasts, and fragments. Once a file is added to <code>_posts</code>, it will automatically appear here.</p>
+
+    {% assign essays = site.posts | where_exp: "post", "post.category == 'essay' or post.categories contains 'essay' or post.format == 'essay'" %}
+    {% assign podcasts = site.posts | where_exp: "post", "post.category == 'podcast' or post.categories contains 'podcast' or post.format == 'podcast'" %}
+    {% assign videos = site.posts | where_exp: "post", "post.category == 'video' or post.categories contains 'video' or post.format == 'video'" %}
+
+    <section class="blog-shelf" data-blog-section="essay">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">📝</span>
+        <h2>Essays</h2>
       </div>
 
-      <div class="placeholder-grid">
-        <article>
-          <span>Essays</span>
-          <p>Longer reflections and public writing.</p>
-        </article>
-        <article>
-          <span>Notes</span>
-          <p>Short observations, reading notes, and archival fragments.</p>
-        </article>
-        <article>
-          <span>Videos</span>
-          <p>Future video entries and recorded conversations.</p>
-        </article>
-        <article>
-          <span>Podcasts</span>
-          <p>Audio entries and possible interview materials.</p>
-        </article>
-        <article>
-          <span>Fragments</span>
-          <p>Draft-like pieces that do not need to become essays.</p>
-        </article>
+      <div class="blog-shelf-row">
+        {% for post in essays %}
+          <article class="blog-card"
+            data-category="{{ post.category | default: post.format | downcase }}"
+            data-date="{{ post.date | date: '%Y-%m-%d' }}"
+            data-title="{{ post.title | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}
+              <p>{{ post.description }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
       </div>
-    {% endif %}
+    </section>
+
+    <section class="blog-shelf" data-blog-section="podcast">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎙️</span>
+        <h2>Podcasts</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in podcasts %}
+          <article class="blog-card"
+            data-category="{{ post.category | default: post.format | downcase }}"
+            data-date="{{ post.date | date: '%Y-%m-%d' }}"
+            data-title="{{ post.title | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}
+              <p>{{ post.description }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="blog-shelf" data-blog-section="video">
+      <div class="blog-shelf-heading">
+        <span class="blog-shelf-icon" aria-hidden="true">🎬</span>
+        <h2>Videos</h2>
+      </div>
+
+      <div class="blog-shelf-row">
+        {% for post in videos %}
+          <article class="blog-card video-card"
+            data-category="{{ post.category | default: post.format | downcase }}"
+            data-date="{{ post.date | date: '%Y-%m-%d' }}"
+            data-title="{{ post.title | escape }}"
+            data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
+            <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.description %}
+              <p>{{ post.description }}</p>
+            {% endif %}
+
+            {% if post.youtube_id %}
+              <div class="video-embed blog-video-preview">
+                <iframe
+                  src="https://www.youtube.com/embed/{{ post.youtube_id }}"
+                  title="{{ post.title | escape }}"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+  {% else %}
+    <div class="blog-coming">
+      <h2>Posts coming soon.</h2>
+    </div>
+  {% endif %}
   </section>
 
   <p id="blogNoResults" class="note blog-no-results" hidden>No matching posts found.</p>
