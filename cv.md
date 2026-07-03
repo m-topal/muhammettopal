@@ -10,7 +10,5 @@ permalink: /cv/
     <p>The full CV includes education, teaching, research activities, languages, publications, conference presentations, and professional experience.</p>
     <p><a class="button" href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}">Download CV PDF</a></p>
   </div>
-  <div class="cv-frame">
-    <iframe src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" title="Muhammet Topal CV"></iframe>
-  </div>
+  <div class="cv-frame"><iframe src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" title="Muhammet Topal CV"></iframe></div>
 </article>

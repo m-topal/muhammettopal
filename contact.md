@@ -6,24 +6,20 @@ permalink: /contact/
 <article class="page narrow">
   <p class="label">Contact</p>
   <h1>Contact</h1>
-  <div class="prose">
-    <p>Email: <a href="mailto:muhammettopal29@arizona.edu">muhammettopal29@arizona.edu</a></p>
-    <p>University of Arizona, Marshall Building, #456R, 845 N. Park Ave, Tucson, AZ 85719</p>
-    <p>
-      <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> ·
-      <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> ·
-      <a href="#">LinkedIn</a>
-    </p>
-    <p class="note">The LinkedIn link is a placeholder until you add your exact profile URL.</p>
+  <div class="contact-grid">
+    <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><div><span class="contact-label">Email</span><span class="contact-value"><a href="mailto:muhammettopal29@arizona.edu">muhammettopal29@arizona.edu</a></span></div></div>
+    <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg><div><span class="contact-label">Address</span><span class="contact-value">University of Arizona<br>Marshall Building, #456R<br>845 N. Park Ave<br>Tucson, AZ 85719</span></div></div>
+    <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.5h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-.95 1.82-1.95 3.75-1.95 4.01 0 4.75 2.64 4.75 6.07v5.38h-4v-4.77c0-1.14-.02-2.6-1.58-2.6-1.58 0-1.82 1.23-1.82 2.51v4.86h-4v-11Z"/></svg><div><span class="contact-label">LinkedIn</span><span class="contact-value"><a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">linkedin.com/in/muhammettopal29</a></span></div></div>
+    <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.2 1.2"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.2-1.2"/></svg><div><span class="contact-label">Profiles</span><span class="contact-value"><a href="https://orcid.org/0009-0001-3403-0414">ORCID</a><br><a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a></span></div></div>
   </div>
-
   <div class="rule"></div>
   <h2>Send a message</h2>
-  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <p class="note">This form opens your email application with a prepared message. It avoids the broken “form not found” error that appeared with the unfinished Formspree setup.</p>
+  <form class="contact-form" onsubmit="sendMailto(event)">
     <input type="text" name="name" placeholder="Your name" required>
     <input type="email" name="email" placeholder="Your email" required>
     <textarea name="message" rows="6" placeholder="Message" required></textarea>
-    <button type="submit">Send message</button>
+    <button type="submit">Prepare email</button>
   </form>
-  <p class="note">To activate this form, replace <code>YOUR_FORM_ID</code> with your Formspree ID. Until then, visitors can use the email link above.</p>
 </article>
+<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>

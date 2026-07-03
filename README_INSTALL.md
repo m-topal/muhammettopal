@@ -1,21 +1,17 @@
 # Muhammet Topal website revision
 
-This version uses:
-- almost-white background
-- black and gray text
-- moderate typography
-- separate pages, not scrolling sections
-- “My Blog” as a distinct red outlined animated pill
-- selected crossed-arms photo
-- CV embedded and downloadable
-- Contact page with LinkedIn placeholder and Formspree form placeholder
+Changes included:
+- White/gray design, no straw/potato/yellow background.
+- Sticky top navigation.
+- Separate pages, no one-page scrolling tab structure.
+- Better identity sentence under the name.
+- Crossed-arms photo aligned with the text at the top.
+- Research and Teaching are expanded narrative pages.
+- Publications and Presentations are separated.
+- Contact page includes Email, Address, LinkedIn, ORCID, Academia.edu with inline SVG icons.
+- Contact form uses a mailto fallback and will not show “form not found.”
+- Blog page says content is coming soon.
+- Future blog posts have share buttons and Utterances comments in the post layout.
+- Custom 404 page included.
 
-## Important edits
-
-1. Replace the LinkedIn placeholder in `contact.md` with your real LinkedIn URL.
-2. Replace `YOUR_FORM_ID` in `contact.md` after creating a Formspree form.
-3. Keep `_config.yml` as:
-   `baseurl: "/muhammettopal"`
-   for the current GitHub preview.
-4. When you connect `muhammettopal.com`, change it to:
-   `baseurl: ""`
+Keep `baseurl: "/muhammettopal"` for the current GitHub preview. When connecting `muhammettopal.com`, change it to `baseurl: ""`.
