@@ -15,7 +15,7 @@ permalink: /contact/
   <div class="rule"></div>
   <h2>Send a message</h2>
   <p class="note">This form uses FormSubmit. The first submission may require email confirmation before messages are delivered.</p>
-<form class="contact-form" action="https://formsubmit.co/a0e03dd6bc96bbf8168f8b5a6ba96df8" method="POST">
+  <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST">
     <input type="hidden" name="_subject" value="Message from muhammettopal.com">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">

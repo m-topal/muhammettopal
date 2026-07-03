@@ -104,3 +104,24 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 - Blog cards now have post-specific sharing links, email comment link, and a local like button.
 - Individual blog posts also have sharing, comment by email, and local like controls.
 - Diversions images open larger in a centered lightbox when clicked.
+
+
+## v23 update
+
+- Blog shelf headings are clickable.
+- Essays, Podcasts, and Videos now each have their own full vertical list page.
+- Essay icon changed to a typewriter.
+- Fake placeholder posts were removed from the full package.
+
+
+## v24 update
+
+- Adds Giscus comments to individual blog posts.
+- Blog card "Comment" links now go to the post's comment section instead of opening email.
+- Post pages still keep share and local like controls.
+
+
+## v25 update
+
+- Adds an external course-site card for Introduction to Political Islam on the Teaching page.
+- Removes fake placeholder posts from the full package.
