@@ -1,12 +1,10 @@
 ---
-title: "A First Essay Placeholder"
+layout: post
+title: "First Essay"
 date: 2026-07-02
-category: essays
+category: essay
 format: essay
-tags: [Ottoman Empire, public life, archives]
-reading_time: "4 min read"
+published: false
 ---
 
-This is a sample essay post. Replace it with your first longer piece. The metadata above controls how the post appears on the Blog page: format, date, tags, and reading time.
-
-You can write in Markdown. Use headings, paragraphs, links, block quotes, and images when needed.
+This placeholder post is unpublished.

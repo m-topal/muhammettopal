@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Podcast Placeholder"
+title: "A note on Ottoman anti-imperialism"
 date: 2026-07-02
 category: essay
 format: essay

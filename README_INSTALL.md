@@ -125,3 +125,12 @@ GitHub Pages does not publish posts with future dates. Use today's date or an ea
 
 - Adds an external course-site card for Introduction to Political Islam on the Teaching page.
 - Removes fake placeholder posts from the full package.
+
+
+## v26 update
+
+- Removes old placeholder comments text.
+- Adds clean light-theme Giscus comments.
+- Fixes Diversions gallery gaps.
+- Hides fake placeholder posts with `published: false`.
+- Includes contact form thank-you redirect and `thanks.md`.
