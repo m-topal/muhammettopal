@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.dir | default: 'ltr' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
-  <meta name="description" content="Academic Portfolio and Personal Blog">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta property="og:image" content="{{ '/assets/img/main-headshot.jpg' | absolute_url }}">
@@ -12,30 +12,55 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+
   <div class="site-shell">
     <header class="top">
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
-      <div class="nav-wrap"><nav class="nav" aria-label="Main navigation">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about/' | relative_url }}">About Me</a>
-          <a href="{{ '/research/' | relative_url }}">Research</a>
-          <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-          <a href="{{ '/publications/' | relative_url }}">Publications</a>
-          <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
-          <a href="{{ '/extracurricular/' | relative_url }}">Extra Curricular</a>
-          <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
-          <a href="{{ '/cv/' | relative_url }}">CV</a>
-          <a href="{{ '/contact/' | relative_url }}">Contact</a>
-          <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
-      </nav></div>
     </header>
+
+    <div class="nav-wrap sticky-nav">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About Me</a>
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
+        <a href="{{ '/extracurricular/' | relative_url }}">Extra Curricular</a>
+        <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <a href="{{ '/search/' | relative_url }}">Search</a>
+
+        <details class="language-menu">
+          <summary>Language</summary>
+          <div class="language-panel">
+            <a href="{{ '/' | relative_url }}" data-original-language="en">🇬🇧 English</a>
+            <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
+            <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
+            <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
+            <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
+            <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
+            <span>Machine translation</span>
+          </div>
+        </details>
+
+        <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
+      </nav>
+    </div>
+
     <main>{{ content }}</main>
+
     <footer class="footer">
       <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
       <span><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
     </footer>
   </div>
+
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
 </body>
 </html>

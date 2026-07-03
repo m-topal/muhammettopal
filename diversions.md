@@ -17,10 +17,25 @@ permalink: /diversions/
     </div>
   </div>
 
-  <div class="gallery-grid">
-    <img src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing in Arizona">
-    <img src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding a squirrel in Arizona">
-    <img src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Horse riding in Arizona">
-    <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Canoeing with a dog">
+  <div class="gallery-grid caption-gallery">
+    <figure>
+      <img src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing at Mt. Lemmon">
+      <figcaption>Mt. Lemmon rock climbing.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
+      <figcaption>Feeding the squirrels in the Grand Canyon.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Riding a mustang named Sequoia in Tucson">
+      <figcaption>Riding a mustang in Tucson. Her name is Sequoia.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with Clìo and Eryka">
+      <figcaption>Fishing trip with Clìo and Eryka.</figcaption>
+    </figure>
   </div>
 </article>

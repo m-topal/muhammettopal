@@ -1,22 +1,26 @@
 ---
 layout: default
 ---
-<article class="page narrow">
-  <p class="meta">{{ page.format | default: page.category | upcase }} · {{ page.date | date: "%B %-d, %Y" }}</p>
+<article class="page narrow post-page">
+  <p class="meta">{{ page.format | default: page.category | capitalize }} · {{ page.date | date: "%B %-d, %Y" }}</p>
   <h1>{{ page.title }}</h1>
   {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+
   <div class="share-row" aria-label="Share this post">
     <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on LinkedIn</a>
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on Facebook</a>
     <a href="https://api.whatsapp.com/send?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on WhatsApp</a>
     <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | uri_escape }}" target="_blank" rel="noopener">Share on X</a>
     <a href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}" target="_blank" rel="noopener">Email</a>
-    <button id="copyLinkButton" onclick="copyCurrentLink()">Copy link</button>
+    <button id="copyLinkButton" onclick="copyCurrentLink()" type="button">Copy link</button>
   </div>
-  <div class="prose">{{ content }}</div>
+
+  <div class="prose post-content">
+    {{ content }}
+  </div>
+
   <section class="comments">
     <h2>Comments</h2>
-    <p class="note">Comments are powered by GitHub through Utterances. To activate them, install the Utterances app for the repository <code>m-topal/muhammettopal</code>.</p>
-    <script src="https://utteranc.es/client.js" repo="m-topal/muhammettopal" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+    <p class="note">Comments can be activated later through Utterances or Giscus, using the GitHub repository for the website.</p>
   </section>
 </article>

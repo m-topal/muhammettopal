@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign searchable_pages = site.pages | where_exp: "item", "item.title and item.url != '/search.json' and item.url != '/404.html'" %}
+{% assign searchable_items = site.posts | concat: searchable_pages %}
+{% for item in searchable_items %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "type": "{% if item.date %}post{% else %}page{% endif %}",
+    "category": {{ item.category | default: item.format | default: item.section | default: "page" | jsonify }},
+    "date": "{% if item.date %}{{ item.date | date: '%Y-%m-%d' }}{% endif %}",
+    "description": {{ item.description | default: item.excerpt | strip_html | normalize_whitespace | jsonify }},
+    "content": {{ item.content | strip_html | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
