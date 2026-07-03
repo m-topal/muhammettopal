@@ -380,3 +380,147 @@ window.addEventListener("resize", updateReadingProgress);
     setupShareMenus();
   }
 })();
+/* v34: share popup modal, prevents card clipping */
+(function () {
+  function closePopup() {
+    var existing = document.querySelector('.share-popup-overlay');
+    if (existing) existing.remove();
+    document.body.classList.remove('share-popup-open');
+  }
+
+  function copyText(value) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(value);
+    }
+    var temp = document.createElement('textarea');
+    temp.value = value;
+    temp.setAttribute('readonly', '');
+    temp.style.position = 'absolute';
+    temp.style.left = '-9999px';
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    temp.remove();
+    return Promise.resolve();
+  }
+
+  function classifyLink(el) {
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim();
+
+    if (href.indexOf('facebook') !== -1) return { label: 'Facebook', icon: 'f', cls: 'icon-facebook' };
+    if (href.indexOf('twitter') !== -1 || text === 'X') return { label: 'X', icon: 'X', cls: 'icon-x' };
+    if (href.indexOf('linkedin') !== -1) return { label: 'LinkedIn', icon: 'in', cls: 'icon-linkedin' };
+    if (href.indexOf('mailto:') === 0) return { label: 'Email', icon: '✉', cls: 'icon-email' };
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) return { label: 'WhatsApp', icon: '☏', cls: 'icon-whatsapp' };
+    return { label: text || 'Share', icon: '↗', cls: 'icon-share' };
+  }
+
+  function optionNodeFromElement(el) {
+    var isCopy = el.classList && el.classList.contains('share-copy');
+    var href = el.getAttribute('href');
+    var info = isCopy ? { label: 'Copy link', icon: '🔗', cls: 'icon-copy' } : classifyLink(el);
+
+    var node;
+    if (isCopy) {
+      node = document.createElement('button');
+      node.type = 'button';
+      node.setAttribute('data-copy-url', el.getAttribute('data-url') || window.location.href);
+    } else {
+      node = document.createElement('a');
+      node.href = href;
+      if (el.target) node.target = el.target;
+      if (el.rel) node.rel = el.rel;
+    }
+
+    node.className = 'share-popup-option';
+    node.innerHTML = '<span class="share-popup-icon ' + info.cls + '">' + info.icon + '</span><span>' + info.label + '</span>';
+    return node;
+  }
+
+  function openPopup(toggle) {
+    closePopup();
+
+    var wrap = toggle.closest('.share-menu-wrap');
+    var panel = wrap && wrap.querySelector('.share-menu-panel');
+    if (!panel) return;
+
+    var sourceActions = toggle.closest('.social-actions');
+    var postUrl = (sourceActions && sourceActions.getAttribute('data-post-url')) || window.location.href;
+    var postTitle = (sourceActions && sourceActions.getAttribute('data-post-title')) || document.title;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'share-popup-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Share');
+
+    var dialog = document.createElement('div');
+    dialog.className = 'share-popup-dialog';
+
+    var header = document.createElement('div');
+    header.className = 'share-popup-header';
+    header.innerHTML = '<h2 class="share-popup-title">Share</h2><button class="share-popup-close" type="button" aria-label="Close share dialog">×</button>';
+
+    var options = document.createElement('div');
+    options.className = 'share-popup-options';
+
+    Array.prototype.slice.call(panel.children).forEach(function (child) {
+      if (child.matches && (child.matches('a') || child.matches('button'))) {
+        options.appendChild(optionNodeFromElement(child));
+      }
+    });
+
+    var copyRow = document.createElement('div');
+    copyRow.className = 'share-popup-copy-row';
+    copyRow.innerHTML = '<div class="share-popup-url">' + postUrl + '</div><button class="share-popup-copy-main" type="button" data-copy-url="' + postUrl + '">Copy</button>';
+
+    dialog.appendChild(header);
+    dialog.appendChild(options);
+    dialog.appendChild(copyRow);
+    overlay.appendChild(dialog);
+    document.body.appendChild(overlay);
+    document.body.classList.add('share-popup-open');
+
+    var close = overlay.querySelector('.share-popup-close');
+    if (close) close.focus();
+  }
+
+  document.addEventListener('click', function (event) {
+    var toggle = event.target.closest('.share-menu-toggle');
+    if (toggle) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      openPopup(toggle);
+      return;
+    }
+
+    var close = event.target.closest('.share-popup-close');
+    if (close) {
+      event.preventDefault();
+      closePopup();
+      return;
+    }
+
+    var copy = event.target.closest('.share-popup-option[data-copy-url], .share-popup-copy-main[data-copy-url]');
+    if (copy) {
+      event.preventDefault();
+      copyText(copy.getAttribute('data-copy-url') || window.location.href).then(function () {
+        var old = copy.textContent;
+        copy.textContent = 'Copied';
+        setTimeout(function () {
+          copy.textContent = old;
+        }, 1200);
+      });
+      return;
+    }
+
+    var overlay = event.target.classList && event.target.classList.contains('share-popup-overlay');
+    if (overlay) closePopup();
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closePopup();
+  });
+})();

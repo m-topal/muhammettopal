@@ -2157,3 +2157,185 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
     flex: 0 0 auto;
   }
 }
+/* v34: compact favicon support and YouTube-style share popup */
+
+/* The original inline share menu is now used only as a data source. */
+.share-menu-wrap > .share-menu-panel {
+  display: none !important;
+}
+
+.share-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(255,255,255,.70);
+  backdrop-filter: blur(5px);
+}
+
+.share-popup-dialog {
+  width: min(640px, calc(100vw - 36px));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(0,0,0,.16);
+  padding: 20px;
+}
+
+.share-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.share-popup-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.share-popup-close {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.share-popup-close:hover {
+  background: var(--soft);
+}
+
+.share-popup-options {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 18px 2px 14px;
+  scrollbar-width: thin;
+}
+
+.share-popup-option {
+  flex: 0 0 auto;
+  width: 86px;
+  min-height: 92px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.2;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 42px auto;
+  place-items: center;
+  gap: 7px;
+  padding: 11px 8px;
+  text-align: center;
+}
+
+.share-popup-option:hover {
+  background: var(--soft);
+  text-decoration: none;
+}
+
+.share-popup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.share-popup-icon.icon-facebook {
+  font-size: 19px;
+}
+
+.share-popup-icon.icon-x {
+  font-size: 20px;
+}
+
+.share-popup-icon.icon-linkedin {
+  font-size: 15px;
+}
+
+.share-popup-icon.icon-email,
+.share-popup-icon.icon-whatsapp,
+.share-popup-icon.icon-copy {
+  font-size: 17px;
+}
+
+.share-popup-copy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.share-popup-url {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 13px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.share-popup-copy-main {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.share-popup-copy-main:hover {
+  background: var(--soft);
+}
+
+@media (max-width: 640px) {
+  .share-popup-dialog {
+    padding: 16px;
+  }
+
+  .share-popup-options {
+    gap: 9px;
+  }
+
+  .share-popup-option {
+    width: 78px;
+    min-height: 86px;
+    font-size: 12px;
+  }
+
+  .share-popup-copy-row {
+    grid-template-columns: 1fr;
+  }
+}

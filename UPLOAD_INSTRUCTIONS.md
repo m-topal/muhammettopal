@@ -1,24 +1,32 @@
-# Sticky logo, share layout, and Teaching Statement tag patch
+# Favicon and Share Popup Patch
 
-Upload only these changed files.
+Upload only these files to their matching folders.
 
-## 1. Upload to `_layouts/`
+## Upload to `_layouts/`
 - default.html
 
-## 2. Upload to repository root
-- teaching-experience.md
-
-## 3. Upload to `assets/css/`
+## Upload to `assets/css/`
 - style.css
 
-## Changes
+## Upload to `assets/js/`
+- site.js
 
-1. The handwritten Topal logo appears on every page above “Muhammet Topal.”
-2. The handwritten logo is larger than before.
-3. The old home-page Teaching Statement tag under the logo is removed.
-4. The Teaching Statement tag is moved to the end of the Teaching approach section on Teaching Experience.
-5. The sticky nav becomes two-line:
-   - Top line: centered handwritten Topal logo
-   - Bottom line: existing menu
-6. The share dropdown becomes horizontal and icon-based:
+## Upload to `assets/`
+- favicon.ico
+- favicon.svg
+- favicon-16x16.png
+- favicon-32x32.png
+- favicon-48x48.png
+- apple-touch-icon.png
+- icon-192.png
+- icon-512.png
+- favicon-mark-preview.png
+- site.webmanifest
+
+## What changes
+
+1. Favicon now uses a compact special mark from the handwritten Topal logo, not the full long word. It should appear larger and clearer in the browser tab.
+2. Favicon links are cache-busted with ?v=4.
+3. Share no longer opens inside the card. It opens as a centered popup/modal in the style of YouTube's share dialog, but with the site's clean white academic aesthetic.
+4. The popup includes:
    Facebook, X, LinkedIn, Email, WhatsApp, Copy link.
