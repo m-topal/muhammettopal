@@ -35,6 +35,7 @@ description: Search Muhammet Topal's academic website and blog.
           <option value="teaching">Teaching</option>
           <option value="publication">Publications</option>
           <option value="presentation">Presentations</option>
+          <option value="other">Other pages</option>
         </select>
       </label>
 
@@ -62,4 +63,30 @@ description: Search Muhammet Topal's academic website and blog.
 
   <p id="siteSearchStatus" class="note">Start typing to search.</p>
   <section id="siteSearchResults" class="site-search-results" aria-label="Search results"></section>
+
+  <div id="siteSearchData" hidden>
+    {% for post in site.posts %}
+      <article class="search-data-item"
+        data-title="{{ post.title | strip_html | escape }}"
+        data-url="{{ post.url | relative_url }}"
+        data-type="post"
+        data-category="{{ post.category | default: post.format | default: 'post' | downcase | escape }}"
+        data-date="{{ post.date | date: '%Y-%m-%d' }}"
+        data-description="{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | escape }}"
+        data-content="{{ post.content | strip_html | normalize_whitespace | escape }}"></article>
+    {% endfor %}
+
+    {% for site_page in site.pages %}
+      {% if site_page.title and site_page.url != '/search/' and site_page.url != '/search.json' and site_page.url != '/404.html' %}
+        <article class="search-data-item"
+          data-title="{{ site_page.title | strip_html | escape }}"
+          data-url="{{ site_page.url | relative_url }}"
+          data-type="page"
+          data-category="{% if site_page.url contains 'research' %}research{% elsif site_page.url contains 'teaching' %}teaching{% elsif site_page.url contains 'publication' %}publication{% elsif site_page.url contains 'presentation' %}presentation{% else %}other{% endif %}"
+          data-date=""
+          data-description="{{ site_page.description | default: site_page.excerpt | strip_html | normalize_whitespace | escape }}"
+          data-content="{{ site_page.content | strip_html | normalize_whitespace | escape }}"></article>
+      {% endif %}
+    {% endfor %}
+  </div>
 </article>

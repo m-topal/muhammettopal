@@ -1,8 +1,4 @@
----
----
 (function(){
-  const SEARCH_INDEX_URL = "{{ '/search.json' | relative_url }}";
-
   function normalize(value){
     return (value || "").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
@@ -13,22 +9,22 @@
     });
   }
 
-  function scoreItem(item, query){
+  function scoreText(item, query){
     const q = normalize(query);
+    if(!q) return 0;
+
     const title = normalize(item.title);
     const description = normalize(item.description);
     const category = normalize(item.category);
     const content = normalize(item.content);
-    let score = 0;
 
-    if(!q) return 0;
+    let score = 0;
     if(title.includes(q)) score += 8;
     if(description.includes(q)) score += 5;
     if(category.includes(q)) score += 3;
     if(content.includes(q)) score += 1;
 
-    const terms = q.split(/\s+/).filter(Boolean);
-    terms.forEach(function(term){
+    q.split(/\s+/).filter(Boolean).forEach(function(term){
       if(title.includes(term)) score += 4;
       if(description.includes(term)) score += 2;
       if(category.includes(term)) score += 1;
@@ -50,24 +46,25 @@
     return (start > 0 ? "…" : "") + clean.slice(start, end) + (end < clean.length ? "…" : "");
   }
 
-  function pageCategoryGuess(item){
-    const url = normalize(item.url || "");
-    const category = normalize(item.category || "");
-    const title = normalize(item.title || "");
-
-    if(category && category !== "page") return category;
-    if(url.includes("research") || title.includes("research")) return "research";
-    if(url.includes("teaching") || title.includes("teaching")) return "teaching";
-    if(url.includes("publication") || title.includes("publication")) return "publication";
-    if(url.includes("presentation") || title.includes("presentation")) return "presentation";
-    return category || "page";
-  }
-
   function dateAllowed(itemDate, from, to){
     if(!itemDate) return !from && !to;
     if(from && itemDate < from) return false;
     if(to && itemDate > to) return false;
     return true;
+  }
+
+  function readSearchData(){
+    return Array.from(document.querySelectorAll(".search-data-item")).map(function(el){
+      return {
+        title: el.dataset.title || "",
+        url: el.dataset.url || "#",
+        type: el.dataset.type || "page",
+        category: el.dataset.category || "other",
+        date: el.dataset.date || "",
+        description: el.dataset.description || "",
+        content: el.dataset.content || ""
+      };
+    });
   }
 
   function initSiteSearch(){
@@ -82,7 +79,7 @@
 
     if(!input || !results || !status) return;
 
-    let index = [];
+    const index = readSearchData();
 
     function render(){
       const query = input.value.trim();
@@ -99,15 +96,13 @@
         return;
       }
 
-      let matches = index
-        .map(function(item){
-          const categoryGuess = pageCategoryGuess(item);
-          return Object.assign({}, item, {score: scoreItem(item, query), categoryGuess: categoryGuess});
+      let matches = index.map(function(item){
+          return Object.assign({}, item, {score: scoreText(item, query)});
         })
         .filter(function(item){
           const queryOk = query.length < 2 || item.score > 0;
           const typeOk = activeType === "all" || item.type === activeType;
-          const categoryOk = activeCategory === "all" || normalize(item.categoryGuess) === normalize(activeCategory);
+          const categoryOk = activeCategory === "all" || normalize(item.category) === normalize(activeCategory);
           const dateOk = dateAllowed(item.date, from, to);
           return queryOk && typeOk && categoryOk && dateOk;
         });
@@ -136,7 +131,7 @@
         article.className = "search-result-item";
         article.innerHTML =
           '<p class="meta">' + escapeHtml(item.type === "post" ? "Blog post" : "Page") +
-          (item.categoryGuess ? " · " + escapeHtml(item.categoryGuess) : "") +
+          (item.category ? " · " + escapeHtml(item.category) : "") +
           (item.date ? " · " + escapeHtml(item.date) : "") + '</p>' +
           '<h2><a href="' + item.url + '">' + escapeHtml(item.title) + '</a></h2>' +
           '<p>' + escapeHtml(item.description || excerpt(item.content, query)) + '</p>';
@@ -144,21 +139,12 @@
       });
     }
 
-    fetch(SEARCH_INDEX_URL)
-      .then(function(response){ return response.json(); })
-      .then(function(data){
-        index = Array.isArray(data) ? data : [];
-        status.textContent = "Start typing to search.";
-        render();
-      })
-      .catch(function(){
-        status.textContent = "Search index could not be loaded.";
-      });
-
     [input, typeSelect, categorySelect, fromInput, toInput, sortSelect].forEach(function(el){
       if(el) el.addEventListener("input", render);
       if(el) el.addEventListener("change", render);
     });
+
+    render();
   }
 
   function initBlogSearch(){
@@ -168,6 +154,7 @@
     const filters = document.querySelectorAll(".blog-filter");
     const noResults = document.getElementById("blogNoResults");
     const sort = document.getElementById("blogSort");
+
     if(!input || !items.length || !list) return;
 
     let activeCategory = "all";

@@ -430,7 +430,7 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 }
 
 
-/* Final patch: sticky tabs, reading progress, captions, blog placeholders, advanced search */
+/* v12 final: sticky tabs, reading progress, captions, blog placeholders, safe advanced search, language menu */
 
 .reading-progress {
   position: fixed;
@@ -490,16 +490,14 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   margin: 24px 0 18px;
 }
 
-.blog-filter-row,
-.search-filter-row {
+.blog-filter-row {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
 }
 
-.blog-filter,
-.site-search-filter {
+.blog-filter {
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink);
@@ -510,9 +508,7 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 }
 
 .blog-filter.active,
-.site-search-filter.active,
-.blog-filter:hover,
-.site-search-filter:hover {
+.blog-filter:hover {
   border-color: var(--ink);
 }
 

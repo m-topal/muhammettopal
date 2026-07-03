@@ -1,36 +1,58 @@
-# Muhammet Topal website v7
+# Muhammet Topal academic website, v12 final
 
-Latest changes:
-- Main homepage photo is now on the left side, with bio text on the right.
-- Publications are categorized again: Books and translations, Articles and chapters, Dissertations and theses.
-- Publication rows show the full publication title and date before clicking.
-- Full citable references appear after clicking the plus sign.
-- Publication visible titles are larger and easier to read.
-- Links inside publication entries are clickable.
-- Contact form uses FormSubmit and is directed to muhammettopal29@arizona.edu.
-- Domain setup for muhammettopal.com remains included through CNAME and Cloudflare instructions.
+This package is built from the corrected v11 version and includes the final requested additions.
 
-Important:
-Upload the CONTENTS of this folder to the repository root, not the folder itself.
+## Included
 
-FormSubmit note:
-The first time the form is used, FormSubmit may send a confirmation email to muhammettopal29@arizona.edu. Confirm it once, then future form submissions should go through.
+- Sticky navigation tabs that remain visible while scrolling.
+- A reading progress bar at the top of the page.
+- Diversions captions:
+  - Mt. Lemmon rock climbing.
+  - Feeding the squirrels in the Grand Canyon.
+  - Riding a mustang in Tucson. Her name is Sequoia.
+  - Fishing trip with Clìo and Eryka.
+- Blog system:
+  - `_posts` support.
+  - `_drafts/example-essay.md`.
+  - `assets/img/blog/`.
+  - categories: Essays, Notes, Videos, Podcasts, Fragments.
+  - placeholder cards when there are no posts.
+  - blog search, category filter, and sorting.
+- Safe advanced search page at `/search/`:
+  - type filter: pages or blog posts.
+  - format filter: essays, notes, videos, podcasts, fragments, research, teaching, publications, presentations.
+  - date range filter.
+  - sorting by relevance, newest, oldest, or title.
+- Language menu:
+  - English, Türkçe, Français, العربية, Русский, فارسی.
+  - Machine translation links using Google Translate.
+- Domain settings remain prepared for `muhammettopal.com`.
 
+## How to add a blog essay
 
-## Version 8 merged update
+Add a new Markdown file inside `_posts`.
 
-This package merges the previous prepared version with the new structure: About Me, Service, Research subpages, Teaching subpages, two column long text layouts, homepage headshot, cleaner Diversions, and Facebook and WhatsApp share buttons for the blog.
+Example file name:
 
-## Version 9 update
+`2026-07-02-on-biography-and-history.md`
 
-This version adds Extra Curricular in place of Service, adds uploaded colloquium and MENASA workshop flyers, moves Beyond Academia from the home page to Diversions, adds College Teaching Certificate as a separate Teaching subpage, removes the numeric teaching summary, and makes the home page text wrap around the headshot.
+Example file content:
 
+```markdown
+---
+layout: post
+title: "On Biography and Historical Judgment"
+date: 2026-07-02
+category: essay
+format: essay
+description: "A short reflection on biography as a historical method."
+---
 
-## Version 10 update
+Write the essay here.
+```
 
-This version fixes the visible publication titles, adds the MENAS department profile link under the contact address, justifies long text on desktop, removes the duplicate Grand Canyon image from the bottom of Diversions, and adds a small hand-drawn divider between the navigation tabs and the homepage text/image section.
+Drafts can be kept in `_drafts`. They will not appear publicly until moved into `_posts`.
 
+## Note on future dated posts
 
-## Version 11 correction
-
-This version removes the mistaken drawn line from the homepage and relocates the website description sentence from the lower body text to the subtle header space between the navigation area and the homepage image/text section.
+GitHub Pages does not publish posts with future dates. Use today's date or an earlier date if you want a post to appear immediately.
