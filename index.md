@@ -3,6 +3,13 @@ layout: default
 title: Home
 permalink: /
 ---
+<div class="home-ornament" aria-hidden="true">
+  <svg viewBox="0 0 860 70" preserveAspectRatio="none">
+    <path d="M20 39 C170 18 355 5 455 20 C475 23 482 28 482 35 L845 35" />
+    <path d="M44 58 L845 58" />
+  </svg>
+</div>
+
 <section class="home-wrap-section">
   <div class="prose home-wrap-prose">
     <img class="home-wrap-photo" src="{{ '/assets/img/main-headshot.jpg' | relative_url }}" alt="Muhammet Topal portrait">

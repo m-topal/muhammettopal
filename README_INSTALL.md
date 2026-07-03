@@ -24,3 +24,8 @@ This package merges the previous prepared version with the new structure: About 
 ## Version 9 update
 
 This version adds Extra Curricular in place of Service, adds uploaded colloquium and MENASA workshop flyers, moves Beyond Academia from the home page to Diversions, adds College Teaching Certificate as a separate Teaching subpage, removes the numeric teaching summary, and makes the home page text wrap around the headshot.
+
+
+## Version 10 update
+
+This version fixes the visible publication titles, adds the MENAS department profile link under the contact address, justifies long text on desktop, removes the duplicate Grand Canyon image from the bottom of Diversions, and adds a small hand-drawn divider between the navigation tabs and the homepage text/image section.

@@ -11,10 +11,10 @@ permalink: /publications/
     <h2>Books and translations</h2>
     <div class="accordion">
       <div class="accordion-item open">
-        <button class="accordion-trigger publication-trigger"><span class="accordion-title">Biyografi, by Melanie Nolan, Turkish translation <span class="publication-visible-date">2026, forthcoming</span></span><span class="accordion-plus">+</span></button>
+        <button class="accordion-trigger publication-trigger"><span class="accordion-title">Biography: An Historiography <span class="publication-visible-date">2026, forthcoming</span></span><span class="accordion-plus">+</span></button>
         <div class="accordion-panel">
           <div class="accordion-meta">Book translation</div>
-          <p class="pub-reference">Topal, Muhammet, trans. <em>Biyografi</em>, by Melanie Nolan. İstanbul: Vakıf Bank Kültür Yayınları, 2026. Originally published as Biography: An Historiography. London: Routledge, 2023. Forthcoming.</p>
+          <p class="pub-reference">Nolan, Melanie. <em>Biography: An Historiography</em>. Turkish translation by Muhammet Topal. İstanbul: Vakıf Bank Kültür Yayınları, 2026. Originally published by Routledge, 2023. Forthcoming.</p>
         </div>
       </div>
     </div>
@@ -41,10 +41,10 @@ permalink: /publications/
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-trigger publication-trigger"><span class="accordion-title">“Temsil, Hafıza ve Anlatının İzinde, İpek Yolu’nda Üç Seyyah: Marco Polo, İbn Battûta ve Tudelalı Benjamin” <span class="publication-visible-date">2025</span></span><span class="accordion-plus">+</span></button>
+        <button class="accordion-trigger publication-trigger"><span class="accordion-title">“In Pursuit of Representation, Memory, and Narrative: Three Travelers on the Silk Road, Marco Polo, Ibn Battuta, and Benjamin of Tudela” <span class="publication-visible-date">2025</span></span><span class="accordion-plus">+</span></button>
         <div class="accordion-panel">
           <div class="accordion-meta">Article</div>
-          <p class="pub-reference">Topal, Muhammet. “Temsil, Hafıza ve Anlatının İzinde, İpek Yolu’nda Üç Seyyah: Marco Polo, İbn Battûta ve Tudelalı Benjamin” [In Pursuit of Representation, Memory, and Narrative: Three Travelers on the Silk Road: Marco Polo, Ibn Battuta, and Benjamin of Tudela]. <em>Tarih Dergisi</em>, no. 32, Silk Road special issue, edited by Kahraman Şakul (2025): 178–86.</p>
+          <p class="pub-reference">Topal, Muhammet. “In Pursuit of Representation, Memory, and Narrative: Three Travelers on the Silk Road, Marco Polo, Ibn Battuta, and Benjamin of Tudela” [Turkish original: Temsil, Hafıza ve Anlatının İzinde, İpek Yolu’nda Üç Seyyah: Marco Polo, İbn Battûta ve Tudelalı Benjamin]. <em>Tarih Dergisi</em>, no. 32, Silk Road special issue, edited by Kahraman Şakul (2025): 178–86.</p>
         </div>
       </div>
     </div>
