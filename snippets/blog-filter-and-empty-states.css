@@ -1,0 +1,113 @@
+/* Wider blog search/filter panel and persistent empty category styling. */
+
+.blog-filter-panel,
+.search-filter-panel,
+.filter-panel {
+  width: 100%;
+  max-width: 1100px;
+  margin: 32px auto 48px;
+  padding: 28px 32px;
+  border: 1px solid #e2e2e2;
+  border-radius: 18px;
+  box-sizing: border-box;
+}
+
+/* Use this class on the form row containing Search, Format, Tag, From, To, Sort. */
+.blog-filter-grid,
+.search-filter-grid,
+.filter-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(320px, 2.2fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(170px, 1fr)
+    minmax(170px, 1fr)
+    minmax(170px, 1fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.blog-filter-grid input,
+.blog-filter-grid select,
+.search-filter-grid input,
+.search-filter-grid select,
+.filter-grid input,
+.filter-grid select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}
+
+/* Make labels breathe. */
+.blog-filter-grid label,
+.search-filter-grid label,
+.filter-grid label {
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+}
+
+/* Filter buttons row. */
+.blog-filter-buttons,
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Category sections remain visible even when empty. */
+.blog-category-section {
+  display: block;
+  margin: 46px auto;
+  max-width: 1100px;
+}
+
+.blog-category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+
+.blog-category-header h2 {
+  margin: 0;
+}
+
+.blog-empty-state {
+  color: #777;
+  font-style: italic;
+  font-size: 16px;
+  margin: 10px 0 32px;
+}
+
+/* Responsive layout. */
+@media (max-width: 1180px) {
+  .blog-filter-grid,
+  .search-filter-grid,
+  .filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-filter-panel,
+  .search-filter-panel,
+  .filter-panel {
+    padding: 22px 18px;
+  }
+
+  .blog-filter-grid,
+  .search-filter-grid,
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}

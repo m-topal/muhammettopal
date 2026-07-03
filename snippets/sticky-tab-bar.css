@@ -1,0 +1,70 @@
+/* Site-wide sticky tab bar wordmark.
+   Add this to the global stylesheet. */
+
+:root {
+  --topal-teal: #007a80;
+  --topal-red: #b80000;
+}
+
+/* Apply to your sticky nav wrapper. Add this class to the nav if needed. */
+.site-nav,
+.sticky-tab-bar,
+.header-nav,
+nav[aria-label="Main navigation"] {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+}
+
+/* Put the handwritten wordmark at the left of the navigation row. */
+.sticky-wordmark-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.sticky-wordmark {
+  width: 118px;
+  height: auto;
+  display: block;
+}
+
+/* If the nav is a flex row, this keeps everything aligned. */
+.site-nav-inner,
+.nav-inner,
+.menu,
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Keep the My Blog button visually separate. */
+.nav-menu .my-blog,
+.menu .my-blog,
+a[href="/blog/"].active,
+a[href="/blog"] {
+  white-space: nowrap;
+}
+
+/* Mobile adjustments. */
+@media (max-width: 800px) {
+  .sticky-wordmark-link {
+    margin-right: 12px;
+  }
+
+  .sticky-wordmark {
+    width: 88px;
+  }
+}
+
+@media (max-width: 560px) {
+  .sticky-wordmark {
+    width: 74px;
+  }
+}

@@ -1,5 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="16" fill="#fbfaf7"/>
-  <circle cx="16" cy="16" r="15" fill="none" stroke="#7a2e2e" stroke-width="1"/>
-  <text x="16" y="21" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#1c1c1a">MT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <image href="topal-wordmark-transparent.png" x="56" y="176" width="400" height="160" preserveAspectRatio="xMidYMid meet"/>
 </svg>

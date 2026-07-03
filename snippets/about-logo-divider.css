@@ -1,0 +1,50 @@
+/* About Me horizontal wordmark divider.
+   It should span both columns above the body text. */
+
+.about-wordmark-divider {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 42px auto 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.about-divider-line {
+  height: 2px;
+  background: var(--topal-teal, #007a80);
+  flex: 1 1 auto;
+  max-width: 430px;
+}
+
+.about-divider-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+
+/* Hide only the large repeated About Me title, not the page metadata label unless desired.
+   Adjust the selector to match your actual page title class. */
+.about-page .page-title,
+.about-page h1.page-title,
+body.about .page-title {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .about-wordmark-divider {
+    gap: 18px;
+    margin: 32px auto 28px;
+  }
+
+  .about-divider-logo {
+    width: 122px;
+  }
+
+  .about-divider-line {
+    max-width: 180px;
+  }
+}

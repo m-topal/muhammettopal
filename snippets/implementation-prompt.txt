@@ -1,0 +1,60 @@
+Please update my personal academic website with the following changes.
+
+Important principle:
+The handwritten Topal wordmark is NOT replacing the main site title. The main header must still say:
+
+Muhammet Topal
+Academic Portfolio and Personal Blog
+
+Use the handwritten wordmark as:
+1. favicon/browser tab icon,
+2. the logo element inside the sticky navigation/tab bar visible on every page,
+3. the decorative horizontal divider on the About Me page.
+
+Tasks:
+
+1. Install icons
+- Copy all image files from `assets/` into the public assets folder.
+- Add the favicon links from `snippets/head-icons.html` to the site-wide head.
+
+2. Sticky tab bar on all pages
+- Add the wordmark logo from `assets/topal-wordmark-transparent.png` into the sticky navigation/tab bar, before Home.
+- It should appear on every page.
+- It should be small, elegant, and not crowd the menu.
+- Use the CSS from `snippets/sticky-tab-bar.css`.
+
+3. Keep the main header
+- Keep “Muhammet Topal.”
+- Keep “Academic Portfolio and Personal Blog.”
+- Do not replace either with the handwritten wordmark.
+
+4. About Me page
+- Remove the large repeated bold “About Me” heading above the text.
+- Add the horizontal wordmark divider between the navigation/header area and the two-column text.
+- It should span both columns.
+- Use `snippets/about-logo-divider.html` and `snippets/about-logo-divider.css`.
+
+5. Blog search/filter bar
+- Make the search/filter panel wider.
+- The placeholder “Search title, content, or keywords...” must not be cut.
+- “All formats,” “All tags,” and “Newest first” must not be cut.
+- Use grid/flexible widths from `snippets/blog-filter-and-empty-states.css`.
+
+6. Blog category visibility
+- When All is selected, show Essays, Podcasts, and Videos section headers.
+- If a section has no posts, show:
+  - No essays yet.
+  - No podcasts yet.
+  - No videos yet.
+- When Essays is selected, keep the Essays heading visible even if there are zero results.
+- When Podcasts is selected, keep the Podcasts heading visible even if there are zero results.
+- When Videos is selected, show Videos and the existing video card.
+- Use/adapt `snippets/blog-empty-section-logic.js`.
+
+Final check:
+- Browser tab shows the Topal icon.
+- Sticky navigation on every page shows the handwritten Topal wordmark.
+- Main title and subtitle remain unchanged.
+- About Me has the divider and no repeated big About Me title.
+- Blog filters are readable and not cramped.
+- Empty categories still display their headers and empty messages.
