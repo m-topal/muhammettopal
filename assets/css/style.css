@@ -2855,3 +2855,112 @@ article.teaching-experience-page {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+
+/* v52: visible My Blog glow without duplicate border */
+.nav {
+  overflow: visible !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.nav a.blog-pill,
+.nav .blog-pill,
+.nav a.blog-link,
+.nav .blog-link,
+.nav a[href$="/blog/"] {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  z-index: 2 !important;
+  color: #b00000 !important;
+  background: #fff !important;
+  border: 2px solid #b00000 !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* No underline and no second border. This is only a blurred glow behind the pill. */
+.nav a.blog-pill::before,
+.nav .blog-pill::before,
+.nav a.blog-link::before,
+.nav .blog-link::before,
+.nav a[href$="/blog/"]::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: calc(100% + 20px) !important;
+  height: calc(100% + 18px) !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(176, 0, 0, .26) 0%,
+    rgba(176, 0, 0, .16) 45%,
+    rgba(176, 0, 0, 0) 76%
+  ) !important;
+  filter: blur(7px) !important;
+  opacity: .72 !important;
+  transform: translate(-50%, -50%) scale(.94) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  animation: myBlogVisibleGlow 1.65s ease-in-out infinite !important;
+}
+
+/* Keep ::after disabled so it cannot create a second outline or underline. */
+.nav a.blog-pill::after,
+.nav .blog-pill::after,
+.nav a.blog-link::after,
+.nav .blog-link::after,
+.nav a[href$="/blog/"]::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* The glow remains visible on hover/active, but the pill itself can fill red. */
+.nav a.blog-pill:hover,
+.nav .blog-pill:hover,
+.nav a.blog-link:hover,
+.nav .blog-link:hover,
+.nav a[href$="/blog/"]:hover,
+.nav a.blog-pill.active,
+.nav .blog-pill.active,
+.nav a[href$="/blog/"].active {
+  color: #fff !important;
+  background: #b00000 !important;
+  border-color: #b00000 !important;
+  text-decoration: none !important;
+  background-image: none !important;
+}
+
+.nav a.blog-pill:hover::before,
+.nav .blog-pill:hover::before,
+.nav a.blog-link:hover::before,
+.nav .blog-link:hover::before,
+.nav a[href$="/blog/"]:hover::before,
+.nav a.blog-pill.active::before,
+.nav .blog-pill.active::before,
+.nav a[href$="/blog/"].active::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(176, 0, 0, .34) 0%,
+    rgba(176, 0, 0, .19) 46%,
+    rgba(176, 0, 0, 0) 78%
+  ) !important;
+}
+
+@keyframes myBlogVisibleGlow {
+  0%, 100% {
+    opacity: .34;
+    transform: translate(-50%, -50%) scale(.88);
+  }
+
+  50% {
+    opacity: .90;
+    transform: translate(-50%, -50%) scale(1.18);
+  }
+}
