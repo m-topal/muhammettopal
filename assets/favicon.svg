@@ -1,10 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="#ffffff"/>
-  <circle cx="256" cy="256" r="241" fill="#e5b834"/>
-  <circle cx="256" cy="256" r="207" fill="#0c5291"/>
-  <circle cx="256" cy="256" r="146" fill="#e3f4fc"/>
-  <circle cx="256" cy="256" r="95" fill="#197ec2"/>
-  <circle cx="256" cy="256" r="43" fill="#ffffff"/>
-  <circle cx="256" cy="256" r="22" fill="#232323"/>
-  <circle cx="228" cy="228" r="13" fill="#ffffff" opacity=".82"/>
+  <path d="M256 28C187 55 86 111 40 200C-9 294 42 420 158 471C258 515 386 480 455 383C523 287 487 164 398 87C350 45 303 28 256 28Z" fill="#124a8c"/>
+  <path d="M256 155C205 173 147 212 127 271C101 349 159 431 244 436C332 441 399 367 381 285C367 222 310 177 256 155Z" fill="#e6f2f6"/>
+  <circle cx="256" cy="294" r="89" fill="#fff200"/>
+  <circle cx="256" cy="294" r="36" fill="#124a8c"/>
 </svg>

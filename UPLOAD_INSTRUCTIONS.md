@@ -1,9 +1,8 @@
-# Homepage Text and Nazar Favicon Patch
+# Nazar Drop Favicon Patch
 
-Upload only these changed files.
+This patch changes only the URL/tab favicon to match the uploaded nazar boncuğu style.
 
-## Root
-- index.md
+Upload only these files.
 
 ## _layouts/
 - default.html
@@ -20,14 +19,4 @@ Upload only these changed files.
 - nazar-favicon-preview.png
 - site.webmanifest
 
-## What changed
-
-1. Homepage intro text is replaced with the new three-paragraph version.
-2. I corrected obvious typos in the supplied text:
-   - follwing → following
-   - as wells as → as well as
-   - scoiety → society
-3. The URL/tab icon is now a minimalist nazar boncuğu favicon in blue, white, and a small yellow outer tone.
-4. Favicon links are cache-busted with ?v=5.
-
-After uploading, wait a few minutes and hard refresh. Browser favicons cache aggressively. If the old icon remains, open the site in an incognito window or clear favicon cache.
+After upload, wait a few minutes and hard refresh. Favicon caches are stubborn. If it still shows the old icon, open the site in an incognito window or clear the browser favicon cache.
