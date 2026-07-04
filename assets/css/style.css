@@ -3057,3 +3057,143 @@ body.course-modal-open {
     object-position: center center !important;
   }
 }
+
+
+/* v60: extra image middle-wrap and teaching assistantship syllabus card */
+
+/* Extra Curricular image: larger than v59, pulled into the middle, with text wrapping around it. */
+.extra-breakout-workshop {
+  column-span: none !important;
+  -webkit-column-span: none !important;
+  float: right !important;
+  clear: right !important;
+  width: min(560px, 58%) !important;
+  max-width: 560px !important;
+  margin: 6px 5% 24px 30px !important;
+  transform: translateX(-8%) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .075) !important;
+}
+
+.extra-breakout-workshop img {
+  display: block !important;
+  width: 100% !important;
+  height: 330px !important;
+  max-height: 330px !important;
+  object-fit: cover !important;
+  object-position: 61% 50% !important;
+  transform: scale(1.13) !important;
+  transform-origin: 61% 50% !important;
+  cursor: zoom-in !important;
+}
+
+.extra-breakout-workshop figcaption {
+  position: relative !important;
+  z-index: 1 !important;
+  background: #fff !important;
+  text-align: left !important;
+}
+
+/* Teaching Assistantship card grid stays normal and clickable. */
+.teaching-experience-page .teaching-shelf-row,
+.teaching-experience-page .instructor-course-row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+.teaching-assistantship-card .course-card-image img {
+  object-position: center center !important;
+  filter: grayscale(100%) contrast(1.04) !important;
+}
+
+.course-card-with-image .course-card-image,
+.modal-course-card .course-card-image,
+.teaching-course-card .course-card-image {
+  aspect-ratio: 16 / 9 !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.course-card-with-image .course-card-image img,
+.modal-course-card .course-card-image img,
+.teaching-course-card .course-card-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.course-modal-trigger,
+button.course-card-action {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+.course-modal-dialog-wide {
+  grid-template-columns: minmax(0, .86fr) minmax(260px, .56fr) !important;
+}
+
+.course-modal-dialog-wide .course-syllabus-scroll {
+  grid-column: 1 / -1;
+  max-height: 38vh;
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.course-syllabus-scroll h4 {
+  margin: 0 0 10px;
+  font-family: var(--sans);
+  font-size: .95rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.course-syllabus-scroll p {
+  margin: 0 0 10px;
+  font-size: .96rem;
+  line-height: 1.5;
+}
+
+.course-modal-preview img {
+  filter: grayscale(100%) contrast(1.04);
+}
+
+@media (max-width: 900px) {
+  .extra-breakout-workshop {
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 28px 0 32px !important;
+    transform: none !important;
+  }
+
+  .extra-breakout-workshop img {
+    height: auto !important;
+    max-height: none !important;
+    transform: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .teaching-experience-page .teaching-shelf-row,
+  .teaching-experience-page .instructor-course-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .course-modal-dialog-wide {
+    grid-template-columns: 1fr !important;
+  }
+}

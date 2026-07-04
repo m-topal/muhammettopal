@@ -117,11 +117,17 @@ permalink: /teaching/experience/
         <p>Teaching support in Middle Eastern humanities, discussion, reading, and student work.</p>
       </a>
 
-      <a class="teaching-course-card" href="#modern-middle-east">
-        <p class="meta">University of Arizona</p>
-        <h3>History of the Modern Middle East</h3>
-        <p>Teaching support for modern Middle Eastern history, historical context, sources, and interpretation.</p>
-      </a>
+      <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card">
+        <div class="course-card-image">
+          <img src="{{ '/assets/img/teaching/people-history-modern-middle-east-preview.png' | relative_url }}" alt="Busy street in late Ottoman Istanbul used as preview for A People’s History of the Modern Middle East">
+        </div>
+        <div class="course-card-body">
+          <p class="meta">HIST/MENA 277B · University of Arizona</p>
+          <h3>A People’s History of the Modern Middle East</h3>
+          <p>Teaching support for a modern Middle East history course centered on people, sources, political change, social life, and historical interpretation.</p>
+          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="people-history-modern-middle-east-modal">See details</button>
+        </div>
+      </article>
 
       <a class="teaching-course-card" href="#islamic-civilization">
         <p class="meta">University of Arizona</p>

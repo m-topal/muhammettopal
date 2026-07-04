@@ -734,3 +734,58 @@ window.addEventListener("resize", updateReadingProgress);
     setupCourseModals();
   }
 })();
+
+
+/* v60: Teaching Assistantship course modal safety */
+(function () {
+  function closeCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.classList.remove('course-modal-open');
+  }
+
+  function openCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('course-modal-open');
+    var close = modal.querySelector('.course-modal-close');
+    if (close) close.focus();
+  }
+
+  function setupV60CourseModals() {
+    document.querySelectorAll('.course-modal-trigger[data-course-modal]').forEach(function (button) {
+      if (button.dataset.v60Ready === 'true') return;
+      button.dataset.v60Ready = 'true';
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openCourseModal(document.getElementById(button.getAttribute('data-course-modal')));
+      });
+    });
+
+    document.querySelectorAll('.course-modal').forEach(function (modal) {
+      if (modal.dataset.v60ModalReady === 'true') return;
+      modal.dataset.v60ModalReady = 'true';
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) closeCourseModal(modal);
+      });
+      modal.querySelectorAll('.course-modal-close').forEach(function (close) {
+        close.addEventListener('click', function () {
+          closeCourseModal(modal);
+        });
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.course-modal:not([hidden])').forEach(closeCourseModal);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupV60CourseModals);
+  } else {
+    setupV60CourseModals();
+  }
+})();
