@@ -3675,3 +3675,187 @@ button.course-card-action,
     object-fit: contain !important;
   }
 }
+
+
+/* v63: true extra text wrap, teaching assistantship grid, certificate link placement */
+
+/* Extra Curricular: real text wrap around the image.
+   CSS multi-column cannot reliably wrap text around an image that crosses both columns,
+   so this page section becomes a single flowing prose block around the floated figure. */
+.extracurricular-page .two-column-prose {
+  column-count: auto !important;
+  columns: auto !important;
+  column-gap: 0 !important;
+  max-width: 1040px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.extracurricular-page .extra-breakout-workshop {
+  column-span: none !important;
+  -webkit-column-span: none !important;
+  float: right !important;
+  clear: right !important;
+  display: block !important;
+  width: min(510px, 47%) !important;
+  max-width: 510px !important;
+  margin: 6px 0 22px 32px !important;
+  transform: none !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .075) !important;
+}
+
+.extracurricular-page .extra-breakout-workshop img {
+  display: block !important;
+  width: 100% !important;
+  height: 315px !important;
+  max-height: 315px !important;
+  object-fit: cover !important;
+  object-position: 58% 50% !important;
+  transform: none !important;
+  cursor: zoom-in !important;
+}
+
+.extracurricular-page .extra-breakout-workshop figcaption {
+  padding: 12px 14px !important;
+  border-top: 1px solid var(--line) !important;
+  color: var(--muted) !important;
+  font-family: var(--sans) !important;
+  font-size: .92rem !important;
+  line-height: 1.4 !important;
+  background: #fff !important;
+}
+
+/* Teaching Assistantship: fully disable old horizontal carousel behavior. */
+.teaching-experience-page .teaching-shelf-row,
+.teaching-experience-page .instructor-course-row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-columns: unset !important;
+  grid-auto-rows: auto !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  scroll-snap-type: none !important;
+  padding-bottom: 0 !important;
+}
+
+.teaching-experience-page .teaching-shelf-row > *,
+.teaching-experience-page .instructor-course-row > *,
+.teaching-experience-page .teaching-course-card {
+  scroll-snap-align: none !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.teaching-experience-page .teaching-course-card {
+  min-height: 230px !important;
+  display: block !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.teaching-experience-page .teaching-course-card:not(.course-card-with-image):not(.modal-course-card) {
+  padding: 18px !important;
+}
+
+.teaching-experience-page .course-card-with-image,
+.teaching-experience-page .modal-course-card {
+  padding: 0 !important;
+}
+
+.teaching-experience-page .course-card-image {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.teaching-experience-page .course-card-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.teaching-experience-page .course-card-body {
+  padding: 18px !important;
+}
+
+/* Certificate website link belongs before the cards, not at the page bottom. */
+.teaching-certificate-page .certificate-website-link {
+  clear: both !important;
+  column-span: all !important;
+  -webkit-column-span: all !important;
+  margin: 24px 0 0 !important;
+  text-align: left !important;
+}
+
+/* Keep certificate cards clean below prose. */
+.teaching-certificate-page .certificate-coursework-cards {
+  clear: both !important;
+  column-span: all !important;
+  -webkit-column-span: all !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 42px 0 42px !important;
+}
+
+.teaching-certificate-page .certificate-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  gap: 24px !important;
+  overflow: visible !important;
+}
+
+.teaching-certificate-page .certificate-card {
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .extracurricular-page .extra-breakout-workshop {
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 28px 0 32px !important;
+  }
+
+  .extracurricular-page .extra-breakout-workshop img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .teaching-experience-page .teaching-shelf-row,
+  .teaching-experience-page .instructor-course-row,
+  .teaching-certificate-page .certificate-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

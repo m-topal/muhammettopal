@@ -3,7 +3,7 @@ layout: default
 title: Extra Curricular
 permalink: /extracurricular/
 ---
-<article class="page wide">
+<article class="page wide extracurricular-page">
   <p class="label">Extra Curricular</p>
   <h1>Extra Curricular Activities</h1>
 

@@ -30,6 +30,10 @@ permalink: /teaching/certificate/
     <p><strong>Teaching as Research</strong> introduced teaching as a reflective and evidence based practice. It encouraged me to treat classroom design, participation, and assessment as questions that can be studied, revised, and improved rather than as fixed habits.</p>
 
     <p><strong>College Teaching Practice</strong> connected these principles to concrete teaching situations. It helped me refine syllabi, assignments, rubrics, classroom activities, and student feedback practices. The certificate as a whole strengthened my commitment to structured, accessible, and intellectually demanding teaching.</p>
+    <p class="certificate-website-link">
+      <a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a>
+    </p>
+
   </div>
 
   <section class="certificate-coursework-cards">
@@ -75,7 +79,4 @@ permalink: /teaching/certificate/
     </div>
   </section>
 
-  <p class="certificate-website-link">
-    <a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a>
-  </p>
 </article>
