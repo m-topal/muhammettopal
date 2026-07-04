@@ -1,10 +1,15 @@
-# Header Wordmark Size and Position Patch
+# Navigation Hover Fix Patch
 
-Upload only this file:
+Upload only these files.
 
-assets/css/style.css
+## assets/css/
+- style.css
 
-What it does:
-- Makes the handwritten Topal logo about 20% larger.
-- Moves it slightly downward so it sits closer to “Muhammet Topal.”
-- Keeps the rest of the header and navigation unchanged.
+## assets/js/
+- site.js
+
+What it fixes:
+- Removes the extra red underline that appeared under the existing black/nav underline.
+- Uses one clean underline only.
+- Makes Portfolio and Extra Curricular dropdowns open on hover, not only click.
+- Click behavior still works.

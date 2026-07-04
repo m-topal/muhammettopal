@@ -564,3 +564,31 @@ window.addEventListener("resize", updateReadingProgress);
     setupNavDropdowns();
   }
 })();
+/* v39: open nav dropdowns on hover as well as click */
+(function () {
+  function setupHoverDropdowns() {
+    document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+      var closeTimer = null;
+
+      dropdown.addEventListener('mouseenter', function () {
+        if (closeTimer) window.clearTimeout(closeTimer);
+        dropdown.open = true;
+        document.querySelectorAll('.nav-dropdown[open]').forEach(function (other) {
+          if (other !== dropdown) other.open = false;
+        });
+      });
+
+      dropdown.addEventListener('mouseleave', function () {
+        closeTimer = window.setTimeout(function () {
+          if (!dropdown.matches(':focus-within')) dropdown.open = false;
+        }, 120);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupHoverDropdowns);
+  } else {
+    setupHoverDropdowns();
+  }
+})();
