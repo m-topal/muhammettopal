@@ -2845,3 +2845,174 @@ body.course-modal-open {
     opacity: .82;
   }
 }
+
+
+/* v50: fix clipped My Blog pill/glow and Teaching Experience left alignment */
+
+/* Let the My Blog pill and glow breathe inside the nav row. */
+.site-nav,
+.nav-wrap,
+.nav-shell,
+.nav-container,
+nav.nav,
+.nav {
+  overflow: visible !important;
+}
+
+.nav {
+  align-items: center !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* Remove underline/border logic from the My Blog pill only. */
+.nav a.blog-pill,
+.nav .blog-pill,
+.nav a.blog-link,
+.nav .blog-link,
+.nav a[href$="/blog/"],
+.nav a[href$="/blog/"]:hover,
+.nav a[href$="/blog/"]:focus-visible {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 42px !important;
+  padding: 9px 18px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: #b00000 !important;
+  background: #fff !important;
+  border: 2px solid #b00000 !important;
+  border-bottom: 2px solid #b00000 !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  background-image: none !important;
+  box-shadow: 0 0 0 0 rgba(176, 0, 0, .28) !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+  z-index: 2 !important;
+  animation: myBlogOldPulse 2.05s ease-in-out infinite !important;
+}
+
+/* Kill normal nav underline pseudo-elements on My Blog if earlier CSS created them. */
+.nav a.blog-pill::after,
+.nav .blog-pill::after,
+.nav a.blog-link::after,
+.nav .blog-link::after,
+.nav a[href$="/blog/"]::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: -7px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(176, 0, 0, .35) !important;
+  background: transparent !important;
+  transform: scale(.92) !important;
+  opacity: .62 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  animation: myBlogOldRing 2.05s ease-out infinite !important;
+}
+
+.nav a.blog-pill::before,
+.nav .blog-pill::before,
+.nav a.blog-link::before,
+.nav .blog-link::before,
+.nav a[href$="/blog/"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -10px !important;
+  border-radius: 999px !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(176, 0, 0, .24) 0%,
+    rgba(176, 0, 0, .12) 48%,
+    rgba(176, 0, 0, 0) 76%
+  ) !important;
+  filter: blur(5px) !important;
+  opacity: .65 !important;
+  pointer-events: none !important;
+  z-index: -2 !important;
+  animation: myBlogOldGlow 2.05s ease-in-out infinite !important;
+}
+
+.nav a.blog-pill:hover,
+.nav .blog-pill:hover,
+.nav a.blog-link:hover,
+.nav .blog-link:hover,
+.nav a[href$="/blog/"]:hover,
+.nav a.blog-pill.active,
+.nav a[href$="/blog/"].active {
+  color: #fff !important;
+  background: #b00000 !important;
+  border-color: #b00000 !important;
+  text-decoration: none !important;
+}
+
+@keyframes myBlogOldPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(176, 0, 0, .18);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(176, 0, 0, .08);
+  }
+}
+
+@keyframes myBlogOldRing {
+  0% {
+    transform: scale(.92);
+    opacity: .58;
+  }
+  60% {
+    transform: scale(1.18);
+    opacity: .18;
+  }
+  100% {
+    transform: scale(1.34);
+    opacity: 0;
+  }
+}
+
+@keyframes myBlogOldGlow {
+  0%, 100% {
+    opacity: .28;
+  }
+  50% {
+    opacity: .74;
+  }
+}
+
+/* Teaching Experience must start at the same left edge as Teaching Statement. */
+main .teaching-experience-page,
+.page.teaching-experience-page,
+article.teaching-experience-page {
+  max-width: 1120px !important;
+  width: calc(100% - 48px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* If an older rule gave the inner sections a centered/narrow offset, cancel it. */
+.teaching-experience-page > .label,
+.teaching-experience-page > h1,
+.teaching-experience-page > .subnav,
+.teaching-experience-page > .teaching-tabs,
+.teaching-experience-page > section,
+.teaching-experience-page .teaching-shelf,
+.teaching-experience-page .instructor-section {
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* But keep the cards inside the same page width, not overflowing. */
+.teaching-experience-page .instructor-course-row {
+  width: 100% !important;
+}
