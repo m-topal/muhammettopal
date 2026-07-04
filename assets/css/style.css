@@ -2496,3 +2496,54 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 .nav.simplified-nav {
   justify-content: center;
 }
+/* v37: dropdown hover opening and underline interaction */
+
+.nav.simplified-nav > a,
+.nav.simplified-nav > .nav-dropdown > summary {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav.simplified-nav > a:not(.blog-pill)::after,
+.nav.simplified-nav > .nav-dropdown > summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent, #b00000);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .18s ease;
+}
+
+.nav.simplified-nav > a:not(.blog-pill):hover::after,
+.nav.simplified-nav > a:not(.blog-pill):focus-visible::after,
+.nav.simplified-nav > .nav-dropdown:hover > summary::before,
+.nav.simplified-nav > .nav-dropdown[open] > summary::before,
+.nav.simplified-nav > .nav-dropdown.active > summary::before {
+  transform: scaleX(1);
+}
+
+.nav.simplified-nav > .nav-dropdown:hover > .nav-dropdown-panel,
+.nav.simplified-nav > .nav-dropdown:focus-within > .nav-dropdown-panel {
+  display: grid;
+}
+
+.nav.simplified-nav > .nav-dropdown:not([open]) > .nav-dropdown-panel {
+  display: none;
+}
+
+.nav.simplified-nav > .nav-dropdown:hover:not([open]) > .nav-dropdown-panel,
+.nav.simplified-nav > .nav-dropdown:focus-within:not([open]) > .nav-dropdown-panel {
+  display: grid;
+}
+
+.nav-dropdown summary::after {
+  position: static;
+  height: auto;
+  background: none;
+  transform: translateY(-1px);
+  transition: none;
+}

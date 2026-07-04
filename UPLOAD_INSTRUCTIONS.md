@@ -1,16 +1,10 @@
-# Navigation Header Fix Patch
+# Nav Dropdown Hover and Underline Patch
 
-Upload only these files.
+Upload only this file:
 
-## _layouts/
-- default.html
+assets/css/style.css
 
-## assets/css/
-- style.css
-
-What it fixes:
-- Removes the small sticky Topal wordmark above the nav.
-- Removes the line between the large Topal logo and Muhammet Topal.
-- Restores the Home tab.
-- Keeps the simplified dropdown structure:
-  Home | About Me | Portfolio | Extra Curricular | CV | Contact | My Blog
+What it does:
+- Portfolio and Extra Curricular get the same interactive underline behavior as ordinary nav tabs.
+- Dropdowns open on hover as well as click.
+- Dropdowns still work by click and keyboard focus.
