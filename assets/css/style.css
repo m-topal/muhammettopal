@@ -3859,3 +3859,202 @@ button.course-card-action,
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* v64: teaching home reorder and scrollable PDF syllabus modal */
+
+/* Teaching landing page order: cards, image, short two-column text. */
+.teaching-home-page .teaching-landing-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin: 26px 0 32px !important;
+}
+
+.teaching-home-page .teaching-landing-card {
+  display: block !important;
+  padding: 24px !important;
+  min-height: 170px !important;
+  border: 1px solid var(--line) !important;
+  background: #fff !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.teaching-home-page .teaching-landing-card h2 {
+  margin: 0 0 12px !important;
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem) !important;
+  line-height: 1.08 !important;
+}
+
+.teaching-home-page .teaching-landing-card p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  font-family: var(--sans) !important;
+  line-height: 1.55 !important;
+}
+
+.teaching-home-image {
+  margin: 28px 0 38px !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--line) !important;
+  background: #fff !important;
+}
+
+.teaching-home-image img {
+  display: block !important;
+  width: 100% !important;
+  max-height: 560px !important;
+  object-fit: cover !important;
+  cursor: zoom-in !important;
+}
+
+.teaching-home-text {
+  margin-top: 22px !important;
+}
+
+/* People’s History syllabus modal: scrollable embedded PDF. */
+.syllabus-modal .syllabus-modal-dialog {
+  width: min(1120px, calc(100vw - 42px)) !important;
+  max-height: 90vh !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+  padding: 24px !important;
+  overflow: hidden !important;
+}
+
+.syllabus-modal-header {
+  padding-right: 48px !important;
+}
+
+.syllabus-modal-header h3 {
+  margin: 6px 0 12px !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  line-height: 1.05 !important;
+}
+
+.syllabus-modal-header .course-card-action {
+  display: inline-flex !important;
+  margin: 6px 8px 0 0 !important;
+}
+
+.syllabus-pdf-frame {
+  width: 100% !important;
+  height: min(68vh, 760px) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+}
+
+.syllabus-pdf-frame iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  background: #fff !important;
+}
+
+.teaching-assistantship-card .course-card-action {
+  width: fit-content !important;
+}
+
+/* Ensure course modal is visible when not hidden. */
+.course-modal:not([hidden]) {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 10000 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 24px !important;
+  background: rgba(0, 0, 0, .38) !important;
+}
+
+.course-modal[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .teaching-home-page .teaching-landing-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .teaching-home-image img {
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .syllabus-modal .syllabus-modal-dialog {
+    width: calc(100vw - 24px) !important;
+    max-height: 92vh !important;
+    padding: 18px !important;
+  }
+
+  .syllabus-pdf-frame {
+    height: 66vh !important;
+  }
+}
+
+
+/* v64b: syllabus modal visible iframe fix */
+.course-modal.syllabus-modal:not([hidden]) {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 10000 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 24px !important;
+  background: rgba(0, 0, 0, .38) !important;
+}
+
+.course-modal.syllabus-modal[hidden] {
+  display: none !important;
+}
+
+.syllabus-modal-dialog {
+  width: min(1120px, calc(100vw - 42px)) !important;
+  max-height: 90vh !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+  padding: 24px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .22) !important;
+}
+
+.syllabus-modal-header {
+  padding-right: 48px !important;
+}
+
+.syllabus-modal-header h3 {
+  margin: 6px 0 12px !important;
+  font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+  line-height: 1.05 !important;
+}
+
+.syllabus-modal-header .course-card-action {
+  display: inline-flex !important;
+  margin: 6px 8px 0 0 !important;
+}
+
+.syllabus-pdf-frame {
+  width: 100% !important;
+  height: min(68vh, 760px) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+}
+
+.syllabus-pdf-frame iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  background: #fff !important;
+}

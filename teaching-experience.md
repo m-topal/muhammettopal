@@ -125,7 +125,7 @@ permalink: /teaching/experience/
           <p class="meta">HIST/MENA 277B · University of Arizona</p>
           <h3>A People’s History of the Modern Middle East</h3>
           <p>Teaching support for a modern Middle East history course centered on people, sources, political change, social life, and historical interpretation.</p>
-          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="people-history-modern-middle-east-modal">See details</button>
+          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="people-history-modern-middle-east-modal">See syllabus</button>
         </div>
       </article>
 
@@ -148,6 +148,27 @@ permalink: /teaching/experience/
       </a>
     </div>
   </section>
+
+    <div class="course-modal syllabus-modal" id="people-history-modern-middle-east-modal" hidden>
+      <div class="course-modal-dialog syllabus-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="people-history-modern-middle-east-title">
+        <button class="course-modal-close" type="button" aria-label="Close syllabus">×</button>
+
+        <div class="syllabus-modal-header">
+          <p class="meta">HIST/MENA 277B · Spring 2022 · University of Arizona</p>
+          <h3 id="people-history-modern-middle-east-title">A People’s History of the Modern Middle East</h3>
+          <p>
+            <a class="course-card-action" href="{{ '/assets/syllabi/people-history-modern-middle-east-syllabus.pdf' | relative_url }}" target="_blank" rel="noopener">Open PDF in new tab</a>
+            <a class="course-card-action" href="{{ '/assets/syllabi/people-history-modern-middle-east-syllabus.docx' | relative_url }}" target="_blank" rel="noopener">Download DOCX</a>
+          </p>
+        </div>
+
+        <div class="syllabus-pdf-frame">
+          <iframe src="{{ '/assets/syllabi/people-history-modern-middle-east-syllabus.pdf' | relative_url }}" title="A People’s History of the Modern Middle East syllabus PDF"></iframe>
+        </div>
+      </div>
+    </div>
+
+
 
   <section class="teaching-shelf">
     <div class="teaching-shelf-heading">

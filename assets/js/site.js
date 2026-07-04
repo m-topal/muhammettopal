@@ -789,3 +789,101 @@ window.addEventListener("resize", updateReadingProgress);
     setupV60CourseModals();
   }
 })();
+
+
+/* v64: robust course modal open close */
+(function () {
+  function closeCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.classList.remove('course-modal-open');
+  }
+
+  function openCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('course-modal-open');
+    var close = modal.querySelector('.course-modal-close');
+    if (close) close.focus();
+  }
+
+  function setupCourseModalFallback() {
+    document.addEventListener('click', function (event) {
+      var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
+      if (trigger) {
+        event.preventDefault();
+        event.stopPropagation();
+        openCourseModal(document.getElementById(trigger.getAttribute('data-course-modal')));
+        return;
+      }
+
+      var close = event.target.closest('.course-modal-close');
+      if (close) {
+        event.preventDefault();
+        closeCourseModal(close.closest('.course-modal'));
+        return;
+      }
+
+      if (event.target.classList && event.target.classList.contains('course-modal')) {
+        closeCourseModal(event.target);
+      }
+    }, true);
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.course-modal:not([hidden])').forEach(closeCourseModal);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCourseModalFallback);
+  } else {
+    setupCourseModalFallback();
+  }
+})();
+
+
+/* v64b: direct modal trigger fallback */
+(function () {
+  function closeCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.classList.remove('course-modal-open');
+  }
+
+  function openCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('course-modal-open');
+    var close = modal.querySelector('.course-modal-close');
+    if (close) close.focus();
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
+    if (trigger) {
+      event.preventDefault();
+      event.stopPropagation();
+      openCourseModal(document.getElementById(trigger.getAttribute('data-course-modal')));
+      return;
+    }
+
+    var close = event.target.closest('.course-modal-close');
+    if (close) {
+      event.preventDefault();
+      closeCourseModal(close.closest('.course-modal'));
+      return;
+    }
+
+    if (event.target.classList && event.target.classList.contains('course-modal')) {
+      closeCourseModal(event.target);
+    }
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      document.querySelectorAll('.course-modal:not([hidden])').forEach(closeCourseModal);
+    }
+  });
+})();
