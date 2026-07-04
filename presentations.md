@@ -9,7 +9,7 @@ permalink: /presentations/
 
   <div class="slideshow">
     <div class="slide-frame">
-    <div class="slide active">
+        <div class="slide active">
       <img src="{{ '/assets/img/presentations/center-of-power-slide.jpg' | relative_url }}" alt="Center of Power: Social Networks and Agency in Late Ottoman Istanbul.">
       <div class="slide-caption">Center of Power: Social Networks and Agency in Late Ottoman Istanbul.</div>
     </div>
@@ -34,7 +34,15 @@ permalink: /presentations/
       <div class="slide-caption">MESA panel.</div>
     </div>
     <div class="slide ">
-      <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
+      <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Organizing Exit at Rutgers University.">
+      <div class="slide-caption">Organizing Exit at Rutgers University.</div>
+    </div>
+    <div class="slide ">
+      <img src="{{ '/assets/img/presentations/chicago-organizing-exit-1.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
+      <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
+    </div>
+    <div class="slide ">
+      <img src="{{ '/assets/img/presentations/chicago-organizing-exit-2.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
       <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
     </div>
     <div class="slide ">
@@ -42,20 +50,16 @@ permalink: /presentations/
       <div class="slide-caption">Center of Power at Texas A&M.</div>
     </div>
     <div class="slide ">
-      <img src="{{ '/assets/img/presentations/tamu-center-power-2.jpg' | relative_url }}" alt="Center of Power at Texas A&M.">
-      <div class="slide-caption">Center of Power at Texas A&M.</div>
-    </div>
-    <div class="slide ">
-      <img src="{{ '/assets/img/presentations/panel-discussion.jpg' | relative_url }}" alt="Panel discussion.">
-      <div class="slide-caption">Panel discussion.</div>
+      <img src="{{ '/assets/img/presentations/panel-discussion.jpg' | relative_url }}" alt="Panel discussion at Boğaziçi University.">
+      <div class="slide-caption">Panel discussion at Boğaziçi University.</div>
     </div>
     <div class="slide ">
       <img src="{{ '/assets/img/presentations/rise-fall.jpg' | relative_url }}" alt="The Rise and Fall of a Young Turk Leader.">
       <div class="slide-caption">The Rise and Fall of a Young Turk Leader.</div>
     </div>
     <div class="slide ">
-      <img src="{{ '/assets/img/presentations/class-group.jpg' | relative_url }}" alt="Seminar and workshop setting.">
-      <div class="slide-caption">Seminar and workshop setting.</div>
+      <img src="{{ '/assets/img/presentations/class-group.jpg' | relative_url }}" alt="Ottoman Turkish Summer School workshop presentation.">
+      <div class="slide-caption">Ottoman Turkish Summer School workshop presentation.</div>
     </div>
     </div>
     <div class="slide-controls">
