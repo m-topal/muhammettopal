@@ -2735,3 +2735,113 @@ body.course-modal-open {
     padding: 24px 18px 18px !important;
   }
 }
+
+
+/* v49: restore My Blog red pill and original pulsing attention glow */
+.nav .blog-pill,
+.nav a.blog-pill,
+.nav .blog-link,
+.nav a.blog-link,
+.nav a[href$="/blog/"] {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #b00000 !important;
+  border: 2px solid #b00000 !important;
+  border-radius: 999px !important;
+  padding: 10px 18px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  background: #fff !important;
+  background-image: none !important;
+  box-shadow: none;
+  z-index: 1 !important;
+}
+
+/* No black underline under the My Blog pill. */
+.nav .blog-pill::after,
+.nav a.blog-pill::after,
+.nav .blog-link::after,
+.nav a.blog-link::after,
+.nav a[href$="/blog/"]::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 999px !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  border: 1px solid rgba(176, 0, 0, .42) !important;
+  opacity: .65 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  animation: myBlogPillPulse 1.9s ease-out infinite !important;
+}
+
+/* Soft glow around the pill. */
+.nav .blog-pill::before,
+.nav a.blog-pill::before,
+.nav .blog-link::before,
+.nav a.blog-link::before,
+.nav a[href$="/blog/"]::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -7px !important;
+  border-radius: 999px !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(176, 0, 0, .22) 0%,
+    rgba(176, 0, 0, .12) 42%,
+    rgba(176, 0, 0, 0) 72%
+  ) !important;
+  filter: blur(5px) !important;
+  opacity: .75 !important;
+  pointer-events: none !important;
+  z-index: -2 !important;
+  animation: myBlogSoftGlow 1.9s ease-in-out infinite !important;
+}
+
+.nav .blog-pill:hover,
+.nav a.blog-pill:hover,
+.nav .blog-link:hover,
+.nav a.blog-link:hover,
+.nav a[href$="/blog/"]:hover,
+.nav .blog-pill.active,
+.nav a.blog-pill.active,
+.nav a[href$="/blog/"].active {
+  color: #fff !important;
+  background: #b00000 !important;
+  border-color: #b00000 !important;
+  text-decoration: none !important;
+}
+
+@keyframes myBlogPillPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: .60;
+  }
+
+  55% {
+    transform: translate(-50%, -50%) scale(1.18);
+    opacity: .18;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.32);
+    opacity: 0;
+  }
+}
+
+@keyframes myBlogSoftGlow {
+  0%, 100% {
+    opacity: .34;
+  }
+
+  50% {
+    opacity: .82;
+  }
+}
