@@ -1,22 +1,12 @@
-# Nazar Drop Favicon Patch
+# Diversions Caption Patch
 
-This patch changes only the URL/tab favicon to match the uploaded nazar boncuğu style.
+Upload only this file to the repository root:
 
-Upload only these files.
+- diversions.md
 
-## _layouts/
-- default.html
+Changed captions:
+- Fishing trip with my partner and her dog Clío.
+- In Truth or Consequences, New Mexico with my partner.
+- In White Sands National Park with my partner.
 
-## assets/
-- favicon.ico
-- favicon.svg
-- favicon-16x16.png
-- favicon-32x32.png
-- favicon-48x48.png
-- apple-touch-icon.png
-- icon-192.png
-- icon-512.png
-- nazar-favicon-preview.png
-- site.webmanifest
-
-After upload, wait a few minutes and hard refresh. Favicon caches are stubborn. If it still shows the old icon, open the site in an incognito window or clear the browser favicon cache.
+I also updated the image alt text to match these captions.

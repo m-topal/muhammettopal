@@ -36,8 +36,8 @@ permalink: /diversions/
     </figure>
 
     <figure>
-      <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with Clìo and Eryka">
-      <figcaption>Fishing trip with Clìo and Eryka.</figcaption>
+      <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with my partner and her dog Clío">
+      <figcaption>Fishing trip with my partner and her dog Clío.</figcaption>
     </figure>
 
     <figure>
@@ -56,13 +56,13 @@ permalink: /diversions/
 <div class="gallery-grid caption-gallery">
 
 <figure>
-  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner Eryka">
-  <figcaption>In Truth or Consequences, New Mexico with my partner Eryka.</figcaption>
+  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
+  <figcaption>In Truth or Consequences, New Mexico with my partner.</figcaption>
 </figure>
 
 <figure>
-  <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner Eryka">
-  <figcaption>In White Sands National Park with my partner Eryka.</figcaption>
+  <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
+  <figcaption>In White Sands National Park with my partner.</figcaption>
 </figure>
 
 </div>
