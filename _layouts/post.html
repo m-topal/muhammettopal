@@ -8,20 +8,12 @@ layout: default
 <div class="prose post-content">
     {{ content }}
 
-  <div class="post-page-actions social-actions" data-post-title="{{ page.title | escape }}" data-post-url="{{ page.url | absolute_url }}">
-    <button class="post-like-button social-action-button" type="button" data-post-id="{{ page.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-    <a class="social-action-button" href="#comments">Comment</a>
-    <div class="share-menu-wrap">
-      <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
-      <div class="share-menu-panel" hidden>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener">X</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Email</a>
-        <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">WhatsApp</a>
-        <button class="share-copy" type="button" data-url="{{ page.url | absolute_url }}">Copy link</button>
-      </div>
-    </div>
+  <div class="post-page-actions" data-post-title="{{ page.title | escape }}" data-post-url="{{ page.url | absolute_url }}">
+    <button class="post-like-button" type="button" data-post-id="{{ page.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Share on Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener">Share on X</a>
+    <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Share by email</a>
+    <a href="#comments">Comment</a>
   </div>
 
   </div>
