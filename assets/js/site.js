@@ -281,3 +281,123 @@ window.addEventListener("resize", updateReadingProgress);
     setupAdvancedBlogSearch();
   }
 })();
+
+
+/* v32 recovery: working Share button with native share and styled fallback */
+(function () {
+  function absoluteUrl(value) {
+    try {
+      return new URL(value || window.location.href, window.location.origin).href;
+    } catch (e) {
+      return window.location.href;
+    }
+  }
+
+  function setupShareButtons() {
+    var buttons = document.querySelectorAll('.share-button');
+    if (!buttons.length) return;
+
+    var overlay = document.getElementById('siteShareOverlay');
+    if (!overlay) return;
+
+    var dialog = overlay.querySelector('.site-share-dialog');
+    var close = overlay.querySelector('.site-share-close');
+    var input = document.getElementById('siteShareUrl');
+    var copy = document.getElementById('siteShareCopy');
+    var lastFocus = null;
+
+    function setLinks(title, url) {
+      var encodedUrl = encodeURIComponent(url);
+      var encodedTitle = encodeURIComponent(title || document.title);
+
+      var links = {
+        facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl,
+        x: 'https://twitter.com/intent/tweet?url=' + encodedUrl + '&text=' + encodedTitle,
+        linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl,
+        whatsapp: 'https://api.whatsapp.com/send?text=' + encodedTitle + '%20' + encodedUrl,
+        email: 'mailto:?subject=' + encodedTitle + '&body=' + encodedUrl
+      };
+
+      Object.keys(links).forEach(function (service) {
+        var link = overlay.querySelector('[data-share-service="' + service + '"]');
+        if (link) link.setAttribute('href', links[service]);
+      });
+
+      if (input) input.value = url;
+    }
+
+    function openFallback(title, url) {
+      setLinks(title, url);
+      overlay.hidden = false;
+      document.body.classList.add('share-open');
+      var first = overlay.querySelector('.site-share-close');
+      if (first) first.focus();
+    }
+
+    function closeFallback() {
+      overlay.hidden = true;
+      document.body.classList.remove('share-open');
+      if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var title = button.getAttribute('data-share-title') || document.title;
+        var url = absoluteUrl(button.getAttribute('data-share-url'));
+        lastFocus = button;
+
+        if (navigator.share) {
+          navigator.share({ title: title, url: url }).catch(function () {
+            openFallback(title, url);
+          });
+        } else {
+          openFallback(title, url);
+        }
+      });
+    });
+
+    if (close) close.addEventListener('click', closeFallback);
+
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeFallback();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !overlay.hidden) closeFallback();
+    });
+
+    if (copy && input) {
+      copy.addEventListener('click', function () {
+        var url = input.value;
+        function done() {
+          var old = copy.textContent;
+          copy.textContent = 'Copied';
+          setTimeout(function () { copy.textContent = old; }, 1300);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(function () {
+            input.select();
+            document.execCommand('copy');
+            done();
+          });
+        } else {
+          input.select();
+          document.execCommand('copy');
+          done();
+        }
+      });
+    }
+
+    if (dialog) {
+      dialog.addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupShareButtons);
+  } else {
+    setupShareButtons();
+  }
+})();

@@ -10,10 +10,8 @@ layout: default
 
   <div class="post-page-actions" data-post-title="{{ page.title | escape }}" data-post-url="{{ page.url | absolute_url }}">
     <button class="post-like-button" type="button" data-post-id="{{ page.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Share on Facebook</a>
-    <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener">Share on X</a>
-    <a href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Share by email</a>
-    <a href="#comments">Comment</a>
+    <a class="comment-button" href="#comments">Comment</a>
+    <button class="share-button" type="button" data-share-title="{{ page.title | escape }}" data-share-url="{{ page.url | absolute_url }}">Share</button>
   </div>
 
   </div>

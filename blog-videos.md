@@ -31,12 +31,10 @@ permalink: /blog/videos/
             </div>
           {% endif %}
           <div class="blog-card-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-            <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://twitter.com/intent/tweet?url={{ post.url | absolute_url | url_encode }}&text={{ post.title | url_encode }}" target="_blank" rel="noopener">X</a>
-            <a href="mailto:?subject={{ post.title | url_encode }}&body={{ post.url | absolute_url | url_encode }}">Email</a>
-            <a href="{{ post.url | relative_url }}#comments">Comment</a>
-          </div>
+              <button class="post-like-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
+              <a class="comment-button" href="{{ post.url | relative_url }}#comments">Comment</a>
+              <button class="share-button" type="button" data-share-title="{{ post.title | escape }}" data-share-url="{{ post.url | absolute_url }}">Share</button>
+            </div>
         </article>
       {% endif %}
     {% endfor %}

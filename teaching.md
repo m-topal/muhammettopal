@@ -7,6 +7,15 @@ permalink: /teaching/
   <p class="label">Teaching</p>
   <h1>Teaching</h1>
 
+<div class="course-link-card">
+  <div>
+    <p class="label">Course website</p>
+    <h3>Introduction to Political Islam</h3>
+    <p>A dedicated course site with materials, schedule, and resources for students.</p>
+  </div>
+  <a class="button course-link-button" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">Open course site</a>
+</div>
+
   <div class="prose">
     <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
     <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>

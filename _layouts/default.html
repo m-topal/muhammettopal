@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   {% if page.youtube_id %}
@@ -58,6 +60,9 @@
         </div>
       </div>
 
+      <a class="site-wordmark-link" href="{{ '/' | relative_url }}" aria-label="Muhammet Topal home">
+        <img class="topal-wordmark" src="{{ '/assets/img/topal-wordmark.png' | relative_url }}" alt="">
+      </a>
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
     </header>
@@ -84,6 +89,24 @@
       <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
       <span><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
     </footer>
+  </div>
+
+  <div class="site-share-overlay" id="siteShareOverlay" hidden>
+    <div class="site-share-dialog" role="dialog" aria-modal="true" aria-labelledby="siteShareTitle">
+      <button class="site-share-close" type="button" aria-label="Close share panel">×</button>
+      <h2 id="siteShareTitle">Share</h2>
+      <div class="site-share-links">
+        <a data-share-service="facebook" target="_blank" rel="noopener">Facebook</a>
+        <a data-share-service="x" target="_blank" rel="noopener">X</a>
+        <a data-share-service="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a data-share-service="email">Email</a>
+        <a data-share-service="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="site-share-copy-row">
+        <input id="siteShareUrl" type="text" readonly>
+        <button id="siteShareCopy" type="button">Copy link</button>
+      </div>
+    </div>
   </div>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>

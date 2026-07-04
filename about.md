@@ -6,6 +6,7 @@ permalink: /about/
 <article class="page wide">
   <p class="label">About Me</p>
   <h1>About Me</h1>
+  <img class="about-wordmark-divider" src="{{ '/assets/img/topal-wordmark.png' | relative_url }}" alt="">
   <div class="prose two-column-prose">
     <p>I am a PhD candidate in History and Middle Eastern and North African Studies at the University of Arizona. My work focuses on late Ottoman intellectual history, historical writing, journalism, biography, and public life. I am especially interested in how intellectuals, teachers, historians, journalists, and political actors made sense of the transformations of the modern era, not only through abstract ideas, but through institutions, texts, social networks, migration, and lived experience.</p>
 
