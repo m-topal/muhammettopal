@@ -2738,7 +2738,10 @@ body.course-modal-open {
 
 
 
-/* v51: clean single My Blog pill with pulse, no duplicate border */
+
+/* v54: old My Blog border pulse from pill boundary */
+
+/* Let the pulse outside the pill be visible. */
 .site-nav,
 .nav-wrap,
 .nav-shell,
@@ -2754,7 +2757,7 @@ nav.nav,
   padding-bottom: 12px !important;
 }
 
-/* Keep the ordinary nav underline system away from the My Blog pill. */
+/* One clean old-style red pill. No inner glow. */
 .nav a.blog-pill,
 .nav .blog-pill,
 .nav a.blog-link,
@@ -2777,151 +2780,43 @@ nav.nav,
   background-image: none !important;
   transform: none !important;
   overflow: visible !important;
-  z-index: 2 !important;
-  box-shadow: 0 0 0 0 rgba(176, 0, 0, .28) !important;
-  animation: myBlogSinglePulse 1.9s ease-in-out infinite !important;
-}
-
-/* Remove all old pseudo underline/glow rings that made it look doubled. */
-.nav a.blog-pill::before,
-.nav a.blog-pill::after,
-.nav .blog-pill::before,
-.nav .blog-pill::after,
-.nav a.blog-link::before,
-.nav a.blog-link::after,
-.nav .blog-link::before,
-.nav .blog-link::after,
-.nav a[href$="/blog/"]::before,
-.nav a[href$="/blog/"]::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Hover and active still remain a red filled pill. */
-.nav a.blog-pill:hover,
-.nav .blog-pill:hover,
-.nav a.blog-link:hover,
-.nav .blog-link:hover,
-.nav a[href$="/blog/"]:hover,
-.nav a.blog-pill.active,
-.nav .blog-pill.active,
-.nav a[href$="/blog/"].active {
-  color: #fff !important;
-  background: #b00000 !important;
-  border-color: #b00000 !important;
-  text-decoration: none !important;
-  background-image: none !important;
-  box-shadow: 0 0 0 6px rgba(176, 0, 0, .10) !important;
-}
-
-/* The pulse is on the pill itself, so there is no second outline. */
-@keyframes myBlogSinglePulse {
-  0%, 100% {
-    box-shadow:
-      0 0 0 0 rgba(176, 0, 0, .24),
-      0 0 0 0 rgba(176, 0, 0, 0);
-  }
-
-  50% {
-    box-shadow:
-      0 0 0 5px rgba(176, 0, 0, .12),
-      0 0 14px 2px rgba(176, 0, 0, .18);
-  }
-}
-
-/* Preserve Teaching Experience alignment fix from v50. */
-main .teaching-experience-page,
-.page.teaching-experience-page,
-article.teaching-experience-page {
-  max-width: 1120px !important;
-  width: calc(100% - 48px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.teaching-experience-page > .label,
-.teaching-experience-page > h1,
-.teaching-experience-page > .subnav,
-.teaching-experience-page > .teaching-tabs,
-.teaching-experience-page > section,
-.teaching-experience-page .teaching-shelf,
-.teaching-experience-page .instructor-section {
-  max-width: none !important;
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-
-/* v52: visible My Blog glow without duplicate border */
-.nav {
-  overflow: visible !important;
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
-}
-
-.nav a.blog-pill,
-.nav .blog-pill,
-.nav a.blog-link,
-.nav .blog-link,
-.nav a[href$="/blog/"] {
-  position: relative !important;
   isolation: isolate !important;
-  overflow: visible !important;
   z-index: 2 !important;
-  color: #b00000 !important;
-  background: #fff !important;
-  border: 2px solid #b00000 !important;
-  border-radius: 999px !important;
-  text-decoration: none !important;
-  background-image: none !important;
   box-shadow: none !important;
+  animation: none !important;
 }
 
-/* No underline and no second border. This is only a blurred glow behind the pill. */
+/* No inner stain, no second persistent border, no underline. */
 .nav a.blog-pill::before,
 .nav .blog-pill::before,
 .nav a.blog-link::before,
 .nav .blog-link::before,
 .nav a[href$="/blog/"]::before {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  left: 50% !important;
-  top: 50% !important;
-  width: calc(100% + 20px) !important;
-  height: calc(100% + 18px) !important;
-  border: 0 !important;
-  border-radius: 999px !important;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(176, 0, 0, .26) 0%,
-    rgba(176, 0, 0, .16) 45%,
-    rgba(176, 0, 0, 0) 76%
-  ) !important;
-  filter: blur(7px) !important;
-  opacity: .72 !important;
-  transform: translate(-50%, -50%) scale(.94) !important;
-  pointer-events: none !important;
-  z-index: -1 !important;
-  animation: myBlogVisibleGlow 1.65s ease-in-out infinite !important;
+  content: none !important;
+  display: none !important;
 }
 
-/* Keep ::after disabled so it cannot create a second outline or underline. */
+/* Old effect: a thin pulse starts at the pill border and expands outward. */
 .nav a.blog-pill::after,
 .nav .blog-pill::after,
 .nav a.blog-link::after,
 .nav .blog-link::after,
 .nav a[href$="/blog/"]::after {
-  content: none !important;
-  display: none !important;
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: -2px !important;
+  border-radius: 999px !important;
+  border: 2px solid rgba(176, 0, 0, .34) !important;
+  background: transparent !important;
+  opacity: .45 !important;
+  transform: scale(1) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  animation: myBlogBorderPulseOld 2.05s ease-out infinite !important;
 }
 
-/* The glow remains visible on hover/active, but the pill itself can fill red. */
+/* Hover/active can fill red, but the pulse still comes from the border. */
 .nav a.blog-pill:hover,
 .nav .blog-pill:hover,
 .nav a.blog-link:hover,
@@ -2937,30 +2832,19 @@ article.teaching-experience-page {
   background-image: none !important;
 }
 
-.nav a.blog-pill:hover::before,
-.nav .blog-pill:hover::before,
-.nav a.blog-link:hover::before,
-.nav .blog-link:hover::before,
-.nav a[href$="/blog/"]:hover::before,
-.nav a.blog-pill.active::before,
-.nav .blog-pill.active::before,
-.nav a[href$="/blog/"].active::before {
-  background: radial-gradient(
-    ellipse at center,
-    rgba(176, 0, 0, .34) 0%,
-    rgba(176, 0, 0, .19) 46%,
-    rgba(176, 0, 0, 0) 78%
-  ) !important;
-}
-
-@keyframes myBlogVisibleGlow {
-  0%, 100% {
-    opacity: .34;
-    transform: translate(-50%, -50%) scale(.88);
+@keyframes myBlogBorderPulseOld {
+  0% {
+    transform: scale(1);
+    opacity: .42;
   }
 
-  50% {
-    opacity: .90;
-    transform: translate(-50%, -50%) scale(1.18);
+  55% {
+    transform: scale(1.16);
+    opacity: .18;
+  }
+
+  100% {
+    transform: scale(1.30);
+    opacity: 0;
   }
 }
