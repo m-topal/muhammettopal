@@ -524,3 +524,43 @@ window.addEventListener("resize", updateReadingProgress);
     if (event.key === 'Escape') closePopup();
   });
 })();
+/* v35: close simplified navigation dropdowns on outside click */
+(function () {
+  function closeNavDropdowns(except) {
+    document.querySelectorAll('.nav-dropdown[open]').forEach(function (dropdown) {
+      if (dropdown !== except) dropdown.open = false;
+    });
+  }
+
+  function setupNavDropdowns() {
+    document.addEventListener('click', function (event) {
+      var dropdown = event.target.closest('.nav-dropdown');
+
+      if (dropdown) {
+        document.querySelectorAll('.nav-dropdown[open]').forEach(function (other) {
+          if (other !== dropdown) other.open = false;
+        });
+        return;
+      }
+
+      closeNavDropdowns();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeNavDropdowns();
+    });
+
+    document.querySelectorAll('.nav-dropdown-panel a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var dropdown = link.closest('.nav-dropdown');
+        if (dropdown) dropdown.open = false;
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupNavDropdowns);
+  } else {
+    setupNavDropdowns();
+  }
+})();
