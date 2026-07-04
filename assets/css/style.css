@@ -2747,3 +2747,248 @@ body.image-lightbox-open {
     object-fit: contain;
   }
 }
+
+
+/* v58: center breakout images and restore teaching modal cards */
+
+/* Keep the good My Blog pulse untouched. Only ordinary nav tabs get the single underline. */
+.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]),
+.nav summary,
+.nav .nav-dropdown > summary {
+  text-decoration: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::before,
+.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::after,
+.nav summary::before,
+.nav summary::after,
+.nav .nav-dropdown > summary::before,
+.nav .nav-dropdown > summary::after {
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* About Me and Extra Curricular breakout images should not sit inside only one column. */
+.about-breakout-library,
+.extra-breakout-workshop {
+  column-span: all !important;
+  -webkit-column-span: all !important;
+  display: block !important;
+  clear: both !important;
+  width: min(680px, 76%) !important;
+  max-width: 680px !important;
+  margin: 30px auto 34px !important;
+  transform: none !important;
+  float: none !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+}
+
+.about-breakout-library img,
+.extra-breakout-workshop img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 460px !important;
+  object-fit: cover !important;
+  cursor: zoom-in !important;
+}
+
+.about-breakout-library figcaption,
+.extra-breakout-workshop figcaption {
+  text-align: left !important;
+}
+
+/* Slightly smaller preview for About Me so the two-column text remains balanced. */
+.about-breakout-library {
+  width: min(620px, 72%) !important;
+  max-width: 620px !important;
+}
+
+.about-breakout-library img {
+  max-height: 440px !important;
+}
+
+/* Extra Curricular can be a little wider because it is a group/workshop scene. */
+.extra-breakout-workshop {
+  width: min(720px, 78%) !important;
+  max-width: 720px !important;
+}
+
+/* Restore Teaching Experience card grid after the inline-image CSS update. */
+.instructor-course-row,
+.teaching-experience-page .instructor-course-row,
+.teaching-shelf-row.instructor-course-row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* If the row is not marked instructor-course-row on the live page, still normalize only image-course cards. */
+.teaching-shelf-row:has(.course-card-with-image),
+.teaching-shelf-row:has(.modal-course-card) {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.course-card-with-image,
+.modal-course-card,
+.teaching-course-card.course-card-with-image {
+  display: block !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  box-sizing: border-box !important;
+}
+
+.course-card-with-image .course-card-image,
+.modal-course-card .course-card-image,
+.teaching-course-card .course-card-image {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.course-card-with-image .course-card-image img,
+.modal-course-card .course-card-image img,
+.teaching-course-card .course-card-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  cursor: default !important;
+}
+
+.course-card-with-image .course-card-body,
+.modal-course-card .course-card-body {
+  padding: 18px !important;
+}
+
+.course-modal-trigger,
+button.course-card-action,
+.course-card-action.course-modal-trigger {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Popup/modal styling restored for course details. */
+.course-modal[hidden] {
+  display: none !important;
+}
+
+.course-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 10000 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 24px !important;
+  background: rgba(0, 0, 0, .38) !important;
+}
+
+.course-modal-dialog {
+  position: relative !important;
+  width: min(1040px, calc(100vw - 42px)) !important;
+  max-height: min(86vh, 920px) !important;
+  overflow: auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, .88fr) minmax(300px, .62fr) !important;
+  gap: 26px !important;
+  align-items: start !important;
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .22) !important;
+  padding: 30px !important;
+}
+
+.course-modal-close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+}
+
+.course-modal-text h3 {
+  margin: 8px 0 14px !important;
+  font-size: clamp(1.8rem, 3vw, 2.7rem) !important;
+  line-height: 1.04 !important;
+}
+
+.course-modal-flyer {
+  margin: 0 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+}
+
+.course-modal-flyer img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+body.course-modal-open {
+  overflow: hidden !important;
+}
+
+@media (max-width: 900px) {
+  .about-breakout-library,
+  .extra-breakout-workshop {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 28px 0 32px !important;
+  }
+
+  .about-breakout-library img,
+  .extra-breakout-workshop img {
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .instructor-course-row,
+  .teaching-experience-page .instructor-course-row,
+  .teaching-shelf-row.instructor-course-row,
+  .teaching-shelf-row:has(.course-card-with-image),
+  .teaching-shelf-row:has(.modal-course-card) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .course-modal-dialog {
+    grid-template-columns: 1fr !important;
+    padding: 24px 18px 18px !important;
+  }
+}
