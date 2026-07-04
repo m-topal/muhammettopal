@@ -1,15 +1,10 @@
-# Navigation Hover Fix Patch
+# Nav Single Underline Patch
 
-Upload only these files.
+Upload only this file:
 
-## assets/css/
-- style.css
-
-## assets/js/
-- site.js
+assets/css/style.css
 
 What it fixes:
-- Removes the extra red underline that appeared under the existing black/nav underline.
-- Uses one clean underline only.
-- Makes Portfolio and Extra Curricular dropdowns open on hover, not only click.
-- Click behavior still works.
+- Removes the second underline under ordinary nav items such as Contact.
+- Keeps only one clean interactive underline.
+- Keeps Portfolio and Extra Curricular hover dropdown behavior from the previous JS patch.
