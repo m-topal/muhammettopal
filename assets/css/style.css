@@ -2992,3 +2992,68 @@ body.course-modal-open {
     padding: 24px 18px 18px !important;
   }
 }
+
+
+/* v59: Extra Curricular workshop image as smaller wrapped float */
+
+/* Only the Extra Curricular workshop image changes. It is no longer a huge centered block. */
+.extra-breakout-workshop {
+  column-span: none !important;
+  -webkit-column-span: none !important;
+  float: right !important;
+  clear: right !important;
+  width: min(430px, 46%) !important;
+  max-width: 430px !important;
+  margin: 4px 0 22px 28px !important;
+  transform: none !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, .07) !important;
+}
+
+/* Crop/zoom slightly toward the center-right so Muhammet is more visible. */
+.extra-breakout-workshop img {
+  display: block !important;
+  width: 100% !important;
+  height: 285px !important;
+  max-height: 285px !important;
+  object-fit: cover !important;
+  object-position: 62% 52% !important;
+  transform: scale(1.10) !important;
+  transform-origin: 62% 52% !important;
+  cursor: zoom-in !important;
+}
+
+.extra-breakout-workshop figcaption {
+  position: relative !important;
+  z-index: 1 !important;
+  background: #fff !important;
+  text-align: left !important;
+}
+
+/* Make following text wrap naturally around the image. */
+.extra-breakout-workshop + p,
+.extra-breakout-workshop ~ p {
+  text-wrap: pretty;
+}
+
+/* Mobile: return to normal full-width image. */
+@media (max-width: 820px) {
+  .extra-breakout-workshop {
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 28px 0 32px !important;
+  }
+
+  .extra-breakout-workshop img {
+    height: auto !important;
+    max-height: none !important;
+    transform: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
