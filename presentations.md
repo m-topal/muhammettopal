@@ -34,8 +34,8 @@ permalink: /presentations/
       <div class="slide-caption">MESA panel.</div>
     </div>
     <div class="slide">
-      <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Organizing Exit at Rutgers University.">
-      <div class="slide-caption">Organizing Exit at Rutgers University.</div>
+      <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Empire of Translations at Rutgers University.">
+      <div class="slide-caption">Empire of Translations at Rutgers University.</div>
     </div>
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-organizing-exit-1.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
