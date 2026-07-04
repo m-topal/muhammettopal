@@ -1,10 +1,10 @@
-# Nav Dropdown Hover and Underline Patch
+# Header Wordmark Size and Position Patch
 
 Upload only this file:
 
 assets/css/style.css
 
 What it does:
-- Portfolio and Extra Curricular get the same interactive underline behavior as ordinary nav tabs.
-- Dropdowns open on hover as well as click.
-- Dropdowns still work by click and keyboard focus.
+- Makes the handwritten Topal logo about 20% larger.
+- Moves it slightly downward so it sits closer to “Muhammet Topal.”
+- Keeps the rest of the header and navigation unchanged.

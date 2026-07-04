@@ -2547,3 +2547,25 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   transform: translateY(-1px);
   transition: none;
 }
+/* v38: enlarge handwritten Topal header logo and bring it closer to name */
+
+.site-top .home-header-wordmark {
+  width: 20% !important;
+  transform: translateY(8px);
+}
+
+.site-top .site-header-wordmark-block,
+.site-top .home-header-mark {
+  margin-bottom: -4px !important;
+}
+
+.site-top .name {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .site-top .home-header-wordmark {
+    width: 34% !important;
+    transform: translateY(6px);
+  }
+}
