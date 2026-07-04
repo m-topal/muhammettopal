@@ -107,7 +107,7 @@ permalink: /teaching/experience/
 <section class="teaching-shelf">
     <div class="teaching-shelf-heading">
       <span class="teaching-shelf-icon" aria-hidden="true">🧭</span>
-      <h2>Teaching Assistantship</h2>
+      <h2>Co-Teaching</h2>
     </div>
 
     <div class="teaching-shelf-row">
