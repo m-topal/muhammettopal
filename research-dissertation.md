@@ -3,6 +3,30 @@ layout: default
 title: Dissertation
 permalink: /research/dissertation/
 ---
+
+
+  <div class="research-dissertation-visuals">
+    <figure class="research-figure research-figure-wide">
+      <img src="{{ '/assets/img/research/constantinople-golden-horn-panorama.jpg' | relative_url }}" alt="Nineteenth-century panoramic view of Constantinople and the Golden Horn">
+      <figcaption>A nineteenth-century panoramic view of Constantinople/Istanbul across the Golden Horn.</figcaption>
+    </figure>
+
+    <figure class="research-figure">
+      <img src="{{ '/assets/img/research/mehmed-murad-bey-paris.webp' | relative_url }}" alt="Mehmed Murad Bey in Paris">
+      <figcaption>Mehmed Murad Bey in Paris.</figcaption>
+    </figure>
+
+    <figure class="research-figure">
+      <img src="{{ '/assets/img/research/mizan-newspaper-front-page.jpg' | relative_url }}" alt="Front page of Mizan newspaper">
+      <figcaption><em>Mizan</em> newspaper front page.</figcaption>
+    </figure>
+
+    <figure class="research-figure">
+      <img src="{{ '/assets/img/research/force-et-la-faiblesse-geneva-1897.jpg' | relative_url }}" alt="Title page of La Force et la Faiblesse de la Turquie">
+      <figcaption>Title page of <em>La Force et la Faiblesse de la Turquie</em>, published by Mehmed Murad Bey in Geneva in 1897.</figcaption>
+    </figure>
+  </div>
+
 <article class="page wide">
   <p class="label">Research</p>
   <h1>Dissertation</h1>
