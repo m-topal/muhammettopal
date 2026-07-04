@@ -2531,3 +2531,97 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   position: static !important;
   transform: translateY(-1px) !important;
 }
+
+
+/* v40: single nav underline and My Blog glow from text outward */
+
+/* Remove browser text underline so nav items do not show double lines. */
+.nav a,
+.nav a:hover,
+.nav a:focus,
+.nav a:focus-visible,
+.nav.simplified-nav > a:not(.blog-pill),
+.nav.simplified-nav > a:not(.blog-pill):hover,
+.nav.simplified-nav > a:not(.blog-pill):focus-visible,
+.nav.simplified-nav > .nav-dropdown > summary,
+.nav.simplified-nav > .nav-dropdown:hover > summary,
+.nav.simplified-nav > .nav-dropdown[open] > summary,
+.nav.simplified-nav > .nav-dropdown.active > summary {
+  text-decoration: none !important;
+}
+
+/* Keep only the intentional single underline/border. */
+.nav.simplified-nav > a:not(.blog-pill),
+.nav.simplified-nav > .nav-dropdown > summary {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+
+.nav.simplified-nav > a:not(.blog-pill):hover,
+.nav.simplified-nav > a:not(.blog-pill):focus-visible,
+.nav.simplified-nav > .nav-dropdown:hover > summary,
+.nav.simplified-nav > .nav-dropdown[open] > summary,
+.nav.simplified-nav > .nav-dropdown.active > summary {
+  border-bottom-color: currentColor;
+}
+
+/* My Blog remains a red pill, but its glow starts inside the words and travels outward. */
+.blog-pill {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  animation: none !important;
+  box-shadow: none !important;
+}
+
+.blog-pill::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4.8em;
+  height: 1.4em;
+  border-radius: 999px;
+  transform: translate(-50%, -50%) scale(.55);
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(176, 0, 0, .36) 0%,
+      rgba(176, 0, 0, .22) 34%,
+      rgba(176, 0, 0, .10) 56%,
+      rgba(176, 0, 0, 0) 74%
+    );
+  filter: blur(7px);
+  opacity: .55;
+  z-index: -1;
+  pointer-events: none;
+  animation: blogTextGlowOut 2.15s ease-in-out infinite;
+}
+
+@keyframes blogTextGlowOut {
+  0% {
+    transform: translate(-50%, -50%) scale(.55);
+    opacity: .54;
+  }
+
+  55% {
+    transform: translate(-50%, -50%) scale(1.65);
+    opacity: .16;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2.05);
+    opacity: 0;
+  }
+}
+
+.blog-pill:hover::before,
+.blog-pill.active::before {
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, .42) 0%,
+      rgba(176, 0, 0, .24) 42%,
+      rgba(176, 0, 0, 0) 78%
+    );
+}
