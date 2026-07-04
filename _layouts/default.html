@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   {% if page.youtube_id %}
@@ -27,6 +25,12 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta name="twitter:image" content="{{ social_image }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.ico?v=6' | relative_url }}" sizes="any">
+  <link rel="icon" href="{{ '/assets/favicon.svg?v=6' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png?v=6' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png?v=6' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png?v=6' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/site.webmanifest?v=6' | relative_url }}">
 </head>
 <body>
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
@@ -60,23 +64,37 @@
         </div>
       </div>
 
-      <a class="site-wordmark-link" href="{{ '/' | relative_url }}" aria-label="Muhammet Topal home">
-        <img class="topal-wordmark" src="{{ '/assets/img/topal-wordmark.png' | relative_url }}" alt="">
+      <a class="home-header-mark site-header-wordmark-block" href="{{ '/' | relative_url }}" aria-label="Muhammet Topal home">
+        <img class="home-header-wordmark" src="{{ '/assets/topal-wordmark-transparent.png' | relative_url }}" alt="Topal wordmark">
       </a>
+
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
     </header>
 
     <div class="nav-wrap sticky-nav">
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav simplified-nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About Me</a>
-        <a href="{{ '/research/' | relative_url }}">Research</a>
-        <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-        <a href="{{ '/publications/' | relative_url }}">Publications</a>
-        <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
-        <a href="{{ '/extracurricular/' | relative_url }}">Extra Curricular</a>
-        <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
+
+        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">
+          <summary>Portfolio</summary>
+          <div class="nav-dropdown-panel">
+            <a href="{{ '/research/' | relative_url }}">Research</a>
+            <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+            <a href="{{ '/publications/' | relative_url }}">Publications</a>
+            <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
+          </div>
+        </details>
+
+        <details class="nav-dropdown {% if page.url contains '/extracurricular/' or page.url contains '/diversions/' %}active{% endif %}">
+          <summary>Extra Curricular</summary>
+          <div class="nav-dropdown-panel">
+            <a href="{{ '/extracurricular/' | relative_url }}">Academic Service</a>
+            <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
+          </div>
+        </details>
+
         <a href="{{ '/cv/' | relative_url }}">CV</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
         <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
@@ -89,24 +107,6 @@
       <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
       <span><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
     </footer>
-  </div>
-
-  <div class="site-share-overlay" id="siteShareOverlay" hidden>
-    <div class="site-share-dialog" role="dialog" aria-modal="true" aria-labelledby="siteShareTitle">
-      <button class="site-share-close" type="button" aria-label="Close share panel">×</button>
-      <h2 id="siteShareTitle">Share</h2>
-      <div class="site-share-links">
-        <a data-share-service="facebook" target="_blank" rel="noopener">Facebook</a>
-        <a data-share-service="x" target="_blank" rel="noopener">X</a>
-        <a data-share-service="linkedin" target="_blank" rel="noopener">LinkedIn</a>
-        <a data-share-service="email">Email</a>
-        <a data-share-service="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-      <div class="site-share-copy-row">
-        <input id="siteShareUrl" type="text" readonly>
-        <button id="siteShareCopy" type="button">Copy link</button>
-      </div>
-    </div>
   </div>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>

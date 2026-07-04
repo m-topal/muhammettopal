@@ -219,15 +219,40 @@ window.addEventListener("resize", updateReadingProgress);
       });
     }
 
+    function selectedFormat() {
+      return normalize(format && format.value) || 'all';
+    }
+
     function updateSections() {
+      var selected = selectedFormat();
+
       document.querySelectorAll('.blog-shelf').forEach(function (section) {
+        var sectionType = normalize(section.getAttribute('data-blog-section'));
+        var sectionRelevant = selected === 'all' || selected === sectionType;
         var visible = section.querySelectorAll('.blog-card:not([hidden])').length;
-        section.hidden = visible === 0;
+        var emptyState = section.querySelector('.blog-empty-state');
+
+        section.hidden = !sectionRelevant;
+
+        if (emptyState) {
+          emptyState.hidden = visible !== 0;
+        }
+      });
+
+      var noResults = document.getElementById('blogNoResults');
+      if (noResults) noResults.hidden = true;
+    }
+
+    function syncShortcutButtons() {
+      var selected = selectedFormat();
+      document.querySelectorAll('[data-format-shortcut]').forEach(function (button) {
+        button.classList.toggle('active', normalize(button.getAttribute('data-format-shortcut')) === selected);
       });
     }
 
     function applyFilters() {
       applySort();
+      syncShortcutButtons();
       var count = 0;
       cards.forEach(function (card) {
         var show = cardMatches(card);
@@ -281,123 +306,289 @@ window.addEventListener("resize", updateReadingProgress);
     setupAdvancedBlogSearch();
   }
 })();
-
-
-/* v32 recovery: working Share button with native share and styled fallback */
+/* v32: share dropdowns for blog cards and post pages */
 (function () {
-  function absoluteUrl(value) {
-    try {
-      return new URL(value || window.location.href, window.location.origin).href;
-    } catch (e) {
-      return window.location.href;
-    }
+  function closeShareMenus(exceptPanel) {
+    document.querySelectorAll('.share-menu-panel').forEach(function (panel) {
+      if (panel !== exceptPanel) {
+        panel.hidden = true;
+        var toggle = panel.closest('.share-menu-wrap') && panel.closest('.share-menu-wrap').querySelector('.share-menu-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
-  function setupShareButtons() {
-    var buttons = document.querySelectorAll('.share-button');
-    if (!buttons.length) return;
-
-    var overlay = document.getElementById('siteShareOverlay');
-    if (!overlay) return;
-
-    var dialog = overlay.querySelector('.site-share-dialog');
-    var close = overlay.querySelector('.site-share-close');
-    var input = document.getElementById('siteShareUrl');
-    var copy = document.getElementById('siteShareCopy');
-    var lastFocus = null;
-
-    function setLinks(title, url) {
-      var encodedUrl = encodeURIComponent(url);
-      var encodedTitle = encodeURIComponent(title || document.title);
-
-      var links = {
-        facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl,
-        x: 'https://twitter.com/intent/tweet?url=' + encodedUrl + '&text=' + encodedTitle,
-        linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl,
-        whatsapp: 'https://api.whatsapp.com/send?text=' + encodedTitle + '%20' + encodedUrl,
-        email: 'mailto:?subject=' + encodedTitle + '&body=' + encodedUrl
-      };
-
-      Object.keys(links).forEach(function (service) {
-        var link = overlay.querySelector('[data-share-service="' + service + '"]');
-        if (link) link.setAttribute('href', links[service]);
-      });
-
-      if (input) input.value = url;
+  function copyText(value) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(value);
     }
 
-    function openFallback(title, url) {
-      setLinks(title, url);
-      overlay.hidden = false;
-      document.body.classList.add('share-open');
-      var first = overlay.querySelector('.site-share-close');
-      if (first) first.focus();
-    }
+    var temp = document.createElement('textarea');
+    temp.value = value;
+    temp.setAttribute('readonly', '');
+    temp.style.position = 'absolute';
+    temp.style.left = '-9999px';
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    document.body.removeChild(temp);
+    return Promise.resolve();
+  }
 
-    function closeFallback() {
-      overlay.hidden = true;
-      document.body.classList.remove('share-open');
-      if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
-    }
+  function setupShareMenus() {
+    document.addEventListener('click', function (event) {
+      var toggle = event.target.closest('.share-menu-toggle');
+      if (toggle) {
+        var wrap = toggle.closest('.share-menu-wrap');
+        var panel = wrap && wrap.querySelector('.share-menu-panel');
+        if (!panel) return;
 
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var title = button.getAttribute('data-share-title') || document.title;
-        var url = absoluteUrl(button.getAttribute('data-share-url'));
-        lastFocus = button;
+        var willOpen = panel.hidden;
+        closeShareMenus(panel);
+        panel.hidden = !willOpen;
+        toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        return;
+      }
 
-        if (navigator.share) {
-          navigator.share({ title: title, url: url }).catch(function () {
-            openFallback(title, url);
-          });
-        } else {
-          openFallback(title, url);
-        }
-      });
-    });
+      var copyButton = event.target.closest('.share-copy');
+      if (copyButton) {
+        var url = copyButton.getAttribute('data-url') || window.location.href;
+        copyText(url).then(function () {
+          var old = copyButton.textContent;
+          copyButton.textContent = 'Copied';
+          setTimeout(function () {
+            copyButton.textContent = old;
+          }, 1400);
+        });
+        closeShareMenus();
+        return;
+      }
 
-    if (close) close.addEventListener('click', closeFallback);
-
-    overlay.addEventListener('click', function (event) {
-      if (event.target === overlay) closeFallback();
+      if (!event.target.closest('.share-menu-wrap')) {
+        closeShareMenus();
+      }
     });
 
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !overlay.hidden) closeFallback();
+      if (event.key === 'Escape') closeShareMenus();
     });
-
-    if (copy && input) {
-      copy.addEventListener('click', function () {
-        var url = input.value;
-        function done() {
-          var old = copy.textContent;
-          copy.textContent = 'Copied';
-          setTimeout(function () { copy.textContent = old; }, 1300);
-        }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(done).catch(function () {
-            input.select();
-            document.execCommand('copy');
-            done();
-          });
-        } else {
-          input.select();
-          document.execCommand('copy');
-          done();
-        }
-      });
-    }
-
-    if (dialog) {
-      dialog.addEventListener('click', function (event) {
-        event.stopPropagation();
-      });
-    }
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupShareButtons);
+    document.addEventListener('DOMContentLoaded', setupShareMenus);
   } else {
-    setupShareButtons();
+    setupShareMenus();
+  }
+})();
+/* v34: share popup modal, prevents card clipping */
+(function () {
+  function closePopup() {
+    var existing = document.querySelector('.share-popup-overlay');
+    if (existing) existing.remove();
+    document.body.classList.remove('share-popup-open');
+  }
+
+  function copyText(value) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(value);
+    }
+    var temp = document.createElement('textarea');
+    temp.value = value;
+    temp.setAttribute('readonly', '');
+    temp.style.position = 'absolute';
+    temp.style.left = '-9999px';
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    temp.remove();
+    return Promise.resolve();
+  }
+
+  function classifyLink(el) {
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim();
+
+    if (href.indexOf('facebook') !== -1) return { label: 'Facebook', icon: 'f', cls: 'icon-facebook' };
+    if (href.indexOf('twitter') !== -1 || text === 'X') return { label: 'X', icon: 'X', cls: 'icon-x' };
+    if (href.indexOf('linkedin') !== -1) return { label: 'LinkedIn', icon: 'in', cls: 'icon-linkedin' };
+    if (href.indexOf('mailto:') === 0) return { label: 'Email', icon: '✉', cls: 'icon-email' };
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) return { label: 'WhatsApp', icon: '☏', cls: 'icon-whatsapp' };
+    return { label: text || 'Share', icon: '↗', cls: 'icon-share' };
+  }
+
+  function optionNodeFromElement(el) {
+    var isCopy = el.classList && el.classList.contains('share-copy');
+    var href = el.getAttribute('href');
+    var info = isCopy ? { label: 'Copy link', icon: '🔗', cls: 'icon-copy' } : classifyLink(el);
+
+    var node;
+    if (isCopy) {
+      node = document.createElement('button');
+      node.type = 'button';
+      node.setAttribute('data-copy-url', el.getAttribute('data-url') || window.location.href);
+    } else {
+      node = document.createElement('a');
+      node.href = href;
+      if (el.target) node.target = el.target;
+      if (el.rel) node.rel = el.rel;
+    }
+
+    node.className = 'share-popup-option';
+    node.innerHTML = '<span class="share-popup-icon ' + info.cls + '">' + info.icon + '</span><span>' + info.label + '</span>';
+    return node;
+  }
+
+  function openPopup(toggle) {
+    closePopup();
+
+    var wrap = toggle.closest('.share-menu-wrap');
+    var panel = wrap && wrap.querySelector('.share-menu-panel');
+    if (!panel) return;
+
+    var sourceActions = toggle.closest('.social-actions');
+    var postUrl = (sourceActions && sourceActions.getAttribute('data-post-url')) || window.location.href;
+    var postTitle = (sourceActions && sourceActions.getAttribute('data-post-title')) || document.title;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'share-popup-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Share');
+
+    var dialog = document.createElement('div');
+    dialog.className = 'share-popup-dialog';
+
+    var header = document.createElement('div');
+    header.className = 'share-popup-header';
+    header.innerHTML = '<h2 class="share-popup-title">Share</h2><button class="share-popup-close" type="button" aria-label="Close share dialog">×</button>';
+
+    var options = document.createElement('div');
+    options.className = 'share-popup-options';
+
+    Array.prototype.slice.call(panel.children).forEach(function (child) {
+      if (child.matches && (child.matches('a') || child.matches('button'))) {
+        options.appendChild(optionNodeFromElement(child));
+      }
+    });
+
+    var copyRow = document.createElement('div');
+    copyRow.className = 'share-popup-copy-row';
+    copyRow.innerHTML = '<div class="share-popup-url">' + postUrl + '</div><button class="share-popup-copy-main" type="button" data-copy-url="' + postUrl + '">Copy</button>';
+
+    dialog.appendChild(header);
+    dialog.appendChild(options);
+    dialog.appendChild(copyRow);
+    overlay.appendChild(dialog);
+    document.body.appendChild(overlay);
+    document.body.classList.add('share-popup-open');
+
+    var close = overlay.querySelector('.share-popup-close');
+    if (close) close.focus();
+  }
+
+  document.addEventListener('click', function (event) {
+    var toggle = event.target.closest('.share-menu-toggle');
+    if (toggle) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      openPopup(toggle);
+      return;
+    }
+
+    var close = event.target.closest('.share-popup-close');
+    if (close) {
+      event.preventDefault();
+      closePopup();
+      return;
+    }
+
+    var copy = event.target.closest('.share-popup-option[data-copy-url], .share-popup-copy-main[data-copy-url]');
+    if (copy) {
+      event.preventDefault();
+      copyText(copy.getAttribute('data-copy-url') || window.location.href).then(function () {
+        var old = copy.textContent;
+        copy.textContent = 'Copied';
+        setTimeout(function () {
+          copy.textContent = old;
+        }, 1200);
+      });
+      return;
+    }
+
+    var overlay = event.target.classList && event.target.classList.contains('share-popup-overlay');
+    if (overlay) closePopup();
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closePopup();
+  });
+})();
+/* v35: close simplified navigation dropdowns on outside click */
+(function () {
+  function closeNavDropdowns(except) {
+    document.querySelectorAll('.nav-dropdown[open]').forEach(function (dropdown) {
+      if (dropdown !== except) dropdown.open = false;
+    });
+  }
+
+  function setupNavDropdowns() {
+    document.addEventListener('click', function (event) {
+      var dropdown = event.target.closest('.nav-dropdown');
+
+      if (dropdown) {
+        document.querySelectorAll('.nav-dropdown[open]').forEach(function (other) {
+          if (other !== dropdown) other.open = false;
+        });
+        return;
+      }
+
+      closeNavDropdowns();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeNavDropdowns();
+    });
+
+    document.querySelectorAll('.nav-dropdown-panel a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var dropdown = link.closest('.nav-dropdown');
+        if (dropdown) dropdown.open = false;
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupNavDropdowns);
+  } else {
+    setupNavDropdowns();
+  }
+})();
+/* v39: open nav dropdowns on hover as well as click */
+(function () {
+  function setupHoverDropdowns() {
+    document.querySelectorAll('.nav-dropdown').forEach(function (dropdown) {
+      var closeTimer = null;
+
+      dropdown.addEventListener('mouseenter', function () {
+        if (closeTimer) window.clearTimeout(closeTimer);
+        dropdown.open = true;
+        document.querySelectorAll('.nav-dropdown[open]').forEach(function (other) {
+          if (other !== dropdown) other.open = false;
+        });
+      });
+
+      dropdown.addEventListener('mouseleave', function () {
+        closeTimer = window.setTimeout(function () {
+          if (!dropdown.matches(':focus-within')) dropdown.open = false;
+        }, 120);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupHoverDropdowns);
+  } else {
+    setupHoverDropdowns();
   }
 })();
