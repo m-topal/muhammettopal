@@ -592,3 +592,56 @@ window.addEventListener("resize", updateReadingProgress);
     setupHoverDropdowns();
   }
 })();
+
+
+/* v48: Teaching Experience course modal */
+(function () {
+  function closeCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.classList.remove('course-modal-open');
+  }
+
+  function openCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('course-modal-open');
+    var close = modal.querySelector('.course-modal-close');
+    if (close) close.focus();
+  }
+
+  function setupCourseModals() {
+    document.querySelectorAll('.course-modal-trigger[data-course-modal]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var id = button.getAttribute('data-course-modal');
+        openCourseModal(document.getElementById(id));
+      });
+    });
+
+    document.querySelectorAll('.course-modal').forEach(function (modal) {
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          closeCourseModal(modal);
+        }
+      });
+
+      modal.querySelectorAll('.course-modal-close').forEach(function (close) {
+        close.addEventListener('click', function () {
+          closeCourseModal(modal);
+        });
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.course-modal:not([hidden])').forEach(closeCourseModal);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCourseModals);
+  } else {
+    setupCourseModals();
+  }
+})();

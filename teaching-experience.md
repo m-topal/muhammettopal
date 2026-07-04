@@ -20,78 +20,87 @@ permalink: /teaching/experience/
     </div>
 
     <div class="teaching-shelf-row instructor-course-row">
-      <details class="teaching-course-card course-card-with-image expandable-course-card featured-course-card" id="introduction-to-political-islam">
-        <summary>
-          <div class="course-card-image">
-            <img src="{{ '/assets/img/teaching/political-islam-preview.jpeg' | relative_url }}" alt="Collage preview image for Introduction to Political Islam">
-          </div>
-          <div class="course-card-body">
-            <p class="meta">HIST, MENA, POL 385 · University of Arizona</p>
-            <h3>Introduction to Political Islam</h3>
-            <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam.</p>
-            <span class="course-card-action">Click to view details</span>
-          </div>
-        </summary>
-
-        <div class="course-card-expanded">
-          <div class="course-expanded-text">
-            <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. Students examine contemporary political Islam with regard to popularity and location, preference for armed vs. political strategies, nationalism vs. pan-Islamist orientation, sectarian attitudes, and levels of pragmatism from a historical perspective.</p>
-            <p class="course-taught">Taught in: Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026</p>
-            <p><a class="course-card-action" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">Open course site</a></p>
-          </div>
-          <figure class="course-flyer">
-            <img src="{{ '/assets/img/teaching/political-islam-flyer.png' | relative_url }}" alt="Flyer for Introduction to Political Islam">
-          </figure>
+      <article class="teaching-course-card course-card-with-image modal-course-card">
+        <div class="course-card-image">
+          <img src="{{ '/assets/img/teaching/political-islam-preview.jpeg' | relative_url }}" alt="Collage preview image for Introduction to Political Islam">
         </div>
-      </details>
-
-      <details class="teaching-course-card course-card-with-image expandable-course-card" id="middle-east-minorities">
-        <summary>
-          <div class="course-card-image">
-            <img src="{{ '/assets/img/teaching/minorities-preview.jpg' | relative_url }}" alt="Mosque, church, and synagogue architectural detail in Istanbul">
-          </div>
-          <div class="course-card-body">
-            <p class="meta">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
-            <h3>Middle East Ethnic and Religious Minorities</h3>
-            <p>Histories and contemporary experiences of ethnic and religious minorities in the Middle East through empire, nationalism, citizenship, violence, memory, migration, and coexistence.</p>
-            <span class="course-card-action">Click to view details</span>
-          </div>
-        </summary>
-
-        <div class="course-card-expanded">
-          <div class="course-expanded-text">
-            <p>From the Ottoman millet system to the post-Ottoman and postcolonial nation-states of the twentieth and twenty-first centuries, this course explores the Middle East’s rich ethnic and religious diversity. It critically examines categories of minority and <em>dhimmi</em> while studying communities such as Armenians, Kurds, Jews, Copts, Druze, Assyrians, Bahá’ís, Yazidis, Alawites, Circassians, and others.</p>
-            <p class="course-taught">Taught in: Fall 2025</p>
-          </div>
-          <figure class="course-flyer">
-            <img src="{{ '/assets/img/teaching/minorities-flyer.png' | relative_url }}" alt="Flyer for Middle East Ethnic and Religious Minorities">
-          </figure>
+        <div class="course-card-body">
+          <p class="meta">HIST, MENA, POL 385 · University of Arizona</p>
+          <h3>Introduction to Political Islam</h3>
+          <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam.</p>
+          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="political-islam-modal">View details</button>
         </div>
-      </details>
+      </article>
 
-      <details class="teaching-course-card course-card-with-image expandable-course-card" id="religion-of-islam">
-        <summary>
-          <div class="course-card-image">
-            <img src="{{ '/assets/img/teaching/religion-of-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
-          </div>
-          <div class="course-card-body">
-            <p class="meta">MENA, REL 160B · University of Arizona</p>
-            <h3>Religion of Islam</h3>
-            <p>An introduction to Islamic traditions, texts, practices, institutions, and historical debates, with attention to the diversity of Muslim societies across time and place.</p>
-            <span class="course-card-action">Click to view details</span>
-          </div>
-        </summary>
-
-        <div class="course-card-expanded">
-          <div class="course-expanded-text">
-            <p>This course provides an overview of the Qur’an, the life and teachings of Prophet Muhammed, and the differences between Sunni and Shi‘i Islam. Students also receive an introduction to Islamic intellectual traditions and cultures while examining Muslim societies across time and place.</p>
-            <p class="course-taught">Taught in: Summer 2022</p>
-          </div>
-          <figure class="course-flyer">
-            <img src="{{ '/assets/img/teaching/religion-of-islam-flyer.png' | relative_url }}" alt="Flyer for Religion of Islam">
-          </figure>
+      <article class="teaching-course-card course-card-with-image modal-course-card">
+        <div class="course-card-image">
+          <img src="{{ '/assets/img/teaching/minorities-preview.jpg' | relative_url }}" alt="Mosque, church, and synagogue architectural detail in Istanbul">
         </div>
-      </details>
+        <div class="course-card-body">
+          <p class="meta">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
+          <h3>Middle East Ethnic and Religious Minorities</h3>
+          <p>Histories and contemporary experiences of ethnic and religious minorities in the Middle East through empire, nationalism, citizenship, violence, memory, migration, and coexistence.</p>
+          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="minorities-modal">View details</button>
+        </div>
+      </article>
+
+      <article class="teaching-course-card course-card-with-image modal-course-card">
+        <div class="course-card-image">
+          <img src="{{ '/assets/img/teaching/religion-of-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
+        </div>
+        <div class="course-card-body">
+          <p class="meta">MENA, REL 160B · University of Arizona</p>
+          <h3>Religion of Islam</h3>
+          <p>An introduction to Islamic traditions, texts, practices, institutions, and historical debates, with attention to the diversity of Muslim societies across time and place.</p>
+          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="religion-islam-modal">View details</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="course-modal" id="political-islam-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="political-islam-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">HIST, MENA, POL 385 · University of Arizona</p>
+          <h3 id="political-islam-title">Introduction to Political Islam</h3>
+          <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. Students examine contemporary political Islam with regard to popularity and location, preference for armed vs. political strategies, nationalism vs. pan-Islamist orientation, sectarian attitudes, and levels of pragmatism from a historical perspective.</p>
+          <p class="course-taught">Taught in: Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026</p>
+          <p><a class="course-card-action" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">Open course site</a></p>
+        </div>
+        <figure class="course-modal-flyer">
+          <img src="{{ '/assets/img/teaching/political-islam-flyer.png' | relative_url }}" alt="Flyer for Introduction to Political Islam">
+        </figure>
+      </div>
+    </div>
+
+    <div class="course-modal" id="minorities-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="minorities-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
+          <h3 id="minorities-title">Middle East Ethnic and Religious Minorities</h3>
+          <p>From the Ottoman millet system to the post-Ottoman and postcolonial nation-states of the twentieth and twenty-first centuries, this course explores the Middle East’s rich ethnic and religious diversity. It critically examines categories of minority and <em>dhimmi</em> while studying communities such as Armenians, Kurds, Jews, Copts, Druze, Assyrians, Bahá’ís, Yazidis, Alawites, Circassians, and others.</p>
+          <p class="course-taught">Taught in: Fall 2025</p>
+        </div>
+        <figure class="course-modal-flyer">
+          <img src="{{ '/assets/img/teaching/minorities-flyer.png' | relative_url }}" alt="Flyer for Middle East Ethnic and Religious Minorities">
+        </figure>
+      </div>
+    </div>
+
+    <div class="course-modal" id="religion-islam-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="religion-islam-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">MENA, REL 160B · University of Arizona</p>
+          <h3 id="religion-islam-title">Religion of Islam</h3>
+          <p>This course provides an overview of the Qur’an, the life and teachings of Prophet Muhammed, and the differences between Sunni and Shi‘i Islam. Students also receive an introduction to Islamic intellectual traditions and cultures while examining Muslim societies across time and place.</p>
+          <p class="course-taught">Taught in: Summer 2022</p>
+        </div>
+        <figure class="course-modal-flyer">
+          <img src="{{ '/assets/img/teaching/religion-of-islam-flyer.png' | relative_url }}" alt="Flyer for Religion of Islam">
+        </figure>
+      </div>
     </div>
   </section>
 
