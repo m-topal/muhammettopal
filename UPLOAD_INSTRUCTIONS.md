@@ -1,12 +1,14 @@
-# Diversions Caption Patch
+# Language Menu Click-Outside Patch
 
-Upload only this file to the repository root:
+Upload only this file:
 
-- diversions.md
+assets/js/language.js
 
-Changed captions:
-- Fishing trip with my partner and her dog Clío.
-- In Truth or Consequences, New Mexico with my partner.
-- In White Sands National Park with my partner.
+What it does:
+- When the Language menu is open, clicking anywhere outside it closes it.
+- Pressing Escape also closes it.
+- Clicking a language link closes the menu as the link opens.
 
-I also updated the image alt text to match these captions.
+Upload:
+Go to GitHub > assets > js
+Upload language.js and commit changes.
