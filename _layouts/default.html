@@ -73,11 +73,8 @@
     </header>
 
     <div class="nav-wrap sticky-nav">
-      <a class="sticky-wordmark-row" href="{{ '/' | relative_url }}" aria-label="Muhammet Topal home">
-        <img src="{{ '/assets/topal-wordmark-transparent.png' | relative_url }}" alt="Topal wordmark">
-      </a>
-
       <nav class="nav simplified-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About Me</a>
 
         <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">

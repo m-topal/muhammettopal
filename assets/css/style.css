@@ -2472,3 +2472,27 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
     transform: none;
   }
 }
+/* v36: restore clean header and remove extra sticky wordmark row */
+
+.site-top .site-header-wordmark-block,
+.site-top .home-header-mark {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.site-top .site-header-wordmark-block::before,
+.site-top .site-header-wordmark-block::after,
+.site-top .home-header-mark::before,
+.site-top .home-header-mark::after {
+  display: none !important;
+  content: none !important;
+}
+
+.sticky-wordmark-row {
+  display: none !important;
+}
+
+.nav.simplified-nav {
+  justify-content: center;
+}

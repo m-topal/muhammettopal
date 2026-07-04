@@ -1,6 +1,6 @@
-# Simplified Navigation Patch
+# Navigation Header Fix Patch
 
-Upload only these changed files.
+Upload only these files.
 
 ## _layouts/
 - default.html
@@ -8,32 +8,9 @@ Upload only these changed files.
 ## assets/css/
 - style.css
 
-## assets/js/
-- site.js
-
-## New tab bar
-
-Home is removed.
-
-The new visible tab bar is:
-
-About Me | Portfolio ▼ | Extra Curricular ▼ | CV | Contact | My Blog
-
-Home remains accessible by clicking:
-- the handwritten Topal logo
-- the Muhammet Topal header
-
-Portfolio dropdown:
-- Research
-- Teaching
-- Publications
-- Presentations
-
-Extra Curricular dropdown:
-- Academic Service
-- Diversions
-
-Dropdowns close when:
-- you click outside them,
-- you press Escape,
-- you click a dropdown link.
+What it fixes:
+- Removes the small sticky Topal wordmark above the nav.
+- Removes the line between the large Topal logo and Muhammet Topal.
+- Restores the Home tab.
+- Keeps the simplified dropdown structure:
+  Home | About Me | Portfolio | Extra Curricular | CV | Contact | My Blog
