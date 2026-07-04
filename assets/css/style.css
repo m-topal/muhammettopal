@@ -2534,21 +2534,16 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 
 
 
-/* v45: expandable Teaching Experience cards, single nav underline, and left alignment fix */
+/* v47: Teaching Experience expandable cards only, plus single nav underline */
+
+/* Match Teaching Statement alignment. */
 .teaching-experience-page {
   max-width: 1120px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-.teaching-experience-page > .label,
-.teaching-experience-page > h1,
-.teaching-experience-page > .subnav,
-.teaching-experience-page > section {
-  width: 100% !important;
-}
-
-/* Kill the accidental second underline. Keep only border-bottom. */
+/* Force one nav underline only. */
 .nav a,
 .nav a:hover,
 .nav a:focus,
@@ -2560,22 +2555,18 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 .nav .nav-dropdown > summary,
 .nav .nav-dropdown:hover > summary,
 .nav .nav-dropdown[open] > summary,
-.nav .nav-dropdown.active > summary,
-.subnav a,
-.subnav a:hover,
-.subnav a:focus,
-.subnav a.active {
+.nav .nav-dropdown.active > summary {
   text-decoration: none !important;
   background-image: none !important;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .nav.simplified-nav > a:not(.blog-pill),
 .nav.simplified-nav > .nav-dropdown > summary,
 .nav > a:not(.blog-pill),
 .nav > .nav-dropdown > summary {
-  border-bottom: 2px solid transparent;
-  padding-bottom: 5px;
+  border-bottom: 2px solid transparent !important;
+  padding-bottom: 5px !important;
 }
 
 .nav.simplified-nav > a:not(.blog-pill):hover,
@@ -2590,7 +2581,7 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
 .nav > .nav-dropdown:hover > summary,
 .nav > .nav-dropdown[open] > summary,
 .nav > .nav-dropdown.active > summary {
-  border-bottom-color: currentColor;
+  border-bottom-color: currentColor !important;
 }
 
 .nav .blog-pill,
@@ -2602,111 +2593,124 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   text-decoration: none !important;
 }
 
+/* Existing three Instructor of Record cards become expandable cards. */
 .instructor-course-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: start !important;
 }
 
 .expandable-course-card {
-  display: block;
-  overflow: hidden;
-  padding: 0;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
+  display: block !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
 }
 
 .expandable-course-card > summary {
-  display: block;
-  cursor: pointer;
-  list-style: none;
+  display: block !important;
+  cursor: pointer !important;
+  list-style: none !important;
 }
 
 .expandable-course-card > summary::-webkit-details-marker {
-  display: none;
+  display: none !important;
 }
 
 .expandable-course-card > summary::marker {
-  content: "";
+  content: "" !important;
+}
+
+.course-card-image {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.course-card-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+.course-card-body {
+  padding: 18px !important;
 }
 
 .expandable-course-card:hover {
-  border-color: var(--ink);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+  border-color: var(--ink) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .08) !important;
 }
 
 .expandable-course-card[open] {
-  grid-column: span 3;
+  grid-column: 1 / -1 !important;
 }
 
 .expandable-course-card[open] > summary {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line) !important;
 }
 
 .expandable-course-card[open] .course-card-image {
-  aspect-ratio: 21 / 8;
+  aspect-ratio: 21 / 8 !important;
 }
 
 .course-card-expanded {
-  display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(300px, .7fr);
-  gap: 24px;
-  padding: 22px;
-  align-items: start;
+  display: grid !important;
+  grid-template-columns: minmax(0, .95fr) minmax(280px, .72fr) !important;
+  gap: 24px !important;
+  padding: 22px !important;
+  align-items: start !important;
 }
 
-.course-card-expanded > p,
-.course-card-expanded .course-taught {
-  grid-column: 1;
-}
-
-.course-card-expanded .course-flyer {
-  grid-column: 2;
-  grid-row: 1 / span 4;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--soft);
-}
-
-.course-card-expanded .course-flyer img {
-  display: block;
-  width: 100%;
-  height: auto;
+.course-expanded-text p {
+  margin-top: 0 !important;
 }
 
 .course-taught {
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: .95rem;
+  color: var(--muted) !important;
+  font-family: var(--sans) !important;
+  font-size: .95rem !important;
 }
 
+.course-card-expanded .course-flyer {
+  margin: 0 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: var(--soft) !important;
+}
+
+.course-card-expanded .course-flyer img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* If an older upload left the separate lower detail section, hide it. */
 .course-detail-stack {
   display: none !important;
 }
 
 @media (max-width: 900px) {
   .instructor-course-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .expandable-course-card[open] {
-    grid-column: auto;
+    grid-column: auto !important;
   }
 
   .expandable-course-card[open] .course-card-image {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9 !important;
   }
 
   .course-card-expanded {
-    grid-template-columns: 1fr;
-  }
-
-  .course-card-expanded .course-flyer {
-    grid-column: 1;
-    grid-row: auto;
+    grid-template-columns: 1fr !important;
   }
 }

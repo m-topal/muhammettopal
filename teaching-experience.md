@@ -13,7 +13,7 @@ permalink: /teaching/experience/
     <a href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
   </div>
 
-    <section class="teaching-shelf">
+    <section class="teaching-shelf instructor-section">
     <div class="teaching-shelf-heading">
       <span class="teaching-shelf-icon" aria-hidden="true">🎓</span>
       <h2>Instructor of Record</h2>
@@ -32,10 +32,13 @@ permalink: /teaching/experience/
             <span class="course-card-action">Click to view details</span>
           </div>
         </summary>
+
         <div class="course-card-expanded">
-          <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. Students examine contemporary political Islam with regard to popularity and location, preference for armed vs. political strategies, nationalism vs. pan-Islamist orientation, sectarian attitudes, and levels of pragmatism from a historical perspective.</p>
-          <p class="course-taught">Taught in: Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026</p>
-          <p><a class="course-card-action" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">Open course site</a></p>
+          <div class="course-expanded-text">
+            <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam. Students examine contemporary political Islam with regard to popularity and location, preference for armed vs. political strategies, nationalism vs. pan-Islamist orientation, sectarian attitudes, and levels of pragmatism from a historical perspective.</p>
+            <p class="course-taught">Taught in: Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026</p>
+            <p><a class="course-card-action" href="https://sites.google.com/view/intro-to-political-islam/home" target="_blank" rel="noopener">Open course site</a></p>
+          </div>
           <figure class="course-flyer">
             <img src="{{ '/assets/img/teaching/political-islam-flyer.png' | relative_url }}" alt="Flyer for Introduction to Political Islam">
           </figure>
@@ -54,9 +57,12 @@ permalink: /teaching/experience/
             <span class="course-card-action">Click to view details</span>
           </div>
         </summary>
+
         <div class="course-card-expanded">
-          <p>From the Ottoman millet system to the post-Ottoman and postcolonial nation-states of the twentieth and twenty-first centuries, this course explores the Middle East’s rich ethnic and religious diversity. It critically examines categories of minority and <em>dhimmi</em> while studying communities such as Armenians, Kurds, Jews, Copts, Druze, Assyrians, Bahá’ís, Yazidis, Alawites, Circassians, and others.</p>
-          <p class="course-taught">Taught in: Fall 2025</p>
+          <div class="course-expanded-text">
+            <p>From the Ottoman millet system to the post-Ottoman and postcolonial nation-states of the twentieth and twenty-first centuries, this course explores the Middle East’s rich ethnic and religious diversity. It critically examines categories of minority and <em>dhimmi</em> while studying communities such as Armenians, Kurds, Jews, Copts, Druze, Assyrians, Bahá’ís, Yazidis, Alawites, Circassians, and others.</p>
+            <p class="course-taught">Taught in: Fall 2025</p>
+          </div>
           <figure class="course-flyer">
             <img src="{{ '/assets/img/teaching/minorities-flyer.png' | relative_url }}" alt="Flyer for Middle East Ethnic and Religious Minorities">
           </figure>
@@ -75,9 +81,12 @@ permalink: /teaching/experience/
             <span class="course-card-action">Click to view details</span>
           </div>
         </summary>
+
         <div class="course-card-expanded">
-          <p>This course provides an overview of the Qur’an, the life and teachings of Prophet Muhammed, and the differences between Sunni and Shi‘i Islam. Students also receive an introduction to Islamic intellectual traditions and cultures while examining Muslim societies across time and place.</p>
-          <p class="course-taught">Taught in: Summer 2022</p>
+          <div class="course-expanded-text">
+            <p>This course provides an overview of the Qur’an, the life and teachings of Prophet Muhammed, and the differences between Sunni and Shi‘i Islam. Students also receive an introduction to Islamic intellectual traditions and cultures while examining Muslim societies across time and place.</p>
+            <p class="course-taught">Taught in: Summer 2022</p>
+          </div>
           <figure class="course-flyer">
             <img src="{{ '/assets/img/teaching/religion-of-islam-flyer.png' | relative_url }}" alt="Flyer for Religion of Islam">
           </figure>
