@@ -15,7 +15,7 @@ permalink: /about/
 
 <figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
   <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
-  <figcaption>Working between archives, libraries, and late Ottoman texts.</figcaption>
+  <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
 </figure>
 
     <p>The dissertation is organized around three connected problems: formation, worldmaking, and political existence. The first part reconstructs the conditions that made Murad possible, especially his formation between a highland Muslim society in Dagestan, Russian imperial schooling, and early Ottoman Istanbul. The second part, which is the center of my current work, studies how Murad turned from being formed by worlds to making worlds in writing through history, literature, and journalism. The third part follows the political consequences of this position, tracing how advisory intimacy and critical distance could belong to the same intellectual life.</p>
