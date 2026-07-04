@@ -11,6 +11,13 @@ permalink: /about/
 
     <p>My current dissertation examines the making of Ottoman public intellectual life through Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, novelist, teacher of history, bureaucrat, memoirist, and public figure. I do not approach Murad simply as the subject of a life story. I use biography as a historical method. His life allows me to ask how intellectual authority was formed, how writing made the Ottoman world legible to readers, and how proximity to power created both opportunity and risk.</p>
 
+
+
+<figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
+  <figcaption>Working between archives, libraries, and late Ottoman texts.</figcaption>
+</figure>
+
     <p>The dissertation is organized around three connected problems: formation, worldmaking, and political existence. The first part reconstructs the conditions that made Murad possible, especially his formation between a highland Muslim society in Dagestan, Russian imperial schooling, and early Ottoman Istanbul. The second part, which is the center of my current work, studies how Murad turned from being formed by worlds to making worlds in writing through history, literature, and journalism. The third part follows the political consequences of this position, tracing how advisory intimacy and critical distance could belong to the same intellectual life.</p>
 
     <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations. That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>

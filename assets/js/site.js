@@ -594,54 +594,82 @@ window.addEventListener("resize", updateReadingProgress);
 })();
 
 
-/* v48: Teaching Experience course modal */
+/* v57b: universal click-to-enlarge image lightbox */
 (function () {
-  function closeCourseModal(modal) {
-    if (!modal) return;
-    modal.hidden = true;
-    document.body.classList.remove('course-modal-open');
+  function ready(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
   }
 
-  function openCourseModal(modal) {
-    if (!modal) return;
-    modal.hidden = false;
-    document.body.classList.add('course-modal-open');
-    var close = modal.querySelector('.course-modal-close');
-    if (close) close.focus();
-  }
+  ready(function () {
+    var images = document.querySelectorAll('.js-lightbox-image');
+    if (!images.length) return;
 
-  function setupCourseModals() {
-    document.querySelectorAll('.course-modal-trigger[data-course-modal]').forEach(function (button) {
-      button.addEventListener('click', function () {
-        var id = button.getAttribute('data-course-modal');
-        openCourseModal(document.getElementById(id));
+    var overlay = document.createElement('div');
+    overlay.className = 'image-lightbox';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML = [
+      '<div class="image-lightbox-inner" role="dialog" aria-modal="true" aria-label="Expanded image">',
+      '<button class="image-lightbox-close" type="button" aria-label="Close expanded image">×</button>',
+      '<img alt="">',
+      '<div class="image-lightbox-caption"></div>',
+      '</div>'
+    ].join('');
+
+    document.body.appendChild(overlay);
+
+    var lightboxImg = overlay.querySelector('img');
+    var caption = overlay.querySelector('.image-lightbox-caption');
+    var closeButton = overlay.querySelector('.image-lightbox-close');
+
+    function closeLightbox() {
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('image-lightbox-open');
+      lightboxImg.removeAttribute('src');
+      caption.textContent = '';
+    }
+
+    function openLightbox(img) {
+      var figure = img.closest('figure');
+      var figcaption = figure ? figure.querySelector('figcaption') : null;
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || '';
+      caption.textContent = figcaption ? figcaption.textContent.trim() : '';
+      overlay.classList.add('is-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('image-lightbox-open');
+      closeButton.focus();
+    }
+
+    images.forEach(function (img) {
+      img.addEventListener('click', function () {
+        openLightbox(img);
+      });
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(img);
+        }
       });
     });
 
-    document.querySelectorAll('.course-modal').forEach(function (modal) {
-      modal.addEventListener('click', function (event) {
-        if (event.target === modal) {
-          closeCourseModal(modal);
-        }
-      });
+    closeButton.addEventListener('click', closeLightbox);
 
-      modal.querySelectorAll('.course-modal-close').forEach(function (close) {
-        close.addEventListener('click', function () {
-          closeCourseModal(modal);
-        });
-      });
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) {
+        closeLightbox();
+      }
     });
 
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        document.querySelectorAll('.course-modal:not([hidden])').forEach(closeCourseModal);
+      if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeLightbox();
       }
     });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupCourseModals);
-  } else {
-    setupCourseModals();
-  }
+  });
 })();

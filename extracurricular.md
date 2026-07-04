@@ -10,6 +10,13 @@ permalink: /extracurricular/
   <div class="prose two-column-prose">
     <p>My academic life also includes service, outreach, and community building. I have been involved in graduate student organization, departmental representation, public educational work, and workshop programming connected to Middle Eastern and North African Studies.</p>
 
+
+
+<figure class="extra-breakout-workshop creative-breakout-figure js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/workshop-presentation-session.jpeg' | relative_url }}" alt="Workshop presentation session">
+  <figcaption>Workshop presentation and discussion session.</figcaption>
+</figure>
+
     <p>At the University of Arizona, I served as co-head of the Graduate Student Association and helped reactivate graduate student programming in the department. In this role, I contributed to the organization of graduate events, supported communication among graduate students, and worked to create spaces where students could share research, exchange advice, and participate more fully in departmental life.</p>
 
     <p>I also served as a graduate student representative in faculty meetings. This role gave me experience representing graduate student perspectives in departmental discussions and helped me understand the practical work through which academic units organize teaching, research, hiring, curriculum, and community life.</p>
