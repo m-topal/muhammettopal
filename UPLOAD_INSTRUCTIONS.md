@@ -1,17 +1,14 @@
-# Favicon and Share Popup Patch
+# Homepage Text and Nazar Favicon Patch
 
-Upload only these files to their matching folders.
+Upload only these changed files.
 
-## Upload to `_layouts/`
+## Root
+- index.md
+
+## _layouts/
 - default.html
 
-## Upload to `assets/css/`
-- style.css
-
-## Upload to `assets/js/`
-- site.js
-
-## Upload to `assets/`
+## assets/
 - favicon.ico
 - favicon.svg
 - favicon-16x16.png
@@ -20,13 +17,17 @@ Upload only these files to their matching folders.
 - apple-touch-icon.png
 - icon-192.png
 - icon-512.png
-- favicon-mark-preview.png
+- nazar-favicon-preview.png
 - site.webmanifest
 
-## What changes
+## What changed
 
-1. Favicon now uses a compact special mark from the handwritten Topal logo, not the full long word. It should appear larger and clearer in the browser tab.
-2. Favicon links are cache-busted with ?v=4.
-3. Share no longer opens inside the card. It opens as a centered popup/modal in the style of YouTube's share dialog, but with the site's clean white academic aesthetic.
-4. The popup includes:
-   Facebook, X, LinkedIn, Email, WhatsApp, Copy link.
+1. Homepage intro text is replaced with the new three-paragraph version.
+2. I corrected obvious typos in the supplied text:
+   - follwing → following
+   - as wells as → as well as
+   - scoiety → society
+3. The URL/tab icon is now a minimalist nazar boncuğu favicon in blue, white, and a small yellow outer tone.
+4. Favicon links are cache-busted with ?v=5.
+
+After uploading, wait a few minutes and hard refresh. Browser favicons cache aggressively. If the old icon remains, open the site in an incognito window or clear favicon cache.
