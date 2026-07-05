@@ -6111,3 +6111,85 @@ body.image-lightbox-open .image-lightbox img {
     min-height: 145px;
   }
 }
+
+/* v98: slimmer blog search, safer video-card hover, organic teaching approach flow */
+.blog-page .blog-advanced-tools {
+  padding: 16px 18px !important;
+  margin-top: 28px !important;
+  margin-bottom: 30px !important;
+  border-radius: 14px !important;
+}
+
+.blog-page .advanced-blog-grid {
+  gap: 9px 12px !important;
+}
+
+.blog-page .advanced-blog-grid label {
+  gap: 4px !important;
+}
+
+.blog-page .advanced-blog-grid label span {
+  font-size: 11px !important;
+  letter-spacing: .10em !important;
+}
+
+.blog-page .advanced-blog-grid .search-input,
+.blog-page .blog-search-field .search-input {
+  min-height: 42px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+.blog-page .blog-filter-row {
+  display: none !important;
+}
+
+.blog-page .blog-search-summary {
+  margin: 10px 0 0 !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+}
+
+.blog-page .blog-shelf-row {
+  padding-top: 10px !important;
+}
+
+.blog-page .blog-card:hover,
+.blog-page .blog-card:focus-within,
+.blog-page .blog-card.blog-card-clickable:hover,
+.blog-page .blog-card.blog-card-clickable:focus-visible {
+  transform: translateY(0) !important;
+}
+
+.teaching-experience-page .teaching-approach-prose {
+  column-count: 2 !important;
+  column-gap: 44px !important;
+  column-rule: 1px solid var(--line) !important;
+  column-fill: balance !important;
+}
+
+.teaching-experience-page .teaching-approach-prose p {
+  break-inside: auto !important;
+  margin: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.teaching-experience-page .teaching-approach-prose p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-experience-page .teaching-approach-tag-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 14px !important;
+  break-inside: avoid !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-experience-page .teaching-approach-prose {
+    column-count: 1 !important;
+    column-rule: 0 !important;
+  }
+}
