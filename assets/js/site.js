@@ -1061,3 +1061,42 @@ window.addEventListener("resize", updateReadingProgress);
     initMiniCalendars();
   }
 })();
+
+/* v100: appointment booking popup */
+(function () {
+  function initAppointmentModal() {
+    var modal = document.querySelector('[data-appointment-modal]');
+    var openers = document.querySelectorAll('[data-appointment-open]');
+    if (!modal || !openers.length) return;
+
+    function openModal() {
+      modal.hidden = false;
+      document.body.classList.add('appointment-modal-open');
+      var closeButton = modal.querySelector('[data-appointment-close]');
+      if (closeButton && closeButton.focus) closeButton.focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove('appointment-modal-open');
+    }
+
+    openers.forEach(function (button) {
+      button.addEventListener('click', openModal);
+    });
+
+    modal.querySelectorAll('[data-appointment-close]').forEach(function (button) {
+      button.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAppointmentModal);
+  } else {
+    initAppointmentModal();
+  }
+})();

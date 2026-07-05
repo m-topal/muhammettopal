@@ -22,44 +22,55 @@ permalink: /contact/
       </span></div></div>
     </div>
   </div>
-  <section class="appointment-widget" aria-labelledby="appointment-widget-title">
-    <div class="appointment-widget-copy">
-      <p class="label">Calendar</p>
-      <h2 id="appointment-widget-title">Schedule an appointment</h2>
-      <p>For office hours, academic meetings, or research related conversations, you can book a time through my calendar.</p>
-      <a class="appointment-book-button" href="https://calendar.app.google/atv7zzZiRG6K6MQX7" target="_blank" rel="noopener">Book an appointment</a>
-    </div>
-
-    <div class="mini-calendar" data-mini-calendar>
-      <div class="mini-calendar-header">
-        <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>
-        <div class="mini-calendar-title" aria-live="polite">
-          <span data-calendar-month></span>
-          <span data-calendar-year></span>
-        </div>
-        <button class="mini-calendar-nav" type="button" data-calendar-next aria-label="Next month">›</button>
-      </div>
-      <div class="mini-calendar-weekdays" aria-hidden="true">
-        <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
-      </div>
-      <div class="mini-calendar-days" data-calendar-days></div>
-    </div>
-  </section>
-
-
   <div class="rule"></div>
-  <h2>Send a message</h2>
-  <p class="note">This form uses FormSubmit. The first submission may require email confirmation before messages are delivered.</p>
-  <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST">
-    <input type="hidden" name="_subject" value="Message from muhammettopal.com">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://muhammettopal.com/thanks/">
-    <input type="text" name="_honey" style="display:none">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <input type="text" name="subject" placeholder="Subject" required>
-    <textarea name="message" rows="6" placeholder="Message" required></textarea>
-    <button type="submit">Send message</button>
-  </form>
+
+  <div class="contact-action-row">
+    <section class="contact-message-panel" aria-labelledby="contact-message-title">
+      <h2 id="contact-message-title">Send a message</h2>
+      <p class="note">This form uses FormSubmit. The first submission may require email confirmation before messages are delivered.</p>
+      <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST">
+        <input type="hidden" name="_subject" value="Message from muhammettopal.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://muhammettopal.com/thanks/">
+        <input type="text" name="_honey" style="display:none">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Message" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+    <section class="appointment-widget appointment-widget-compact" aria-labelledby="appointment-widget-title">
+      <h2 id="appointment-widget-title">Schedule an appointment</h2>
+      <div class="mini-calendar" data-mini-calendar>
+        <div class="mini-calendar-header">
+          <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>
+          <div class="mini-calendar-title" aria-live="polite">
+            <span data-calendar-month></span>
+            <span data-calendar-year></span>
+          </div>
+          <button class="mini-calendar-nav" type="button" data-calendar-next aria-label="Next month">›</button>
+        </div>
+        <div class="mini-calendar-weekdays" aria-hidden="true">
+          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+        </div>
+        <div class="mini-calendar-days" data-calendar-days></div>
+      </div>
+      <button class="appointment-book-button" type="button" data-appointment-open>Book an appointment</button>
+    </section>
+  </div>
+
+  <div class="appointment-modal" data-appointment-modal hidden>
+    <div class="appointment-modal-backdrop" data-appointment-close></div>
+    <div class="appointment-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="appointment-modal-title">
+      <div class="appointment-modal-header">
+        <h2 id="appointment-modal-title">Book an appointment</h2>
+        <button class="appointment-modal-close" type="button" data-appointment-close aria-label="Close appointment window">×</button>
+      </div>
+      <iframe class="appointment-modal-frame" src="https://calendar.app.google/atv7zzZiRG6K6MQX7" title="Google Calendar appointment booking"></iframe>
+      <p class="appointment-modal-fallback">If the booking page does not appear, <a href="https://calendar.app.google/atv7zzZiRG6K6MQX7" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+    </div>
+  </div>
 </article>
