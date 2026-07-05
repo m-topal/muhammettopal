@@ -1072,20 +1072,36 @@ window.addEventListener("resize", updateReadingProgress);
 })();
 
 
-/* v102: show selected attachment name on contact form */
+/* v106: show and clear selected attachment name on contact form */
 (function () {
   function initAttachmentNames() {
     document.querySelectorAll('.message-toolbar-file').forEach(function (input) {
       var toolbar = input.closest('.message-toolbar');
       var output = toolbar ? toolbar.querySelector('[data-attachment-filename]') : null;
+      var clear = toolbar ? toolbar.querySelector('[data-attachment-clear]') : null;
       if (!output) return;
-      input.addEventListener('change', function () {
+
+      function updateAttachmentLabel() {
         if (input.files && input.files.length) {
           output.textContent = input.files.length === 1 ? input.files[0].name : input.files.length + ' files selected';
+          if (clear) clear.hidden = false;
         } else {
           output.textContent = 'No file selected';
+          if (clear) clear.hidden = true;
         }
-      });
+      }
+
+      input.addEventListener('change', updateAttachmentLabel);
+
+      if (clear) {
+        clear.addEventListener('click', function () {
+          input.value = '';
+          updateAttachmentLabel();
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+      }
+
+      updateAttachmentLabel();
     });
   }
 

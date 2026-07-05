@@ -47,6 +47,7 @@ permalink: /contact/
           </label>
           <input id="contact-attachment" class="message-toolbar-file" type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
           <span class="message-toolbar-filename" data-attachment-filename>No file selected</span>
+          <button class="message-toolbar-clear" type="button" data-attachment-clear aria-label="Remove selected attachment" hidden>×</button>
         </div>
         <button type="submit">Send message</button>
       </form>

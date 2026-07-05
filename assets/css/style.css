@@ -6752,3 +6752,34 @@ body.appointment-modal-open .appointment-modal {
     min-height: 0;
   }
 }
+
+/* v106: removable attachment chip on contact form */
+.contact-page .message-toolbar-clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: -4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .16s ease, color .16s ease, background .16s ease;
+}
+
+.contact-page .message-toolbar-clear:hover,
+.contact-page .message-toolbar-clear:focus-visible {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+  outline: none;
+}
+
+.contact-page .message-toolbar-clear[hidden] {
+  display: none !important;
+}
