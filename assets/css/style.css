@@ -4058,3 +4058,20 @@ button.course-card-action,
   border: 0 !important;
   background: #fff !important;
 }
+
+/* v65: Teaching landing cards hover like Research cards */
+.teaching-home-page .teaching-landing-card {
+  cursor: pointer !important;
+  transition: border-color .15s ease, box-shadow .15s ease !important;
+}
+
+.teaching-home-page .teaching-landing-card:hover,
+.teaching-home-page .teaching-landing-card:focus-visible {
+  border-color: var(--ink) !important;
+  text-decoration: none !important;
+}
+
+.teaching-home-page .teaching-landing-card:focus-visible {
+  outline: 2px solid var(--ink) !important;
+  outline-offset: 3px !important;
+}
