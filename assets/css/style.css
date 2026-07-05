@@ -5451,3 +5451,82 @@ body.image-lightbox-open .image-lightbox img {
 .teaching-detail-notes .teaching-approach-heading h2 {
   margin: 0;
 }
+
+/* v89: Diversions lead caption and certificate card detail popups */
+.diversions-lead-figure {
+  margin: 0 !important;
+}
+
+.diversions-lead-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.diversions-lead-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.diversions-lead-prose p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.diversions-lead-prose p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-certificate-page .certificate-website-inline {
+  display: inline-block;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.teaching-certificate-page .certificate-detail-card {
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.teaching-certificate-page .certificate-detail-card:hover,
+.teaching-certificate-page .certificate-detail-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(0,0,0,.42) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.10);
+  background: #fff;
+  outline: none;
+}
+
+.teaching-certificate-page .certificate-detail-card::after {
+  content: "Click for details";
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.teaching-certificate-page .certificate-detail-modal .course-modal-dialog {
+  max-width: 780px;
+}
+
+.teaching-certificate-page .certificate-detail-modal .course-modal-text {
+  max-width: 680px;
+}
+
+.teaching-certificate-page .certificate-detail-modal .course-modal-text p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .teaching-certificate-page .certificate-website-inline {
+    display: block;
+    margin: 14px 0 0;
+  }
+}

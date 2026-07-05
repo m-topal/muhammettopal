@@ -887,3 +887,14 @@ window.addEventListener("resize", updateReadingProgress);
     }
   });
 })();
+
+/* v89: keyboard support for certificate detail cards */
+(function () {
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    var trigger = event.target.closest('.certificate-detail-card.course-modal-trigger[data-course-modal]');
+    if (!trigger) return;
+    event.preventDefault();
+    trigger.click();
+  });
+})();
