@@ -5793,3 +5793,26 @@ body.image-lightbox-open .image-lightbox img {
   height: 23px;
   border: 0 !important;
 }
+
+/* v94: Extra Curricular main text paragraph indentation */
+.extracurricular-page .center-wrap-text > p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.extracurricular-page .center-wrap-text > p + p {
+  margin-top: 0 !important;
+}
+
+.extracurricular-page .center-wrap-text figure,
+.extracurricular-page .center-wrap-text figcaption,
+.extracurricular-page .center-wrap-text a {
+  text-indent: 0 !important;
+}
+
+@media (max-width: 820px) {
+  .extracurricular-page .center-wrap-text > p {
+    text-indent: 1.1em !important;
+  }
+}
