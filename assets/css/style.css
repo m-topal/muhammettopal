@@ -4548,3 +4548,85 @@ button.course-card-action,
     margin-top: 1.25rem !important;
   }
 }
+
+/* v74: true left-column-then-right-column reading order for the centered wrapped images.
+   The whole prose section is now one balanced two-column block. The reader starts at
+   the top of the left column, continues downward around the left side of the centered
+   image, then moves to the top of the right column and reads downward there. */
+.balanced-reading-wrap.organic-center-wrap {
+  --wrap-image-top: 165px;
+  max-width: 1080px !important;
+  margin-top: 28px !important;
+  margin-bottom: 46px !important;
+  column-gap: clamp(3.5rem, 9.5vw, 7rem) !important;
+}
+
+.about-page .balanced-reading-wrap.about-center-image-wrap {
+  --wrap-image-width: 330px;
+  --wrap-image-height: 370px;
+  --wrap-shape-height: 455px;
+  --wrap-image-top: 180px;
+}
+
+.extracurricular-page .balanced-reading-wrap.extra-center-image-wrap {
+  --wrap-image-width: 330px;
+  --wrap-image-height: 300px;
+  --wrap-shape-height: 375px;
+  --wrap-image-top: 120px;
+}
+
+.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+.about-page .balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+.extracurricular-page .balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+  top: var(--wrap-image-top) !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  margin-top: var(--wrap-image-top) !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text {
+  text-align: left !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text p {
+  margin-bottom: 1.18rem !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+  border-left: 1px solid var(--line) !important;
+  padding-left: clamp(1.75rem, 4vw, 3rem) !important;
+}
+
+@media (max-width: 980px) {
+  .balanced-reading-wrap.organic-center-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    margin-top: 24px !important;
+  }
+
+  .balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+  .about-page .balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+  .extracurricular-page .balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+    position: static !important;
+    top: auto !important;
+    order: 1 !important;
+    margin: 0 auto !important;
+  }
+
+  .balanced-reading-wrap.organic-center-wrap .center-wrap-text-left {
+    order: 0 !important;
+  }
+
+  .balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+    order: 2 !important;
+    border-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .balanced-reading-wrap.organic-center-wrap .wrap-shape {
+    display: none !important;
+    margin-top: 0 !important;
+  }
+}
