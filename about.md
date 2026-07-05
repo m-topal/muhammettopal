@@ -3,29 +3,36 @@ layout: default
 title: About Me
 permalink: /about/
 ---
-<article class="page wide">
+<article class="page wide about-page">
   <p class="label">About Me</p>
   <h1>About Me</h1>
-  <div class="prose two-column-prose">
+
+  <div class="prose two-column-prose about-intro-prose">
     <p>I am a PhD candidate in History and Middle Eastern and North African Studies at the University of Arizona. My work focuses on late Ottoman intellectual history, historical writing, journalism, biography, and public life. I am especially interested in how intellectuals, teachers, historians, journalists, and political actors made sense of the transformations of the modern era, not only through abstract ideas, but through institutions, texts, social networks, migration, and lived experience.</p>
 
     <p>My current dissertation examines the making of Ottoman public intellectual life through Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, novelist, teacher of history, bureaucrat, memoirist, and public figure. I do not approach Murad simply as the subject of a life story. I use biography as a historical method. His life allows me to ask how intellectual authority was formed, how writing made the Ottoman world legible to readers, and how proximity to power created both opportunity and risk.</p>
+  </div>
 
+  <div class="center-image-text-wrap about-center-image-wrap">
+    <div class="prose center-wrap-text center-wrap-text-left">
+      <p>The dissertation is organized around three connected problems: formation, worldmaking, and political existence. The first part reconstructs the conditions that made Murad possible, especially his formation between a highland Muslim society in Dagestan, Russian imperial schooling, and early Ottoman Istanbul. The second part, which is the center of my current work, studies how Murad turned from being formed by worlds to making worlds in writing through history, literature, and journalism. The third part follows the political consequences of this position, tracing how advisory intimacy and critical distance could belong to the same intellectual life.</p>
 
+      <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations. That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
+    </div>
 
-<figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
-  <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
-</figure>
+    <figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
+      <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
+    </figure>
 
-    <p>The dissertation is organized around three connected problems: formation, worldmaking, and political existence. The first part reconstructs the conditions that made Murad possible, especially his formation between a highland Muslim society in Dagestan, Russian imperial schooling, and early Ottoman Istanbul. The second part, which is the center of my current work, studies how Murad turned from being formed by worlds to making worlds in writing through history, literature, and journalism. The third part follows the political consequences of this position, tracing how advisory intimacy and critical distance could belong to the same intellectual life.</p>
+    <div class="prose center-wrap-text center-wrap-text-right">
+      <p>During my undergraduate years, I also studied political science at Sciences Po in Paris. That experience widened my intellectual formation beyond history narrowly defined. It introduced me to political science, international relations, and comparative approaches to political life. Paris later became central to my graduate training. At the École pratique des hautes études, I completed an MA in Islamology and Muslim worlds, with a thesis titled <em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste</em> [Individuation and Politicization: Portrait of an Ottoman Intellectual as Journalist]. In that thesis, I began working seriously on Mehmed Murad Bey, focusing on his formation, migration, entry into Ottoman society, and early journalistic career.</p>
 
-    <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations. That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
+      <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
+    </div>
+  </div>
 
-    <p>During my undergraduate years, I also studied political science at Sciences Po in Paris. That experience widened my intellectual formation beyond history narrowly defined. It introduced me to political science, international relations, and comparative approaches to political life. Paris later became central to my graduate training. At the École pratique des hautes études, I completed an MA in Islamology and Muslim worlds, with a thesis titled <em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste</em> [Individuation and Politicization: Portrait of an Ottoman Intellectual as Journalist]. In that thesis, I began working seriously on Mehmed Murad Bey, focusing on his formation, migration, entry into Ottoman society, and early journalistic career.</p>
-
-    <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
-
+  <div class="prose two-column-prose about-after-prose">
     <p>At the University of Arizona, my doctoral work expanded this project into a broader study of Ottoman intellectual life. I bring together intellectual history, biography, global microhistory, historiography, historical sociology, and transimperial history. I work with sources in Ottoman Turkish, Turkish, French, Arabic, Russian, and English. I am interested in how ideas moved through people, but also in how people moved through institutions, languages, genres, and political settings.</p>
 
     <p>My research is also shaped by a larger concern with the relationship between history and public life. Murad was a teacher of history and a writer of world history at a moment when historical knowledge had political force. He did not write history only to describe the past. He used history to diagnose crisis, judge political authority, educate readers, and imagine possible futures. This makes his work important for my broader interest in historical consciousness: how societies use the past to understand themselves, how intellectuals construct public narratives, and how history becomes a language of reform, criticism, and belonging.</p>
