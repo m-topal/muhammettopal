@@ -1013,7 +1013,8 @@ window.addEventListener("resize", updateReadingProgress);
 
         for (var i = 0; i < 42; i += 1) {
           var dayNumber = i - start + 1;
-          var cell = document.createElement('span');
+          var cell = document.createElement('button');
+          cell.type = 'button';
           cell.className = 'mini-calendar-day';
 
           if (dayNumber < 1) {
@@ -1038,7 +1039,15 @@ window.addEventListener("resize", updateReadingProgress);
           cells = cells.slice(0, 35);
         }
 
-        cells.forEach(function (cell) { daysNode.appendChild(cell); });
+        cells.forEach(function (cell) {
+          cell.addEventListener('click', function () {
+            daysNode.querySelectorAll('.mini-calendar-day.is-selected').forEach(function (selected) {
+              selected.classList.remove('is-selected');
+            });
+            cell.classList.add('is-selected');
+          });
+          daysNode.appendChild(cell);
+        });
       }
 
       prevButton.addEventListener('click', function () {
@@ -1062,41 +1071,3 @@ window.addEventListener("resize", updateReadingProgress);
   }
 })();
 
-/* v100: appointment booking popup */
-(function () {
-  function initAppointmentModal() {
-    var modal = document.querySelector('[data-appointment-modal]');
-    var openers = document.querySelectorAll('[data-appointment-open]');
-    if (!modal || !openers.length) return;
-
-    function openModal() {
-      modal.hidden = false;
-      document.body.classList.add('appointment-modal-open');
-      var closeButton = modal.querySelector('[data-appointment-close]');
-      if (closeButton && closeButton.focus) closeButton.focus();
-    }
-
-    function closeModal() {
-      modal.hidden = true;
-      document.body.classList.remove('appointment-modal-open');
-    }
-
-    openers.forEach(function (button) {
-      button.addEventListener('click', openModal);
-    });
-
-    modal.querySelectorAll('[data-appointment-close]').forEach(function (button) {
-      button.addEventListener('click', closeModal);
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !modal.hidden) closeModal();
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAppointmentModal);
-  } else {
-    initAppointmentModal();
-  }
-})();

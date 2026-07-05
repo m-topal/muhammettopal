@@ -6496,3 +6496,88 @@ body.appointment-modal-open {
     max-width: 340px;
   }
 }
+
+/* v101: compact contact appointment refinements */
+.contact-page .contact-section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-page .contact-title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--ink);
+  flex: 0 0 auto;
+}
+
+.contact-page .contact-title-icon svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-page .appointment-widget-compact .mini-calendar {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.contact-page .appointment-widget-compact .mini-calendar:hover,
+.contact-page .appointment-widget-compact .mini-calendar:focus-within {
+  border-color: #d7d7d7;
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .14);
+  transform: translateY(-2px);
+}
+
+.contact-page .appointment-widget-compact .appointment-book-button {
+  display: flex;
+  width: max-content;
+  margin: 18px auto 0;
+  background: #fff;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.contact-page .appointment-widget-compact .appointment-book-button:hover,
+.contact-page .appointment-widget-compact .appointment-book-button:focus {
+  background: var(--ink);
+  color: #fff;
+}
+
+.contact-page .mini-calendar-day {
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+}
+
+.contact-page .mini-calendar-day:hover,
+.contact-page .mini-calendar-day:focus {
+  background: #f4f4f4;
+  border-color: #dedede;
+  transform: translateY(-1px);
+}
+
+.contact-page .mini-calendar-day.is-today:hover,
+.contact-page .mini-calendar-day.is-today:focus {
+  background: #ff3b30;
+  border-color: #ff3b30;
+  color: #fff;
+}
+
+.contact-page .mini-calendar-day.is-selected:not(.is-today) {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.contact-page .appointment-modal,
+body.appointment-modal-open .appointment-modal {
+  display: none !important;
+}
