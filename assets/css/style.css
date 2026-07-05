@@ -5058,3 +5058,206 @@ button.course-card-action,
     margin: 0 !important;
   }
 }
+
+/* v82: keep the v81 two-column/center-image structure, but extend the
+   invisible wrap zones so live text cannot slide underneath the figure or its
+   caption. The previous wrap heights covered mostly the image body, not the
+   full card height. */
+.about-page .v81-through-wrap.about-center-image-wrap {
+  --wrap-shape-height: 520px;
+}
+
+.extracurricular-page .v81-through-wrap.extra-center-image-wrap {
+  --wrap-shape-height: 430px;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  shape-margin: .45rem !important;
+}
+
+/* Keep a little breathing room after paragraphs that resume below the figure. */
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text p {
+  overflow-wrap: normal;
+}
+
+/* v83: tighten the two-column through-wrap.
+   Fixes two issues from v82: paragraph gaps inside the wrap created false
+   vertical offsets, and the centered cards could begin a little before the
+   corresponding wrap zone. Here paragraph blocks in these wrapped sections run
+   like continuous lines, and the image top is nudged to the safe start of the
+   wrap area. */
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text p + p {
+  margin-top: 0 !important;
+}
+
+/* Align the visible card with the wrap zones after paragraph spacing is removed. */
+.about-page .v81-through-wrap.about-center-image-wrap {
+  --wrap-image-top: 286px;
+  --wrap-shape-height: 535px;
+}
+
+.extracurricular-page .v81-through-wrap.extra-center-image-wrap {
+  --wrap-image-top: 236px;
+  --wrap-shape-height: 445px;
+}
+
+/* Keep the float start close to the image start, not a paragraph-gap lower. */
+.about-page .v81-through-wrap .center-wrap-text-left .wrap-shape,
+.extracurricular-page .v81-through-wrap .center-wrap-text-left .wrap-shape {
+  margin-top: 0 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  shape-margin: .55rem !important;
+}
+
+
+/* v84: true two-column Word-like wrap.
+   The helper floats now start at the top of each real column, but their
+   shape-outside is zero-width above the visible image and only becomes wide
+   at the vertical band occupied by the card. This allows the first paragraphs
+   to use the space above the image, then wrap around the image, then widen again.
+   Paragraph gaps are removed only inside these wrapped sections. */
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+  max-width: 1080px !important;
+  margin: 28px auto 46px !important;
+  --wrap-buffer: 18px;
+}
+
+.about-page .v84-through-wrap.about-center-image-wrap {
+  --wrap-image-top: 286px;
+  --wrap-image-width: 320px;
+  --wrap-image-height: 370px;
+  --wrap-total-shape-height: 805px;
+}
+
+.extracurricular-page .v84-through-wrap.extra-center-image-wrap {
+  --wrap-image-top: 236px;
+  --wrap-image-width: 330px;
+  --wrap-image-height: 300px;
+  --wrap-total-shape-height: 685px;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+.about-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+.extracurricular-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+  position: absolute !important;
+  top: var(--wrap-image-top) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: var(--wrap-image-width) !important;
+  max-width: var(--wrap-image-width) !important;
+  margin: 0 !important;
+  z-index: 3 !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .center-image-middle img,
+.about-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .about-breakout-library img,
+.extracurricular-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop img {
+  height: var(--wrap-image-height) !important;
+  max-height: var(--wrap-image-height) !important;
+  object-fit: cover !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text {
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  word-spacing: normal !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  display: block !important;
+  width: calc((var(--wrap-image-width) / 2) + var(--wrap-buffer)) !important;
+  height: var(--wrap-total-shape-height) !important;
+  margin-top: 0 !important;
+  pointer-events: none !important;
+  shape-margin: .55rem !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape-left {
+  float: right !important;
+  margin-left: .95rem !important;
+  margin-right: 0 !important;
+}
+
+.v84-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape-right {
+  float: left !important;
+  margin-right: .95rem !important;
+  margin-left: 0 !important;
+}
+
+/* About: image starts around 35.5% down the helper float. */
+.about-page .v84-through-wrap .wrap-shape-left {
+  shape-outside: polygon(100% 0, 100% 35.5%, 0 35.5%, 0 100%, 100% 100%) !important;
+}
+.about-page .v84-through-wrap .wrap-shape-right {
+  shape-outside: polygon(0 0, 0 35.5%, 100% 35.5%, 100% 100%, 0 100%) !important;
+}
+
+/* Extra Curricular: image starts around 34.5% down the helper float. */
+.extracurricular-page .v84-through-wrap .wrap-shape-left {
+  shape-outside: polygon(100% 0, 100% 34.5%, 0 34.5%, 0 100%, 100% 100%) !important;
+}
+.extracurricular-page .v84-through-wrap .wrap-shape-right {
+  shape-outside: polygon(0 0, 0 34.5%, 100% 34.5%, 100% 100%, 0 100%) !important;
+}
+
+@media (max-width: 980px) {
+  .v84-through-wrap.balanced-reading-wrap.organic-center-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    margin: 24px 0 36px !important;
+    max-width: 100% !important;
+  }
+
+  .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+  .about-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+  .extracurricular-page .v84-through-wrap.balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    order: 1 !important;
+    width: min(100%, 420px) !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+  }
+
+  .v84-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-left {
+    order: 0 !important;
+  }
+
+  .v84-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+    order: 2 !important;
+  }
+
+  .v84-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+  }
+}
