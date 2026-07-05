@@ -1071,3 +1071,27 @@ window.addEventListener("resize", updateReadingProgress);
   }
 })();
 
+
+/* v102: show selected attachment name on contact form */
+(function () {
+  function initAttachmentNames() {
+    document.querySelectorAll('.message-toolbar-file').forEach(function (input) {
+      var toolbar = input.closest('.message-toolbar');
+      var output = toolbar ? toolbar.querySelector('[data-attachment-filename]') : null;
+      if (!output) return;
+      input.addEventListener('change', function () {
+        if (input.files && input.files.length) {
+          output.textContent = input.files.length === 1 ? input.files[0].name : input.files.length + ' files selected';
+        } else {
+          output.textContent = 'No file selected';
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAttachmentNames);
+  } else {
+    initAttachmentNames();
+  }
+})();

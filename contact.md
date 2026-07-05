@@ -28,7 +28,7 @@ permalink: /contact/
     <section class="contact-message-panel" aria-labelledby="contact-message-title">
       <h2 id="contact-message-title" class="contact-section-title"><span class="contact-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span>Send a message</span></h2>
       <p class="note">This form uses FormSubmit. The first submission may require email confirmation before messages are delivered.</p>
-      <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST">
+      <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="Message from muhammettopal.com">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -38,6 +38,16 @@ permalink: /contact/
         <input type="email" name="email" placeholder="Your email" required>
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" rows="6" placeholder="Message" required></textarea>
+        <div class="message-toolbar" aria-label="Message tools">
+          <label class="message-toolbar-attach" for="contact-attachment">
+            <span class="message-toolbar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.4 11.2 12 20.6a6 6 0 0 1-8.5-8.5l9.8-9.8a4.2 4.2 0 0 1 5.9 5.9l-9.9 9.9a2.4 2.4 0 0 1-3.4-3.4l8.8-8.8"/></svg>
+            </span>
+            <span>Attach file or image</span>
+          </label>
+          <input id="contact-attachment" class="message-toolbar-file" type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+          <span class="message-toolbar-filename" data-attachment-filename>No file selected</span>
+        </div>
         <button type="submit">Send message</button>
       </form>
     </section>
