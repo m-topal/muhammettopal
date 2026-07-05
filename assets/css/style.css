@@ -4491,3 +4491,60 @@ button.course-card-action,
     object-position: center center !important;
   }
 }
+
+
+/* v73: keep the centered-image placement but restore a clear top-to-bottom reading order.
+   These pages should read down the left column first, then from the top of the right column. */
+.about-page .about-intro-prose.clean-single-intro {
+  column-count: 1 !important;
+  column-rule: 0 !important;
+  max-width: 1040px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.reading-order-columns {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: 48px !important;
+  max-width: 1040px !important;
+  margin: 0 auto 40px !important;
+  column-count: initial !important;
+  column-rule: 0 !important;
+}
+
+.reading-order-column {
+  min-width: 0 !important;
+}
+
+.reading-order-column p:first-child {
+  margin-top: 0 !important;
+}
+
+.reading-order-column p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.reading-order-column-right {
+  border-left: 1px solid var(--line) !important;
+  padding-left: 48px !important;
+}
+
+/* Remove the old full-width introductory line on Extra Curricular. The first paragraph now belongs to the left column. */
+.extracurricular-page .center-image-text-wrap,
+.extracurricular-page .organic-center-wrap.extra-center-image-wrap {
+  margin-top: 30px !important;
+}
+
+@media (max-width: 980px) {
+  .reading-order-columns {
+    display: block !important;
+    margin: 0 0 34px !important;
+  }
+
+  .reading-order-column-right {
+    border-left: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 1.25rem !important;
+  }
+}
