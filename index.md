@@ -7,7 +7,10 @@ permalink: /
 
 <section class="home-wrap-section">
   <div class="prose home-wrap-prose paragraph-tight-indent">
-    <img class="home-wrap-photo" src="{{ '/assets/img/main-headshot.jpg' | relative_url }}" alt="Muhammet Topal portrait">
+    <figure class="home-wrap-figure">
+      <img class="home-wrap-photo" src="{{ '/assets/img/main-headshot.jpg' | relative_url }}" alt="Muhammet Topal portrait">
+      <figcaption>Credits to University of Arizona MarComm Team.</figcaption>
+    </figure>
 
     <p>I am a PhD candidate in History and Middle Eastern and North African Studies at the University of Arizona. My current project examines the making of late Ottoman opposition and the public intellectual through the trajectory and writings of Mehmed Murad Bey, a Dagestani émigré who became a historian, journalist, novelist, teacher of history, bureaucrat, and public figure in the late Ottoman world.</p>
 

@@ -7051,3 +7051,82 @@ body.appointment-modal-open .appointment-modal {
     max-width: 300px;
   }
 }
+
+
+/* v111: contact address lines, home photo caption, about wordmark, and centered appointment button */
+.contact-page .appointment-widget-compact .appointment-book-button {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-self: center;
+}
+
+.home-wrap-figure {
+  float: left;
+  width: min(38vw, 390px);
+  max-width: 44%;
+  margin: 4px 34px 20px 0;
+}
+
+.home-wrap-figure .home-wrap-photo {
+  float: none !important;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.home-wrap-figure figcaption {
+  margin-top: 7px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.about-wordmark-figure {
+  width: min(72%, 320px);
+  margin: 44px auto 0;
+  padding: 10px 0 0;
+  text-align: center;
+  cursor: zoom-in;
+}
+
+.about-wordmark-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: .92;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.about-wordmark-figure:hover .about-wordmark-image,
+.about-wordmark-figure:focus-within .about-wordmark-image {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.about-wordmark-figure figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .home-wrap-figure {
+    float: none;
+    display: block;
+    width: min(100%, 420px);
+    max-width: 100%;
+    margin: 0 auto 24px;
+  }
+
+  .about-wordmark-figure {
+    width: min(80%, 300px);
+    margin-top: 28px;
+  }
+}

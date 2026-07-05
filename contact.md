@@ -10,7 +10,7 @@ permalink: /contact/
   <div class="contact-grid contact-grid-two-column">
     <div class="contact-column contact-column-left">
       <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><div><span class="contact-label">Email</span><span class="contact-value"><a href="mailto:muhammettopal29@arizona.edu">muhammettopal29@arizona.edu</a></span></div></div>
-      <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg><div><span class="contact-label">Address</span><span class="contact-value">University of Arizona, Marshall Building, #456R<br>845 N. Park Ave, Tucson, AZ 85719</span></div></div>
+      <div class="contact-item"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg><div><span class="contact-label">Address</span><span class="contact-value">University of Arizona<br>Marshall Building #456R<br>845 N. Park Ave, Tucson, AZ 85719</span></div></div>
     </div>
 
     <div class="contact-column contact-column-right">
