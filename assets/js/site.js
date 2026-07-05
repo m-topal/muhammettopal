@@ -938,3 +938,47 @@ window.addEventListener("resize", updateReadingProgress);
     setupClickableBlogCards();
   }
 })();
+
+
+/* v97: make video list cards and dropdown labels behave as links */
+(function () {
+  function setupV97Links() {
+    document.querySelectorAll('.blog-list-click-card[data-post-href]').forEach(function (card) {
+      var href = card.getAttribute('data-post-href');
+      if (!href) return;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'link');
+
+      function ignore(target) {
+        return !!target.closest('a, button, input, textarea, select, label, iframe');
+      }
+
+      card.addEventListener('click', function (event) {
+        if (ignore(event.target)) return;
+        window.location.href = href;
+      });
+
+      card.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        if (ignore(event.target)) return;
+        event.preventDefault();
+        window.location.href = href;
+      });
+    });
+
+    document.querySelectorAll('.nav-dropdown > summary[data-nav-target]').forEach(function (summary) {
+      summary.addEventListener('click', function (event) {
+        var target = summary.getAttribute('data-nav-target');
+        if (!target) return;
+        event.preventDefault();
+        window.location.href = target;
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupV97Links);
+  } else {
+    setupV97Links();
+  }
+})();

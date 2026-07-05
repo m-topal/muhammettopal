@@ -78,7 +78,7 @@
         <a href="{{ '/about/' | relative_url }}">About Me</a>
 
         <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">
-          <summary>Portfolio</summary>
+          <summary data-nav-target="{{ '/portfolio/' | relative_url }}">Portfolio</summary>
           <div class="nav-dropdown-panel">
             <a href="{{ '/research/' | relative_url }}">Research</a>
             <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
@@ -88,7 +88,7 @@
         </details>
 
         <details class="nav-dropdown {% if page.url contains '/extracurricular/' or page.url contains '/diversions/' %}active{% endif %}">
-          <summary>Extra Curricular</summary>
+          <summary data-nav-target="{{ '/extra-curricular/' | relative_url }}">Extra Curricular</summary>
           <div class="nav-dropdown-panel">
             <a href="{{ '/extracurricular/' | relative_url }}">Academic Service</a>
             <a href="{{ '/diversions/' | relative_url }}">Diversions</a>

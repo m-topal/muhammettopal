@@ -199,13 +199,18 @@ permalink: /teaching/experience/
     </div>
   </section>
 
-<div class="teaching-detail-notes">
+<div class="teaching-detail-notes teaching-approach-block">
     <div class="teaching-shelf-heading teaching-approach-heading">
       <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-compass" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="17"></circle><path d="M30 13l-6 18-6 4 6-18z"></path><circle cx="24" cy="24" r="2"></circle></svg></span></span>
       <h2>Teaching approach</h2>
     </div>
-    <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
-    <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
-    <a class="teaching-approach-statement-tag" href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
+    <div class="teaching-approach-prose paragraph-tight-indent">
+      <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
+      <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
+    </div>
+    <div class="teaching-approach-tag-row">
+      <a class="teaching-approach-statement-tag" href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
+      <a class="teaching-approach-statement-tag" href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
+    </div>
   </div>
 </article>
