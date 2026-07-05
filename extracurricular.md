@@ -14,7 +14,7 @@ permalink: /extracurricular/
 
 <figure class="extra-breakout-workshop creative-breakout-figure js-lightbox-figure">
   <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/workshop-presentation-session.jpeg' | relative_url }}" alt="Workshop presentation session">
-  <figcaption>MENASA Colloquium presentation and discussion session, May 2026.</figcaption>
+  <figcaption>MENASA Colloquium presentation and discussion session.</figcaption>
 </figure>
 
     <p>At the University of Arizona, I served as co-head of the Graduate Student Association and helped reactivate graduate student programming in the department. In this role, I contributed to the organization of graduate events, supported communication among graduate students, and worked to create spaces where students could share research, exchange advice, and participate more fully in departmental life.</p>
