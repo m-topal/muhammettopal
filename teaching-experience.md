@@ -15,7 +15,7 @@ permalink: /teaching/experience/
 
     <section class="teaching-shelf instructor-section">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true">🎓</span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-cap" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M4 18l20-9 20 9-20 9z"></path><path d="M13 23v8c3 4 19 4 22 0v-8"></path><path d="M40 20v12"></path><path d="M40 32l-3 6h6z"></path></svg></span></span>
       <h2>Instructor of Record</h2>
     </div>
     <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
@@ -107,7 +107,7 @@ permalink: /teaching/experience/
 
 <section class="teaching-shelf">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true">🧭</span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-compass" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="17"></circle><path d="M29 13l-5 16-5 6 5-16z"></path></svg></span></span>
       <h2>Co-Teaching</h2>
     </div>
     <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
@@ -174,7 +174,7 @@ permalink: /teaching/experience/
 
   <section class="teaching-shelf">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true">📚</span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-book" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M8 10h13a7 7 0 0 1 7 7v23a7 7 0 0 0-7-7H8z"></path><path d="M40 10H27a7 7 0 0 0-7 7v23a7 7 0 0 1 7-7h13z"></path><path d="M24 17v23"></path></svg></span></span>
       <h2>Other Teaching Experience</h2>
     </div>
 

@@ -130,7 +130,7 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
 
   <section class="blog-shelf" data-blog-section="podcast">
     <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/podcasts/' | relative_url }}">
-      <span class="blog-shelf-icon" aria-hidden="true">🎙️</span>
+      <span class="blog-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-podcast" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 7a7 7 0 0 0-7 7v10a7 7 0 0 0 14 0V14a7 7 0 0 0-7-7z"></path><path d="M12 22v2a12 12 0 0 0 24 0v-2"></path><path d="M24 36v6"></path><path d="M16 42h16"></path></svg></span></span>
       <h2>Podcasts</h2>
       <span class="view-all">View all</span>
     </a>
@@ -176,7 +176,7 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
 
   <section class="blog-shelf" data-blog-section="video">
     <a class="blog-shelf-heading blog-shelf-heading-link" href="{{ '/blog/videos/' | relative_url }}">
-      <span class="blog-shelf-icon" aria-hidden="true">🎬</span>
+      <span class="blog-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-video" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M7 12h34v24H7z"></path><path d="M21 19l10 5-10 5z"></path></svg></span></span>
       <h2>Videos</h2>
       <span class="view-all">View all</span>
     </a>

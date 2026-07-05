@@ -5,7 +5,7 @@ permalink: /blog/podcasts/
 ---
 <article class="page narrow blog-category-page">
   <p class="label">My Blog</p>
-  <h1><span class="blog-category-icon" aria-hidden="true">🎙️</span>Podcasts</h1>
+  <h1><span class="blog-category-icon" aria-hidden="true"><span class="line-icon line-icon-podcast" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M24 7a7 7 0 0 0-7 7v10a7 7 0 0 0 14 0V14a7 7 0 0 0-7-7z"></path><path d="M12 22v2a12 12 0 0 0 24 0v-2"></path><path d="M24 36v6"></path><path d="M16 42h16"></path></svg></span></span>Podcasts</h1>
   <p class="lead">All podcast posts in one vertical list.</p>
   <p><a href="{{ '/blog/' | relative_url }}">← Back to My Blog</a></p>
 

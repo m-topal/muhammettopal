@@ -5,7 +5,7 @@ permalink: /blog/videos/
 ---
 <article class="page narrow blog-category-page">
   <p class="label">My Blog</p>
-  <h1><span class="blog-category-icon" aria-hidden="true">🎬</span>Videos</h1>
+  <h1><span class="blog-category-icon" aria-hidden="true"><span class="line-icon line-icon-video" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M7 12h34v24H7z"></path><path d="M21 19l10 5-10 5z"></path></svg></span></span>Videos</h1>
   <p class="lead">All video posts in one vertical list.</p>
   <p><a href="{{ '/blog/' | relative_url }}">← Back to My Blog</a></p>
 
