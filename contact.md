@@ -26,7 +26,7 @@ permalink: /contact/
 
   <div class="contact-action-row">
     <section class="contact-message-panel" aria-labelledby="contact-message-title">
-      <h2 id="contact-message-title" class="contact-section-title"><span class="contact-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span>Send a message</span></h2>
+      <h2 id="contact-message-title" class="contact-section-title"><span class="contact-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9.5v8.5h16V9.5"/><path d="M4 9.5 12 4l8 5.5"/><path d="m4 10 8 6 8-6"/></svg></span><span>Send a message</span></h2>
       <p class="note">This form uses FormSubmit. The first submission may require email confirmation before messages are delivered.</p>
       <form class="contact-form" action="https://formsubmit.co/muhammettopal29@arizona.edu" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="Message from muhammettopal.com">
@@ -54,7 +54,7 @@ permalink: /contact/
 
     <section class="appointment-widget appointment-widget-compact" aria-labelledby="appointment-widget-title">
       <h2 id="appointment-widget-title" class="contact-section-title"><span class="contact-title-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></span><span>Appointment</span></h2>
-      <p class="note appointment-note">For office hours, you can book a time through my calendar.</p>
+      <p class="note appointment-note">For office hours, academic meetings, or research related conversations, you can book a time through my calendar.</p>
       <div class="mini-calendar" data-mini-calendar>
         <div class="mini-calendar-header">
           <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>

@@ -6724,3 +6724,31 @@ body.appointment-modal-open .appointment-modal {
     min-height: 0;
   }
 }
+
+/* v105: align contact section descriptions and distinguish message icon */
+.contact-page .contact-section-title {
+  line-height: 1.1;
+  margin-bottom: 18px !important;
+}
+
+.contact-page .contact-message-panel > .note,
+.contact-page .appointment-widget-compact .appointment-note {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.contact-page .contact-message-panel > .note {
+  min-height: 44px;
+  line-height: 1.55;
+}
+
+.contact-page #contact-message-title .contact-title-icon svg {
+  width: 31px;
+  height: 31px;
+}
+
+@media (max-width: 900px) {
+  .contact-page .contact-message-panel > .note {
+    min-height: 0;
+  }
+}
