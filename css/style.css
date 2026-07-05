@@ -4661,16 +4661,41 @@ button.course-card-action,
   margin-right: .85rem !important;
 }
 
-/* v77: keep the images lower, but make the wrap begin only where the image begins.
-   The floated helpers no longer use margin-top, because float margins still reserve
-   central space above the image. Instead, the shape-outside polygon has a zero-width
-   upper segment, so text can use the space above the figure and only narrows at the
-   actual image zone. */
-.balanced-reading-wrap.organic-center-wrap .wrap-shape {
-  margin-top: 0 !important;
-  height: calc(var(--wrap-image-top) + var(--wrap-shape-height)) !important;
+/* v78: Word-like two-column through wrap.
+   Keep two real text columns, but make the invisible float shapes occupy no
+   horizontal space until the vertical point where the centered image begins.
+   This fills the area above the image with text, then narrows each column
+   only beside the image, and lets the text widen again below it. */
+.balanced-reading-wrap.organic-center-wrap {
+  column-gap: clamp(2rem, 4vw, 3rem) !important;
+  --wrap-buffer: 10px;
 }
 
+.about-page .balanced-reading-wrap.about-center-image-wrap {
+  --wrap-image-top: 175px;
+  --wrap-total-shape-height: calc(var(--wrap-image-top) + var(--wrap-shape-height));
+}
+
+.extracurricular-page .balanced-reading-wrap.extra-center-image-wrap {
+  --wrap-image-top: 125px;
+  --wrap-total-shape-height: calc(var(--wrap-image-top) + var(--wrap-shape-height));
+}
+
+.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+.about-page .balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+.extracurricular-page .balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+  top: var(--wrap-image-top) !important;
+}
+
+/* Do not push the float downward with margin-top. A floated element with
+   margin-top still reserves width above the image. Instead, the polygon below
+   gives the top part of the float zero wrapping width. */
+.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  margin-top: 0 !important;
+  height: var(--wrap-total-shape-height) !important;
+}
+
+/* Left column: zero-width wrap until image top, then reserve the image's left half. */
 .balanced-reading-wrap.organic-center-wrap .wrap-shape-left {
   margin-left: .85rem !important;
   shape-outside: polygon(
@@ -4682,6 +4707,7 @@ button.course-card-action,
   ) !important;
 }
 
+/* Right column: zero-width wrap until image top, then reserve the image's right half. */
 .balanced-reading-wrap.organic-center-wrap .wrap-shape-right {
   margin-right: .85rem !important;
   shape-outside: polygon(
@@ -4693,8 +4719,19 @@ button.course-card-action,
   ) !important;
 }
 
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text {
+  text-align: left !important;
+  word-spacing: normal !important;
+}
+
 @media (max-width: 980px) {
   .balanced-reading-wrap.organic-center-wrap .wrap-shape {
+    display: none !important;
     height: 0 !important;
   }
 }
