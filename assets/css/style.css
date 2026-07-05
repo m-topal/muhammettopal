@@ -5753,3 +5753,43 @@ body.image-lightbox-open .image-lightbox img {
   border-bottom: 0 !important;
   text-decoration: none !important;
 }
+
+/* v93: Contact address and profile icon refinements */
+.contact-page .contact-column-left .contact-item:first-child {
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.contact-page .contact-column-left .contact-item:last-child,
+.contact-page .contact-column-right .contact-item:last-child {
+  border-bottom: 0 !important;
+}
+
+.contact-page .profile-link-list {
+  gap: 9px !important;
+}
+
+.contact-page .profile-link-list a,
+.contact-page .profile-link-list a:visited {
+  border-bottom: 1px solid #bfbfbf !important;
+  text-decoration: none !important;
+  padding-bottom: 1px;
+}
+
+.contact-page .profile-link-list a:hover,
+.contact-page .profile-link-list a:focus {
+  border-bottom-color: var(--ink) !important;
+  text-decoration: none !important;
+}
+
+.contact-page .profile-mini-academia-svg {
+  width: 22px;
+  height: 22px;
+  border: 0 !important;
+  color: var(--ink);
+}
+
+.contact-page .profile-mini-arizona {
+  width: 23px;
+  height: 23px;
+  border: 0 !important;
+}
