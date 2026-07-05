@@ -63,12 +63,18 @@ permalink: /contact/
       <p class="note appointment-note">For office hours, you can book a time through my calendar.</p>
       <div class="mini-calendar" data-mini-calendar>
         <div class="mini-calendar-header">
-          <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>
+          <div class="mini-calendar-nav-group mini-calendar-nav-group-left">
+            <button class="mini-calendar-nav mini-calendar-today-nav" type="button" data-calendar-today aria-label="Return to current month">«</button>
+            <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>
+          </div>
           <div class="mini-calendar-title" aria-live="polite">
             <span data-calendar-month></span>
             <span data-calendar-year></span>
           </div>
-          <button class="mini-calendar-nav" type="button" data-calendar-next aria-label="Next month">›</button>
+          <div class="mini-calendar-nav-group mini-calendar-nav-group-right">
+            <button class="mini-calendar-nav" type="button" data-calendar-next aria-label="Next month">›</button>
+            <button class="mini-calendar-nav mini-calendar-today-nav" type="button" data-calendar-today aria-label="Return to current month">»</button>
+          </div>
         </div>
         <div class="mini-calendar-weekdays" aria-hidden="true">
           <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>

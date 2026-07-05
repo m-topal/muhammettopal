@@ -6981,3 +6981,73 @@ body.appointment-modal-open .appointment-modal {
     align-self: flex-end;
   }
 }
+
+/* v110: stable six-week appointment calendar with return-to-today controls */
+.contact-page .appointment-widget-compact .mini-calendar {
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 330px;
+  box-sizing: border-box;
+}
+
+.contact-page .mini-calendar-header {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.contact-page .mini-calendar-nav-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.contact-page .mini-calendar-nav-group-left {
+  justify-content: flex-start;
+}
+
+.contact-page .mini-calendar-nav-group-right {
+  justify-content: flex-end;
+}
+
+.contact-page .mini-calendar-title {
+  min-width: 0;
+  justify-content: center;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: .115em;
+  white-space: nowrap;
+}
+
+.contact-page .mini-calendar-title span + span {
+  margin-left: 6px;
+}
+
+.contact-page .mini-calendar-today-nav {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.contact-page .mini-calendar-weekdays,
+.contact-page .mini-calendar-days {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.contact-page .mini-calendar-day {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .contact-page .appointment-widget-compact .mini-calendar {
+    width: min(100%, 300px);
+    min-width: 0;
+    max-width: 300px;
+  }
+}

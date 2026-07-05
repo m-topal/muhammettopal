@@ -992,6 +992,7 @@ window.addEventListener("resize", updateReadingProgress);
       var daysNode = calendar.querySelector('[data-calendar-days]');
       var prevButton = calendar.querySelector('[data-calendar-prev]');
       var nextButton = calendar.querySelector('[data-calendar-next]');
+      var todayButtons = calendar.querySelectorAll('[data-calendar-today]');
       if (!monthNode || !yearNode || !daysNode || !prevButton || !nextButton) return;
 
       var today = new Date();
@@ -1034,11 +1035,7 @@ window.addEventListener("resize", updateReadingProgress);
           cells.push(cell);
         }
 
-        /* Keep compact five-row months when the sixth row only belongs to the next month. */
-        if (cells.slice(35).every(function (cell) { return cell.classList.contains('is-muted'); })) {
-          cells = cells.slice(0, 35);
-        }
-
+        /* Always render six weeks so the calendar height never changes between months. */
         cells.forEach(function (cell) {
           cell.addEventListener('click', function () {
             daysNode.querySelectorAll('.mini-calendar-day.is-selected').forEach(function (selected) {
@@ -1058,6 +1055,13 @@ window.addEventListener("resize", updateReadingProgress);
       nextButton.addEventListener('click', function () {
         shown = new Date(shown.getFullYear(), shown.getMonth() + 1, 1);
         render();
+      });
+
+      todayButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          shown = new Date(today.getFullYear(), today.getMonth(), 1);
+          render();
+        });
       });
 
       render();
