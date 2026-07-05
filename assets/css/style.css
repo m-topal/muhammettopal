@@ -6666,3 +6666,61 @@ body.appointment-modal-open .appointment-modal {
 .contact-page .appointment-widget-compact .appointment-book-button {
   margin-top: 14px;
 }
+
+/* v103: align appointment calendar with message form fields */
+.contact-page .appointment-widget-compact .appointment-note {
+  margin: 0 0 30px;
+  max-width: 360px;
+  line-height: 1.55;
+}
+
+.contact-page .appointment-widget-compact .mini-calendar {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-page .appointment-widget-compact .appointment-note {
+    margin-bottom: 18px;
+  }
+}
+
+/* v104: contact form field hover and appointment alignment refinement */
+.contact-page .appointment-widget-compact .appointment-note {
+  margin: 0 0 30px;
+  max-width: 360px;
+  min-height: 44px;
+  line-height: 1.55;
+}
+
+.contact-page .appointment-widget-compact .mini-calendar {
+  min-height: 318px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]),
+.contact-page .contact-form textarea {
+  transition: border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]):hover,
+.contact-page .contact-form textarea:hover,
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]):focus,
+.contact-page .contact-form textarea:focus {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+  outline: none;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .contact-page .appointment-widget-compact .appointment-note {
+    min-height: 0;
+    margin-bottom: 18px;
+  }
+
+  .contact-page .appointment-widget-compact .mini-calendar {
+    min-height: 0;
+  }
+}
