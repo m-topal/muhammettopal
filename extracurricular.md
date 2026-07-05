@@ -7,7 +7,7 @@ permalink: /extracurricular/
   <p class="label">Extra Curricular</p>
   <h1>Extra Curricular Activities</h1>
 
-  <div class="center-image-text-wrap organic-center-wrap extra-center-image-wrap balanced-reading-wrap v80-through-wrap">
+  <div class="center-image-text-wrap organic-center-wrap extra-center-image-wrap balanced-reading-wrap v81-through-wrap">
     <figure class="center-image-middle extra-breakout-workshop creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/workshop-presentation-session.jpeg' | relative_url }}" alt="Workshop presentation session">
       <figcaption>Workshop presentation and discussion session.</figcaption>

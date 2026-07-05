@@ -4927,3 +4927,134 @@ button.course-card-action,
     height: 0 !important;
   }
 }
+
+/* v81: corrected two-column through wrap.
+   v80 failed because the centered figure started before the in-column wrap
+   helpers began, so the image sat on top of live text. This version keeps the
+   two real columns, but aligns the figure with the real wrap zone and adds
+   per-column offsets where one first paragraph is shorter than the other. */
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: clamp(2.4rem, 4.8vw, 3.6rem) !important;
+  max-width: 1080px !important;
+  margin: 28px auto 46px !important;
+  --wrap-buffer: 16px;
+}
+
+.about-page .v81-through-wrap.about-center-image-wrap {
+  --wrap-image-top: 270px;
+  --wrap-image-width: 320px;
+  --wrap-shape-height: 405px;
+}
+
+.extracurricular-page .v81-through-wrap.extra-center-image-wrap {
+  --wrap-image-top: 218px;
+  --wrap-image-width: 330px;
+  --wrap-shape-height: 340px;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+.about-page .v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+.extracurricular-page .v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+  position: absolute !important;
+  top: var(--wrap-image-top) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: var(--wrap-image-width) !important;
+  max-width: var(--wrap-image-width) !important;
+  margin: 0 !important;
+  z-index: 3 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text {
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  word-spacing: normal !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text p:first-of-type {
+  margin-top: 0 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+  display: block !important;
+  width: calc((var(--wrap-image-width) / 2) + var(--wrap-buffer)) !important;
+  height: var(--wrap-shape-height) !important;
+  pointer-events: none !important;
+  shape-outside: inset(0 round 18px) !important;
+  shape-margin: .25rem !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape-left {
+  float: right !important;
+  margin-left: .95rem !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
+
+.v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape-right {
+  float: left !important;
+  margin-right: .95rem !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* The first left paragraph on Extra Curricular is shorter than the right one,
+   so this delays the left-side narrowing until it reaches the same visual band
+   as the centered image. */
+.extracurricular-page .v81-through-wrap .center-wrap-text-left .wrap-shape {
+  margin-top: 42px !important;
+}
+
+/* The About left first paragraph is slightly shorter than the right one. */
+.about-page .v81-through-wrap .center-wrap-text-left .wrap-shape {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 980px) {
+  .v81-through-wrap.balanced-reading-wrap.organic-center-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    margin: 24px 0 36px !important;
+    max-width: 100% !important;
+  }
+
+  .v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .center-image-middle,
+  .about-page .v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .about-breakout-library,
+  .extracurricular-page .v81-through-wrap.balanced-reading-wrap.organic-center-wrap > .extra-breakout-workshop {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    order: 1 !important;
+    width: min(100%, 420px) !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+  }
+
+  .v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-left {
+    order: 0 !important;
+  }
+
+  .v81-through-wrap.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+    order: 2 !important;
+  }
+
+  .v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+  }
+}

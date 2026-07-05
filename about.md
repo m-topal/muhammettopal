@@ -7,7 +7,7 @@ permalink: /about/
   <p class="label">About Me</p>
   <h1>About Me</h1>
 
-  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v80-through-wrap">
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v81-through-wrap">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
