@@ -16,20 +16,28 @@ permalink: /about/
   <div class="center-image-text-wrap about-center-image-wrap">
     <div class="prose center-wrap-text center-wrap-text-left">
       <p>The dissertation is organized around three connected problems: formation, worldmaking, and political existence. The first part reconstructs the conditions that made Murad possible, especially his formation between a highland Muslim society in Dagestan, Russian imperial schooling, and early Ottoman Istanbul. The second part, which is the center of my current work, studies how Murad turned from being formed by worlds to making worlds in writing through history, literature, and journalism. The third part follows the political consequences of this position, tracing how advisory intimacy and critical distance could belong to the same intellectual life.</p>
-
-      <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations. That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
     </div>
 
-    <figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
-      <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
-    </figure>
+    <div class="center-image-middle">
+      <figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
+        <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
+        <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
+      </figure>
+
+      <div class="prose center-image-under-text">
+        <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations.</p>
+      </div>
+    </div>
 
     <div class="prose center-wrap-text center-wrap-text-right">
       <p>During my undergraduate years, I also studied political science at Sciences Po in Paris. That experience widened my intellectual formation beyond history narrowly defined. It introduced me to political science, international relations, and comparative approaches to political life. Paris later became central to my graduate training. At the École pratique des hautes études, I completed an MA in Islamology and Muslim worlds, with a thesis titled <em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste</em> [Individuation and Politicization: Portrait of an Ottoman Intellectual as Journalist]. In that thesis, I began working seriously on Mehmed Murad Bey, focusing on his formation, migration, entry into Ottoman society, and early journalistic career.</p>
-
-      <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
     </div>
+  </div>
+
+  <div class="prose two-column-prose center-wrap-continuation">
+    <p>That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
+
+    <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
   </div>
 
   <div class="prose two-column-prose about-after-prose">

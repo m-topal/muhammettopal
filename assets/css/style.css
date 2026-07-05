@@ -4276,3 +4276,51 @@ button.course-card-action,
     object-position: center center !important;
   }
 }
+
+/* v71: centered image wrap with text continuing below the image */
+.center-image-text-wrap {
+  align-items: start !important;
+  margin-bottom: 18px !important;
+}
+
+.center-image-middle {
+  display: block !important;
+  min-width: 0 !important;
+}
+
+.center-image-middle .creative-breakout-figure,
+.about-page .center-image-middle .about-breakout-library,
+.extracurricular-page .center-image-middle .extra-breakout-workshop {
+  margin-bottom: 18px !important;
+}
+
+.center-image-under-text {
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.center-image-under-text p:first-child,
+.center-wrap-continuation p:first-child {
+  margin-top: 0 !important;
+}
+
+.center-image-under-text p:last-child,
+.center-wrap-continuation p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.center-wrap-continuation {
+  max-width: 1040px !important;
+  margin: 0 auto 40px !important;
+  column-count: 2 !important;
+  column-gap: 48px !important;
+  column-rule: 1px solid var(--line) !important;
+}
+
+@media (max-width: 980px) {
+  .center-wrap-continuation {
+    column-count: 1 !important;
+    column-rule: 0 !important;
+    margin: 0 0 34px !important;
+  }
+}
