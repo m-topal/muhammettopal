@@ -5428,3 +5428,26 @@ body.image-lightbox-open .image-lightbox img {
     transform: none !important;
   }
 }
+
+/* v88: refined Option 7 style teaching header icons, titles unchanged */
+.teaching-experience-page .teaching-shelf-icon .line-icon,
+.teaching-experience-page .teaching-approach-heading .line-icon {
+  width: 1.42em;
+  height: 1.42em;
+}
+
+.teaching-experience-page .teaching-shelf-heading .line-icon path,
+.teaching-experience-page .teaching-shelf-heading .line-icon circle,
+.teaching-experience-page .teaching-shelf-heading .line-icon line,
+.teaching-experience-page .teaching-shelf-heading .line-icon polyline,
+.teaching-experience-page .teaching-shelf-heading .line-icon polygon {
+  stroke-width: 2.15;
+}
+
+.teaching-detail-notes .teaching-approach-heading {
+  margin-bottom: 16px;
+}
+
+.teaching-detail-notes .teaching-approach-heading h2 {
+  margin: 0;
+}

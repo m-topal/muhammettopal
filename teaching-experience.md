@@ -15,7 +15,7 @@ permalink: /teaching/experience/
 
     <section class="teaching-shelf instructor-section">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-cap" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M4 18l20-9 20 9-20 9z"></path><path d="M13 23v8c3 4 19 4 22 0v-8"></path><path d="M40 20v12"></path><path d="M40 32l-3 6h6z"></path></svg></span></span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-instructor" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="15" cy="18" r="5"></circle><path d="M6 39v-5c0-6 4-10 9-10s9 4 9 10v5z"></path><path d="M25 12h17v17H30"></path><path d="M30 29l-5 5"></path></svg></span></span>
       <h2>Instructor of Record</h2>
     </div>
     <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
@@ -107,7 +107,7 @@ permalink: /teaching/experience/
 
 <section class="teaching-shelf">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-compass" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="17"></circle><path d="M29 13l-5 16-5 6 5-16z"></path></svg></span></span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-co-teaching" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="18" cy="17" r="6"></circle><path d="M7 39v-5c0-6 5-10 11-10s11 4 11 10v5z"></path><circle cx="33" cy="21" r="4"></circle><path d="M30 39v-4c0-4 3-7 7-7 2 0 4 .7 5 2"></path></svg></span></span>
       <h2>Co-Teaching</h2>
     </div>
     <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
@@ -174,7 +174,7 @@ permalink: /teaching/experience/
 
   <section class="teaching-shelf">
     <div class="teaching-shelf-heading">
-      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-book" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M8 10h13a7 7 0 0 1 7 7v23a7 7 0 0 0-7-7H8z"></path><path d="M40 10H27a7 7 0 0 0-7 7v23a7 7 0 0 1 7-7h13z"></path><path d="M24 17v23"></path></svg></span></span>
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-group" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="15" r="5"></circle><circle cx="13" cy="20" r="4"></circle><circle cx="35" cy="20" r="4"></circle><path d="M14 39v-4c0-6 4-10 10-10s10 4 10 10v4z"></path><path d="M4 39v-3c0-5 4-8 9-8"></path><path d="M44 39v-3c0-5-4-8-9-8"></path></svg></span></span>
       <h2>Other Teaching Experience</h2>
     </div>
 
@@ -200,7 +200,10 @@ permalink: /teaching/experience/
   </section>
 
 <div class="teaching-detail-notes">
-    <h2>Teaching approach</h2>
+    <div class="teaching-shelf-heading teaching-approach-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-compass" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="24" cy="24" r="17"></circle><path d="M30 13l-6 18-6 4 6-18z"></path><circle cx="24" cy="24" r="2"></circle></svg></span></span>
+      <h2>Teaching approach</h2>
+    </div>
     <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
     <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
     <a class="teaching-approach-statement-tag" href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
