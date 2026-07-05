@@ -5816,3 +5816,103 @@ body.image-lightbox-open .image-lightbox img {
     text-indent: 1.1em !important;
   }
 }
+
+/* v95: blog card click behavior and title underline cleanup */
+.blog-page .blog-card {
+  cursor: pointer;
+}
+
+.blog-page .blog-card h3 a,
+.blog-page .blog-card h3 a:visited {
+  border-bottom: 1px solid transparent !important;
+  text-decoration: none !important;
+}
+
+.blog-page .blog-card h3 a:hover,
+.blog-page .blog-card h3 a:focus {
+  border-bottom-color: currentColor !important;
+  text-decoration: none !important;
+}
+
+.blog-page .blog-card .blog-video-preview,
+.blog-page .blog-card .video-embed,
+.blog-page .blog-card iframe {
+  pointer-events: none;
+}
+
+/* v96: video blog cards, single video post wrap, and Teaching Experience alignment */
+.blog-page .video-card > p:not(.meta) {
+  display: none !important;
+}
+
+.blog-page .blog-card h3 a,
+.blog-page .blog-card h3 a:visited,
+.blog-category-page .blog-full-list-item h2 a,
+.blog-category-page .blog-full-list-item h2 a:visited {
+  border-bottom: 1px solid transparent !important;
+  text-decoration: none !important;
+}
+
+.blog-page .blog-card h3 a:hover,
+.blog-page .blog-card h3 a:focus,
+.blog-category-page .blog-full-list-item h2 a:hover,
+.blog-category-page .blog-full-list-item h2 a:focus {
+  border-bottom-color: currentColor !important;
+  text-decoration: none !important;
+}
+
+.post-page .video-post-content {
+  margin-top: 26px;
+}
+
+.post-page .video-post-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.post-page .video-post-preview {
+  float: left;
+  width: min(390px, 48%);
+  margin: 0 26px 8px 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.post-page .video-post-preview iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+.post-page .video-post-wrap p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.post-page .video-post-wrap p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-experience-page > .label,
+.teaching-experience-page > h1,
+.teaching-experience-page > .subnav {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .post-page .video-post-preview {
+    float: none;
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+
+  .post-page .video-post-wrap p {
+    text-indent: 1.1em !important;
+  }
+}

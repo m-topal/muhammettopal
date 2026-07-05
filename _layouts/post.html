@@ -4,8 +4,8 @@ layout: default
 <article class="page narrow post-page">
   <p class="meta">{{ page.format | default: page.category | capitalize }} · {{ page.date | date: "%B %-d, %Y" }}</p>
   <h1>{{ page.title }}</h1>
-  {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
-<div class="prose post-content">
+  {% unless page.format == 'video' %}{% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}{% endunless %}
+<div class="prose post-content{% if page.format == 'video' %} video-post-content{% endif %}">
     {{ content }}
 
   <div class="post-page-actions social-actions" data-post-title="{{ page.title | escape }}" data-post-url="{{ page.url | absolute_url }}">

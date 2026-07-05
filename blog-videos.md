@@ -16,9 +16,7 @@ permalink: /blog/videos/
         <article class="blog-full-list-item">
           <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          {% if post.description %}
-            <p>{{ post.description }}</p>
-          {% endif %}
+          {% comment %}v96: video list cards show only title, video preview, and actions.{% endcomment %}
           {% if post.youtube_id %}
             <div class="video-embed blog-video-preview">
               <iframe

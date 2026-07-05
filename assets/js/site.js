@@ -898,3 +898,43 @@ window.addEventListener("resize", updateReadingProgress);
     trigger.click();
   });
 })();
+
+/* v95: make blog cards open from the whole card, while keeping action buttons separate */
+(function () {
+  function setupClickableBlogCards() {
+    var cards = document.querySelectorAll('.blog-page .blog-card');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      var titleLink = card.querySelector('h3 a[href]');
+      if (!titleLink) return;
+
+      card.classList.add('blog-card-clickable');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'link');
+      card.setAttribute('aria-label', (titleLink.textContent || 'Open post').trim());
+
+      function shouldIgnore(target) {
+        return !!target.closest('a, button, input, textarea, select, label, .blog-card-actions, .social-actions, .share-menu-wrap, .share-popup-overlay');
+      }
+
+      card.addEventListener('click', function (event) {
+        if (shouldIgnore(event.target)) return;
+        window.location.href = titleLink.href;
+      });
+
+      card.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        if (shouldIgnore(event.target)) return;
+        event.preventDefault();
+        window.location.href = titleLink.href;
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupClickableBlogCards);
+  } else {
+    setupClickableBlogCards();
+  }
+})();

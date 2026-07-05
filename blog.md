@@ -194,10 +194,7 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             data-search="{{ post.title | strip_html | escape }} {{ post.description | strip_html | escape }} {{ post.category | escape }} {{ post.format | escape }} {{ post.tags | join: ' ' | escape }} {{ post.content | strip_html | normalize_whitespace | escape }}">
             <p class="meta">{{ post.date | date: '%B %-d, %Y' }} · {{ post.format | default: post.category | capitalize }}</p>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {% if post.description %}
-              <p>{{ post.description }}</p>
-            {% endif %}
-
+            {% comment %}v96: video cards show only title, video preview, and actions on the preview card.{% endcomment %}
             {% if post.youtube_id %}
               <div class="video-embed blog-video-preview">
                 <iframe
