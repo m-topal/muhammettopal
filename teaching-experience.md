@@ -18,6 +18,7 @@ permalink: /teaching/experience/
       <span class="teaching-shelf-icon" aria-hidden="true">🎓</span>
       <h2>Instructor of Record</h2>
     </div>
+    <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
 
     <div class="teaching-shelf-row instructor-course-row">
       <article class="teaching-course-card course-card-with-image modal-course-card">
@@ -109,6 +110,7 @@ permalink: /teaching/experience/
       <span class="teaching-shelf-icon" aria-hidden="true">🧭</span>
       <h2>Co-Teaching</h2>
     </div>
+    <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
 
     <div class="teaching-shelf-row">
       <a class="teaching-course-card" href="#middle-eastern-humanities">

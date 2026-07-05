@@ -26,25 +26,25 @@ permalink: /research/
   </div>
 
   <section class="research-archive-gallery" aria-label="Research archives and libraries">
-    <a class="research-archive-card" href="https://www.prlib.ru/en/node/416440" target="_blank" rel="noopener">
-      <img src="{{ '/assets/img/research/archives/presidential-library-stavropol-gymnasium.png' | relative_url }}" alt="Digital record for a historical note on the Stavropol Gymnasium in the Presidential Library">
-      <span>Presidential Library, Russian Federation. Digital record for M. Krasnov’s <em>Historical Note on the Stavropol Gymnasium</em>.</span>
-    </a>
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/presidential-library-stavropol-gymnasium.png' | relative_url }}" alt="Digital record for a historical note on the Stavropol Gymnasium in the Presidential Library">
+      <figcaption>Presidential Library, Russian Federation. Digital record for M. Krasnov’s <em>Historical Note on the Stavropol Gymnasium</em>.</figcaption>
+    </figure>
 
-    <a class="research-archive-card" href="https://www.archives-nationales.culture.gouv.fr/" target="_blank" rel="noopener">
-      <img src="{{ '/assets/img/research/archives/archives-nationales-grands-depots.jpg' | relative_url }}" alt="Grands Dépôts at the Archives nationales in France">
-      <span>Archives nationales, France. The Grands Dépôts at the Paris site.</span>
-    </a>
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/archives-nationales-grands-depots.jpg' | relative_url }}" alt="Grands Dépôts at the Archives nationales in France">
+      <figcaption>Archives nationales, France. The Grands Dépôts at the Paris site.</figcaption>
+    </figure>
 
-    <a class="research-archive-card" href="https://www.devletarsivleri.gov.tr/" target="_blank" rel="noopener">
-      <img src="{{ '/assets/img/research/archives/ottoman-archives-istanbul.jpg' | relative_url }}" alt="Entrance to the Ottoman Archives Complex in Istanbul">
-      <span>Presidency of the Republic of Türkiye, Directorate of State Archives. Ottoman Archives Complex, Istanbul.</span>
-    </a>
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ottoman-archives-istanbul.jpg' | relative_url }}" alt="Entrance to the Ottoman Archives Complex in Istanbul">
+      <figcaption>Presidency of the Republic of Türkiye, Directorate of State Archives. Ottoman Archives Complex, Istanbul.</figcaption>
+    </figure>
 
-    <a class="research-archive-card" href="https://ataturkkitapligi.ibb.gov.tr/en/Kitaplik/Kutuphanelerimiz/IMM-Ataturk-Library/5" target="_blank" rel="noopener">
-      <img src="{{ '/assets/img/research/archives/ataturk-library-screen.jpg' | relative_url }}" alt="Digital catalogue screen at IMM Atatürk Library in Istanbul">
-      <span>İstanbul Metropolitan Municipality, Atatürk Library. Digital collections and catalogue screen, Istanbul.</span>
-    </a>
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ataturk-library-screen.jpg' | relative_url }}" alt="Digital catalogue screen at IMM Atatürk Library in Istanbul">
+      <figcaption>İstanbul Metropolitan Municipality, Atatürk Library. Digital collections and catalogue screen, Istanbul.</figcaption>
+    </figure>
   </section>
 
 </article>

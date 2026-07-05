@@ -4074,10 +4074,11 @@ button.course-card-action,
   color: var(--ink);
   text-decoration: none;
   overflow: hidden;
+  margin: 0;
 }
 
 .research-archive-card:hover,
-.research-archive-card:focus-visible {
+.research-archive-card:focus-within {
   border-color: var(--ink);
   text-decoration: none;
   outline: none;
@@ -4089,9 +4090,10 @@ button.course-card-action,
   height: 225px;
   object-fit: cover;
   background: var(--soft);
+  cursor: zoom-in;
 }
 
-.research-archive-card span {
+.research-archive-card figcaption {
   display: block;
   padding: 12px 14px 14px;
   color: var(--muted);
@@ -4102,6 +4104,15 @@ button.course-card-action,
 
 .research-archive-card em {
   font-style: italic;
+}
+
+.teaching-experience-page .teaching-shelf-intro {
+  max-width: 820px;
+  margin: -8px 0 20px 48px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .teaching-home-page .teaching-landing-card {
@@ -4140,5 +4151,9 @@ button.course-card-action,
   .research-archive-card img {
     height: auto;
     max-height: 320px;
+  }
+
+  .teaching-experience-page .teaching-shelf-intro {
+    margin-left: 0;
   }
 }
