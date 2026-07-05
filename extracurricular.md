@@ -33,16 +33,16 @@ permalink: /extracurricular/
   <section class="section">
     <h2>Selected flyers and events</h2>
     <div class="flyer-grid">
-      <figure>
-        <img src="{{ '/assets/img/extracurricular/menasa-workshop-series-spring-2025.jpg' | relative_url }}" alt="MENASA Workshop Series Spring 2025 flyer">
+      <figure class="flyer-card js-lightbox-figure">
+        <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/menasa-workshop-series-spring-2025.jpg' | relative_url }}" alt="MENASA Workshop Series Spring 2025 flyer">
         <figcaption>MENASA Workshop Series, Spring 2025.</figcaption>
       </figure>
-      <figure>
-        <img src="{{ '/assets/img/extracurricular/menas-colloquium-march-2026.jpg' | relative_url }}" alt="MENAS Graduate Student Colloquium March 2026 flyer">
+      <figure class="flyer-card js-lightbox-figure">
+        <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/menas-colloquium-march-2026.jpg' | relative_url }}" alt="MENAS Graduate Student Colloquium March 2026 flyer">
         <figcaption>MENAS Graduate Student Colloquium, March 2026.</figcaption>
       </figure>
-      <figure>
-        <img src="{{ '/assets/img/extracurricular/menas-colloquium-may-2026.jpg' | relative_url }}" alt="MENAS Graduate Student Colloquium May 2026 flyer">
+      <figure class="flyer-card js-lightbox-figure">
+        <img class="js-lightbox-image" src="{{ '/assets/img/extracurricular/menas-colloquium-may-2026.jpg' | relative_url }}" alt="MENAS Graduate Student Colloquium May 2026 flyer">
         <figcaption>MENAS Graduate Student Colloquium, May 2026.</figcaption>
       </figure>
     </div>
