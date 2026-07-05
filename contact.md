@@ -22,6 +22,30 @@ permalink: /contact/
       </span></div></div>
     </div>
   </div>
+  <section class="appointment-widget" aria-labelledby="appointment-widget-title">
+    <div class="appointment-widget-copy">
+      <p class="label">Calendar</p>
+      <h2 id="appointment-widget-title">Schedule an appointment</h2>
+      <p>For office hours, academic meetings, or research related conversations, you can book a time through my calendar.</p>
+      <a class="appointment-book-button" href="https://calendar.app.google/atv7zzZiRG6K6MQX7" target="_blank" rel="noopener">Book an appointment</a>
+    </div>
+
+    <div class="mini-calendar" data-mini-calendar>
+      <div class="mini-calendar-header">
+        <button class="mini-calendar-nav" type="button" data-calendar-prev aria-label="Previous month">‹</button>
+        <div class="mini-calendar-title" aria-live="polite">
+          <span data-calendar-month></span>
+          <span data-calendar-year></span>
+        </div>
+        <button class="mini-calendar-nav" type="button" data-calendar-next aria-label="Next month">›</button>
+      </div>
+      <div class="mini-calendar-weekdays" aria-hidden="true">
+        <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+      </div>
+      <div class="mini-calendar-days" data-calendar-days></div>
+    </div>
+  </section>
+
 
   <div class="rule"></div>
   <h2>Send a message</h2>

@@ -982,3 +982,82 @@ window.addEventListener("resize", updateReadingProgress);
     setupV97Links();
   }
 })();
+
+/* v99: small interactive appointment calendar */
+(function () {
+  function initMiniCalendars() {
+    document.querySelectorAll('[data-mini-calendar]').forEach(function (calendar) {
+      var monthNode = calendar.querySelector('[data-calendar-month]');
+      var yearNode = calendar.querySelector('[data-calendar-year]');
+      var daysNode = calendar.querySelector('[data-calendar-days]');
+      var prevButton = calendar.querySelector('[data-calendar-prev]');
+      var nextButton = calendar.querySelector('[data-calendar-next]');
+      if (!monthNode || !yearNode || !daysNode || !prevButton || !nextButton) return;
+
+      var today = new Date();
+      var shown = new Date(today.getFullYear(), today.getMonth(), 1);
+      var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      function render() {
+        var year = shown.getFullYear();
+        var month = shown.getMonth();
+        var first = new Date(year, month, 1);
+        var start = first.getDay();
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+        var prevDays = new Date(year, month, 0).getDate();
+        var cells = [];
+
+        monthNode.textContent = monthNames[month];
+        yearNode.textContent = year;
+        daysNode.innerHTML = '';
+
+        for (var i = 0; i < 42; i += 1) {
+          var dayNumber = i - start + 1;
+          var cell = document.createElement('span');
+          cell.className = 'mini-calendar-day';
+
+          if (dayNumber < 1) {
+            cell.textContent = prevDays + dayNumber;
+            cell.classList.add('is-muted');
+          } else if (dayNumber > daysInMonth) {
+            cell.textContent = dayNumber - daysInMonth;
+            cell.classList.add('is-muted');
+          } else {
+            cell.textContent = dayNumber;
+            if (year === today.getFullYear() && month === today.getMonth() && dayNumber === today.getDate()) {
+              cell.classList.add('is-today');
+              cell.setAttribute('aria-current', 'date');
+            }
+          }
+
+          cells.push(cell);
+        }
+
+        /* Keep compact five-row months when the sixth row only belongs to the next month. */
+        if (cells.slice(35).every(function (cell) { return cell.classList.contains('is-muted'); })) {
+          cells = cells.slice(0, 35);
+        }
+
+        cells.forEach(function (cell) { daysNode.appendChild(cell); });
+      }
+
+      prevButton.addEventListener('click', function () {
+        shown = new Date(shown.getFullYear(), shown.getMonth() - 1, 1);
+        render();
+      });
+
+      nextButton.addEventListener('click', function () {
+        shown = new Date(shown.getFullYear(), shown.getMonth() + 1, 1);
+        render();
+      });
+
+      render();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMiniCalendars);
+  } else {
+    initMiniCalendars();
+  }
+})();

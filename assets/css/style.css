@@ -6193,3 +6193,163 @@ body.image-lightbox-open .image-lightbox img {
     column-rule: 0 !important;
   }
 }
+
+/* v99: Contact appointment calendar card */
+.contact-page .appointment-widget {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 34px;
+  align-items: center;
+  margin: 34px 0 10px;
+  padding: 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, .035);
+}
+
+.contact-page .appointment-widget-copy .label {
+  margin-bottom: 8px;
+}
+
+.contact-page .appointment-widget-copy h2 {
+  margin: 0 0 8px;
+}
+
+.contact-page .appointment-widget-copy p:not(.label) {
+  max-width: 520px;
+  margin: 0 0 16px;
+  font-size: 18px;
+  line-height: 1.55;
+  text-indent: 0;
+}
+
+.contact-page .appointment-book-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 17px;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  transition: background .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.contact-page .appointment-book-button:hover,
+.contact-page .appointment-book-button:focus {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+
+.contact-page .mini-calendar {
+  justify-self: end;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 26px;
+  padding: 22px 22px 24px;
+  background: #fff;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, .10);
+}
+
+.contact-page .mini-calendar-header {
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.contact-page .mini-calendar-title {
+  text-align: center;
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #ff3b30;
+}
+
+.contact-page .mini-calendar-title span + span {
+  margin-left: 5px;
+}
+
+.contact-page .mini-calendar-nav {
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.contact-page .mini-calendar-nav:hover,
+.contact-page .mini-calendar-nav:focus {
+  border-color: var(--line);
+  background: #fafafa;
+  transform: translateY(-1px);
+}
+
+.contact-page .mini-calendar-weekdays,
+.contact-page .mini-calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 9px 8px;
+  text-align: center;
+  font-family: var(--sans);
+}
+
+.contact-page .mini-calendar-weekdays {
+  margin-bottom: 12px;
+  color: #777;
+  font-weight: 700;
+}
+
+.contact-page .mini-calendar-day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.contact-page .mini-calendar-day.is-muted {
+  color: #999;
+}
+
+.contact-page .mini-calendar-day.is-today {
+  background: #ff3b30;
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .contact-page .appointment-widget {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+  }
+
+  .contact-page .mini-calendar {
+    justify-self: stretch;
+    max-width: none;
+  }
+}
+
+/* v99: justify teaching approach text */
+.teaching-experience-page .teaching-approach-prose p {
+  text-align: justify !important;
+  text-align-last: left !important;
+  hyphens: auto;
+}
