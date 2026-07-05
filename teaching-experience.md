@@ -179,19 +179,19 @@ permalink: /teaching/experience/
     </div>
 
     <div class="teaching-shelf-row">
-      <a class="teaching-course-card" href="#eylul-world-history">
+      <a class="teaching-course-card" href="https://akademieylul.com/" target="_blank" rel="noopener">
         <p class="meta">Eylül Academy · Istanbul</p>
         <h3>World History</h3>
         <p>Instruction for senior high school students and recent graduates preparing for competitive university entrance exams.</p>
       </a>
 
-      <a class="teaching-course-card" href="#eylul-human-geography">
+      <a class="teaching-course-card" href="https://akademieylul.com/" target="_blank" rel="noopener">
         <p class="meta">Eylül Academy · Istanbul</p>
         <h3>Human Geography</h3>
         <p>Conceptual and exam oriented instruction connecting space, society, population, environment, and historical change.</p>
       </a>
 
-      <a class="teaching-course-card" href="#eylul-continental-philosophy">
+      <a class="teaching-course-card" href="https://akademieylul.com/" target="_blank" rel="noopener">
         <p class="meta">Eylül Academy · Istanbul</p>
         <h3>Continental Philosophy</h3>
         <p>Teaching difficult concepts clearly while moving between broad intellectual narratives and concrete examples.</p>

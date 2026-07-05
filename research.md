@@ -27,8 +27,28 @@ permalink: /research/
 
   <section class="research-archive-gallery" aria-label="Research archives and libraries">
     <figure class="research-archive-card js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/presidential-library-stavropol-gymnasium.png' | relative_url }}" alt="Digital record for a historical note on the Stavropol Gymnasium in the Presidential Library">
-      <figcaption>Presidential Library, Russian Federation. Digital record for M. Krasnov’s <em>Historical Note on the Stavropol Gymnasium</em>.</figcaption>
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ottoman-archives-istanbul.jpg' | relative_url }}" alt="Entrance to the Ottoman Archives Complex in Istanbul">
+      <figcaption>Presidency of the Republic of Türkiye, Directorate of State Archives. Ottoman Archives Complex, Istanbul.</figcaption>
+    </figure>
+
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ataturk-library-screen.jpg' | relative_url }}" alt="Digital catalogue screen at Atatürk Library in Istanbul">
+      <figcaption>İstanbul Metropolitan Municipality, Atatürk Library. Digital catalogue and collection work in Istanbul.</figcaption>
+    </figure>
+
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ottoman-empire-administrative-division-1899-loc.jpg' | relative_url }}" alt="Administrative division map of the Ottoman Empire from 1899">
+      <figcaption>Library of Congress, Geography and Map Division. R. Huber, <em>Empire Ottoman : division administrative</em>, 1899.</figcaption>
+    </figure>
+
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/center-for-creative-photography-ua.jpg' | relative_url }}" alt="Center for Creative Photography at the University of Arizona">
+      <figcaption>University of Arizona, Center for Creative Photography. Research and archival collections in photography, Tucson.</figcaption>
+    </figure>
+
+    <figure class="research-archive-card js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/presidential-library-stavropol-gymnasium.png' | relative_url }}" alt="Digital library interface of the Presidential Library, Russian Federation">
+      <figcaption>Presidential Library, Russian Federation. Digital library collections for Russian imperial and regional history.</figcaption>
     </figure>
 
     <figure class="research-archive-card js-lightbox-figure">
@@ -37,13 +57,13 @@ permalink: /research/
     </figure>
 
     <figure class="research-archive-card js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ottoman-archives-istanbul.jpg' | relative_url }}" alt="Entrance to the Ottoman Archives Complex in Istanbul">
-      <figcaption>Presidency of the Republic of Türkiye, Directorate of State Archives. Ottoman Archives Complex, Istanbul.</figcaption>
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/bnf-gallica-journal-des-debats.jpg' | relative_url }}" alt="Gallica digital viewer showing Journal des débats politiques et littéraires">
+      <figcaption>Bibliothèque nationale de France, Gallica. Digitized press collections, including <em>Journal des débats politiques et littéraires</em>.</figcaption>
     </figure>
 
     <figure class="research-archive-card js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/ataturk-library-screen.jpg' | relative_url }}" alt="Digital catalogue screen at IMM Atatürk Library in Istanbul">
-      <figcaption>İstanbul Metropolitan Municipality, Atatürk Library. Digital collections and catalogue screen, Istanbul.</figcaption>
+      <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/salt-galata-library.jpg' | relative_url }}" alt="SALT Galata library and research space in Istanbul">
+      <figcaption>SALT Galata, Istanbul. SALT Research library and archival collections in the former Ottoman Bank building.</figcaption>
     </figure>
   </section>
 
