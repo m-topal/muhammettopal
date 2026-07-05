@@ -11,7 +11,7 @@ permalink: /research/future/
   <a href="{{ '/research/trajectory/' | relative_url }}">Research Trajectory</a>
   <a href="{{ '/research/future/' | relative_url }}">Future Directions</a>
 </div>
-  <div class="prose two-column-prose">
+  <div class="prose two-column-prose research-flow paragraph-tight-indent">
     <p>My future research develops from the dissertation in several connected directions. The first is the long nineteenth century. My dissertation focuses strongly on the Hamidian period, but the problems it studies began earlier. I am interested in the decades from the 1820s through the Tanzimat and into the late nineteenth century, when Ottoman statesmen, intellectuals, diplomats, educators, and journalists reworked the language of authority, justice, law, loyalty, sovereignty, and imperial survival. This direction would allow me to connect Murad’s world to earlier debates around reform, diplomacy, balance politics, centralization, and the changing political language of the Ottoman state.</p>
 
     <p>The second direction is the late Ottoman Empire within a wider Mediterranean and MENA framework. I am interested in the connections among Istanbul, Cairo, the Caucasus, North Africa, the Balkans, and the eastern Mediterranean. Rather than treating Ottoman, Turkish, Arab, Balkan, and Caucasian histories as separate national stories, I want to follow the movements of people, texts, ideas, institutions, and political vocabularies across these spaces. This includes questions of colonialism, anti-colonial discourse, imperial competition, reform, migration, war, public opinion, and sovereignty.</p>

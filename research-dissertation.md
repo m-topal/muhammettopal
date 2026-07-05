@@ -12,7 +12,7 @@ permalink: /research/dissertation/
   <a href="{{ '/research/trajectory/' | relative_url }}">Research Trajectory</a>
   <a href="{{ '/research/future/' | relative_url }}">Future Directions</a>
 </div>
-  <div class="prose two-column-prose">
+  <div class="prose two-column-prose research-flow paragraph-tight-indent">
     <p>As a historian of the late Ottoman Empire, I study how intellectual authority, public life, and political judgment were made in the nineteenth and early twentieth centuries. My work challenges two common ways of reading Ottoman intellectuals. The first reduces them to political labels: loyalist, oppositionist, conservative, liberal, Young Turk, Islamist, Ottomanist. The second treats them mainly as transmitters of European ideas, as if Ottoman intellectual life were a delayed version of European modernity. Against these approaches, I ask how Ottoman intellectuals actually lived, worked, wrote, taught, advised, criticized, and moved through the institutions that made their authority possible.</p>
 
     <p>My dissertation examines this problem through the life and writings of Mehmed Murad Bey (1854 to 1917), a Dagestani émigré who became one of the most complex intellectual figures of the late Ottoman world. Murad was not only a journalist or political actor. He was also a historian, novelist, teacher of history, bureaucrat, memoirist, and public moralist. This multiplicity is what makes him important. His life allows me to study the Ottoman intellectual not as a fixed social type, but as a figure formed at the intersection of migration, education, bureaucracy, historical writing, journalism, and political crisis.</p>

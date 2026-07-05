@@ -12,7 +12,7 @@ permalink: /diversions/
       <img class="js-lightbox-image" src="{{ '/assets/img/grand-canyon-home.jpg' | relative_url }}" alt="Muhammet Topal at the Grand Canyon">
       <figcaption>My first camping trip at the Grand Canyon.</figcaption>
     </figure>
-    <div class="prose diversions-lead-prose">
+    <div class="prose diversions-lead-prose paragraph-tight-indent">
       <h2>Beyond academia</h2>
       <p>Moving from Istanbul and Paris to Arizona changed my sense of landscape. Coming from dense urban worlds into the desert, mountains, canyons, and open horizons of the American Southwest made hiking, climbing, and outdoor life part of how I think and live.</p>
       <p>I also write and think through literature. I am especially drawn to Italo Calvino and Oğuz Atay because both turn narrative into a way of testing reality: Calvino through form, lightness, and speculative imagination, Atay through irony, fragmentation, self-consciousness, and the failures of modern intellectual life. Their work matters to me not as an escape from history, but as another way of asking how people inhabit language, memory, and the worlds they fail or try to build.</p>

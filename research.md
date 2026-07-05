@@ -6,7 +6,7 @@ permalink: /research/
 <article class="page">
   <p class="label">Research</p>
   <h1>Research</h1>
-  <div class="prose">
+  <div class="prose research-flow paragraph-tight-indent">
     <p>My research examines the making of Ottoman intellectual authority, public life, historical writing, journalism, and political judgment from the late Ottoman Empire to modern Turkey and the broader Middle East. The Research section is divided into three parts.</p>
   </div>
 

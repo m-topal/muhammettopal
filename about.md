@@ -13,7 +13,7 @@ permalink: /about/
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
     </figure>
 
-    <div class="prose center-wrap-text center-wrap-text-left">
+    <div class="prose center-wrap-text center-wrap-text-left paragraph-tight-indent">
       <span class="wrap-shape wrap-shape-left" aria-hidden="true"></span>
       <p>I am a PhD candidate in History and Middle Eastern and North African Studies at the University of Arizona. My work focuses on late Ottoman intellectual history, historical writing, journalism, biography, and public life. I am especially interested in how intellectuals, teachers, historians, journalists, and political actors made sense of the transformations of the modern era, not only through abstract ideas, but through institutions, texts, social networks, migration, and lived experience.</p>
 
@@ -30,7 +30,7 @@ permalink: /about/
       <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
     </div>
 
-    <div class="prose center-wrap-text center-wrap-text-right">
+    <div class="prose center-wrap-text center-wrap-text-right paragraph-tight-indent">
       <span class="wrap-shape wrap-shape-right" aria-hidden="true"></span>
       <p>At the University of Arizona, my doctoral work expanded this project into a broader study of Ottoman intellectual life. I bring together intellectual history, biography, global microhistory, historiography, historical sociology, and transimperial history. I work with sources in Ottoman Turkish, Turkish, French, Arabic, Russian, and English. I am interested in how ideas moved through people, but also in how people moved through institutions, languages, genres, and political settings.</p>
 

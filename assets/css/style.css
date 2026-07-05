@@ -5573,3 +5573,160 @@ body.image-lightbox-open .image-lightbox img {
     text-indent: 1.1em !important;
   }
 }
+
+/* v91: consistent paragraph indentation, tighter paragraph spacing, balanced columns, contact layout */
+.paragraph-tight-indent p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.paragraph-tight-indent p + p {
+  margin-top: 0 !important;
+}
+
+.paragraph-tight-indent .home-links,
+.paragraph-tight-indent .certificate-website-line,
+.paragraph-tight-indent .button,
+.paragraph-tight-indent .course-card-action,
+.paragraph-tight-indent figure,
+.paragraph-tight-indent figcaption {
+  text-indent: 0 !important;
+}
+
+.home-wrap-prose.paragraph-tight-indent p,
+.about-page .paragraph-tight-indent p,
+.research-flow.paragraph-tight-indent p,
+.teaching-home-text.paragraph-tight-indent p,
+.teaching-statement-flow.paragraph-tight-indent p,
+.service-flow.paragraph-tight-indent p,
+.diversions-lead-prose.paragraph-tight-indent p,
+.teaching-certificate-page .certificate-main-text.paragraph-tight-indent > p,
+.teaching-experience-page .teaching-detail-notes > p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.teaching-experience-page .teaching-detail-notes > p + p {
+  margin-top: 0 !important;
+}
+
+/* Let two-column prose flow like continuous text instead of locking each paragraph to one column. */
+.teaching-home-text,
+.teaching-statement-flow,
+.service-flow,
+.research-flow.two-column-prose,
+.teaching-certificate-page .certificate-main-text {
+  column-fill: balance !important;
+  -webkit-column-fill: balance !important;
+}
+
+.teaching-home-text > p,
+.teaching-statement-flow > p,
+.service-flow > p,
+.research-flow.two-column-prose > p,
+.teaching-certificate-page .certificate-main-text > p {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+.teaching-home-text > p + p,
+.teaching-statement-flow > p + p,
+.service-flow > p + p,
+.research-flow.two-column-prose > p + p,
+.teaching-certificate-page .certificate-main-text > p + p {
+  margin-top: 0 !important;
+}
+
+/* Keep the certificate website button below the intro paragraph, not inline with the final words. */
+.teaching-certificate-page .certificate-website-line {
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  text-indent: 0 !important;
+  break-inside: avoid !important;
+}
+
+.teaching-certificate-page .certificate-website-line .course-card-action {
+  display: inline-block;
+}
+
+/* Contact page two-column structure. */
+.contact-page .contact-grid-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 38px;
+  align-items: start;
+  margin-top: 26px;
+}
+
+.contact-page .contact-column {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-page .contact-item {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.contact-page .profile-link-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.contact-page .profile-link-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.contact-page .profile-link-list a:hover {
+  text-decoration: underline;
+}
+
+.contact-page .profile-mini-icon,
+.contact-page .profile-mini-svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 10px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.contact-page .profile-mini-svg {
+  border: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 820px) {
+  .paragraph-tight-indent p,
+  .home-wrap-prose.paragraph-tight-indent p,
+  .about-page .paragraph-tight-indent p,
+  .research-flow.paragraph-tight-indent p,
+  .teaching-home-text.paragraph-tight-indent p,
+  .teaching-statement-flow.paragraph-tight-indent p,
+  .service-flow.paragraph-tight-indent p,
+  .diversions-lead-prose.paragraph-tight-indent p,
+  .teaching-certificate-page .certificate-main-text.paragraph-tight-indent > p,
+  .teaching-experience-page .teaching-detail-notes > p {
+    text-indent: 1.1em !important;
+  }
+
+  .contact-page .contact-grid-two-column {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

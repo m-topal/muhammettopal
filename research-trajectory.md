@@ -11,7 +11,7 @@ permalink: /research/trajectory/
   <a href="{{ '/research/trajectory/' | relative_url }}">Research Trajectory</a>
   <a href="{{ '/research/future/' | relative_url }}">Future Directions</a>
 </div>
-  <div class="prose two-column-prose">
+  <div class="prose two-column-prose research-flow paragraph-tight-indent">
     <p>My current dissertation grows out of a longer research trajectory shaped by questions of empire, sovereignty, migration, biography, journalism, and public life. Although my present work begins with Mehmed Murad Bey, the problems that led me to him developed through earlier projects.</p>
 
     <p>My undergraduate research at Boğaziçi University examined the Ottoman Qajar borderland in the nineteenth century. That project studied the eastern frontier of the Ottoman Empire not as a fixed line between two states, but as a political and social space shaped by centralization, uncertainty, negotiation, and mobility. It gave me my first sustained engagement with imperial authority and frontier politics. In retrospect, it already contained several questions that still guide my work: how authority is made, how borders are lived and negotiated, and how people at the edges of empires reveal structures that are less visible from the center.</p>

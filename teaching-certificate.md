@@ -13,10 +13,12 @@ permalink: /teaching/certificate/
     <a href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
   </div>
 
-  <div class="prose two-column-prose certificate-main-text">
+  <div class="prose two-column-prose certificate-main-text paragraph-tight-indent">
     <p>At the University of Arizona, I completed the Graduate Certificate in College Teaching. The certificate gave formal structure to my teaching experience and helped me think more systematically about course design, classroom practice, assessment, student participation, and the use of educational technologies.</p>
 
-    <p>The certificate coursework and related teaching development work included <strong>Course Design</strong>, <strong>Learner Centered Teaching</strong>, <strong>Teaching Sensitive Subjects</strong>, <strong>Teaching and Learning Technologies</strong>, <strong>Teaching as Research</strong>, and <strong>College Teaching Practice</strong>. Together, these areas connected practical classroom experience with the scholarship of teaching and learning, from syllabus construction and discussion design to reflective assessment and accessible course materials. <span class="certificate-website-inline"><a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a></span></p>
+    <p>The certificate coursework and related teaching development work included <strong>Course Design</strong>, <strong>Learner Centered Teaching</strong>, <strong>Teaching Sensitive Subjects</strong>, <strong>Teaching and Learning Technologies</strong>, <strong>Teaching as Research</strong>, and <strong>College Teaching Practice</strong>. Together, these areas connected practical classroom experience with the scholarship of teaching and learning, from syllabus construction and discussion design to reflective assessment and accessible course materials.</p>
+
+    <p class="certificate-website-line"><a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a></p>
 
     <figure class="certificate-breakout-photo creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/teaching/college-teaching-certificate-group.jpg' | relative_url }}" alt="Graduate teaching certificate cohort">

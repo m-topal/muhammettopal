@@ -6,7 +6,7 @@ permalink: /service/
 <article class="page wide">
   <p class="label">Service</p>
   <h1>Service and Public Engagement</h1>
-  <div class="prose two-column-prose">
+  <div class="prose two-column-prose service-flow paragraph-tight-indent">
     <p>My academic service grows out of the same commitments that shape my research and teaching: building intellectual community, making historical knowledge accessible, and creating spaces where students and wider publics can engage the Middle East, Turkey, and the Ottoman past with greater care and complexity.</p>
 
     <p>At the University of Arizona, I served as co-head of the Graduate Student Association. In that role, I helped reactivate graduate student programming, supported communication among graduate students, and represented student concerns in departmental settings. This work involved practical organization, but it also involved a broader commitment to sustaining a graduate community in which students could share work, exchange advice, and participate more fully in departmental life.</p>
