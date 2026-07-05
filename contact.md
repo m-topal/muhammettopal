@@ -37,19 +37,24 @@ permalink: /contact/
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
         <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" rows="6" placeholder="Message" required></textarea>
-        <div class="message-toolbar" aria-label="Message tools">
-          <label class="message-toolbar-attach" for="contact-attachment">
-            <span class="message-toolbar-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.4 11.2 12 20.6a6 6 0 0 1-8.5-8.5l9.8-9.8a4.2 4.2 0 0 1 5.9 5.9l-9.9 9.9a2.4 2.4 0 0 1-3.4-3.4l8.8-8.8"/></svg>
-            </span>
-            <span>Attach file or image</span>
-          </label>
-          <input id="contact-attachment" class="message-toolbar-file" type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-          <span class="message-toolbar-filename" data-attachment-filename>No file selected</span>
-          <button class="message-toolbar-clear" type="button" data-attachment-clear aria-label="Remove selected attachment" hidden>×</button>
+        <div class="message-box-wrap">
+          <textarea name="message" rows="6" maxlength="1000" placeholder="Message" required data-message-counter-source></textarea>
+          <span class="message-character-count" data-message-character-count>Max 1000 characters</span>
         </div>
-        <button type="submit">Send message</button>
+        <div class="message-toolbar" aria-label="Message tools">
+          <div class="message-toolbar-left">
+            <label class="message-toolbar-attach" for="contact-attachment">
+              <span class="message-toolbar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.4 11.2 12 20.6a6 6 0 0 1-8.5-8.5l9.8-9.8a4.2 4.2 0 0 1 5.9 5.9l-9.9 9.9a2.4 2.4 0 0 1-3.4-3.4l8.8-8.8"/></svg>
+              </span>
+              <span>Attach</span>
+            </label>
+            <input id="contact-attachment" class="message-toolbar-file" type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <span class="message-toolbar-filename" data-attachment-filename>No files selected</span>
+            <button class="message-toolbar-clear" type="button" data-attachment-clear aria-label="Remove all selected attachments" hidden>×</button>
+          </div>
+          <button class="message-toolbar-submit" type="submit">Send</button>
+        </div>
       </form>
     </section>
 

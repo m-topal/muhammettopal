@@ -1072,8 +1072,39 @@ window.addEventListener("resize", updateReadingProgress);
 })();
 
 
-/* v106: show and clear selected attachment name on contact form */
+/* v108: multiple removable attachments on contact form, maximum 10 */
 (function () {
+  var MAX_ATTACHMENTS = 10;
+  var LIMIT_MESSAGE = 'You can send maximum 10 attachments.';
+
+  function showAttachmentLimitWarning(message) {
+    var existing = document.querySelector('.attachment-limit-popup');
+    if (existing) existing.remove();
+
+    var popup = document.createElement('div');
+    popup.className = 'attachment-limit-popup';
+    popup.setAttribute('role', 'alert');
+    popup.innerHTML = '<span>' + message + '</span><button type="button" aria-label="Close attachment warning">×</button>';
+    document.body.appendChild(popup);
+
+    var close = popup.querySelector('button');
+    var timer = window.setTimeout(function () {
+      popup.classList.add('is-hiding');
+      window.setTimeout(function () { popup.remove(); }, 180);
+    }, 3200);
+
+    close.addEventListener('click', function () {
+      window.clearTimeout(timer);
+      popup.remove();
+    });
+  }
+
+  function fileListFromArray(files) {
+    var dt = new DataTransfer();
+    files.forEach(function (file) { dt.items.add(file); });
+    return dt.files;
+  }
+
   function initAttachmentNames() {
     document.querySelectorAll('.message-toolbar-file').forEach(function (input) {
       var toolbar = input.closest('.message-toolbar');
@@ -1081,27 +1112,74 @@ window.addEventListener("resize", updateReadingProgress);
       var clear = toolbar ? toolbar.querySelector('[data-attachment-clear]') : null;
       if (!output) return;
 
-      function updateAttachmentLabel() {
-        if (input.files && input.files.length) {
-          output.textContent = input.files.length === 1 ? input.files[0].name : input.files.length + ' files selected';
-          if (clear) clear.hidden = false;
-        } else {
-          output.textContent = 'No file selected';
-          if (clear) clear.hidden = true;
-        }
+      function currentFiles() {
+        return input.files ? Array.prototype.slice.call(input.files) : [];
       }
 
-      input.addEventListener('change', updateAttachmentLabel);
+      function setFiles(files) {
+        input.files = fileListFromArray(files);
+      }
+
+      function renderAttachmentLabel() {
+        var files = currentFiles();
+        output.innerHTML = '';
+
+        if (!files.length) {
+          output.textContent = 'No files selected';
+          if (clear) clear.hidden = true;
+          return;
+        }
+
+        var list = document.createElement('span');
+        list.className = 'message-toolbar-file-list';
+
+        files.forEach(function (file, index) {
+          var chip = document.createElement('span');
+          chip.className = 'message-toolbar-file-chip';
+
+          var name = document.createElement('span');
+          name.className = 'message-toolbar-file-name';
+          name.textContent = file.name;
+
+          var remove = document.createElement('button');
+          remove.type = 'button';
+          remove.className = 'message-toolbar-file-remove';
+          remove.setAttribute('aria-label', 'Remove ' + file.name);
+          remove.textContent = '×';
+          remove.addEventListener('click', function () {
+            var updated = currentFiles().filter(function (_file, i) { return i !== index; });
+            setFiles(updated);
+            renderAttachmentLabel();
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          });
+
+          chip.appendChild(name);
+          chip.appendChild(remove);
+          list.appendChild(chip);
+        });
+
+        output.appendChild(list);
+        if (clear) clear.hidden = false;
+      }
+
+      input.addEventListener('change', function () {
+        var files = currentFiles();
+        if (files.length > MAX_ATTACHMENTS) {
+          showAttachmentLimitWarning(LIMIT_MESSAGE);
+          input.value = '';
+        }
+        renderAttachmentLabel();
+      });
 
       if (clear) {
         clear.addEventListener('click', function () {
           input.value = '';
-          updateAttachmentLabel();
+          renderAttachmentLabel();
           input.dispatchEvent(new Event('change', { bubbles: true }));
         });
       }
 
-      updateAttachmentLabel();
+      renderAttachmentLabel();
     });
   }
 
@@ -1109,5 +1187,35 @@ window.addEventListener("resize", updateReadingProgress);
     document.addEventListener('DOMContentLoaded', initAttachmentNames);
   } else {
     initAttachmentNames();
+  }
+})();
+/* v109: contact message character counter, maximum 1000 characters */
+(function () {
+  function initMessageCharacterCounters() {
+    document.querySelectorAll('[data-message-counter-source]').forEach(function (textarea) {
+      var wrap = textarea.closest('.message-box-wrap');
+      var counter = wrap ? wrap.querySelector('[data-message-character-count]') : null;
+      var max = Number(textarea.getAttribute('maxlength')) || 1000;
+      if (!wrap || !counter) return;
+
+      function updateCounter() {
+        var length = textarea.value.length;
+        if (length === 0) {
+          counter.textContent = 'Max ' + max + ' characters';
+        } else {
+          counter.textContent = length + '/' + max;
+        }
+        wrap.classList.toggle('is-at-limit', length >= max);
+      }
+
+      textarea.addEventListener('input', updateCounter);
+      updateCounter();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMessageCharacterCounters);
+  } else {
+    initMessageCharacterCounters();
   }
 })();
