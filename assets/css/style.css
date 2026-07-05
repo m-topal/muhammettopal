@@ -4630,3 +4630,33 @@ button.course-card-action,
     margin-top: 0 !important;
   }
 }
+
+/* v76: keep the lower, wrapped image position, but let text use the space above it.
+   The previous balanced layout reserved too much permanent center space. Here the
+   columns sit closer together until the float shapes begin; only the image zone
+   creates the central wrap. */
+.balanced-reading-wrap.organic-center-wrap {
+  column-gap: clamp(2rem, 4vw, 3rem) !important;
+  --wrap-buffer: 10px;
+}
+
+.about-page .balanced-reading-wrap.about-center-image-wrap {
+  --wrap-image-top: 175px;
+}
+
+.extracurricular-page .balanced-reading-wrap.extra-center-image-wrap {
+  --wrap-image-top: 125px;
+}
+
+.balanced-reading-wrap.organic-center-wrap .center-wrap-text-right {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .wrap-shape-left {
+  margin-left: .85rem !important;
+}
+
+.balanced-reading-wrap.organic-center-wrap .wrap-shape-right {
+  margin-right: .85rem !important;
+}
