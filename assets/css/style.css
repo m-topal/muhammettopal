@@ -5530,3 +5530,46 @@ body.image-lightbox-open .image-lightbox img {
     margin: 14px 0 0;
   }
 }
+
+/* v90: make certificate intro flow naturally across columns and add paragraph indents */
+.teaching-certificate-page .certificate-main-text {
+  column-fill: balance !important;
+  -webkit-column-fill: balance !important;
+  margin-bottom: 34px !important;
+}
+
+.teaching-certificate-page .certificate-main-text > p {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-indent: 1.35em !important;
+}
+
+.teaching-certificate-page .certificate-main-text > p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-certificate-page .certificate-main-text .certificate-website-inline {
+  text-indent: 0 !important;
+}
+
+.teaching-certificate-page .certificate-main-text .certificate-breakout-photo {
+  text-indent: 0 !important;
+}
+
+.diversions-page .diversions-lead-prose p {
+  text-indent: 1.35em !important;
+}
+
+.diversions-page .diversions-lead-prose p + p {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 820px) {
+  .teaching-certificate-page .certificate-main-text > p,
+  .diversions-page .diversions-lead-prose p {
+    text-indent: 1.1em !important;
+  }
+}
