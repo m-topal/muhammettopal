@@ -7933,3 +7933,35 @@ body.cv-modal-open {
 .teaching-slider-frame.is-circular .teaching-course-card[data-carousel-clone="true"] {
   cursor: pointer;
 }
+
+/* v135: remove Teaching approach block and soften Teaching section nav transparency */
+.teaching-scroll-nav {
+  background: rgba(255, 255, 255, .76) !important;
+  border-color: rgba(0, 0, 0, .13) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .07) !important;
+  backdrop-filter: blur(15px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(1.04) !important;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(255, 255, 255, .84) !important;
+  border-color: rgba(0, 0, 0, .18) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .105) !important;
+}
+
+.teaching-scroll-nav a {
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    background: rgba(255, 255, 255, .82) !important;
+  }
+
+  .teaching-scroll-nav a {
+    font-size: .68rem;
+  }
+}
