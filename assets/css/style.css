@@ -8013,3 +8013,32 @@ body.cv-modal-open {
     background: rgba(255, 255, 255, .80) !important;
   }
 }
+
+/* v137: let Teaching intro and certificate text balance naturally across columns */
+.teaching-continuous-page .teaching-continuous-intro,
+.teaching-continuous-page .certificate-main-text {
+  column-fill: balance !important;
+  -webkit-column-fill: balance !important;
+}
+
+.teaching-continuous-page .teaching-continuous-intro > p,
+.teaching-continuous-page .certificate-main-text > p {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.teaching-continuous-page .teaching-continuous-intro > p + p,
+.teaching-continuous-page .certificate-main-text > p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-continuous-page .certificate-main-text .certificate-website-line {
+  break-inside: avoid !important;
+  -webkit-column-break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  margin-top: 12px !important;
+  text-indent: 0 !important;
+}
