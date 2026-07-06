@@ -7277,3 +7277,23 @@ body.appointment-modal-open .appointment-modal {
 .sticky-nav {
   top: 0;
 }
+
+/* v124: keep long appointment-calendar month names clear of arrows */
+.contact-page .mini-calendar-title {
+  font-size: 13px !important;
+  letter-spacing: .055em !important;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.contact-page .mini-calendar-title span + span {
+  margin-left: 4px !important;
+}
+
+@media (max-width: 520px) {
+  .contact-page .mini-calendar-title {
+    font-size: 12.5px !important;
+    letter-spacing: .045em !important;
+  }
+}
