@@ -7321,3 +7321,168 @@ body.appointment-modal-open .appointment-modal {
     justify-content: flex-start;
   }
 }
+
+/* v129: reorganized academic navigation and soft CV PDF preview on About page */
+.about-cv-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: -4px 0 18px;
+}
+
+.about-cv-button,
+.cv-modal-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: .01em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0,0,0,.045);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.about-cv-button {
+  padding: 10px 16px;
+}
+
+.about-cv-button:hover,
+.about-cv-button:focus-visible,
+.cv-modal-actions a:hover,
+.cv-modal-actions a:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(176,0,0,.42);
+  background: rgba(176,0,0,.035);
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,.075);
+}
+
+.cv-modal[hidden] {
+  display: none !important;
+}
+
+.cv-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: rgba(0,0,0,.42);
+}
+
+.cv-modal-dialog {
+  position: relative;
+  width: min(1040px, calc(100vw - 36px));
+  height: min(88vh, 900px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.24);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.cv-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cv-modal-close:hover,
+.cv-modal-close:focus-visible {
+  background: var(--soft);
+}
+
+.cv-modal-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  padding-right: 44px;
+}
+
+.cv-modal-header .label {
+  margin: 0 0 4px;
+}
+
+.cv-modal-header h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.6vw, 2.25rem);
+  line-height: 1.05;
+}
+
+.cv-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cv-modal-actions a {
+  padding: 9px 12px;
+}
+
+.cv-modal-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 520px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--soft);
+}
+
+body.cv-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .about-cv-toolbar {
+    margin: 0 0 16px;
+  }
+
+  .cv-modal {
+    padding: 12px;
+  }
+
+  .cv-modal-dialog {
+    width: calc(100vw - 24px);
+    height: 86vh;
+    border-radius: 20px;
+    padding: 18px;
+  }
+
+  .cv-modal-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 42px;
+  }
+
+  .cv-modal-actions {
+    justify-content: flex-start;
+  }
+
+  .cv-modal-frame {
+    min-height: 54vh;
+  }
+}

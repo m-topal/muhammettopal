@@ -82,23 +82,21 @@
     <div class="nav-wrap sticky-nav">
       <nav class="nav simplified-nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/about/' | relative_url }}">About Me</a>
+        <a class="{% if page.url contains '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About Me</a>
 
-        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' or page.url contains '/extracurricular/' %}active{% endif %}">
-          <summary data-nav-target="{{ '/portfolio/' | relative_url }}">Portfolio</summary>
+        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">
+          <summary>Research</summary>
           <div class="nav-dropdown-panel">
             <a href="{{ '/research/' | relative_url }}">Research</a>
-            <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
             <a href="{{ '/publications/' | relative_url }}">Publications</a>
             <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
-            <a href="{{ '/extracurricular/' | relative_url }}">Academic Service</a>
           </div>
         </details>
 
+        <a class="{% if page.url contains '/teaching/' %}active{% endif %}" href="{{ '/teaching/' | relative_url }}">Teaching</a>
+        <a class="{% if page.url contains '/extracurricular/' or page.url contains '/service/' %}active{% endif %}" href="{{ '/extracurricular/' | relative_url }}">Service</a>
         <a class="{% if page.url contains '/diversions/' %}active{% endif %}" href="{{ '/diversions/' | relative_url }}">Diversions</a>
-
-        <a href="{{ '/cv/' | relative_url }}">CV</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+        <a class="{% if page.url contains '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
       </nav>
     </div>
 

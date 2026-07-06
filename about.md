@@ -7,6 +7,10 @@ permalink: /about/
   <p class="label">About Me</p>
   <h1>About Me</h1>
 
+  <div class="about-cv-toolbar" aria-label="Curriculum vitae">
+    <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
+  </div>
+
   <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
@@ -50,6 +54,23 @@ permalink: /about/
         <img class="about-wordmark-image js-lightbox-image" src="{{ '/assets/topal-wordmark-transparent.png' | relative_url }}" alt="Topal handwritten wordmark">
         <figcaption>Topal handwritten wordmark.</figcaption>
       </figure>
+    </div>
+  </div>
+
+  <div class="cv-modal" id="aboutCvModal" hidden role="dialog" aria-modal="true" aria-labelledby="aboutCvModalTitle">
+    <div class="cv-modal-dialog">
+      <button class="cv-modal-close" type="button" aria-label="Close CV preview">×</button>
+      <div class="cv-modal-header">
+        <div>
+          <p class="label">CV</p>
+          <h2 id="aboutCvModalTitle">Curriculum Vitae</h2>
+        </div>
+        <div class="cv-modal-actions">
+          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
+          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" download>Download PDF</a>
+        </div>
+      </div>
+      <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1" title="Muhammet Topal CV PDF"></iframe>
     </div>
   </div>
 </article>

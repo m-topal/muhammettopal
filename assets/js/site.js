@@ -1219,3 +1219,53 @@ window.addEventListener("resize", updateReadingProgress);
     trigger.click();
   });
 })();
+
+/* v129: CV PDF modal on About page */
+(function () {
+  function closeCvModal(modal) {
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.classList.remove('cv-modal-open');
+  }
+
+  function openCvModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('cv-modal-open');
+    var close = modal.querySelector('.cv-modal-close');
+    if (close) close.focus();
+  }
+
+  function setupCvModal() {
+    document.addEventListener('click', function (event) {
+      var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal]');
+      if (trigger) {
+        event.preventDefault();
+        openCvModal(document.getElementById(trigger.getAttribute('data-cv-modal')));
+        return;
+      }
+
+      var close = event.target.closest('.cv-modal-close');
+      if (close) {
+        event.preventDefault();
+        closeCvModal(close.closest('.cv-modal'));
+        return;
+      }
+
+      if (event.target.classList && event.target.classList.contains('cv-modal')) {
+        closeCvModal(event.target);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('.cv-modal:not([hidden])').forEach(closeCvModal);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCvModal);
+  } else {
+    setupCvModal();
+  }
+})();
