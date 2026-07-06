@@ -117,7 +117,7 @@ permalink: /teaching/
         </div>
         <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
 
-        <div class="teaching-shelf-row">
+        <div class="teaching-shelf-row co-teaching-course-row">
           <article class="teaching-course-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
             <p class="meta">University of Arizona</p>
             <h3>Middle Eastern Humanities</h3>

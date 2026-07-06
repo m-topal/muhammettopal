@@ -7587,3 +7587,114 @@ body.cv-modal-open {
     scroll-margin-top: 95px;
   }
 }
+
+
+/* v131: cleaner continuous Teaching section bar and single-line co-teaching scroller */
+.teaching-scroll-nav {
+  max-width: 900px;
+  margin: 1.15rem auto 2rem;
+  padding: .45rem .5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within {
+  border-color: rgba(0, 0, 0, .08);
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .055);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.teaching-scroll-nav a {
+  padding: .48rem .82rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.teaching-scroll-nav a:hover,
+.teaching-scroll-nav a:focus-visible {
+  border-color: rgba(0, 0, 0, .10);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .065);
+  transform: translateY(-1px);
+}
+
+.teaching-scroll-nav a.active {
+  border-color: rgba(0, 0, 0, .18);
+  background: #fff;
+  color: #111;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .075);
+  transform: none;
+}
+
+.teaching-continuous-page .co-teaching-course-row,
+.co-teaching-course-row {
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: minmax(285px, 360px) !important;
+  grid-template-columns: none !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  padding: 0 2px 16px !important;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.co-teaching-course-row .teaching-course-card,
+.co-teaching-course-row .course-card-with-image,
+.co-teaching-course-row .modal-course-card,
+.co-teaching-course-row .teaching-course-card.course-card-with-image {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  scroll-snap-align: start;
+}
+
+.co-teaching-course-row .teaching-course-card:not(.course-card-with-image) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 230px;
+  padding: 22px;
+}
+
+.co-teaching-course-row .course-card-with-image,
+.co-teaching-course-row .modal-course-card {
+  min-height: 230px;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    position: static;
+    justify-content: flex-start;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    padding: .25rem 0 .5rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .teaching-scroll-nav a {
+    white-space: nowrap;
+  }
+
+  .teaching-continuous-page .co-teaching-course-row,
+  .co-teaching-course-row {
+    grid-auto-columns: minmax(260px, 82vw) !important;
+  }
+}
