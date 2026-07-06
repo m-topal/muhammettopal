@@ -7287,3 +7287,37 @@ body.appointment-modal-open .appointment-modal {
     letter-spacing: .045em !important;
   }
 }
+
+
+/* v128: move My Blog pill from main navigation to footer profile links */
+.footer .footer-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0 6px;
+}
+
+.footer .footer-blog-pill {
+  margin-left: 0;
+  margin-right: 10px;
+  padding: 5px 11px;
+  font-size: 13px;
+  line-height: 1.15;
+  color: var(--red) !important;
+}
+
+.footer .footer-blog-pill:hover,
+.footer .footer-blog-pill.active {
+  color: #fff !important;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    align-items: flex-start;
+  }
+
+  .footer .footer-links {
+    justify-content: flex-start;
+  }
+}

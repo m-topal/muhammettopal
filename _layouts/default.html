@@ -85,7 +85,7 @@
         <a href="{{ '/about/' | relative_url }}">About Me</a>
 
         <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' or page.url contains '/extracurricular/' %}active{% endif %}">
-          <summary data-nav-target="{{ '/portfolio/' | relative_url }}">Academic Work</summary>
+          <summary data-nav-target="{{ '/portfolio/' | relative_url }}">Portfolio</summary>
           <div class="nav-dropdown-panel">
             <a href="{{ '/research/' | relative_url }}">Research</a>
             <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
@@ -99,7 +99,6 @@
 
         <a href="{{ '/cv/' | relative_url }}">CV</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
-        <a class="blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a>
       </nav>
     </div>
 
@@ -107,7 +106,7 @@
 
     <footer class="footer">
       <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
-      <span><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
+      <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
     </footer>
   </div>
 
