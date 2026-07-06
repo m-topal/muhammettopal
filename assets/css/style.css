@@ -7486,3 +7486,104 @@ body.cv-modal-open {
     min-height: 54vh;
   }
 }
+
+
+/* v130: continuous Teaching page with section scrolling */
+.teaching-continuous-page {
+  scroll-margin-top: 110px;
+}
+
+.teaching-continuous-intro {
+  margin: 0 0 1.35rem;
+}
+
+.teaching-scroll-nav {
+  position: sticky;
+  top: 72px;
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem;
+  margin: 1.2rem auto 2rem;
+  padding: .65rem .75rem;
+  max-width: 860px;
+  border: 1px solid rgba(120, 42, 42, .16);
+  border-radius: 999px;
+  background: rgba(255, 252, 246, .88);
+  box-shadow: 0 16px 34px rgba(74, 48, 32, .08);
+  backdrop-filter: blur(12px);
+}
+
+.teaching-scroll-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .48rem .78rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.teaching-scroll-nav a:hover,
+.teaching-scroll-nav a:focus-visible,
+.teaching-scroll-nav a.active {
+  border-color: rgba(120, 42, 42, .28);
+  background: rgba(120, 42, 42, .08);
+  box-shadow: 0 8px 18px rgba(74, 48, 32, .08);
+  transform: translateY(-1px);
+}
+
+.teaching-scroll-section {
+  scroll-margin-top: 150px;
+  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(120, 42, 42, .14);
+}
+
+.teaching-scroll-section:first-of-type {
+  border-top: 0;
+  padding-top: .5rem;
+}
+
+.section-heading-row {
+  margin: 0 0 1.1rem;
+}
+
+.section-heading-row .label {
+  margin-bottom: .28rem;
+}
+
+.section-heading-row h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.05;
+}
+
+.teaching-continuous-page .subnav {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    position: static;
+    border-radius: 1.2rem;
+    justify-content: flex-start;
+  }
+
+  .teaching-scroll-nav a {
+    font-size: .72rem;
+    padding: .42rem .62rem;
+  }
+
+  .teaching-scroll-section {
+    scroll-margin-top: 95px;
+  }
+}
