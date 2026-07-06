@@ -7266,3 +7266,14 @@ body.appointment-modal-open .appointment-modal {
     grid-template-columns: 1fr;
   }
 }
+
+/* v119: move reading progress bar to the bottom so sticky nav does not cover it */
+.reading-progress {
+  top: auto;
+  bottom: 0;
+  z-index: 1200;
+}
+
+.sticky-nav {
+  top: 0;
+}
