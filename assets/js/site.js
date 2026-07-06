@@ -1993,3 +1993,181 @@ window.addEventListener("resize", updateReadingProgress);
     });
   });
 })();
+
+/* v147: replace experimental co-teaching carousel with simple non-forcing circular arrow movement */
+(function () {
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  ready(function () {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var oldRow = frame.querySelector('.co-teaching-course-row');
+      var oldLeft = frame.querySelector('.teaching-slider-cue-left');
+      var oldRight = frame.querySelector('.teaching-slider-cue-right');
+      if (!oldRow || !oldLeft || !oldRight) return;
+
+      var cards = Array.from(oldRow.children).filter(function (el) {
+        return el.classList && el.classList.contains('teaching-course-card') && el.dataset.carouselClone !== 'true';
+      });
+      if (cards.length < 2) return;
+
+      /* Replace the row itself to remove old scroll-normalizing listeners, but keep the actual card nodes. */
+      var row = oldRow.cloneNode(false);
+      row.removeAttribute('data-circular-ready');
+      row.dataset.circularReady = 'v147';
+      cards.forEach(function (card) {
+        card.removeAttribute('data-carousel-clone');
+        card.removeAttribute('aria-hidden');
+        row.appendChild(card);
+      });
+      oldRow.parentNode.replaceChild(row, oldRow);
+
+      /* Replace buttons to remove old arrow listeners. */
+      var left = oldLeft.cloneNode(true);
+      var right = oldRight.cloneNode(true);
+      oldLeft.parentNode.replaceChild(left, oldLeft);
+      oldRight.parentNode.replaceChild(right, oldRight);
+
+      var animating = false;
+
+      function getGap() {
+        var style = window.getComputedStyle(row);
+        return parseFloat(style.columnGap || style.gap || '25') || 25;
+      }
+
+      function getStep() {
+        var card = row.querySelector('.teaching-course-card');
+        if (!card) return Math.round(row.clientWidth * 0.82);
+        return Math.round(card.getBoundingClientRect().width + getGap());
+      }
+
+      function finish(direction, step) {
+        if (direction > 0) {
+          var first = row.querySelector('.teaching-course-card');
+          if (first) row.appendChild(first);
+          row.scrollLeft = Math.max(0, row.scrollLeft - step);
+        }
+        animating = false;
+      }
+
+      function slide(direction) {
+        if (animating) return;
+        animating = true;
+        var step = getStep();
+
+        if (direction < 0) {
+          var cardsNow = row.querySelectorAll('.teaching-course-card');
+          var last = cardsNow[cardsNow.length - 1];
+          if (last) {
+            row.insertBefore(last, row.firstElementChild);
+            row.scrollLeft += step;
+          }
+          row.scrollBy({ left: -step, behavior: 'smooth' });
+          window.setTimeout(function () { animating = false; }, 460);
+          return;
+        }
+
+        row.scrollBy({ left: step, behavior: 'smooth' });
+        window.setTimeout(function () { finish(direction, step); }, 460);
+      }
+
+      left.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        slide(-1);
+      }, true);
+
+      right.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        slide(1);
+      }, true);
+
+      [left, right].forEach(function (button) {
+        button.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          event.stopPropagation();
+          slide(button === right ? 1 : -1);
+        }, true);
+      });
+    });
+  });
+})();
+
+/* v148: remove forced circular behavior from Co-Teaching slider */
+(function () {
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  ready(function () {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var oldRow = frame.querySelector('.co-teaching-course-row');
+      var oldLeft = frame.querySelector('.teaching-slider-cue-left');
+      var oldRight = frame.querySelector('.teaching-slider-cue-right');
+      if (!oldRow || !oldLeft || !oldRight) return;
+
+      /* Keep only real cards. Remove every clone and every older scroll listener by replacing the row. */
+      var realCards = Array.from(oldRow.children).filter(function (el) {
+        return el.classList && el.classList.contains('teaching-course-card') && el.dataset.carouselClone !== 'true';
+      });
+      if (!realCards.length) return;
+
+      var row = oldRow.cloneNode(false);
+      row.removeAttribute('data-circular-ready');
+      row.dataset.sliderMode = 'simple-scroll-v148';
+      realCards.forEach(function (card) {
+        card.removeAttribute('data-carousel-clone');
+        card.removeAttribute('aria-hidden');
+        card.tabIndex = 0;
+        row.appendChild(card);
+      });
+      oldRow.parentNode.replaceChild(row, oldRow);
+
+      /* Replace arrows so previous circular listeners cannot fire. */
+      var left = oldLeft.cloneNode(true);
+      var right = oldRight.cloneNode(true);
+      oldLeft.parentNode.replaceChild(left, oldLeft);
+      oldRight.parentNode.replaceChild(right, oldRight);
+      frame.classList.remove('is-circular', 'is-v146-carousel');
+      frame.classList.add('is-simple-scroll');
+
+      function getStep() {
+        var card = row.querySelector('.teaching-course-card');
+        if (!card) return Math.round(row.clientWidth * 0.75);
+        var style = window.getComputedStyle(row);
+        var gap = parseFloat(style.columnGap || style.gap || '22') || 22;
+        return Math.round(card.getBoundingClientRect().width + gap);
+      }
+
+      function scroll(direction) {
+        row.scrollBy({ left: direction * getStep(), behavior: 'smooth' });
+      }
+
+      left.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        scroll(-1);
+      }, true);
+
+      right.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        scroll(1);
+      }, true);
+
+      [left, right].forEach(function (button) {
+        button.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          event.stopPropagation();
+          scroll(button === right ? 1 : -1);
+        }, true);
+      });
+    });
+  });
+})();

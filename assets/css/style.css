@@ -8668,3 +8668,95 @@ body.cv-modal-open {
     min-width: 250px !important;
   }
 }
+
+/* v147: Google-friendly favicon support and calmer co-teaching slider spacing */
+.teaching-continuous-page .teaching-slider-frame {
+  overflow: hidden !important;
+  padding: 0 38px !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  gap: 25px !important;
+  padding: 30px 46px 38px !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior-x: contain !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 calc((100% - 50px) / 3.32) !important;
+  width: calc((100% - 50px) / 3.32) !important;
+  min-width: 278px !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue {
+  width: 54px !important;
+  height: 54px !important;
+  border-width: 1.25px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue::before {
+  width: 12px !important;
+  height: 12px !important;
+  border-width: 0 2.45px 2.45px 0 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-left {
+  left: 10px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-right {
+  right: 10px !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image)::after {
+  inset: 0 !important;
+  border-radius: inherit !important;
+  border-width: 1.35px !important;
+  box-shadow: inset 0 0 0 1.35px rgba(0, 0, 0, .72) !important;
+}
+
+@media (max-width: 900px) {
+  .teaching-continuous-page .co-teaching-course-row {
+    gap: 21px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+    flex-basis: 76% !important;
+    width: 76% !important;
+    min-width: 250px !important;
+  }
+}
+
+/* v148: simple Co-Teaching scroll, no circular bounce-back */
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll {
+  overflow: hidden !important;
+  padding-left: 38px !important;
+  padding-right: 38px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row {
+  gap: 22px !important;
+  padding-left: 44px !important;
+  padding-right: 44px !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior-x: auto !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 calc((100% - 44px) / 3.28) !important;
+  width: calc((100% - 44px) / 3.28) !important;
+  min-width: 278px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row .teaching-course-card:not(.course-card-with-image)::after {
+  inset: 0 !important;
+  border-width: 1.25px !important;
+  box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, .70) !important;
+}
