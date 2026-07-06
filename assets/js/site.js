@@ -1686,3 +1686,64 @@ window.addEventListener("resize", updateReadingProgress);
     init();
   }
 })();
+
+/* v144: rebuild co-teaching circular carousel in stable order after earlier cloning */
+(function () {
+  function stabilizeCoTeachingCarousel() {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var row = frame.querySelector('.co-teaching-course-row');
+      if (!row) return;
+
+      var originals = Array.prototype.slice.call(row.children).filter(function (card) {
+        return card.dataset.carouselClone !== 'true';
+      });
+      if (originals.length < 2) return;
+
+      Array.prototype.slice.call(row.children).forEach(function (card) {
+        if (card.dataset.carouselClone === 'true') card.remove();
+      });
+
+      function makeClone(card) {
+        var clone = card.cloneNode(true);
+        clone.dataset.carouselClone = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('tabindex', '-1');
+        clone.querySelectorAll('[tabindex]').forEach(function (node) {
+          node.setAttribute('tabindex', '-1');
+        });
+        return clone;
+      }
+
+      var before = document.createDocumentFragment();
+      originals.forEach(function (card) { before.appendChild(makeClone(card)); });
+      row.insertBefore(before, originals[0]);
+      originals.forEach(function (card) { row.appendChild(makeClone(card)); });
+
+      function originalWidth() {
+        var width = 0;
+        originals.forEach(function (card) {
+          width += card.getBoundingClientRect().width;
+        });
+        var gap = parseFloat(window.getComputedStyle(row).columnGap || window.getComputedStyle(row).gap || '22') || 22;
+        return width + gap * originals.length;
+      }
+
+      function jumpToOriginalSet() {
+        var width = originalWidth();
+        if (width) row.scrollLeft = width;
+      }
+
+      frame.classList.add('is-circular');
+      row.dataset.circularReady = 'true';
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(jumpToOriginalSet);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', stabilizeCoTeachingCarousel);
+  } else {
+    stabilizeCoTeachingCarousel();
+  }
+})();

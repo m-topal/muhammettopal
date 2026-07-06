@@ -8386,3 +8386,71 @@ body.cv-modal-open {
     font-size: 1.9rem !important;
   }
 }
+
+/* v144: stabilize co-teaching carousel and keep non-image card hover frames fully visible */
+.teaching-continuous-page .teaching-shelf {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .teaching-shelf-row,
+.teaching-continuous-page .co-teaching-course-row,
+.teaching-slider-frame {
+  overflow-y: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image) {
+  position: relative !important;
+  overflow: visible !important;
+  border: 1px solid rgba(0, 0, 0, .10) !important;
+  box-shadow: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image)::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid rgba(0, 0, 0, .72);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .16s ease, box-shadow .16s ease;
+  z-index: 3;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):focus-visible {
+  border-color: rgba(0, 0, 0, .10) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .10) !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover::after,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible::after {
+  opacity: 1;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"] {
+  opacity: 1 !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+}
+
+.teaching-scroll-section {
+  scroll-margin-top: 145px !important;
+}
