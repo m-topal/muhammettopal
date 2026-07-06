@@ -84,14 +84,7 @@
         <a href="{{ '/' | relative_url }}">Home</a>
         <a class="{% if page.url contains '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About Me</a>
 
-        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">
-          <summary>Research</summary>
-          <div class="nav-dropdown-panel">
-            <a href="{{ '/research/' | relative_url }}">Research</a>
-            <a href="{{ '/publications/' | relative_url }}">Publications</a>
-            <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
-          </div>
-        </details>
+        <a class="{% if page.url contains '/research/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}" href="{{ '/research/' | relative_url }}">Research</a>
 
         <a class="{% if page.url contains '/teaching/' %}active{% endif %}" href="{{ '/teaching/' | relative_url }}">Teaching</a>
         <a class="{% if page.url contains '/extracurricular/' or page.url contains '/service/' %}active{% endif %}" href="{{ '/extracurricular/' | relative_url }}">Service</a>

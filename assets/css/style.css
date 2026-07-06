@@ -8303,3 +8303,86 @@ body.cv-modal-open {
     max-width: 100%;
   }
 }
+
+/* v143: remove Research dropdown, refine Teaching card hover borders, and match slider arrows to lighter video-style controls */
+.teaching-continuous-page .teaching-course-grid,
+.teaching-continuous-page .other-teaching-grid,
+.teaching-continuous-page .teaching-scroll-section,
+.teaching-slider-frame,
+.teaching-slider-frame .co-teaching-course-row {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  margin-top: 0 !important;
+}
+
+.teaching-continuous-page .other-teaching-grid,
+.teaching-continuous-page .teaching-course-grid {
+  padding-top: 8px !important;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  border-color: rgba(0, 0, 0, .72) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .72), 0 14px 30px rgba(0, 0, 0, .11) !important;
+  transform: translateY(-2px) !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  z-index: 6 !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .72), 0 14px 30px rgba(0, 0, 0, .11) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  width: 54px !important;
+  height: 54px !important;
+  border-width: 1px !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  background: rgba(255, 255, 255, .96) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 2.15rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  transform: translateY(-1px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue:hover,
+.teaching-slider-frame .teaching-slider-cue:focus-visible {
+  border-color: rgba(0, 0, 0, .55) !important;
+  background: rgba(255, 255, 255, .99) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .28), 0 18px 36px rgba(0, 0, 0, .18) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-left:hover,
+.teaching-slider-frame .teaching-slider-cue-left:focus-visible {
+  transform: translateY(-50%) translateX(-2px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-right:hover,
+.teaching-slider-frame .teaching-slider-cue-right:focus-visible {
+  transform: translateY(-50%) translateX(2px) !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-slider-frame .teaching-slider-cue {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .teaching-slider-frame .teaching-slider-cue::before {
+    font-size: 1.9rem !important;
+  }
+}
