@@ -49,7 +49,7 @@ permalink: /contact/
               </span>
               <span>Attach</span>
             </label>
-            <input id="contact-attachment" class="message-toolbar-file" type="file" name="attachments[]" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <input id="contact-attachment" class="message-toolbar-file" type="file" name="file" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,image/png,image/jpeg,image/webp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
             <span class="message-toolbar-filename" data-attachment-filename>No files selected</span>
             <button class="message-toolbar-clear" type="button" data-attachment-clear aria-label="Remove all selected attachments" hidden>×</button>
           </div>

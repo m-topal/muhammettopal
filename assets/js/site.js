@@ -1080,6 +1080,8 @@ window.addEventListener("resize", updateReadingProgress);
 (function () {
   var MAX_ATTACHMENTS = 10;
   var LIMIT_MESSAGE = 'You can send maximum 10 attachments.';
+  var MAX_TOTAL_SIZE = 10 * 1024 * 1024;
+  var SIZE_MESSAGE = 'Attachments must be under 10MB total.';
 
   function showAttachmentLimitWarning(message) {
     var existing = document.querySelector('.attachment-limit-popup');
@@ -1168,8 +1170,12 @@ window.addEventListener("resize", updateReadingProgress);
 
       input.addEventListener('change', function () {
         var files = currentFiles();
+        var totalSize = files.reduce(function (sum, file) { return sum + file.size; }, 0);
         if (files.length > MAX_ATTACHMENTS) {
           showAttachmentLimitWarning(LIMIT_MESSAGE);
+          input.value = '';
+        } else if (totalSize > MAX_TOTAL_SIZE) {
+          showAttachmentLimitWarning(SIZE_MESSAGE);
           input.value = '';
         }
         renderAttachmentLabel();
