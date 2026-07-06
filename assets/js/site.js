@@ -120,47 +120,6 @@ window.addEventListener("resize", updateReadingProgress);
   }
 })();
 
-/* v21: local like buttons for blog cards and post pages */
-(function () {
-  function setupPostLikes() {
-    var buttons = document.querySelectorAll('.post-like-button');
-    if (!buttons.length) return;
-
-    buttons.forEach(function (button) {
-      var id = button.getAttribute('data-post-id') || window.location.pathname;
-      var key = 'post-like-' + id;
-      var countKey = 'post-like-count-' + id;
-      var countEl = button.querySelector('.like-count');
-      var liked = localStorage.getItem(key) === '1';
-      var count = parseInt(localStorage.getItem(countKey) || '0', 10);
-
-      function render() {
-        button.classList.toggle('is-liked', liked);
-        var label = liked ? '♥ Liked ' : '♡ Like ';
-        button.childNodes[0].nodeValue = label;
-        if (countEl) countEl.textContent = String(count);
-      }
-
-      render();
-
-      button.addEventListener('click', function () {
-        liked = !liked;
-        count = Math.max(0, count + (liked ? 1 : -1));
-        localStorage.setItem(key, liked ? '1' : '0');
-        localStorage.setItem(countKey, String(count));
-        render();
-      });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupPostLikes);
-  } else {
-    setupPostLikes();
-  }
-})();
-
-
 /* v28: advanced blog search by text, format, tag, date, and sort */
 (function () {
   function setupAdvancedBlogSearch() {

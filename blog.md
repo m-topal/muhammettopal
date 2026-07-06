@@ -107,7 +107,6 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             {% endif %}
 
             <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
               <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
               <div class="share-menu-wrap">
                 <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
@@ -153,7 +152,6 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             {% endif %}
 
             <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
               <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
               <div class="share-menu-wrap">
                 <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
@@ -208,7 +206,6 @@ description: Essays, notes, videos, podcasts, and fragments by Muhammet Topal.
             {% endif %}
 
             <div class="blog-card-actions social-actions" data-post-title="{{ post.title | escape }}" data-post-url="{{ post.url | absolute_url }}">
-              <button class="post-like-button social-action-button" type="button" data-post-id="{{ post.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
               <a class="social-action-button" href="{{ post.url | relative_url }}#comments">Comment</a>
               <div class="share-menu-wrap">
                 <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>

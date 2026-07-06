@@ -1273,11 +1273,6 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   border-color: var(--ink);
 }
 
-.post-like-button.is-liked {
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
-}
 
 .post-page-actions {
   margin-top: 34px;
@@ -1901,8 +1896,7 @@ main{padding-top:42px}.home-intro{max-width:820px;margin:0 auto;text-align:left}
   text-decoration: none;
 }
 
-.social-action-button:hover,
-.social-action-button.is-liked {
+.social-action-button:hover {
   border-color: var(--ink);
   text-decoration: none;
 }
@@ -7237,10 +7231,6 @@ body.appointment-modal-open .appointment-modal {
   text-decoration: none !important;
 }
 
-.blog-page .social-action-button.is-liked,
-.post-page .social-action-button.is-liked {
-  border-color: var(--ink) !important;
-}
 
 
 /* v118: move research archive images into Research Trajectory */

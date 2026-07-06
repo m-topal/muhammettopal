@@ -9,7 +9,6 @@ layout: default
     {{ content }}
 
   <div class="post-page-actions social-actions" data-post-title="{{ page.title | escape }}" data-post-url="{{ page.url | absolute_url }}">
-    <button class="post-like-button social-action-button" type="button" data-post-id="{{ page.url | slugify }}">♡ Like <span class="like-count" aria-live="polite">0</span></button>
     <a class="social-action-button" href="#comments">Comment</a>
     <div class="share-menu-wrap">
       <button class="social-action-button share-menu-toggle" type="button" aria-expanded="false">Share</button>
