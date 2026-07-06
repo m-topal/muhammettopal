@@ -1747,3 +1747,142 @@ window.addEventListener("resize", updateReadingProgress);
     stabilizeCoTeachingCarousel();
   }
 })();
+
+/* v145: replace earlier carousel listeners with a stable circular co-teaching slider */
+(function () {
+  function initStableCoTeachingSlider() {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var row = frame.querySelector('.co-teaching-course-row');
+      var left = frame.querySelector('.teaching-slider-cue-left');
+      var right = frame.querySelector('.teaching-slider-cue-right');
+      if (!row || !left || !right || row.dataset.v145Ready === 'true') return;
+
+      var newLeft = left.cloneNode(true);
+      var newRight = right.cloneNode(true);
+      left.parentNode.replaceChild(newLeft, left);
+      right.parentNode.replaceChild(newRight, right);
+      left = newLeft;
+      right = newRight;
+
+      var originals = Array.prototype.slice.call(row.children).filter(function (card) {
+        return card.dataset.carouselClone !== 'true';
+      });
+      if (originals.length < 2) return;
+
+      Array.prototype.slice.call(row.children).forEach(function (card) {
+        if (card.dataset.carouselClone === 'true') card.remove();
+      });
+
+      function makeClone(card) {
+        var clone = card.cloneNode(true);
+        clone.dataset.carouselClone = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('tabindex', '-1');
+        clone.querySelectorAll('[tabindex]').forEach(function (node) {
+          node.setAttribute('tabindex', '-1');
+        });
+        return clone;
+      }
+
+      var before = document.createDocumentFragment();
+      originals.forEach(function (card) {
+        before.appendChild(makeClone(card));
+      });
+      row.insertBefore(before, originals[0]);
+
+      var after = document.createDocumentFragment();
+      originals.forEach(function (card) {
+        after.appendChild(makeClone(card));
+      });
+      row.appendChild(after);
+
+      function gapSize() {
+        var style = window.getComputedStyle(row);
+        return parseFloat(style.columnGap || style.gap || '22') || 22;
+      }
+
+      function setWidth() {
+        var gap = gapSize();
+        var total = 0;
+        originals.forEach(function (card) {
+          total += card.getBoundingClientRect().width;
+        });
+        return total + gap * originals.length;
+      }
+
+      function stepSize() {
+        var first = originals[0];
+        return first ? Math.round(first.getBoundingClientRect().width + gapSize()) : Math.round(row.clientWidth * 0.8);
+      }
+
+      function jumpToOriginalSet() {
+        var width = setWidth();
+        if (width) row.scrollLeft = width;
+      }
+
+      function normalize() {
+        var width = setWidth();
+        if (!width) return;
+        if (row.scrollLeft < width * 0.5) {
+          row.scrollLeft += width;
+        } else if (row.scrollLeft > width * 1.5) {
+          row.scrollLeft -= width;
+        }
+      }
+
+      function move(direction) {
+        normalize();
+        row.scrollBy({ left: direction * stepSize(), behavior: 'smooth' });
+        window.setTimeout(normalize, 480);
+      }
+
+      left.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        move(-1);
+      }, true);
+
+      right.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        move(1);
+      }, true);
+
+      [left, right].forEach(function (button) {
+        button.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          move(button === right ? 1 : -1);
+        }, true);
+      });
+
+      var timer = null;
+      row.addEventListener('scroll', function () {
+        if (timer) window.clearTimeout(timer);
+        timer = window.setTimeout(normalize, 120);
+      }, { passive: true });
+
+      frame.classList.add('is-circular');
+      row.dataset.circularReady = 'true';
+      row.dataset.v145Ready = 'true';
+
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(jumpToOriginalSet);
+      });
+
+      window.addEventListener('resize', function () {
+        window.setTimeout(jumpToOriginalSet, 100);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStableCoTeachingSlider);
+  } else {
+    initStableCoTeachingSlider();
+  }
+})();
