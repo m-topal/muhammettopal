@@ -1223,3 +1223,14 @@ window.addEventListener("resize", updateReadingProgress);
     initMessageCharacterCounters();
   }
 })();
+
+/* v112: keyboard support for whole Teaching Experience course cards */
+(function () {
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    var trigger = event.target.closest('.teaching-experience-page .teaching-course-card.course-modal-trigger[data-course-modal]');
+    if (!trigger) return;
+    event.preventDefault();
+    trigger.click();
+  });
+})();

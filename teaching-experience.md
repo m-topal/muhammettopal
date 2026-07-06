@@ -21,39 +21,33 @@ permalink: /teaching/experience/
     <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
 
     <div class="teaching-shelf-row instructor-course-row">
-      <article class="teaching-course-card course-card-with-image modal-course-card">
+      <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="political-islam-modal" tabindex="0" role="button" aria-label="Open details for Introduction to Political Islam">
         <div class="course-card-image">
           <img src="{{ '/assets/img/teaching/political-islam-preview.jpeg' | relative_url }}" alt="Collage preview image for Introduction to Political Islam">
         </div>
         <div class="course-card-body">
           <p class="meta">HIST, MENA, POL 385 · University of Arizona</p>
           <h3>Introduction to Political Islam</h3>
-          <p>This course introduces students to major concepts, debates, actors, and historical contexts in the study of political Islam.</p>
-          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="political-islam-modal">View details</button>
         </div>
       </article>
 
-      <article class="teaching-course-card course-card-with-image modal-course-card">
+      <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="minorities-modal" tabindex="0" role="button" aria-label="Open details for Middle East Ethnic and Religious Minorities">
         <div class="course-card-image">
           <img src="{{ '/assets/img/teaching/minorities-preview.jpg' | relative_url }}" alt="Mosque, church, and synagogue architectural detail in Istanbul">
         </div>
         <div class="course-card-body">
           <p class="meta">ANTH, HIST, MENA, JUS, POL, RELI 389 · University of Arizona</p>
           <h3>Middle East Ethnic and Religious Minorities</h3>
-          <p>Histories and contemporary experiences of ethnic and religious minorities in the Middle East through empire, nationalism, citizenship, violence, memory, migration, and coexistence.</p>
-          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="minorities-modal">View details</button>
         </div>
       </article>
 
-      <article class="teaching-course-card course-card-with-image modal-course-card">
+      <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="religion-islam-modal" tabindex="0" role="button" aria-label="Open details for Religion of Islam">
         <div class="course-card-image">
           <img src="{{ '/assets/img/teaching/religion-of-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
         </div>
         <div class="course-card-body">
           <p class="meta">MENA, REL 160B · University of Arizona</p>
           <h3>Religion of Islam</h3>
-          <p>An introduction to Islamic traditions, texts, practices, institutions, and historical debates, with attention to the diversity of Muslim societies across time and place.</p>
-          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="religion-islam-modal">View details</button>
         </div>
       </article>
     </div>
@@ -113,43 +107,81 @@ permalink: /teaching/experience/
     <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
 
     <div class="teaching-shelf-row">
-      <a class="teaching-course-card" href="#middle-eastern-humanities">
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
         <p class="meta">University of Arizona</p>
         <h3>Middle Eastern Humanities</h3>
-        <p>Teaching support in Middle Eastern humanities, discussion, reading, and student work.</p>
-      </a>
+      </article>
 
-      <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card">
+      <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="people-history-modern-middle-east-modal" tabindex="0" role="button" aria-label="Open syllabus for A People’s History of the Modern Middle East">
         <div class="course-card-image">
           <img src="{{ '/assets/img/teaching/people-history-modern-middle-east-preview.png' | relative_url }}" alt="Busy street in late Ottoman Istanbul used as preview for A People’s History of the Modern Middle East">
         </div>
         <div class="course-card-body">
           <p class="meta">HIST/MENA 277B · University of Arizona</p>
           <h3>A People’s History of the Modern Middle East</h3>
-          <p>Teaching support for a modern Middle East history course centered on people, sources, political change, social life, and historical interpretation.</p>
-          <button class="course-card-action course-modal-trigger" type="button" data-course-modal="people-history-modern-middle-east-modal">See syllabus</button>
         </div>
       </article>
 
-      <a class="teaching-course-card" href="#islamic-civilization">
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
         <p class="meta">University of Arizona</p>
         <h3>Islamic Civilization: Traditional and Modern</h3>
-        <p>Teaching support across Islamic studies, historical change, institutions, texts, and traditions.</p>
-      </a>
+      </article>
 
-      <a class="teaching-course-card" href="#what-is-politics">
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0" role="button" aria-label="Open details for What is Politics?">
         <p class="meta">University of Arizona</p>
         <h3>What is Politics?</h3>
-        <p>Teaching support in political thought, concepts, institutions, and public life.</p>
-      </a>
+      </article>
 
-      <a class="teaching-course-card" href="#roman-empire">
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0" role="button" aria-label="Open details for The Roman Empire: Rulers and Ruled">
         <p class="meta">University of Arizona</p>
         <h3>The Roman Empire: Rulers and Ruled</h3>
-        <p>Teaching support in ancient history, empire, rule, society, and historical comparison.</p>
-      </a>
+      </article>
     </div>
   </section>
+
+    <div class="course-modal" id="middle-eastern-humanities-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">University of Arizona</p>
+          <h3 id="middle-eastern-humanities-title">Middle Eastern Humanities</h3>
+          <p>In this course, I supported instruction in Middle Eastern humanities through discussion facilitation, reading guidance, office hours, grading, and feedback on student work. The course introduced students to cultural, historical, literary, and religious materials from the Middle East while helping them practice close reading and comparative interpretation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-modal" id="islamic-civilization-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">University of Arizona</p>
+          <h3 id="islamic-civilization-title">Islamic Civilization: Traditional and Modern</h3>
+          <p>In this course, I assisted students in studying Islamic civilization across traditional and modern contexts. My work included supporting lectures and discussions, grading written assignments, holding office hours, and helping students connect texts, institutions, historical change, and religious traditions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-modal" id="what-is-politics-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">University of Arizona</p>
+          <h3 id="what-is-politics-title">What is Politics?</h3>
+          <p>In this course, I supported instruction in political thought, institutions, concepts, and public life. I worked with students on reading difficult texts, clarifying conceptual vocabulary, developing arguments, and connecting political ideas to historical and contemporary examples.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-modal" id="roman-empire-modal" hidden>
+      <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
+        <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+        <div class="course-modal-text">
+          <p class="meta">University of Arizona</p>
+          <h3 id="roman-empire-title">The Roman Empire: Rulers and Ruled</h3>
+          <p>In this course, I supported instruction on the Roman Empire with attention to rule, society, power, and historical comparison. My work involved grading, student support, and helping students understand ancient sources, imperial structures, and relations between rulers and ruled.</p>
+        </div>
+      </div>
+    </div>
 
     <div class="course-modal syllabus-modal" id="people-history-modern-middle-east-modal" hidden>
       <div class="course-modal-dialog syllabus-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="people-history-modern-middle-east-title">
@@ -179,25 +211,55 @@ permalink: /teaching/experience/
     </div>
 
     <div class="teaching-shelf-row">
-      <article class="teaching-course-card">
-        <p class="meta"><a href="https://akademieylul.com/" target="_blank" rel="noopener">Eylül Academy</a> · Istanbul</p>
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
+        <p class="meta">Eylül Academy · Istanbul</p>
         <h3>World History</h3>
-        <p>Instruction for senior high school students and recent graduates preparing for competitive university entrance exams.</p>
       </article>
 
-      <article class="teaching-course-card">
-        <p class="meta"><a href="https://akademieylul.com/" target="_blank" rel="noopener">Eylül Academy</a> · Istanbul</p>
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
+        <p class="meta">Eylül Academy · Istanbul</p>
         <h3>Human Geography</h3>
-        <p>Conceptual and exam oriented instruction connecting space, society, population, environment, and historical change.</p>
       </article>
 
-      <article class="teaching-course-card">
-        <p class="meta"><a href="https://akademieylul.com/" target="_blank" rel="noopener">Eylül Academy</a> · Istanbul</p>
+      <article class="teaching-course-card course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
+        <p class="meta">Eylül Academy · Istanbul</p>
         <h3>Continental Philosophy</h3>
-        <p>Teaching difficult concepts clearly while moving between broad intellectual narratives and concrete examples.</p>
       </article>
     </div>
   </section>
+
+  <div class="course-modal" id="world-history-modal" hidden>
+    <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="world-history-title">
+      <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+      <div class="course-modal-text">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3 id="world-history-title">World History</h3>
+        <p>I taught world history to senior high school students and recent graduates preparing for competitive university entrance exams. The course combined broad historical narratives with focused explanation of key concepts, chronologies, and patterns of political, social, and cultural change.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-modal" id="human-geography-modal" hidden>
+    <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="human-geography-title">
+      <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+      <div class="course-modal-text">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3 id="human-geography-title">Human Geography</h3>
+        <p>I taught human geography through conceptual and exam oriented instruction connecting space, society, population, environment, and historical change. The course emphasized clear explanation, visual reasoning, and the translation of broad geographic concepts into concrete examples.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-modal" id="continental-philosophy-modal" hidden>
+    <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="continental-philosophy-title">
+      <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
+      <div class="course-modal-text">
+        <p class="meta">Eylül Academy · Istanbul</p>
+        <h3 id="continental-philosophy-title">Continental Philosophy</h3>
+        <p>I taught continental philosophy by helping students move between broad intellectual narratives and concrete examples. The course required translating difficult concepts into accessible language while preserving their historical and theoretical complexity.</p>
+      </div>
+    </div>
+  </div>
 
 <div class="teaching-detail-notes teaching-approach-block">
     <div class="teaching-shelf-heading teaching-approach-heading">

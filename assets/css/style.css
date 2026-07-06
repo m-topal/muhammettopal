@@ -7130,3 +7130,42 @@ body.appointment-modal-open .appointment-modal {
     margin-top: 28px;
   }
 }
+
+/* v112: Teaching Experience cards open from the whole card and keep details in modals */
+.teaching-experience-page .teaching-course-card.course-modal-trigger {
+  cursor: pointer !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease !important;
+  will-change: transform;
+}
+
+.teaching-experience-page .teaching-course-card.course-modal-trigger:hover,
+.teaching-experience-page .teaching-course-card.course-modal-trigger:focus-visible {
+  border-color: var(--ink) !important;
+  box-shadow: inset 0 0 0 1px var(--ink), 0 14px 30px rgba(0, 0, 0, 0.10) !important;
+  transform: translateY(-3px) !important;
+  outline: none !important;
+}
+
+.teaching-experience-page .teaching-course-card.course-modal-trigger:hover .course-card-image,
+.teaching-experience-page .teaching-course-card.course-modal-trigger:focus-visible .course-card-image {
+  border-bottom-color: var(--ink) !important;
+}
+
+.teaching-experience-page .teaching-course-card.course-modal-trigger h3 {
+  margin-bottom: 0 !important;
+}
+
+.teaching-experience-page .teaching-course-card.course-modal-trigger .course-card-body {
+  min-height: 124px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.teaching-experience-page .teaching-course-card.course-modal-trigger:not(.course-card-with-image):not(.modal-course-card) {
+  min-height: 150px !important;
+}
+
+.teaching-experience-page .course-modal-text p {
+  text-indent: 0;
+}
