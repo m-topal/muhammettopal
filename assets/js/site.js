@@ -1412,3 +1412,123 @@ window.addEventListener("resize", updateReadingProgress);
     init();
   }
 })();
+
+/* v134: make co-teaching carousel circular and keep Teaching section nav clearly framed */
+(function () {
+  function initCircularTeachingCarousel() {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var row = frame.querySelector('.co-teaching-course-row');
+      var left = frame.querySelector('.teaching-slider-cue-left');
+      var right = frame.querySelector('.teaching-slider-cue-right');
+      if (!row || !left || !right || row.dataset.circularReady === 'true') return;
+
+      var originalCards = Array.prototype.slice.call(row.children);
+      if (originalCards.length < 2) return;
+
+      var before = originalCards.map(function (card) {
+        var clone = card.cloneNode(true);
+        clone.dataset.carouselClone = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('[tabindex]').forEach(function (node) { node.setAttribute('tabindex', '-1'); });
+        return clone;
+      });
+      var after = originalCards.map(function (card) {
+        var clone = card.cloneNode(true);
+        clone.dataset.carouselClone = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('[tabindex]').forEach(function (node) { node.setAttribute('tabindex', '-1'); });
+        return clone;
+      });
+
+      before.forEach(function (clone) { row.insertBefore(clone, row.firstChild); });
+      after.forEach(function (clone) { row.appendChild(clone); });
+
+      frame.classList.add('is-circular');
+      row.dataset.circularReady = 'true';
+
+      function originalWidth() {
+        var width = 0;
+        originalCards.forEach(function (card) {
+          width += card.getBoundingClientRect().width;
+        });
+        var gap = parseFloat(window.getComputedStyle(row).columnGap || window.getComputedStyle(row).gap || '0') || 0;
+        return width + gap * originalCards.length;
+      }
+
+      function cardStep() {
+        var card = originalCards[0];
+        var gap = parseFloat(window.getComputedStyle(row).columnGap || window.getComputedStyle(row).gap || '22') || 22;
+        return card ? Math.round(card.getBoundingClientRect().width + gap) : Math.round(row.clientWidth * .8);
+      }
+
+      function jumpToMiddle() {
+        row.scrollLeft = originalWidth();
+      }
+
+      function normalizePosition() {
+        var width = originalWidth();
+        if (!width) return;
+        if (row.scrollLeft < width * .35) {
+          row.scrollLeft += width;
+        } else if (row.scrollLeft > width * 1.65) {
+          row.scrollLeft -= width;
+        }
+      }
+
+      window.setTimeout(jumpToMiddle, 50);
+
+      var scrollTimer = null;
+      row.addEventListener('scroll', function () {
+        if (scrollTimer) window.clearTimeout(scrollTimer);
+        scrollTimer = window.setTimeout(normalizePosition, 90);
+      }, { passive: true });
+
+      window.addEventListener('resize', function () {
+        window.setTimeout(jumpToMiddle, 80);
+      });
+
+      function move(direction) {
+        normalizePosition();
+        row.scrollBy({ left: direction * cardStep(), behavior: 'smooth' });
+        window.setTimeout(normalizePosition, 420);
+      }
+
+      [left, right].forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          event.stopPropagation();
+          move(button === right ? 1 : -1);
+        }, true);
+        button.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          event.stopPropagation();
+          move(button === right ? 1 : -1);
+        }, true);
+      });
+    });
+  }
+
+  function initClearTeachingNavOnScroll() {
+    var nav = document.querySelector('.teaching-scroll-nav');
+    if (!nav) return;
+    function update() {
+      nav.classList.toggle('is-sticky-active', window.scrollY > 80);
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  function init() {
+    initCircularTeachingCarousel();
+    initClearTeachingNavOnScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
