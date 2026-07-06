@@ -1886,3 +1886,110 @@ window.addEventListener("resize", updateReadingProgress);
     initStableCoTeachingSlider();
   }
 })();
+
+/* v146: final smooth circular co-teaching carousel, with partial next-card visibility */
+(function () {
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
+  }
+
+  ready(function () {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var row = frame.querySelector('.co-teaching-course-row');
+      var left = frame.querySelector('.teaching-slider-cue-left');
+      var right = frame.querySelector('.teaching-slider-cue-right');
+      if (!row || !left || !right) return;
+
+      /* Remove earlier experimental clones, then build one clean infinite strip. */
+      Array.from(row.querySelectorAll('[data-carousel-clone="true"]')).forEach(function (clone) {
+        clone.remove();
+      });
+
+      var originals = Array.from(row.children).filter(function (el) {
+        return el.classList && el.classList.contains('teaching-course-card');
+      });
+      if (originals.length < 2) return;
+
+      row.dataset.circularReady = 'v146';
+      frame.classList.add('is-circular', 'is-v146-carousel');
+
+      function cloneCard(card) {
+        var clone = card.cloneNode(true);
+        clone.setAttribute('data-carousel-clone', 'true');
+        clone.setAttribute('aria-hidden', 'true');
+        clone.tabIndex = -1;
+        return clone;
+      }
+
+      var before = originals.map(cloneCard);
+      var after = originals.map(cloneCard);
+      before.reverse().forEach(function (clone) { row.insertBefore(clone, row.firstChild); });
+      after.forEach(function (clone) { row.appendChild(clone); });
+
+      function cardStep() {
+        var card = row.querySelector('.teaching-course-card');
+        if (!card) return Math.round(row.clientWidth * 0.86);
+        var style = window.getComputedStyle(row);
+        var gap = parseFloat(style.columnGap || style.gap || '28') || 28;
+        return Math.round(card.getBoundingClientRect().width + gap);
+      }
+
+      function setWidth() {
+        return cardStep() * originals.length;
+      }
+
+      function placeAtMiddle() {
+        row.scrollLeft = setWidth();
+      }
+
+      function normalize() {
+        var width = setWidth();
+        if (!width) return;
+        if (row.scrollLeft < width * 0.42) {
+          row.scrollLeft += width;
+        } else if (row.scrollLeft > width * 1.58) {
+          row.scrollLeft -= width;
+        }
+      }
+
+      function slide(direction) {
+        normalize();
+        row.scrollBy({ left: direction * cardStep(), behavior: 'smooth' });
+        window.setTimeout(normalize, 430);
+        window.setTimeout(normalize, 760);
+      }
+
+      [left, right].forEach(function (button) {
+        var replacement = button.cloneNode(true);
+        button.parentNode.replaceChild(replacement, button);
+        if (button === left) left = replacement;
+        if (button === right) right = replacement;
+      });
+
+      left.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        slide(-1);
+      }, true);
+
+      right.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        slide(1);
+      }, true);
+
+      row.addEventListener('scroll', function () {
+        window.clearTimeout(row._v146NormalizeTimer);
+        row._v146NormalizeTimer = window.setTimeout(normalize, 120);
+      }, { passive: true });
+
+      window.setTimeout(placeAtMiddle, 0);
+      window.setTimeout(placeAtMiddle, 180);
+      window.addEventListener('resize', function () {
+        window.clearTimeout(row._v146ResizeTimer);
+        row._v146ResizeTimer = window.setTimeout(placeAtMiddle, 180);
+      });
+    });
+  });
+})();
