@@ -7193,3 +7193,51 @@ body.appointment-modal-open .appointment-modal {
     grid-column: auto;
   }
 }
+
+/* v117: stronger video card lift and separate social action hover states */
+.blog-page .video-card:hover,
+.blog-page .video-card:focus-within,
+.blog-page .video-card.blog-card-clickable:hover,
+.blog-page .video-card.blog-card-clickable:focus-visible {
+  border-color: var(--ink) !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.10) !important;
+  transform: translateY(-4px) !important;
+}
+
+.blog-page .video-card {
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+  will-change: transform;
+}
+
+.blog-page .social-action-button,
+.blog-page .social-actions a.social-action-button,
+.blog-page .social-actions button.social-action-button,
+.post-page .social-action-button,
+.post-page .social-actions a.social-action-button,
+.post-page .social-actions button.social-action-button {
+  transition: border-color .16s ease, background-color .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+
+.blog-page .social-action-button:hover,
+.blog-page .social-action-button:focus-visible,
+.blog-page .social-actions a.social-action-button:hover,
+.blog-page .social-actions a.social-action-button:focus-visible,
+.blog-page .social-actions button.social-action-button:hover,
+.blog-page .social-actions button.social-action-button:focus-visible,
+.post-page .social-action-button:hover,
+.post-page .social-action-button:focus-visible,
+.post-page .social-actions a.social-action-button:hover,
+.post-page .social-actions a.social-action-button:focus-visible,
+.post-page .social-actions button.social-action-button:hover,
+.post-page .social-actions button.social-action-button:focus-visible {
+  border-color: var(--ink) !important;
+  background: #fff !important;
+  box-shadow: 0 5px 13px rgba(0,0,0,.07);
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.blog-page .social-action-button.is-liked,
+.post-page .social-action-button.is-liked {
+  border-color: var(--ink) !important;
+}
