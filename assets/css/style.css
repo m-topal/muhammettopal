@@ -8042,3 +8042,18 @@ body.cv-modal-open {
   margin-top: 12px !important;
   text-indent: 0 !important;
 }
+
+/* v138: make Teaching intro and certificate flow as single balanced paragraphs */
+.teaching-continuous-page .teaching-continuous-intro > p,
+.teaching-continuous-page .certificate-main-text > p:not(.certificate-website-line) {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+.teaching-continuous-page .certificate-main-text .certificate-website-line {
+  text-align: right !important;
+  margin-top: 14px !important;
+  margin-bottom: 0 !important;
+  text-indent: 0 !important;
+}

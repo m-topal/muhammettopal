@@ -8,9 +8,7 @@ permalink: /teaching/
   <h1>Teaching</h1>
 
   <div class="teaching-continuous-intro two-column-prose paragraph-tight-indent">
-    <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
-
-    <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
+    <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives. I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
   </div>
 
   <nav class="teaching-scroll-nav" aria-label="Teaching page sections">
@@ -284,9 +282,7 @@ permalink: /teaching/
       <h2>College Teaching Certificate</h2>
     </div>
     <div class="prose two-column-prose certificate-main-text paragraph-tight-indent">
-        <p>At the University of Arizona, I completed the Graduate Certificate in College Teaching. The certificate gave formal structure to my teaching experience and helped me think more systematically about course design, classroom practice, assessment, student participation, and the use of educational technologies.</p>
-
-        <p>The certificate coursework and related teaching development work included <strong>Course Design</strong>, <strong>Learner Centered Teaching</strong>, <strong>Teaching Sensitive Subjects</strong>, <strong>Teaching and Learning Technologies</strong>, <strong>Teaching as Research</strong>, and <strong>College Teaching Practice</strong>. Together, these areas connected practical classroom experience with the scholarship of teaching and learning, from syllabus construction and discussion design to reflective assessment and accessible course materials.</p>
+        <p>At the University of Arizona, I completed the Graduate Certificate in College Teaching. The certificate gave formal structure to my teaching experience and helped me think more systematically about course design, classroom practice, assessment, student participation, and the use of educational technologies. The certificate coursework and related teaching development work included <strong>Course Design</strong>, <strong>Learner Centered Teaching</strong>, <strong>Teaching Sensitive Subjects</strong>, <strong>Teaching and Learning Technologies</strong>, <strong>Teaching as Research</strong>, and <strong>College Teaching Practice</strong>. Together, these areas connected practical classroom experience with the scholarship of teaching and learning, from syllabus construction and discussion design to reflective assessment and accessible course materials.</p>
 
         <p class="certificate-website-line"><a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a></p>
 
