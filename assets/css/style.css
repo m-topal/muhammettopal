@@ -8242,3 +8242,64 @@ body.cv-modal-open {
     font-size: 2rem;
   }
 }
+
+/* v142: continuous Research page and co-teaching hover-frame correction */
+.research-continuous-page .research-continuous-intro {
+  margin-bottom: 1.15rem;
+  column-fill: balance;
+  -webkit-column-fill: balance;
+}
+
+.research-continuous-page .research-scroll-nav {
+  max-width: 980px;
+}
+
+.research-continuous-page .research-scroll-section:first-of-type {
+  border-top: 0;
+}
+
+.research-continuous-page .research-scroll-section > .prose:first-of-type,
+.research-continuous-page .research-scroll-section > .publication-category:first-of-type,
+.research-continuous-page .research-scroll-section > .slideshow:first-of-type {
+  margin-top: .75rem;
+}
+
+.research-continuous-page .research-subsection-heading {
+  margin: 2.2rem 0 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+}
+
+.research-continuous-page .research-subsection-heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  line-height: 1.08;
+}
+
+.research-continuous-page .subnav,
+.research-continuous-page .option-grid {
+  display: none !important;
+}
+
+.co-teaching-course-row {
+  padding-top: 12px !important;
+  margin-top: -4px;
+}
+
+.teaching-slider-frame {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  z-index: 6 !important;
+  box-shadow: inset 0 0 0 2px var(--ink), 0 18px 38px rgba(0, 0, 0, .15) !important;
+}
+
+@media (max-width: 760px) {
+  .research-continuous-page .research-scroll-nav {
+    max-width: 100%;
+  }
+}
