@@ -7169,3 +7169,27 @@ body.appointment-modal-open .appointment-modal {
 .teaching-experience-page .course-modal-text p {
   text-indent: 0;
 }
+
+/* v113: Portfolio now includes Academic Service, and Diversions is a direct nav item */
+.nav-directory-grid-five {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.nav-directory-grid-five .nav-directory-card {
+  grid-column: span 3;
+}
+
+.nav-directory-grid-five .nav-directory-card:nth-child(5) {
+  grid-column: 2 / span 4;
+}
+
+@media (max-width: 760px) {
+  .nav-directory-grid-five {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-directory-grid-five .nav-directory-card,
+  .nav-directory-grid-five .nav-directory-card:nth-child(5) {
+    grid-column: auto;
+  }
+}

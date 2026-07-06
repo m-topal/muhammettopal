@@ -77,23 +77,18 @@
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About Me</a>
 
-        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}">
+        <details class="nav-dropdown {% if page.url contains '/research/' or page.url contains '/teaching/' or page.url contains '/publications/' or page.url contains '/presentations/' or page.url contains '/extracurricular/' %}active{% endif %}">
           <summary data-nav-target="{{ '/portfolio/' | relative_url }}">Portfolio</summary>
           <div class="nav-dropdown-panel">
             <a href="{{ '/research/' | relative_url }}">Research</a>
             <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
             <a href="{{ '/publications/' | relative_url }}">Publications</a>
             <a href="{{ '/presentations/' | relative_url }}">Presentations</a>
+            <a href="{{ '/extracurricular/' | relative_url }}">Academic Service</a>
           </div>
         </details>
 
-        <details class="nav-dropdown {% if page.url contains '/extracurricular/' or page.url contains '/diversions/' %}active{% endif %}">
-          <summary data-nav-target="{{ '/extra-curricular/' | relative_url }}">Extra Curricular</summary>
-          <div class="nav-dropdown-panel">
-            <a href="{{ '/extracurricular/' | relative_url }}">Academic Service</a>
-            <a href="{{ '/diversions/' | relative_url }}">Diversions</a>
-          </div>
-        </details>
+        <a class="{% if page.url contains '/diversions/' %}active{% endif %}" href="{{ '/diversions/' | relative_url }}">Diversions</a>
 
         <a href="{{ '/cv/' | relative_url }}">CV</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>

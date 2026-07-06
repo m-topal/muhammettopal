@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Extra Curricular
+title: Academic Service
 permalink: /extracurricular/
 ---
 <article class="page wide extracurricular-page">
-  <p class="label">Extra Curricular</p>
-  <h1>Extra Curricular Activities</h1>
+  <p class="label">Portfolio</p>
+  <h1>Academic Service</h1>
 
   <div class="center-image-text-wrap organic-center-wrap extra-center-image-wrap balanced-reading-wrap v84-through-wrap">
     <figure class="center-image-middle extra-breakout-workshop creative-breakout-figure js-lightbox-figure">
