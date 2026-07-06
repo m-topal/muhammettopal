@@ -8802,3 +8802,37 @@ body.cv-modal-open {
     right: -24px !important;
   }
 }
+
+/* v150: recenter smaller Co-Teaching slider arrows inside circles */
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  display: block !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 !important;
+  border-style: solid !important;
+  border-color: #111 !important;
+  border-width: 0 2.45px 2.45px 0 !important;
+  transform-origin: 50% 50% !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-left::before {
+  transform: translate(-42%, -50%) rotate(135deg) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-right::before {
+  transform: translate(-58%, -50%) rotate(-45deg) !important;
+}
