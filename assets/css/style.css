@@ -7965,3 +7965,51 @@ body.cv-modal-open {
     font-size: .68rem;
   }
 }
+
+/* v136: slightly more transparent Teaching section nav and black active tab */
+.teaching-scroll-nav {
+  background: rgba(255, 255, 255, .66) !important;
+  border-color: rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .075) !important;
+  backdrop-filter: blur(16px) saturate(1.06) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.06) !important;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(255, 255, 255, .74) !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-scroll-nav a.active,
+.teaching-scroll-nav a[aria-current="true"] {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .18) !important;
+}
+
+.teaching-scroll-nav a.active:hover,
+.teaching-scroll-nav a.active:focus-visible,
+.teaching-scroll-nav a[aria-current="true"]:hover,
+.teaching-scroll-nav a[aria-current="true"]:focus-visible {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    background: rgba(255, 255, 255, .72) !important;
+  }
+
+  .teaching-scroll-nav:hover,
+  .teaching-scroll-nav:focus-within,
+  .teaching-scroll-nav.is-scrolling,
+  .teaching-scroll-nav.is-sticky-active {
+    background: rgba(255, 255, 255, .80) !important;
+  }
+}
