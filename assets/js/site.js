@@ -1076,7 +1076,7 @@ window.addEventListener("resize", updateReadingProgress);
 })();
 
 
-/* v108: multiple removable attachments on contact form, maximum 10 */
+/* v115: FormSubmit-compatible multiple attachments, removable chips, maximum 10 */
 (function () {
   var MAX_ATTACHMENTS = 10;
   var LIMIT_MESSAGE = 'You can send maximum 10 attachments.';
@@ -1105,6 +1105,27 @@ window.addEventListener("resize", updateReadingProgress);
     });
   }
 
+  function fileKey(file) {
+    return [file.name, file.size, file.lastModified].join('::');
+  }
+
+  function mergeFiles(existingFiles, incomingFiles) {
+    var seen = new Set(existingFiles.map(fileKey));
+    var merged = existingFiles.slice();
+    incomingFiles.forEach(function (file) {
+      var key = fileKey(file);
+      if (!seen.has(key)) {
+        seen.add(key);
+        merged.push(file);
+      }
+    });
+    return merged;
+  }
+
+  function totalFileSize(files) {
+    return files.reduce(function (sum, file) { return sum + file.size; }, 0);
+  }
+
   function fileListFromArray(files) {
     var dt = new DataTransfer();
     files.forEach(function (file) { dt.items.add(file); });
@@ -1118,19 +1139,16 @@ window.addEventListener("resize", updateReadingProgress);
       var clear = toolbar ? toolbar.querySelector('[data-attachment-clear]') : null;
       if (!output) return;
 
-      function currentFiles() {
-        return input.files ? Array.prototype.slice.call(input.files) : [];
-      }
+      var selectedFiles = [];
 
-      function setFiles(files) {
-        input.files = fileListFromArray(files);
+      function syncInputFiles() {
+        input.files = fileListFromArray(selectedFiles);
       }
 
       function renderAttachmentLabel() {
-        var files = currentFiles();
         output.innerHTML = '';
 
-        if (!files.length) {
+        if (!selectedFiles.length) {
           output.textContent = 'No files selected';
           if (clear) clear.hidden = true;
           return;
@@ -1139,7 +1157,7 @@ window.addEventListener("resize", updateReadingProgress);
         var list = document.createElement('span');
         list.className = 'message-toolbar-file-list';
 
-        files.forEach(function (file, index) {
+        selectedFiles.forEach(function (file, index) {
           var chip = document.createElement('span');
           chip.className = 'message-toolbar-file-chip';
 
@@ -1153,10 +1171,9 @@ window.addEventListener("resize", updateReadingProgress);
           remove.setAttribute('aria-label', 'Remove ' + file.name);
           remove.textContent = '×';
           remove.addEventListener('click', function () {
-            var updated = currentFiles().filter(function (_file, i) { return i !== index; });
-            setFiles(updated);
+            selectedFiles = selectedFiles.filter(function (_file, i) { return i !== index; });
+            syncInputFiles();
             renderAttachmentLabel();
-            input.dispatchEvent(new Event('change', { bubbles: true }));
           });
 
           chip.appendChild(name);
@@ -1169,23 +1186,34 @@ window.addEventListener("resize", updateReadingProgress);
       }
 
       input.addEventListener('change', function () {
-        var files = currentFiles();
-        var totalSize = files.reduce(function (sum, file) { return sum + file.size; }, 0);
-        if (files.length > MAX_ATTACHMENTS) {
+        var incomingFiles = input.files ? Array.prototype.slice.call(input.files) : [];
+        var merged = mergeFiles(selectedFiles, incomingFiles);
+
+        if (merged.length > MAX_ATTACHMENTS) {
           showAttachmentLimitWarning(LIMIT_MESSAGE);
-          input.value = '';
-        } else if (totalSize > MAX_TOTAL_SIZE) {
-          showAttachmentLimitWarning(SIZE_MESSAGE);
-          input.value = '';
+          syncInputFiles();
+          renderAttachmentLabel();
+          return;
         }
+
+        if (totalFileSize(merged) > MAX_TOTAL_SIZE) {
+          showAttachmentLimitWarning(SIZE_MESSAGE);
+          syncInputFiles();
+          renderAttachmentLabel();
+          return;
+        }
+
+        selectedFiles = merged;
+        syncInputFiles();
         renderAttachmentLabel();
       });
 
       if (clear) {
         clear.addEventListener('click', function () {
+          selectedFiles = [];
           input.value = '';
+          syncInputFiles();
           renderAttachmentLabel();
-          input.dispatchEvent(new Event('change', { bubbles: true }));
         });
       }
 
