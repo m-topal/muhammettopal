@@ -1329,3 +1329,27 @@ window.addEventListener("resize", updateReadingProgress);
     setupTeachingContinuousScroll();
   }
 })();
+
+/* v132: keep Teaching section bar visually separated while scrolling */
+(function () {
+  function setupTeachingScrollNavVisibility() {
+    var nav = document.querySelector('.teaching-scroll-nav');
+    if (!nav) return;
+    var timer = null;
+    function markScrolling() {
+      nav.classList.add('is-scrolling');
+      if (timer) window.clearTimeout(timer);
+      timer = window.setTimeout(function () {
+        nav.classList.remove('is-scrolling');
+      }, 850);
+    }
+    window.addEventListener('scroll', markScrolling, { passive: true });
+    markScrolling();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTeachingScrollNavVisibility);
+  } else {
+    setupTeachingScrollNavVisibility();
+  }
+})();

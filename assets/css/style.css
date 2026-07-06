@@ -7698,3 +7698,138 @@ body.cv-modal-open {
     grid-auto-columns: minmax(260px, 82vw) !important;
   }
 }
+
+/* v132: make Teaching section nav visible while scrolling and add carousel cues */
+.teaching-scroll-nav {
+  border-color: rgba(0, 0, 0, .07);
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .035);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling {
+  border-color: rgba(0, 0, 0, .11);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.teaching-scroll-nav a.active {
+  border-color: rgba(0, 0, 0, .22);
+  background: #fff;
+  color: #111;
+  box-shadow: 0 9px 22px rgba(0, 0, 0, .08);
+}
+
+.teaching-slider-frame {
+  position: relative;
+  width: 100%;
+  margin: .25rem 0 1.4rem;
+}
+
+.teaching-slider-frame::before,
+.teaching-slider-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 16px;
+  width: 56px;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity .18s ease;
+}
+
+.teaching-slider-frame::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.96), rgba(255,255,255,0));
+}
+
+.teaching-slider-frame::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(255,255,255,.96), rgba(255,255,255,0));
+}
+
+.teaching-slider-cue {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, .12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .92);
+  color: #111;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1;
+  box-shadow: 0 9px 22px rgba(0, 0, 0, .08);
+  pointer-events: none;
+}
+
+.teaching-slider-cue-left {
+  left: 10px;
+}
+
+.teaching-slider-cue-right {
+  right: 10px;
+}
+
+.teaching-slider-frame:hover .teaching-slider-cue,
+.teaching-slider-frame:focus-within .teaching-slider-cue {
+  border-color: rgba(0, 0, 0, .2);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, .11);
+}
+
+.teaching-slider-frame .co-teaching-course-row {
+  padding-left: 38px !important;
+  padding-right: 38px !important;
+}
+
+.teaching-slider-frame .co-teaching-course-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.teaching-slider-frame .co-teaching-course-row::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .04);
+  border-radius: 999px;
+}
+
+.teaching-slider-frame .co-teaching-course-row::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .18);
+  border-radius: 999px;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    position: sticky;
+    top: 58px;
+    border-color: rgba(0, 0, 0, .07);
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .045);
+    padding: .35rem .35rem .45rem;
+  }
+
+  .teaching-slider-frame::before,
+  .teaching-slider-frame::after {
+    width: 38px;
+  }
+
+  .teaching-slider-cue {
+    width: 28px;
+    height: 28px;
+    font-size: 1.35rem;
+  }
+
+  .teaching-slider-frame .co-teaching-course-row {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
