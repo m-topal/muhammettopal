@@ -1076,14 +1076,13 @@ window.addEventListener("resize", updateReadingProgress);
 })();
 
 
-/* v115: FormSubmit-compatible multiple attachments, removable chips, maximum 10 */
+/* v116: FormSubmit-compatible single attachment with removable chip, maximum 10MB */
 (function () {
-  var MAX_ATTACHMENTS = 10;
-  var LIMIT_MESSAGE = 'You can send maximum 10 attachments.';
+  var SINGLE_FILE_MESSAGE = 'Please add your attachments as a single file, max 10MB.';
   var MAX_TOTAL_SIZE = 10 * 1024 * 1024;
-  var SIZE_MESSAGE = 'Attachments must be under 10MB total.';
+  var SIZE_MESSAGE = 'Attachment must be under 10MB.';
 
-  function showAttachmentLimitWarning(message) {
+  function showAttachmentWarning(message) {
     var existing = document.querySelector('.attachment-limit-popup');
     if (existing) existing.remove();
 
@@ -1097,33 +1096,12 @@ window.addEventListener("resize", updateReadingProgress);
     var timer = window.setTimeout(function () {
       popup.classList.add('is-hiding');
       window.setTimeout(function () { popup.remove(); }, 180);
-    }, 3200);
+    }, 3600);
 
     close.addEventListener('click', function () {
       window.clearTimeout(timer);
       popup.remove();
     });
-  }
-
-  function fileKey(file) {
-    return [file.name, file.size, file.lastModified].join('::');
-  }
-
-  function mergeFiles(existingFiles, incomingFiles) {
-    var seen = new Set(existingFiles.map(fileKey));
-    var merged = existingFiles.slice();
-    incomingFiles.forEach(function (file) {
-      var key = fileKey(file);
-      if (!seen.has(key)) {
-        seen.add(key);
-        merged.push(file);
-      }
-    });
-    return merged;
-  }
-
-  function totalFileSize(files) {
-    return files.reduce(function (sum, file) { return sum + file.size; }, 0);
   }
 
   function fileListFromArray(files) {
@@ -1139,17 +1117,17 @@ window.addEventListener("resize", updateReadingProgress);
       var clear = toolbar ? toolbar.querySelector('[data-attachment-clear]') : null;
       if (!output) return;
 
-      var selectedFiles = [];
+      var selectedFile = null;
 
-      function syncInputFiles() {
-        input.files = fileListFromArray(selectedFiles);
+      function syncInputFile() {
+        input.files = selectedFile ? fileListFromArray([selectedFile]) : fileListFromArray([]);
       }
 
       function renderAttachmentLabel() {
         output.innerHTML = '';
 
-        if (!selectedFiles.length) {
-          output.textContent = 'No files selected';
+        if (!selectedFile) {
+          output.textContent = 'No file selected';
           if (clear) clear.hidden = true;
           return;
         }
@@ -1157,62 +1135,76 @@ window.addEventListener("resize", updateReadingProgress);
         var list = document.createElement('span');
         list.className = 'message-toolbar-file-list';
 
-        selectedFiles.forEach(function (file, index) {
-          var chip = document.createElement('span');
-          chip.className = 'message-toolbar-file-chip';
+        var chip = document.createElement('span');
+        chip.className = 'message-toolbar-file-chip';
 
-          var name = document.createElement('span');
-          name.className = 'message-toolbar-file-name';
-          name.textContent = file.name;
+        var name = document.createElement('span');
+        name.className = 'message-toolbar-file-name';
+        name.textContent = selectedFile.name;
 
-          var remove = document.createElement('button');
-          remove.type = 'button';
-          remove.className = 'message-toolbar-file-remove';
-          remove.setAttribute('aria-label', 'Remove ' + file.name);
-          remove.textContent = '×';
-          remove.addEventListener('click', function () {
-            selectedFiles = selectedFiles.filter(function (_file, i) { return i !== index; });
-            syncInputFiles();
-            renderAttachmentLabel();
-          });
-
-          chip.appendChild(name);
-          chip.appendChild(remove);
-          list.appendChild(chip);
+        var remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'message-toolbar-file-remove';
+        remove.setAttribute('aria-label', 'Remove ' + selectedFile.name);
+        remove.textContent = '×';
+        remove.addEventListener('click', function () {
+          selectedFile = null;
+          input.value = '';
+          syncInputFile();
+          renderAttachmentLabel();
         });
 
+        chip.appendChild(name);
+        chip.appendChild(remove);
+        list.appendChild(chip);
         output.appendChild(list);
         if (clear) clear.hidden = false;
       }
 
       input.addEventListener('change', function () {
         var incomingFiles = input.files ? Array.prototype.slice.call(input.files) : [];
-        var merged = mergeFiles(selectedFiles, incomingFiles);
 
-        if (merged.length > MAX_ATTACHMENTS) {
-          showAttachmentLimitWarning(LIMIT_MESSAGE);
-          syncInputFiles();
+        if (incomingFiles.length > 1) {
+          showAttachmentWarning(SINGLE_FILE_MESSAGE);
+          input.value = '';
+          syncInputFile();
           renderAttachmentLabel();
           return;
         }
 
-        if (totalFileSize(merged) > MAX_TOTAL_SIZE) {
-          showAttachmentLimitWarning(SIZE_MESSAGE);
-          syncInputFiles();
+        if (!incomingFiles.length) {
+          syncInputFile();
           renderAttachmentLabel();
           return;
         }
 
-        selectedFiles = merged;
-        syncInputFiles();
+        var file = incomingFiles[0];
+        if (file.size > MAX_TOTAL_SIZE) {
+          showAttachmentWarning(SIZE_MESSAGE);
+          input.value = '';
+          syncInputFile();
+          renderAttachmentLabel();
+          return;
+        }
+
+        if (selectedFile) {
+          showAttachmentWarning(SINGLE_FILE_MESSAGE);
+          input.value = '';
+          syncInputFile();
+          renderAttachmentLabel();
+          return;
+        }
+
+        selectedFile = file;
+        syncInputFile();
         renderAttachmentLabel();
       });
 
       if (clear) {
         clear.addEventListener('click', function () {
-          selectedFiles = [];
+          selectedFile = null;
           input.value = '';
-          syncInputFiles();
+          syncInputFile();
           renderAttachmentLabel();
         });
       }

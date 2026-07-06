@@ -12,12 +12,19 @@
   {% elsif page.image %}
     {% assign social_image = page.image | absolute_url %}
   {% else %}
-    {% assign social_image = '/assets/img/main-headshot.jpg' | absolute_url %}
+    {% assign social_image = '/assets/topal-wordmark-white-bg.png' | absolute_url %}
+    {% assign social_image_alt = '/assets/img/main-headshot.jpg' | absolute_url %}
   {% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta property="og:image" content="{{ social_image }}">
   <meta property="og:image:secure_url" content="{{ social_image }}">
+  <meta property="og:image:alt" content="Muhammet Topal handwritten wordmark">
+  {% if social_image_alt %}
+  <meta property="og:image" content="{{ social_image_alt }}">
+  <meta property="og:image:secure_url" content="{{ social_image_alt }}">
+  <meta property="og:image:alt" content="Muhammet Topal portrait">
+  {% endif %}
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta name="twitter:card" content="summary_large_image">
