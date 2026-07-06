@@ -1565,3 +1565,39 @@ window.addEventListener("resize", updateReadingProgress);
     initBackToTopButton();
   }
 })();
+
+/* v141: robust Teaching card modal behavior after carousel changes */
+(function () {
+  function openCourseModal(modal) {
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('course-modal-open');
+    var close = modal.querySelector('.course-modal-close');
+    if (close) close.focus();
+  }
+
+  function setupTeachingCardInteractivity() {
+    document.addEventListener('click', function (event) {
+      if (event.target.closest('.teaching-slider-cue')) return;
+      var card = event.target.closest('.teaching-continuous-page .teaching-course-card.course-modal-trigger[data-course-modal]');
+      if (!card) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openCourseModal(document.getElementById(card.getAttribute('data-course-modal')));
+    }, true);
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      var card = event.target.closest('.teaching-continuous-page .teaching-course-card.course-modal-trigger[data-course-modal]');
+      if (!card || event.target.closest('.teaching-slider-cue')) return;
+      event.preventDefault();
+      openCourseModal(document.getElementById(card.getAttribute('data-course-modal')));
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTeachingCardInteractivity);
+  } else {
+    setupTeachingCardInteractivity();
+  }
+})();

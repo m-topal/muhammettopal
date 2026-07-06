@@ -8147,3 +8147,98 @@ body.cv-modal-open {
     border-left-width: 3.5px;
   }
 }
+
+/* v141: restore Teaching card interactivity and polish co-teaching slider arrows */
+.teaching-continuous-page .teaching-course-card.course-modal-trigger,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"] {
+  position: relative;
+  z-index: 1;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease, opacity 170ms ease !important;
+  will-change: transform;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  border-color: var(--ink) !important;
+  box-shadow: inset 0 0 0 1px var(--ink), 0 16px 34px rgba(0, 0, 0, .13) !important;
+  transform: translateY(-4px) !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover .course-card-image,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible .course-card-image,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover .course-card-image,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible .course-card-image {
+  border-bottom-color: var(--ink) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  z-index: 8 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  border-width: 2px !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  background: rgba(255, 255, 255, .94) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  display: block;
+  color: #111;
+  font-family: var(--serif);
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: .86;
+  transform: translateY(-1px);
+}
+
+.teaching-slider-frame .teaching-slider-cue-left::before {
+  content: "‹";
+}
+
+.teaching-slider-frame .teaching-slider-cue-right::before {
+  content: "›";
+}
+
+.teaching-slider-frame .teaching-slider-cue:hover,
+.teaching-slider-frame .teaching-slider-cue:focus-visible {
+  border-color: #111 !important;
+  background: rgba(255, 255, 255, .98) !important;
+  box-shadow: inset 0 0 0 1px #111, 0 18px 38px rgba(0, 0, 0, .20) !important;
+  outline: none !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-left:hover,
+.teaching-slider-frame .teaching-slider-cue-left:focus-visible {
+  transform: translateY(-50%) translateX(-3px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-right:hover,
+.teaching-slider-frame .teaching-slider-cue-right:focus-visible {
+  transform: translateY(-50%) translateX(3px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue:active {
+  box-shadow: inset 0 0 0 1px #111, 0 10px 22px rgba(0, 0, 0, .18) !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-slider-frame .teaching-slider-cue {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .teaching-slider-frame .teaching-slider-cue::before {
+    font-size: 2rem;
+  }
+}
