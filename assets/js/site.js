@@ -1532,3 +1532,36 @@ window.addEventListener("resize", updateReadingProgress);
     init();
   }
 })();
+
+/* v139: sitewide back-to-top button */
+(function () {
+  function initBackToTopButton() {
+    if (document.querySelector('.back-to-top-button')) return;
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'back-to-top-button';
+    button.setAttribute('aria-label', 'Back to top');
+    button.innerHTML = '↑';
+    document.body.appendChild(button);
+
+    function update() {
+      var visible = window.scrollY > 420;
+      button.classList.toggle('is-visible', visible);
+    }
+
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBackToTopButton);
+  } else {
+    initBackToTopButton();
+  }
+})();
