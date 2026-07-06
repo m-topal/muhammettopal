@@ -7833,3 +7833,57 @@ body.cv-modal-open {
     padding-right: 30px !important;
   }
 }
+
+/* v133: clickable co-teaching slider controls and stronger sticky section nav state */
+.teaching-scroll-nav.is-sticky-active,
+.teaching-scroll-nav.is-scrolling {
+  border-color: rgba(0, 0, 0, .16) !important;
+  background: rgba(255, 255, 255, .97) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .10) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.teaching-slider-cue {
+  width: 48px !important;
+  height: 48px !important;
+  font-size: 2.15rem !important;
+  cursor: pointer;
+  pointer-events: auto !important;
+  border-color: rgba(0, 0, 0, .14) !important;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+  padding: 0;
+}
+
+.teaching-slider-cue:hover,
+.teaching-slider-cue:focus-visible {
+  border-color: rgba(0, 0, 0, .28) !important;
+  background: #fff !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, .16) !important;
+}
+
+.teaching-slider-cue-left:hover,
+.teaching-slider-cue-left:focus-visible {
+  transform: translateY(-50%) translateX(-2px);
+}
+
+.teaching-slider-cue-right:hover,
+.teaching-slider-cue-right:focus-visible {
+  transform: translateY(-50%) translateX(2px);
+}
+
+.teaching-slider-cue:active {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .12) !important;
+}
+
+.teaching-approach-tag-row {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-slider-cue {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 1.85rem !important;
+  }
+}

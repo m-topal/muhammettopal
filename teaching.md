@@ -118,7 +118,7 @@ permalink: /teaching/
         <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
 
         <div class="teaching-slider-frame" data-slider-label="Slide for more courses">
-          <span class="teaching-slider-cue teaching-slider-cue-left" aria-hidden="true">‹</span>
+          <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll co-teaching courses left">‹</button>
           <div class="teaching-shelf-row co-teaching-course-row">
           <article class="teaching-course-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
             <p class="meta">University of Arizona</p>
@@ -150,7 +150,7 @@ permalink: /teaching/
             <h3>The Roman Empire: Rulers and Ruled</h3>
           </article>
           </div>
-          <span class="teaching-slider-cue teaching-slider-cue-right" aria-hidden="true">›</span>
+          <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll co-teaching courses right">›</button>
         </div>
       </section>
 
@@ -284,10 +284,6 @@ permalink: /teaching/
         <div class="teaching-approach-prose paragraph-tight-indent">
           <p>My teaching asks students to approach history as an active form of inquiry. I encourage them to read closely, ask how knowledge is produced, compare interpretations, and think critically about sources, concepts, and historical narratives.</p>
           <p>I also have experience teaching sensitive subjects, including religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and contemporary public debates. I approach these topics through historical context, careful language, structured discussion, and clear classroom expectations.</p>
-          <div class="teaching-approach-tag-row">
-            <a class="teaching-approach-statement-tag" href="{{ '/teaching/statement/' | relative_url }}">Teaching Statement</a>
-            <a class="teaching-approach-statement-tag" href="{{ '/teaching/certificate/' | relative_url }}">College Teaching Certificate</a>
-          </div>
         </div>
       </div>
   </section>

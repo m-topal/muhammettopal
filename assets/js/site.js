@@ -1353,3 +1353,62 @@ window.addEventListener("resize", updateReadingProgress);
     setupTeachingScrollNavVisibility();
   }
 })();
+
+/* v133: clickable co-teaching carousel arrows and persistent sticky nav frame */
+(function () {
+  function setupTeachingSliderControls() {
+    document.querySelectorAll('.teaching-slider-frame').forEach(function (frame) {
+      var row = frame.querySelector('.co-teaching-course-row');
+      var left = frame.querySelector('.teaching-slider-cue-left');
+      var right = frame.querySelector('.teaching-slider-cue-right');
+      if (!row || !left || !right) return;
+
+      function scrollByCard(direction) {
+        var card = row.querySelector('.teaching-course-card');
+        var amount = card ? Math.round(card.getBoundingClientRect().width + 22) : Math.round(row.clientWidth * .8);
+        row.scrollBy({ left: direction * amount, behavior: 'smooth' });
+      }
+
+      [left, right].forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          scrollByCard(button === right ? 1 : -1);
+        });
+        button.addEventListener('keydown', function (event) {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          event.stopPropagation();
+          scrollByCard(button === right ? 1 : -1);
+        });
+      });
+    });
+  }
+
+  function setupTeachingStickyNavState() {
+    var nav = document.querySelector('.teaching-scroll-nav');
+    if (!nav) return;
+    var initialTop = nav.getBoundingClientRect().top + window.scrollY;
+    function update() {
+      var active = window.scrollY > initialTop - 82;
+      nav.classList.toggle('is-sticky-active', active);
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', function () {
+      initialTop = nav.getBoundingClientRect().top + window.scrollY;
+      update();
+    });
+    update();
+  }
+
+  function init() {
+    setupTeachingSliderControls();
+    setupTeachingStickyNavState();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
