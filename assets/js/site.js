@@ -1542,7 +1542,7 @@ window.addEventListener("resize", updateReadingProgress);
     button.type = 'button';
     button.className = 'back-to-top-button';
     button.setAttribute('aria-label', 'Back to top');
-    button.innerHTML = '↑';
+    button.innerHTML = '';
     document.body.appendChild(button);
 
     function update() {
