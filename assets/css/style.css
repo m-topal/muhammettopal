@@ -8869,3 +8869,39 @@ body.cv-modal-open {
 .research-continuous-page .publication-category-icon-manuscript svg {
   stroke-width: 1.5;
 }
+
+
+
+
+/* v167: the About page is one continuous reading sequence in two stages.
+   Each stage keeps the same two-column wrap used by the Princeton image.
+   The first stage is balanced so the second stage begins immediately below it,
+   rather than appearing as a separate text section. */
+.about-page .v84-through-wrap.about-wrap-first {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.about-page .v84-through-wrap.about-wrap-second {
+  --wrap-image-top: 286px;
+  --wrap-image-width: 320px;
+  --wrap-image-height: 370px;
+  --wrap-total-shape-height: 805px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.about-page .v84-through-wrap.about-wrap-second .wrap-shape-left {
+  shape-outside: polygon(100% 0, 100% 35.5%, 0 35.5%, 0 100%, 100% 100%) !important;
+}
+
+.about-page .v84-through-wrap.about-wrap-second .wrap-shape-right {
+  shape-outside: polygon(0 0, 0 35.5%, 100% 35.5%, 100% 100%, 0 100%) !important;
+}
+
+@media (max-width: 980px) {
+  .about-page .v84-through-wrap.about-wrap-first,
+  .about-page .v84-through-wrap.about-wrap-second {
+    margin-block: 24px 36px !important;
+  }
+}

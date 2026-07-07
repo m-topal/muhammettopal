@@ -11,7 +11,7 @@ permalink: /about/
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
   </div>
 
-  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-flow-first">
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-wrap-first">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
@@ -27,12 +27,12 @@ permalink: /about/
 
       <p>My academic path began in Istanbul. I studied History at Boğaziçi University, where I was trained in a broad humanities environment that encouraged movement across history, literature, political thought, social science, and theory. My undergraduate project examined the Ottoman Qajar borderland in the nineteenth century, focusing on sovereignty, centralization, and frontier relations.</p>
 
-      <p>That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
-
     </div>
 
     <div class="prose center-wrap-text center-wrap-text-right paragraph-tight-indent">
       <span class="wrap-shape wrap-shape-right" aria-hidden="true"></span>
+      <p>That early work introduced me to questions that still shape my research: how imperial authority is made, how borders are negotiated, and how political centers relate to mobile, multilingual, and contested spaces.</p>
+
       <p>During my undergraduate years, I also studied political science at Sciences Po in Paris. That experience widened my intellectual formation beyond history narrowly defined. It introduced me to political science, international relations, and comparative approaches to political life. Paris later became central to my graduate training. At the École pratique des hautes études, I completed an MA in Islamology and Muslim worlds, with a thesis titled <em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste</em> [Individuation and Politicization: Portrait of an Ottoman Intellectual as Journalist]. In that thesis, I began working seriously on Mehmed Murad Bey, focusing on his formation, migration, entry into Ottoman society, and early journalistic career.</p>
 
       <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
@@ -41,7 +41,7 @@ permalink: /about/
     </div>
   </div>
 
-  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-flow-second">
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-wrap-second">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/ens-ulm-library-scanning.png' | relative_url }}" alt="Muhammet Topal scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris">
       <figcaption>Working with collections at the Bibliothèque Ulm of the École normale supérieure in Paris.</figcaption>
