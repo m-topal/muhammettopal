@@ -1,10 +1,15 @@
-TOPAL ACADEMIC GLOBE PATCH v7
+ACADEMIC GLOBE PATCH v8
+
+Apply this over v7.
 
 Changes:
-- Globe now follows the page during scrolling using a page-height scene and sticky globe track.
-- Globe has visible country outlines and filled continents instead of an empty wireframe sphere.
-- Main navigation keeps the same integrated appearance in normal and sticky states.
-- Research and Teaching section navigation bars no longer turn into detached white cards while scrolling.
-- Sticky bars keep the same background, border, radius, blur, and shadow before and after sticking.
+- Publication and Presentation accordion headers are transparent like their open panels.
+- White opaque card backgrounds are removed from those sections.
+- Globe longitude is directly linked to page scroll, so it visibly turns while scrolling.
+- The map and arc lines begin below the identity header, removing stray lines behind the name and subtitle.
 
-Replace the files at the same paths in the repository and redeploy GitHub Pages.
+Replace:
+- assets/css/academic-globe-v7.css with assets/css/academic-globe-v8.css
+- assets/js/academic-globe-v7.js with assets/js/academic-globe-v8.js
+
+Also update the two references in _layouts/default.html from v7 to v8, or rename these two files to the previous v7 filenames when uploading.
