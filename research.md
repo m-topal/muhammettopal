@@ -102,8 +102,8 @@ permalink: /research/
         <figcaption>Presidential Library, Russian Federation. Digital library collections for Russian imperial and regional history.</figcaption>
       </figure>
       <figure class="research-archive-card trajectory-archive-card js-lightbox-figure">
-        <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/archives-nationales-grands-depots.jpg' | relative_url }}" alt="Grands Dépôts at the Archives nationales in France">
-        <figcaption>Archives nationales, France. The Grands Dépôts at the Paris site.</figcaption>
+        <img class="js-lightbox-image" src="{{ '/assets/img/research/archives/archives-diplomatiques-la-courneuve.jpg' | relative_url }}" alt="Reading room at the Centre des Archives diplomatiques in La Courneuve">
+        <figcaption>Centre des Archives diplomatiques, La Courneuve. Reading room of the French Diplomatic Archives.</figcaption>
       </figure>
     </div>
 

@@ -48,6 +48,11 @@ permalink: /about/
 
       <p>Beyond research and teaching, I have been involved in academic service and public engagement. At the University of Arizona, I served as co-head of the Graduate Student Association, helped reactivate graduate student programming, represented students in departmental settings, and contributed to academic community building. I also worked as an Outreach Scholar with the Center for Middle Eastern Studies, where I participated in educational initiatives aimed at making the histories, cultures, and politics of the Middle East more accessible beyond the university classroom.</p>
 
+      <figure class="creative-breakout-figure js-lightbox-figure" style="max-width: 760px; margin: 2.25rem auto 2.5rem;">
+        <img class="js-lightbox-image" src="{{ '/assets/img/about/ens-ulm-library-scanning.png' | relative_url }}" alt="Muhammet Topal scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris" style="display: block; width: 100%; height: auto; max-height: 560px; object-fit: cover; object-position: center;">
+        <figcaption>Scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris.</figcaption>
+      </figure>
+
       <p>Outside the formal boundaries of academic work, moving to Arizona changed my relationship to landscape. After Istanbul and Paris, the desert, mountains, canyons, and open horizons of the American Southwest became part of how I think and live. Hiking, climbing, and outdoor life have given me another way to understand movement, attention, difficulty, and scale. They remind me that thinking also depends on place, body, rhythm, and the worlds we move through.</p>
 
       <figure class="about-wordmark-figure js-lightbox-figure">
