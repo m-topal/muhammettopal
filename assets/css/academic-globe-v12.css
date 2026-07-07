@@ -117,7 +117,7 @@ body {
   outline: 0 !important;
 }
 
-/* Transparent accordions, with only a subtle outline/shadow on hover/open. */
+/* Transparent accordions, but without turning them into visible boxes. */
 .publication-category,
 .accordion,
 .accordion-item,
@@ -129,22 +129,56 @@ body {
 }
 
 .accordion-item {
-  border-bottom-color: rgba(50,64,78,.10) !important;
-  border-radius: 16px;
-  transition: box-shadow .18s ease, border-color .18s ease;
+  position: relative;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(50,64,78,.10) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.accordion-item::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 8px;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(48,62,74,.10) 0%, rgba(48,62,74,0) 72%);
+  filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease;
 }
 
 .accordion-trigger,
 .publication-trigger {
-  border-radius: 16px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  background: transparent !important;
 }
 
 .accordion-item:hover,
 .accordion-item:focus-within,
 .accordion-item.open {
-  box-shadow: 0 10px 28px rgba(42,54,66,.05), inset 0 0 0 1px rgba(83,97,114,.14);
+  transform: translateY(-1px);
+}
+
+.accordion-item:hover::after,
+.accordion-item:focus-within::after,
+.accordion-item.open::after {
+  opacity: .58;
+}
+
+.accordion-item:hover .accordion-trigger,
+.accordion-item:focus-within .accordion-trigger,
+.accordion-item.open .accordion-trigger,
+.accordion-item:hover .publication-trigger,
+.accordion-item:focus-within .publication-trigger,
+.accordion-item.open .publication-trigger {
+  filter: drop-shadow(0 6px 14px rgba(42,54,66,.06));
 }
 
 .accordion-panel {
