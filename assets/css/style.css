@@ -8836,3 +8836,36 @@ body.cv-modal-open {
 .teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-right::before {
   transform: translate(-58%, -50%) rotate(-45deg) !important;
 }
+
+/* v154: publication category icons and Mizan figure relocation polish */
+.research-continuous-page .publication-category-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  line-height: 1.18;
+}
+
+.research-continuous-page .publication-category-icon {
+  width: 1.12em;
+  height: 1.12em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transform: translateY(0.02em);
+}
+
+.research-continuous-page .publication-category-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.research-continuous-page .publication-category-icon-manuscript svg {
+  stroke-width: 1.5;
+}
