@@ -1,0 +1,180 @@
+body {
+  position: relative;
+  background: #fbfaf7;
+}
+
+.academic-top-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 430px;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.academic-world-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#readingProgress,
+.site-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.academic-globe {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: min(700px, 66vw);
+  height: min(700px, 66vw);
+  transform: translate(-50%, -50%);
+  opacity: .42;
+  filter: saturate(.82) brightness(1.08);
+}
+
+.academic-globe canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.school-satellite {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 112px;
+  height: 96px;
+  margin-left: -56px;
+  margin-top: -48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(76, 92, 108, .08);
+  background: rgba(251,250,247,.16);
+  box-shadow: 0 10px 28px rgba(48,62,74,.05);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.school-satellite img {
+  display: block;
+  max-width: 92px;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  opacity: .42;
+  filter: grayscale(1) contrast(1.05);
+}
+
+/* Slightly bolder labels, without making them heavy. */
+.nav a,
+.teaching-scroll-nav a,
+.research-continuous-page .research-scroll-nav a {
+  font-weight: 560 !important;
+}
+
+/* Main nav stays integrated with the site. */
+.nav-wrap,
+.sticky-nav,
+.sticky-nav:hover,
+.sticky-nav:focus-within,
+.sticky-nav.is-scrolling,
+.sticky-nav.is-sticky-active {
+  background: rgba(251,250,247,.54) !important;
+  backdrop-filter: blur(8px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(1.02) !important;
+  border-top: 1px solid rgba(0,0,0,.08) !important;
+  border-bottom: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: none !important;
+}
+
+/* Research and Teaching bars stay visually integrated while sticky. */
+.research-continuous-page .research-scroll-nav,
+.research-continuous-page .research-scroll-nav:hover,
+.research-continuous-page .research-scroll-nav:focus-within,
+.research-continuous-page .research-scroll-nav.is-scrolling,
+.research-continuous-page .research-scroll-nav.is-sticky-active,
+.teaching-scroll-nav,
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(251,250,247,.18) !important;
+  backdrop-filter: blur(7px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(1.02) !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(0,0,0,.08) !important;
+  border-bottom: 1px solid rgba(0,0,0,.08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+/* Transparent accordions, with only a subtle outline/shadow on hover/open. */
+.publication-category,
+.accordion,
+.accordion-item,
+.accordion-trigger,
+.accordion-panel,
+.publication-trigger {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.accordion-item {
+  border-bottom-color: rgba(50,64,78,.10) !important;
+  border-radius: 16px;
+  transition: box-shadow .18s ease, border-color .18s ease;
+}
+
+.accordion-trigger,
+.publication-trigger {
+  border-radius: 16px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.accordion-item:hover,
+.accordion-item:focus-within,
+.accordion-item.open {
+  box-shadow: 0 10px 28px rgba(42,54,66,.05), inset 0 0 0 1px rgba(83,97,114,.14);
+}
+
+.accordion-panel {
+  box-shadow: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 350px;
+  }
+
+  .academic-globe {
+    width: min(620px, 102vw);
+    height: min(620px, 102vw);
+    top: 56%;
+    opacity: .34;
+  }
+
+  .school-satellite {
+    width: 86px;
+    height: 76px;
+    margin-left: -43px;
+    margin-top: -38px;
+  }
+
+  .school-satellite img {
+    max-width: 70px;
+    max-height: 56px;
+    opacity: .38;
+  }
+}

@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta name="twitter:image" content="{{ social_image }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/academic-world-scene.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/academic-globe-v12.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any">
   <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/favicon-512x512.png?v=7' | relative_url }}">
   <link rel="icon" href="{{ '/assets/favicon.svg?v=7' | relative_url }}" type="image/svg+xml">
@@ -44,7 +44,12 @@
 </head>
 <body>
   <div id="academicTopMap" class="academic-top-map" aria-hidden="true"></div>
-  <div id="academicGlobeScene" class="academic-globe-scene" aria-hidden="true"></div>
+  <div id="academicWorldScene" class="academic-world-scene" aria-hidden="true">
+    <div id="academicGlobe" class="academic-globe"></div>
+    <div id="schoolSatellite1" class="school-satellite"><img src="{{ '/assets/img/background/sorbonne-line.png' | relative_url }}" alt=""></div>
+    <div id="schoolSatellite2" class="school-satellite"><img src="{{ '/assets/img/background/anderson-hall-line.png' | relative_url }}" alt=""></div>
+    <div id="schoolSatellite3" class="school-satellite"><img src="{{ '/assets/img/background/old-main-line.png' | relative_url }}" alt=""></div>
+  </div>
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
 
   <div class="site-shell">
@@ -107,8 +112,8 @@
   </div>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/academic-globe-v12.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/academic-world-scene.js' | relative_url }}"></script>
 </body>
 </html>
