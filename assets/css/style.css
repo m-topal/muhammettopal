@@ -8964,3 +8964,6 @@ body.cv-modal-open {
   .about-page .about-dual-image img{height:auto;object-fit:contain}
   .about-page .about-dual-shape{display:none;height:0}
 }
+.no-indent {
+  text-indent: 0 !important;
+}
