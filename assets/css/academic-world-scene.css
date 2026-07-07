@@ -1,0 +1,270 @@
+.site-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-shell > *:not(.academic-world-scene),
+#readingProgress {
+  position: relative;
+  z-index: 2;
+}
+
+.academic-world-scene {
+  --globe-rot: 0deg;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.academic-world-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(251,250,247,.06), rgba(251,250,247,.03) 25%, rgba(251,250,247,.08) 65%, rgba(251,250,247,.12));
+}
+
+.aws-top-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 18px;
+  height: 470px;
+  opacity: .78;
+}
+
+.aws-globe-wrap {
+  position: absolute;
+  left: 50%;
+  top: 270px;
+  width: min(56vw, 620px);
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  opacity: .56;
+}
+
+.aws-campus-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  gap: 20px;
+  padding: 0 42px;
+}
+
+.aws-campus {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.aws-campus img {
+  display: block;
+  width: clamp(88px, 10vw, 146px);
+  height: auto;
+  opacity: .16;
+  filter: grayscale(1) contrast(1.04);
+}
+
+.aws-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.aws-path,
+.aws-grid,
+.aws-arc,
+.aws-orbit,
+.aws-node,
+.aws-globe-outline,
+.aws-globe-continent,
+.aws-globe-grid,
+.aws-globe-arc,
+.aws-globe-node,
+.aws-globe-orbit {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aws-path {
+  stroke: rgba(70, 88, 104, .24);
+  stroke-width: 1.45;
+}
+
+.aws-grid {
+  stroke: rgba(70, 88, 104, .10);
+  stroke-width: 1;
+}
+
+.aws-arc {
+  stroke: rgba(120, 160, 198, .28);
+  stroke-width: 2.1;
+}
+
+.aws-arc.secondary {
+  stroke: rgba(133, 173, 210, .18);
+  stroke-width: 1.55;
+}
+
+.aws-node {
+  fill: rgba(214, 118, 90, .34);
+  stroke: rgba(214, 118, 90, .20);
+  stroke-width: 8;
+}
+
+.aws-globe-outline {
+  stroke: rgba(92, 108, 121, .26);
+  stroke-width: 1.6;
+  fill: rgba(255,255,255,.04);
+}
+
+.aws-globe-grid {
+  stroke: rgba(92, 108, 121, .17);
+  stroke-width: 1.05;
+}
+
+.aws-globe-continent {
+  stroke: rgba(92, 108, 121, .25);
+  stroke-width: 1.55;
+}
+
+.aws-globe-arc {
+  stroke: rgba(120, 160, 198, .34);
+  stroke-width: 2.25;
+  stroke-dasharray: 7 10;
+}
+
+.aws-globe-arc.secondary {
+  stroke: rgba(133, 173, 210, .22);
+  stroke-width: 1.6;
+  stroke-dasharray: 4 9;
+}
+
+.aws-globe-node {
+  fill: rgba(214, 118, 90, .42);
+  stroke: rgba(214, 118, 90, .18);
+  stroke-width: 10;
+}
+
+.aws-globe-orbit {
+  stroke: rgba(140, 156, 172, .16);
+  stroke-width: 1.1;
+}
+
+.aws-top-map .aws-svg,
+.aws-campus-row,
+.aws-globe-wrap {
+  mix-blend-mode: multiply;
+}
+
+.aws-globe-spin {
+  transform-origin: 50% 50%;
+  transform: rotate(var(--globe-rot));
+}
+
+/* Make the globe slightly clearer but still soft behind text */
+.aws-globe-surface {
+  opacity: .96;
+}
+
+/* Keep identity area and top utility cleaner */
+.site-top,
+.nav-wrap,
+.teaching-scroll-nav,
+.research-scroll-nav,
+.publication-category,
+.accordion,
+.accordion-item,
+.accordion-trigger,
+.accordion-panel,
+.research-scroll-section,
+.teaching-scroll-section {
+  background: transparent !important;
+}
+
+.nav-wrap {
+  backdrop-filter: blur(10px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(1.02) !important;
+  background: rgba(251,250,247,.58) !important;
+  border-top-color: rgba(0,0,0,.08) !important;
+  border-bottom-color: rgba(0,0,0,.08) !important;
+  box-shadow: none !important;
+}
+
+.teaching-scroll-nav,
+.research-continuous-page .research-scroll-nav {
+  background: rgba(251,250,247,.18) !important;
+  backdrop-filter: blur(8px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(1.02) !important;
+  box-shadow: none !important;
+  border-color: rgba(0,0,0,.08) !important;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active,
+.research-continuous-page .research-scroll-nav:hover,
+.research-continuous-page .research-scroll-nav:focus-within,
+.research-continuous-page .research-scroll-nav.is-scrolling,
+.research-continuous-page .research-scroll-nav.is-sticky-active {
+  background: rgba(251,250,247,.22) !important;
+  box-shadow: none !important;
+}
+
+.accordion-item,
+.accordion-trigger,
+.accordion-panel,
+.publication-category,
+.publication-category > * {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-trigger {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.accordion-item.open .accordion-panel,
+.accordion-panel {
+  background: transparent !important;
+}
+
+/* Keep the top map clean, away from the identity lockup */
+.home-header-mark,
+.name,
+.identity-sentence,
+.site-utility-bar {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 900px) {
+  .aws-top-map {
+    top: 28px;
+    height: 360px;
+    opacity: .68;
+  }
+
+  .aws-globe-wrap {
+    top: 260px;
+    width: min(70vw, 520px);
+    opacity: .46;
+  }
+
+  .aws-campus-row {
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .aws-campus img {
+    width: clamp(64px, 18vw, 110px);
+    opacity: .13;
+  }
+}

@@ -1,15 +1,21 @@
-ACADEMIC GLOBE PATCH v8
+ACADEMIC GLOBE PATCH v9
 
-Apply this over v7.
+This patch updates the site background scene and navigation overlays.
 
-Changes:
-- Publication and Presentation accordion headers are transparent like their open panels.
-- White opaque card backgrounds are removed from those sections.
-- Globe longitude is directly linked to page scroll, so it visibly turns while scrolling.
-- The map and arc lines begin below the identity header, removing stray lines behind the name and subtitle.
+Included fixes:
+- globe is slightly smaller and positioned a bit higher
+- globe lines and continent lines are less transparent, so the globe is more visible
+- globe rotates with scroll direction and speeds up when scrolling
+- publications, presentations, dissertation accordion rows are made transparent instead of solid white
+- research/teaching sticky bars stay visually integrated with the site instead of becoming separate opaque white cards
+- simplified top world map background
+- three small campus line drawings added at the bottom of the page background: Sorbonne on the left, Boğaziçi in the center, Old Main on the right
+- bottom campus drawings scroll with the page because they are anchored to the site-shell background layer
 
-Replace:
-- assets/css/academic-globe-v7.css with assets/css/academic-globe-v8.css
-- assets/js/academic-globe-v7.js with assets/js/academic-globe-v8.js
-
-Also update the two references in _layouts/default.html from v7 to v8, or rename these two files to the previous v7 filenames when uploading.
+Files included:
+- _layouts/default.html
+- assets/css/academic-world-scene.css
+- assets/js/academic-world-scene.js
+- assets/img/background/sorbonne-line.png
+- assets/img/background/anderson-hall-line.png
+- assets/img/background/old-main-line.png
