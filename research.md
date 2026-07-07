@@ -37,6 +37,11 @@ permalink: /research/
 
     <p>The project is organized around three movements: formation, worldmaking, and political existence. In the first part, <strong>Formation</strong>, I reconstruct the conditions that made Mehmed Murad possible in two chapters. I begin with Dagestan after the Caucasian War and with his early education in the Russian imperial school system. This part asks how a Muslim child from a highland society under Russian rule acquired the linguistic, institutional, and intellectual resources that later allowed him to enter the Ottoman center. I describe this process through the concept of peripheral centrality: the paradox by which marginal positions can generate forms of knowledge, mobility, and flexibility that become valuable at the center. The point is not to romanticize marginality. Murad’s peripheral formation gave him resources, but it also produced fragility. He could enter the Ottoman world with unusual speed as an imperial subject, but he never fully escaped the vulnerability of being both inside and outside.</p>
 
+<figure class="research-inline-figure research-inline-mizan js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/research/mizan-newspaper-front-page.jpg' | relative_url }}" alt="Front page of Mizan newspaper">
+  <figcaption><em>Mizan</em> newspaper front page.</figcaption>
+</figure>
+
     <p>The second part, <strong>Worldmaking</strong>, is the center of my current work. Here I study the moment when Mehmed Murad turns from being formed by worlds to forming worlds in writing. I examine three genres in three chapters: history, literature, and journalism. In his historical works, he ordered the Ottoman past and placed the empire within universal history. In his fiction, translations, and literary criticism, he imagined social types and moral possibilities for Ottoman modernity. In his journalism, above all in <em>Mizan</em>, he turned public writing into a practice of judgment, teaching readers to recognize disorder, responsibility, reform, and political failure. These genres were not separate activities. They were three modes of the same intellectual labor: making the Ottoman world legible to himself and to his readers, who were living through the crises and transformations of their time.</p>
 
     <p>In the third part, <strong>Political Existence</strong>, I follow what this way of working cost him, in two chapters. Mehmed Murad's authority was shaped by his proximity to power. He could teach because he had entered state institutions, advise because he had access to political elites, and publish because he understood the language of reform from within the Ottoman bureaucratic world. But the same proximity that gave him authority made criticism, and the distance it required, dangerous. This part follows his movement from advice to estrangement, from journalism to exile, from Young Turk leadership to return, and finally to marginalization in the post-Hamidian era. The central question is not whether Mehmed Murad was conservative or progressive. It is how late Ottoman intellectual life forced figures like him to move between loyalty and dissent, service and criticism, access and vulnerability.</p>
@@ -47,11 +52,6 @@ permalink: /research/
 </figure>
 
     <p>Methodologically, the dissertation combines intellectual history, global microhistory, biography, and historical sociology. I work across Ottoman Turkish, Turkish, French, Arabic, English, Russian, and Caucasian-language sources, including newspapers, memoirs, autobiographical writings, correspondence, diplomatic reports, archival registers, literary texts, visual materials, and period histories, along with the related secondary literature. Alongside archival research, close reading, and discourse analysis, I also draw on digital and quantitative methods such as spatial and social network analysis, with the aim of making visible the relationships among people, places, institutions, genres, and publics.</p>
-
-<figure class="research-inline-figure research-inline-mizan js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/research/mizan-newspaper-front-page.jpg' | relative_url }}" alt="Front page of Mizan newspaper">
-  <figcaption><em>Mizan</em> newspaper front page.</figcaption>
-</figure>
 
 <figure class="research-inline-figure research-inline-force js-lightbox-figure">
   <img class="js-lightbox-image" src="{{ '/assets/img/research/force-et-la-faiblesse-geneva-1897.jpg' | relative_url }}" alt="Title page of La Force et la Faiblesse de la Turquie">
@@ -148,7 +148,7 @@ permalink: /research/
       <h2>Publications</h2>
     </div>
 <section class="publication-category">
-    <h2>Books and translations</h2>
+    <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-book" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.5 5.5c1.6-.8 3.4-1.2 5.3-1.2 1 0 1.7.2 2.2.6.5-.4 1.2-.6 2.2-.6 1.9 0 3.7.4 5.3 1.2v13.4c-1.6-.8-3.4-1.2-5.3-1.2-1 0-1.7.2-2.2.6-.5-.4-1.2-.6-2.2-.6-1.9 0-3.7.4-5.3 1.2V5.5Z"/><path d="M12 5.4v12.8"/></svg></span><span>Books and translations</span></h2>
     <div class="accordion">
       <div class="accordion-item open">
         <button class="accordion-trigger publication-trigger"><span class="accordion-title">Biography: An Historiography <span class="publication-visible-date">2026, forthcoming</span></span><span class="accordion-plus">+</span></button>
@@ -161,7 +161,7 @@ permalink: /research/
   </section>
 
   <section class="publication-category">
-    <h2>Articles and chapters</h2>
+    <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-article" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3.8h7.8L19 8v12.2H7V3.8Z"/><path d="M14.6 3.9v4.3h4.2"/><path d="M9.6 11h6.8M9.6 14h6.8M9.6 17h4.8"/></svg></span><span>Articles and chapters</span></h2>
     <div class="accordion">
       <div class="accordion-item">
         <button class="accordion-trigger publication-trigger"><span class="accordion-title">“Bringing Them Across the Border: Dagestani Mehmed Murad Bey’s Petitions for Emigration and Family Reunification” <span class="publication-visible-date">2026, forthcoming</span></span><span class="accordion-plus">+</span></button>
@@ -191,7 +191,7 @@ permalink: /research/
   </section>
 
   <section class="publication-category">
-    <h2>Dissertations and theses</h2>
+    <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-manuscript" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 4.2h8.2c1.9 0 3.4 1.5 3.4 3.4v12.2H8.8c-1.9 0-3.4-1.5-3.4-3.4V5.8c0-.9.7-1.6 1.6-1.6Z"/><path d="M8.3 4.2v12.1c0 .8.7 1.5 1.5 1.5h8.8"/><path d="M10.7 8.3h4.8M10.7 11.2h5.2M10.7 14.1h3.8"/></svg></span><span>Dissertations and theses</span></h2>
     <div class="accordion">
       <div class="accordion-item">
         <button class="accordion-trigger publication-trigger"><span class="accordion-title">The Making of an Ottoman Opposition: Mizancı Mehmed Murad Bey between Loyalty and Dissent <span class="publication-visible-date">2026, in progress</span></span><span class="accordion-plus">+</span></button>
