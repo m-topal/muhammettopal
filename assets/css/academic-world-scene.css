@@ -1,59 +1,59 @@
-.site-shell {
-  position: relative;
-  isolation: isolate;
+body {
+  background: #fbfaf7;
 }
 
-.site-shell > *:not(.academic-world-scene),
+#academicWorldScene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  --globe-rot: 0deg;
+}
+
+.site-shell,
 #readingProgress {
   position: relative;
   z-index: 2;
 }
 
-.academic-world-scene {
-  --globe-rot: 0deg;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.academic-world-scene::before {
+#academicWorldScene::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(251,250,247,.06), rgba(251,250,247,.03) 25%, rgba(251,250,247,.08) 65%, rgba(251,250,247,.12));
+  background: linear-gradient(to bottom, rgba(251,250,247,.04), rgba(251,250,247,.02) 26%, rgba(251,250,247,.06) 72%, rgba(251,250,247,.09));
 }
 
 .aws-top-map {
   position: absolute;
   left: 0;
   right: 0;
-  top: 18px;
-  height: 470px;
-  opacity: .78;
+  top: 14px;
+  height: 430px;
+  opacity: .60;
 }
 
 .aws-globe-wrap {
   position: absolute;
   left: 50%;
-  top: 270px;
-  width: min(56vw, 620px);
+  top: 54%;
+  width: min(52vw, 560px);
   aspect-ratio: 1 / 1;
-  transform: translateX(-50%);
-  opacity: .56;
+  transform: translate(-50%, -50%);
+  opacity: .43;
 }
 
 .aws-campus-row {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 22px;
+  bottom: 54px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: end;
-  gap: 20px;
-  padding: 0 42px;
+  gap: 18px;
+  padding: 0 34px;
+  opacity: 1;
 }
 
 .aws-campus {
@@ -64,10 +64,10 @@
 
 .aws-campus img {
   display: block;
-  width: clamp(88px, 10vw, 146px);
+  width: clamp(72px, 8.4vw, 118px);
   height: auto;
-  opacity: .16;
-  filter: grayscale(1) contrast(1.04);
+  opacity: .12;
+  filter: grayscale(1) contrast(1.03);
 }
 
 .aws-svg {
@@ -78,13 +78,10 @@
 .aws-path,
 .aws-grid,
 .aws-arc,
-.aws-orbit,
-.aws-node,
 .aws-globe-outline,
-.aws-globe-continent,
 .aws-globe-grid,
+.aws-globe-continent,
 .aws-globe-arc,
-.aws-globe-node,
 .aws-globe-orbit {
   fill: none;
   stroke-linecap: round;
@@ -92,73 +89,61 @@
 }
 
 .aws-path {
-  stroke: rgba(70, 88, 104, .24);
-  stroke-width: 1.45;
+  stroke: rgba(76, 91, 103, .22);
+  stroke-width: 1.5;
 }
 
 .aws-grid {
-  stroke: rgba(70, 88, 104, .10);
+  stroke: rgba(76, 91, 103, .10);
   stroke-width: 1;
 }
 
 .aws-arc {
-  stroke: rgba(120, 160, 198, .28);
-  stroke-width: 2.1;
+  stroke: rgba(124, 159, 193, .23);
+  stroke-width: 2.15;
 }
 
 .aws-arc.secondary {
-  stroke: rgba(133, 173, 210, .18);
-  stroke-width: 1.55;
-}
-
-.aws-node {
-  fill: rgba(214, 118, 90, .34);
-  stroke: rgba(214, 118, 90, .20);
-  stroke-width: 8;
+  stroke: rgba(124, 159, 193, .17);
+  stroke-width: 1.45;
 }
 
 .aws-globe-outline {
-  stroke: rgba(92, 108, 121, .26);
-  stroke-width: 1.6;
-  fill: rgba(255,255,255,.04);
+  stroke: rgba(88, 104, 117, .23);
+  stroke-width: 1.45;
+  fill: rgba(255,255,255,.03);
 }
 
 .aws-globe-grid {
-  stroke: rgba(92, 108, 121, .17);
+  stroke: rgba(88, 104, 117, .16);
   stroke-width: 1.05;
 }
 
 .aws-globe-continent {
-  stroke: rgba(92, 108, 121, .25);
+  stroke: rgba(88, 104, 117, .21);
   stroke-width: 1.55;
 }
 
 .aws-globe-arc {
-  stroke: rgba(120, 160, 198, .34);
-  stroke-width: 2.25;
-  stroke-dasharray: 7 10;
+  stroke: rgba(124, 159, 193, .31);
+  stroke-width: 2.15;
+  stroke-dasharray: 8 10;
 }
 
 .aws-globe-arc.secondary {
-  stroke: rgba(133, 173, 210, .22);
-  stroke-width: 1.6;
-  stroke-dasharray: 4 9;
-}
-
-.aws-globe-node {
-  fill: rgba(214, 118, 90, .42);
-  stroke: rgba(214, 118, 90, .18);
-  stroke-width: 10;
+  stroke: rgba(124, 159, 193, .21);
+  stroke-width: 1.45;
+  stroke-dasharray: 4 8;
 }
 
 .aws-globe-orbit {
-  stroke: rgba(140, 156, 172, .16);
-  stroke-width: 1.1;
+  stroke: rgba(138, 153, 168, .12);
+  stroke-width: 1.05;
 }
 
 .aws-top-map .aws-svg,
-.aws-campus-row,
-.aws-globe-wrap {
+.aws-globe-wrap,
+.aws-campus-row {
   mix-blend-mode: multiply;
 }
 
@@ -167,12 +152,7 @@
   transform: rotate(var(--globe-rot));
 }
 
-/* Make the globe slightly clearer but still soft behind text */
-.aws-globe-surface {
-  opacity: .96;
-}
-
-/* Keep identity area and top utility cleaner */
+/* Integrate navs and accordions with the site */
 .site-top,
 .nav-wrap,
 .teaching-scroll-nav,
@@ -188,19 +168,19 @@
 }
 
 .nav-wrap {
-  backdrop-filter: blur(10px) saturate(1.02) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(1.02) !important;
-  background: rgba(251,250,247,.58) !important;
+  background: rgba(251,250,247,.54) !important;
+  backdrop-filter: blur(9px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(9px) saturate(1.02) !important;
+  box-shadow: none !important;
   border-top-color: rgba(0,0,0,.08) !important;
   border-bottom-color: rgba(0,0,0,.08) !important;
-  box-shadow: none !important;
 }
 
 .teaching-scroll-nav,
 .research-continuous-page .research-scroll-nav {
-  background: rgba(251,250,247,.18) !important;
-  backdrop-filter: blur(8px) saturate(1.02) !important;
-  -webkit-backdrop-filter: blur(8px) saturate(1.02) !important;
+  background: rgba(251,250,247,.14) !important;
+  backdrop-filter: blur(7px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(7px) saturate(1.02) !important;
   box-shadow: none !important;
   border-color: rgba(0,0,0,.08) !important;
 }
@@ -213,7 +193,7 @@
 .research-continuous-page .research-scroll-nav:focus-within,
 .research-continuous-page .research-scroll-nav.is-scrolling,
 .research-continuous-page .research-scroll-nav.is-sticky-active {
-  background: rgba(251,250,247,.22) !important;
+  background: rgba(251,250,247,.18) !important;
   box-shadow: none !important;
 }
 
@@ -222,49 +202,39 @@
 .accordion-panel,
 .publication-category,
 .publication-category > * {
+  background: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
 }
 
-.accordion-trigger {
+.accordion-trigger,
+.publication-trigger,
+.accordion-panel {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-.accordion-item.open .accordion-panel,
-.accordion-panel {
-  background: transparent !important;
-}
-
-/* Keep the top map clean, away from the identity lockup */
-.home-header-mark,
-.name,
-.identity-sentence,
-.site-utility-bar {
-  position: relative;
-  z-index: 3;
-}
-
 @media (max-width: 900px) {
   .aws-top-map {
-    top: 28px;
-    height: 360px;
-    opacity: .68;
+    top: 26px;
+    height: 340px;
+    opacity: .52;
   }
 
   .aws-globe-wrap {
-    top: 260px;
-    width: min(70vw, 520px);
-    opacity: .46;
+    width: min(68vw, 450px);
+    top: 55%;
+    opacity: .36;
   }
 
   .aws-campus-row {
-    padding: 0 16px;
-    gap: 10px;
+    bottom: 50px;
+    padding: 0 12px;
+    gap: 8px;
   }
 
   .aws-campus img {
-    width: clamp(64px, 18vw, 110px);
-    opacity: .13;
+    width: clamp(52px, 16vw, 88px);
+    opacity: .10;
   }
 }

@@ -1,16 +1,15 @@
-ACADEMIC GLOBE PATCH v9
+ACADEMIC GLOBE PATCH v10
 
-This patch updates the site background scene and navigation overlays.
+This patch adjusts the world background based on the latest feedback.
 
-Included fixes:
-- globe is slightly smaller and positioned a bit higher
-- globe lines and continent lines are less transparent, so the globe is more visible
-- globe rotates with scroll direction and speeds up when scrolling
-- publications, presentations, dissertation accordion rows are made transparent instead of solid white
-- research/teaching sticky bars stay visually integrated with the site instead of becoming separate opaque white cards
-- simplified top world map background
-- three small campus line drawings added at the bottom of the page background: Sorbonne on the left, Boğaziçi in the center, Old Main on the right
-- bottom campus drawings scroll with the page because they are anchored to the site-shell background layer
+Changes:
+- restores the simpler globe style and removes the red dots completely
+- keeps the globe fixed in the center of the screen so it remains visible while scrolling
+- adjusts globe size slightly smaller and keeps it centered
+- keeps the globe rotating with scroll direction
+- keeps the three school drawings fixed near the bottom of the screen, always visible, and above the footer links area
+- keeps nav bars and accordion areas transparent and integrated with the site
+- keeps the top world map lighter and cleaner
 
 Files included:
 - _layouts/default.html
