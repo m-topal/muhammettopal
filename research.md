@@ -26,12 +26,13 @@ permalink: /research/
 <div class="prose two-column-prose research-flow paragraph-tight-indent">
     <p>In my doctoral project, I study how intellectual authority, public life, and political judgment were made in the long nineteenth century. My work challenges two common ways of reading Ottoman intellectuals. The first reduces them to political labels: loyalist, oppositionist, conservative, liberal, Young Turk, Islamist, Ottomanist. The second treats them mainly as transmitters of European ideas, as if Ottoman intellectual life were a delayed version of European modernity. Against these approaches, I ask how Ottoman intellectuals actually lived, worked, wrote, taught, advised, criticized, and moved through the institutions that made their authority possible.</p>
 
-    <p>My dissertation examines this problem through the life and writings of Mizancı Mehmed Murad Bey (1854 to 1917), a Dagestani émigré who became one of the most paradigmatic intellectual figures of the late Ottoman world. Mehmed Murad was not only a reformist or political actor. He was also a historian and professor at Mülkiye, novelist and playwright, journalist and public moralist, bureaucrat and opponent. This multiplicity in his occupations, along with his life trajectory, allows me to study the Ottoman intellectual not as a fixed social type, but as a figure formed in a series of tensions: between center and periphery, migration and belonging, reform and tradition, the public intellectual and the state servant, and, finally, loyalty and dissent.</p>
-
-<figure class="research-inline-figure research-inline-constantinople js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/research/constantinople-golden-horn-panorama.jpg' | relative_url }}" alt="Nineteenth-century panoramic view of Constantinople and the Golden Horn">
-  <figcaption>A nineteenth-century panoramic view of Constantinople/Istanbul across the Golden Horn.</figcaption>
+<figure class="research-inline-figure research-inline-murad js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/research/mehmed-murad-bey-paris.webp' | relative_url }}" alt="Mehmed Murad Bey in Paris">
+  <figcaption>Mehmed Murad Bey in Paris.</figcaption>
 </figure>
+
+
+    <p>My dissertation examines this problem through the life and writings of Mizancı Mehmed Murad Bey (1854 to 1917), a Dagestani émigré who became one of the most paradigmatic intellectual figures of the late Ottoman world. Mehmed Murad was not only a reformist or political actor. He was also a historian and professor at Mülkiye, novelist and playwright, journalist and public moralist, bureaucrat and opponent. This multiplicity in his occupations, along with his life trajectory, allows me to study the Ottoman intellectual not as a fixed social type, but as a figure formed in a series of tensions: between center and periphery, migration and belonging, reform and tradition, the public intellectual and the state servant, and, finally, loyalty and dissent.</p>
 
     <p>In my dissertation, <em>The Making of an Ottoman Public Intellectual: Mehmed Murad Bey between Loyalty and Dissent</em>, I treat life-writing not as an end in itself but as a method, drawing on global microhistory, intellectual history, and biography to grasp the spirit of the long nineteenth century through the entangled histories, geographies, circles, and ideas that Mehmed Murad traversed. I use his life to ask how a late Ottoman public intellectual became possible, how he made sense of the Ottoman Empire and the world surrounding it through literary, scholarly, and political engagement, and how proximity and distance to power eventually turned intellectual labor into political risk.</p>
 
@@ -46,10 +47,11 @@ permalink: /research/
 
     <p>In the third part, <strong>Political Existence</strong>, I follow what this way of working cost him, in two chapters. Mehmed Murad's authority was shaped by his proximity to power. He could teach because he had entered state institutions, advise because he had access to political elites, and publish because he understood the language of reform from within the Ottoman bureaucratic world. But the same proximity that gave him authority made criticism, and the distance it required, dangerous. This part follows his movement from advice to estrangement, from journalism to exile, from Young Turk leadership to return, and finally to marginalization in the post-Hamidian era. The central question is not whether Mehmed Murad was conservative or progressive. It is how late Ottoman intellectual life forced figures like him to move between loyalty and dissent, service and criticism, access and vulnerability.</p>
 
-<figure class="research-inline-figure research-inline-murad js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/research/mehmed-murad-bey-paris.webp' | relative_url }}" alt="Mehmed Murad Bey in Paris">
-  <figcaption>Mehmed Murad Bey in Paris.</figcaption>
+<figure class="research-inline-figure research-inline-constantinople js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/research/constantinople-golden-horn-panorama.jpg' | relative_url }}" alt="Nineteenth-century panoramic view of Constantinople and the Golden Horn">
+  <figcaption>A nineteenth-century panoramic view of Constantinople/Istanbul across the Golden Horn.</figcaption>
 </figure>
+
 
     <p>Methodologically, the dissertation combines intellectual history, global microhistory, biography, and historical sociology. I work across Ottoman Turkish, Turkish, French, Arabic, English, Russian, and Caucasian-language sources, including newspapers, memoirs, autobiographical writings, correspondence, diplomatic reports, archival registers, literary texts, visual materials, and period histories, along with the related secondary literature. Alongside archival research, close reading, and discourse analysis, I also draw on digital and quantitative methods such as spatial and social network analysis, with the aim of making visible the relationships among people, places, institutions, genres, and publics.</p>
 
