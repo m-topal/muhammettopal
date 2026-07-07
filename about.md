@@ -32,13 +32,6 @@ permalink: /about/
       <p>During my undergraduate years, I also studied political science at Sciences Po in Paris. That experience widened my intellectual formation beyond history narrowly defined. It introduced me to political science, international relations, and comparative approaches to political life. Paris later became central to my graduate training. At the École pratique des hautes études, I completed an MA in Islamology and Muslim worlds, with a thesis titled <em>Individuation et politisation : Portrait d’un intellectuel ottoman en tant que journaliste</em> [Individuation and Politicization: Portrait of an Ottoman Intellectual as Journalist]. In that thesis, I began working seriously on Mehmed Murad Bey, focusing on his formation, migration, entry into Ottoman society, and early journalistic career.</p>
 
       <p>My training in Paris gave me a strong attachment to archival work, philology, and close reading. It also taught me to think of sources not as inert evidence, but as historical worlds in themselves. Newspapers, memoirs, bureaucratic documents, literary texts, and historical works all carry traces of the conditions in which they were produced. This approach continues to shape my work. I read Ottoman intellectuals not as isolated authors, but as people writing from within institutions, anxieties, ambitions, obligations, friendships, rivalries, and political constraints.</p>
-
-      <figure class="about-breakout-library creative-breakout-figure js-lightbox-figure">
-        <img class="js-lightbox-image" src="{{ '/assets/img/about/ens-ulm-library-scanning.png' | relative_url }}" alt="Muhammet Topal scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris">
-        <figcaption>Scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris.</figcaption>
-      </figure>
-
-      <p>At the University of Arizona, my doctoral work expanded this project into a broader study of Ottoman intellectual life. I bring together intellectual history, biography, global microhistory, historiography, historical sociology, and transimperial history. I work with sources in Ottoman Turkish, Turkish, French, Arabic, Russian, and English. I am interested in how ideas moved through people, but also in how people moved through institutions, languages, genres, and political settings.</p>
     </div>
 
     <div class="prose center-wrap-text center-wrap-text-right paragraph-tight-indent">
@@ -50,7 +43,22 @@ permalink: /about/
       <p>In the classroom, I emphasize historical thinking as a practice of contextual judgment rather than memorization. I ask students to read political texts, memoirs, visual materials, maps, and archival documents as situated interventions, and I design assignments that move them from close reading to broader historical explanation. In courses on political Islam, empire, nationalism, violence, and modern Middle Eastern history, I try to create a space where students can engage sensitive subjects with precision, care, and intellectual seriousness.</p>
 
       <p>My pedagogical training has been strengthened by the Graduate Certificate in College Teaching at the University of Arizona. Through coursework in Learner Centered Teaching, Technology in Teaching, Teaching as Research, and College Teaching Practice, I developed a more systematic approach to course design, assessment, classroom participation, and student centered pedagogy. In my courses, I use primary sources, media analysis, maps, visual materials, structured discussion, and digital assignments to help students connect historical inquiry with contemporary public debates.</p>
+    </div>
+  </div>
 
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap">
+    <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/about/ens-ulm-library-scanning.png' | relative_url }}" alt="Muhammet Topal scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris">
+      <figcaption>Scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris.</figcaption>
+    </figure>
+
+    <div class="prose center-wrap-text center-wrap-text-left paragraph-tight-indent">
+      <span class="wrap-shape wrap-shape-left" aria-hidden="true"></span>
+      <p>At the University of Arizona, my doctoral work expanded this project into a broader study of Ottoman intellectual life. I bring together intellectual history, biography, global microhistory, historiography, historical sociology, and transimperial history. I work with sources in Ottoman Turkish, Turkish, French, Arabic, Russian, and English. I am interested in how ideas moved through people, but also in how people moved through institutions, languages, genres, and political settings.</p>
+    </div>
+
+    <div class="prose center-wrap-text center-wrap-text-right paragraph-tight-indent">
+      <span class="wrap-shape wrap-shape-right" aria-hidden="true"></span>
       <p>Beyond research and teaching, I have been involved in academic service and public engagement. At the University of Arizona, I served as co-head of the Graduate Student Association, helped reactivate graduate student programming, represented students in departmental settings, and contributed to academic community building. I also worked as an Outreach Scholar with the Center for Middle Eastern Studies, where I participated in educational initiatives aimed at making the histories, cultures, and politics of the Middle East more accessible beyond the university classroom.</p>
 
       <p>Outside the formal boundaries of academic work, moving to Arizona changed my relationship to landscape. After Istanbul and Paris, the desert, mountains, canyons, and open horizons of the American Southwest became part of how I think and live. Hiking, climbing, and outdoor life have given me another way to understand movement, attention, difficulty, and scale. They remind me that thinking also depends on place, body, rhythm, and the worlds we move through.</p>
@@ -61,7 +69,6 @@ permalink: /about/
       </figure>
     </div>
   </div>
-
   <div class="cv-modal" id="aboutCvModal" hidden role="dialog" aria-modal="true" aria-labelledby="aboutCvModalTitle">
     <div class="cv-modal-dialog">
       <button class="cv-modal-close" type="button" aria-label="Close CV preview">×</button>
