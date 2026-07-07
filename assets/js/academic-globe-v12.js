@@ -132,13 +132,13 @@
 
     var controls = globe.controls();
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.28;
+    controls.autoRotateSpeed = 0.42;
     controls.enableZoom = false;
     controls.enablePan = false;
 
     var lastY = window.scrollY || 0;
-    var currentSpeed = 0.28;
-    var targetSpeed = 0.28;
+    var currentSpeed = 0.42;
+    var targetSpeed = 0.42;
     var orbitAngle = 0;
     var s1 = document.getElementById('schoolSatellite1');
     var s2 = document.getElementById('schoolSatellite2');
@@ -149,12 +149,12 @@
       var dy = y - lastY;
       lastY = y;
       var dir = dy >= 0 ? 1 : -1;
-      targetSpeed = dir * (0.28 + Math.min(Math.abs(dy) * 0.012, 1.9));
+      targetSpeed = dir * (0.42 + Math.min(Math.abs(dy) * 0.016, 2.4));
     }, { passive: true });
 
     function animate() {
       currentSpeed += (targetSpeed - currentSpeed) * 0.14;
-      targetSpeed += ((targetSpeed >= 0 ? 0.28 : -0.28) - targetSpeed) * 0.035;
+      targetSpeed += ((targetSpeed >= 0 ? 0.42 : -0.42) - targetSpeed) * 0.045;
       controls.autoRotateSpeed = currentSpeed;
       orbitAngle += currentSpeed * 0.52;
       var radius = globeHost.clientWidth * 0.54;

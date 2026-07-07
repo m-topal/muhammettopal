@@ -1,14 +1,18 @@
-ACADEMIC GLOBE PATCH v13
+ACADEMIC GLOBE PATCH v14
 
-This is a CSS-only refinement patch for the current v12 site.
+Apply this on top of v12 or v13.
 
-What it changes:
-- removes the rounded box/card look from publications and presentations accordion rows
-- keeps those rows transparent
-- uses a soft shadow treatment instead of visible box outlines
-- keeps the rows visually present without bringing back white backgrounds
+Changes:
+- moves the globe lower so it always begins below the main navigation
+- reduces the globe by about 10 percent
+- increases base rotation speed and makes scroll acceleration stronger
+- removes circular bubbles, borders, backgrounds, and shadows from orbiting school drawings
+- keeps school drawings as bare transparent line-art satellites
+- removes rounded box treatment from publication and presentation rows
+- uses shadow-only hover/open emphasis, with no white backgrounds and no visible outline box
+- suppresses persistent focus outlines on accordion triggers
+- adds a soft edge-free mist behind long-form prose so text remains readable while the globe stays visible
 
-File included:
+Files:
 - assets/css/academic-globe-v12.css
-
-Apply this by replacing the existing file at the same path in the current site.
+- assets/js/academic-globe-v12.js
