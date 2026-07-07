@@ -11,7 +11,7 @@ permalink: /about/
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
   </div>
 
-  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap" style="margin-block-end:0 !important; padding-block-end:0 !important;">
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-flow-first">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
@@ -41,7 +41,7 @@ permalink: /about/
     </div>
   </div>
 
-  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap" style="margin-block-start:0 !important; padding-block-start:0 !important;">
+  <div class="center-image-text-wrap organic-center-wrap about-center-image-wrap balanced-reading-wrap v84-through-wrap about-flow-second">
     <figure class="center-image-middle about-breakout-library creative-breakout-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/ens-ulm-library-scanning.png' | relative_url }}" alt="Muhammet Topal scanning a book at the Bibliothèque Ulm-Jourdan of the École normale supérieure in Paris">
       <figcaption>Working with collections at the Bibliothèque Ulm of the École normale supérieure in Paris.</figcaption>
