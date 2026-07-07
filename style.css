@@ -7934,9 +7934,1234 @@ body.cv-modal-open {
   cursor: pointer;
 }
 
+/* v135: remove Teaching approach block and soften Teaching section nav transparency */
+.teaching-scroll-nav {
+  background: rgba(255, 255, 255, .76) !important;
+  border-color: rgba(0, 0, 0, .13) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .07) !important;
+  backdrop-filter: blur(15px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(1.04) !important;
+}
 
-/* v174: continuation across About columns should not look like a new paragraph */
-.about-page .about-dual-column-right > p.about-column-continuation {
-  text-indent: 0 !important;
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(255, 255, 255, .84) !important;
+  border-color: rgba(0, 0, 0, .18) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .105) !important;
+}
+
+.teaching-scroll-nav a {
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    background: rgba(255, 255, 255, .82) !important;
+  }
+
+  .teaching-scroll-nav a {
+    font-size: .68rem;
+  }
+}
+
+/* v136: slightly more transparent Teaching section nav and black active tab */
+.teaching-scroll-nav {
+  background: rgba(255, 255, 255, .66) !important;
+  border-color: rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .075) !important;
+  backdrop-filter: blur(16px) saturate(1.06) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.06) !important;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(255, 255, 255, .74) !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-scroll-nav a.active,
+.teaching-scroll-nav a[aria-current="true"] {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .18) !important;
+}
+
+.teaching-scroll-nav a.active:hover,
+.teaching-scroll-nav a.active:focus-visible,
+.teaching-scroll-nav a[aria-current="true"]:hover,
+.teaching-scroll-nav a[aria-current="true"]:focus-visible {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    background: rgba(255, 255, 255, .72) !important;
+  }
+
+  .teaching-scroll-nav:hover,
+  .teaching-scroll-nav:focus-within,
+  .teaching-scroll-nav.is-scrolling,
+  .teaching-scroll-nav.is-sticky-active {
+    background: rgba(255, 255, 255, .80) !important;
+  }
+}
+
+/* v137: let Teaching intro and certificate text balance naturally across columns */
+.teaching-continuous-page .teaching-continuous-intro,
+.teaching-continuous-page .certificate-main-text {
+  column-fill: balance !important;
+  -webkit-column-fill: balance !important;
+}
+
+.teaching-continuous-page .teaching-continuous-intro > p,
+.teaching-continuous-page .certificate-main-text > p {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.teaching-continuous-page .teaching-continuous-intro > p + p,
+.teaching-continuous-page .certificate-main-text > p + p {
+  margin-top: 0 !important;
+}
+
+.teaching-continuous-page .certificate-main-text .certificate-website-line {
+  break-inside: avoid !important;
+  -webkit-column-break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  margin-top: 12px !important;
+  text-indent: 0 !important;
+}
+
+/* v138: make Teaching intro and certificate flow as single balanced paragraphs */
+.teaching-continuous-page .teaching-continuous-intro > p,
+.teaching-continuous-page .certificate-main-text > p:not(.certificate-website-line) {
+  break-inside: auto !important;
+  -webkit-column-break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+.teaching-continuous-page .certificate-main-text .certificate-website-line {
+  text-align: right !important;
+  margin-top: 14px !important;
+  margin-bottom: 0 !important;
+  text-indent: 0 !important;
+}
+
+/* v139: slightly more transparent Teaching section nav and sitewide back-to-top button */
+.teaching-scroll-nav {
+  background: rgba(255, 255, 255, .56) !important;
+}
+
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(255, 255, 255, .64) !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-scroll-nav {
+    background: rgba(255, 255, 255, .62) !important;
+  }
+
+  .teaching-scroll-nav:hover,
+  .teaching-scroll-nav:focus-within,
+  .teaching-scroll-nav.is-scrolling,
+  .teaching-scroll-nav.is-sticky-active {
+    background: rgba(255, 255, 255, .70) !important;
+  }
+}
+
+/* v140: back-to-top as a large arrow tip only, no circle */
+.back-to-top-button {
+  position: fixed;
+  right: clamp(20px, 4.2vw, 54px);
+  bottom: clamp(26px, 5.5vh, 62px);
+  width: 54px;
+  height: 54px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(14px) scale(.94);
+  pointer-events: none;
+  z-index: 1300;
+  transition: opacity .22s ease, transform .22s ease, filter .18s ease;
+}
+
+.back-to-top-button::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-top: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .20));
+}
+
+.back-to-top-button.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.back-to-top-button:hover,
+.back-to-top-button:focus-visible {
+  transform: translateY(-4px) scale(1.12);
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .22));
+  outline: none;
+}
+
+.back-to-top-button:active {
+  transform: translateY(-1px) scale(1.04);
+}
+
+@media (max-width: 760px) {
+  .back-to-top-button {
+    right: 14px;
+    bottom: 18px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .back-to-top-button::before {
+    width: 22px;
+    height: 22px;
+    border-top-width: 3.5px;
+    border-left-width: 3.5px;
+  }
+}
+
+/* v141: restore Teaching card interactivity and polish co-teaching slider arrows */
+.teaching-continuous-page .teaching-course-card.course-modal-trigger,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"] {
+  position: relative;
+  z-index: 1;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease, opacity 170ms ease !important;
+  will-change: transform;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  border-color: var(--ink) !important;
+  box-shadow: inset 0 0 0 1px var(--ink), 0 16px 34px rgba(0, 0, 0, .13) !important;
+  transform: translateY(-4px) !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover .course-card-image,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible .course-card-image,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover .course-card-image,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible .course-card-image {
+  border-bottom-color: var(--ink) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  z-index: 8 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  border-width: 2px !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  background: rgba(255, 255, 255, .94) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  display: block;
+  color: #111;
+  font-family: var(--serif);
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: .86;
+  transform: translateY(-1px);
+}
+
+.teaching-slider-frame .teaching-slider-cue-left::before {
+  content: "‹";
+}
+
+.teaching-slider-frame .teaching-slider-cue-right::before {
+  content: "›";
+}
+
+.teaching-slider-frame .teaching-slider-cue:hover,
+.teaching-slider-frame .teaching-slider-cue:focus-visible {
+  border-color: #111 !important;
+  background: rgba(255, 255, 255, .98) !important;
+  box-shadow: inset 0 0 0 1px #111, 0 18px 38px rgba(0, 0, 0, .20) !important;
+  outline: none !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-left:hover,
+.teaching-slider-frame .teaching-slider-cue-left:focus-visible {
+  transform: translateY(-50%) translateX(-3px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-right:hover,
+.teaching-slider-frame .teaching-slider-cue-right:focus-visible {
+  transform: translateY(-50%) translateX(3px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue:active {
+  box-shadow: inset 0 0 0 1px #111, 0 10px 22px rgba(0, 0, 0, .18) !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-slider-frame .teaching-slider-cue {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .teaching-slider-frame .teaching-slider-cue::before {
+    font-size: 2rem;
+  }
+}
+
+/* v142: continuous Research page and co-teaching hover-frame correction */
+.research-continuous-page .research-continuous-intro {
+  margin-bottom: 1.15rem;
+  column-fill: balance;
+  -webkit-column-fill: balance;
+}
+
+.research-continuous-page .research-scroll-nav {
+  max-width: 980px;
+}
+
+.research-continuous-page .research-scroll-section:first-of-type {
+  border-top: 0;
+}
+
+.research-continuous-page .research-scroll-section > .prose:first-of-type,
+.research-continuous-page .research-scroll-section > .publication-category:first-of-type,
+.research-continuous-page .research-scroll-section > .slideshow:first-of-type {
+  margin-top: .75rem;
+}
+
+.research-continuous-page .research-subsection-heading {
+  margin: 2.2rem 0 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+}
+
+.research-continuous-page .research-subsection-heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  line-height: 1.08;
+}
+
+.research-continuous-page .subnav,
+.research-continuous-page .option-grid {
+  display: none !important;
+}
+
+.co-teaching-course-row {
+  padding-top: 12px !important;
+  margin-top: -4px;
+}
+
+.teaching-slider-frame {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  z-index: 6 !important;
+  box-shadow: inset 0 0 0 2px var(--ink), 0 18px 38px rgba(0, 0, 0, .15) !important;
+}
+
+@media (max-width: 760px) {
+  .research-continuous-page .research-scroll-nav {
+    max-width: 100%;
+  }
+}
+
+/* v143: remove Research dropdown, refine Teaching card hover borders, and match slider arrows to lighter video-style controls */
+.teaching-continuous-page .teaching-course-grid,
+.teaching-continuous-page .other-teaching-grid,
+.teaching-continuous-page .teaching-scroll-section,
+.teaching-slider-frame,
+.teaching-slider-frame .co-teaching-course-row {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  margin-top: 0 !important;
+}
+
+.teaching-continuous-page .other-teaching-grid,
+.teaching-continuous-page .teaching-course-grid {
+  padding-top: 8px !important;
+}
+
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  border-color: rgba(0, 0, 0, .72) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .72), 0 14px 30px rgba(0, 0, 0, .11) !important;
+  transform: translateY(-2px) !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card.course-modal-trigger:focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"]:hover {
+  z-index: 6 !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .72), 0 14px 30px rgba(0, 0, 0, .11) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  width: 54px !important;
+  height: 54px !important;
+  border-width: 1px !important;
+  border-color: rgba(0, 0, 0, .22) !important;
+  background: rgba(255, 255, 255, .96) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .13) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 2.15rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  transform: translateY(-1px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue:hover,
+.teaching-slider-frame .teaching-slider-cue:focus-visible {
+  border-color: rgba(0, 0, 0, .55) !important;
+  background: rgba(255, 255, 255, .99) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .28), 0 18px 36px rgba(0, 0, 0, .18) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-left:hover,
+.teaching-slider-frame .teaching-slider-cue-left:focus-visible {
+  transform: translateY(-50%) translateX(-2px) !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue-right:hover,
+.teaching-slider-frame .teaching-slider-cue-right:focus-visible {
+  transform: translateY(-50%) translateX(2px) !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-slider-frame .teaching-slider-cue {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .teaching-slider-frame .teaching-slider-cue::before {
+    font-size: 1.9rem !important;
+  }
+}
+
+/* v144: stabilize co-teaching carousel and keep non-image card hover frames fully visible */
+.teaching-continuous-page .teaching-shelf {
+  overflow: visible !important;
+}
+
+.teaching-continuous-page .teaching-shelf-row,
+.teaching-continuous-page .co-teaching-course-row,
+.teaching-slider-frame {
+  overflow-y: visible !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image) {
+  position: relative !important;
+  overflow: visible !important;
+  border: 1px solid rgba(0, 0, 0, .10) !important;
+  box-shadow: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image)::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid rgba(0, 0, 0, .72);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .16s ease, box-shadow .16s ease;
+  z-index: 3;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):focus-visible {
+  border-color: rgba(0, 0, 0, .10) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .10) !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover::after,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible::after {
+  opacity: 1;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card[data-carousel-clone="true"] {
+  opacity: 1 !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.teaching-slider-frame .teaching-slider-cue::before {
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+}
+
+.teaching-scroll-section {
+  scroll-margin-top: 145px !important;
+}
+
+/* v145: restore co-teaching carousel clipping/sliding and keep hover borders inside cards */
+.teaching-continuous-page .teaching-slider-frame {
+  position: relative !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+  padding: 0 42px !important;
+  margin-top: 1.15rem !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::before,
+.teaching-continuous-page .teaching-slider-frame::after {
+  width: 44px !important;
+  pointer-events: none !important;
+  z-index: 3 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::before {
+  left: 0 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::after {
+  right: 0 !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 22px !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  padding: 18px 0 24px !important;
+  margin: 0 !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row::-webkit-scrollbar {
+  display: none !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 clamp(276px, 28vw, 304px) !important;
+  min-width: clamp(276px, 28vw, 304px) !important;
+  max-width: clamp(276px, 28vw, 304px) !important;
+  transform: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image),
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image),
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image) {
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 0, 0, .10) !important;
+  box-shadow: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image)::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border: 1.25px solid rgba(0, 0, 0, .72) !important;
+  border-radius: inherit !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+  transition: opacity .16s ease !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image):focus-visible,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):focus-visible {
+  border-color: rgba(0, 0, 0, .10) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .10) !important;
+  transform: none !important;
+  outline: none !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):hover::after,
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image):focus-visible::after,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image):hover::after,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image):focus-visible::after,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):hover::after,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image):focus-visible::after {
+  opacity: 1 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue {
+  width: 52px !important;
+  height: 52px !important;
+  z-index: 6 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-left {
+  left: 8px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-right {
+  right: 8px !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-continuous-page .teaching-slider-frame {
+    padding: 0 34px !important;
+  }
+
+  .teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+    flex-basis: min(78vw, 294px) !important;
+    min-width: min(78vw, 294px) !important;
+    max-width: min(78vw, 294px) !important;
+  }
+}
+
+/* v146: smoother infinite co-teaching carousel with partial next-card cue */
+.teaching-continuous-page .teaching-slider-frame {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 34px !important;
+  margin-top: 1.45rem !important;
+  margin-bottom: 2.45rem !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 28px !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  padding: 30px 10px 38px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-type: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row::-webkit-scrollbar {
+  display: none !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 calc((100% - 56px) / 3.18) !important;
+  width: calc((100% - 56px) / 3.18) !important;
+  min-width: 280px !important;
+  max-width: 345px !important;
+  margin: 0 !important;
+  transform-origin: center center !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:hover,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:focus-visible {
+  transform: translateY(-5px) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::before,
+.teaching-continuous-page .teaching-slider-frame::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 78px !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::before {
+  left: 0 !important;
+  background: linear-gradient(90deg, rgba(255,255,255,.98), rgba(255,255,255,0)) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame::after {
+  right: 0 !important;
+  background: linear-gradient(270deg, rgba(255,255,255,.98), rgba(255,255,255,0)) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue {
+  width: 58px !important;
+  height: 58px !important;
+  z-index: 8 !important;
+  background: rgba(255,255,255,.94) !important;
+  border: 1.4px solid rgba(0,0,0,.22) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.11) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-left {
+  left: 10px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-right {
+  right: 10px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue::before {
+  width: 13px !important;
+  height: 13px !important;
+  border-width: 0 3px 3px 0 !important;
+}
+
+@media (max-width: 900px) {
+  .teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+    flex-basis: 78% !important;
+    width: 78% !important;
+    min-width: 250px !important;
+  }
+}
+
+/* v147: Google-friendly favicon support and calmer co-teaching slider spacing */
+.teaching-continuous-page .teaching-slider-frame {
+  overflow: hidden !important;
+  padding: 0 38px !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row {
+  gap: 25px !important;
+  padding: 30px 46px 38px !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior-x: contain !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 calc((100% - 50px) / 3.32) !important;
+  width: calc((100% - 50px) / 3.32) !important;
+  min-width: 278px !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue {
+  width: 54px !important;
+  height: 54px !important;
+  border-width: 1.25px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue::before {
+  width: 12px !important;
+  height: 12px !important;
+  border-width: 0 2.45px 2.45px 0 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-left {
+  left: 10px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame .teaching-slider-cue-right {
+  right: 10px !important;
+}
+
+.teaching-continuous-page .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .other-teaching-grid .teaching-course-card:not(.course-card-with-image)::after,
+.teaching-continuous-page .co-teaching-course-row .teaching-course-card:not(.course-card-with-image)::after {
+  inset: 0 !important;
+  border-radius: inherit !important;
+  border-width: 1.35px !important;
+  box-shadow: inset 0 0 0 1.35px rgba(0, 0, 0, .72) !important;
+}
+
+@media (max-width: 900px) {
+  .teaching-continuous-page .co-teaching-course-row {
+    gap: 21px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  .teaching-continuous-page .co-teaching-course-row .teaching-course-card {
+    flex-basis: 76% !important;
+    width: 76% !important;
+    min-width: 250px !important;
+  }
+}
+
+/* v148: simple Co-Teaching scroll, no circular bounce-back */
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll {
+  overflow: hidden !important;
+  padding-left: 38px !important;
+  padding-right: 38px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row {
+  gap: 22px !important;
+  padding-left: 44px !important;
+  padding-right: 44px !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none !important;
+  overscroll-behavior-x: auto !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row .teaching-course-card {
+  flex: 0 0 calc((100% - 44px) / 3.28) !important;
+  width: calc((100% - 44px) / 3.28) !important;
+  min-width: 278px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row .teaching-course-card:not(.course-card-with-image)::after {
+  inset: 0 !important;
+  border-width: 1.25px !important;
+  box-shadow: inset 0 0 0 1.25px rgba(0, 0, 0, .70) !important;
+}
+
+/* v149: smaller side arrows moved outward so cards have more room */
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll {
+  overflow: visible !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .co-teaching-course-row {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue {
+  width: 43px !important;
+  height: 43px !important;
+  min-width: 43px !important;
+  min-height: 43px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue::before {
+  width: 12px !important;
+  height: 12px !important;
+  border-width: 0 2.45px 2.45px 0 !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-left {
+  left: -44px !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-right {
+  right: -44px !important;
+}
+
+@media (max-width: 900px) {
+  .teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-left {
+    left: -24px !important;
+  }
+  .teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-right {
+    right: -24px !important;
+  }
+}
+
+/* v150: recenter smaller Co-Teaching slider arrows inside circles */
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  text-align: center !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  display: block !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 !important;
+  border-style: solid !important;
+  border-color: #111 !important;
+  border-width: 0 2.45px 2.45px 0 !important;
+  transform-origin: 50% 50% !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-left::before {
+  transform: translate(-42%, -50%) rotate(135deg) !important;
+}
+
+.teaching-continuous-page .teaching-slider-frame.is-simple-scroll .teaching-slider-cue-right::before {
+  transform: translate(-58%, -50%) rotate(-45deg) !important;
+}
+
+/* v154: publication category icons and Mizan figure relocation polish */
+.research-continuous-page .publication-category-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  line-height: 1.18;
+}
+
+.research-continuous-page .publication-category-icon {
+  width: 1.12em;
+  height: 1.12em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transform: translateY(0.02em);
+}
+
+.research-continuous-page .publication-category-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.research-continuous-page .publication-category-icon-manuscript svg {
+  stroke-width: 1.5;
+}
+
+/* v181: coordinated header spacing, mobile section-nav offset, teaching sliders, outcomes cleanup, and prose rhythm */
+:root {
+  --v181-main-nav-mobile-height: 112px;
+}
+
+/* Keep body prose compact without affecting controls, metadata, or headings. */
+body {
+  line-height: 1.5;
+}
+
+.prose,
+.page p,
+.post-content,
+.teaching-continuous-intro,
+.research-continuous-intro,
+.about-dual-column {
+  line-height: 1.5;
+}
+
+/* Pull the shared identity block upward and reduce only its internal spacing. */
+.site-shell {
+  padding-top: 24px;
+}
+
+.site-top {
+  margin-bottom: 22px;
+}
+
+.site-top .site-utility-bar {
+  margin-bottom: 4px;
+}
+
+.site-top .site-header-wordmark-block {
+  margin-top: -2px;
+  margin-bottom: 2px;
+}
+
+.site-top .home-header-wordmark {
+  margin-bottom: 0;
+}
+
+.site-top .name {
+  margin-top: 0;
+}
+
+.site-top .identity-sentence {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.sticky-nav {
+  margin-bottom: 18px;
+}
+
+main {
+  padding-top: 24px;
+}
+
+/* Instructor of Record now uses the same safe horizontal slider geometry as Co-Teaching. */
+.instructor-slider-frame .instructor-course-row {
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: minmax(285px, 360px) !important;
+  grid-template-columns: none !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  padding: 18px 38px !important;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.instructor-slider-frame .instructor-course-row > .teaching-course-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  scroll-snap-align: start;
+}
+
+/* Outcome cards no longer reserve space for removed preview copy. */
+.certificate-coursework-cards .certificate-card {
+  align-content: start;
+  min-height: 0 !important;
+}
+
+.certificate-coursework-cards .certificate-card h3 {
+  margin-bottom: 0 !important;
+}
+
+/* Mobile: keep the inner Research/Teaching bar below the wrapped main nav. */
+@media (max-width: 760px) {
+  .site-shell {
+    padding-top: 20px;
+  }
+
+  .site-top {
+    margin-bottom: 16px;
+  }
+
+  .site-top .identity-sentence {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  .sticky-nav {
+    margin-bottom: 12px;
+  }
+
+  main {
+    padding-top: 16px;
+  }
+
+  .teaching-scroll-nav,
+  .research-continuous-page .research-scroll-nav {
+    position: sticky !important;
+    top: calc(var(--v181-main-nav-mobile-height) + 4px) !important;
+    z-index: 850 !important;
+    background: rgba(255, 255, 255, .52) !important;
+    border-color: rgba(0, 0, 0, .12) !important;
+    box-shadow: 0 9px 24px rgba(0, 0, 0, .06) !important;
+    backdrop-filter: blur(14px) saturate(1.04) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.04) !important;
+    margin-top: .6rem !important;
+  }
+
+  .teaching-scroll-nav:hover,
+  .teaching-scroll-nav:focus-within,
+  .teaching-scroll-nav.is-scrolling,
+  .teaching-scroll-nav.is-sticky-active,
+  .research-continuous-page .research-scroll-nav:hover,
+  .research-continuous-page .research-scroll-nav:focus-within,
+  .research-continuous-page .research-scroll-nav.is-scrolling,
+  .research-continuous-page .research-scroll-nav.is-sticky-active {
+    background: rgba(255, 255, 255, .62) !important;
+  }
+
+  .teaching-scroll-section,
+  .research-scroll-section {
+    scroll-margin-top: calc(var(--v181-main-nav-mobile-height) + 92px) !important;
+  }
+
+  .instructor-slider-frame .instructor-course-row {
+    grid-auto-columns: minmax(260px, 82vw) !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
+/* JS measures the wrapped main nav. This is only the no-JS fallback for narrow screens. */
+@media (max-width: 520px) {
+  :root {
+    --v181-main-nav-mobile-height: 132px;
+  }
+}
+
+/* v182: restore the established About dual-image wrap layout after v181 */
+.about-page .about-dual-wrap {
+  --dual-image-width: 340px;
+  --dual-image-height: 380px;
+  --dual-caption-height: 72px;
+  --dual-first-top: 260px;
+  --dual-second-top: 1500px;
+  --dual-buffer: 12px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(2rem, 4vw, 3rem);
+  max-width: 1040px;
+  margin: 28px auto 42px;
+  align-items: start;
+}
+
+.about-page .about-dual-column {
+  min-width: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-page .about-dual-column p:first-of-type {
+  margin-top: 0;
+}
+
+.about-page .about-dual-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--dual-image-width);
+  margin: 0;
+  z-index: 3;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, .075);
+}
+
+.about-page .about-dual-image-princeton {
+  top: var(--dual-first-top);
+}
+
+.about-page .about-dual-image-ens {
+  top: var(--dual-second-top);
+}
+
+.about-page .about-dual-image img {
+  display: block;
+  width: 100%;
+  height: var(--dual-image-height);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.about-page .about-dual-image figcaption {
+  min-height: var(--dual-caption-height);
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .92rem;
+  line-height: 1.4;
+  background: #fff;
+}
+
+.about-page .about-dual-shape {
+  display: block;
+  width: calc((var(--dual-image-width) / 2) + var(--dual-buffer));
+  height: calc(var(--dual-second-top) + var(--dual-image-height) + var(--dual-caption-height));
+  pointer-events: none;
+}
+
+.about-page .about-dual-shape-left {
+  float: right;
+  margin-left: .85rem;
+  shape-outside: polygon(
+    100% 0,
+    100% var(--dual-first-top),
+    0 var(--dual-first-top),
+    0 calc(var(--dual-first-top) + var(--dual-image-height) + var(--dual-caption-height)),
+    100% calc(var(--dual-first-top) + var(--dual-image-height) + var(--dual-caption-height)),
+    100% var(--dual-second-top),
+    0 var(--dual-second-top),
+    0 100%,
+    100% 100%
+  );
+}
+
+.about-page .about-dual-shape-right {
+  float: left;
+  margin-right: .85rem;
+  shape-outside: polygon(
+    0 0,
+    0 var(--dual-first-top),
+    100% var(--dual-first-top),
+    100% calc(var(--dual-first-top) + var(--dual-image-height) + var(--dual-caption-height)),
+    0 calc(var(--dual-first-top) + var(--dual-image-height) + var(--dual-caption-height)),
+    0 var(--dual-second-top),
+    100% var(--dual-second-top),
+    100% 100%,
+    0 100%
+  );
+}
+
+@media (max-width: 980px) {
+  .about-page .about-dual-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 24px 0 36px;
+  }
+
+  .about-page .about-dual-image {
+    position: static;
+    transform: none;
+    width: min(100%, 420px);
+    margin: 0 auto;
+  }
+
+  .about-page .about-dual-column-left { order: 0; }
+  .about-page .about-dual-image-princeton { order: 1; }
+  .about-page .about-dual-column-right { order: 2; }
+  .about-page .about-dual-image-ens { order: 3; }
+
+  .about-page .about-dual-image img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .about-page .about-dual-shape {
+    display: none;
+    height: 0;
+  }
 }
