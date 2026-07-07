@@ -7935,30 +7935,8 @@ body.cv-modal-open {
 }
 
 
-/* v165: keep the two center-image passages visually continuous.
-   The page still has two real text columns and both images use the same
-   Princeton-style center-wrap system. These overrides remove the artificial
-   section break created by the generic wrapper margins. */
-.about-page .about-flow-first {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-.about-page .about-flow-second {
-  margin-top: -0.35rem !important;
-  padding-top: 0 !important;
-}
-.about-page .about-flow-first + .about-flow-second {
-  row-gap: 0 !important;
-}
-@media (min-width: 981px) {
-  .about-page .about-flow-first,
-  .about-page .about-flow-second {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .about-page .about-flow-first .center-wrap-text p:last-child,
-  .about-page .about-flow-second .center-wrap-text p:first-of-type {
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
-  }
+/* v174: continuation across About columns should not look like a new paragraph */
+.about-page .about-dual-column-right > p.about-column-continuation {
+  text-indent: 0 !important;
+  margin-top: 0 !important;
 }
