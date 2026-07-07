@@ -88,6 +88,8 @@ Recommended script tag:
 
   function addAboutDivider() {
     if (!isAboutPage()) return;
+    document.querySelectorAll(".topal-live-about-divider").forEach(el => el.remove());
+    return;
     if (document.querySelector(".topal-live-about-divider")) return;
 
     const h1s = Array.from(document.querySelectorAll("h1"));

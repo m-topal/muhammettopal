@@ -9165,3 +9165,15 @@ main {
     height: 0;
   }
 }
+
+/* v183: About right-column continuation and remove legacy bottom wordmark */
+.about-page .about-dual-column-right > p.about-column-continuation {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  text-indent: 0 !important;
+}
+
+.about-page .about-wordmark-figure,
+.about-page .topal-live-about-divider {
+  display: none !important;
+}
