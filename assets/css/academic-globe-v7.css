@@ -1,0 +1,133 @@
+/* v7: page-following globe, visible continents, and integrated sticky section navs */
+body {
+  position: relative;
+  background: #fbfaf7;
+}
+
+.academic-world-scene {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.academic-world-map {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 430px;
+  opacity: .26;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: min(1480px, 100vw) auto;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 430'%3E%3Cg fill='none' stroke='%237f929f' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='.64'%3E%3Cpath d='M62 135l79-46 91 9 78 38 61 55 46-4 55 31 24 32-14 31-52 16-43 42-77 3-68 38-67-13-91-19-36-60 15-35-54-7-41-47 14-35 28-23-7-31 22-34z'/%3E%3Cpath d='M330 280l56 41 25 61-11 47 26 49 46 84-10 46-38 31-28-20-17-45-36-56-31-112-16-71-8-41 16-14z'/%3E%3Cpath d='M651 98l58-15 67 8 33 24 33-9 62 7 41 24 58-3 56 17 45 30 61 3 77 29 70 48 40 51-11 25-52 14-37 25 16 36-23 11-49-13-47 14-35-8-36-37-51-30-71 2-45-17-42 20-75-5-47-34-33-4-30-33 13-27-7-26-31-3-49 18-50-9-6-35-40-29 14-28 31-10z'/%3E%3Cpath d='M839 282l70 8 52 42 11 54-24 72-50 56-69 5-50-34-25-52 5-61 31-52 49-38z'/%3E%3Cpath d='M1260 300l54 8 67 28 40 40 14 45-18 38-47 17-51-7-31-35-36-24-22-43 10-32 20-20z'/%3E%3Cpath d='M1420 350l74 8 53 28 31 34-7 28-32 17-52-7-62-23-20-31 15-24z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23b7c2c9' stroke-width='.75' opacity='.42'%3E%3Cpath d='M0 130H1600M0 220H1600M0 310H1600'/%3E%3Cpath d='M170 0V430M370 0V430M570 0V430M770 0V430M970 0V430M1170 0V430M1370 0V430'/%3E%3C/g%3E%3Cg fill='none' stroke='%2386a8bd' stroke-width='1.8' opacity='.42'%3E%3Cpath d='M325 280C500 184 646 184 804 212C900 228 990 232 1078 245'/%3E%3Cpath d='M325 280C505 216 652 218 804 230C910 238 992 248 1078 245'/%3E%3C/g%3E%3Cg fill='%23c57b67' opacity='.50'%3E%3Ccircle cx='325' cy='280' r='3.5'/%3E%3Ccircle cx='804' cy='212' r='3.5'/%3E%3Ccircle cx='1078' cy='245' r='3.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.academic-globe-track {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.academic-globe {
+  position: sticky;
+  top: 150px;
+  width: min(720px, 74vw);
+  height: min(720px, 74vw);
+  margin: 0 auto;
+  opacity: .44;
+  filter: saturate(.78) brightness(1.08);
+}
+
+.academic-globe canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#readingProgress,
+.site-shell {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep the main nav visually part of the page in both normal and sticky states. */
+.nav-wrap,
+.sticky-nav,
+.sticky-nav:hover,
+.sticky-nav:focus-within,
+.sticky-nav.is-scrolling,
+.sticky-nav.is-sticky-active {
+  background: rgba(251,250,247,.56) !important;
+  backdrop-filter: blur(8px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(1.02) !important;
+  border-top: 1px solid rgba(0,0,0,.08) !important;
+  border-bottom: 1px solid rgba(0,0,0,.08) !important;
+  box-shadow: none !important;
+}
+
+/* Research and Teaching section bars keep one appearance while moving. */
+.research-continuous-page .research-scroll-nav,
+.research-continuous-page .research-scroll-nav:hover,
+.research-continuous-page .research-scroll-nav:focus-within,
+.research-continuous-page .research-scroll-nav.is-scrolling,
+.research-continuous-page .research-scroll-nav.is-sticky-active,
+.teaching-scroll-nav,
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(251,250,247,.60) !important;
+  backdrop-filter: blur(8px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(1.02) !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(0,0,0,.08) !important;
+  border-bottom: 1px solid rgba(0,0,0,.08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.research-continuous-page .research-scroll-nav::before,
+.research-continuous-page .research-scroll-nav::after,
+.teaching-scroll-nav::before,
+.teaching-scroll-nav::after {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.research-continuous-page .research-scroll-nav a,
+.teaching-scroll-nav a {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.research-continuous-page .research-scroll-nav a.active,
+.research-continuous-page .research-scroll-nav a[aria-current='true'],
+.teaching-scroll-nav a.active,
+.teaching-scroll-nav a[aria-current='true'] {
+  background: rgba(20,20,20,.92) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 900px) {
+  .academic-world-map {
+    height: 330px;
+    opacity: .21;
+    background-size: 1320px auto;
+  }
+
+  .academic-globe {
+    top: 120px;
+    width: min(650px, 108vw);
+    height: min(650px, 108vw);
+    opacity: .34;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .academic-globe { opacity: .36; }
+}
