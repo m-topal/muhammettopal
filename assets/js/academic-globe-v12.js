@@ -3,6 +3,20 @@
   var mapHost = document.getElementById('academicTopMap');
   if (!globeHost || !mapHost) return;
 
+
+  function updateSceneTop() {
+    var scene = document.querySelector('.academic-world-scene');
+    var nav = document.querySelector('.sticky-nav, .nav-wrap');
+    if (!scene || !nav) return;
+    var bottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom));
+    scene.style.setProperty('--academic-scene-top', bottom + 'px');
+  }
+
+  updateSceneTop();
+  window.addEventListener('scroll', updateSceneTop, { passive: true });
+  window.addEventListener('resize', updateSceneTop);
+  window.addEventListener('load', updateSceneTop);
+
   mapHost.innerHTML = `
     <svg viewBox="0 0 1600 430" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true">
       <g fill="none" stroke-linecap="round" stroke-linejoin="round">

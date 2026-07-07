@@ -238,3 +238,133 @@ body {
     opacity: .38;
   }
 }
+
+/* v15: keep the globe below the main navigation, refine language menu, school satellites, and contact fields. */
+
+/* JS sets the fixed scene's top edge to the current main-nav bottom. */
+.academic-world-scene {
+  top: var(--academic-scene-top, 0px) !important;
+  bottom: 0 !important;
+  height: auto !important;
+}
+
+.academic-globe {
+  top: 52% !important;
+}
+
+.school-satellite {
+  top: 52% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+.school-satellite::before,
+.school-satellite::after {
+  display: none !important;
+  content: none !important;
+}
+
+.school-satellite img {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Language menu: compact, smooth, and always layered above the main nav. */
+.site-top {
+  position: relative !important;
+  z-index: 1200 !important;
+}
+
+.sticky-nav,
+.nav-wrap {
+  z-index: 900 !important;
+}
+
+.language-menu-top {
+  position: relative !important;
+  z-index: 5000 !important;
+}
+
+.language-menu-top[open] {
+  z-index: 5001 !important;
+}
+
+.language-menu-top .language-panel {
+  right: 0 !important;
+  top: 34px !important;
+  min-width: 164px !important;
+  width: max-content !important;
+  max-width: min(220px, calc(100vw - 28px)) !important;
+  max-height: min(310px, calc(100vh - 80px)) !important;
+  overflow-y: auto !important;
+  z-index: 5002 !important;
+  padding: 4px 6px !important;
+  border: 1px solid rgba(42, 54, 66, .10) !important;
+  border-radius: 14px !important;
+  background: rgba(251, 250, 247, .92) !important;
+  box-shadow: 0 16px 38px rgba(42, 54, 66, .12) !important;
+  backdrop-filter: blur(14px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.02) !important;
+}
+
+.language-menu-top .language-panel a,
+.language-menu-top .language-panel span {
+  padding: 6px 9px !important;
+  font-size: 12.5px !important;
+  line-height: 1.25 !important;
+}
+
+.language-menu-top .language-panel a + a {
+  border-top: 1px solid rgba(42, 54, 66, .08) !important;
+}
+
+.language-menu-top .language-panel span {
+  margin-top: 2px !important;
+  padding-top: 6px !important;
+}
+
+/* Contact form fields: transparent like the calendar, with a soft shadow instead of white blocks. */
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]),
+.contact-page .contact-form textarea {
+  background: rgba(251, 250, 247, .18) !important;
+  border: 1px solid rgba(42, 54, 66, .12) !important;
+  box-shadow: 0 8px 24px rgba(42, 54, 66, .035) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]):hover,
+.contact-page .contact-form textarea:hover,
+.contact-page .contact-form input:not([type="hidden"]):not([type="file"]):focus,
+.contact-page .contact-form textarea:focus {
+  background: rgba(251, 250, 247, .26) !important;
+  border-color: rgba(42, 54, 66, .24) !important;
+  box-shadow: 0 12px 30px rgba(42, 54, 66, .065) !important;
+  outline: none !important;
+}
+
+.contact-page .message-box-wrap,
+.contact-page .message-toolbar {
+  background: transparent !important;
+}
+
+@media (max-width: 900px) {
+  .language-menu-top .language-panel {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: 34px !important;
+  }
+
+  .academic-globe,
+  .school-satellite {
+    top: 53% !important;
+  }
+}

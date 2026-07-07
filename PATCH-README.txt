@@ -1,18 +1,13 @@
-ACADEMIC GLOBE PATCH v14
+ACADEMIC GLOBE PATCH v15
 
-Apply this on top of v12 or v13.
+Apply this on top of the current v14 installation.
 
 Changes:
-- moves the globe lower so it always begins below the main navigation
-- reduces the globe by about 10 percent
-- increases base rotation speed and makes scroll acceleration stronger
-- removes circular bubbles, borders, backgrounds, and shadows from orbiting school drawings
-- keeps school drawings as bare transparent line-art satellites
-- removes rounded box treatment from publication and presentation rows
-- uses shadow-only hover/open emphasis, with no white backgrounds and no visible outline box
-- suppresses persistent focus outlines on accordion triggers
-- adds a soft edge-free mist behind long-form prose so text remains readable while the globe stays visible
+- the globe scene is clipped below the current main navigation position, so it never rises into the header or above the nav
+- the language menu is smaller, smoother, scrollable if the list grows, and layered above the navigation instead of slipping behind it
+- school illustrations rotate without circles, frames, backgrounds, blur bubbles, or shadows
+- contact form inputs and the message box become translucent with soft shadows, visually matching the calendar instead of appearing as opaque white boxes
 
-Files:
+Files included:
 - assets/css/academic-globe-v12.css
 - assets/js/academic-globe-v12.js
