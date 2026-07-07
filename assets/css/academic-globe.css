@@ -1,0 +1,73 @@
+body {
+  position: relative;
+  background: #fbfaf7;
+}
+
+#readingProgress,
+.site-shell {
+  position: relative;
+  z-index: 3;
+}
+
+.academic-globe-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent;
+}
+
+.academic-globe-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(251,250,247,.10) 0%,
+      rgba(251,250,247,.18) 18%,
+      rgba(251,250,247,.30) 42%,
+      rgba(251,250,247,.46) 100%);
+}
+
+#academicGlobeCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .78;
+}
+
+.academic-building-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3vh;
+  height: 120px;
+  z-index: 1;
+}
+
+.academic-building {
+  position: absolute;
+  bottom: 0;
+  width: clamp(62px, 6.2vw, 96px);
+  height: auto;
+  opacity: .23;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.academic-building-tucson { left: 9vw; }
+.academic-building-paris { left: 45%; transform: translateX(-50%); }
+.academic-building-istanbul { right: 8vw; width: clamp(72px, 7vw, 108px); }
+
+@media (max-width: 760px) {
+  #academicGlobeCanvas { opacity: .64; }
+  .academic-building-strip { bottom: 1.5vh; height: 92px; }
+  .academic-building { width: 54px; opacity: .18; }
+  .academic-building-istanbul { width: 64px; }
+  .academic-building-tucson { left: 4vw; }
+  .academic-building-istanbul { right: 4vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #academicGlobeCanvas { opacity: .72; }
+}

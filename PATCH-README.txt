@@ -1,14 +1,15 @@
-TOPAL WORLD BACKGROUND PATCH v4
+ACADEMIC GLOBE PATCH v5
 
-This version keeps the existing website design unchanged and adjusts only the background effect.
+This patch adds a real canvas-rendered 3D globe effect without changing the current header, navigation, typography, or page layout.
 
-Changes:
-- building images reduced to small icon size
-- Tucson, Paris, and Istanbul moved to their correct approximate map locations
-- Anderson Hall keeps its planted surroundings but remains small
-- navigation, header, typography, and page layout are not restyled
-- world map is visible but subdued
-- connection lines are thin, continuous, nerve-like, and transparent
-- map still moves down and transitions into a slowly rotating globe on scroll
+Included:
+- clear world map behind the header and navigation
+- large 3D globe centered below the navigation
+- globe rotation that speeds up slightly while scrolling
+- major world centers connected by continuous electric and nerve-like lines
+- Tucson, Paris, and Istanbul highlighted
+- small university building illustrations along the bottom edge
+- Anderson Hall illustration includes surrounding plants and terraces
+- highly transparent rendering so the site text remains readable
 
-Replace files using the same paths shown in this patch.
+Replace files using the same folder paths.

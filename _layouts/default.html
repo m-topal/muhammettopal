@@ -32,7 +32,7 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta name="twitter:image" content="{{ social_image }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/world-journey-background.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/academic-globe.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any">
   <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/favicon-512x512.png?v=7' | relative_url }}">
   <link rel="icon" href="{{ '/assets/favicon.svg?v=7' | relative_url }}" type="image/svg+xml">
@@ -43,7 +43,14 @@
   <link rel="manifest" href="{{ '/assets/site.webmanifest?v=7' | relative_url }}">
 </head>
 <body>
-  <div id="academicJourneyBackground" class="academic-journey-background" aria-hidden="true"></div>
+  <div id="academicGlobeScene" class="academic-globe-scene" aria-hidden="true">
+    <canvas id="academicGlobeCanvas"></canvas>
+    <div class="academic-building-strip">
+      <img class="academic-building academic-building-tucson" src="{{ '/assets/img/background/old-main-line.png' | relative_url }}" alt="">
+      <img class="academic-building academic-building-paris" src="{{ '/assets/img/background/sorbonne-line.png' | relative_url }}" alt="">
+      <img class="academic-building academic-building-istanbul" src="{{ '/assets/img/background/anderson-hall-line.png' | relative_url }}" alt="">
+    </div>
+  </div>
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
 
   <div class="site-shell">
@@ -106,7 +113,7 @@
   </div>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/world-journey-background.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/academic-globe.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
 </body>
