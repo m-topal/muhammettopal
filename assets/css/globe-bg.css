@@ -1,0 +1,100 @@
+/* Site-wide scroll background, v2.
+   Key fix: .site-shell gets an opaque background so the map/globe only
+   shows in the page margins outside your reading column, never directly
+   behind body text. That was the cause of the graphic looking tangled
+   with your paragraphs. */
+
+.site-shell {
+  background: var(--bg);
+  position: relative;
+  z-index: 1;
+}
+
+#globe-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#globe-bg-svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gb-sphere {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+
+.gb-graticule {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 0.5;
+  opacity: 0.4;
+}
+
+.gb-land {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 0.6;
+  opacity: 0.22;
+}
+
+.globe-connection {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 1.1;
+  stroke-dasharray: 2 6;
+  animation: globeFlow 1.8s linear infinite;
+}
+
+@keyframes globeFlow {
+  to { stroke-dashoffset: -16; }
+}
+
+.globe-city-dot {
+  fill: var(--red);
+}
+
+.globe-city-glow {
+  fill: var(--red);
+  opacity: 0.3;
+  animation: globePulse 2.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes globePulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(2.2); opacity: 0; }
+}
+
+.globe-city-building {
+  opacity: 0.85;
+}
+
+#globe-bg-flat,
+#globe-bg-globe {
+  transition: opacity 0.15s linear;
+}
+
+@media (max-width: 1120px) {
+  /* Below this width the site-shell fills the viewport anyway, so the
+     background has no margin to show in. Hide it to avoid it flashing
+     faintly at the very top/bottom edges. */
+  #globe-bg {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #globe-bg {
+    display: none;
+  }
+}
