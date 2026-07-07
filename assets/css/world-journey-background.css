@@ -1,3 +1,4 @@
+/* Site-wide academic journey background. It does not restyle the header, nav, or content. */
 body {
   position: relative;
   background: #fbfaf7;
@@ -9,10 +10,6 @@ body {
   z-index: 2;
 }
 
-.site-shell {
-  isolation: isolate;
-}
-
 .academic-journey-background {
   --journey-progress: 0;
   position: fixed;
@@ -22,106 +19,107 @@ body {
   overflow: hidden;
 }
 
-.academic-journey-background::before {
+/* A light veil keeps the content readable without erasing the map. */
+.academic-journey-background::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(251,250,247,.90), rgba(251,250,247,.83) 34%, rgba(251,250,247,.92) 100%);
-}
-
-.journey-bg-stage {
-  position: absolute;
-  inset: 0;
+  background: rgba(251, 250, 247, 0.54);
 }
 
 .journey-bg-layer {
   position: absolute;
   inset: 0;
-  transition: opacity .35s ease, transform .35s ease;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
 }
 
 .journey-bg-map {
-  opacity: calc(0.18 - (var(--journey-progress) * 0.11));
-  transform: translateY(calc(var(--journey-progress) * 10vh));
+  opacity: calc(0.54 - (var(--journey-progress) * 0.34));
+  transform: translateY(calc(var(--journey-progress) * 8vh));
 }
 
 .journey-bg-globe {
-  opacity: calc(var(--journey-progress) * 0.13);
-  transform: translateY(calc(7vh - (var(--journey-progress) * 9vh))) scale(calc(0.94 + (var(--journey-progress) * 0.10)));
+  opacity: calc(var(--journey-progress) * 0.32);
+  transform: translateY(calc(10vh - (var(--journey-progress) * 10vh))) scale(calc(0.88 + (var(--journey-progress) * 0.12)));
 }
 
 .journey-bg-svg {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
-.journey-bg-svg path,
-.journey-bg-svg ellipse,
-.journey-bg-svg line {
+.journey-outline,
+.journey-grid,
+.journey-oval,
+.journey-flow,
+.journey-flow-glow {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .journey-outline {
-  stroke: rgba(34, 43, 54, 0.14);
-  stroke-width: 1.5;
+  stroke: rgba(48, 56, 66, 0.22);
+  stroke-width: 1.35;
 }
 
 .journey-grid,
 .journey-oval {
-  stroke: rgba(34, 43, 54, 0.10);
-  stroke-width: 1;
+  stroke: rgba(48, 56, 66, 0.10);
+  stroke-width: 0.9;
 }
 
+/* Thin, continuous, nerve-like connections. */
 .journey-flow-glow {
-  stroke: rgba(151, 182, 210, 0.13);
-  stroke-width: 10;
+  stroke: rgba(127, 157, 188, 0.09);
+  stroke-width: 8;
 }
 
 .journey-flow {
-  stroke: rgba(112, 145, 178, 0.24);
-  stroke-width: 3.5;
-  stroke-dasharray: 7 10;
-  animation: journey-flow 14s linear infinite;
-}
-
-.journey-city-dot {
-  fill: rgba(217, 111, 85, 0.30);
+  stroke: rgba(102, 137, 171, 0.22);
+  stroke-width: 2.4;
+  stroke-dasharray: 5 8;
+  animation: journey-flow 18s linear infinite;
 }
 
 .journey-city-halo {
-  fill: rgba(217, 111, 85, 0.08);
+  fill: rgba(190, 101, 76, 0.10);
 }
 
+.journey-city-dot {
+  fill: rgba(190, 101, 76, 0.50);
+}
+
+/* Small icon-sized building markers only. */
 .journey-building {
   position: absolute;
-  width: clamp(84px, 8vw, 128px);
+  width: clamp(64px, 5.7vw, 92px);
   height: auto;
-  opacity: 0.17;
-  filter: grayscale(1) contrast(1.02);
   transform: translate(-50%, -100%);
+  opacity: 0.42;
+  filter: grayscale(1) contrast(1.04);
 }
 
 .journey-bg-globe .journey-building {
-  width: clamp(76px, 7.2vw, 116px);
-  opacity: 0.15;
+  width: clamp(58px, 5vw, 82px);
+  opacity: 0.36;
 }
 
-.journey-bldg-tucson-map { left: 21.1%; top: 60.4%; }
-.journey-bldg-paris-map { left: 50.2%; top: 46.2%; }
-.journey-bldg-istanbul-map { left: 66.2%; top: 50.6%; }
+/* Correct approximate city positions on the flat map. */
+.journey-bldg-tucson-map { left: 18.7%; top: 54.8%; }
+.journey-bldg-paris-map { left: 50.5%; top: 41.2%; }
+.journey-bldg-istanbul-map { left: 58.3%; top: 44.6%; }
 
-.journey-bldg-tucson-globe { left: 31.2%; top: 56.2%; }
-.journey-bldg-paris-globe { left: 51.9%; top: 45.4%; }
-.journey-bldg-istanbul-globe { left: 67.9%; top: 50.8%; }
+/* Corresponding globe positions. */
+.journey-bldg-tucson-globe { left: 31.1%; top: 56.0%; }
+.journey-bldg-paris-globe { left: 52.0%; top: 43.9%; }
+.journey-bldg-istanbul-globe { left: 59.4%; top: 47.0%; }
 
 @keyframes journey-flow {
   from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -220; }
+  to { stroke-dashoffset: -180; }
 }
 
 @keyframes journey-globe-spin {
@@ -130,34 +128,32 @@ body {
 }
 
 @media (max-width: 900px) {
+  .academic-journey-background::after {
+    background: rgba(251, 250, 247, 0.60);
+  }
+
   .journey-bg-map {
-    opacity: calc(0.14 - (var(--journey-progress) * 0.08));
+    opacity: calc(0.46 - (var(--journey-progress) * 0.28));
   }
 
   .journey-bg-globe {
-    opacity: calc(var(--journey-progress) * 0.10);
+    opacity: calc(var(--journey-progress) * 0.26);
   }
 
   .journey-building {
-    width: clamp(58px, 14vw, 92px);
-    opacity: 0.13;
+    width: clamp(48px, 12vw, 72px);
+    opacity: 0.34;
   }
 
   .journey-bg-globe .journey-building {
-    width: clamp(54px, 13vw, 84px);
-    opacity: 0.12;
+    width: clamp(44px, 11vw, 66px);
+    opacity: 0.30;
   }
-
-  .journey-bldg-tucson-map { left: 17.8%; top: 61.3%; }
-  .journey-bldg-paris-map { left: 49.7%; top: 47.6%; }
-  .journey-bldg-istanbul-map { left: 68.2%; top: 52.2%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .journey-bg-layer,
   .journey-flow,
   .journey-rotor {
     animation: none !important;
-    transition: none !important;
   }
 }

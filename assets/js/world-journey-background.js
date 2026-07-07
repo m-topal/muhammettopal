@@ -4,104 +4,94 @@
     if (!host || host.dataset.ready === 'true') return;
 
     var base = '/assets/img/background/';
+    var oldMain = base + 'old-main-line.png';
     var sorbonne = base + 'sorbonne-line.png';
     var anderson = base + 'anderson-hall-line.png';
-    var oldMain = base + 'old-main-line.png';
 
     host.innerHTML = `
-      <div class="journey-bg-stage">
-        <div class="journey-bg-layer journey-bg-map">
-          <svg class="journey-bg-svg" viewBox="0 0 1600 900" aria-hidden="true">
-            <g>
-              <path class="journey-outline" d="M35 238l70-48 92 8 82 44 76 60 46-3 58 36 25 40-12 39-56 19-44 51-84 4-69 45-73-15-99-22-39-74 15-45-59-8-48-57 13-44 32-28-8-37 23-43z"></path>
-              <path class="journey-outline" d="M314 512l62 48 27 70-11 55 29 58 49 96-11 53-44 36-31-22-19-51-39-64-33-128-18-81-8-47 17-18z"></path>
-              <path class="journey-outline" d="M638 192l62-17 74 10 35 28 36-11 70 9 42 28 67-4 63 21 51 37 66 4 87 35 79 58 44 60-13 31-58 17-40 29 18 42-26 13-54-15-51 17-39-10-41-44-56-35-81 2-49-21-48 25-82-6-54-39-35-5-34-39 15-31-8-31-34-4-55 22-55-10-7-41-44-35 16-33 35-12z"></path>
-              <path class="journey-outline" d="M825 403l78 10 57 48 12 62-26 84-55 66-77 6-55-40-28-61 5-72 35-62 54-41z"></path>
-              <path class="journey-outline" d="M1248 652l59 11 74 35 44 47 15 52-20 46-51 20-57-9-35-41-40-29-24-51 11-37 24-24z"></path>
-              <path class="journey-outline" d="M1418 748l81 11 58 35 34 39-8 33-34 20-58-8-68-28-22-36 17-29z"></path>
+      <div class="journey-bg-layer journey-bg-map">
+        <svg class="journey-bg-svg" viewBox="0 0 1600 900" aria-hidden="true">
+          <path class="journey-outline" d="M33 230l73-45 96 9 82 42 70 60 47-2 55 33 25 39-12 39-56 18-44 53-84 3-68 45-75-16-97-21-41-73 16-44-60-8-46-57 13-43 31-27-8-37 24-42z"/>
+          <path class="journey-outline" d="M314 515l61 47 26 70-11 55 29 58 49 95-11 54-43 35-30-22-20-52-39-63-33-128-18-82-8-47 18-18z"/>
+          <path class="journey-outline" d="M640 190l60-16 74 10 36 27 35-10 69 8 44 28 64-3 61 20 50 37 68 4 86 35 78 58 44 60-12 30-58 17-41 30 18 42-26 13-53-15-52 17-39-10-40-44-57-35-80 2-49-20-47 24-82-6-53-40-37-4-33-39 15-31-8-31-34-4-55 22-55-10-7-41-44-35 16-33 35-12z"/>
+          <path class="journey-outline" d="M825 403l78 10 57 49 12 61-26 84-56 66-76 6-56-40-27-62 5-71 35-62 54-41z"/>
+          <path class="journey-outline" d="M1248 652l59 10 74 35 44 48 15 52-20 45-52 20-56-9-35-41-40-29-24-50 11-38 24-23z"/>
+          <path class="journey-outline" d="M1418 748l81 11 59 35 33 39-8 33-35 20-57-8-68-28-22-36 17-29z"/>
 
-              <line class="journey-grid" x1="72" y1="420" x2="1528" y2="420"></line>
-              <line class="journey-grid" x1="72" y1="572" x2="1528" y2="572"></line>
-              <line class="journey-grid" x1="210" y1="148" x2="210" y2="862"></line>
-              <line class="journey-grid" x1="414" y1="140" x2="414" y2="862"></line>
-              <line class="journey-grid" x1="618" y1="132" x2="618" y2="862"></line>
-              <line class="journey-grid" x1="822" y1="124" x2="822" y2="862"></line>
-              <line class="journey-grid" x1="1026" y1="132" x2="1026" y2="862"></line>
-              <line class="journey-grid" x1="1230" y1="140" x2="1230" y2="862"></line>
-              <line class="journey-grid" x1="1434" y1="148" x2="1434" y2="862"></line>
+          <line class="journey-grid" x1="70" y1="420" x2="1530" y2="420"/>
+          <line class="journey-grid" x1="70" y1="570" x2="1530" y2="570"/>
+          <line class="journey-grid" x1="210" y1="150" x2="210" y2="860"/>
+          <line class="journey-grid" x1="415" y1="140" x2="415" y2="860"/>
+          <line class="journey-grid" x1="620" y1="130" x2="620" y2="860"/>
+          <line class="journey-grid" x1="825" y1="120" x2="825" y2="860"/>
+          <line class="journey-grid" x1="1030" y1="130" x2="1030" y2="860"/>
+          <line class="journey-grid" x1="1235" y1="140" x2="1235" y2="860"/>
+          <line class="journey-grid" x1="1440" y1="150" x2="1440" y2="860"/>
 
-              <path class="journey-flow-glow" d="M338 489C452 417 577 401 690 406C748 409 782 417 803 426"></path>
-              <path class="journey-flow" d="M338 489C452 417 577 401 690 406C748 409 782 417 803 426"></path>
-              <path class="journey-flow-glow" d="M338 489C464 430 603 427 726 442C759 446 781 440 803 426"></path>
-              <path class="journey-flow" d="M338 489C464 430 603 427 726 442C759 446 781 440 803 426"></path>
-              <path class="journey-flow-glow" d="M803 426C846 418 892 419 934 428C988 441 1028 454 1063 457"></path>
-              <path class="journey-flow" d="M803 426C846 418 892 419 934 428C988 441 1028 454 1063 457"></path>
-              <path class="journey-flow-glow" d="M803 426C854 431 896 442 948 463C995 482 1032 475 1063 457"></path>
-              <path class="journey-flow" d="M803 426C854 431 896 442 948 463C995 482 1032 475 1063 457"></path>
-              <path class="journey-flow-glow" d="M789 420C771 411 757 404 740 400"></path>
-              <path class="journey-flow" d="M789 420C771 411 757 404 740 400"></path>
-              <path class="journey-flow-glow" d="M1070 452C1090 447 1106 440 1120 431"></path>
-              <path class="journey-flow" d="M1070 452C1090 447 1106 440 1120 431"></path>
+          <path class="journey-flow-glow" d="M299 493C420 430 557 400 808 374"/>
+          <path class="journey-flow" d="M299 493C420 430 557 400 808 374"/>
+          <path class="journey-flow-glow" d="M299 493C452 454 603 440 808 374"/>
+          <path class="journey-flow" d="M299 493C452 454 603 440 808 374"/>
+          <path class="journey-flow-glow" d="M808 374C853 373 891 381 932 399"/>
+          <path class="journey-flow" d="M808 374C853 373 891 381 932 399"/>
+          <path class="journey-flow-glow" d="M808 374C856 389 894 410 932 399"/>
+          <path class="journey-flow" d="M808 374C856 389 894 410 932 399"/>
+          <path class="journey-flow-glow" d="M570 420C590 397 615 382 642 370"/>
+          <path class="journey-flow" d="M570 420C590 397 615 382 642 370"/>
+          <path class="journey-flow-glow" d="M880 391C900 378 916 365 928 350"/>
+          <path class="journey-flow" d="M880 391C900 378 916 365 928 350"/>
 
-              <circle class="journey-city-halo" cx="338" cy="489" r="18"></circle>
-              <circle class="journey-city-dot" cx="338" cy="489" r="4.7"></circle>
-              <circle class="journey-city-halo" cx="803" cy="426" r="18"></circle>
-              <circle class="journey-city-dot" cx="803" cy="426" r="4.7"></circle>
-              <circle class="journey-city-halo" cx="1063" cy="457" r="18"></circle>
-              <circle class="journey-city-dot" cx="1063" cy="457" r="4.7"></circle>
+          <circle class="journey-city-halo" cx="299" cy="493" r="15"/>
+          <circle class="journey-city-dot" cx="299" cy="493" r="4.5"/>
+          <circle class="journey-city-halo" cx="808" cy="374" r="15"/>
+          <circle class="journey-city-dot" cx="808" cy="374" r="4.5"/>
+          <circle class="journey-city-halo" cx="932" cy="399" r="15"/>
+          <circle class="journey-city-dot" cx="932" cy="399" r="4.5"/>
+        </svg>
+        <img class="journey-building journey-bldg-tucson-map" src="${oldMain}" alt="">
+        <img class="journey-building journey-bldg-paris-map" src="${sorbonne}" alt="">
+        <img class="journey-building journey-bldg-istanbul-map" src="${anderson}" alt="">
+      </div>
+
+      <div class="journey-bg-layer journey-bg-globe">
+        <svg class="journey-bg-svg" viewBox="0 0 1600 900" aria-hidden="true">
+          <defs>
+            <clipPath id="journey-globe-clip"><ellipse cx="800" cy="480" rx="520" ry="285"/></clipPath>
+          </defs>
+          <ellipse class="journey-oval" cx="800" cy="480" rx="520" ry="285"/>
+          <g clip-path="url(#journey-globe-clip)">
+            <g class="journey-rotor" style="animation: journey-globe-spin 100s linear infinite; transform-origin: 800px 480px;">
+              <path class="journey-outline" d="M33 230l73-45 96 9 82 42 70 60 47-2 55 33 25 39-12 39-56 18-44 53-84 3-68 45-75-16-97-21-41-73 16-44-60-8-46-57 13-43 31-27-8-37 24-42z" transform="translate(210 150) scale(.68)"/>
+              <path class="journey-outline" d="M314 515l61 47 26 70-11 55 29 58 49 95-11 54-43 35-30-22-20-52-39-63-33-128-18-82-8-47 18-18z" transform="translate(210 150) scale(.68)"/>
+              <path class="journey-outline" d="M640 190l60-16 74 10 36 27 35-10 69 8 44 28 64-3 61 20 50 37 68 4 86 35 78 58 44 60-12 30-58 17-41 30 18 42-26 13-53-15-52 17-39-10-40-44-57-35-80 2-49-20-47 24-82-6-53-40-37-4-33-39 15-31-8-31-34-4-55 22-55-10-7-41-44-35 16-33 35-12z" transform="translate(210 150) scale(.68)"/>
+              <path class="journey-outline" d="M825 403l78 10 57 49 12 61-26 84-56 66-76 6-56-40-27-62 5-71 35-62 54-41z" transform="translate(210 150) scale(.68)"/>
+              <path class="journey-outline" d="M1248 652l59 10 74 35 44 48 15 52-20 45-52 20-56-9-35-41-40-29-24-50 11-38 24-23z" transform="translate(210 150) scale(.68)"/>
+              <path class="journey-outline" d="M1418 748l81 11 59 35 33 39-8 33-35 20-57-8-68-28-22-36 17-29z" transform="translate(210 150) scale(.68)"/>
+
+              <ellipse class="journey-grid" cx="800" cy="480" rx="420" ry="240"/>
+              <ellipse class="journey-grid" cx="800" cy="480" rx="320" ry="240"/>
+              <ellipse class="journey-grid" cx="800" cy="480" rx="215" ry="240"/>
+              <line class="journey-grid" x1="290" y1="480" x2="1310" y2="480"/>
+              <line class="journey-grid" x1="340" y1="390" x2="1260" y2="390"/>
+              <line class="journey-grid" x1="340" y1="570" x2="1260" y2="570"/>
+
+              <path class="journey-flow-glow" d="M498 550C620 455 710 420 833 395"/>
+              <path class="journey-flow" d="M498 550C620 455 710 420 833 395"/>
+              <path class="journey-flow-glow" d="M833 395C875 396 918 406 951 423"/>
+              <path class="journey-flow" d="M833 395C875 396 918 406 951 423"/>
+
+              <circle class="journey-city-halo" cx="498" cy="550" r="14"/>
+              <circle class="journey-city-dot" cx="498" cy="550" r="4.2"/>
+              <circle class="journey-city-halo" cx="833" cy="395" r="14"/>
+              <circle class="journey-city-dot" cx="833" cy="395" r="4.2"/>
+              <circle class="journey-city-halo" cx="951" cy="423" r="14"/>
+              <circle class="journey-city-dot" cx="951" cy="423" r="4.2"/>
             </g>
-          </svg>
-          <img class="journey-building journey-bldg-tucson-map" src="${oldMain}" alt="">
-          <img class="journey-building journey-bldg-paris-map" src="${sorbonne}" alt="">
-          <img class="journey-building journey-bldg-istanbul-map" src="${anderson}" alt="">
-        </div>
-
-        <div class="journey-bg-layer journey-bg-globe">
-          <svg class="journey-bg-svg" viewBox="0 0 1600 900" aria-hidden="true">
-            <defs>
-              <clipPath id="journey-globe-clip"><ellipse cx="800" cy="476" rx="520" ry="286"></ellipse></clipPath>
-            </defs>
-            <ellipse class="journey-oval" cx="800" cy="476" rx="520" ry="286"></ellipse>
-            <g clip-path="url(#journey-globe-clip)">
-              <g class="journey-rotor" style="animation: journey-globe-spin 90s linear infinite; transform-origin: 800px 476px;">
-                <path class="journey-outline" d="M35 238l70-48 92 8 82 44 76 60 46-3 58 36 25 40-12 39-56 19-44 51-84 4-69 45-73-15-99-22-39-74 15-45-59-8-48-57 13-44 32-28-8-37 23-43z" transform="translate(208 150) scale(0.68)"></path>
-                <path class="journey-outline" d="M314 512l62 48 27 70-11 55 29 58 49 96-11 53-44 36-31-22-19-51-39-64-33-128-18-81-8-47 17-18z" transform="translate(208 150) scale(0.68)"></path>
-                <path class="journey-outline" d="M638 192l62-17 74 10 35 28 36-11 70 9 42 28 67-4 63 21 51 37 66 4 87 35 79 58 44 60-13 31-58 17-40 29 18 42-26 13-54-15-51 17-39-10-41-44-56-35-81 2-49-21-48 25-82-6-54-39-35-5-34-39 15-31-8-31-34-4-55 22-55-10-7-41-44-35 16-33 35-12z" transform="translate(208 150) scale(0.68)"></path>
-                <path class="journey-outline" d="M825 403l78 10 57 48 12 62-26 84-55 66-77 6-55-40-28-61 5-72 35-62 54-41z" transform="translate(208 150) scale(0.68)"></path>
-                <path class="journey-outline" d="M1248 652l59 11 74 35 44 47 15 52-20 46-51 20-57-9-35-41-40-29-24-51 11-37 24-24z" transform="translate(208 150) scale(0.68)"></path>
-                <path class="journey-outline" d="M1418 748l81 11 58 35 34 39-8 33-34 20-58-8-68-28-22-36 17-29z" transform="translate(208 150) scale(0.68)"></path>
-
-                <ellipse class="journey-grid" cx="800" cy="476" rx="420" ry="240"></ellipse>
-                <ellipse class="journey-grid" cx="800" cy="476" rx="320" ry="240"></ellipse>
-                <ellipse class="journey-grid" cx="800" cy="476" rx="215" ry="240"></ellipse>
-                <line class="journey-grid" x1="286" y1="476" x2="1314" y2="476"></line>
-                <line class="journey-grid" x1="336" y1="384" x2="1264" y2="384"></line>
-                <line class="journey-grid" x1="336" y1="568" x2="1264" y2="568"></line>
-                <line class="journey-grid" x1="430" y1="308" x2="1170" y2="308"></line>
-                <line class="journey-grid" x1="430" y1="644" x2="1170" y2="644"></line>
-
-                <path class="journey-flow-glow" d="M496 550C583 472 684 425 823 404"></path>
-                <path class="journey-flow" d="M496 550C583 472 684 425 823 404"></path>
-                <path class="journey-flow-glow" d="M496 550C607 503 689 497 780 458C796 451 809 431 823 404"></path>
-                <path class="journey-flow" d="M496 550C607 503 689 497 780 458C796 451 809 431 823 404"></path>
-                <path class="journey-flow-glow" d="M823 404C885 404 951 421 1030 450C1048 456 1068 459 1088 458"></path>
-                <path class="journey-flow" d="M823 404C885 404 951 421 1030 450C1048 456 1068 459 1088 458"></path>
-                <path class="journey-flow-glow" d="M823 404C872 419 926 444 979 473C1020 495 1062 482 1088 458"></path>
-                <path class="journey-flow" d="M823 404C872 419 926 444 979 473C1020 495 1062 482 1088 458"></path>
-
-                <circle class="journey-city-halo" cx="496" cy="550" r="16"></circle>
-                <circle class="journey-city-dot" cx="496" cy="550" r="4.4"></circle>
-                <circle class="journey-city-halo" cx="823" cy="404" r="16"></circle>
-                <circle class="journey-city-dot" cx="823" cy="404" r="4.4"></circle>
-                <circle class="journey-city-halo" cx="1088" cy="458" r="16"></circle>
-                <circle class="journey-city-dot" cx="1088" cy="458" r="4.4"></circle>
-              </g>
-            </g>
-          </svg>
-          <img class="journey-building journey-bldg-tucson-globe" src="${oldMain}" alt="">
-          <img class="journey-building journey-bldg-paris-globe" src="${sorbonne}" alt="">
-          <img class="journey-building journey-bldg-istanbul-globe" src="${anderson}" alt="">
-        </div>
+          </g>
+        </svg>
+        <img class="journey-building journey-bldg-tucson-globe" src="${oldMain}" alt="">
+        <img class="journey-building journey-bldg-paris-globe" src="${sorbonne}" alt="">
+        <img class="journey-building journey-bldg-istanbul-globe" src="${anderson}" alt="">
       </div>
     `;
 
@@ -111,8 +101,8 @@
   function updateProgress() {
     var host = document.getElementById('academicJourneyBackground');
     if (!host) return;
-    var max = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-    var progress = Math.min(window.scrollY / Math.min(max, 1500), 1);
+    var maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    var progress = Math.min(window.scrollY / Math.min(maxScroll, 1600), 1);
     host.style.setProperty('--journey-progress', progress.toFixed(4));
   }
 
