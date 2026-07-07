@@ -2171,3 +2171,25 @@ window.addEventListener("resize", updateReadingProgress);
     });
   });
 })();
+
+/* v181: keep secondary Research/Teaching bars below the responsive main navigation */
+(function () {
+  function updateResponsiveNavHeight() {
+    var nav = document.querySelector('.sticky-nav');
+    if (!nav) return;
+    var height = Math.ceil(nav.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--v181-main-nav-mobile-height', height + 'px');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateResponsiveNavHeight);
+  } else {
+    updateResponsiveNavHeight();
+  }
+
+  window.addEventListener('load', updateResponsiveNavHeight);
+  window.addEventListener('resize', function () {
+    window.clearTimeout(window.__v181NavResizeTimer);
+    window.__v181NavResizeTimer = window.setTimeout(updateResponsiveNavHeight, 100);
+  });
+})();

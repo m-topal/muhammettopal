@@ -29,7 +29,9 @@ permalink: /teaching/
         </div>
         <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
 
-        <div class="teaching-shelf-row instructor-course-row">
+        <div class="teaching-slider-frame instructor-slider-frame" data-slider-label="Slide for more instructor of record courses">
+          <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll instructor of record courses left">‹</button>
+          <div class="teaching-shelf-row instructor-course-row co-teaching-course-row">
           <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="political-islam-modal" tabindex="0" role="button" aria-label="Open details for Introduction to Political Islam">
             <div class="course-card-image">
               <img src="{{ '/assets/img/teaching/political-islam-preview.jpeg' | relative_url }}" alt="Collage preview image for Introduction to Political Islam">
@@ -59,6 +61,8 @@ permalink: /teaching/
               <h3>Religion of Islam</h3>
             </div>
           </article>
+          </div>
+          <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll instructor of record courses right">›</button>
         </div>
 
         <div class="course-modal" id="political-islam-modal" hidden>
@@ -294,43 +298,37 @@ permalink: /teaching/
       </div>
 
       <section class="certificate-coursework-cards">
-        <h2>Certificate Coursework</h2>
+        <h2>Certificate Outcomes</h2>
 
         <div class="certificate-card-grid">
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Course Design</h3>
-            <p>Designing courses around clear learning objectives, weekly arcs, assignments, classroom activities, and transparent expectations.</p>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-learner-centered-modal" role="button" tabindex="0" aria-label="Open learner centered teaching details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Learner Centered Teaching</h3>
-            <p>Thinking from the perspective of student learning, participation, skills, and accessible but demanding classroom design.</p>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-sensitive-subjects-modal" role="button" tabindex="0" aria-label="Open teaching sensitive subjects details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching Sensitive Subjects</h3>
-            <p>Structuring difficult discussions around religion, conflict, minority histories, empire, nationalism, migration, and public debate.</p>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-technology-modal" role="button" tabindex="0" aria-label="Open teaching and learning technologies details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching and Learning Technologies</h3>
-            <p>Using digital tools deliberately for media analysis, presentations, collaborative work, accessibility, and course materials.</p>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-tar-modal" role="button" tabindex="0" aria-label="Open teaching as research details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching as Research</h3>
-            <p>Treating classroom design, participation, and assessment as practices that can be studied, revised, and improved.</p>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-practice-modal" role="button" tabindex="0" aria-label="Open college teaching practice details">
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>College Teaching Practice</h3>
-            <p>Refining syllabi, assignments, rubrics, classroom activities, and student feedback practices.</p>
           </article>
         </div>
       </section>

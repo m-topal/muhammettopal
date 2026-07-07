@@ -5115,3 +5115,6 @@ button.course-card-action,
 .v81-through-wrap.balanced-reading-wrap.organic-center-wrap .wrap-shape {
   shape-margin: .55rem !important;
 }
+
+/* v181 legacy mirror: global prose rhythm only */
+body { line-height: 1.5; }
