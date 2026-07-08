@@ -1,8 +1,8 @@
-Patch v62
+Patch v63
 
-Apply this on top of v61.
+Apply this on top of v62.
 
-Changes included:
-- Moves the handwritten Topal 20px further downward.
-- Reduces the desktop bottom mountain vertical scale from 1.10 to 1.05.
-- Fixes the wider-mobile top mountain override so it now uses a 150px height.
+Changes:
+- Sets the space between the main navigation and the first gray page label to 20px on desktop and mobile.
+- Sets the space between gray labels such as ABOUT ME and the following large heading to 10px.
+- Moves the handwritten Topal 25px farther downward on desktop and mobile.
