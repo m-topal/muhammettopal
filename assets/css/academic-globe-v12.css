@@ -2689,3 +2689,35 @@ main .label,
     white-space: nowrap !important;
   }
 }
+
+/* v65: move the top mountain band 20px further upward and reduce its vertical tallness by 10 percent. */
+.academic-top-map {
+  transform: translateY(-30px) !important;
+}
+
+.academic-mountain-art-top img {
+  transform: scaleY(0.99) !important;
+  transform-origin: center bottom !important;
+}
+
+@media (max-width: 390px) {
+  .academic-mountain-art-top img {
+    width: 100% !important;
+    height: 175px !important;
+    object-fit: fill !important;
+    object-position: center bottom !important;
+    transform: scaleY(0.99) !important;
+    transform-origin: center bottom !important;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 900px) {
+  .academic-mountain-art-top img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: fill !important;
+    object-position: center bottom !important;
+    transform: scaleY(0.99) !important;
+    transform-origin: center bottom !important;
+  }
+}

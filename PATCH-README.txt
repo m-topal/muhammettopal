@@ -1,7 +1,7 @@
-Patch v64
+Patch v65
 
-Apply this on top of v63.
+Apply this on top of v64.
 
-Changes:
-- Places the large About Me heading on the left and View CV PDF on the right of the same row.
-- Moves the top mountain band 10px upward on desktop and mobile.
+Changes included:
+- moves the top mountain band 20px further upward
+- reduces the top mountain vertical tallness by 10 percent
