@@ -2824,3 +2824,12 @@ main {
   position: relative !important;
   top: 10px !important;
 }
+
+/* v73: increase the shared downward shift for the header stack and page content from 10px to 50px total. */
+.site-top .site-header-wordmark-block,
+.site-top .name,
+.site-top .identity-sentence,
+.sticky-nav,
+main {
+  top: 50px !important;
+}
