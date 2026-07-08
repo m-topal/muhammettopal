@@ -879,3 +879,77 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .20 !important;
   }
 }
+
+
+/* v24 overrides: lock globe between nav and footer, and make footer art a bit more visible. */
+.academic-world-scene {
+  top: var(--academic-scene-top, 0px) !important;
+  bottom: var(--academic-scene-bottom, 0px) !important;
+  height: auto !important;
+}
+
+.academic-globe {
+  top: 50% !important;
+  opacity: .43 !important;
+}
+
+.school-satellite {
+  top: 50% !important;
+}
+
+.academic-footer-range {
+  height: 94px !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .31 !important;
+  filter: grayscale(1) contrast(.92) brightness(.98) !important;
+}
+
+.footer-school-satellite img {
+  opacity: .40 !important;
+  filter: grayscale(1) contrast(1.03) !important;
+}
+
+/* Publications and presentations explanation text should match in size and lighter tone. */
+.accordion-meta,
+.pub-reference,
+.accordion-panel p,
+.publication-entry .pub-reference,
+.accordion-panel .pub-reference {
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+  color: rgba(56, 67, 78, .68) !important;
+}
+
+#presentations .accordion-meta,
+.presentations-page .accordion-meta,
+body[data-page="presentations"] .accordion-meta,
+#publications .pub-reference,
+.publications-page .pub-reference,
+body[data-page="publications"] .pub-reference {
+  color: rgba(56, 67, 78, .68) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe,
+  .school-satellite {
+    top: 51% !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .28 !important;
+  }
+
+  .footer-school-satellite img {
+    opacity: .36 !important;
+  }
+
+  .accordion-meta,
+  .pub-reference,
+  .accordion-panel p {
+    font-size: 14px !important;
+    line-height: 1.52 !important;
+  }
+}

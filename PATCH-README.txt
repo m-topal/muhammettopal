@@ -1,12 +1,12 @@
-ACADEMIC GLOBE PATCH v23
+ACADEMIC GLOBE PATCH v24
 
-Apply this on top of the current site / v22.
+Apply this on top of the current site / v23.
 
-What this patch changes:
-- replaces both the top decorative mountain band and the footer mountain band with the exact continuous mountain image reference
-- keeps the mountain line running from the left side of the screen to the right side
-- preserves the lighter, soft background tone through CSS opacity and grayscale filtering
-- keeps school drawings only in the footer zone
+This patch changes:
+- keeps the globe constrained vertically so it stays at least about 1 inch below the main nav underline
+- keeps the globe out of the footer-links area, ending about 1 inch above the footer line when the footer enters view
+- makes the bottom mountain band and footer school drawings a bit more visible
+- unifies publication and presentation explanation text size, font, and lighter tone
 
 Files included:
 - assets/css/academic-globe-v12.css

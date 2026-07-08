@@ -7,8 +7,21 @@
     var scene = document.querySelector('.academic-world-scene');
     var nav = document.querySelector('.sticky-nav, .nav-wrap');
     if (!scene || !nav) return;
-    var bottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + 26));
-    scene.style.setProperty('--academic-scene-top', bottom + 'px');
+
+    var topClearance = 96; // about 1 inch below the main nav underline
+    var navBottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + topClearance));
+    scene.style.setProperty('--academic-scene-top', navBottom + 'px');
+
+    var bottomInset = 0;
+    var footer = document.querySelector('.footer');
+    if (footer) {
+      var footerRect = footer.getBoundingClientRect();
+      var footerBoundary = Math.floor(footerRect.top - topClearance);
+      if (footerBoundary < window.innerHeight) {
+        bottomInset = Math.max(0, Math.ceil(window.innerHeight - footerBoundary));
+      }
+    }
+    scene.style.setProperty('--academic-scene-bottom', bottomInset + 'px');
   }
 
   function injectFooterRange() {
