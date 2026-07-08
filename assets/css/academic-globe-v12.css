@@ -2533,13 +2533,13 @@ main article.page > .label + h1 {
   }
 
   .site-top .home-header-wordmark {
-    transform: translateY(-34px) !important;
+    transform: translateY(-14px) !important;
   }
 }
 
 @media (max-width: 900px) {
   .site-top .home-header-wordmark {
-    transform: translateY(-29px) !important;
+    transform: translateY(-9px) !important;
   }
 }
 
@@ -2580,3 +2580,6 @@ main article.page > .label + h1 {
     transform-origin: center bottom !important;
   }
 }
+
+
+/* v61: move the handwritten Topal 20px downward from v60. */
