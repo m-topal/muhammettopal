@@ -1,8 +1,8 @@
-Patch v91
+Patch v92
 
-Apply this on top of v90.
+Apply this on top of v91.
 
 Changes included:
-- subtitle font size set to 12px on desktop
-- subtitle font size set to 10px on mobile
-- subtitle position and line-height remain unchanged
+- gives the About Me "View CV PDF" button the same red pill styling and pulse effect as the "My Blog" tag
+- adds the same red-fill and white-text hover/focus behavior
+- leaves the CV modal behavior and all other layout elements unchanged
