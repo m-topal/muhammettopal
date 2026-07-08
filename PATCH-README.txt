@@ -1,8 +1,8 @@
-Patch v71
+Patch v72
 
-Apply this on top of v70.
+Apply this on top of v71.
 
 Changes included:
-- makes Home start at the same distance below the navigation as the other pages
-- removes the extra About Me top padding so it matches the other pages
-- preserves the About Me title and View CV PDF button on the same line
+- keeps the upper mountain in the same position
+- moves the handwritten Topal, Muhammet Topal, subtitle, and navigation 10px downward
+- moves page content down by the same 10px so the navigation-to-page-heading distance stays unchanged

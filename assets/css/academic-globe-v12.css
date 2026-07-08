@@ -2814,3 +2814,13 @@ main article.extracurricular-page > .page-label:first-child,
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+/* v72: move the handwritten wordmark, identity text, navigation, and page content 10px downward together, while leaving the top mountains fixed. */
+.site-top .site-header-wordmark-block,
+.site-top .name,
+.site-top .identity-sentence,
+.sticky-nav,
+main {
+  position: relative !important;
+  top: 10px !important;
+}
