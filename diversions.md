@@ -14,7 +14,7 @@ permalink: /diversions/
     </figure>
     <div class="prose diversions-lead-prose paragraph-tight-indent">
       <p>Moving from Istanbul and Paris to Arizona changed my sense of landscape. Coming from dense urban worlds into the desert, mountains, canyons, and open horizons of the American Southwest made hiking, climbing, and outdoor life part of how I think and live.</p>
-      <p>Besides mountaineering, I enjoy creative writing and thinking through literature. I am especially drawn to Italo Calvino and Oğuz Atay as both turn narrative into a way of testing reality: Calvino through form, lightness, and speculative imagination, Atay through irony, fragmentation, self-consciousness, and the failures of modern intellectual life. Their work matters to me not as an escape from history or academia in genral, but as another way of asking how people inhabit language, memory, and the worlds they fail or try to build.</p>
+      <p>Besides mountaineering, I enjoy creative writing and thinking through literature. I am especially drawn to Italo Calvino and Oğuz Atay as both turn narrative into a way of testing reality: Calvino through form, lightness, and speculative imagination, Atay through irony, fragmentation, self-consciousness, and the failures of modern intellectual life. Their work matters to me not as an escape from history or academia in general, but as another way of asking how people inhabit language, memory, and the worlds they fail or try to build.</p>
       <p class="home-links">For more, see <a href="{{ '/blog/' | relative_url }}">My Blog</a>.</p>
     </div>
   </div>
