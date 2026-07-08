@@ -2721,3 +2721,8 @@ main .label,
     transform-origin: center bottom !important;
   }
 }
+
+/* v66: move the top mountain band 20px further upward from v65. */
+.academic-top-map {
+  transform: translateY(-50px) !important;
+}
