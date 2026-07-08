@@ -1,16 +1,15 @@
-Muhammet Topal academic globe patch v33
+Academic globe patch v34
 
-Apply this directly on top of v32.
+Apply this patch directly on top of the full site ZIP you uploaded.
 
 Changes:
-- title bottom margin: 1px
-- subtitle top margin: 1px
-- subtitle bottom margin: 1px
-- nav bar top margin: 1px
-- top mountains moved 3px upward
-- handwritten Topal moved 5px upward without changing its size
+- subtitle top margin: 0px
+- subtitle bottom margin: 0px
+- handwritten Topal moved 5px further upward from its current position
+- upper mountain opacity reduced by 10 percent
+- bottom mountain opacity reduced by 10 percent
 
 Files included:
 - assets/css/academic-globe-v12.css
-- assets/js/academic-globe-v12.js
-- assets/img/academic-mountain-range-transparent.png
+
+No image assets are included because the existing mountain image is unchanged.

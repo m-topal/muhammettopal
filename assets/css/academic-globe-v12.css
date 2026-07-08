@@ -1708,3 +1708,43 @@ body[data-page="presentations"] .accordion-meta {
     transform: translateY(-13px) !important;
   }
 }
+
+/* v34: exact spacing/opacity refinements based on the uploaded full site. */
+/* Subtitle has no top or bottom margins. */
+.site-top .identity-sentence {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Move the handwritten Topal 5px further upward from the current v33 position. */
+.site-top .home-header-wordmark {
+  transform: translateY(-20px) !important;
+}
+
+/* Make both mountain bands 10% more transparent than the current full-site values. */
+.academic-mountain-art-top img {
+  opacity: .2511 !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .3564 !important;
+}
+
+@media (max-width: 900px) {
+  .site-top .identity-sentence {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-18px) !important;
+  }
+
+  .academic-mountain-art-top img {
+    opacity: .2349 !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .324 !important;
+  }
+}
