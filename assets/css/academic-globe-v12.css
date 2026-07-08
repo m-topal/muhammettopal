@@ -3263,3 +3263,68 @@ html {
     transform: scale(1.03) !important;
   }
 }
+
+/* v95: make View CV PDF use the exact working My Blog pulse and hover behavior. */
+.about-page .about-cv-button::before {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+@keyframes aboutCvBlogPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(176, 0, 0, .20);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(176, 0, 0, 0);
+  }
+}
+
+.about-page .about-cv-button {
+  position: relative !important;
+  z-index: 1 !important;
+  padding: 7px 13px !important;
+  border: 2px solid var(--red) !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--red) !important;
+  font-weight: 650 !important;
+  box-shadow: 0 0 0 0 rgba(176, 0, 0, .20) !important;
+  animation: aboutCvBlogPulse 2.15s ease-in-out infinite !important;
+  transition: background-color .16s ease, color .16s ease, transform .16s ease !important;
+}
+
+.about-page .about-cv-button:hover,
+.about-page .about-cv-button:focus-visible {
+  background: var(--red) !important;
+  color: #fff !important;
+  border-color: var(--red) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
+  outline: none !important;
+  animation-play-state: running !important;
+}
+
+/* v96: clean mobile-only top mountains without changing desktop. */
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 110px !important;
+    overflow: hidden !important;
+    transform: translateY(-20px) !important;
+  }
+
+  .academic-mountain-art-top {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 110px !important;
+    overflow: hidden !important;
+    background-image: url('../img/academic-mountain-range-transparent.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-size: 180% auto !important;
+  }
+
+  .academic-mountain-art-top img {
+    display: none !important;
+  }
+}
