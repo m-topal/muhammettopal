@@ -1,12 +1,7 @@
-Patch v86
+Patch v87
 
-Apply this on top of v85.
+Apply this on top of v86.
 
-Changes included:
-- removes the introductory paragraph beneath the main Research heading
-- removes the introductory paragraph beneath the main Teaching heading
-- removes the empty wrapper blocks too, so no blank gap remains before the secondary navigation
-
-Files included:
-- research.md
-- teaching.md
+Change included:
+- moves only the main Muhammet Topal title 1px upward
+- handwritten wordmark, subtitle, navigation, mountains, globe, and page spacing remain unchanged
