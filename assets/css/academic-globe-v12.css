@@ -2833,3 +2833,22 @@ main {
 main {
   top: 50px !important;
 }
+
+/* v74: tighten the title/subtitle line height and adjust only the identity elements, while keeping the navigation and mountains fixed. */
+.site-top .site-header-wordmark-block {
+  top: 40px !important;
+}
+
+.site-top .name,
+.site-top .identity-sentence {
+  top: 45px !important;
+}
+
+.site-top .identity-sentence {
+  line-height: 1.0 !important;
+}
+
+.sticky-nav,
+main {
+  top: 50px !important;
+}

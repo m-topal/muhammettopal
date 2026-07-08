@@ -1,8 +1,11 @@
-Patch v73
+Patch v74
 
-Apply this on top of v72.
+Apply this on top of v73.
 
 Changes included:
-- increases the downward shift for the handwritten Topal, Muhammet Topal, subtitle, navigation bar, and page content from 10px total to 50px total
-- top mountains remain fixed in their current position
-- the distance between the navigation bar and the page headers remains unchanged because main moves by the same amount
+- changes the subtitle line-height from 1.2 to 1.0
+- moves the handwritten Topal 10px upward
+- moves Muhammet Topal and the subtitle 5px upward
+- keeps the navigation bar in the same position
+- keeps the top mountains in the same position
+- keeps page content aligned with the navigation as before
