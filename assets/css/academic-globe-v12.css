@@ -2394,3 +2394,27 @@ main article.page > .label + h1 {
   background: #fff !important;
   outline: none !important;
 }
+
+/* v54: make both mountain drawings slightly taller without moving their lower edge. */
+.academic-top-map,
+.academic-mountain-art-top {
+  overflow: visible !important;
+}
+
+.academic-mountain-art-top img {
+  transform: scaleY(1.08) !important;
+  transform-origin: center bottom !important;
+}
+
+.academic-footer-range,
+.academic-mountain-art-footer {
+  overflow: visible !important;
+}
+
+.academic-mountain-art-footer img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+  transform: scaleY(1.15) !important;
+  transform-origin: center bottom !important;
+}

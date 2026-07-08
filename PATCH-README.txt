@@ -1,11 +1,10 @@
-Muhammet Topal academic globe patch v53
+Muhammet Topal academic globe patch v54
 
-Apply this patch on top of v52.
+Apply on top of v53.
 
 Changes:
-- Adds a visible framed hover and keyboard-focus state to all six Certificate Outcomes cards on the Teaching page.
-- Uses the same subtle upward movement, darker border, white background, and shadow treatment as the site's other interactive cards.
-- Retains all mountain sizing and prior typography fixes from v52.
-
-Files changed:
-- assets/css/academic-globe-v12.css
+- Makes the top mountain drawing 8% taller vertically.
+- Keeps the top mountain drawing's lower edge fixed, so its distance from the navigation bar stays unchanged.
+- Makes the bottom mountain drawing 15% taller vertically.
+- Keeps the full bottom drawing visible without cropping.
+- Includes no image assets, only the changed CSS file.
