@@ -10,34 +10,29 @@
     if (!scene || !globe || !nav) return;
 
     var isMobile = window.innerWidth <= 900;
-    var topClearance = isMobile ? 76 : 96;
-    var footerClearance = isMobile ? 72 : 92;
-    var topBoundary = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + topClearance));
-    var bottomBoundary = window.innerHeight - (isMobile ? 20 : 28);
+    var topClearance = isMobile ? 72 : 96;
+    var navBottom = Math.ceil(nav.getBoundingClientRect().bottom);
 
+    /* Keep the globe at its existing v28 size. Only correct its position. */
+    var globeSize = Math.min(760, window.innerWidth * 0.70);
+    if (isMobile) globeSize = Math.min(520, window.innerWidth * 0.84);
+
+    /* The globe's top edge always begins below the nav protection zone. */
+    var centerY = navBottom + topClearance + (globeSize / 2);
+
+    /* Do not slide or resize the globe while scrolling. Fade only when the footer would overlap it. */
+    var globeBottom = centerY + (globeSize / 2);
+    var footerFade = 1;
     var footer = document.querySelector('.footer');
-    var footerIsNear = false;
     if (footer) {
-      var footerRect = footer.getBoundingClientRect();
-      footerIsNear = footerRect.top < (window.innerHeight - (isMobile ? 20 : 40));
-      if (footerIsNear) {
-        bottomBoundary = Math.max(topBoundary + 220, Math.floor(footerRect.top - footerClearance));
-      }
+      var footerTop = footer.getBoundingClientRect().top - (isMobile ? 64 : 88);
+      var fadeDistance = isMobile ? 110 : 150;
+      footerFade = Math.max(0, Math.min(1, (footerTop - globeBottom) / fadeDistance));
     }
-
-    var baseSize = Math.min(760, window.innerWidth * 0.70);
-    if (isMobile) baseSize = Math.min(520, window.innerWidth * 0.84);
-
-    var availableHeight = Math.max(220, bottomBoundary - topBoundary);
-    var globeSize = footerIsNear ? Math.min(baseSize, availableHeight) : baseSize;
-
-    var idealCenter = window.innerHeight * (isMobile ? 0.66 : 0.60);
-    var minCenter = topBoundary + (globeSize / 2);
-    var maxCenter = bottomBoundary - (globeSize / 2);
-    var centerY = Math.min(Math.max(idealCenter, minCenter), maxCenter);
 
     scene.style.setProperty('--academic-globe-size', globeSize + 'px');
     scene.style.setProperty('--academic-globe-center-y', centerY + 'px');
+    scene.style.setProperty('--academic-globe-footer-opacity', footerFade.toFixed(3));
   }
 
   function injectFooterRange() {
@@ -46,7 +41,7 @@
       var deco = document.createElement('div');
       deco.className = 'academic-footer-range';
       deco.setAttribute('aria-hidden', 'true');
-      deco.innerHTML = '<div class="academic-mountain-art academic-mountain-art-footer"><img src="/assets/img/academic-mountain-range-continuous.png" alt=""></div>'
+      deco.innerHTML = '<div class="academic-mountain-art academic-mountain-art-footer"><img src="/assets/img/academic-mountain-range-transparent.png" alt=""></div>'
       footer.appendChild(deco);
     });
   }
@@ -146,7 +141,7 @@
     harmonizePresentationAccordions();
   });
 
-  mapHost.innerHTML = '<div class="academic-mountain-art academic-mountain-art-top"><img src="/assets/img/academic-mountain-range-continuous.png" alt=""></div>'
+  mapHost.innerHTML = '<div class="academic-mountain-art academic-mountain-art-top"><img src="/assets/img/academic-mountain-range-transparent.png" alt=""></div>'
 
   function loadScript(src) {
     return new Promise(function (resolve, reject) {

@@ -28,3 +28,13 @@ V28 updates:
 - made publication category dividers thicker and more distinct while keeping item lines lighter
 - moved the footer mountain strip to sit cleanly just above the footer line, removed the separate band effect, and kept the full width visible
 - kept footer buildings in the same zone, with visibility matched to the mountains
+
+
+V29 updates:
+- keeps the v28 globe size unchanged
+- stops the globe from sliding or resizing during scroll
+- keeps the globe below the main nav protection zone
+- fades the globe only when it would enter the footer area
+- replaces the mountain asset with a true transparent PNG, eliminating the visible horizontal rectangle
+- lowers the top mountain range and shows the complete peaks
+- reserves a dedicated footer mountain zone so the bottom range and buildings do not overlap content or the My Blog links
