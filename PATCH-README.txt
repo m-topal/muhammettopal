@@ -1,6 +1,8 @@
-Patch v61
+Patch v62
 
-Apply this on top of v60.
+Apply this on top of v61.
 
-Change included:
-- Moves the handwritten Topal wordmark 20px downward on desktop and mobile.
+Changes included:
+- Moves the handwritten Topal 20px further downward.
+- Reduces the desktop bottom mountain vertical scale from 1.10 to 1.05.
+- Fixes the wider-mobile top mountain override so it now uses a 150px height.
