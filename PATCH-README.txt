@@ -1,9 +1,10 @@
-Muhammet Topal academic globe patch v45
+Muhammet Topal academic globe patch v46
 
-Apply this on top of v44.
+Apply this on top of v45.
 
-Change:
-- moves the top mountain band 6px downward on desktop and mobile, bringing it closer to the main nav
+Changes:
+- main page headers: maximum 32px on desktop, 24px on mobile
+- subsection headers: maximum 24px on desktop, 16px on mobile
 
 File included:
 - assets/css/academic-globe-v12.css
