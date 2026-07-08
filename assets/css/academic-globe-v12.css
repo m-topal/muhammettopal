@@ -3092,3 +3092,13 @@ html {
   top: 41px !important;
   line-height: 1.0 !important;
 }
+
+/* v85: reduce the upward adjustment for the main name and subtitle while keeping the handwritten wordmark unchanged. */
+.site-top .name {
+  top: 44px !important;
+}
+
+.site-top .identity-sentence {
+  top: 43px !important;
+  line-height: 1.0 !important;
+}

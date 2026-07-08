@@ -1,9 +1,9 @@
-Patch v84
+Patch v85
 
-Apply this on top of v83.
+Apply this on top of v84.
 
 Changes included:
-- moves the handwritten Topal 3px upward
-- moves Muhammet Topal 3px upward
-- moves the subtitle 4px upward
-- leaves the main nav, secondary nav, mountains, globe, and page spacing unchanged
+- handwritten Topal stays in the same v84 position
+- Muhammet Topal is only 1px upward relative to the earlier baseline
+- subtitle is only 2px upward relative to the earlier baseline
+- nav bars, mountains, globe, and page spacing remain unchanged
