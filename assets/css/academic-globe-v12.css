@@ -1513,3 +1513,77 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .40 !important;
   }
 }
+
+
+/* v30: remove footer buildings, lift the top mountains slightly above the nav, and move the handwritten wordmark upward. */
+/* Remove the building drawings completely from the footer zone. */
+.school-satellite,
+.footer-satellite-dock,
+.footer-school-satellite,
+.footer-school-satellite img {
+  display: none !important;
+}
+
+/* Keep the upper mountain line just above the main nav instead of letting it slip under the bar. */
+.academic-top-map {
+  top: 30px !important;
+  height: 232px !important;
+  overflow: visible !important;
+}
+
+.academic-mountain-art-top {
+  align-items: flex-end !important;
+  padding-bottom: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.academic-mountain-art-top img {
+  opacity: .31 !important;
+  transform: translateY(-8px) !important;
+}
+
+/* Move the handwritten wordmark a bit upward so it does not collide with the mountain line. */
+.site-top .site-header-wordmark-block {
+  margin-bottom: -2px !important;
+}
+
+.site-top .home-header-wordmark {
+  transform: translateY(-10px) !important;
+  margin-bottom: -2px !important;
+}
+
+.site-top .name {
+  margin-top: -2px !important;
+  margin-bottom: 4px !important;
+}
+
+.site-top .identity-sentence {
+  margin-top: 2px !important;
+  margin-bottom: 12px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 20px !important;
+    height: 166px !important;
+  }
+
+  .academic-mountain-art-top {
+    padding-bottom: 8px !important;
+  }
+
+  .academic-mountain-art-top img {
+    transform: translateY(-6px) !important;
+    opacity: .29 !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-8px) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .site-top .name {
+    margin-top: -1px !important;
+    margin-bottom: 4px !important;
+  }
+}

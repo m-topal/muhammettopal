@@ -47,21 +47,13 @@
   }
 
   function dockFooterSatellites() {
-    var footer = document.querySelector('.footer');
-    if (!footer) return;
-    var deco = footer.querySelector('.academic-footer-range');
-    if (!deco) return;
-    var dock = deco.querySelector('.footer-satellite-dock');
-    if (!dock) {
-      dock = document.createElement('div');
-      dock.className = 'footer-satellite-dock';
-      deco.appendChild(dock);
-    }
-    ['schoolSatellite1','schoolSatellite2','schoolSatellite3'].forEach(function(id, idx) {
+    /* v30: remove the building drawings completely from the footer zone. */
+    ['schoolSatellite1','schoolSatellite2','schoolSatellite3'].forEach(function(id) {
       var el = document.getElementById(id);
-      if (!el) return;
-      el.classList.add('footer-school-satellite', 'footer-school-satellite-' + (idx + 1));
-      dock.appendChild(el);
+      if (el) el.style.display = 'none';
+    });
+    document.querySelectorAll('.footer-satellite-dock').forEach(function (dock) {
+      dock.remove();
     });
   }
 
