@@ -2793,3 +2793,24 @@ main article.extracurricular-page > .page-label:first-child,
   grid-column: 1 / -1 !important;
   grid-row: 2 !important;
 }
+
+/* v71: make Home and About Me start the same distance below the navigation as the other pages, without affecting the CV row. */
+.home-wrap-section {
+  margin-top: 0 !important;
+}
+
+.about-page {
+  padding-top: 0 !important;
+}
+
+.about-page > h1 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.about-page > .about-cv-toolbar {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
