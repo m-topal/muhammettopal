@@ -3107,3 +3107,13 @@ html {
 .site-top .name {
   top: 43px !important;
 }
+
+/* v88: move only the main title 1px further upward and the subtitle 2px upward. */
+.site-top .name {
+  top: 42px !important;
+}
+
+.site-top .identity-sentence {
+  top: 41px !important;
+  line-height: 1.0 !important;
+}
