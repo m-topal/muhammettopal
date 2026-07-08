@@ -2509,3 +2509,36 @@ main article.page > .label + h1 {
     transform-origin: center bottom !important;
   }
 }
+
+/* v58: force the mobile top mountain drawing itself to a 150px display height. */
+@media (max-width: 900px) {
+  .academic-top-map,
+  .academic-mountain-art-top {
+    height: 150px !important;
+  }
+
+  .academic-mountain-art-top img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: fill !important;
+    transform: none !important;
+  }
+}
+
+/* v59: slightly reduce desktop bottom mountain height and move the handwritten Topal down by 10px. */
+@media (min-width: 901px) {
+  .academic-mountain-art-footer img {
+    transform: scaleY(1.10) !important;
+    transform-origin: center bottom !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-34px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-top .home-header-wordmark {
+    transform: translateY(-29px) !important;
+  }
+}
