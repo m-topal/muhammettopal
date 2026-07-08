@@ -226,7 +226,7 @@
           .polygonAltitude(0.006)
           .polygonCapColor(function () { return 'rgba(218,226,230,.38)'; })
           .polygonSideColor(function () { return 'rgba(179,196,204,.12)'; })
-          .polygonStrokeColor(function () { return 'rgba(89,111,123,.62)'; })
+          .polygonStrokeColor(function () { return 'rgba(89,111,123,.65)'; })
           .polygonsTransitionDuration(0);
       })
       .catch(function () {

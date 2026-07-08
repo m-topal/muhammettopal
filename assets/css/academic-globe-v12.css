@@ -2032,3 +2032,33 @@ main .label,
     transform: translateY(-35px) !important;
   }
 }
+
+
+/* v39: remove the 1px title-to-subtitle gap, strengthen globe opacity to .65, and nudge mountains / wordmark upward. */
+.site-top .name {
+  margin-bottom: 0 !important;
+}
+
+.academic-globe {
+  opacity: calc(.65 * var(--academic-globe-footer-opacity, 1)) !important;
+}
+
+/* Move the top mountain band 3px upward from v38. */
+.academic-top-map {
+  top: 21px !important;
+}
+
+/* Move the handwritten Topal 5px upward from v38, keeping size unchanged. */
+.site-top .home-header-wordmark {
+  transform: translateY(-45px) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 11px !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-40px) !important;
+  }
+}
