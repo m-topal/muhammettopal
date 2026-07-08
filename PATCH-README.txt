@@ -20,3 +20,11 @@ V27 updates:
 - tightened vertical spacing between the handwritten wordmark, the main title, and the subtitle
 - moved the footer mountain strip to just above the footer line, outside the My Blog / links row
 - increased footer school-building size by roughly 30 percent and matched their visibility to the mountain strip
+
+
+V28 updates:
+- restored a larger globe and reduced the scroll-induced drifting/shrinking by improving its placement logic
+- moved the top mountain range lower and switched the header/footer mountain artwork to full-width, non-cropped rendering
+- made publication category dividers thicker and more distinct while keeping item lines lighter
+- moved the footer mountain strip to sit cleanly just above the footer line, removed the separate band effect, and kept the full width visible
+- kept footer buildings in the same zone, with visibility matched to the mountains

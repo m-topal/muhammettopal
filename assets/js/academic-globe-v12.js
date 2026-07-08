@@ -9,23 +9,32 @@
     var nav = document.querySelector('.sticky-nav, .nav-wrap');
     if (!scene || !globe || !nav) return;
 
-    var clearance = window.innerWidth <= 900 ? 72 : 96;
-    var topBoundary = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + clearance));
-    var bottomBoundary = window.innerHeight;
+    var isMobile = window.innerWidth <= 900;
+    var topClearance = isMobile ? 76 : 96;
+    var footerClearance = isMobile ? 72 : 92;
+    var topBoundary = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + topClearance));
+    var bottomBoundary = window.innerHeight - (isMobile ? 20 : 28);
 
     var footer = document.querySelector('.footer');
+    var footerIsNear = false;
     if (footer) {
       var footerRect = footer.getBoundingClientRect();
-      if (footerRect.top < window.innerHeight) {
-        bottomBoundary = Math.max(topBoundary + 180, Math.floor(footerRect.top - clearance));
+      footerIsNear = footerRect.top < (window.innerHeight - (isMobile ? 20 : 40));
+      if (footerIsNear) {
+        bottomBoundary = Math.max(topBoundary + 220, Math.floor(footerRect.top - footerClearance));
       }
     }
 
-    var baseSize = Math.min(630, window.innerWidth * 0.60);
-    if (window.innerWidth <= 900) baseSize = Math.min(470, window.innerWidth * 0.78);
-    var availableHeight = Math.max(180, bottomBoundary - topBoundary);
-    var globeSize = Math.min(baseSize, availableHeight);
-    var centerY = topBoundary + (globeSize / 2);
+    var baseSize = Math.min(760, window.innerWidth * 0.70);
+    if (isMobile) baseSize = Math.min(520, window.innerWidth * 0.84);
+
+    var availableHeight = Math.max(220, bottomBoundary - topBoundary);
+    var globeSize = footerIsNear ? Math.min(baseSize, availableHeight) : baseSize;
+
+    var idealCenter = window.innerHeight * (isMobile ? 0.66 : 0.60);
+    var minCenter = topBoundary + (globeSize / 2);
+    var maxCenter = bottomBoundary - (globeSize / 2);
+    var centerY = Math.min(Math.max(idealCenter, minCenter), maxCenter);
 
     scene.style.setProperty('--academic-globe-size', globeSize + 'px');
     scene.style.setProperty('--academic-globe-center-y', centerY + 'px');
