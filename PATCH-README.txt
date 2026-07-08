@@ -1,7 +1,6 @@
-Patch v68
+Patch v69
 
-Apply this on top of v67.
+Apply this on top of v68.
 
 Change included:
-- restores the large About Me title and View CV PDF button to their former vertical position
-- keeps the duplicate gray About Me label hidden
+- moves the top mountain band 3px further upward

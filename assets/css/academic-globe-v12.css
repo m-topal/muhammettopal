@@ -2760,3 +2760,8 @@ main article.extracurricular-page > .page-label:first-child,
 .about-page {
   padding-top: 22px !important;
 }
+
+/* v69: move the top mountain band 3px further upward. */
+.academic-top-map {
+  transform: translateY(-53px) !important;
+}
