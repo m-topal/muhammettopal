@@ -2136,3 +2136,9 @@ main .label,
     transform: translateY(-39px) !important;
   }
 }
+
+/* v43: tighten subtitle line box while keeping 8px above the main nav. */
+.site-top .identity-sentence {
+  line-height: 1.25 !important;
+  margin-bottom: 8px !important;
+}

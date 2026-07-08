@@ -1,12 +1,10 @@
-Muhammet Topal academic globe patch v42
+Muhammet Topal academic globe patch v43
 
-Apply this on top of v41.
+Apply this on top of v42.
 
 Changes:
-- top mountains: 225px desktop, 150px mobile
-- bottom mountains: 75px desktop, 50px mobile
-- top mountain band moved 5px upward from v41
-- handwritten Topal moved slightly lower so it sits closer to 10px below the top edge
+- subtitle line-height: 1.25
+- subtitle bottom margin before the main nav: 8px
 
 Files included:
 - assets/css/academic-globe-v12.css
