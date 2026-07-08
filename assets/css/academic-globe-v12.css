@@ -3117,3 +3117,13 @@ html {
   top: 41px !important;
   line-height: 1.0 !important;
 }
+
+/* v89: move the main title 1px further upward and the subtitle 2px further upward. */
+.site-top .name {
+  top: 41px !important;
+}
+
+.site-top .identity-sentence {
+  top: 39px !important;
+  line-height: 1.0 !important;
+}
