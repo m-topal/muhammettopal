@@ -660,3 +660,45 @@ body[data-page="presentations"] .accordion-panel {
     line-height: 1.5 !important;
   }
 }
+
+/* v21 overrides: lower globe, simpler mountains, and harmonized accordion text. */
+.academic-globe {
+  top: 66% !important;
+}
+
+.school-satellite {
+  top: 66% !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe,
+  .school-satellite {
+    top: 72% !important;
+  }
+}
+
+.accordion-meta,
+.pub-reference,
+.accordion-panel p {
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+}
+
+.accordion-meta,
+.accordion-panel p,
+.pub-reference {
+  color: rgba(56, 67, 78, .72) !important;
+}
+
+.pub-reference {
+  margin-top: 8px !important;
+}
+
+@media (max-width: 900px) {
+  .accordion-meta,
+  .pub-reference,
+  .accordion-panel p {
+    font-size: 14px !important;
+    line-height: 1.52 !important;
+  }
+}

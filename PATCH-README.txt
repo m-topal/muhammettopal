@@ -1,15 +1,17 @@
-ACADEMIC GLOBE PATCH v19
+ACADEMIC GLOBE PATCH v21
 
-Apply this on top of v18.
+Apply this on top of the current site / v20.
 
-Changes:
-- replaces the random wave-like mountain header with a refined continuous mountain range based on the approved 3rd/4th hybrid concept
-- keeps the current muted line tone, transparency, meridian/parallel grid, and pale blue secondary line
-- includes the small pine trees and sun
-- lowers the globe and orbiting school drawings further without changing the globe itself
-- makes presentation accordion typography, color, spacing, and dropdown metadata style match publications
-- preserves the downward-opening language menu from v18
+Requested fixes in this patch:
+- globe starts lower, about 1 cm lower than the previous version
+- mountain header is simplified again, with fewer lines and a cleaner continuous composition
+- the same simplified mountain line is added at the very bottom behind the final link row
+- presentation description paragraphs are removed from both /presentations/ and the presentations section on /research/
+- publication and presentation dropdown text is harmonized in size / tone, with presentations slightly muted
+- publication dropdown explanation text is brought closer to the presentation explanation style
 
 Files included:
 - assets/css/academic-globe-v12.css
 - assets/js/academic-globe-v12.js
+- presentations.md
+- research.md
