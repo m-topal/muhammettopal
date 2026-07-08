@@ -1121,3 +1121,123 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .48 !important;
   }
 }
+
+
+/* v27 overrides: lower the top mountains, tighten header spacing, move bottom mountains above the footer line, and enlarge footer buildings. */
+.site-top .site-header-wordmark-block {
+  margin-top: 0 !important;
+  margin-bottom: -4px !important;
+}
+
+.site-top .home-header-wordmark {
+  margin-bottom: -10px !important;
+}
+
+.site-top .name {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.site-top .identity-sentence {
+  margin-top: 4px !important;
+  margin-bottom: 14px !important;
+}
+
+/* Bring the header mountain band slightly lower, wider, and more visible without crowding. */
+.academic-top-map {
+  height: 232px !important;
+}
+
+.academic-mountain-art-top img {
+  opacity: .27 !important;
+  filter: grayscale(1) contrast(.93) brightness(.97) !important;
+  object-fit: cover !important;
+  object-position: center 86% !important;
+  transform: scale(1.03) !important;
+  transform-origin: center center !important;
+}
+
+/* Footer art sits just above the footer line, not behind the My Blog / links row. */
+.footer {
+  overflow: visible !important;
+}
+
+.academic-footer-range {
+  left: 50% !important;
+  bottom: calc(100% + 1px) !important;
+  transform: translateX(-50%) !important;
+  width: min(1280px, 100%) !important;
+  height: 86px !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .40 !important;
+  filter: grayscale(1) contrast(.95) brightness(.97) !important;
+  object-fit: cover !important;
+  object-position: center 58% !important;
+}
+
+/* Make the docked school buildings match the mountains in visibility and appear about 30% larger. */
+.footer-school-satellite {
+  width: 128px !important;
+  height: 88px !important;
+}
+
+.footer-school-satellite img {
+  max-width: 108px !important;
+  max-height: 76px !important;
+  opacity: .40 !important;
+  filter: grayscale(1) contrast(1.05) brightness(.98) !important;
+}
+
+.footer-school-satellite-1 { left: 17% !important; bottom: 8px !important; }
+.footer-school-satellite-2 { left: 50% !important; bottom: 10px !important; }
+.footer-school-satellite-3 { left: 82% !important; bottom: 8px !important; }
+
+@media (max-width: 900px) {
+  .site-top .home-header-wordmark {
+    margin-bottom: -7px !important;
+  }
+
+  .site-top .identity-sentence {
+    margin-top: 3px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .academic-top-map {
+    height: 176px !important;
+  }
+
+  .academic-mountain-art-top img {
+    opacity: .25 !important;
+    object-position: center 84% !important;
+    transform: scale(1.05) !important;
+  }
+
+  .academic-footer-range {
+    width: 100% !important;
+    height: 64px !important;
+    bottom: calc(100% + 1px) !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .36 !important;
+  }
+
+  .footer-school-satellite {
+    width: 82px !important;
+    height: 58px !important;
+  }
+
+  .footer-school-satellite img {
+    max-width: 70px !important;
+    max-height: 50px !important;
+    opacity: .36 !important;
+  }
+
+  .footer-school-satellite-1 { left: 14% !important; bottom: 4px !important; }
+  .footer-school-satellite-2 { left: 50% !important; bottom: 5px !important; }
+  .footer-school-satellite-3 { left: 86% !important; bottom: 4px !important; }
+}

@@ -13,3 +13,10 @@ Files included:
 - assets/css/academic-globe-v12.css
 - assets/js/academic-globe-v12.js
 - assets/img/academic-mountain-range-continuous.png
+
+
+V27 updates:
+- lowered the top mountain artwork so peaks are fully visible
+- tightened vertical spacing between the handwritten wordmark, the main title, and the subtitle
+- moved the footer mountain strip to just above the footer line, outside the My Blog / links row
+- increased footer school-building size by roughly 30 percent and matched their visibility to the mountain strip
