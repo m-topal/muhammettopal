@@ -2086,3 +2086,22 @@ main .label,
     transform: translateY(-43px) !important;
   }
 }
+
+/* v41: adjust mountain display heights only. */
+.academic-top-map {
+  height: 240px !important;
+}
+
+.academic-footer-range {
+  height: 80px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 180px !important;
+  }
+
+  .academic-footer-range {
+    height: 60px !important;
+  }
+}
