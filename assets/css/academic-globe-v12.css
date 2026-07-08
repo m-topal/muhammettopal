@@ -2486,3 +2486,17 @@ main article.page > .label + h1 {
   transform: scaleY(1.25) !important;
   transform-origin: center bottom !important;
 }
+
+
+/* v56: improve the mobile top mountain placement so it is a bit higher and visually fuller behind the header. */
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 4px !important;
+    height: 195px !important;
+  }
+
+  .academic-mountain-art-top img {
+    transform: scaleY(1.16) !important;
+    transform-origin: center bottom !important;
+  }
+}
