@@ -2876,3 +2876,11 @@ main {
 .academic-world-scene {
   will-change: transform !important;
 }
+
+/* v78: restore sticky navigation without changing its intended lowered starting position. */
+.sticky-nav {
+  position: sticky !important;
+  top: 0 !important;
+  margin-top: 50px !important;
+  z-index: 1000 !important;
+}
