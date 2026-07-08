@@ -2933,3 +2933,37 @@ main {
 .academic-globe {
   top: var(--academic-globe-center-y, 56vh) !important;
 }
+
+/* v81: reserve a complete footer-art zone so the full bottom mountain profile and sun remain visible. */
+.footer {
+  padding-bottom: 78px !important;
+  overflow: hidden !important;
+}
+
+.academic-footer-range {
+  top: auto !important;
+  bottom: 0 !important;
+  height: 70px !important;
+  overflow: visible !important;
+}
+
+.academic-mountain-art-footer {
+  overflow: visible !important;
+}
+
+.academic-mountain-art-footer img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+  object-position: center bottom !important;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding-bottom: 62px !important;
+  }
+
+  .academic-footer-range {
+    height: 54px !important;
+  }
+}
