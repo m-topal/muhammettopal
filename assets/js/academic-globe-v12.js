@@ -252,6 +252,14 @@
       lastY = y;
       var dir = dy >= 0 ? 1 : -1;
       targetSpeed = dir * (0.55 + Math.min(Math.abs(dy) * 0.018, 2.7));
+
+      /* v77: let the globe travel downward with page scrolling instead of remaining visually locked. */
+      var scene = document.querySelector('.academic-world-scene');
+      if (scene) {
+        var maxTravel = Math.max(180, window.innerHeight * 0.72);
+        var travel = Math.min(y * 0.18, maxTravel);
+        scene.style.transform = 'translate3d(0,' + travel.toFixed(1) + 'px,0)';
+      }
     }, { passive: true });
 
     function animate() {

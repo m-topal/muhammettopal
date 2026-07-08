@@ -2852,3 +2852,27 @@ main {
 main {
   top: 50px !important;
 }
+
+/* v77: modest footer clearance, slightly higher handwritten wordmark, and stronger globe visibility. */
+.site-top .site-header-wordmark-block {
+  top: 37px !important;
+}
+
+.academic-globe {
+  opacity: calc(.70 * var(--academic-globe-footer-opacity, 1)) !important;
+}
+
+.footer {
+  margin-top: 50px !important;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    margin-top: 25px !important;
+  }
+}
+
+/* The scene remains viewport-based, but scroll motion is now applied by JS so the globe drifts downward instead of staying visually locked. */
+.academic-world-scene {
+  will-change: transform !important;
+}
