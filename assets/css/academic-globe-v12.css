@@ -3179,3 +3179,30 @@ html {
   transform: translateY(-1px) !important;
   outline: none !important;
 }
+
+/* v93: dedicated visible glow for the About Me CV pill. */
+@keyframes aboutCvGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(164, 72, 54, .00), 0 0 8px rgba(164, 72, 54, .16);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(164, 72, 54, .10), 0 0 18px rgba(164, 72, 54, .34);
+  }
+}
+
+.about-page .about-cv-button {
+  animation: aboutCvGlow 2.15s ease-in-out infinite !important;
+  will-change: box-shadow !important;
+}
+
+.about-page .about-cv-button:hover,
+.about-page .about-cv-button:focus-visible {
+  box-shadow: 0 0 0 5px rgba(164, 72, 54, .12), 0 8px 22px rgba(164, 72, 54, .28) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-cv-button {
+    animation: none !important;
+    box-shadow: 0 0 0 4px rgba(164, 72, 54, .08), 0 0 14px rgba(164, 72, 54, .22) !important;
+  }
+}

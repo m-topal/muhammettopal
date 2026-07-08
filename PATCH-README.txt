@@ -1,8 +1,8 @@
-Patch v92
+Patch v93
 
-Apply this on top of v91.
+Apply this on top of v92.
 
 Changes included:
-- gives the About Me "View CV PDF" button the same red pill styling and pulse effect as the "My Blog" tag
-- adds the same red-fill and white-text hover/focus behavior
-- leaves the CV modal behavior and all other layout elements unchanged
+- adds a dedicated, visible glow animation to the About Me View CV PDF pill
+- strengthens the hover/focus glow
+- leaves the CV modal and all layout behavior unchanged
