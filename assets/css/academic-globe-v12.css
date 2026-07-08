@@ -2418,3 +2418,71 @@ main article.page > .label + h1 {
   transform: scaleY(1.15) !important;
   transform-origin: center bottom !important;
 }
+
+
+/* v55: shrink teaching card meta text, ensure certificate hover frames appear everywhere, and make mountains taller vertically without losing the drawing. */
+.teaching-course-card .meta,
+.certificate-card .meta,
+.teaching-experience-page .teaching-course-card .meta,
+.teaching-continuous-page .teaching-course-card .meta,
+.teaching-certificate-page .certificate-card .meta,
+.certificate-coursework-cards .certificate-card .meta {
+  font-size: 10px !important;
+}
+
+.teaching-certificate-page .certificate-detail-card,
+.teaching-page .certificate-detail-card,
+.teaching-continuous-page .certificate-detail-card,
+.teaching-experience-page .certificate-detail-card,
+.certificate-coursework-cards .certificate-card.course-modal-trigger,
+.certificate-coursework-cards .certificate-detail-card.course-modal-trigger {
+  cursor: pointer !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease !important;
+}
+
+.teaching-certificate-page .certificate-detail-card:hover,
+.teaching-certificate-page .certificate-detail-card:focus-visible,
+.teaching-page .certificate-detail-card:hover,
+.teaching-page .certificate-detail-card:focus-visible,
+.teaching-continuous-page .certificate-detail-card:hover,
+.teaching-continuous-page .certificate-detail-card:focus-visible,
+.teaching-experience-page .certificate-detail-card:hover,
+.teaching-experience-page .certificate-detail-card:focus-visible,
+.certificate-coursework-cards .certificate-card.course-modal-trigger:hover,
+.certificate-coursework-cards .certificate-card.course-modal-trigger:focus-visible,
+.certificate-coursework-cards .certificate-detail-card.course-modal-trigger:hover,
+.certificate-coursework-cards .certificate-detail-card.course-modal-trigger:focus-visible {
+  transform: translateY(-2px) !important;
+  border-color: rgba(0, 0, 0, .42) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .10) !important;
+  background: #fff !important;
+  outline: none !important;
+}
+
+/* Top mountains: behave as if 10 percent taller, keeping full drawing visible. */
+.academic-top-map,
+.academic-mountain-art-top {
+  overflow: visible !important;
+}
+
+.academic-mountain-art-top img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: unset !important;
+  transform: scaleY(1.10) !important;
+  transform-origin: center bottom !important;
+}
+
+/* Bottom mountains: behave as if 25 percent taller, while preserving the full drawing. */
+.academic-footer-range,
+.academic-mountain-art-footer {
+  overflow: visible !important;
+}
+
+.academic-mountain-art-footer img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: unset !important;
+  transform: scaleY(1.25) !important;
+  transform-origin: center bottom !important;
+}

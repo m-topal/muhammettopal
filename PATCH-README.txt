@@ -1,10 +1,13 @@
-Muhammet Topal academic globe patch v54
+Muhammet Topal academic globe patch v55
 
-Apply on top of v53.
+Apply this on top of v54.
 
 Changes:
-- Makes the top mountain drawing 8% taller vertically.
-- Keeps the top mountain drawing's lower edge fixed, so its distance from the navigation bar stays unchanged.
-- Makes the bottom mountain drawing 15% taller vertically.
-- Keeps the full bottom drawing visible without cropping.
-- Includes no image assets, only the changed CSS file.
+- course metadata text on teaching / certificate cards reduced to 10px
+- certificate / college teaching cards now get the hover frame more broadly, including the certificate coursework grid and teaching certificate page
+- top mountains now render as if 10 percent taller vertically
+- bottom mountains now render as if 25 percent taller vertically
+- both mountain drawings remain fully visible rather than being cropped
+
+Files included:
+- assets/css/academic-globe-v12.css
