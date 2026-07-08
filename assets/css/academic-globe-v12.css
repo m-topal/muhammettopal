@@ -1674,3 +1674,37 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .36 !important;
   }
 }
+
+/* v33: exact header spacing and small vertical position adjustments requested. */
+.site-top .name {
+  margin-bottom: 1px !important;
+}
+
+.site-top .identity-sentence {
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+}
+
+.nav-wrap {
+  margin-top: 1px !important;
+}
+
+/* Move the top mountain band 3px upward from v32. */
+.academic-top-map {
+  top: 27px !important;
+}
+
+/* Move the handwritten Topal wordmark 5px upward from v32, without changing its size. */
+.site-top .home-header-wordmark {
+  transform: translateY(-15px) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 17px !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-13px) !important;
+  }
+}
