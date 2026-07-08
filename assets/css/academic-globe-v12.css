@@ -2062,3 +2062,27 @@ main .label,
     transform: translateY(-40px) !important;
   }
 }
+
+
+/* v40: add 1px more subtitle breathing room, thicken globe nerve lines, and nudge mountains / wordmark upward. */
+.site-top .identity-sentence {
+  margin-bottom: 7px !important;
+}
+
+.academic-top-map {
+  top: 19px !important;
+}
+
+.site-top .home-header-wordmark {
+  transform: translateY(-48px) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 9px !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-43px) !important;
+  }
+}

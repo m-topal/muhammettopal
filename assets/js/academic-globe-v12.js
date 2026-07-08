@@ -203,7 +203,7 @@
       .arcEndLng('endLng')
       .arcColor(function () { return 'rgba(96,142,174,.42)'; })
       .arcAltitude(0.19)
-      .arcStroke(0.24)
+      .arcStroke(0.30)
       .arcDashLength(0.48)
       .arcDashGap(0.14)
       .arcDashInitialGap(function () { return Math.random(); })

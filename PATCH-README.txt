@@ -1,13 +1,12 @@
-Muhammet Topal academic globe patch v39
+Muhammet Topal academic globe patch v40
 
-Apply this on top of v38 or the current site files.
+Apply this on top of v39.
 
-This patch changes only what was requested:
-- removes the 1px margin between the Muhammet Topal title and the subtitle
-- increases globe opacity to 0.65
-- sets the globe country-border line opacity to 0.65
-- moves the top mountains 3px upward from v38
-- moves the handwritten Topal 5px upward from v38
+Changes:
+- adds 1px more subtitle-to-nav breathing room by setting the subtitle bottom margin to 7px
+- thickens the globe connection / nerve lines from 0.24 to 0.30
+- moves the top mountains 2px upward from v39
+- moves the handwritten Topal 3px upward from v39
 
 Files included:
 - assets/css/academic-globe-v12.css
