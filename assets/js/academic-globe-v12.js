@@ -28,6 +28,21 @@
     });
   }
 
+  function harmonizePresentationAccordions() {
+    var roots = [];
+    var researchPresentations = document.querySelector('#presentations .accordion');
+    if (researchPresentations) roots.push(researchPresentations);
+    if (location.pathname.indexOf('/presentations/') !== -1 || location.pathname.match(/\/presentations\/?$/)) {
+      document.body.classList.add('presentations-page');
+      document.querySelectorAll('.accordion').forEach(function (acc) { roots.push(acc); });
+    }
+    roots.forEach(function (root) {
+      root.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+        trigger.classList.add('publication-trigger');
+      });
+    });
+  }
+
   function collapseAndTrimPanels() {
     // Research page sections
     ['#presentations', '#publications'].forEach(function (sectionSelector) {
@@ -70,32 +85,50 @@
   updateSceneTop();
   injectFooterRange();
   collapseAndTrimPanels();
+  harmonizePresentationAccordions();
   window.addEventListener('scroll', updateSceneTop, { passive: true });
   window.addEventListener('resize', updateSceneTop);
   window.addEventListener('load', function () {
     updateSceneTop();
     injectFooterRange();
     collapseAndTrimPanels();
+    harmonizePresentationAccordions();
   });
   document.addEventListener('DOMContentLoaded', function () {
     updateSceneTop();
     injectFooterRange();
     collapseAndTrimPanels();
+    harmonizePresentationAccordions();
   });
 
   mapHost.innerHTML = `
-    <svg viewBox="0 0 1600 260" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Subtle meridian / parallel structure retained from the current site. -->
         <g stroke="rgba(124,142,156,.10)" stroke-width="1">
-          <path d="M170 0V260M370 0V260M570 0V260M770 0V260M970 0V260M1170 0V260M1370 0V260"/>
-          <path d="M0 78H1600M0 156H1600M0 234H1600"/>
+          <path d="M170 0V300M370 0V300M570 0V300M770 0V300M970 0V300M1170 0V300M1370 0V300"/>
+          <path d="M0 84H1600M0 164H1600M0 244H1600"/>
         </g>
-        <g stroke="rgba(78,94,109,.22)" stroke-width="2.1">
-          <path d="M0 187 C62 187, 84 126, 132 126 C184 126, 201 167, 247 167 C296 167, 319 104, 391 104 C461 104, 477 139, 529 139 C585 139, 603 69, 691 69 C776 69, 794 114, 846 114 C900 114, 918 58, 985 58 C1052 58, 1067 99, 1123 99 C1179 99, 1204 74, 1262 74 C1342 74, 1360 146, 1434 146 C1490 146, 1517 112, 1600 112"/>
-          <path d="M0 205 C44 205, 72 176, 121 176 C171 176, 198 193, 247 193 C310 193, 332 144, 406 144 C464 144, 486 179, 543 179 C603 179, 623 121, 700 121 C777 121, 795 150, 851 150 C905 150, 924 131, 979 131 C1038 131, 1061 167, 1123 167 C1188 167, 1216 143, 1279 143 C1338 143, 1365 185, 1431 185 C1495 185, 1524 159, 1600 159"/>
+
+        <!-- Refined continuous mountain range, with even peaks, pine trees, and sun. -->
+        <g stroke="rgba(78,94,109,.22)" stroke-width="2.05">
+          <path d="M0 236 C70 236 95 211 147 211 C196 211 220 220 263 220 C314 220 344 184 393 184 C438 184 467 205 510 205 C555 205 582 179 628 179 C676 179 703 202 746 202 C795 202 826 158 878 158 C930 158 961 189 1005 189 C1055 189 1082 163 1128 163 C1177 163 1207 191 1254 191 C1302 191 1330 168 1376 168 C1427 168 1456 207 1502 207 C1542 207 1567 196 1600 196"/>
+          <path d="M31 234 C104 222 151 196 205 157 C243 130 276 114 315 114 C359 114 391 153 429 153 C470 153 505 115 544 115 C584 115 622 146 660 146 C705 146 741 105 786 105 C827 105 853 80 891 63 C931 89 951 121 982 135 C1017 151 1044 138 1070 121 C1100 145 1121 160 1151 160 C1183 160 1204 135 1233 118 C1260 137 1283 155 1310 155 C1340 155 1362 128 1392 112 C1422 134 1442 153 1471 153 C1510 153 1533 183 1573 190"/>
+          <path d="M164 219 C210 207 253 176 296 145 C336 172 373 198 418 208"/>
+          <path d="M473 204 C519 191 565 161 608 132 C648 160 686 185 728 200"/>
+          <path d="M759 199 C804 181 844 139 891 91 C936 137 973 174 1015 189"/>
+          <path d="M1068 188 C1110 174 1153 147 1198 123 C1237 151 1273 178 1314 190"/>
+          <path d="M1326 189 C1367 172 1408 145 1450 126 C1488 153 1523 180 1566 191"/>
+          <!-- Three small pine trees. -->
+          <path d="M411 205v-42m0 0l-14 16h10l-16 18h13l-18 18m25-52l14 16h-10l16 18h-13l18 18"/>
+          <path d="M447 211v-31m0 0l-10 12h7l-12 14h9l-13 14m19-40l10 12h-7l12 14h-9l13 14"/>
+          <path d="M479 214v-24m0 0l-8 9h6l-10 12h8l-11 12m15-33l8 9h-6l10 12h-8l11 12"/>
+          <!-- Sun. -->
+          <circle cx="1065" cy="70" r="34"/>
         </g>
+
         <g stroke="rgba(124,160,194,.18)" stroke-width="1.6">
-          <path d="M292 196C431 150 621 136 792 146C958 156 1107 171 1250 185"/>
+          <path d="M280 228C450 195 650 187 820 194C1001 201 1160 213 1322 229"/>
         </g>
       </g>
     </svg>`;
