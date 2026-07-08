@@ -2542,3 +2542,41 @@ main article.page > .label + h1 {
     transform: translateY(-29px) !important;
   }
 }
+
+/* v60: width-specific mobile top mountain correction.
+   Narrow phones need more visible vertical drawing; wider phones need less overlap. */
+@media (max-width: 390px) {
+  .academic-top-map,
+  .academic-mountain-art-top {
+    top: -8px !important;
+    height: 175px !important;
+    overflow: visible !important;
+  }
+
+  .academic-mountain-art-top img {
+    width: 100% !important;
+    height: 175px !important;
+    object-fit: fill !important;
+    object-position: center bottom !important;
+    transform: none !important;
+    transform-origin: center bottom !important;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 900px) {
+  .academic-top-map,
+  .academic-mountain-art-top {
+    top: -2px !important;
+    height: 135px !important;
+    overflow: visible !important;
+  }
+
+  .academic-mountain-art-top img {
+    width: 100% !important;
+    height: 135px !important;
+    object-fit: fill !important;
+    object-position: center bottom !important;
+    transform: none !important;
+    transform-origin: center bottom !important;
+  }
+}

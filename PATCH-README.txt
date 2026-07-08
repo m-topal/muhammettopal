@@ -1,10 +1,12 @@
-Muhammet Topal academic globe patch v59
+Muhammet Topal academic globe patch v60
 
-Apply this on top of v58.
+Apply on top of v59.
 
-Changes:
-- desktop bottom mountain vertical scale changed from 1.125 to 1.10
-- handwritten Topal moved down by 10px on desktop and mobile
+Mobile top mountain correction:
+- phones up to 390px: 175px high and moved 8px upward
+- phones from 391px to 900px: 135px high and moved 2px upward
+- this reduces excessive overlap on wider phones while making the mountain more visible on narrower phones
+- desktop unchanged
 
 Files included:
 - assets/css/academic-globe-v12.css
