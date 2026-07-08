@@ -17,8 +17,10 @@
     var globeSize = Math.min(760, window.innerWidth * 0.70);
     if (isMobile) globeSize = Math.min(520, window.innerWidth * 0.84);
 
-    /* The globe's top edge always begins below the nav protection zone. */
-    var centerY = navBottom + topClearance + (globeSize / 2);
+    /* Keep the globe centered in the viewport while still clearing the sticky navigation. */
+    var viewportCenter = window.innerHeight * (isMobile ? 0.56 : 0.55);
+    var minimumCenter = navBottom + topClearance + (globeSize / 2);
+    var centerY = Math.max(viewportCenter, minimumCenter);
 
     /* Do not slide or resize the globe while scrolling. Fade only when the footer would overlap it. */
     var globeBottom = centerY + (globeSize / 2);
@@ -253,13 +255,9 @@
       var dir = dy >= 0 ? 1 : -1;
       targetSpeed = dir * (0.55 + Math.min(Math.abs(dy) * 0.018, 2.7));
 
-      /* v77: let the globe travel downward with page scrolling instead of remaining visually locked. */
+      /* v80: keep the globe centered in the viewport; scrolling only changes spin direction and speed. */
       var scene = document.querySelector('.academic-world-scene');
-      if (scene) {
-        var maxTravel = Math.max(180, window.innerHeight * 0.72);
-        var travel = Math.min(y * 0.18, maxTravel);
-        scene.style.transform = 'translate3d(0,' + travel.toFixed(1) + 'px,0)';
-      }
+      if (scene) scene.style.transform = 'none';
     }, { passive: true });
 
     function animate() {

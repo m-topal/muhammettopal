@@ -2907,3 +2907,29 @@ main {
   pointer-events: none !important;
   overflow: hidden !important;
 }
+
+/* v80: restore the intended sticky-nav geometry and keep the globe centered in the viewport while scrolling. */
+.sticky-nav {
+  position: sticky !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+  transform: translateY(50px) !important;
+  z-index: 1000 !important;
+}
+
+/* Keep the page-opening spacing tied to the visually lowered navigation. */
+main {
+  top: 50px !important;
+}
+
+/* The globe remains centered in the viewport instead of drifting down and disappearing. */
+.academic-world-scene {
+  position: fixed !important;
+  inset: 0 !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.academic-globe {
+  top: var(--academic-globe-center-y, 56vh) !important;
+}

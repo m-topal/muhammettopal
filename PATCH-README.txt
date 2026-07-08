@@ -1,12 +1,10 @@
-Patch v79
+Patch v80
 
-Apply this on top of v78.
+Apply this on top of v79.
 
 Changes included:
-- moves the bottom mountain drawing inside the footer
-- keeps it below the footer divider line
-- treats it as background art behind the footer links
-- prevents it from overlapping the final page text
-
-Files included:
-- assets/css/academic-globe-v12.css
+- restores the intended lowered navigation position while keeping it sticky
+- restores the existing spacing between the navigation and page headings
+- keeps the globe centered in the viewport throughout scrolling
+- removes the temporary downward globe drift that made it disappear lower on the page
+- keeps globe rotation and scroll-responsive spin direction/speed
