@@ -1748,3 +1748,45 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .324 !important;
   }
 }
+
+/* v35: tighten the title/subtitle group directly against the main nav, while keeping the mountains fixed. */
+/* Remove the parent header gap and the nav's extra top margin. */
+.site-top {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-wrap {
+  margin-top: 0 !important;
+}
+
+/* Keep the subtitle itself free of top and bottom margins. */
+.site-top .identity-sentence {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Keep the title close to the subtitle. */
+.site-top .name {
+  margin-bottom: 1px !important;
+}
+
+/* Move only the handwritten Topal closer to the top, without changing its size. */
+.site-top .home-header-wordmark {
+  transform: translateY(-35px) !important;
+}
+
+@media (max-width: 900px) {
+  .site-top {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .nav-wrap {
+    margin-top: 0 !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-30px) !important;
+  }
+}
