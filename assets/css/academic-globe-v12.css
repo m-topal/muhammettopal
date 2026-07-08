@@ -702,3 +702,105 @@ body[data-page="presentations"] .accordion-panel {
     line-height: 1.52 !important;
   }
 }
+
+
+/* v22 overrides: bring globe slightly up, use simpler top and bottom mountains, and dock school buildings only at footer. */
+.academic-globe {
+  top: 63.4% !important;
+}
+
+/* orbiting buildings stop; they are docked in the footer mountain zone instead */
+.school-satellite {
+  top: auto !important;
+}
+
+.footer-school-satellite {
+  position: absolute !important;
+  top: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+  width: 98px !important;
+  height: 68px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+}
+
+.footer-satellite-dock {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer-school-satellite img {
+  max-width: 84px !important;
+  max-height: 60px !important;
+  opacity: .34 !important;
+  filter: grayscale(1) contrast(1.02) !important;
+}
+
+.footer-school-satellite-1 { left: 18%; bottom: 16px; }
+.footer-school-satellite-2 { left: 49%; bottom: 19px; }
+.footer-school-satellite-3 { left: 80%; bottom: 15px; }
+
+.academic-footer-range {
+  width: min(1180px, 96%) !important;
+  height: 92px !important;
+  bottom: 2px !important;
+  opacity: .25 !important;
+}
+
+/* keep the top mountains airy and simple */
+.academic-top-map {
+  height: 300px !important;
+}
+
+/* publication and presentation explanation text meet in the middle */
+.accordion-meta,
+.pub-reference,
+.accordion-panel p {
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+  color: rgba(56, 67, 78, .70) !important;
+}
+
+#presentations .accordion-meta,
+.presentations-page .accordion-meta,
+body[data-page="presentations"] .accordion-meta {
+  color: rgba(56, 67, 78, .68) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe {
+    top: 67.4% !important;
+  }
+
+  .academic-footer-range {
+    height: 76px !important;
+    opacity: .23 !important;
+  }
+
+  .footer-school-satellite {
+    width: 72px !important;
+    height: 52px !important;
+  }
+
+  .footer-school-satellite img {
+    max-width: 62px !important;
+    max-height: 46px !important;
+    opacity: .30 !important;
+  }
+
+  .footer-school-satellite-1 { left: 14%; bottom: 14px; }
+  .footer-school-satellite-2 { left: 50%; bottom: 15px; }
+  .footer-school-satellite-3 { left: 86%; bottom: 13px; }
+
+  .accordion-meta,
+  .pub-reference,
+  .accordion-panel p {
+    font-size: 14px !important;
+    line-height: 1.52 !important;
+  }
+}

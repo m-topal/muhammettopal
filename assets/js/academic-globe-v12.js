@@ -20,19 +20,39 @@
       deco.innerHTML = `
         <svg viewBox="0 0 1600 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <g stroke="rgba(78,94,109,.28)" stroke-width="2">
-              <path d="M0 146 C88 146 118 138 164 138 C214 138 250 114 300 76 C336 48 366 36 396 36 C426 36 452 54 476 70 C502 88 530 96 560 96 C594 96 626 82 658 60 C690 38 718 26 748 26 C776 26 804 44 832 64 C860 84 894 94 930 94 C968 94 1000 74 1038 40 C1070 12 1096 2 1122 2 C1148 2 1174 22 1202 48 C1238 82 1272 98 1308 98 C1346 98 1378 82 1410 58 C1438 38 1466 28 1498 28 C1538 28 1576 44 1600 56"/>
-              <path d="M182 142v-28m0 0l-10 11h8l-12 13h9l-13 13m18-37l10 11h-8l12 13h-9l13 13"/>
-              <path d="M210 143v-22m0 0l-7 8h6l-9 10h7l-9 10m12-28l7 8h-6l9 10h-7l9 10"/>
-              <path d="M238 144v-18m0 0l-6 7h5l-8 8h6l-8 9m11-24l6 7h-5l8 8h-6l8 9"/>
-              <circle cx="1122" cy="24" r="18"/>
+            <g stroke="rgba(78,94,109,.26)" stroke-width="2">
+              <path d="M0 146 C88 146 120 140 166 140 C216 140 252 116 300 80 C336 54 366 40 398 40 C430 40 456 56 482 72 C508 88 538 96 572 96 C610 96 646 82 682 58 C720 34 752 18 784 18 C820 18 852 36 882 62 C914 88 946 100 984 100 C1026 100 1062 68 1100 28 C1134 -8 1160 -18 1186 -18 C1218 -18 1248 8 1280 42 C1318 82 1352 100 1392 100 C1432 100 1468 86 1502 66 C1534 48 1568 40 1600 40"/>
+              <path d="M148 146C414 120 788 122 1140 126C1320 128 1476 136 1600 144"/>
+              <path d="M222 142v-26m0 0l-10 11h8l-11 12h8l-11 12m16-35l10 11h-8l11 12h-8l11 12"/>
+              <path d="M250 143v-20m0 0l-8 8h6l-9 10h7l-9 10m12-28l8 8h-6l9 10h-7l9 10"/>
+              <path d="M278 144v-16m0 0l-6 7h5l-8 8h6l-8 9m11-24l6 7h-5l8 8h-6l8 9"/>
+              <circle cx="1188" cy="14" r="18"/>
             </g>
-            <g stroke="rgba(124,160,194,.12)" stroke-width="1.35">
+            <g stroke="rgba(124,160,194,.10)" stroke-width="1.3">
               <path d="M150 148C406 126 712 124 1020 128C1224 130 1418 136 1578 148"/>
             </g>
           </g>
         </svg>`
       footer.appendChild(deco);
+    });
+  }
+
+  function dockFooterSatellites() {
+    var footer = document.querySelector('.footer');
+    if (!footer) return;
+    var deco = footer.querySelector('.academic-footer-range');
+    if (!deco) return;
+    var dock = deco.querySelector('.footer-satellite-dock');
+    if (!dock) {
+      dock = document.createElement('div');
+      dock.className = 'footer-satellite-dock';
+      deco.appendChild(dock);
+    }
+    ['schoolSatellite1','schoolSatellite2','schoolSatellite3'].forEach(function(id, idx) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.add('footer-school-satellite', 'footer-school-satellite-' + (idx + 1));
+      dock.appendChild(el);
     });
   }
 
@@ -92,6 +112,7 @@
 
   updateSceneTop();
   injectFooterRange();
+  dockFooterSatellites();
   collapseAndTrimPanels();
   harmonizePresentationAccordions();
   window.addEventListener('scroll', updateSceneTop, { passive: true });
@@ -99,12 +120,14 @@
   window.addEventListener('load', function () {
     updateSceneTop();
     injectFooterRange();
+    dockFooterSatellites();
     collapseAndTrimPanels();
     harmonizePresentationAccordions();
   });
   document.addEventListener('DOMContentLoaded', function () {
     updateSceneTop();
     injectFooterRange();
+    dockFooterSatellites();
     collapseAndTrimPanels();
     harmonizePresentationAccordions();
   });
@@ -116,18 +139,16 @@
           <path d="M170 0V300M370 0V300M570 0V300M770 0V300M970 0V300M1170 0V300M1370 0V300"/>
           <path d="M0 84H1600M0 164H1600M0 244H1600"/>
         </g>
-
-        <g stroke="rgba(78,94,109,.23)" stroke-width="2.05">
-          <path d="M0 228 C92 228 126 220 172 220 C220 220 258 194 308 156 C344 128 374 116 404 116 C434 116 460 132 486 148 C512 164 538 170 568 170 C604 170 636 154 668 130 C700 106 730 94 760 94 C790 94 818 110 846 132 C876 156 908 168 944 168 C986 168 1020 136 1056 98 C1092 60 1120 44 1146 44 C1172 44 1198 64 1228 94 C1264 130 1298 152 1336 152 C1376 152 1410 132 1444 108 C1478 84 1512 70 1600 70"/>
-          <path d="M164 220 C230 220 286 214 340 206 C390 198 432 168 474 140 C506 154 540 164 574 172 C612 180 648 184 690 184 C736 184 780 176 824 166 C868 156 908 150 944 150 C982 150 1022 156 1064 164 C1108 172 1148 176 1186 176 C1230 176 1272 166 1312 152 C1354 138 1392 130 1428 130 C1472 130 1516 142 1600 164"/>
-          <path d="M396 180v-30m0 0l-11 12h8l-13 14h10l-14 14m20-40l11 12h-8l13 14h-10l14 14"/>
-          <path d="M428 183v-24m0 0l-8 9h6l-10 11h8l-10 11m14-31l8 9h-6l10 11h-8l10 11"/>
-          <path d="M460 186v-18m0 0l-7 7h5l-8 9h6l-9 10m13-26l7 7h-5l8 9h-6l9 10"/>
-          <circle cx="1146" cy="56" r="22"/>
+        <g stroke="rgba(78,94,109,.22)" stroke-width="2.05">
+          <path d="M0 228 C88 228 122 220 168 220 C218 220 256 194 304 158 C338 132 368 118 400 118 C432 118 458 134 484 152 C510 170 540 178 576 178 C612 178 648 164 684 138 C722 112 754 96 786 96 C820 96 848 112 876 138 C906 164 942 178 980 178 C1020 178 1058 146 1094 104 C1128 64 1158 44 1190 44 C1220 44 1248 66 1278 98 C1312 134 1346 158 1386 158 C1426 158 1462 140 1498 112 C1534 84 1568 70 1600 70"/>
+          <path d="M158 220 C230 220 288 214 344 206 C394 198 438 174 482 144 C512 154 544 164 580 170 C620 176 662 178 706 178 C752 178 798 172 844 164 C892 156 936 152 978 152 C1018 152 1060 156 1102 164 C1148 172 1190 176 1232 176 C1278 176 1320 168 1362 156 C1406 144 1446 136 1484 136 C1522 136 1562 144 1600 154"/>
+          <path d="M398 177v-26m0 0l-10 10h8l-11 12h8l-11 12m16-34l10 10h-8l11 12h-8l11 12"/>
+          <path d="M428 179v-20m0 0l-8 8h6l-9 10h7l-9 10m12-28l8 8h-6l9 10h-7l9 10"/>
+          <path d="M458 182v-16m0 0l-6 7h5l-8 8h6l-8 9m11-24l6 7h-5l8 8h-6l8 9"/>
+          <circle cx="1190" cy="56" r="22"/>
         </g>
-
-        <g stroke="rgba(124,160,194,.15)" stroke-width="1.45">
-          <path d="M280 232C510 206 820 204 1100 214C1254 220 1408 226 1500 228"/>
+        <g stroke="rgba(124,160,194,.14)" stroke-width="1.45">
+          <path d="M280 232C520 206 848 204 1140 214C1310 220 1452 224 1550 228"/>
         </g>
       </g>
     </svg>`
@@ -148,11 +169,6 @@
       script.onerror = reject;
       document.head.appendChild(script);
     });
-  }
-
-  function positionSatellite(el, angle, radius) {
-    if (!el) return;
-    el.style.transform = 'translate(-50%, -50%) rotate(' + angle + 'deg) translateX(' + radius + 'px) rotate(' + (-angle) + 'deg)';
   }
 
   function initGlobe() {
@@ -247,10 +263,6 @@
     var lastY = window.scrollY || 0;
     var currentSpeed = 0.55;
     var targetSpeed = 0.55;
-    var orbitAngle = 0;
-    var s1 = document.getElementById('schoolSatellite1');
-    var s2 = document.getElementById('schoolSatellite2');
-    var s3 = document.getElementById('schoolSatellite3');
 
     window.addEventListener('scroll', function () {
       var y = window.scrollY || 0;
@@ -264,11 +276,6 @@
       currentSpeed += (targetSpeed - currentSpeed) * 0.14;
       targetSpeed += ((targetSpeed >= 0 ? 0.55 : -0.55) - targetSpeed) * 0.05;
       controls.autoRotateSpeed = currentSpeed;
-      orbitAngle += currentSpeed * 0.58;
-      var radius = globeHost.clientWidth * 0.56;
-      positionSatellite(s1, orbitAngle - 40, radius);
-      positionSatellite(s2, orbitAngle + 92, radius * 0.95);
-      positionSatellite(s3, orbitAngle + 214, radius * 1.01);
       requestAnimationFrame(animate);
     }
     animate();

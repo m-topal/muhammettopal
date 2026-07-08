@@ -1,17 +1,15 @@
-ACADEMIC GLOBE PATCH v21
+ACADEMIC GLOBE PATCH v22
 
-Apply this on top of the current site / v20.
+Apply this on top of the current site / v21.
 
-Requested fixes in this patch:
-- globe starts lower, about 1 cm lower than the previous version
-- mountain header is simplified again, with fewer lines and a cleaner continuous composition
-- the same simplified mountain line is added at the very bottom behind the final link row
-- presentation description paragraphs are removed from both /presentations/ and the presentations section on /research/
-- publication and presentation dropdown text is harmonized in size / tone, with presentations slightly muted
-- publication dropdown explanation text is brought closer to the presentation explanation style
+Changes in this patch:
+- buildings no longer orbit the globe
+- the three school drawings are docked only on the footer mountain range
+- the top mountain range is simplified again, with fewer lines and the earlier softer tone
+- the bottom mountain range uses the same simpler style
+- the globe is moved slightly upward from v21 so the bottom is no longer cut off
+- publication and presentation explanation text is harmonized to the same middle size and tone
 
 Files included:
 - assets/css/academic-globe-v12.css
 - assets/js/academic-globe-v12.js
-- presentations.md
-- research.md
