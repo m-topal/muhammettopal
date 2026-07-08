@@ -527,3 +527,30 @@ body {
     opacity: .22;
   }
 }
+
+
+/* v18 final overrides: restore bordered globe, move it slightly lower, restore downward language menu. */
+.academic-globe {
+  top: 59% !important;
+}
+
+.school-satellite {
+  top: 59% !important;
+}
+
+.language-menu-top .language-panel {
+  top: 34px !important;
+  bottom: auto !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe,
+  .school-satellite {
+    top: 61% !important;
+  }
+
+  .language-menu-top .language-panel {
+    top: 34px !important;
+    bottom: auto !important;
+  }
+}

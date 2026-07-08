@@ -181,27 +181,27 @@
       .enablePointerInteraction(false);
 
     var material = globe.globeMaterial();
-    material.color.set('#f6f4ef');
+    material.color.set('#dbe4e8');
     material.transparent = true;
-    material.opacity = 0.92;
+    material.opacity = 0.27;
     material.wireframe = false;
-    material.roughness = 0.92;
+    material.roughness = 0.88;
     material.metalness = 0;
 
-    fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson')
+    fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
       .then(function (res) { return res.json(); })
-      .then(function (land) {
+      .then(function (countries) {
         globe
-          .polygonsData(land.features)
-          .polygonAltitude(0.004)
-          .polygonCapColor(function () { return 'rgba(237,241,242,.22)'; })
-          .polygonSideColor(function () { return 'rgba(237,241,242,.03)'; })
-          .polygonStrokeColor(function () { return 'rgba(101,116,126,.34)'; })
+          .polygonsData(countries.features)
+          .polygonAltitude(0.006)
+          .polygonCapColor(function () { return 'rgba(218,226,230,.38)'; })
+          .polygonSideColor(function () { return 'rgba(179,196,204,.12)'; })
+          .polygonStrokeColor(function () { return 'rgba(89,111,123,.62)'; })
           .polygonsTransitionDuration(0);
       })
       .catch(function () {
         material.wireframe = true;
-        material.opacity = 0.16;
+        material.opacity = 0.20;
       });
 
     globe.pointOfView({ lat: 39.0, lng: 35.0, altitude: 1.72 }, 0);
