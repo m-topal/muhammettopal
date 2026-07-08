@@ -1,10 +1,10 @@
-Muhammet Topal academic globe patch v43
+Muhammet Topal academic globe patch v44
 
-Apply this on top of v42.
+Apply this on top of v43.
 
 Changes:
-- subtitle line-height: 1.25
-- subtitle bottom margin before the main nav: 8px
+- subtitle line-height: 1.20
+- subtitle-to-nav spacing: 10px
 
-Files included:
+File included:
 - assets/css/academic-globe-v12.css
