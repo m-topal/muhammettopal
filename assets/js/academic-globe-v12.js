@@ -275,3 +275,56 @@
       globeHost.style.display = 'none';
     });
 })();
+
+/* v32: keep the active Research / Teaching tab centered in the one-line mobile slider. */
+(function () {
+  function centerActiveLink(nav, behavior) {
+    if (!nav || window.innerWidth > 900) return;
+    var active = nav.querySelector('a.active, a[aria-current="true"]');
+    if (!active) return;
+    var targetLeft = active.offsetLeft - ((nav.clientWidth - active.offsetWidth) / 2);
+    nav.scrollTo({ left: Math.max(0, targetLeft), behavior: behavior || 'smooth' });
+  }
+
+  function setupSlidingSectionNav(nav) {
+    if (!nav || nav.dataset.mobileSliderReady === 'true') return;
+    nav.dataset.mobileSliderReady = 'true';
+
+    nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        window.setTimeout(function () { centerActiveLink(nav, 'smooth'); }, 80);
+      });
+    });
+
+    var observer = new MutationObserver(function (mutations) {
+      var changed = mutations.some(function (mutation) {
+        return mutation.type === 'attributes' &&
+          (mutation.attributeName === 'class' || mutation.attributeName === 'aria-current');
+      });
+      if (changed) centerActiveLink(nav, 'smooth');
+    });
+
+    nav.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      observer.observe(link, { attributes: true, attributeFilter: ['class', 'aria-current'] });
+    });
+
+    centerActiveLink(nav, 'auto');
+  }
+
+  function initMobileSlidingNavs() {
+    document.querySelectorAll('.teaching-scroll-nav, .research-scroll-nav').forEach(setupSlidingSectionNav);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileSlidingNavs);
+  } else {
+    initMobileSlidingNavs();
+  }
+
+  window.addEventListener('load', initMobileSlidingNavs);
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('.teaching-scroll-nav, .research-scroll-nav').forEach(function (nav) {
+      centerActiveLink(nav, 'auto');
+    });
+  });
+})();

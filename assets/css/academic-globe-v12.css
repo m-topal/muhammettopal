@@ -1587,3 +1587,90 @@ body[data-page="presentations"] .accordion-meta {
     margin-bottom: 4px !important;
   }
 }
+
+/* v32: requested title placement, opacity tuning, and single-line sliding mobile section nav. */
+
+/* Keep the handwritten wordmark exactly as it is in v30. Move only the main title and subtitle lower,
+   so the subtitle sits just above the main nav. */
+.site-top .name {
+  transform: translateY(10px) !important;
+  margin-bottom: 3px !important;
+}
+
+.site-top .identity-sentence {
+  transform: translateY(10px) !important;
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Globe 5 percentage points less transparent. */
+.academic-globe {
+  opacity: calc(.57 * var(--academic-globe-footer-opacity, 1)) !important;
+}
+
+/* Upper and footer mountains 10% more transparent than v30. */
+.academic-mountain-art-top img {
+  opacity: .279 !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .396 !important;
+}
+
+@media (max-width: 900px) {
+  .site-top .name,
+  .site-top .identity-sentence {
+    transform: translateY(8px) !important;
+  }
+
+  /* Research and Teaching secondary navs: one horizontal sliding line. */
+  .teaching-scroll-nav,
+  .research-continuous-page .research-scroll-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    padding: 12px max(34vw, 112px) !important;
+    scroll-behavior: smooth !important;
+    scroll-snap-type: x proximity !important;
+    overscroll-behavior-inline: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .teaching-scroll-nav::-webkit-scrollbar,
+  .research-continuous-page .research-scroll-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .teaching-scroll-nav a,
+  .research-continuous-page .research-scroll-nav a {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    scroll-snap-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    padding: 10px 14px !important;
+  }
+
+  .teaching-scroll-nav a.active,
+  .teaching-scroll-nav a[aria-current="true"],
+  .research-continuous-page .research-scroll-nav a.active,
+  .research-continuous-page .research-scroll-nav a[aria-current="true"] {
+    transform: none !important;
+  }
+
+  .academic-mountain-art-top img {
+    opacity: .261 !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .36 !important;
+  }
+}
