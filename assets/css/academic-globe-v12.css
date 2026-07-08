@@ -2351,3 +2351,22 @@ main article.page > .label + h1 {
     height: 50px !important;
   }
 }
+
+/* v52: requested mountain band heights. */
+.academic-top-map {
+  height: 225px !important;
+}
+
+.academic-footer-range {
+  height: 45px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 180px !important;
+  }
+
+  .academic-footer-range {
+    height: 60px !important;
+  }
+}
