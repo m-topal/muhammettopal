@@ -3,38 +3,99 @@
   var mapHost = document.getElementById('academicTopMap');
   if (!globeHost || !mapHost) return;
 
-
   function updateSceneTop() {
     var scene = document.querySelector('.academic-world-scene');
     var nav = document.querySelector('.sticky-nav, .nav-wrap');
     if (!scene || !nav) return;
-    var bottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom));
+    var bottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + 16));
     scene.style.setProperty('--academic-scene-top', bottom + 'px');
   }
 
+  function injectFooterRange() {
+    document.querySelectorAll('.footer').forEach(function (footer) {
+      if (footer.querySelector('.academic-footer-range')) return;
+      var deco = document.createElement('div');
+      deco.className = 'academic-footer-range';
+      deco.setAttribute('aria-hidden', 'true');
+      deco.innerHTML = `
+        <svg viewBox="0 0 1600 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="rgba(78,94,109,.48)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M0 138 C58 138, 72 86, 112 86 C151 86, 169 125, 205 125 C248 125, 266 64, 322 64 C378 64, 391 96, 429 96 C467 96, 487 34, 560 34 C631 34, 650 74, 689 74 C738 74, 758 25, 826 25 C891 25, 911 61, 964 61 C1010 61, 1028 40, 1088 40 C1161 40, 1180 92, 1239 92 C1285 92, 1310 48, 1372 48 C1431 48, 1454 120, 1510 120 C1542 120, 1563 93, 1600 93"/>
+            <path d="M0 148 C46 148, 68 118, 116 118 C152 118, 179 142, 220 142 C282 142, 301 82, 362 82 C432 82, 449 125, 502 125 C557 125, 578 72, 648 72 C710 72, 729 101, 778 101 C827 101, 848 83, 905 83 C960 83, 980 120, 1040 120 C1103 120, 1128 88, 1186 88 C1248 88, 1266 131, 1320 131 C1393 131, 1411 78, 1491 78 C1543 78, 1569 108, 1600 108"/>
+          </g>
+        </svg>`;
+      footer.appendChild(deco);
+    });
+  }
+
+  function collapseAndTrimPanels() {
+    // Research page sections
+    ['#presentations', '#publications'].forEach(function (sectionSelector) {
+      var section = document.querySelector(sectionSelector);
+      if (!section) return;
+      section.querySelectorAll('.accordion-item.open').forEach(function (item) {
+        item.classList.remove('open');
+      });
+    });
+
+    // Standalone pages
+    if (location.pathname.indexOf('/presentations/') !== -1 || location.pathname.match(/\/presentations\/?$/)) {
+      document.querySelectorAll('.accordion-item.open').forEach(function (item) {
+        item.classList.remove('open');
+      });
+    }
+    if (location.pathname.indexOf('/publications/') !== -1 || location.pathname.match(/\/publications\/?$/)) {
+      document.querySelectorAll('.accordion-item.open').forEach(function (item) {
+        item.classList.remove('open');
+      });
+    }
+
+    // Presentations: keep only the meta line, hide explanatory paragraphs.
+    var presentationRoots = [];
+    var researchPresentations = document.querySelector('#presentations .accordion');
+    if (researchPresentations) presentationRoots.push(researchPresentations);
+    if (location.pathname.indexOf('/presentations/') !== -1 || location.pathname.match(/\/presentations\/?$/)) {
+      document.querySelectorAll('.accordion').forEach(function (acc) { presentationRoots.push(acc); });
+    }
+
+    presentationRoots.forEach(function (root) {
+      root.querySelectorAll('.accordion-panel').forEach(function (panel) {
+        panel.querySelectorAll('p').forEach(function (p) {
+          p.style.display = 'none';
+        });
+      });
+    });
+  }
+
   updateSceneTop();
+  injectFooterRange();
+  collapseAndTrimPanels();
   window.addEventListener('scroll', updateSceneTop, { passive: true });
   window.addEventListener('resize', updateSceneTop);
-  window.addEventListener('load', updateSceneTop);
+  window.addEventListener('load', function () {
+    updateSceneTop();
+    injectFooterRange();
+    collapseAndTrimPanels();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    updateSceneTop();
+    injectFooterRange();
+    collapseAndTrimPanels();
+  });
 
   mapHost.innerHTML = `
-    <svg viewBox="0 0 1600 430" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true">
+    <svg viewBox="0 0 1600 260" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <g stroke="rgba(78,94,109,.20)" stroke-width="1.35">
-          <path d="M62 135l79-46 91 9 78 38 61 55 46-4 55 31 24 32-14 31-52 16-43 42-77 3-68 38-67-13-91-19-36-60 15-35-54-7-41-47 14-35 28-23-7-31 22-34z"/>
-          <path d="M330 280l56 41 25 61-11 47 26 49 46 84-10 46-38 31-28-20-17-45-36-56-31-112-16-71-8-41 16-14z"/>
-          <path d="M651 98l58-15 67 8 33 24 33-9 62 7 41 24 58-3 56 17 45 30 61 3 77 29 70 48 40 51-11 25-52 14-37 25 16 36-23 11-49-13-47 14-35-8-36-37-51-30-71 2-45-17-42 20-75-5-47-34-33-4-30-33 13-27-7-26-31-3-49 18-50-9-6-35-40-29 14-28 31-10z"/>
-          <path d="M839 282l70 8 52 42 11 54-24 72-50 56-69 5-50-34-25-52 5-61 31-52 49-38z"/>
-          <path d="M1260 300l54 8 67 28 40 40 14 45-18 38-47 17-51-7-31-35-36-24-22-43 10-32 20-20z"/>
-          <path d="M1420 350l74 8 53 28 31 34-7 28-32 17-52-7-62-23-20-31 15-24z"/>
+        <g stroke="rgba(124,142,156,.10)" stroke-width="1">
+          <path d="M170 0V260M370 0V260M570 0V260M770 0V260M970 0V260M1170 0V260M1370 0V260"/>
+          <path d="M0 78H1600M0 156H1600M0 234H1600"/>
         </g>
-        <g stroke="rgba(124,142,156,.12)" stroke-width=".85">
-          <path d="M0 130H1600M0 220H1600M0 310H1600"/>
-          <path d="M170 0V430M370 0V430M570 0V430M770 0V430M970 0V430M1170 0V430M1370 0V430"/>
+        <g stroke="rgba(78,94,109,.22)" stroke-width="2.1">
+          <path d="M0 187 C62 187, 84 126, 132 126 C184 126, 201 167, 247 167 C296 167, 319 104, 391 104 C461 104, 477 139, 529 139 C585 139, 603 69, 691 69 C776 69, 794 114, 846 114 C900 114, 918 58, 985 58 C1052 58, 1067 99, 1123 99 C1179 99, 1204 74, 1262 74 C1342 74, 1360 146, 1434 146 C1490 146, 1517 112, 1600 112"/>
+          <path d="M0 205 C44 205, 72 176, 121 176 C171 176, 198 193, 247 193 C310 193, 332 144, 406 144 C464 144, 486 179, 543 179 C603 179, 623 121, 700 121 C777 121, 795 150, 851 150 C905 150, 924 131, 979 131 C1038 131, 1061 167, 1123 167 C1188 167, 1216 143, 1279 143 C1338 143, 1365 185, 1431 185 C1495 185, 1524 159, 1600 159"/>
         </g>
-        <g stroke="rgba(124,160,194,.18)" stroke-width="1.7">
-          <path d="M325 280C500 184 646 184 804 212C900 228 990 232 1078 245"/>
-          <path d="M804 212C866 178 928 151 1000 126"/>
+        <g stroke="rgba(124,160,194,.18)" stroke-width="1.6">
+          <path d="M292 196C431 150 621 136 792 146C958 156 1107 171 1250 185"/>
         </g>
       </g>
     </svg>`;
@@ -58,6 +119,7 @@
   }
 
   function positionSatellite(el, angle, radius) {
+    if (!el) return;
     el.style.transform = 'translate(-50%, -50%) rotate(' + angle + 'deg) translateX(' + radius + 'px) rotate(' + (-angle) + 'deg)';
   }
 
@@ -101,7 +163,7 @@
       .backgroundColor('rgba(0,0,0,0)')
       .showAtmosphere(true)
       .atmosphereColor('#a9c0cd')
-      .atmosphereAltitude(0.09)
+      .atmosphereAltitude(0.08)
       .pointsData([])
       .ringsData([])
       .arcsData(arcs)
@@ -109,50 +171,50 @@
       .arcStartLng('startLng')
       .arcEndLat('endLat')
       .arcEndLng('endLng')
-      .arcColor(function () { return 'rgba(96,142,174,.50)'; })
+      .arcColor(function () { return 'rgba(96,142,174,.42)'; })
       .arcAltitude(0.19)
-      .arcStroke(0.28)
+      .arcStroke(0.24)
       .arcDashLength(0.48)
-      .arcDashGap(0.12)
+      .arcDashGap(0.14)
       .arcDashInitialGap(function () { return Math.random(); })
-      .arcDashAnimateTime(2800)
+      .arcDashAnimateTime(2600)
       .enablePointerInteraction(false);
 
     var material = globe.globeMaterial();
-    material.color.set('#dbe4e8');
+    material.color.set('#f6f4ef');
     material.transparent = true;
-    material.opacity = 0.27;
+    material.opacity = 0.92;
     material.wireframe = false;
-    material.roughness = 0.88;
+    material.roughness = 0.92;
     material.metalness = 0;
 
-    fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
+    fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson')
       .then(function (res) { return res.json(); })
-      .then(function (countries) {
+      .then(function (land) {
         globe
-          .polygonsData(countries.features)
-          .polygonAltitude(0.006)
-          .polygonCapColor(function () { return 'rgba(218,226,230,.38)'; })
-          .polygonSideColor(function () { return 'rgba(179,196,204,.12)'; })
-          .polygonStrokeColor(function () { return 'rgba(89,111,123,.62)'; });
+          .polygonsData(land.features)
+          .polygonAltitude(0.004)
+          .polygonCapColor(function () { return 'rgba(237,241,242,.22)'; })
+          .polygonSideColor(function () { return 'rgba(237,241,242,.03)'; })
+          .polygonStrokeColor(function () { return 'rgba(101,116,126,.34)'; })
+          .polygonsTransitionDuration(0);
       })
       .catch(function () {
         material.wireframe = true;
-        material.opacity = 0.20;
+        material.opacity = 0.16;
       });
 
-    /* Turkey centered on initial load. */
     globe.pointOfView({ lat: 39.0, lng: 35.0, altitude: 1.72 }, 0);
 
     var controls = globe.controls();
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.42;
+    controls.autoRotateSpeed = 0.55;
     controls.enableZoom = false;
     controls.enablePan = false;
 
     var lastY = window.scrollY || 0;
-    var currentSpeed = 0.42;
-    var targetSpeed = 0.42;
+    var currentSpeed = 0.55;
+    var targetSpeed = 0.55;
     var orbitAngle = 0;
     var s1 = document.getElementById('schoolSatellite1');
     var s2 = document.getElementById('schoolSatellite2');
@@ -163,24 +225,25 @@
       var dy = y - lastY;
       lastY = y;
       var dir = dy >= 0 ? 1 : -1;
-      targetSpeed = dir * (0.42 + Math.min(Math.abs(dy) * 0.016, 2.4));
+      targetSpeed = dir * (0.55 + Math.min(Math.abs(dy) * 0.018, 2.7));
     }, { passive: true });
 
     function animate() {
       currentSpeed += (targetSpeed - currentSpeed) * 0.14;
-      targetSpeed += ((targetSpeed >= 0 ? 0.42 : -0.42) - targetSpeed) * 0.045;
+      targetSpeed += ((targetSpeed >= 0 ? 0.55 : -0.55) - targetSpeed) * 0.05;
       controls.autoRotateSpeed = currentSpeed;
-      orbitAngle += currentSpeed * 0.52;
-      var radius = globeHost.clientWidth * 0.54;
-      positionSatellite(s1, orbitAngle - 35, radius);
-      positionSatellite(s2, orbitAngle + 92, radius * 0.94);
-      positionSatellite(s3, orbitAngle + 212, radius * 1.02);
+      orbitAngle += currentSpeed * 0.58;
+      var radius = globeHost.clientWidth * 0.56;
+      positionSatellite(s1, orbitAngle - 40, radius);
+      positionSatellite(s2, orbitAngle + 92, radius * 0.95);
+      positionSatellite(s3, orbitAngle + 214, radius * 1.01);
       requestAnimationFrame(animate);
     }
     animate();
 
     function resize() {
       globe.width(globeHost.clientWidth).height(globeHost.clientHeight);
+      updateSceneTop();
     }
     window.addEventListener('resize', resize);
   }
