@@ -1,8 +1,7 @@
-Patch v67
+Patch v68
 
-Apply this on top of v66.
+Apply this on top of v67.
 
-Changes included:
-- reduces the desktop bottom mountain vertical scale from 1.05 to 1.00
-- removes the small gray page-opening labels that duplicate the main page title
-- keeps the smaller labels above subsection headers unchanged
+Change included:
+- restores the large About Me title and View CV PDF button to their former vertical position
+- keeps the duplicate gray About Me label hidden
