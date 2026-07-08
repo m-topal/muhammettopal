@@ -1,6 +1,8 @@
-Patch v66
+Patch v67
 
-Apply this on top of v65.
+Apply this on top of v66.
 
 Changes included:
-- moves the top mountain band 20px further upward from v65
+- reduces the desktop bottom mountain vertical scale from 1.05 to 1.00
+- removes the small gray page-opening labels that duplicate the main page title
+- keeps the smaller labels above subsection headers unchanged

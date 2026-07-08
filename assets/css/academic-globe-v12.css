@@ -2726,3 +2726,32 @@ main .label,
 .academic-top-map {
   transform: translateY(-50px) !important;
 }
+
+/* v67: remove only the top page labels that duplicate the page title, while keeping subsection labels, and reduce desktop bottom mountain tallness by another 10 percent. */
+@media (min-width: 901px) {
+  .academic-mountain-art-footer img {
+    transform: scaleY(1.00) !important;
+    transform-origin: center bottom !important;
+  }
+}
+
+/* Hide only the page-opening gray labels that sit directly above the main page title. */
+main article.page > .label:first-child,
+main article.page > .page-label:first-child,
+main article.page.wide > .label:first-child,
+main article.page.wide > .page-label:first-child,
+main article.extracurricular-page > .label:first-child,
+main article.extracurricular-page > .page-label:first-child,
+.about-page > .label:first-child,
+.service-page > .label:first-child,
+.diversions-page > .label:first-child,
+.contact-page > .label:first-child,
+.portfolio-page > .label:first-child,
+.publications-page > .label:first-child,
+.presentations-page > .label:first-child,
+.research-continuous-page > .label:first-child,
+.research-continuous-page > .page-label:first-child,
+.teaching-continuous-page > .label:first-child,
+.teaching-continuous-page > .page-label:first-child {
+  display: none !important;
+}
