@@ -1,10 +1,10 @@
-Muhammet Topal academic globe patch v46
+Muhammet Topal academic globe patch v47
 
-Apply this on top of v45.
+Apply this on top of v46.
 
 Changes:
-- main page headers: maximum 32px on desktop, 24px on mobile
-- subsection headers: maximum 24px on desktop, 16px on mobile
+- Muhammet Topal title: up to 48px desktop, up to 40px mobile
+- Main page headings across About Me, Contact, Service, Diversions, Portfolio, Publications, Presentations, Blog, CV, Search, Research, and Teaching: up to 32px desktop, 24px mobile
 
-File included:
+Files included:
 - assets/css/academic-globe-v12.css

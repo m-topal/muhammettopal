@@ -2196,3 +2196,56 @@ main > .container > h1:first-child,
     font-size: 16px !important;
   }
 }
+
+
+/* v47: reduce the main site title and apply page-title sizing consistently across all pages. */
+.site-top .name {
+  font-size: clamp(36px, 4.8vw, 48px) !important;
+}
+
+/* Main page headings on all standard pages, not only Research and Teaching. */
+main .page > h1:first-child,
+main .page h1:first-child,
+main > .container > h1:first-child,
+main h1.page-title,
+.page-title,
+.about-page h1,
+.contact-page h1,
+.service-page h1,
+.diversions-page h1,
+.portfolio-page h1,
+.publications-page h1,
+.presentations-page h1,
+.blog-page h1,
+.cv-page h1,
+.search-page h1,
+.research-continuous-page > h1,
+.teaching-continuous-page > h1 {
+  font-size: clamp(24px, 3vw, 32px) !important;
+}
+
+@media (max-width: 900px) {
+  .site-top .name {
+    font-size: clamp(32px, 9.6vw, 40px) !important;
+  }
+
+  main .page > h1:first-child,
+  main .page h1:first-child,
+  main > .container > h1:first-child,
+  main h1.page-title,
+  .page-title,
+  .about-page h1,
+  .contact-page h1,
+  .service-page h1,
+  .diversions-page h1,
+  .portfolio-page h1,
+  .publications-page h1,
+  .presentations-page h1,
+  .blog-page h1,
+  .cv-page h1,
+  .search-page h1,
+  .research-continuous-page > h1,
+  .teaching-continuous-page > h1 {
+    font-size: 24px !important;
+  }
+}
