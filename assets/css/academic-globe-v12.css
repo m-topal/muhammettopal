@@ -616,3 +616,47 @@ body[data-page="presentations"] .accordion-item {
     line-height: 1.3 !important;
   }
 }
+
+/* v20 overrides: simpler mountain line art, lower globe, and harmonized presentation metadata. */
+.academic-globe {
+  top: 61% !important;
+}
+
+.school-satellite {
+  top: 61% !important;
+}
+
+.academic-footer-range {
+  width: min(1180px, 96%) !important;
+  height: 88px !important;
+  bottom: 4px !important;
+  opacity: .22 !important;
+}
+
+#presentations .accordion-meta,
+.presentations-page .accordion-meta,
+body[data-page="presentations"] .accordion-meta {
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: rgba(56, 67, 78, .74) !important;
+}
+
+#presentations .accordion-panel,
+.presentations-page .accordion-panel,
+body[data-page="presentations"] .accordion-panel {
+  padding-top: 6px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe,
+  .school-satellite {
+    top: 67% !important;
+  }
+
+  #presentations .accordion-meta,
+  .presentations-page .accordion-meta,
+  body[data-page="presentations"] .accordion-meta {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
