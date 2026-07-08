@@ -17,22 +17,7 @@
       var deco = document.createElement('div');
       deco.className = 'academic-footer-range';
       deco.setAttribute('aria-hidden', 'true');
-      deco.innerHTML = `
-        <svg viewBox="0 0 1600 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <g stroke="rgba(78,94,109,.26)" stroke-width="2">
-              <path d="M0 146 C88 146 120 140 166 140 C216 140 252 116 300 80 C336 54 366 40 398 40 C430 40 456 56 482 72 C508 88 538 96 572 96 C610 96 646 82 682 58 C720 34 752 18 784 18 C820 18 852 36 882 62 C914 88 946 100 984 100 C1026 100 1062 68 1100 28 C1134 -8 1160 -18 1186 -18 C1218 -18 1248 8 1280 42 C1318 82 1352 100 1392 100 C1432 100 1468 86 1502 66 C1534 48 1568 40 1600 40"/>
-              <path d="M148 146C414 120 788 122 1140 126C1320 128 1476 136 1600 144"/>
-              <path d="M222 142v-26m0 0l-10 11h8l-11 12h8l-11 12m16-35l10 11h-8l11 12h-8l11 12"/>
-              <path d="M250 143v-20m0 0l-8 8h6l-9 10h7l-9 10m12-28l8 8h-6l9 10h-7l9 10"/>
-              <path d="M278 144v-16m0 0l-6 7h5l-8 8h6l-8 9m11-24l6 7h-5l8 8h-6l8 9"/>
-              <circle cx="1188" cy="14" r="18"/>
-            </g>
-            <g stroke="rgba(124,160,194,.10)" stroke-width="1.3">
-              <path d="M150 148C406 126 712 124 1020 128C1224 130 1418 136 1578 148"/>
-            </g>
-          </g>
-        </svg>`
+      deco.innerHTML = '<div class="academic-mountain-art academic-mountain-art-footer"><img src="/assets/img/academic-mountain-range-continuous.png" alt=""></div>'
       footer.appendChild(deco);
     });
   }
@@ -132,26 +117,7 @@
     harmonizePresentationAccordions();
   });
 
-  mapHost.innerHTML = `
-    <svg viewBox="0 0 1600 300" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <g stroke="rgba(124,142,156,.10)" stroke-width="1">
-          <path d="M170 0V300M370 0V300M570 0V300M770 0V300M970 0V300M1170 0V300M1370 0V300"/>
-          <path d="M0 84H1600M0 164H1600M0 244H1600"/>
-        </g>
-        <g stroke="rgba(78,94,109,.22)" stroke-width="2.05">
-          <path d="M0 228 C88 228 122 220 168 220 C218 220 256 194 304 158 C338 132 368 118 400 118 C432 118 458 134 484 152 C510 170 540 178 576 178 C612 178 648 164 684 138 C722 112 754 96 786 96 C820 96 848 112 876 138 C906 164 942 178 980 178 C1020 178 1058 146 1094 104 C1128 64 1158 44 1190 44 C1220 44 1248 66 1278 98 C1312 134 1346 158 1386 158 C1426 158 1462 140 1498 112 C1534 84 1568 70 1600 70"/>
-          <path d="M158 220 C230 220 288 214 344 206 C394 198 438 174 482 144 C512 154 544 164 580 170 C620 176 662 178 706 178 C752 178 798 172 844 164 C892 156 936 152 978 152 C1018 152 1060 156 1102 164 C1148 172 1190 176 1232 176 C1278 176 1320 168 1362 156 C1406 144 1446 136 1484 136 C1522 136 1562 144 1600 154"/>
-          <path d="M398 177v-26m0 0l-10 10h8l-11 12h8l-11 12m16-34l10 10h-8l11 12h-8l11 12"/>
-          <path d="M428 179v-20m0 0l-8 8h6l-9 10h7l-9 10m12-28l8 8h-6l9 10h-7l9 10"/>
-          <path d="M458 182v-16m0 0l-6 7h5l-8 8h6l-8 9m11-24l6 7h-5l8 8h-6l8 9"/>
-          <circle cx="1190" cy="56" r="22"/>
-        </g>
-        <g stroke="rgba(124,160,194,.14)" stroke-width="1.45">
-          <path d="M280 232C520 206 848 204 1140 214C1310 220 1452 224 1550 228"/>
-        </g>
-      </g>
-    </svg>`
+  mapHost.innerHTML = '<div class="academic-mountain-art academic-mountain-art-top"><img src="/assets/img/academic-mountain-range-continuous.png" alt=""></div>'
 
   function loadScript(src) {
     return new Promise(function (resolve, reject) {

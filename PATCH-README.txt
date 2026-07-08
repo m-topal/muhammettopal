@@ -1,15 +1,14 @@
-ACADEMIC GLOBE PATCH v22
+ACADEMIC GLOBE PATCH v23
 
-Apply this on top of the current site / v21.
+Apply this on top of the current site / v22.
 
-Changes in this patch:
-- buildings no longer orbit the globe
-- the three school drawings are docked only on the footer mountain range
-- the top mountain range is simplified again, with fewer lines and the earlier softer tone
-- the bottom mountain range uses the same simpler style
-- the globe is moved slightly upward from v21 so the bottom is no longer cut off
-- publication and presentation explanation text is harmonized to the same middle size and tone
+What this patch changes:
+- replaces both the top decorative mountain band and the footer mountain band with the exact continuous mountain image reference
+- keeps the mountain line running from the left side of the screen to the right side
+- preserves the lighter, soft background tone through CSS opacity and grayscale filtering
+- keeps school drawings only in the footer zone
 
 Files included:
 - assets/css/academic-globe-v12.css
 - assets/js/academic-globe-v12.js
+- assets/img/academic-mountain-range-continuous.png
