@@ -1924,3 +1924,64 @@ body,
     line-height: 1.5 !important;
   }
 }
+
+/* v37: label scale, transparency balance, and subtitle spacing. */
+.label,
+.page-label,
+.section-label,
+.research-continuous-page .label,
+.teaching-continuous-page .label,
+.research-scroll-section .label,
+.teaching-scroll-section .label {
+  font-size: 11px !important;
+  letter-spacing: .14em !important;
+  line-height: 1.2 !important;
+}
+
+.site-top .identity-sentence {
+  margin-bottom: 5px !important;
+}
+
+.nav-wrap,
+.sticky-nav,
+.sticky-nav:hover,
+.sticky-nav:focus-within,
+.sticky-nav.is-scrolling,
+.sticky-nav.is-sticky-active {
+  background: rgba(251, 250, 247, .50) !important;
+}
+
+.research-continuous-page .research-scroll-nav,
+.research-continuous-page .research-scroll-nav:hover,
+.research-continuous-page .research-scroll-nav:focus-within,
+.research-continuous-page .research-scroll-nav.is-scrolling,
+.research-continuous-page .research-scroll-nav.is-sticky-active,
+.teaching-scroll-nav,
+.teaching-scroll-nav:hover,
+.teaching-scroll-nav:focus-within,
+.teaching-scroll-nav.is-scrolling,
+.teaching-scroll-nav.is-sticky-active {
+  background: rgba(251, 250, 247, .25) !important;
+}
+
+.academic-globe {
+  opacity: calc(.60 * var(--academic-globe-footer-opacity, 1)) !important;
+}
+
+.academic-mountain-art-top img {
+  opacity: .20 !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .25 !important;
+}
+
+@media (max-width: 900px) {
+  .academic-mountain-art-top img {
+    opacity: .25 !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .35 !important;
+  }
+}
