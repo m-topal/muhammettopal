@@ -3145,3 +3145,14 @@ html {
   top: 37px !important;
   line-height: 1.0 !important;
 }
+
+/* v91: reduce only the header subtitle font size. */
+.site-top .identity-sentence {
+  font-size: 12px !important;
+}
+
+@media (max-width: 900px) {
+  .site-top .identity-sentence {
+    font-size: 10px !important;
+  }
+}

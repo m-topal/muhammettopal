@@ -1,10 +1,8 @@
-Patch v90
+Patch v91
 
-Apply this on top of v89.
+Apply this on top of v90.
 
 Changes included:
-- top mountains move 4px upward
-- handwritten Topal moves 5px upward
-- Muhammet Topal moves 3px upward
-- subtitle moves 2px upward
-- navigation, globe, and page spacing remain unchanged
+- subtitle font size set to 12px on desktop
+- subtitle font size set to 10px on mobile
+- subtitle position and line-height remain unchanged
