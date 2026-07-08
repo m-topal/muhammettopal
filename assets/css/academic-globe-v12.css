@@ -3206,3 +3206,60 @@ html {
     box-shadow: 0 0 0 4px rgba(164, 72, 54, .08), 0 0 14px rgba(164, 72, 54, .22) !important;
   }
 }
+
+/* v94: use a separate animated halo so the CV glow is unmistakably visible. */
+.about-page > .about-cv-toolbar,
+.about-page .about-cv-toolbar {
+  overflow: visible !important;
+  position: relative !important;
+  isolation: isolate !important;
+}
+
+.about-page .about-cv-button {
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: visible !important;
+  animation: none !important;
+}
+
+.about-page .about-cv-button::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: -5px !important;
+  border-radius: 999px !important;
+  border: 2px solid rgba(176, 0, 0, .32) !important;
+  box-shadow: 0 0 12px rgba(176, 0, 0, .40), 0 0 24px rgba(176, 0, 0, .22) !important;
+  opacity: .48 !important;
+  transform: scale(.96) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  animation: aboutCvHalo 1.8s ease-in-out infinite !important;
+}
+
+@keyframes aboutCvHalo {
+  0%, 100% {
+    opacity: .38;
+    transform: scale(.96);
+    box-shadow: 0 0 8px rgba(176, 0, 0, .30), 0 0 16px rgba(176, 0, 0, .16);
+  }
+  50% {
+    opacity: .92;
+    transform: scale(1.08);
+    box-shadow: 0 0 16px rgba(176, 0, 0, .58), 0 0 32px rgba(176, 0, 0, .30);
+  }
+}
+
+.about-page .about-cv-button:hover::before,
+.about-page .about-cv-button:focus-visible::before {
+  opacity: 1 !important;
+  transform: scale(1.10) !important;
+  box-shadow: 0 0 18px rgba(176, 0, 0, .64), 0 0 36px rgba(176, 0, 0, .34) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-cv-button::before {
+    animation: none !important;
+    opacity: .72 !important;
+    transform: scale(1.03) !important;
+  }
+}

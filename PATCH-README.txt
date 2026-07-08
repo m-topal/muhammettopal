@@ -1,8 +1,8 @@
-Patch v93
+Patch v94
 
-Apply this on top of v92.
+Apply this on top of v93.
 
 Changes included:
-- adds a dedicated, visible glow animation to the About Me View CV PDF pill
-- strengthens the hover/focus glow
-- leaves the CV modal and all layout behavior unchanged
+- replaces the unreliable button-shadow pulse with a separate animated red halo behind View CV PDF
+- allows the halo to extend outside the toolbar without being clipped
+- keeps the CV modal and page layout unchanged
