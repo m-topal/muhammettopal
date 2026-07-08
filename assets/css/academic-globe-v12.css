@@ -2105,3 +2105,34 @@ main .label,
     height: 60px !important;
   }
 }
+
+
+/* v42: tune mountain heights for mobile, nudge mountain band upward, and place handwritten Topal slightly lower. */
+.academic-top-map {
+  height: 225px !important;
+  top: 14px !important;
+}
+
+.academic-footer-range {
+  height: 75px !important;
+}
+
+/* Move the handwritten Topal slightly lower so it sits closer to about 10px below the top edge. */
+.site-top .home-header-wordmark {
+  transform: translateY(-44px) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 150px !important;
+    top: 4px !important;
+  }
+
+  .academic-footer-range {
+    height: 50px !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-39px) !important;
+  }
+}

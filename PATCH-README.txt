@@ -1,10 +1,12 @@
-Muhammet Topal academic globe patch v41
+Muhammet Topal academic globe patch v42
 
-Apply this on top of v40.
+Apply this on top of v41.
 
-Changes only the mountain display heights:
-- top mountains: 240px desktop, 180px mobile
-- bottom mountains: 80px desktop, 60px mobile
+Changes:
+- top mountains: 225px desktop, 150px mobile
+- bottom mountains: 75px desktop, 50px mobile
+- top mountain band moved 5px upward from v41
+- handwritten Topal moved slightly lower so it sits closer to 10px below the top edge
 
-File included:
+Files included:
 - assets/css/academic-globe-v12.css
