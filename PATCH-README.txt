@@ -1,6 +1,8 @@
-Patch v69
+Patch v70
 
-Apply this on top of v68.
+Apply this on top of v69.
 
-Change included:
-- moves the top mountain band 3px further upward
+Changes included:
+- restores the large About Me title
+- restores the View CV PDF button on the same line
+- keeps the duplicate gray ABOUT ME label hidden

@@ -2765,3 +2765,31 @@ main article.extracurricular-page > .page-label:first-child,
 .academic-top-map {
   transform: translateY(-53px) !important;
 }
+
+/* v70: restore the large About Me title and View CV row after removing the duplicate gray label. */
+.about-page {
+  padding-top: 22px !important;
+  grid-template-rows: auto auto !important;
+}
+
+.about-page > h1 {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.about-page > .about-cv-toolbar {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.about-page > .about-dual-wrap,
+.about-page > .cv-modal {
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+}
