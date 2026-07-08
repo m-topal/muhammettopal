@@ -1985,3 +1985,50 @@ body,
     opacity: .35 !important;
   }
 }
+
+/* v38: smaller gray labels, one more pixel below subtitle, and slight upward header-art adjustments. */
+/* Apply the 10px gray uppercase label size consistently across all pages and sections. */
+.label,
+.page-label,
+.section-label,
+.page .label,
+main .label,
+.research-continuous-page .label,
+.teaching-continuous-page .label,
+.research-scroll-section .label,
+.teaching-scroll-section .label,
+.about-page .label,
+.service-page .label,
+.diversions-page .label,
+.contact-page .label,
+.portfolio-page .label,
+.publications-page .label,
+.presentations-page .label {
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+/* Increase subtitle-to-nav breathing room from 5px to 6px. */
+.site-top .identity-sentence {
+  margin-bottom: 6px !important;
+}
+
+/* Move the mountain band 3px upward from v37. */
+.academic-top-map {
+  top: 24px !important;
+}
+
+/* Move the handwritten Topal 5px upward from v37, keeping its size unchanged. */
+.site-top .home-header-wordmark {
+  transform: translateY(-40px) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 14px !important;
+  }
+
+  .site-top .home-header-wordmark {
+    transform: translateY(-35px) !important;
+  }
+}
