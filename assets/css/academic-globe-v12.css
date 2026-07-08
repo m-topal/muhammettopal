@@ -2249,3 +2249,22 @@ main h1.page-title,
     font-size: 24px !important;
   }
 }
+
+/* v48: adjust only the vertical display heights of the mountain bands. */
+.academic-top-map {
+  height: 245px !important;
+}
+
+.academic-footer-range {
+  height: 70px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 180px !important;
+  }
+
+  .academic-footer-range {
+    height: 60px !important;
+  }
+}

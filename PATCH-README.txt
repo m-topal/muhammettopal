@@ -1,10 +1,10 @@
-Muhammet Topal academic globe patch v47
+Muhammet Topal academic globe patch v48
 
-Apply this on top of v46.
+Apply this on top of v47.
 
-Changes:
-- Muhammet Topal title: up to 48px desktop, up to 40px mobile
-- Main page headings across About Me, Contact, Service, Diversions, Portfolio, Publications, Presentations, Blog, CV, Search, Research, and Teaching: up to 32px desktop, 24px mobile
+Changes only the mountain display heights:
+- top mountains: 245px desktop, 180px mobile
+- bottom mountains: 70px desktop, 60px mobile
 
-Files included:
+File included:
 - assets/css/academic-globe-v12.css
