@@ -1,14 +1,16 @@
-Muhammet Topal academic globe patch v35
+Muhammet Topal academic globe patch v36
 
-Apply directly on top of v34.
+Apply this directly on top of v35.
 
 Changes:
-- keeps the mountain bands exactly where they are
-- removes the parent header bottom gap
-- removes the nav top margin
-- keeps subtitle top and bottom margins at 0
-- keeps the title-to-subtitle gap at 1px
-- moves the handwritten Topal closer to the top without changing its size
+- Muhammet Topal title: maximum 56px desktop, 46px mobile
+- Main page titles: maximum 36px desktop, 26px mobile
+- Section titles: maximum 25px desktop, 22px mobile
+- Main-nav-to-page-content spacing: 28px desktop, 22px mobile
+- Secondary-nav-to-first-section spacing: approximately 26px desktop, 22px mobile
+- Introductory and ordinary body text now share the same size
+- Body text: 18px desktop, 17px mobile
+- All principal reading text line-height: 1.5
+- Subtitle bottom margin: 3px to prevent contact with the nav border
 
-Included file:
-- assets/css/academic-globe-v12.css
+The globe and mountain positioning/opacity are unchanged.
