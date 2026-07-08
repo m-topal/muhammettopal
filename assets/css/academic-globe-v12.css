@@ -3078,3 +3078,17 @@ html {
     scroll-margin-top: 142px !important;
   }
 }
+
+/* v84: fine-tune only the identity elements without touching either navigation bar or the mountains. */
+.site-top .site-header-wordmark-block {
+  top: 34px !important;
+}
+
+.site-top .name {
+  top: 42px !important;
+}
+
+.site-top .identity-sentence {
+  top: 41px !important;
+  line-height: 1.0 !important;
+}

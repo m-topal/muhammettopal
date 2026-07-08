@@ -1,10 +1,9 @@
-Patch v83
+Patch v84
 
-Apply this on top of v82.
+Apply this on top of v83.
 
 Changes included:
-- main navigation sticks at the very top of the viewport
-- its normal pre-scroll position remains unchanged
-- Research and Teaching secondary navigation sticks directly below the main nav with a small gap
-- anchor offsets are adjusted for the two stacked sticky bars
-- no header, subtitle, mountain, globe, footer, or ordinary page spacing rules are changed
+- moves the handwritten Topal 3px upward
+- moves Muhammet Topal 3px upward
+- moves the subtitle 4px upward
+- leaves the main nav, secondary nav, mountains, globe, and page spacing unchanged
