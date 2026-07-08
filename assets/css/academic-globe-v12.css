@@ -3024,3 +3024,57 @@ html {
     top: 120px !important;
   }
 }
+
+/* v83: correct only the sticky activation positions without changing the normal header layout. */
+.sticky-nav {
+  position: sticky !important;
+  top: 0 !important;
+  margin-top: 50px !important;
+  transform: none !important;
+  z-index: 1000 !important;
+}
+
+/* Keep the secondary Research and Teaching nav directly below the main sticky bar. */
+.research-continuous-page .research-scroll-nav,
+.teaching-scroll-nav {
+  position: sticky !important;
+  top: 66px !important;
+  z-index: 999 !important;
+}
+
+/* Match anchor landing to the two stacked sticky bars without changing page spacing. */
+html {
+  scroll-padding-top: 132px !important;
+}
+
+[id],
+.research-scroll-section,
+.teaching-scroll-section,
+.research-continuous-page > section,
+.teaching-continuous-page > section {
+  scroll-margin-top: 132px !important;
+}
+
+@media (max-width: 900px) {
+  .sticky-nav {
+    top: 0 !important;
+    margin-top: 50px !important;
+  }
+
+  .research-continuous-page .research-scroll-nav,
+  .teaching-scroll-nav {
+    top: 72px !important;
+  }
+
+  html {
+    scroll-padding-top: 142px !important;
+  }
+
+  [id],
+  .research-scroll-section,
+  .teaching-scroll-section,
+  .research-continuous-page > section,
+  .teaching-continuous-page > section {
+    scroll-margin-top: 142px !important;
+  }
+}
