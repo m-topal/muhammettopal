@@ -2967,3 +2967,60 @@ main {
     height: 54px !important;
   }
 }
+
+/* v82: keep the main navigation sticky without visually covering anchor targets or breaking the original spacing. */
+.sticky-nav {
+  position: sticky !important;
+  top: 50px !important;
+  transform: none !important;
+  margin-top: 50px !important;
+  z-index: 1000 !important;
+}
+
+/* Let the nav's real margin create the vertical shift instead of moving main with a relative top offset. */
+main {
+  top: auto !important;
+}
+
+/* Prevent section headings from landing underneath the sticky navigation. */
+html {
+  scroll-padding-top: 140px !important;
+}
+
+[id],
+.research-scroll-section,
+.teaching-scroll-section,
+.research-continuous-page > section,
+.teaching-continuous-page > section {
+  scroll-margin-top: 140px !important;
+}
+
+/* Keep secondary Research and Teaching navigation below the main sticky navigation. */
+.research-continuous-page .research-scroll-nav,
+.teaching-scroll-nav {
+  top: 112px !important;
+}
+
+@media (max-width: 900px) {
+  .sticky-nav {
+    top: 50px !important;
+    margin-top: 50px !important;
+  }
+
+  html {
+    scroll-padding-top: 155px !important;
+  }
+
+  [id],
+  .research-scroll-section,
+  .teaching-scroll-section,
+  .research-continuous-page > section,
+  .teaching-continuous-page > section {
+    scroll-margin-top: 155px !important;
+  }
+
+  .research-continuous-page .research-scroll-nav,
+  .teaching-scroll-nav {
+    top: 120px !important;
+  }
+}
