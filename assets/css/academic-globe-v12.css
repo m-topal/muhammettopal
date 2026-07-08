@@ -2148,3 +2148,14 @@ main .label,
   line-height: 1.20 !important;
   margin-bottom: 10px !important;
 }
+
+/* v45: move the top mountains 6px downward, closer to the main nav. */
+.academic-top-map {
+  top: 20px !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    top: 10px !important;
+  }
+}

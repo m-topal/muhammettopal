@@ -1,10 +1,9 @@
-Muhammet Topal academic globe patch v44
+Muhammet Topal academic globe patch v45
 
-Apply this on top of v43.
+Apply this on top of v44.
 
-Changes:
-- subtitle line-height: 1.20
-- subtitle-to-nav spacing: 10px
+Change:
+- moves the top mountain band 6px downward on desktop and mobile, bringing it closer to the main nav
 
 File included:
 - assets/css/academic-globe-v12.css
