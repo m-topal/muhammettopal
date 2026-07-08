@@ -2884,3 +2884,26 @@ main {
   margin-top: 50px !important;
   z-index: 1000 !important;
 }
+
+/* v79: keep the bottom mountain drawing inside the footer, below the footer divider, as background art. */
+.footer {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.footer > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.academic-footer-range {
+  top: 1px !important;
+  bottom: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
