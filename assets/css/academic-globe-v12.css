@@ -2287,3 +2287,37 @@ main h1.page-title,
     height: 75px !important;
   }
 }
+
+/* v50: force the requested title sizing on Academic Service and Beyond academia, and revise mountain heights. */
+main article.extracurricular-page > h1,
+main article.page.wide > .label + h1,
+main article.page.wide > h1,
+main article.page > .label + h1 {
+  font-size: clamp(24px, 3vw, 32px) !important;
+  line-height: 1.16 !important;
+}
+
+.academic-top-map {
+  height: 235px !important;
+}
+
+.academic-footer-range {
+  height: 55px !important;
+}
+
+@media (max-width: 900px) {
+  main article.extracurricular-page > h1,
+  main article.page.wide > .label + h1,
+  main article.page.wide > h1,
+  main article.page > .label + h1 {
+    font-size: 24px !important;
+  }
+
+  .academic-top-map {
+    height: 180px !important;
+  }
+
+  .academic-footer-range {
+    height: 60px !important;
+  }
+}
