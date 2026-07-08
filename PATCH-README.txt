@@ -1,8 +1,10 @@
-Patch v89
+Patch v90
 
-Apply this on top of v88.
+Apply this on top of v89.
 
 Changes included:
-- moves Muhammet Topal 1px further upward
-- moves the subtitle 2px further upward
-- leaves the handwritten wordmark, nav bars, mountains, globe, and page spacing unchanged
+- top mountains move 4px upward
+- handwritten Topal moves 5px upward
+- Muhammet Topal moves 3px upward
+- subtitle moves 2px upward
+- navigation, globe, and page spacing remain unchanged
