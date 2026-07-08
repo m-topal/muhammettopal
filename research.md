@@ -7,9 +7,6 @@ permalink: /research/
   <p class="label">Research</p>
   <h1>Research</h1>
 
-  <div class="research-continuous-intro two-column-prose research-flow paragraph-tight-indent">
-    <p>My research examines the making of Ottoman intellectual authority, public life, historical writing, journalism, and political judgment from the late Ottoman Empire to modern Turkey and the broader Middle East. The page brings together my dissertation, research trajectory, future directions, publications, and presentations in one continuous research profile.</p>
-  </div>
 
   <nav class="teaching-scroll-nav research-scroll-nav" aria-label="Research page sections">
     <a href="#dissertation">Dissertation</a>

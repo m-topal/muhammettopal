@@ -1,9 +1,12 @@
-Patch v85
+Patch v86
 
-Apply this on top of v84.
+Apply this on top of v85.
 
 Changes included:
-- handwritten Topal stays in the same v84 position
-- Muhammet Topal is only 1px upward relative to the earlier baseline
-- subtitle is only 2px upward relative to the earlier baseline
-- nav bars, mountains, globe, and page spacing remain unchanged
+- removes the introductory paragraph beneath the main Research heading
+- removes the introductory paragraph beneath the main Teaching heading
+- removes the empty wrapper blocks too, so no blank gap remains before the secondary navigation
+
+Files included:
+- research.md
+- teaching.md
