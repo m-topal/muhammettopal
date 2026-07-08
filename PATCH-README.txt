@@ -1,12 +1,12 @@
-ACADEMIC GLOBE PATCH v24
+ACADEMIC GLOBE PATCH v25
 
-Apply this on top of the current site / v23.
+Apply this on top of the current site / v24.
 
 This patch changes:
-- keeps the globe constrained vertically so it stays at least about 1 inch below the main nav underline
-- keeps the globe out of the footer-links area, ending about 1 inch above the footer line when the footer enters view
-- makes the bottom mountain band and footer school drawings a bit more visible
-- unifies publication and presentation explanation text size, font, and lighter tone
+- makes publication category dividers visually distinct from normal publication item dividers
+- keeps publication and presentation explanation text aligned in size and lighter tone
+- strengthens the top mountain band so it is less faint, wider, and lower in the header zone
+- makes the footer mountain band slightly more visible while preserving the same overall tone
 
 Files included:
 - assets/css/academic-globe-v12.css

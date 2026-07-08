@@ -953,3 +953,111 @@ body[data-page="publications"] .pub-reference {
     line-height: 1.52 !important;
   }
 }
+
+
+/* v25 overrides: clearer publication category separators and a stronger, lower top mountain band. */
+.publication-category {
+  position: relative !important;
+  margin-top: 2.2rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 1.2rem !important;
+  padding-bottom: 1rem !important;
+  border: 0 !important;
+}
+
+.publication-category::before,
+.publication-category::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.publication-category::before {
+  top: 0;
+  border-top: 1.5px solid rgba(37, 48, 58, .16) !important;
+}
+
+.publication-category::after {
+  bottom: 0;
+  border-bottom: 1px solid rgba(37, 48, 58, .10) !important;
+}
+
+.publication-category + .accordion-item,
+.publication-category + .publication-entry,
+.publication-category + .accordion,
+.publication-category + .publication-list > .accordion-item:first-child {
+  border-top: 0 !important;
+}
+
+/* Make publication and presentation explanation typography match and stay slightly muted. */
+#publications .pub-reference,
+.publications-page .pub-reference,
+body[data-page="publications"] .pub-reference,
+#presentations .accordion-meta,
+.presentations-page .accordion-meta,
+body[data-page="presentations"] .accordion-meta {
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+  color: rgba(56, 67, 78, .66) !important;
+}
+
+.academic-top-map {
+  height: 244px !important;
+}
+
+.academic-mountain-art-top img {
+  opacity: .29 !important;
+  filter: grayscale(1) contrast(.92) brightness(.97) !important;
+  object-fit: cover !important;
+  object-position: center 72% !important;
+  transform: scale(1.08) !important;
+  transform-origin: center center !important;
+}
+
+/* Slightly more visible footer mountains while keeping the same line tone. */
+.academic-footer-range {
+  height: 96px !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .34 !important;
+  filter: grayscale(1) contrast(.92) brightness(.98) !important;
+  object-fit: cover !important;
+  object-position: center 54% !important;
+}
+
+@media (max-width: 900px) {
+  .publication-category {
+    margin-top: 1.7rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: .85rem !important;
+  }
+
+  #publications .pub-reference,
+  .publications-page .pub-reference,
+  body[data-page="publications"] .pub-reference,
+  #presentations .accordion-meta,
+  .presentations-page .accordion-meta,
+  body[data-page="presentations"] .accordion-meta {
+    font-size: 14px !important;
+    line-height: 1.52 !important;
+  }
+
+  .academic-top-map {
+    height: 184px !important;
+  }
+
+  .academic-mountain-art-top img {
+    opacity: .26 !important;
+    object-position: center 74% !important;
+    transform: scale(1.1) !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .31 !important;
+  }
+}
