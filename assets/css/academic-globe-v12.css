@@ -2321,3 +2321,33 @@ main article.page > .label + h1 {
     height: 60px !important;
   }
 }
+
+/* v51: make the top mountains fuller and the bottom mountains genuinely narrower. */
+.academic-top-map {
+  height: 245px !important;
+}
+
+.academic-footer-range {
+  height: 45px !important;
+  overflow: hidden !important;
+}
+
+.academic-mountain-art-footer {
+  overflow: hidden !important;
+}
+
+.academic-mountain-art-footer img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+}
+
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 190px !important;
+  }
+
+  .academic-footer-range {
+    height: 50px !important;
+  }
+}
