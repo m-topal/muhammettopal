@@ -1,12 +1,13 @@
-ACADEMIC GLOBE PATCH v25
+ACADEMIC GLOBE PATCH v26
 
-Apply this on top of the current site / v24.
+Apply this on top of the current site / v25.
 
-This patch changes:
-- makes publication category dividers visually distinct from normal publication item dividers
-- keeps publication and presentation explanation text aligned in size and lighter tone
-- strengthens the top mountain band so it is less faint, wider, and lower in the header zone
-- makes the footer mountain band slightly more visible while preserving the same overall tone
+This patch fixes:
+- the globe is no longer clipped or faded at its top edge
+- the complete globe is positioned below the protected area under the main navigation
+- when the footer enters view, the globe scales only as much as needed so it stays above the footer links area instead of being cut off
+- footer mountains are more visible
+- footer school drawings are more visible
 
 Files included:
 - assets/css/academic-globe-v12.css

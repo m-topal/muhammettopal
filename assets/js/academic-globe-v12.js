@@ -5,23 +5,30 @@
 
   function updateSceneTop() {
     var scene = document.querySelector('.academic-world-scene');
+    var globe = document.getElementById('academicGlobe');
     var nav = document.querySelector('.sticky-nav, .nav-wrap');
-    if (!scene || !nav) return;
+    if (!scene || !globe || !nav) return;
 
-    var topClearance = 96; // about 1 inch below the main nav underline
-    var navBottom = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + topClearance));
-    scene.style.setProperty('--academic-scene-top', navBottom + 'px');
+    var clearance = window.innerWidth <= 900 ? 72 : 96;
+    var topBoundary = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom + clearance));
+    var bottomBoundary = window.innerHeight;
 
-    var bottomInset = 0;
     var footer = document.querySelector('.footer');
     if (footer) {
       var footerRect = footer.getBoundingClientRect();
-      var footerBoundary = Math.floor(footerRect.top - topClearance);
-      if (footerBoundary < window.innerHeight) {
-        bottomInset = Math.max(0, Math.ceil(window.innerHeight - footerBoundary));
+      if (footerRect.top < window.innerHeight) {
+        bottomBoundary = Math.max(topBoundary + 180, Math.floor(footerRect.top - clearance));
       }
     }
-    scene.style.setProperty('--academic-scene-bottom', bottomInset + 'px');
+
+    var baseSize = Math.min(630, window.innerWidth * 0.60);
+    if (window.innerWidth <= 900) baseSize = Math.min(470, window.innerWidth * 0.78);
+    var availableHeight = Math.max(180, bottomBoundary - topBoundary);
+    var globeSize = Math.min(baseSize, availableHeight);
+    var centerY = topBoundary + (globeSize / 2);
+
+    scene.style.setProperty('--academic-globe-size', globeSize + 'px');
+    scene.style.setProperty('--academic-globe-center-y', centerY + 'px');
   }
 
   function injectFooterRange() {

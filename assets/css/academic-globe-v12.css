@@ -1061,3 +1061,63 @@ body[data-page="presentations"] .accordion-meta {
     opacity: .31 !important;
   }
 }
+
+
+/* v26 overrides: position the complete globe below the nav instead of clipping/fading it. */
+.academic-world-scene {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.academic-globe {
+  top: var(--academic-globe-center-y, 58vh) !important;
+  width: var(--academic-globe-size, min(630px, 60vw)) !important;
+  height: var(--academic-globe-size, min(630px, 60vw)) !important;
+  opacity: .48 !important;
+  filter: saturate(.82) brightness(1.08) !important;
+}
+
+/* The globe is not clipped at the top; it is placed wholly below the protected nav zone. */
+.academic-globe canvas {
+  opacity: 1 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* Make footer mountains and school drawings clearly visible, still subtle background elements. */
+.academic-footer-range {
+  height: 104px !important;
+}
+
+.academic-mountain-art-footer img {
+  opacity: .46 !important;
+  filter: grayscale(1) contrast(.96) brightness(.96) !important;
+}
+
+.footer-school-satellite img {
+  opacity: .54 !important;
+  filter: grayscale(1) contrast(1.08) brightness(.98) !important;
+}
+
+@media (max-width: 900px) {
+  .academic-globe {
+    top: var(--academic-globe-center-y, 60vh) !important;
+    width: var(--academic-globe-size, min(470px, 78vw)) !important;
+    height: var(--academic-globe-size, min(470px, 78vw)) !important;
+  }
+
+  .academic-footer-range {
+    height: 78px !important;
+  }
+
+  .academic-mountain-art-footer img {
+    opacity: .40 !important;
+  }
+
+  .footer-school-satellite img {
+    opacity: .48 !important;
+  }
+}
