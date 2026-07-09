@@ -1,13 +1,7 @@
-Presentations patch v103
+Apply this patch on top of your current site, replacing research.md.
 
-Apply this on top of v101. Do not apply v102 first.
-
-Changes:
-- makes Panel Chair and Presenter use the exact publication category heading style
-- adds an inline conversation-bubbles icon to Panel Chair
-- adds an inline lectern icon to Presenter
-- keeps the main Presentations heading and all accordion boxes unchanged
-- adds no image assets
-
-Files included:
-- research.md
+This patch refines the Presentations section only:
+- makes Panel Chair and Presenter match the Publications category-header style
+- uses category separators and spacing aligned with the Publications section
+- replaces the Presenter icon with a distinct microphone icon
+- keeps the existing presentation entries unchanged

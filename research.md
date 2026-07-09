@@ -287,58 +287,60 @@ permalink: /research/
     </div>
   </div>
 
-  <h2 class="publication-category-heading"><span class="publication-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.5 5.5h10.2v7.2H9.2l-3.5 2.7v-2.7H4.5V5.5Z"/><path d="M10.2 9.2h9.3v6.9h-1.2v2.4l-3.1-2.4h-5V9.2Z"/></svg></span><span>Panel Chair</span></h2>
+  <section class="publication-category presentation-category">
+    <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-panel-chair" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.75 6.75h8.5a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H9l-3.25 2.5v-2.5H4.75a2 2 0 0 1-2-2v-4.5a2 2 0 0 1 2-2Z"/><path d="M14.75 9.25h4.5a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-.75v2.25l-2.95-2.25h-.8"/></svg></span><span>Panel Chair</span></h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Sufism and Religious Symbolism in Modern Middle Eastern Literature”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">Panel Chair · 59th Annual Meeting of the Middle East Studies Association · November 22–25, 2025 · Washington, DC</div></div>
+      </div>
+    </div>
+  </section>
 
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Sufism and Religious Symbolism in Modern Middle Eastern Literature”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">Panel Chair · 59th Annual Meeting of the Middle East Studies Association · November 22–25, 2025 · Washington, DC</div></div>
+  <section class="publication-category presentation-category">
+    <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-presenter" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3.5a3.2 3.2 0 0 1 3.2 3.2v3.8A3.2 3.2 0 0 1 12 13.7a3.2 3.2 0 0 1-3.2-3.2V6.7A3.2 3.2 0 0 1 12 3.5Z"/><path d="M6.75 10.75a5.25 5.25 0 0 0 10.5 0"/><path d="M12 13.7v4.1"/><path d="M8.6 19.8h6.8"/><path d="M10.15 22h3.7"/></svg></span><span>Presenter</span></h2>
+    <div class="accordion">
+      <div class="accordion-item open">
+        <button class="accordion-trigger"><span class="accordion-title">“Mountaineering as the Covenant Experience of the Dual: Toward a Relational Ontology of Body and World”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">Thinking from the Dual: Ontology, Theology and the Humanities through the Lens of the Muthannā · University of Lorraine · October 13–14, 2026 · Metz</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Organizing Exit: Political Agency Beyond State-Centered Muslim Politics”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">40th Annual Middle East History and Theory Conference, Playing with the Scales: The Local, Regional, and Global in Middle Eastern Studies · University of Chicago · May 1–2, 2026</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Empire of Translations: Making of the Ottoman Public Intellectual from Phanariot Dragomans to the Translation Office”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">6th Mid-Atlantic Ottomanist Workshop · Rutgers University · April 10–11, 2026</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Speaking Truth to Power: Mehmed Murad Bey’s Individuation and Political Socialization in the Formation of the Late Ottoman Public Intellectual”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">59th Annual Meeting of the Middle East Studies Association · November 22–25, 2025 · Washington, DC</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Finding a Place in the World: The Formation of Political Subjects through History Education (1839–Present)”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">Education in Turkey: Actors and Practices Conference · Galatasaray University and Institut français d’études anatoliennes, IFEA · October 9–10, 2025 · Istanbul</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“The Rise and Fall of A Young Turk Leader: Mehmed Murad Bey and the Political Geography of the Young Turks (1895–1898)”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">History Conference in Memory of Yavuz Selim Karakışla · Boğaziçi University · May 15–16, 2025 · Istanbul</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Center of Power: Social Networks and Agency in the Late Ottoman Istanbul”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">15th Annual TAMU History Conference: Power and Agency · Texas A&M University · February 7–8, 2025 · College Station</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“Making of An Ottoman Public Intellectual: Mizancı Mehmed Murad Bey”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">Orient Institute Colloquium Series · July 31, 2024 · Istanbul</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“An Orient of One’s Own: Egypt of Ottoman Intellectual Émigrés during the Hamidian Era”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">International Nineteenth-Century Studies Association Conference, The Nineteenth Century Today: Interdisciplinary, International, Intertemporal · University of Durham · July 10–12, 2024</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-title">“The Tale of Two Cities: Comparative Modernization in Istanbul and Cairo from the Perspective of the Ottoman Intellectual Émigrés during the Hamidian Era”</span><span class="accordion-plus">+</span></button>
+        <div class="accordion-panel"><div class="accordion-meta">Society for Global Nineteenth-Century Studies Symposium, Nineteenth-Century Global Cities and Urban Worlds · Aix-Marseille University · June 6–8, 2024</div></div>
+      </div>
     </div>
-  </div>
-
-  <h2 class="publication-category-heading"><span class="publication-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 9.5h10l1.2 9H5.8l1.2-9Z"/><path d="M9 9.5V6.7c0-1.8 1.4-3.2 3-3.2s3 1.4 3 3.2v2.8"/><path d="M12 3.5v6"/><path d="M4.5 18.5h15"/></svg></span><span>Presenter</span></h2>
-
-  <div class="accordion">
-    <div class="accordion-item open">
-      <button class="accordion-trigger"><span class="accordion-title">“Mountaineering as the Covenant Experience of the Dual: Toward a Relational Ontology of Body and World”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">Thinking from the Dual: Ontology, Theology and the Humanities through the Lens of the Muthannā · University of Lorraine · October 13–14, 2026 · Metz</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Organizing Exit: Political Agency Beyond State-Centered Muslim Politics”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">40th Annual Middle East History and Theory Conference, Playing with the Scales: The Local, Regional, and Global in Middle Eastern Studies · University of Chicago · May 1–2, 2026</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Empire of Translations: Making of the Ottoman Public Intellectual from Phanariot Dragomans to the Translation Office”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">6th Mid-Atlantic Ottomanist Workshop · Rutgers University · April 10–11, 2026</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Speaking Truth to Power: Mehmed Murad Bey’s Individuation and Political Socialization in the Formation of the Late Ottoman Public Intellectual”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">59th Annual Meeting of the Middle East Studies Association · November 22–25, 2025 · Washington, DC</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Finding a Place in the World: The Formation of Political Subjects through History Education (1839–Present)”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">Education in Turkey: Actors and Practices Conference · Galatasaray University and Institut français d’études anatoliennes, IFEA · October 9–10, 2025 · Istanbul</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“The Rise and Fall of A Young Turk Leader: Mehmed Murad Bey and the Political Geography of the Young Turks (1895–1898)”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">History Conference in Memory of Yavuz Selim Karakışla · Boğaziçi University · May 15–16, 2025 · Istanbul</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Center of Power: Social Networks and Agency in the Late Ottoman Istanbul”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">15th Annual TAMU History Conference: Power and Agency · Texas A&M University · February 7–8, 2025 · College Station</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“Making of An Ottoman Public Intellectual: Mizancı Mehmed Murad Bey”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">Orient Institute Colloquium Series · July 31, 2024 · Istanbul</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“An Orient of One’s Own: Egypt of Ottoman Intellectual Émigrés during the Hamidian Era”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">International Nineteenth-Century Studies Association Conference, The Nineteenth Century Today: Interdisciplinary, International, Intertemporal · University of Durham · July 10–12, 2024</div></div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-trigger"><span class="accordion-title">“The Tale of Two Cities: Comparative Modernization in Istanbul and Cairo from the Perspective of the Ottoman Intellectual Émigrés during the Hamidian Era”</span><span class="accordion-plus">+</span></button>
-      <div class="accordion-panel"><div class="accordion-meta">Society for Global Nineteenth-Century Studies Symposium, Nineteenth-Century Global Cities and Urban Worlds · Aix-Marseille University · June 6–8, 2024</div></div>
-    </div>
-  </div>
+  </section>
   </section>
 </article>
