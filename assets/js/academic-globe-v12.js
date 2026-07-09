@@ -17,10 +17,8 @@
     var globeSize = Math.min(760, window.innerWidth * 0.70);
     if (isMobile) globeSize = Math.min(520, window.innerWidth * 0.84);
 
-    /* Keep the globe centered in the viewport while still clearing the sticky navigation. */
-    var viewportCenter = window.innerHeight * (isMobile ? 0.56 : 0.55);
-    var minimumCenter = navBottom + topClearance + (globeSize / 2);
-    var centerY = Math.max(viewportCenter, minimumCenter);
+    /* The globe's top edge always begins below the nav protection zone. */
+    var centerY = navBottom + topClearance + (globeSize / 2);
 
     /* Do not slide or resize the globe while scrolling. Fade only when the footer would overlap it. */
     var globeBottom = centerY + (globeSize / 2);
@@ -203,7 +201,7 @@
       .arcStartLng('startLng')
       .arcEndLat('endLat')
       .arcEndLng('endLng')
-      .arcColor(function () { return 'rgba(96,142,174,.42)'; })
+      .arcColor(function () { return 'rgba(96,142,174,.50)'; })
       .arcAltitude(0.19)
       .arcStroke(0.30)
       .arcDashLength(0.48)
@@ -215,7 +213,7 @@
     var material = globe.globeMaterial();
     material.color.set('#dbe4e8');
     material.transparent = true;
-    material.opacity = 0.27;
+    material.opacity = 0.285714;
     material.wireframe = false;
     material.roughness = 0.88;
     material.metalness = 0;
@@ -226,14 +224,14 @@
         globe
           .polygonsData(countries.features)
           .polygonAltitude(0.006)
-          .polygonCapColor(function () { return 'rgba(218,226,230,.38)'; })
-          .polygonSideColor(function () { return 'rgba(179,196,204,.12)'; })
-          .polygonStrokeColor(function () { return 'rgba(89,111,123,.65)'; })
+          .polygonCapColor(function () { return 'rgba(218,226,230,.357143)'; })
+          .polygonSideColor(function () { return 'rgba(179,196,204,.142857)'; })
+          .polygonStrokeColor(function () { return 'rgba(89,111,123,.714286)'; })
           .polygonsTransitionDuration(0);
       })
       .catch(function () {
         material.wireframe = true;
-        material.opacity = 0.20;
+        material.opacity = 0.285714;
       });
 
     globe.pointOfView({ lat: 39.0, lng: 35.0, altitude: 1.72 }, 0);
@@ -254,10 +252,6 @@
       lastY = y;
       var dir = dy >= 0 ? 1 : -1;
       targetSpeed = dir * (0.55 + Math.min(Math.abs(dy) * 0.018, 2.7));
-
-      /* v80: keep the globe centered in the viewport; scrolling only changes spin direction and speed. */
-      var scene = document.querySelector('.academic-world-scene');
-      if (scene) scene.style.transform = 'none';
     }, { passive: true });
 
     function animate() {
