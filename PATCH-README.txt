@@ -1,9 +1,10 @@
-Patch v96
+Patch v97
 
-Apply this on top of v95.
+Apply this on top of v96.
 
-Changes included:
-- changes only the mobile top-mountain rendering
-- replaces the tall stretched mobile mountain with the simpler transparent mountain line asset already in the site
-- uses a controlled 110px mobile band
-- leaves desktop mountains, title, navigation, globe, and page spacing unchanged
+Changes included, mobile only:
+- reduces the top mountain band from 110px to 78px
+- moves the mountain art slightly higher
+- softens the line opacity
+- reduces horizontal enlargement so the range looks less crowded
+- desktop remains unchanged

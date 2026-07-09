@@ -3328,3 +3328,28 @@ html {
     display: none !important;
   }
 }
+
+/* v97: refine the mobile-only mountain band after v96. */
+@media (max-width: 900px) {
+  .academic-top-map {
+    height: 78px !important;
+    overflow: visible !important;
+    transform: translateY(-28px) !important;
+  }
+
+  .academic-mountain-art-top {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 78px !important;
+    overflow: hidden !important;
+    background-image: url('../img/academic-mountain-range-transparent.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    background-size: 150% auto !important;
+    opacity: .22 !important;
+  }
+
+  .academic-mountain-art-top img {
+    display: none !important;
+  }
+}
