@@ -1,14 +1,13 @@
-Patch v101
+Presentations patch v103
 
-Apply this on top of v100.
-
-Fixes the Presentations update on the actual live Research page.
+Apply this on top of v101. Do not apply v102 first.
 
 Changes:
-- edits research.md, which powers /research/#presentations
-- adds a Panel Chair subsection with the 2025 MESA panel
-- adds a Presenter subsection above all existing presentation accordions
-- leaves the rest of the Research page unchanged
+- makes Panel Chair and Presenter use the exact publication category heading style
+- adds an inline conversation-bubbles icon to Panel Chair
+- adds an inline lectern icon to Presenter
+- keeps the main Presentations heading and all accordion boxes unchanged
+- adds no image assets
 
 Files included:
 - research.md

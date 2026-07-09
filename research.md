@@ -287,9 +287,7 @@ permalink: /research/
     </div>
   </div>
 
-  <div class="research-subsection-heading">
-    <h3>Panel Chair</h3>
-  </div>
+  <h2 class="publication-category-heading"><span class="publication-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.5 5.5h10.2v7.2H9.2l-3.5 2.7v-2.7H4.5V5.5Z"/><path d="M10.2 9.2h9.3v6.9h-1.2v2.4l-3.1-2.4h-5V9.2Z"/></svg></span><span>Panel Chair</span></h2>
 
   <div class="accordion">
     <div class="accordion-item">
@@ -298,9 +296,7 @@ permalink: /research/
     </div>
   </div>
 
-  <div class="research-subsection-heading">
-    <h3>Presenter</h3>
-  </div>
+  <h2 class="publication-category-heading"><span class="publication-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 9.5h10l1.2 9H5.8l1.2-9Z"/><path d="M9 9.5V6.7c0-1.8 1.4-3.2 3-3.2s3 1.4 3 3.2v2.8"/><path d="M12 3.5v6"/><path d="M4.5 18.5h15"/></svg></span><span>Presenter</span></h2>
 
   <div class="accordion">
     <div class="accordion-item open">
