@@ -1,12 +1,14 @@
-Patch v99
+Presentations patch v100
 
-Apply this on top of v98.
+Apply this on top of v99.
 
-Mobile PDF scrolling repair:
-- On screens up to 900px wide, the CV and PDF syllabus triggers open the document in the phone's native full-page PDF viewer.
-- This avoids the mobile Safari/embedded-iframe limitation that shows only the first PDF page.
-- Desktop CV and syllabus popups remain unchanged.
-- Non-PDF teaching detail popups remain unchanged.
+Changes:
+- adds a "Panel Chair" subsection to the Presentations page
+- adds the 2025 MESA panel:
+  "Sufism and Religious Symbolism in Modern Middle Eastern Literature"
+- identifies the role as Panel Chair
+- adds a "Presenter" subsection above all existing presentation entries
+- preserves the slideshow and all existing presentation boxes
 
 Changed file:
-- assets/js/site.js
+- presentations.md

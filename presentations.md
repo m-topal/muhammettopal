@@ -69,6 +69,17 @@ permalink: /presentations/
     </div>
   </div>
 
+  <h2 class="presentations-subheading">Panel Chair</h2>
+
+  <div class="accordion">
+    <div class="accordion-item open">
+      <button class="accordion-trigger"><span class="accordion-title">“Sufism and Religious Symbolism in Modern Middle Eastern Literature”</span><span class="accordion-plus">+</span></button>
+      <div class="accordion-panel"><div class="accordion-meta">Panel Chair · 59th Annual Meeting of the Middle East Studies Association · November 22–25, 2025 · Washington, DC</div></div>
+    </div>
+  </div>
+
+  <h2 class="presentations-subheading">Presenter</h2>
+
   <div class="accordion">
     <div class="accordion-item open">
       <button class="accordion-trigger"><span class="accordion-title">“Mountaineering as the Covenant Experience of the Dual: Toward a Relational Ontology of Body and World”</span><span class="accordion-plus">+</span></button>
