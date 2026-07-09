@@ -1,7 +1,9 @@
-Apply this patch on top of your current site, replacing research.md.
+Apply this patch on top of your current site.
 
-This patch refines the Presentations section only:
-- makes Panel Chair and Presenter match the Publications category-header style
-- uses category separators and spacing aligned with the Publications section
-- replaces the Presenter icon with a distinct microphone icon
-- keeps the existing presentation entries unchanged
+Changes:
+- updates the footer copyright line to: © 2026 Muhammet Topal · Designed and developed by Muhammet Topal
+- updates both footer implementations so all pages remain consistent
+
+Files included:
+- _layouts/default.html
+- _includes/footer.html
