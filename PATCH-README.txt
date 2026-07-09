@@ -1,17 +1,12 @@
-Patch v98
+Patch v99
 
-Apply this on top of v97.
+Apply this on top of v98.
 
-Changes included:
-- keeps the outer globe container at 70% opacity
-- adjusts internal globe values so the approximate effective visible opacities are:
-  - base globe: 20%
-  - country fill: 25%
-  - country sides: 10%
-  - country borders: 50%
-  - arcs: 35%
-- preserves globe size, position, scrolling behavior, spin, arc thickness, mountains, header, and page spacing
+Mobile PDF scrolling repair:
+- On screens up to 900px wide, the CV and PDF syllabus triggers open the document in the phone's native full-page PDF viewer.
+- This avoids the mobile Safari/embedded-iframe limitation that shows only the first PDF page.
+- Desktop CV and syllabus popups remain unchanged.
+- Non-PDF teaching detail popups remain unchanged.
 
-Files included:
-- assets/css/academic-globe-v12.css
-- assets/js/academic-globe-v12.js
+Changed file:
+- assets/js/site.js

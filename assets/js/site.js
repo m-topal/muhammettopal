@@ -2193,3 +2193,59 @@ window.addEventListener("resize", updateReadingProgress);
     window.__v181NavResizeTimer = window.setTimeout(updateResponsiveNavHeight, 100);
   });
 })();
+
+/* v99: use the native full-page PDF viewer on mobile.
+   iOS and some Android browsers only render the first page of PDFs inside iframes. */
+(function () {
+  function isMobilePdfViewport() {
+    return window.matchMedia('(max-width: 900px)').matches;
+  }
+
+  function pdfUrlForTrigger(trigger) {
+    if (!trigger) return '';
+
+    if (trigger.matches('.cv-modal-trigger[data-cv-modal]')) {
+      var cvModal = document.getElementById(trigger.getAttribute('data-cv-modal'));
+      var cvFrame = cvModal ? cvModal.querySelector('.cv-modal-frame') : null;
+      return cvFrame ? cvFrame.getAttribute('src').split('#')[0] : '';
+    }
+
+    if (trigger.matches('.course-modal-trigger[data-course-modal]')) {
+      var courseModal = document.getElementById(trigger.getAttribute('data-course-modal'));
+      if (!courseModal || !courseModal.classList.contains('syllabus-modal')) return '';
+      var syllabusFrame = courseModal.querySelector('.syllabus-pdf-frame iframe');
+      return syllabusFrame ? syllabusFrame.getAttribute('src').split('#')[0] : '';
+    }
+
+    return '';
+  }
+
+  function openMobilePdf(event, trigger) {
+    if (!isMobilePdfViewport()) return false;
+    var url = pdfUrlForTrigger(trigger);
+    if (!url) return false;
+
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    var opened = window.open(url, '_blank');
+    if (opened) {
+      try { opened.opener = null; } catch (error) {}
+    } else {
+      window.location.href = url;
+    }
+    return true;
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
+    openMobilePdf(event, trigger);
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
+    openMobilePdf(event, trigger);
+  }, true);
+})();
