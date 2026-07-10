@@ -133,9 +133,9 @@ permalink: /teaching/
             </div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
-            <p class="meta">University of Arizona</p>
-            <h3>Islamic Civilization: Traditional and Modern</h3>
+          <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/global-islam-preview.jpg' | relative_url }}" alt="Islamic Civilization"></div>
+            <div class="course-card-body"><p class="meta">University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
           </article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>

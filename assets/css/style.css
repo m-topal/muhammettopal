@@ -3104,7 +3104,7 @@ body.course-modal-open {
 
 .teaching-assistantship-card .course-card-image img {
   object-position: center center !important;
-  filter: grayscale(100%) contrast(1.04) !important;
+  filter: none !important;
 }
 
 .course-card-with-image .course-card-image,
