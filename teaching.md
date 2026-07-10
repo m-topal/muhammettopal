@@ -135,7 +135,7 @@ permalink: /teaching/
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
             <div class="course-card-image"><img src="{{ '/assets/img/teaching/islamic-civilization-preview.webp' | relative_url }}" alt="The Kaaba and the Grand Mosque in Mecca"></div>
-            <div class="course-card-body"><p class="meta">University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
+            <div class="course-card-body"><p class="meta">MENA 150 · University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
           </article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.webp' | relative_url }}" alt="Frontispiece of Thomas Hobbes's Leviathan"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
@@ -163,7 +163,7 @@ permalink: /teaching/
           <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">MENA 150 · University of Arizona</p>
               <h3 id="islamic-civilization-title">Islamic Civilization: Traditional and Modern</h3>
               <p>In this course, I assisted students in studying Islamic civilization across traditional and modern contexts. My work included supporting lectures and discussions, grading written assignments, holding office hours, and helping students connect texts, institutions, historical change, and religious traditions.</p>
             </div>
@@ -219,7 +219,9 @@ permalink: /teaching/
           <h2>Other Teaching Experience</h2>
         </div>
 
-        <div class="teaching-shelf-row">
+        <div class="teaching-slider-frame" data-slider-label="Slide for more other teaching courses">
+          <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll other teaching courses left">‹</button>
+          <div class="teaching-shelf-row other-teaching-course-row">
           <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
             <div class="course-card-image"><img src="{{ '/assets/img/teaching/world-history-preview.jpg' | relative_url }}" alt="Historic world map used as preview for World History"></div>
             <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
@@ -234,6 +236,8 @@ permalink: /teaching/
             <div class="course-card-image"><img src="{{ '/assets/img/teaching/continental-philosophy-preview.jpeg' | relative_url }}" alt="Raphael's School of Athens used as preview for Continental Philosophy"></div>
             <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Continental Philosophy</h3></div>
           </article>
+          </div>
+          <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll other teaching courses right">›</button>
         </div>
       </section>
 

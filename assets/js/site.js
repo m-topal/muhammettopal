@@ -2204,12 +2204,6 @@ window.addEventListener("resize", updateReadingProgress);
   function pdfUrlForTrigger(trigger) {
     if (!trigger) return '';
 
-    if (trigger.matches('.cv-modal-trigger[data-cv-modal]')) {
-      var cvModal = document.getElementById(trigger.getAttribute('data-cv-modal'));
-      var cvFrame = cvModal ? cvModal.querySelector('.cv-modal-frame') : null;
-      return cvFrame ? cvFrame.getAttribute('src').split('#')[0] : '';
-    }
-
     if (trigger.matches('.course-modal-trigger[data-course-modal]')) {
       var courseModal = document.getElementById(trigger.getAttribute('data-course-modal'));
       if (!courseModal || !courseModal.classList.contains('syllabus-modal')) return '';
@@ -2239,13 +2233,13 @@ window.addEventListener("resize", updateReadingProgress);
   }
 
   document.addEventListener('click', function (event) {
-    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
+    var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
     openMobilePdf(event, trigger);
   }, true);
 
   document.addEventListener('keydown', function (event) {
     if (event.key !== 'Enter' && event.key !== ' ') return;
-    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
+    var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
     openMobilePdf(event, trigger);
   }, true);
 })();
