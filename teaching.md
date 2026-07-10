@@ -51,7 +51,7 @@ permalink: /teaching/
 
           <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="religion-islam-modal" tabindex="0" role="button" aria-label="Open details for Global Islam">
             <div class="course-card-image">
-              <img src="{{ '/assets/img/teaching/global-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
+              <img src="{{ '/assets/img/teaching/religion-of-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
             </div>
             <div class="course-card-body">
               <p class="meta">MENA, REL 160B · University of Arizona</p>
@@ -101,6 +101,7 @@ permalink: /teaching/
               <h3 id="religion-islam-title">Religion of Islam</h3>
               <p>This course provides an overview of the Qur’an, the life and teachings of Prophet Muhammed, and the differences between Sunni and Shi‘i Islam. Students also receive an introduction to Islamic intellectual traditions and cultures while examining Muslim societies across time and place.</p>
               <p class="course-taught">Taught in: Summer 2022</p>
+              <p><a class="course-card-action" href="{{ '/assets/syllabi/religion-of-islam-syllabus.pdf' | relative_url }}">Course syllabus (PDF)</a></p>
             </div>
             <figure class="course-modal-flyer js-lightbox-figure">
               <img class="js-lightbox-image" src="{{ '/assets/img/teaching/religion-of-islam-flyer.png' | relative_url }}" alt="Flyer for Religion of Islam">
