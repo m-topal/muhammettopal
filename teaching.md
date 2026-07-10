@@ -49,9 +49,9 @@ permalink: /teaching/
             </div>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="religion-islam-modal" tabindex="0" role="button" aria-label="Open details for Religion of Islam">
+          <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="religion-islam-modal" tabindex="0" role="button" aria-label="Open details for Global Islam">
             <div class="course-card-image">
-              <img src="{{ '/assets/img/teaching/religion-of-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
+              <img src="{{ '/assets/img/teaching/global-islam-preview.jpg' | relative_url }}" alt="Blue mosque tile detail">
             </div>
             <div class="course-card-body">
               <p class="meta">MENA, REL 160B · University of Arizona</p>
@@ -119,10 +119,8 @@ permalink: /teaching/
         <div class="teaching-slider-frame" data-slider-label="Slide for more courses">
           <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll co-teaching courses left">‹</button>
           <div class="teaching-shelf-row co-teaching-course-row">
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
-            <p class="meta">University of Arizona</p>
-            <h3>Middle Eastern Humanities</h3>
-          </article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
+<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Historic Constantinople"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="people-history-modern-middle-east-modal" tabindex="0" role="button" aria-label="Open syllabus for A People’s History of the Modern Middle East">
             <div class="course-card-image">
@@ -139,15 +137,9 @@ permalink: /teaching/
             <h3>Islamic Civilization: Traditional and Modern</h3>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0" role="button" aria-label="Open details for What is Politics?">
-            <p class="meta">University of Arizona</p>
-            <h3>What is Politics?</h3>
-          </article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0" role="button" aria-label="Open details for The Roman Empire: Rulers and Ruled">
-            <p class="meta">University of Arizona</p>
-            <h3>The Roman Empire: Rulers and Ruled</h3>
-          </article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
           </div>
           <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll co-teaching courses right">›</button>
         </div>
@@ -159,7 +151,7 @@ permalink: /teaching/
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
               <h3 id="middle-eastern-humanities-title">Middle Eastern Humanities</h3>
-              <p>In this course, I supported instruction in Middle Eastern humanities through discussion facilitation, reading guidance, office hours, grading, and feedback on student work. The course introduced students to cultural, historical, literary, and religious materials from the Middle East while helping them practice close reading and comparative interpretation.</p>
+              <p>Middle Eastern Humanities introduces students to the values, traditions, and development of Middle Eastern (largely Islamic and Arab) culture and civilization. This course is designed to familiarize students with achievements in art, architecture, literature and popular culture of the Middle East, to help students understand these achievements in their social and cultural contexts, and to consider the historical evolution of our knowledge and understanding of these achievements. Students exiting this course should have gained a sound understanding of the geographical extent and variety, historic significance, cultural contributions, and ongoing importance of this region of the world.</p><p>The introduction to the course focuses first on pernicious stereotyping of the Middle East, as well as physical and human geography of the region from North Africa to Iran. Part One explores agriculture and food traditions as a neglected area of the humanities. Part Two considers the rise of Islam in the context of Judaism and Christianity as well as tribal paganism. Part Three considers the aesthetic and cultural traditions of the region (literature, art, architecture, urbanism, music and dance) in the context of Islamic and traditional values. Part Four introduces nationalism and secularism and new communication technologies to frame the politicization of religion and cultural values.</p>
             </div>
           </div>
         </div>
