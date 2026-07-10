@@ -220,19 +220,19 @@ permalink: /teaching/
         </div>
 
         <div class="teaching-shelf-row">
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>World History</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/world-history-preview.jpg' | relative_url }}" alt="Historic world map used as preview for World History"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>Human Geography</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/human-geography-preview.jpeg' | relative_url }}" alt="Hands painted with a world map used as preview for Human Geography"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Human Geography</h3></div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>Continental Philosophy</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/continental-philosophy-preview.jpeg' | relative_url }}" alt="Raphael's School of Athens used as preview for Continental Philosophy"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Continental Philosophy</h3></div>
           </article>
         </div>
       </section>
