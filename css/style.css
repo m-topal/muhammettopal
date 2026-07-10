@@ -9177,3 +9177,75 @@ main {
 .about-page .topal-live-about-divider {
   display: none !important;
 }
+
+
+/* v131: syllabus links, text-only course popups, and reliable multi-page mobile CV */
+.course-modal-dialog.course-modal-dialog-text-only {
+  width: min(820px, calc(100vw - 42px)) !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.course-modal-dialog-text-only .course-modal-text {
+  min-width: 0 !important;
+  max-width: none !important;
+  padding-right: 42px !important;
+}
+
+.course-modal-dialog-text-only .course-modal-text p {
+  max-width: none !important;
+}
+
+.cv-mobile-pages,
+.cv-modal-mobile-pages {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .course-modal-dialog.course-modal-dialog-text-only {
+    width: calc(100vw - 24px) !important;
+  }
+
+  .course-modal-dialog-text-only .course-modal-text {
+    padding-right: 0 !important;
+  }
+
+  .cv-frame-desktop,
+  .cv-modal-frame {
+    display: none !important;
+  }
+
+  .cv-mobile-pages,
+  .cv-modal-mobile-pages {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .cv-mobile-pages img,
+  .cv-modal-mobile-pages img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .cv-modal-dialog {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cv-modal-mobile-pages {
+    padding-bottom: 4px;
+  }
+}
+
+/* Co-teaching course images: display source color, except the People's History card. */
+.teaching-continuous-page .co-teaching-course-row .teaching-assistantship-card .course-card-image img {
+  filter: none !important;
+}
+
+.teaching-continuous-page .co-teaching-course-row [data-course-modal="people-history-modern-middle-east-modal"] .course-card-image img {
+  filter: grayscale(100%) contrast(1.04) !important;
+}
