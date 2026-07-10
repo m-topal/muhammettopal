@@ -1,0 +1,48 @@
+website_patch.zip — changed files only
+========================================
+
+1) teaching.md
+   - Fixed/added course codes in the Co-Teaching section (cards + popups + syllabus
+     header) to match the CV:
+       Middle Eastern Humanities:            MENAS 160A2  ->  MENA 160A  (was wrong; also added to popup)
+       A People's History of the Modern ME:  HIST/MENA 277B -> MENA 277  (was wrong; also fixed in syllabus popup header)
+       Islamic Civilization: Trad. & Modern: (missing)     ->  MENA 150  (added to card + popup)
+       What is Politics?:                    POL 201       ->  POL 150  (was wrong; fixed in card + popup)
+       The Roman Empire: Rulers and Ruled:   HIST 205      ->  CLAS 335 (was wrong; fixed in card + popup)
+
+   - Religion of Islam popup already had its syllabus PDF link, left as is.
+
+   - NOT DONE: Middle Eastern Humanities syllabus link. There is no syllabus file
+     for this course anywhere in the zip (only assets/syllabi/religion-of-islam-syllabus.pdf
+     and assets/syllabi/people-history-modern-middle-east-syllabus.pdf/.docx exist).
+     Send me the Middle Eastern Humanities syllabus (PDF, ideally also DOCX) and I'll
+     drop it into assets/syllabi/ and wire up the popup link + "Open PDF" action, same
+     pattern as the People's History popup.
+
+2) cv.md
+   - Added a mobile-only fallback block under the CV iframe with "Open CV PDF" and
+     "Download CV PDF" buttons.
+
+3) assets/css/style.css (the real stylesheet, linked from _layouts/default.html —
+   the stray style.css / css/style.css / js/site.js copies at repo root are unused
+   leftovers and were left untouched)
+   - Popup gap fix: .course-modal-dialog reserves a second grid column for the flyer
+     image. Popups without an image (Middle Eastern Humanities, Islamic Civilization,
+     What is Politics?, Roman Empire, certificate cards, etc.) were left with an empty
+     gap on the right. Added a rule so a dialog with no .course-modal-flyer collapses
+     to a single column and the text flows full width.
+   - CV mobile fix: on mobile browsers, PDFs embedded in an <iframe> commonly render
+     only the first page as a static, non-scrollable image (this is a mobile browser/
+     iframe limitation, not something fixable with iframe height alone). Rather than
+     leave a half-broken preview, on screens <=900px the iframe is now hidden and the
+     new .cv-mobile-fallback block (from cv.md) is shown, giving direct "Open" and
+     "Download" buttons that hand the PDF to the phone's native, fully scrollable PDF
+     viewer.
+
+HOW TO APPLY
+------------
+Copy these files into your repo at the same paths, overwriting the existing ones:
+  teaching.md
+  cv.md
+  assets/css/style.css
+Commit and push — no other files need to change.

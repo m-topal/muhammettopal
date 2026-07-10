@@ -121,26 +121,26 @@ permalink: /teaching/
           <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll co-teaching courses left">‹</button>
           <div class="teaching-shelf-row co-teaching-course-row">
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
-<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Historic Constantinople"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
+<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Historic Constantinople"></div><div class="course-card-body"><p class="meta">MENA 160A · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="people-history-modern-middle-east-modal" tabindex="0" role="button" aria-label="Open syllabus for A People’s History of the Modern Middle East">
             <div class="course-card-image">
               <img src="{{ '/assets/img/teaching/people-history-modern-middle-east-preview.png' | relative_url }}" alt="Busy street in late Ottoman Istanbul used as preview for A People’s History of the Modern Middle East">
             </div>
             <div class="course-card-body">
-              <p class="meta">HIST/MENA 277B · University of Arizona</p>
+              <p class="meta">MENA 277 · University of Arizona</p>
               <h3>A People’s History of the Modern Middle East</h3>
             </div>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/global-islam-preview.jpg' | relative_url }}" alt="Islamic Civilization"></div>
-            <div class="course-card-body"><p class="meta">University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
+          <article class="teaching-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
+            <p class="meta">MENA 150 · University of Arizona</p>
+            <h3>Islamic Civilization: Traditional and Modern</h3>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 150 · University of Arizona</p><h3>What is Politics?</h3></div></article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">CLAS 335 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
           </div>
           <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll co-teaching courses right">›</button>
         </div>
@@ -150,7 +150,7 @@ permalink: /teaching/
           <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">MENA 160A · University of Arizona</p>
               <h3 id="middle-eastern-humanities-title">Middle Eastern Humanities</h3>
               <p>Middle Eastern Humanities introduces students to the values, traditions, and development of Middle Eastern (largely Islamic and Arab) culture and civilization. This course is designed to familiarize students with achievements in art, architecture, literature and popular culture of the Middle East, to help students understand these achievements in their social and cultural contexts, and to consider the historical evolution of our knowledge and understanding of these achievements. Students exiting this course should have gained a sound understanding of the geographical extent and variety, historic significance, cultural contributions, and ongoing importance of this region of the world.</p><p>The introduction to the course focuses first on pernicious stereotyping of the Middle East, as well as physical and human geography of the region from North Africa to Iran. Part One explores agriculture and food traditions as a neglected area of the humanities. Part Two considers the rise of Islam in the context of Judaism and Christianity as well as tribal paganism. Part Three considers the aesthetic and cultural traditions of the region (literature, art, architecture, urbanism, music and dance) in the context of Islamic and traditional values. Part Four introduces nationalism and secularism and new communication technologies to frame the politicization of religion and cultural values.</p>
             </div>
@@ -161,7 +161,7 @@ permalink: /teaching/
           <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">MENA 150 · University of Arizona</p>
               <h3 id="islamic-civilization-title">Islamic Civilization: Traditional and Modern</h3>
               <p>In this course, I assisted students in studying Islamic civilization across traditional and modern contexts. My work included supporting lectures and discussions, grading written assignments, holding office hours, and helping students connect texts, institutions, historical change, and religious traditions.</p>
             </div>
@@ -172,7 +172,7 @@ permalink: /teaching/
           <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">POL 150 · University of Arizona</p>
               <h3 id="what-is-politics-title">What is Politics?</h3>
               <p>In this course, I supported instruction in political thought, institutions, concepts, and public life. I worked with students on reading difficult texts, clarifying conceptual vocabulary, developing arguments, and connecting political ideas to historical and contemporary examples.</p>
             </div>
@@ -183,7 +183,7 @@ permalink: /teaching/
           <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">CLAS 335 · University of Arizona</p>
               <h3 id="roman-empire-title">The Roman Empire: Rulers and Ruled</h3>
               <p>In this course, I supported instruction on the Roman Empire with attention to rule, society, power, and historical comparison. My work involved grading, student support, and helping students understand ancient sources, imperial structures, and relations between rulers and ruled.</p>
             </div>
@@ -195,7 +195,7 @@ permalink: /teaching/
             <button class="course-modal-close" type="button" aria-label="Close syllabus">×</button>
 
             <div class="syllabus-modal-header">
-              <p class="meta">HIST/MENA 277B · Spring 2022 · University of Arizona</p>
+              <p class="meta">MENA 277 · Spring 2022 · University of Arizona</p>
               <h3 id="people-history-modern-middle-east-title">A People’s History of the Modern Middle East</h3>
               <p>
                 <a class="course-card-action" href="{{ '/assets/syllabi/people-history-modern-middle-east-syllabus.pdf' | relative_url }}" target="_blank" rel="noopener">Open PDF in new tab</a>
