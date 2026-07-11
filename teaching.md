@@ -219,7 +219,9 @@ permalink: /teaching/
           <h2>Other Teaching Experience</h2>
         </div>
 
-        <div class="teaching-shelf-row">
+        <div class="teaching-slider-frame" data-slider-label="Slide for more other teaching experience courses">
+          <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll other teaching experience courses left">‹</button>
+          <div class="teaching-shelf-row co-teaching-course-row other-teaching-course-row">
           <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
             <div class="course-card-image"><img src="{{ '/assets/img/teaching/world-history-preview.jpg' | relative_url }}" alt="Historic world map used as preview for World History"></div>
             <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
@@ -234,6 +236,8 @@ permalink: /teaching/
             <div class="course-card-image"><img src="{{ '/assets/img/teaching/continental-philosophy-preview.jpeg' | relative_url }}" alt="Raphael's School of Athens used as preview for Continental Philosophy"></div>
             <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Continental Philosophy</h3></div>
           </article>
+          </div>
+          <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll other teaching experience courses right">›</button>
         </div>
       </section>
 

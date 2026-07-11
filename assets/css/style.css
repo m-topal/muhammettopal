@@ -9360,3 +9360,45 @@ main {
     width: calc(100vw - 24px) !important;
   }
 }
+
+
+/* v135: Other Teaching carousel and compact modal typography */
+.teaching-continuous-page .other-teaching-course-row {
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: minmax(285px, 360px) !important;
+  grid-template-columns: none !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  padding: 0 2px 16px !important;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teaching-continuous-page .other-teaching-course-row .teaching-course-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  scroll-snap-align: start;
+}
+
+/* All Teaching popups use 1.25 line spacing and no paragraph gaps. */
+.teaching-continuous-page .course-modal-text {
+  line-height: 1.25 !important;
+}
+
+.teaching-continuous-page .course-modal-text p {
+  line-height: 1.25 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-continuous-page .other-teaching-course-row {
+    grid-auto-columns: minmax(260px, 82vw) !important;
+  }
+}
