@@ -227,9 +227,9 @@ permalink: /teaching/
             <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
           </article>
 
-          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/human-geography-preview.jpeg' | relative_url }}" alt="Hands painted with a world map used as preview for Human Geography"></div>
-            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Human Geography</h3></div>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human and Natural Geography">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/human-geography-preview.jpeg' | relative_url }}" alt="Hands painted with a world map used as preview for Human and Natural Geography"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Human and Natural Geography</h3></div>
           </article>
 
           <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
@@ -247,7 +247,7 @@ permalink: /teaching/
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
             <h3 id="world-history-title">World History</h3>
-            <p>I taught world history to senior high school students and recent graduates preparing for competitive university entrance exams. The course combined broad historical narratives with focused explanation of key concepts, chronologies, and patterns of political, social, and cultural change.</p>
+            <p>I taught world history through a comparative framework connecting the Ottoman Empire, Europe, the Middle East, and Turkey. The course emphasized chronology, causation, continuity and change, historical comparison, and the interpretation of sources across major political, social, economic, and intellectual transformations.</p>
           </div>
         </div>
       </div>
@@ -257,8 +257,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
-            <h3 id="human-geography-title">Human Geography</h3>
-            <p>I taught human geography through conceptual and exam oriented instruction connecting space, society, population, environment, and historical change. The course emphasized clear explanation, visual reasoning, and the translation of broad geographic concepts into concrete examples.</p>
+            <h3 id="human-geography-title">Human and Natural Geography</h3>
+            <p>I taught human and natural geography as the study of relationships between people, places, environments, and spatial processes. Topics included climate, landforms, water systems, population, migration, settlement, urbanization, economic activity, natural hazards, and environmental change, with regular use of maps, graphs, and geographical data.</p>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@ permalink: /teaching/
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
             <h3 id="continental-philosophy-title">Continental Philosophy</h3>
-            <p>I taught continental philosophy by helping students move between broad intellectual narratives and concrete examples. The course required translating difficult concepts into accessible language while preserving their historical and theoretical complexity.</p>
+            <p>I taught philosophy through major questions concerning knowledge, reality, ethics, politics, religion, art, freedom, and human existence. Particular attention was given to continental traditions, modernity, subjectivity, history, society, power, alienation, and meaning, alongside close reading, conceptual analysis, and argumentation.</p>
           </div>
         </div>
       </div>
