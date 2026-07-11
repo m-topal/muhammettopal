@@ -9271,3 +9271,65 @@ main {
     border-bottom: 0;
   }
 }
+
+
+/* Corrective College Teaching card and modal styles */
+.teaching-continuous-page .certificate-coursework-cards .certificate-card {
+  min-height: 0 !important;
+  padding: 16px 18px 18px !important;
+  overflow: hidden;
+}
+
+.teaching-continuous-page .certificate-card-image {
+  width: 92px !important;
+  height: 66px !important;
+  margin: 0 auto 10px !important;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 8px;
+  background: #f7f2ea;
+}
+
+.teaching-continuous-page .certificate-card-image img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > .meta,
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > h3 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* These six popups contain no image, so they use one compact text column. */
+.teaching-continuous-page .certificate-detail-modal .course-modal-dialog {
+  width: min(720px, calc(100vw - 40px)) !important;
+  max-width: 720px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.teaching-continuous-page .certificate-detail-modal .course-modal-text {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding-right: 24px !important;
+}
+
+@media (max-width: 700px) {
+  .teaching-continuous-page .certificate-card-image {
+    width: 82px !important;
+    height: 59px !important;
+  }
+
+  .teaching-continuous-page .certificate-detail-modal .course-modal-dialog {
+    width: calc(100vw - 24px) !important;
+  }
+
+  .teaching-continuous-page .certificate-detail-modal .course-modal-text {
+    padding-right: 0 !important;
+  }
+}

@@ -121,7 +121,7 @@ permalink: /teaching/
           <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll co-teaching courses left">‹</button>
           <div class="teaching-shelf-row co-teaching-course-row">
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
-<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Historic Constantinople"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
+<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Panoramic view of late Ottoman Istanbul from Galata Bridge"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="people-history-modern-middle-east-modal" tabindex="0" role="button" aria-label="Open syllabus for A People’s History of the Modern Middle East">
             <div class="course-card-image">
@@ -133,35 +133,37 @@ permalink: /teaching/
             </div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
-            <p class="meta">University of Arizona</p>
-            <h3>Islamic Civilization: Traditional and Modern</h3>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/islamic-civilization-preview.webp' | relative_url }}" alt="The Kaaba and the Grand Mosque in Mecca"></div>
+            <div class="course-card-body"><p class="meta">MENA 150 · University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.webp' | relative_url }}" alt="Frontispiece of Thomas Hobbes's Leviathan"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}" alt="Roman imperial procession with Emperor Trajan"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
           </div>
           <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll co-teaching courses right">›</button>
         </div>
       </section>
 
         <div class="course-modal" id="middle-eastern-humanities-modal" hidden>
-          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
+          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
               <h3 id="middle-eastern-humanities-title">Middle Eastern Humanities</h3>
               <p>Middle Eastern Humanities introduces students to the values, traditions, and development of Middle Eastern (largely Islamic and Arab) culture and civilization. This course is designed to familiarize students with achievements in art, architecture, literature and popular culture of the Middle East, to help students understand these achievements in their social and cultural contexts, and to consider the historical evolution of our knowledge and understanding of these achievements. Students exiting this course should have gained a sound understanding of the geographical extent and variety, historic significance, cultural contributions, and ongoing importance of this region of the world.</p><p>The introduction to the course focuses first on pernicious stereotyping of the Middle East, as well as physical and human geography of the region from North Africa to Iran. Part One explores agriculture and food traditions as a neglected area of the humanities. Part Two considers the rise of Islam in the context of Judaism and Christianity as well as tribal paganism. Part Three considers the aesthetic and cultural traditions of the region (literature, art, architecture, urbanism, music and dance) in the context of Islamic and traditional values. Part Four introduces nationalism and secularism and new communication technologies to frame the politicization of religion and cultural values.</p>
+              <p class="course-taught">Co-taught in: Fall 2022, Spring 2023</p>
+              <p><a class="course-card-action" href="{{ '/assets/syllabi/middle-eastern-humanities-syllabus.pdf' | relative_url }}" target="_blank" rel="noopener">Course syllabus (PDF)</a></p>
             </div>
           </div>
         </div>
 
         <div class="course-modal" id="islamic-civilization-modal" hidden>
-          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
+          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">University of Arizona</p>
+              <p class="meta">MENA 150 · University of Arizona</p>
               <h3 id="islamic-civilization-title">Islamic Civilization: Traditional and Modern</h3>
               <p>In this course, I assisted students in studying Islamic civilization across traditional and modern contexts. My work included supporting lectures and discussions, grading written assignments, holding office hours, and helping students connect texts, institutions, historical change, and religious traditions.</p>
             </div>
@@ -169,7 +171,7 @@ permalink: /teaching/
         </div>
 
         <div class="course-modal" id="what-is-politics-modal" hidden>
-          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
+          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
@@ -180,7 +182,7 @@ permalink: /teaching/
         </div>
 
         <div class="course-modal" id="roman-empire-modal" hidden>
-          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
+          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
@@ -218,19 +220,19 @@ permalink: /teaching/
         </div>
 
         <div class="teaching-shelf-row">
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>World History</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/world-history-preview.jpg' | relative_url }}" alt="Historic world map used as preview for World History"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>Human Geography</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/human-geography-preview.jpeg' | relative_url }}" alt="Hands painted with a world map used as preview for Human Geography"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Human Geography</h3></div>
           </article>
 
-          <article class="teaching-course-card course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
-            <p class="meta">Eylül Academy · Istanbul</p>
-            <h3>Continental Philosophy</h3>
+          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
+            <div class="course-card-image"><img src="{{ '/assets/img/teaching/continental-philosophy-preview.jpeg' | relative_url }}" alt="Raphael's School of Athens used as preview for Continental Philosophy"></div>
+            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Continental Philosophy</h3></div>
           </article>
         </div>
       </section>
@@ -292,7 +294,7 @@ permalink: /teaching/
 
         <div class="certificate-card-grid">
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
-            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/course-design.jpg' | relative_url }}" alt="Course design planning materials"></div>
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/course-design.jpg' | relative_url }}" alt="Course design illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Course Design</h3>
           </article>
@@ -304,7 +306,7 @@ permalink: /teaching/
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-sensitive-subjects-modal" role="button" tabindex="0" aria-label="Open teaching sensitive subjects details">
-            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-sensitive-subjects.jpg' | relative_url }}" alt="Teaching sensitive subjects discussion illustration"></div>
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-sensitive-subjects.jpg' | relative_url }}" alt="Teaching sensitive subjects illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching Sensitive Subjects</h3>
           </article>
@@ -380,6 +382,7 @@ permalink: /teaching/
             <h3 id="certificate-tar-title">Teaching as Research</h3>
             <p>Teaching as Research introduced me to teaching as a systematic and reflective form of inquiry. I learned to formulate focused questions about student learning, identify appropriate evidence, and assess whether an assignment, activity, or instructional strategy produces the learning it was designed to support.</p>
             <p>This approach helps me move beyond impressions of whether a class seemed successful. I examine student work, classroom responses, assessment results, and recurring misunderstandings, then use that evidence to revise course design and teaching practice. It has strengthened my ability to make instructional decisions through observation, analysis, and iterative improvement.</p>
+            <p><a class="inline-link" href="https://sites.google.com/view/my-tar-project/home?authuser=0" target="_blank" rel="noopener">See my Teaching as Research project</a></p>
           </div>
         </div>
       </div>
