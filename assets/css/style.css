@@ -9333,3 +9333,30 @@ main {
     padding-right: 0 !important;
   }
 }
+
+
+/* Final compact text-only teaching popups */
+.teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only {
+  width: min(760px, calc(100vw - 40px)) !important;
+  max-width: 760px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only .course-modal-text {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Certificate cards are one line tighter after removing the repeated program label. */
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > h3 {
+  margin-top: 4px !important;
+}
+
+@media (max-width: 700px) {
+  .teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only {
+    width: calc(100vw - 24px) !important;
+  }
+}

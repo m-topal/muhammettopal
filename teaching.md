@@ -238,7 +238,7 @@ permalink: /teaching/
       </section>
 
       <div class="course-modal" id="world-history-modal" hidden>
-        <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="world-history-title">
+        <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="world-history-title">
           <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
@@ -249,7 +249,7 @@ permalink: /teaching/
       </div>
 
       <div class="course-modal" id="human-geography-modal" hidden>
-        <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="human-geography-title">
+        <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="human-geography-title">
           <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
@@ -260,7 +260,7 @@ permalink: /teaching/
       </div>
 
       <div class="course-modal" id="continental-philosophy-modal" hidden>
-        <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="continental-philosophy-title">
+        <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="continental-philosophy-title">
           <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
           <div class="course-modal-text">
             <p class="meta">Eylül Academy · Istanbul</p>
@@ -295,37 +295,31 @@ permalink: /teaching/
         <div class="certificate-card-grid">
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/course-design.jpg' | relative_url }}" alt="Course design illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Course Design</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-learner-centered-modal" role="button" tabindex="0" aria-label="Open learner centered teaching details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/learner-centered-teaching.jpg' | relative_url }}" alt="Learner centered teaching illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Learner Centered Teaching</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-sensitive-subjects-modal" role="button" tabindex="0" aria-label="Open teaching sensitive subjects details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-sensitive-subjects.jpg' | relative_url }}" alt="Teaching sensitive subjects illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching Sensitive Subjects</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-technology-modal" role="button" tabindex="0" aria-label="Open teaching and learning technologies details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-learning-technologies.jpg' | relative_url }}" alt="Teaching and learning technologies illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching and Learning Technologies</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-tar-modal" role="button" tabindex="0" aria-label="Open teaching as research details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-as-research.jpg' | relative_url }}" alt="Teaching as research illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching as Research</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-practice-modal" role="button" tabindex="0" aria-label="Open college teaching practice details">
             <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/college-teaching-practice.jpg' | relative_url }}" alt="College teaching practice illustration"></div>
-            <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>College Teaching Practice</h3>
           </article>
         </div>
