@@ -17,7 +17,7 @@ permalink: /
 
 <p>My academic training has taken me through Istanbul, Paris, and Tucson. I received my BA in History from Boğaziçi University, studied political science at Sciences Po, completed an MA at the École pratique des hautes études in Paris while also following courses at EHESS and working at ENS Ulm, and continued my doctoral work at the University of Arizona. Across these places, my work has remained centered on Ottoman and post-Ottoman intellectual life, historiography, politics, literature and print culture, biography and social networks, as well as the relationship between individuals and society, institutions and state structures.</p>
 
-    <p class="home-links">For more details, see my <button class="cv-modal-trigger home-cv-link" type="button" data-cv-modal="homeCvModal">CV</button>.</p>
+    <p class="home-links">For more details, see my <button class="home-inline-cv-link cv-modal-trigger" type="button" data-cv-modal="homeCvModal">CV</button>.</p>
   </div>
 </section>
 
@@ -25,21 +25,18 @@ permalink: /
   <div class="cv-modal-dialog">
     <button class="cv-modal-close" type="button" aria-label="Close CV preview">×</button>
     <div class="cv-modal-header">
-      <div>
-        <p class="label">CV</p>
-        <h2 id="homeCvModalTitle">Curriculum Vitae</h2>
-      </div>
+      <div><p class="label">CV</p><h2 id="homeCvModalTitle">Curriculum Vitae</h2></div>
       <div class="cv-modal-actions">
         <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
         <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" download>Download PDF</a>
       </div>
     </div>
-    <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1&view=FitH" title="Muhammet Topal CV PDF"></iframe>
-    <div class="cv-modal-mobile-pages" aria-label="Muhammet Topal CV, four pages">
-      <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_1.jpg' | relative_url }}" alt="Muhammet Topal CV, page 1" loading="eager">
-      <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_2.jpg' | relative_url }}" alt="Muhammet Topal CV, page 2" loading="lazy">
-      <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_3.jpg' | relative_url }}" alt="Muhammet Topal CV, page 3" loading="lazy">
-      <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_4.jpg' | relative_url }}" alt="Muhammet Topal CV, page 4" loading="lazy">
+    <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1" title="Muhammet Topal CV PDF"></iframe>
+    <div class="cv-mobile-pages" aria-label="Muhammet Topal CV pages">
+      <img src="{{ '/assets/cv/pages/cv-page-1.jpg' | relative_url }}" alt="Curriculum Vitae page 1">
+      <img src="{{ '/assets/cv/pages/cv-page-2.jpg' | relative_url }}" alt="Curriculum Vitae page 2">
+      <img src="{{ '/assets/cv/pages/cv-page-3.jpg' | relative_url }}" alt="Curriculum Vitae page 3">
+      <img src="{{ '/assets/cv/pages/cv-page-4.jpg' | relative_url }}" alt="Curriculum Vitae page 4">
     </div>
   </div>
 </div>

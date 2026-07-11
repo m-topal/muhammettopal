@@ -121,7 +121,7 @@ permalink: /teaching/
           <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll co-teaching courses left">‹</button>
           <div class="teaching-shelf-row co-teaching-course-row">
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="middle-eastern-humanities-modal" tabindex="0" role="button" aria-label="Open details for Middle Eastern Humanities">
-<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Panoramic view of late Ottoman Istanbul from Galata Bridge"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
+<div class="course-card-image"><img src="{{ '/assets/img/teaching/middle-eastern-humanities-preview.jpg' | relative_url }}" alt="Historic Constantinople"></div><div class="course-card-body"><p class="meta">MENAS 160A2 · University of Arizona</p><h3>Middle Eastern Humanities</h3></div></article>
 
           <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="people-history-modern-middle-east-modal" tabindex="0" role="button" aria-label="Open syllabus for A People’s History of the Modern Middle East">
             <div class="course-card-image">
@@ -133,37 +133,35 @@ permalink: /teaching/
             </div>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/islamic-civilization-preview.webp' | relative_url }}" alt="The Kaaba and the Grand Mosque in Mecca"></div>
-            <div class="course-card-body"><p class="meta">MENA 150 · University of Arizona</p><h3>Islamic Civilization: Traditional and Modern</h3></div>
+          <article class="teaching-course-card course-modal-trigger" data-course-modal="islamic-civilization-modal" tabindex="0" role="button" aria-label="Open details for Islamic Civilization: Traditional and Modern">
+            <p class="meta">University of Arizona</p>
+            <h3>Islamic Civilization: Traditional and Modern</h3>
           </article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.webp' | relative_url }}" alt="Frontispiece of Thomas Hobbes's Leviathan"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="what-is-politics-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/what-is-politics-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">POL 201 · University of Arizona</p><h3>What is Politics?</h3></div></article>
 
-          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}" alt="Roman imperial procession with Emperor Trajan"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
+          <article class="teaching-course-card course-card-with-image modal-course-card teaching-assistantship-card course-modal-trigger" data-course-modal="roman-empire-modal" tabindex="0"><div class="course-card-image"><img src="{{ '/assets/img/teaching/roman-empire-preview.jpg' | relative_url }}"></div><div class="course-card-body"><p class="meta">HIST 205 · University of Arizona</p><h3>The Roman Empire: Rulers and Ruled</h3></div></article>
           </div>
           <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll co-teaching courses right">›</button>
         </div>
       </section>
 
         <div class="course-modal" id="middle-eastern-humanities-modal" hidden>
-          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
+          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="middle-eastern-humanities-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
               <h3 id="middle-eastern-humanities-title">Middle Eastern Humanities</h3>
               <p>Middle Eastern Humanities introduces students to the values, traditions, and development of Middle Eastern (largely Islamic and Arab) culture and civilization. This course is designed to familiarize students with achievements in art, architecture, literature and popular culture of the Middle East, to help students understand these achievements in their social and cultural contexts, and to consider the historical evolution of our knowledge and understanding of these achievements. Students exiting this course should have gained a sound understanding of the geographical extent and variety, historic significance, cultural contributions, and ongoing importance of this region of the world.</p><p>The introduction to the course focuses first on pernicious stereotyping of the Middle East, as well as physical and human geography of the region from North Africa to Iran. Part One explores agriculture and food traditions as a neglected area of the humanities. Part Two considers the rise of Islam in the context of Judaism and Christianity as well as tribal paganism. Part Three considers the aesthetic and cultural traditions of the region (literature, art, architecture, urbanism, music and dance) in the context of Islamic and traditional values. Part Four introduces nationalism and secularism and new communication technologies to frame the politicization of religion and cultural values.</p>
-              <p class="course-taught">Co-taught in: Fall 2022, Spring 2023</p>
-              <p><a class="course-card-action" href="{{ '/assets/syllabi/middle-eastern-humanities-syllabus.pdf' | relative_url }}" target="_blank" rel="noopener">Course syllabus (PDF)</a></p>
             </div>
           </div>
         </div>
 
         <div class="course-modal" id="islamic-civilization-modal" hidden>
-          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
+          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="islamic-civilization-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
-              <p class="meta">MENA 150 · University of Arizona</p>
+              <p class="meta">University of Arizona</p>
               <h3 id="islamic-civilization-title">Islamic Civilization: Traditional and Modern</h3>
               <p>In this course, I assisted students in studying Islamic civilization across traditional and modern contexts. My work included supporting lectures and discussions, grading written assignments, holding office hours, and helping students connect texts, institutions, historical change, and religious traditions.</p>
             </div>
@@ -171,7 +169,7 @@ permalink: /teaching/
         </div>
 
         <div class="course-modal" id="what-is-politics-modal" hidden>
-          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
+          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="what-is-politics-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
@@ -182,7 +180,7 @@ permalink: /teaching/
         </div>
 
         <div class="course-modal" id="roman-empire-modal" hidden>
-          <div class="course-modal-dialog course-modal-dialog-text-only" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
+          <div class="course-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roman-empire-title">
             <button class="course-modal-close" type="button" aria-label="Close course details">×</button>
             <div class="course-modal-text">
               <p class="meta">University of Arizona</p>
@@ -219,25 +217,21 @@ permalink: /teaching/
           <h2>Other Teaching Experience</h2>
         </div>
 
-        <div class="teaching-slider-frame" data-slider-label="Slide for more other teaching courses">
-          <button class="teaching-slider-cue teaching-slider-cue-left" type="button" aria-label="Scroll other teaching courses left">‹</button>
-          <div class="teaching-shelf-row other-teaching-course-row">
-          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/world-history-preview.jpg' | relative_url }}" alt="Historic world map used as preview for World History"></div>
-            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>World History</h3></div>
+        <div class="teaching-shelf-row">
+          <article class="teaching-course-card course-modal-trigger" data-course-modal="world-history-modal" tabindex="0" role="button" aria-label="Open details for World History">
+            <p class="meta">Eylül Academy · Istanbul</p>
+            <h3>World History</h3>
           </article>
 
-          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/human-geography-preview.jpeg' | relative_url }}" alt="Hands painted with a world map used as preview for Human Geography"></div>
-            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Human Geography</h3></div>
+          <article class="teaching-course-card course-modal-trigger" data-course-modal="human-geography-modal" tabindex="0" role="button" aria-label="Open details for Human Geography">
+            <p class="meta">Eylül Academy · Istanbul</p>
+            <h3>Human Geography</h3>
           </article>
 
-          <article class="teaching-course-card course-card-with-image course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
-            <div class="course-card-image"><img src="{{ '/assets/img/teaching/continental-philosophy-preview.jpeg' | relative_url }}" alt="Raphael's School of Athens used as preview for Continental Philosophy"></div>
-            <div class="course-card-body"><p class="meta">Eylül Academy · Istanbul</p><h3>Continental Philosophy</h3></div>
+          <article class="teaching-course-card course-modal-trigger" data-course-modal="continental-philosophy-modal" tabindex="0" role="button" aria-label="Open details for Continental Philosophy">
+            <p class="meta">Eylül Academy · Istanbul</p>
+            <h3>Continental Philosophy</h3>
           </article>
-          </div>
-          <button class="teaching-slider-cue teaching-slider-cue-right" type="button" aria-label="Scroll other teaching courses right">›</button>
         </div>
       </section>
 
@@ -298,31 +292,37 @@ permalink: /teaching/
 
         <div class="certificate-card-grid">
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/course-design.jpg' | relative_url }}" alt="Course design planning materials"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Course Design</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-learner-centered-modal" role="button" tabindex="0" aria-label="Open learner centered teaching details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/learner-centered-teaching.jpg' | relative_url }}" alt="Learner centered teaching illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Learner Centered Teaching</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-sensitive-subjects-modal" role="button" tabindex="0" aria-label="Open teaching sensitive subjects details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-sensitive-subjects.jpg' | relative_url }}" alt="Teaching sensitive subjects discussion illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching Sensitive Subjects</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-technology-modal" role="button" tabindex="0" aria-label="Open teaching and learning technologies details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-learning-technologies.jpg' | relative_url }}" alt="Teaching and learning technologies illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching and Learning Technologies</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-tar-modal" role="button" tabindex="0" aria-label="Open teaching as research details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/teaching-as-research.jpg' | relative_url }}" alt="Teaching as research illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>Teaching as Research</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-practice-modal" role="button" tabindex="0" aria-label="Open college teaching practice details">
+            <div class="certificate-card-image"><img src="{{ '/assets/img/teaching/certificate/college-teaching-practice.jpg' | relative_url }}" alt="College teaching practice illustration"></div>
             <p class="meta">Graduate Certificate in College Teaching</p>
             <h3>College Teaching Practice</h3>
           </article>
@@ -334,8 +334,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-course-design-title">Course Design</h3>
-            <p>Course design helped me connect broad teaching goals to the actual structure of a course. I became more attentive to how weekly themes, readings, assignments, classroom activities, and assessments work together across a semester rather than appearing as separate pieces.</p>
-            <p>This work encouraged me to build courses around clear learning objectives, transparent expectations, scaffolded assignments, and skills that develop over time. It also helped me think about course rhythm: how students move from first exposure to historical material toward interpretation, discussion, writing, and independent judgment.</p>
+            <p>Through this work, I learned to approach course design as an integrated process rather than as a list of topics and readings. Beginning with the knowledge and abilities students should develop, I learned to align learning objectives, course content, classroom activities, assignments, and assessments.</p>
+            <p>This training strengthened my ability to organize material into a coherent intellectual progression, scaffold increasingly complex forms of analysis, and make expectations transparent. I apply these principles when planning course rhythm, workload, accessibility, and the movement from initial engagement with material toward interpretation, argument, and independent work.</p>
           </div>
         </div>
       </div>
@@ -345,8 +345,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-learner-centered-title">Learner Centered Teaching</h3>
-            <p>Learner Centered Teaching helped me think about teaching from the perspective of student learning rather than only instructor coverage. It encouraged me to design courses around clear goals, transparent expectations, active participation, and assignments that help students build skills over time.</p>
-            <p>In practice, this means asking what students should be able to do with the material: interpret a primary source, compare historical arguments, recognize assumptions, formulate questions, and write with evidence. It also means making the structure of the course visible so that students understand why they are doing each activity.</p>
+            <p>My study of learner centered teaching shifted my attention from what an instructor intends to cover toward what students actually experience, practice, and learn. I learned to design instruction around active intellectual participation, asking students to interpret evidence, compare perspectives, formulate questions, test claims, and reflect on their own learning.</p>
+            <p>This work also taught me to combine demanding intellectual expectations with clear guidance. I use structured discussion, low stakes practice, transparent assignments, formative feedback, and opportunities for revision to make the path toward historical and critical thinking visible without reducing its difficulty.</p>
           </div>
         </div>
       </div>
@@ -356,8 +356,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-sensitive-subjects-title">Teaching Sensitive Subjects</h3>
-            <p>Teaching sensitive subjects means creating a classroom where difficult topics can be discussed with historical care, intellectual seriousness, and mutual respect. In my courses, this includes religion, political conflict, minority histories, empire, nationalism, migration, colonialism, violence, and public debate.</p>
-            <p>I try to make these discussions structured rather than improvised. That means giving students historical context, clarifying terms, working through primary sources, distinguishing analysis from personal attack, and allowing disagreement without turning the classroom into a performance of opinion. The goal is not to avoid difficult questions, but to make students capable of approaching them responsibly.</p>
+            <p>My work on teaching sensitive subjects examined how instructors can structure responsible inquiry around politically, morally, religiously, and emotionally contested material. It considered potential topics such as settler colonialism and colonialism, minorities, violence, gender, and religion and secularism, alongside other difficult questions that may arise in courses on the Middle East and North Africa, Islam, empire, identity, state formation, and political conflict.</p>
+            <p>Through this work, I learned that difficult topics require more than an invitation to exchange opinions. They require historical framing, conceptual precision, carefully selected evidence, clear discussion norms, and activities that move students from immediate reaction toward analysis. I developed adaptable simulations, category analyses, comparative exercises, and reflective assignments that help students distinguish understanding from endorsement, productive discomfort from avoidable harm, and genuine complexity from false equivalence.</p>
           </div>
         </div>
       </div>
@@ -367,8 +367,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-technology-title">Teaching and Learning Technologies</h3>
-            <p>Technology in Teaching helped me use digital tools more deliberately. I became more attentive to when technology can support learning, such as through media analysis, digital presentations, collaborative work, and accessible course materials, and when it can distract from serious reading, writing, and interpretation.</p>
-            <p>For me, educational technology is useful when it clarifies the task, makes materials more accessible, or helps students analyze sources in new ways. It should serve reading, discussion, research, and writing rather than replace them.</p>
+            <p>My training in teaching and learning technologies taught me to evaluate digital tools according to their pedagogical purpose rather than their novelty. I learned to begin with a learning objective and then ask whether a technology can improve access, participation, collaboration, feedback, practice, or the analysis and presentation of evidence.</p>
+            <p>I use learning management systems, multimedia platforms, digital annotation, collaborative tools, recorded materials, and digital storytelling when they clarify a task or support meaningful engagement. This work also made me more attentive to accessibility, cognitive load, privacy, and unequal access, and reinforced that technology should support rather than replace sustained reading, writing, interpretation, and discussion.</p>
           </div>
         </div>
       </div>
@@ -378,9 +378,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-tar-title">Teaching as Research</h3>
-            <p>Teaching as Research introduced teaching as a reflective and evidence based practice. It encouraged me to treat classroom design, participation, and assessment as questions that can be studied, revised, and improved rather than as fixed habits.</p>
-            <p>This approach helped me think of the classroom as a place of inquiry. Instead of assuming that an activity, assignment, or assessment works because it is familiar, I learned to ask what kind of learning it produces and how that learning can be observed, evaluated, and revised.</p>
-            <p><a class="inline-link" href="https://sites.google.com/view/my-tar-project/home?authuser=0" target="_blank" rel="noopener">See my Teaching as Research project</a></p>
+            <p>Teaching as Research introduced me to teaching as a systematic and reflective form of inquiry. I learned to formulate focused questions about student learning, identify appropriate evidence, and assess whether an assignment, activity, or instructional strategy produces the learning it was designed to support.</p>
+            <p>This approach helps me move beyond impressions of whether a class seemed successful. I examine student work, classroom responses, assessment results, and recurring misunderstandings, then use that evidence to revise course design and teaching practice. It has strengthened my ability to make instructional decisions through observation, analysis, and iterative improvement.</p>
           </div>
         </div>
       </div>
@@ -390,8 +389,8 @@ permalink: /teaching/
           <button class="course-modal-close" type="button" aria-label="Close details">×</button>
           <div class="course-modal-text">
             <h3 id="certificate-practice-title">College Teaching Practice</h3>
-            <p>College Teaching Practice connected these principles to concrete teaching situations. It helped me refine syllabi, assignments, rubrics, classroom activities, and student feedback practices.</p>
-            <p>The certificate as a whole strengthened my commitment to structured, accessible, and intellectually demanding teaching. It also helped me think of teaching as an ongoing practice of adjustment: designing carefully, listening to students, reading the classroom, and revising materials so that intellectual expectations remain clear and demanding.</p>
+            <p>College Teaching Practice allowed me to connect pedagogical principles with the daily work of university instruction. Through planning, observation, practice, reflection, and feedback, I learned to translate course objectives into individual class sessions, select activities appropriate to different forms of content, communicate expectations clearly, and assess understanding while learning is still taking place.</p>
+            <p>This training strengthened my skills in lesson planning, discussion facilitation, assignment and rubric design, grading, feedback, and reflective self evaluation. I now approach each course as a continuing process of design, implementation, observation, and revision, guided by a clear plan but responsive to evidence from the classroom.</p>
           </div>
         </div>
       </div>

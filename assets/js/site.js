@@ -2233,13 +2233,13 @@ window.addEventListener("resize", updateReadingProgress);
   }
 
   document.addEventListener('click', function (event) {
-    var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
+    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
     openMobilePdf(event, trigger);
   }, true);
 
   document.addEventListener('keydown', function (event) {
     if (event.key !== 'Enter' && event.key !== ' ') return;
-    var trigger = event.target.closest('.course-modal-trigger[data-course-modal]');
+    var trigger = event.target.closest('.cv-modal-trigger[data-cv-modal], .course-modal-trigger[data-course-modal]');
     openMobilePdf(event, trigger);
   }, true);
 })();

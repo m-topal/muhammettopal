@@ -57,12 +57,12 @@ permalink: /about/
           <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" download>Download PDF</a>
         </div>
       </div>
-      <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1&view=FitH" title="Muhammet Topal CV PDF"></iframe>
-      <div class="cv-modal-mobile-pages" aria-label="Muhammet Topal CV, four pages">
-        <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_1.jpg' | relative_url }}" alt="Muhammet Topal CV, page 1" loading="eager">
-        <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_2.jpg' | relative_url }}" alt="Muhammet Topal CV, page 2" loading="lazy">
-        <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_3.jpg' | relative_url }}" alt="Muhammet Topal CV, page 3" loading="lazy">
-        <img src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July_page_4.jpg' | relative_url }}" alt="Muhammet Topal CV, page 4" loading="lazy">
+      <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1" title="Muhammet Topal CV PDF"></iframe>
+      <div class="cv-mobile-pages" aria-label="Muhammet Topal CV pages">
+        <img src="{{ '/assets/cv/pages/cv-page-1.jpg' | relative_url }}" alt="Curriculum Vitae page 1">
+        <img src="{{ '/assets/cv/pages/cv-page-2.jpg' | relative_url }}" alt="Curriculum Vitae page 2">
+        <img src="{{ '/assets/cv/pages/cv-page-3.jpg' | relative_url }}" alt="Curriculum Vitae page 3">
+        <img src="{{ '/assets/cv/pages/cv-page-4.jpg' | relative_url }}" alt="Curriculum Vitae page 4">
       </div>
     </div>
   </div>
