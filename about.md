@@ -4,13 +4,13 @@ title: About Me
 permalink: /about/
 ---
 <article class="page wide about-page teaching-continuous-page" data-scroll-sections>
-  <p class="label">About Me</p>
-  <h1>About Me</h1>
-
-  <nav class="teaching-scroll-nav" aria-label="About page sections">
+  <nav class="teaching-scroll-nav about-page-scroll-nav" aria-label="About page sections">
     <a href="#about-me">About Me</a>
     <a href="#beyond-academia">Beyond Academia</a>
   </nav>
+
+  <p class="label">About Me</p>
+  <h1>About Me</h1>
 
   <div class="about-cv-toolbar" aria-label="Curriculum vitae">
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>

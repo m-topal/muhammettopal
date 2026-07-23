@@ -9955,3 +9955,21 @@ main .nav-directory-card {
     margin-bottom: 75px !important;
   }
 }
+
+
+/* Emergency precision fix: About nav placement, title wrapping, and contact vertical spacing only. */
+.about-page > .about-page-scroll-nav {
+  margin-top: 0 !important;
+  margin-bottom: 1.55rem !important;
+}
+
+.about-page > h1 {
+  white-space: nowrap !important;
+}
+
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    margin-bottom: 0 !important;
+    padding-bottom: 56px !important;
+  }
+}
