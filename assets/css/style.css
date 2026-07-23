@@ -9916,12 +9916,13 @@ main .nav-directory-card {
   white-space: nowrap !important;
 }
 
-/* Clean Beyond Academia layout. This replaces all earlier accumulated overrides. */
+/* Clean Beyond Academia layout. Keep the left edge aligned with About,
+   while extending the section to the same right-hand reading line. */
 .about-page > #beyond-academia.about-beyond-section {
   position: static;
-  width: 100%;
-  max-width: 1040px;
-  margin: 72px auto 0;
+  width: calc(100% + 140px);
+  max-width: calc(100vw - 56px);
+  margin: 72px 0 0;
   padding: 0;
   box-sizing: border-box;
 }
