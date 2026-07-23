@@ -9402,209 +9402,230 @@ main {
     grid-auto-columns: minmax(260px, 82vw) !important;
   }
 }
-/* v184: requested typography, spacing, header, navigation, and list rhythm updates.
-   This is intentionally a narrow override block. Structural image, grid, column,
-   card, modal, and slider rules above remain intact. */
+
+/* v4-one-file-live-css: strongest targeted typography and card-background correction.
+   This edits only assets/css/style.css. No layout files, images, or page structure changed. */
+
 :root {
-  --v184-header-teal: #006871;
-  --v184-body-size: 16px;
-  --v184-line-height: 1.25;
-  --v184-paragraph-gap: 4px;
+  --v4-header-teal: #006871;
+  --v4-body-size: 16px;
+  --v4-body-line: 1;
+  --v4-page-title: 24px;
+  --v4-section-title: 21px;
+  --v4-subsection-title: 18px;
+  --v4-card-title: 18px;
 }
 
-/* Reading typography. Preserve the established 12–15px metadata, caption,
-   control, and utility sizes by targeting only reading and introductory copy. */
-body {
-  font-size: var(--v184-body-size);
-  line-height: var(--v184-line-height);
-}
-
+/* Body and reading text */
+html body,
+body,
+.site-shell,
+main,
+.page,
 .prose,
-.prose p,
-.home-intro,
-.home-intro p,
-.home-wrap-prose,
-.home-wrap-prose p,
-.two-column-prose,
-.two-column-prose p,
 .post-content,
-.post-content p,
-.experience-card p,
-.accordion-panel p,
-.lead,
-.teaching-continuous-intro,
-.research-continuous-intro,
+.home-intro,
+.home-wrap-prose,
+.two-column-prose,
 .about-dual-column,
-.about-dual-column p {
-  font-size: var(--v184-body-size) !important;
-  line-height: var(--v184-line-height) !important;
+.teaching-continuous-intro,
+.research-continuous-intro {
+  font-size: var(--v4-body-size) !important;
+  line-height: var(--v4-body-line) !important;
 }
 
-/* The visual gap between paragraphs matches the extra 4px created by
-   16px text at a 1.25 line-height. */
+.page p,
 .prose p,
+.post-content p,
 .home-intro p,
 .home-wrap-prose p,
 .two-column-prose p,
-.post-content p,
-.experience-card p,
+.about-dual-column p,
 .accordion-panel p,
-.pub-reference,
-.about-dual-column p {
-  margin-bottom: var(--v184-paragraph-gap) !important;
+.experience-card p,
+.teaching-course-card p,
+.modal-course-card p,
+.course-modal-text p,
+.certificate-card p,
+.teaching-continuous-intro p,
+.research-continuous-intro p,
+.research-scroll-section .prose p,
+.teaching-scroll-section .prose p {
+  font-size: var(--v4-body-size) !important;
+  line-height: var(--v4-body-line) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-/* Standard title hierarchy. Major section selectors are restored to 20px
-   after the general 16px rule for all other titles. */
-h1 {
-  font-size: 24px !important;
-  line-height: var(--v184-line-height) !important;
+/* Header name */
+.site-top .name,
+.top .name,
+a.name {
+  color: var(--v4-header-teal) !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.025em !important;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6,
-.accordion-title,
-.publication-trigger .accordion-title,
-.option-card span,
-.nav-directory-card span {
+/* Navigation, one underline only */
+.nav,
+.simplified-nav {
   font-size: 16px !important;
-  line-height: var(--v184-line-height) !important;
+  line-height: 1 !important;
 }
 
-.section > h2,
-.page > h2,
-.publication-category > h2,
-.teaching-scroll-section > h2,
-.research-scroll-section > h2 {
-  font-size: 20px !important;
+.nav a:not(.blog-pill),
+.simplified-nav a:not(.blog-pill) {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
 }
 
-/* Standard, restrained title-to-copy and major-section spacing. */
+.nav a:not(.blog-pill):hover,
+.nav a:not(.blog-pill):focus-visible,
+.simplified-nav a:not(.blog-pill):hover,
+.simplified-nav a:not(.blog-pill):focus-visible {
+  font-weight: 700 !important;
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 6px !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+.nav a.active:not(.blog-pill):not(:hover):not(:focus-visible),
+.simplified-nav a.active:not(.blog-pill):not(:hover):not(:focus-visible) {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Page title hierarchy */
 .home-intro h1,
-.page h1 {
-  margin-bottom: 16px !important;
+.page h1,
+.post-page h1 {
+  font-size: var(--v4-page-title) !important;
+  line-height: 1 !important;
+  margin-bottom: 14px !important;
 }
 
+/* Main section headers */
 .section > h2,
 .page > h2,
 .publication-category > h2,
 .teaching-scroll-section > h2,
-.research-scroll-section > h2 {
-  margin-bottom: 12px !important;
+.research-scroll-section > h2,
+.teaching-shelf-heading h2,
+.teaching-home-page .teaching-landing-card h2 {
+  font-size: var(--v4-section-title) !important;
+  line-height: 1 !important;
+  margin-bottom: 10px !important;
 }
 
+/* Subsection headers */
 .prose h3,
 .page h3,
-.accordion-title {
-  margin-bottom: 8px;
-}
-
-.section,
-.publication-category {
-  margin-top: 24px !important;
-}
-
-/* Header identity. The color is sampled from the teal in the existing
-   handwritten Topal artwork. */
-.site-top .site-header-wordmark-block {
-  margin-top: 3px;
-  margin-bottom: 7px;
-}
-
-.site-top .name {
-  color: var(--v184-header-teal);
-  font-size: 32px !important;
-  line-height: 1.25 !important;
-}
-
-.site-top .identity-sentence {
-  margin-top: 15px;
-}
-
-/* Move the navigation 10px farther down without changing its internal height. */
-.site-top {
-  margin-bottom: 32px;
-}
-
-.nav {
-  font-size: 16px !important;
-  line-height: var(--v184-line-height);
-}
-
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]) {
-  font-weight: 400 !important;
-  border-bottom-color: transparent !important;
-  text-decoration: none !important;
-}
-
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):hover,
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):focus-visible {
-  font-weight: 700 !important;
-  border-bottom-color: currentColor !important;
-  text-decoration: underline !important;
-  text-underline-offset: 6px;
-}
-
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]).active:not(:hover):not(:focus-visible) {
-  font-weight: 400 !important;
-  border-bottom-color: transparent !important;
-  text-decoration: none !important;
-}
-
-/* Bring publication and presentation accordion entries closer together. */
-.publication-category .accordion-trigger,
-.page > .accordion .accordion-trigger {
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
-}
-
-.publication-category .accordion-panel,
-.page > .accordion .accordion-panel {
-  padding-bottom: 16px !important;
-}
-
-.publication-category .accordion-meta,
-.page > .accordion .accordion-meta {
-  margin-bottom: 6px !important;
-}
-
-.publication-category .accordion-panel p,
-.page > .accordion .accordion-panel p {
+.teaching-shelf h3,
+.teaching-shelf-heading h3,
+.course-modal-text h3,
+.syllabus-modal-header h3,
+.share-popup-title {
+  font-size: var(--v4-subsection-title) !important;
+  line-height: 1 !important;
   margin-bottom: 8px !important;
 }
 
-/* The About page is a special two-column composition with two images floating
-   between the columns. Compact typography shortens both columns, so the image
-   anchors are proportionally raised to preserve balanced text on both sides. */
-.about-page .about-dual-wrap {
-  --dual-first-top: 190px;
-  --dual-second-top: 1030px;
+/* Card, publication, presentation, and popup titles should sit at the same level */
+.accordion-title,
+.publication-trigger .accordion-title,
+.presentation-trigger .accordion-title,
+.teaching-course-card h3,
+.modal-course-card h3,
+.course-card-body h3,
+.certificate-card h3,
+.experience-card h3,
+.option-card span,
+.nav-directory-card span,
+.course-modal-dialog h2,
+.course-modal-dialog h3,
+.course-modal-text h2,
+.course-modal-text h3 {
+  font-size: var(--v4-card-title) !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
 }
 
-/* Mobile follows the desktop hierarchy proportionally while preserving all
-   existing single-column image and card behavior. */
+/* Make publication and presentation rows visually consistent */
+.publication-category .accordion-trigger,
+.page > .accordion .accordion-trigger,
+.accordion-trigger {
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+}
+
+.publication-category .accordion-panel,
+.page > .accordion .accordion-panel,
+.accordion-panel {
+  padding-bottom: 12px !important;
+}
+
+.accordion-meta {
+  margin-bottom: 4px !important;
+}
+
+/* Remove accidental white slabs behind carousel or row groups while keeping individual cards white */
+.teaching-experience-page .teaching-shelf-row,
+.teaching-experience-page .instructor-course-row,
+.teaching-shelf-row,
+.instructor-course-row,
+.certificate-card-grid,
+.teaching-home-page .teaching-landing-cards,
+.teaching-page .teaching-options,
+.card-grid,
+.subpage-grid {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Preserve the actual cards themselves */
+.teaching-course-card,
+.modal-course-card,
+.certificate-card,
+.experience-card,
+.teaching-home-page .teaching-landing-card,
+.option-card,
+.nav-directory-card {
+  background: #fff !important;
+}
+
+/* Compact title spacing */
+.section,
+.publication-category,
+.teaching-shelf,
+.research-scroll-section,
+.teaching-scroll-section {
+  margin-top: 24px !important;
+}
+
 @media (max-width: 760px) {
-  .site-top .site-header-wordmark-block {
-    margin-top: 2px;
-    margin-bottom: 6px;
-  }
-
-  .site-top .name {
+  .site-top .name,
+  .top .name,
+  a.name {
     font-size: 28px !important;
+    font-weight: 400 !important;
   }
 
-  .site-top .identity-sentence {
-    margin-top: 12px;
-  }
-
-  .site-top {
-    margin-bottom: 24px;
-  }
-
-  h1 {
+  .home-intro h1,
+  .page h1,
+  .post-page h1 {
     font-size: 22px !important;
   }
 
@@ -9612,19 +9633,25 @@ h6,
   .page > h2,
   .publication-category > h2,
   .teaching-scroll-section > h2,
-  .research-scroll-section > h2 {
-    font-size: 18px !important;
+  .research-scroll-section > h2,
+  .teaching-shelf-heading h2 {
+    font-size: 20px !important;
   }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
   .accordion-title,
   .publication-trigger .accordion-title,
-  .option-card span,
-  .nav-directory-card span {
-    font-size: 16px !important;
+  .presentation-trigger .accordion-title,
+  .teaching-course-card h3,
+  .modal-course-card h3,
+  .course-card-body h3,
+  .certificate-card h3,
+  .experience-card h3,
+  .course-modal-dialog h2,
+  .course-modal-dialog h3,
+  .course-modal-text h2,
+  .course-modal-text h3,
+  .share-popup-title {
+    font-size: 17px !important;
   }
 }
+

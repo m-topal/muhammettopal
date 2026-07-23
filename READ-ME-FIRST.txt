@@ -1,37 +1,26 @@
-Muhammet Topal website update v3
+READ ME FIRST
 
-This ZIP contains actual replacement files, not a patch-only upload.
-
-IMPORTANT:
-Do not upload this ZIP file itself to GitHub as a website file.
-Unzip it first. Then replace these files in your repository with the files in replacement-files/:
+This ZIP changes ONE file only:
 
 assets/css/style.css
-css/style.css
-style.css
-_layouts/default.html
-_includes/footer.html
 
-The most important live files are:
-assets/css/style.css
-_layouts/default.html
+Do not upload this ZIP as a website file.
 
-After committing, wait for GitHub Pages to finish rebuilding. Then open the site in an incognito/private browser window.
+Use it this way:
+1. Unzip this ZIP.
+2. Open your GitHub repository.
+3. Go to assets/css/style.css.
+4. Replace that file with the style.css inside this ZIP.
+5. Commit the change.
+6. Open the site in an incognito/private window or hard refresh.
 
-This version also changes the stylesheet link in _layouts/default.html to:
-/assets/css/style.css?v=typography-v3
-That helps bypass the old cached CSS.
-
-Included changes:
-- Body and intro text forced to 16px.
-- Body, prose, popup, and card body line-height set to 1.
-- Paragraph gaps removed for prose/body/modal text.
-- Muhammet Topal header made teal, 32px, normal weight.
-- Navigation text set to 16px.
-- Navigation normal by default, bold and single-underlined on hover.
-- Double nav underline removed.
-- Popup titles reduced.
-- Publication and presentation titles standardized.
-- Teaching hierarchy made clearer.
-- White fade layers beside teaching carousel/card rows removed.
-- Footer text changed to: Designed and Developed by Muhammet Topal | © 2026
+This one-file update targets:
+- body text at 16px
+- body and paragraph line-height at 1
+- no extra paragraph gap
+- Muhammet Topal header normal weight, not bold
+- nav 16px with only one hover underline
+- smaller popup headers
+- consistent publication and presentation title size
+- clearer teaching title hierarchy
+- removal of the white slab behind card rows, while preserving white cards
