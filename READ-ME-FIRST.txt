@@ -1,6 +1,6 @@
 READ ME FIRST
 
-This is v7, built from the original uploaded website ZIP.
+This is v9, built from the original uploaded website ZIP.
 
 Replace these exact files in GitHub:
 assets/css/style.css
@@ -10,20 +10,20 @@ _layouts/default.html
 default.html
 _includes/footer.html
 
-Changes:
-- All normal prose/body paragraphs across pages are standardized more aggressively.
-- Body text is 17px.
-- Line-height is 1.25.
-- Paragraph başı is standardized.
-- About right-column first paragraph gets paragraph başı.
-- Home page prose is included.
-- Research, About, Teaching Statement, Teaching Certificate, Service, Diversions, Contact explanatory text, accordion panels, and popup body text are included.
-- Publications and presentations are forced to the same title style.
-- Card and popup titles stay at the closest subsection level.
-- White veil/slab behind teaching card rows is removed while actual cards remain white.
-- Contact page calendar/appointment block is pushed down to align with the first form field/name box.
-- Header name is teal and not bold.
-- Main nav has one hover underline only.
-- Layout stylesheet link is cache-busted with ?v=standard-v7.
+Core standard:
+- all body paragraphs, intros, statements, and prose text are 18px
+- line-height is 1.25
+- paragraph rhythm is standardized
+- paragraph başı is standardized, including About right-column first paragraph
 
-After committing, wait for GitHub Pages to rebuild and open the site in an incognito window.
+Specific fixes:
+- Home, About, Research, Teaching Statement, Teaching Certificate, Service, Diversions, Contact explanatory text, and popup/modal text included
+- Presentations match Publications
+- Stronger removal of white veil/slab behind teaching card rows, including pseudo-elements and fade overlays
+- Actual cards remain white
+- Contact calendar moved back upward after v7 was too low
+- Muhammet Topal header teal and not bold
+- Main nav one hover underline only
+- Stylesheet cache-busted with ?v=standard-v9
+
+After replacing files, commit, wait for GitHub Pages, then open in incognito.
