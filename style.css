@@ -9178,34 +9178,35 @@ main {
   display: none !important;
 }
 
-/* v6-standard-body-and-presentation-fix
-   Targeted final overrides only. This standardizes visible prose across Home,
-   About, Research, Teaching, Service, Diversions, Contact, and modals without
-   changing page structure, image files, or card markup. */
+/* v7-universal-prose-standard
+   Stronger final override. It standardizes actual prose paragraphs across the
+   site first, then protects labels, captions, metadata, buttons, nav, and form
+   controls so they do not accidentally become body text. */
+
 :root {
-  --v6-header-teal: #006871;
-  --v6-body-size: 17px;
-  --v6-body-line: 1.25;
-  --v6-page-title: 24px;
-  --v6-section-title: 21px;
-  --v6-subsection-title: 18px;
-  --v6-item-title: 21px;
-  --v6-card-title: 18px;
-  --v6-paragraph-indent: 1.35em;
+  --v7-header-teal: #006871;
+  --v7-body-size: 17px;
+  --v7-body-line: 1.25;
+  --v7-paragraph-indent: 1.35em;
+  --v7-page-title: 24px;
+  --v7-section-title: 21px;
+  --v7-subsection-title: 18px;
+  --v7-item-title: 21px;
+  --v7-card-title: 18px;
 }
 
-/* Site identity */
+/* Header identity */
 .site-top .name,
 .top .name,
 a.name {
-  color: var(--v6-header-teal) !important;
+  color: var(--v7-header-teal) !important;
   font-size: 32px !important;
   font-weight: 400 !important;
   line-height: 1 !important;
   letter-spacing: -0.025em !important;
 }
 
-/* Main navigation, single underline only */
+/* Main navigation, no double underline */
 .nav,
 .simplified-nav {
   font-size: 16px !important;
@@ -9244,108 +9245,135 @@ a.name {
   background-image: none !important;
 }
 
-/* Standard body/prose text across visible text areas. */
-body,
-main,
-.site-shell,
-.page,
-.prose,
-.home-wrap-prose,
-.home-wrap-prose p,
-.home-intro,
-.home-intro p,
-.two-column-prose,
-.two-column-prose p,
-.about-page .about-dual-column,
-.about-page .about-dual-column p,
-.about-page .paragraph-tight-indent p,
-.research-continuous-page .research-flow,
-.research-continuous-page .research-flow p,
-.research-continuous-page .research-continuous-intro,
-.research-continuous-page .research-continuous-intro p,
-.research-scroll-section > .prose,
-.research-scroll-section > .prose p,
-.teaching-continuous-page .teaching-continuous-intro,
-.teaching-continuous-page .teaching-continuous-intro p,
-.teaching-continuous-page .certificate-main-text,
-.teaching-continuous-page .certificate-main-text p,
-.teaching-statement-flow,
-.teaching-statement-flow p,
-.teaching-home-text,
-.teaching-home-text p,
-.teaching-shelf-intro,
-.service-flow,
-.service-flow p,
-.diversions-lead-prose,
-.diversions-lead-prose p,
-.contact-page .note,
-.contact-page .appointment-widget-copy p:not(.label),
-.accordion-panel,
-.accordion-panel p,
-.course-modal-text,
-.course-modal-text p,
-.cv-modal,
-.cv-modal p,
-.post-content,
-.post-content p {
-  font-size: var(--v6-body-size) !important;
-  line-height: var(--v6-body-line) !important;
-}
-
-/* Same paragraph rhythm everywhere that functions as prose. */
-.home-wrap-prose p,
-.home-intro p,
-.prose p,
-.page p,
-.two-column-prose p,
-.about-page .about-dual-column p,
-.about-page .paragraph-tight-indent p,
-.research-continuous-page .research-flow p,
-.research-scroll-section > .prose p,
-.teaching-continuous-page .teaching-continuous-intro p,
-.teaching-continuous-page .certificate-main-text p,
-.teaching-statement-flow p,
-.teaching-home-text p,
-.service-flow p,
-.diversions-lead-prose p,
-.accordion-panel p,
-.course-modal-text p,
-.post-content p {
+/* UNIVERSAL STANDARD FOR NORMAL BODY TEXT.
+   This is intentionally broad because older page-specific rules were escaping. */
+main p:not(.label):not(.meta):not(.year):not(.accordion-meta):not(.publication-visible-date),
+main .prose p,
+main .page p,
+main .home-wrap-prose p,
+main .home-intro p,
+main .two-column-prose p,
+main .about-dual-column p,
+main .research-flow p,
+main .teaching-continuous-intro p,
+main .certificate-main-text p,
+main .teaching-statement-flow p,
+main .teaching-home-text p,
+main .service-flow p,
+main .diversions-lead-prose p,
+main .teaching-shelf-intro,
+main .accordion-panel p,
+main .course-modal-text p,
+main .cv-modal p,
+main .post-content p {
+  font-size: var(--v7-body-size) !important;
+  line-height: var(--v7-body-line) !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* Paragraph başı standard for prose columns, including the first paragraph
-   of the About right column. */
-.paragraph-tight-indent p,
-.home-wrap-prose.paragraph-tight-indent p,
-.about-page .paragraph-tight-indent p,
-.about-page .about-dual-column-right > p:first-of-type,
-.research-flow.paragraph-tight-indent p,
-.teaching-home-text.paragraph-tight-indent p,
-.teaching-statement-flow.paragraph-tight-indent p,
-.service-flow.paragraph-tight-indent p,
-.diversions-lead-prose.paragraph-tight-indent p,
-.teaching-continuous-page .certificate-main-text.paragraph-tight-indent > p {
-  text-indent: var(--v6-paragraph-indent) !important;
+/* Also standardize prose containers so inherited text cannot differ. */
+main .prose,
+main .page,
+main .home-wrap-prose,
+main .home-intro,
+main .two-column-prose,
+main .about-dual-column,
+main .research-flow,
+main .teaching-continuous-intro,
+main .certificate-main-text,
+main .teaching-statement-flow,
+main .teaching-home-text,
+main .service-flow,
+main .diversions-lead-prose,
+main .accordion-panel,
+main .course-modal-text,
+main .post-content {
+  font-size: var(--v7-body-size) !important;
+  line-height: var(--v7-body-line) !important;
 }
 
-/* Elements that should not receive paragraph başı. */
-.paragraph-tight-indent .home-links,
-.paragraph-tight-indent figure,
-.paragraph-tight-indent figcaption,
-.paragraph-tight-indent .button,
-.paragraph-tight-indent .course-card-action,
-.teaching-continuous-page .certificate-main-text .certificate-website-line,
-.teaching-continuous-page .certificate-main-text .certificate-breakout-photo {
+/* Contact explanatory text joins the same body standard, while form fields stay form styled. */
+.contact-page .note,
+.contact-page .appointment-widget-copy p:not(.label) {
+  font-size: var(--v7-body-size) !important;
+  line-height: var(--v7-body-line) !important;
+}
+
+/* Align appointment/calendar block with the first form field, not with the message header. */
+.contact-page .contact-action-row {
+  align-items: start !important;
+}
+
+.contact-page .appointment-panel,
+.contact-page .appointment-widget,
+.contact-page .appointment-widget-copy,
+.contact-page .mini-calendar,
+.contact-page .calendar-widget,
+.contact-page iframe[src*="calendar"],
+.contact-page iframe[src*="calendly"] {
+  margin-top: 112px !important;
+}
+
+/* Paragraph başı standard, including About right-column first paragraph. */
+main .paragraph-tight-indent p,
+main .home-wrap-prose.paragraph-tight-indent p,
+main .about-page .paragraph-tight-indent p,
+main .about-page .about-dual-column-right > p:first-of-type,
+main .research-flow.paragraph-tight-indent p,
+main .teaching-home-text.paragraph-tight-indent p,
+main .teaching-statement-flow.paragraph-tight-indent p,
+main .service-flow.paragraph-tight-indent p,
+main .diversions-lead-prose.paragraph-tight-indent p,
+main .teaching-continuous-page .certificate-main-text.paragraph-tight-indent > p {
+  text-indent: var(--v7-paragraph-indent) !important;
+}
+
+/* Do not indent captions, links-as-buttons, figures, or action lines. */
+main .paragraph-tight-indent .home-links,
+main .paragraph-tight-indent figure,
+main .paragraph-tight-indent figcaption,
+main .paragraph-tight-indent .button,
+main .paragraph-tight-indent .course-card-action,
+main .certificate-main-text .certificate-website-line,
+main .certificate-main-text .certificate-breakout-photo {
   text-indent: 0 !important;
 }
 
-/* Headings and hierarchy */
+/* Protect non-body secondary text from the universal prose rule. */
+main .label,
+main .meta,
+main .contact-label {
+  font-size: 12px !important;
+  line-height: normal !important;
+}
+
+main figcaption,
+main .year,
+main .accordion-meta {
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+}
+
+main .publication-visible-date {
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+
+main .course-card-action,
+main .button,
+main button,
+main input,
+main textarea,
+main select {
+  line-height: normal !important;
+}
+
+/* Heading hierarchy */
 .home-intro h1,
 .page h1,
 .post-page h1 {
-  font-size: var(--v6-page-title) !important;
+  font-size: var(--v7-page-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9358,7 +9386,7 @@ main,
 .teaching-shelf-heading h2,
 .contact-page .contact-section-title,
 .contact-page .appointment-widget-copy h2 {
-  font-size: var(--v6-section-title) !important;
+  font-size: var(--v7-section-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9367,90 +9395,84 @@ main,
 .teaching-shelf h3,
 .teaching-shelf-heading h3,
 .research-continuous-page .research-subsection-heading h3 {
-  font-size: var(--v6-subsection-title) !important;
+  font-size: var(--v7-subsection-title) !important;
   line-height: 1.1 !important;
 }
 
-/* Publications and presentations: same visual scale and rhythm. */
-.accordion-title,
-.publication-trigger .accordion-title,
-.research-continuous-page #publications .accordion-title,
-.research-continuous-page #presentations .accordion-title,
-#publications .accordion-title,
-#presentations .accordion-title {
-  font-size: var(--v6-item-title) !important;
+/* Publications and presentations must match each other. */
+main .accordion-trigger .accordion-title,
+main .publication-trigger .accordion-title,
+main #publications .accordion-title,
+main #presentations .accordion-title,
+main .research-continuous-page #publications .accordion-title,
+main .research-continuous-page #presentations .accordion-title {
+  font-size: var(--v7-item-title) !important;
   line-height: 1.18 !important;
   font-weight: 650 !important;
   color: var(--ink) !important;
 }
 
-.publication-visible-date,
-.accordion-meta {
-  font-size: 14px !important;
-  line-height: 1.2 !important;
-}
-
-.accordion-trigger,
-.publication-category .accordion-trigger,
-.page > .accordion .accordion-trigger,
-#publications .accordion-trigger,
-#presentations .accordion-trigger {
+main .accordion-trigger,
+main .publication-category .accordion-trigger,
+main .page > .accordion .accordion-trigger,
+main #publications .accordion-trigger,
+main #presentations .accordion-trigger {
   padding-top: 13px !important;
   padding-bottom: 13px !important;
 }
 
-.accordion-panel,
-.publication-category .accordion-panel,
-.page > .accordion .accordion-panel,
-#publications .accordion-panel,
-#presentations .accordion-panel {
+main .accordion-panel,
+main .publication-category .accordion-panel,
+main .page > .accordion .accordion-panel,
+main #publications .accordion-panel,
+main #presentations .accordion-panel {
   padding-bottom: 14px !important;
 }
 
 /* Course/card/modal titles, same as closest subsection level. */
-.teaching-course-card h3,
-.modal-course-card h3,
-.course-card-body h3,
-.certificate-card h3,
-.experience-card h3,
-.option-card span,
-.nav-directory-card span,
-.course-modal-dialog h2,
-.course-modal-dialog h3,
-.course-modal-text h2,
-.course-modal-text h3,
-.syllabus-modal-header h3,
-.cv-modal-header h2,
-.share-popup-title {
-  font-size: var(--v6-card-title) !important;
+main .teaching-course-card h3,
+main .modal-course-card h3,
+main .course-card-body h3,
+main .certificate-card h3,
+main .experience-card h3,
+main .option-card span,
+main .nav-directory-card span,
+main .course-modal-dialog h2,
+main .course-modal-dialog h3,
+main .course-modal-text h2,
+main .course-modal-text h3,
+main .syllabus-modal-header h3,
+main .cv-modal-header h2,
+main .share-popup-title {
+  font-size: var(--v7-card-title) !important;
   line-height: 1.1 !important;
   font-weight: 650 !important;
 }
 
 /* Remove accidental white veil/slab behind card rows, not the cards. */
-.teaching-slider-frame,
-.instructor-slider-frame,
-.teaching-experience-page .teaching-shelf-row,
-.teaching-experience-page .instructor-course-row,
-.teaching-shelf-row,
-.instructor-course-row,
-.certificate-card-grid,
-.teaching-home-page .teaching-landing-cards,
-.teaching-page .teaching-options,
-.card-grid,
-.subpage-grid {
+main .teaching-slider-frame,
+main .instructor-slider-frame,
+main .teaching-experience-page .teaching-shelf-row,
+main .teaching-experience-page .instructor-course-row,
+main .teaching-shelf-row,
+main .instructor-course-row,
+main .certificate-card-grid,
+main .teaching-home-page .teaching-landing-cards,
+main .teaching-page .teaching-options,
+main .card-grid,
+main .subpage-grid {
   background: transparent !important;
   box-shadow: none !important;
 }
 
 /* Keep actual cards white. */
-.teaching-course-card,
-.modal-course-card,
-.certificate-card,
-.experience-card,
-.teaching-home-page .teaching-landing-card,
-.option-card,
-.nav-directory-card {
+main .teaching-course-card,
+main .modal-course-card,
+main .certificate-card,
+main .experience-card,
+main .teaching-home-page .teaching-landing-card,
+main .option-card,
+main .nav-directory-card {
   background: #fff !important;
 }
 
@@ -9460,17 +9482,16 @@ main,
   scroll-margin-top: 155px !important;
 }
 
-/* Mobile keeps the same hierarchy but slightly smaller titles. */
 @media (max-width: 760px) {
   :root {
-    --v6-body-size: 17px;
-    --v6-body-line: 1.25;
-    --v6-page-title: 22px;
-    --v6-section-title: 20px;
-    --v6-subsection-title: 18px;
-    --v6-item-title: 19px;
-    --v6-card-title: 18px;
-    --v6-paragraph-indent: 1.1em;
+    --v7-body-size: 17px;
+    --v7-body-line: 1.25;
+    --v7-page-title: 22px;
+    --v7-section-title: 20px;
+    --v7-subsection-title: 18px;
+    --v7-item-title: 19px;
+    --v7-card-title: 18px;
+    --v7-paragraph-indent: 1.1em;
   }
 
   .site-top .name,
@@ -9478,6 +9499,16 @@ main,
   a.name {
     font-size: 28px !important;
     font-weight: 400 !important;
+  }
+
+  .contact-page .appointment-panel,
+  .contact-page .appointment-widget,
+  .contact-page .appointment-widget-copy,
+  .contact-page .mini-calendar,
+  .contact-page .calendar-widget,
+  .contact-page iframe[src*="calendar"],
+  .contact-page iframe[src*="calendly"] {
+    margin-top: 0 !important;
   }
 }
 

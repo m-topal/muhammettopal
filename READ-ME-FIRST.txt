@@ -1,23 +1,29 @@
 READ ME FIRST
 
-This package is v6. It is built from the original uploaded site ZIP and contains actual replacement files.
+This is v7, built from the original uploaded website ZIP.
 
-Main purpose:
-- standard body text across Home, About, Research, Teaching, Service, Diversions, Contact, and popups
-- body text is 17px
-- line-height is 1.25
-- paragraph starts are standardized
-- About right-column first paragraph gets paragraph başı
-- Presentations are styled like publications
-- white veil behind teaching card rows is removed
-- Muhammet Topal header remains teal but not bold
-- main nav has only one hover underline
-- stylesheet link is cache-busted as ?v=standard-v6
+Replace these exact files in GitHub:
+assets/css/style.css
+css/style.css
+style.css
+_layouts/default.html
+default.html
+_includes/footer.html
 
-How to use:
-1. Unzip this ZIP.
-2. Replace the matching files in GitHub with the files inside this ZIP.
-3. Keep the folder paths exactly the same.
-4. Commit.
-5. Wait for GitHub Pages to rebuild.
-6. Open in incognito or hard refresh.
+Changes:
+- All normal prose/body paragraphs across pages are standardized more aggressively.
+- Body text is 17px.
+- Line-height is 1.25.
+- Paragraph başı is standardized.
+- About right-column first paragraph gets paragraph başı.
+- Home page prose is included.
+- Research, About, Teaching Statement, Teaching Certificate, Service, Diversions, Contact explanatory text, accordion panels, and popup body text are included.
+- Publications and presentations are forced to the same title style.
+- Card and popup titles stay at the closest subsection level.
+- White veil/slab behind teaching card rows is removed while actual cards remain white.
+- Contact page calendar/appointment block is pushed down to align with the first form field/name box.
+- Header name is teal and not bold.
+- Main nav has one hover underline only.
+- Layout stylesheet link is cache-busted with ?v=standard-v7.
+
+After committing, wait for GitHub Pages to rebuild and open the site in an incognito window.
