@@ -1,30 +1,23 @@
 READ ME FIRST
 
-This ZIP contains actual replacement files, not only a patch.
+This package is v6. It is built from the original uploaded site ZIP and contains actual replacement files.
 
-Use the files in this ZIP to replace the same paths in GitHub. Do not upload this ZIP itself as a site file.
+Main purpose:
+- standard body text across Home, About, Research, Teaching, Service, Diversions, Contact, and popups
+- body text is 17px
+- line-height is 1.25
+- paragraph starts are standardized
+- About right-column first paragraph gets paragraph başı
+- Presentations are styled like publications
+- white veil behind teaching card rows is removed
+- Muhammet Topal header remains teal but not bold
+- main nav has only one hover underline
+- stylesheet link is cache-busted as ?v=standard-v6
 
-Replace these paths if they exist in your repository:
-
-assets/css/style.css
-css/style.css
-style.css
-_layouts/default.html
-default.html
-_includes/footer.html
-
-Most important file: assets/css/style.css
-
-What v5 fixes:
-- Standardizes main body, intro, statement, About, Research, Teaching, Service, certificate, accordion, and popup body text to 16px.
-- Standardizes line-height to 1.2.
-- Standardizes paragraph başı to 1.35em on prose paragraphs, including the first paragraph in the About right column.
-- Keeps paragraph gaps at 0 for the compact paragraph style.
-- Makes Muhammet Topal header teal, 32px, and normal weight, not bold.
-- Sets nav to 16px, normal weight by default, bold and single-underlined only on hover.
-- Makes presentation accordion titles match publication accordion titles.
-- Sets card and popup titles to the nearest subsection level, 18px.
-- Removes white veil/slab backgrounds behind teaching card rows while preserving white cards.
-- Adds a cache-busting stylesheet URL in the layout.
-
-After committing, wait for GitHub Pages to finish building, then open the site in an incognito/private window.
+How to use:
+1. Unzip this ZIP.
+2. Replace the matching files in GitHub with the files inside this ZIP.
+3. Keep the folder paths exactly the same.
+4. Commit.
+5. Wait for GitHub Pages to rebuild.
+6. Open in incognito or hard refresh.
