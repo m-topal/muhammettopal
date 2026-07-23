@@ -1,0 +1,11 @@
+REPLACEMENT FILES FOR MUHAMMETTOPAL WEBSITE
+
+Upload these files to the repository using the same paths and replace the existing copies:
+
+assets/css/style.css
+_layouts/default.html
+_includes/footer.html
+style.css
+
+Do not upload the outer folder as a new folder in the repository. Preserve each path exactly.
+The live Jekyll site primarily uses assets/css/style.css and _layouts/default.html.
