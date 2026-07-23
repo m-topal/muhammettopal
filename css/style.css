@@ -8903,7 +8903,7 @@ body {
 }
 
 .site-top .site-header-wordmark-block {
-  margin-top: -2px;
+  margin-top: -20px;
   margin-bottom: 2px;
 }
 
@@ -9179,75 +9179,228 @@ main {
 }
 
 
-/* v131: syllabus links, text-only course popups, and reliable multi-page mobile CV */
-.course-modal-dialog.course-modal-dialog-text-only {
-  width: min(820px, calc(100vw - 42px)) !important;
-  grid-template-columns: minmax(0, 1fr) !important;
-  gap: 0 !important;
+/* College Teaching Certificate outcome card illustrations */
+.certificate-coursework-cards .certificate-card {
+  padding: 0 !important;
+  overflow: hidden;
 }
 
-.course-modal-dialog-text-only .course-modal-text {
-  min-width: 0 !important;
-  max-width: none !important;
-  padding-right: 42px !important;
+.certificate-card-image {
+  width: 100%;
+  aspect-ratio: 1.35 / 1;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #f7f2ea;
 }
 
-.course-modal-dialog-text-only .course-modal-text p {
-  max-width: none !important;
+.certificate-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cv-mobile-pages,
-.cv-modal-mobile-pages {
+.certificate-coursework-cards .certificate-card > .meta,
+.certificate-coursework-cards .certificate-card > h3 {
+  margin-left: 18px !important;
+  margin-right: 18px !important;
+}
+
+.certificate-coursework-cards .certificate-card > .meta {
+  margin-top: 16px !important;
+}
+
+.certificate-coursework-cards .certificate-card > h3 {
+  margin-bottom: 18px !important;
+}
+
+/* Home CV link keeps the visual language of an inline text link. */
+.home-inline-cv-link {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: .14em;
+  cursor: pointer;
+}
+
+.home-inline-cv-link:hover,
+.home-inline-cv-link:focus-visible {
+  color: var(--accent);
+}
+
+/* Native mobile PDF embeds often stop after page one. Use a scrollable page stack inside the same modal. */
+.cv-mobile-pages {
   display: none;
 }
 
 @media (max-width: 760px) {
-  .course-modal-dialog.course-modal-dialog-text-only {
-    width: calc(100vw - 24px) !important;
+  .cv-modal-dialog {
+    overflow: hidden;
   }
 
-  .course-modal-dialog-text-only .course-modal-text {
-    padding-right: 0 !important;
-  }
-
-  .cv-frame-desktop,
   .cv-modal-frame {
-    display: none !important;
+    display: none;
   }
 
-  .cv-mobile-pages,
-  .cv-modal-mobile-pages {
-    display: grid;
-    gap: 14px;
-    width: 100%;
+  .cv-mobile-pages {
+    display: block;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--soft);
   }
 
-  .cv-mobile-pages img,
-  .cv-modal-mobile-pages img {
+  .cv-mobile-pages img {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid var(--line);
+    margin: 0;
+    border-bottom: 1px solid var(--line);
     background: #fff;
   }
 
-  .cv-modal-dialog {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .cv-modal-mobile-pages {
-    padding-bottom: 4px;
+  .cv-mobile-pages img:last-child {
+    border-bottom: 0;
   }
 }
 
-/* Co-teaching course images: display source color, except the People's History card. */
-.teaching-continuous-page .co-teaching-course-row .teaching-assistantship-card .course-card-image img {
-  filter: none !important;
+
+/* Corrective College Teaching card and modal styles */
+.teaching-continuous-page .certificate-coursework-cards .certificate-card {
+  min-height: 0 !important;
+  padding: 16px 18px 18px !important;
+  overflow: hidden;
 }
 
-.teaching-continuous-page .co-teaching-course-row [data-course-modal="people-history-modern-middle-east-modal"] .course-card-image img {
-  filter: grayscale(100%) contrast(1.04) !important;
+.teaching-continuous-page .certificate-card-image {
+  width: 92px !important;
+  height: 66px !important;
+  margin: 0 auto 10px !important;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 8px;
+  background: #f7f2ea;
+}
+
+.teaching-continuous-page .certificate-card-image img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > .meta,
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > h3 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* These six popups contain no image, so they use one compact text column. */
+.teaching-continuous-page .certificate-detail-modal .course-modal-dialog {
+  width: min(720px, calc(100vw - 40px)) !important;
+  max-width: 720px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.teaching-continuous-page .certificate-detail-modal .course-modal-text {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding-right: 24px !important;
+}
+
+@media (max-width: 700px) {
+  .teaching-continuous-page .certificate-card-image {
+    width: 82px !important;
+    height: 59px !important;
+  }
+
+  .teaching-continuous-page .certificate-detail-modal .course-modal-dialog {
+    width: calc(100vw - 24px) !important;
+  }
+
+  .teaching-continuous-page .certificate-detail-modal .course-modal-text {
+    padding-right: 0 !important;
+  }
+}
+
+
+/* Final compact text-only teaching popups */
+.teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only {
+  width: min(760px, calc(100vw - 40px)) !important;
+  max-width: 760px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
+}
+
+.teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only .course-modal-text {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Certificate cards are one line tighter after removing the repeated program label. */
+.teaching-continuous-page .certificate-coursework-cards .certificate-card > h3 {
+  margin-top: 4px !important;
+}
+
+@media (max-width: 700px) {
+  .teaching-continuous-page .course-modal-dialog.course-modal-dialog-text-only {
+    width: calc(100vw - 24px) !important;
+  }
+}
+
+
+/* v135: Other Teaching carousel and compact modal typography */
+.teaching-continuous-page .other-teaching-course-row {
+  display: grid !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: minmax(285px, 360px) !important;
+  grid-template-columns: none !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  padding: 0 2px 16px !important;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teaching-continuous-page .other-teaching-course-row .teaching-course-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  scroll-snap-align: start;
+}
+
+/* All Teaching popups use 1.25 line spacing and no paragraph gaps. */
+.teaching-continuous-page .course-modal-text {
+  line-height: 1.25 !important;
+}
+
+.teaching-continuous-page .course-modal-text p {
+  line-height: 1.25 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .teaching-continuous-page .other-teaching-course-row {
+    grid-auto-columns: minmax(260px, 82vw) !important;
+  }
 }
 
 /* v13-safe-about-photo-position
@@ -9275,7 +9428,7 @@ a.name {
   color: var(--v13-header-teal) !important;
   font-family: 'Raleway', sans-serif !important;
   font-size: 32px !important;
-  font-weight: 200 !important;
+  font-weight: 350 !important;
   line-height: 1 !important;
   letter-spacing: -0.025em !important;
 }
@@ -9697,8 +9850,9 @@ main .nav-directory-card {
   .site-top .name,
   .top .name,
   a.name {
+    font-family: 'Raleway', sans-serif !important;
     font-size: 28px !important;
-    font-weight: 200 !important;
+    font-weight: 350 !important;
   }
 
   .contact-page .appointment-panel,
@@ -9712,35 +9866,58 @@ main .nav-directory-card {
 }
 
 
-/* Repair patch: About subnavigation and Contact alignment */
-.about-page .about-scroll-anchor,
-.about-page .about-beyond-section {
-  scroll-margin-top: 155px;
+/* Final targeted fixes: About section navigation, Beyond Academia width, Contact vertical alignment */
+
+/* About uses the exact same section-nav component and sticky behavior as Teaching and Research. */
+.about-page .about-scroll-anchor {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  scroll-margin-top: 155px !important;
 }
 
-.about-page .about-beyond-section {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(120, 42, 42, .14);
-}
-
-/* Keep the original About dual-column layout as direct article content. */
+/* Keep the existing About text layout untouched. */
 .about-page > .about-dual-wrap {
   width: 100%;
 }
 
-/* Undo legacy rules that push the appointment column and calendar downward. */
-.contact-page .appointment-widget.appointment-widget-compact {
-  margin-top: 0 !important;
+/* Give Beyond Academia the full About content width while preserving its internal image grids. */
+.about-page > .about-beyond-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  scroll-margin-top: 155px !important;
+}
+
+.about-page > .about-beyond-section > .diversions-lead-layout,
+.about-page > .about-beyond-section > .diversions-feature-grid,
+.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* Contact: spacing only. Match title line, note line, and first field/calendar line. */
+.contact-page .contact-action-row {
+  align-items: start !important;
 }
 
 .contact-page .contact-message-panel,
-.contact-page .appointment-widget-compact {
-  align-self: start;
+.contact-page .appointment-widget.appointment-widget-compact {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  align-self: start !important;
 }
 
-.contact-page .contact-message-panel .contact-section-title,
-.contact-page .appointment-widget-compact .contact-section-title {
+.contact-page .contact-message-panel > .contact-section-title,
+.contact-page .appointment-widget-compact > .contact-section-title {
   margin-top: 0 !important;
   margin-bottom: 18px !important;
 }
@@ -9750,19 +9927,134 @@ main .nav-directory-card {
   min-height: 44px !important;
   margin: 0 0 18px !important;
   padding: 0 !important;
-  line-height: 1.55;
+  line-height: 1.55 !important;
 }
 
-.contact-page .appointment-widget-compact .mini-calendar {
-  display: block !important;
-  min-height: 0 !important;
+.contact-page .appointment-widget-compact > .mini-calendar {
   margin-top: 0 !important;
-  justify-content: initial !important;
 }
 
 @media (max-width: 900px) {
   .contact-page .contact-message-panel > .note,
   .contact-page .appointment-widget-compact > .appointment-note {
     min-height: 0 !important;
+  }
+}
+
+
+/* Precise follow-up: start About section tracking at the actual About content and align the calendar with the first form field. */
+.about-page > #about-me.about-dual-wrap.teaching-scroll-section {
+  margin-top: 1.5rem !important;
+  padding-top: .5rem !important;
+  border-top: 0 !important;
+  scroll-margin-top: 155px !important;
+}
+
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    margin-bottom: 75px !important;
+  }
+}
+
+
+/* Emergency precision fix: About nav placement, title wrapping, and contact vertical spacing only. */
+.about-page > .about-page-scroll-nav {
+  margin-top: 0 !important;
+  margin-bottom: 1.55rem !important;
+}
+
+.about-page > h1 {
+  white-space: nowrap !important;
+}
+
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    margin-bottom: 0 !important;
+    padding-bottom: 56px !important;
+  }
+}
+
+
+/* Navless About page and centered Beyond Academia section. */
+.about-page > .about-beyond-section {
+  width: min(100%, 1040px) !important;
+  max-width: 1040px !important;
+  margin: 72px auto 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.about-page > .about-beyond-section > .section-heading-row,
+.about-page > .about-beyond-section > .diversions-lead-layout,
+.about-page > .about-beyond-section > .diversions-feature-grid,
+.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .about-page > .about-beyond-section {
+    width: 100% !important;
+    margin-top: 52px !important;
+  }
+}
+
+/* Final Beyond Academia alignment: fill the About page width and stay centered on desktop and mobile. */
+.about-page > .about-beyond-section {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 72px 0 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.about-page > .about-beyond-section > .section-heading-row,
+.about-page > .about-beyond-section > .diversions-lead-layout,
+.about-page > .about-beyond-section > .diversions-feature-grid,
+.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Broaden the lead image/text row without changing image proportions. */
+.about-page > .about-beyond-section > .diversions-lead-layout {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
+  gap: 36px !important;
+  align-items: start !important;
+}
+
+.about-page > .about-beyond-section .diversions-lead-figure,
+.about-page > .about-beyond-section .diversions-lead-prose,
+.about-page > .about-beyond-section .diversions-feature-grid figure,
+.about-page > .about-beyond-section .gallery-grid.caption-gallery figure {
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+.about-page > .about-beyond-section img {
+  max-width: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .about-page > .about-beyond-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 52px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .about-page > .about-beyond-section > .diversions-lead-layout,
+  .about-page > .about-beyond-section > .diversions-feature-grid,
+  .about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    gap: 22px !important;
   }
 }
