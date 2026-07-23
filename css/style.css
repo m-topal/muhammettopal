@@ -9250,27 +9250,31 @@ main {
   filter: grayscale(100%) contrast(1.04) !important;
 }
 
-/* v9-sitewide-body-standard-and-card-veil-removal
-   Sitewide prose standard plus stronger removal of white veil/overlay around
-   teaching card rows and sliders. */
+/* v10-final-noted-fixes
+   Built from the original uploaded ZIP.
+   Applies the fixes noted after v9:
+   body text 18px/1.25 sitewide, Service and Diversions included,
+   contact calendar moved upward, teaching white veil removed more strongly,
+   About second floating photo moved upward, popup gray metadata made smaller,
+   Contact globe/background made more visible by reducing the veil. */
 
 :root {
-  --v9-header-teal: #006871;
-  --v9-body-size: 18px;
-  --v9-body-line: 1.25;
-  --v9-paragraph-indent: 1.35em;
-  --v9-page-title: 24px;
-  --v9-section-title: 21px;
-  --v9-subsection-title: 18px;
-  --v9-item-title: 21px;
-  --v9-card-title: 18px;
+  --v10-header-teal: #006871;
+  --v10-body-size: 18px;
+  --v10-body-line: 1.25;
+  --v10-paragraph-indent: 1.35em;
+  --v10-page-title: 24px;
+  --v10-section-title: 21px;
+  --v10-subsection-title: 18px;
+  --v10-item-title: 21px;
+  --v10-card-title: 18px;
 }
 
 /* Header identity */
 .site-top .name,
 .top .name,
 a.name {
-  color: var(--v9-header-teal) !important;
+  color: var(--v10-header-teal) !important;
   font-size: 32px !important;
   font-weight: 400 !important;
   line-height: 1 !important;
@@ -9316,8 +9320,8 @@ a.name {
   background-image: none !important;
 }
 
-/* SITEWIDE BODY TEXT STANDARD:
-   all body paragraphs, intros, statements, and prose text use 18px and 1.25. */
+/* SITEWIDE BODY TEXT STANDARD.
+   Normal prose, intros, statements, body paragraphs, accordion text, modal text. */
 body,
 main,
 .site-shell,
@@ -9346,8 +9350,8 @@ main .accordion-panel,
 main .course-modal-text,
 main .cv-modal,
 main .post-content {
-  font-size: var(--v9-body-size) !important;
-  line-height: var(--v9-body-line) !important;
+  font-size: var(--v10-body-size) !important;
+  line-height: var(--v10-body-line) !important;
 }
 
 main p:not(.label):not(.meta):not(.year):not(.accordion-meta):not(.publication-visible-date),
@@ -9370,15 +9374,17 @@ main .teaching-statement-flow p,
 main .teaching-home-text p,
 main .teaching-shelf-intro,
 main .service-flow p,
+main .service-page p,
 main .diversions-lead-prose p,
+main .diversions-page p,
 main .contact-page .note,
 main .contact-page .appointment-widget-copy p:not(.label),
 main .accordion-panel p,
 main .course-modal-text p,
 main .cv-modal p,
 main .post-content p {
-  font-size: var(--v9-body-size) !important;
-  line-height: var(--v9-body-line) !important;
+  font-size: var(--v10-body-size) !important;
+  line-height: var(--v10-body-line) !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -9394,7 +9400,7 @@ main .teaching-statement-flow.paragraph-tight-indent p,
 main .service-flow.paragraph-tight-indent p,
 main .diversions-lead-prose.paragraph-tight-indent p,
 main .teaching-continuous-page .certificate-main-text.paragraph-tight-indent > p {
-  text-indent: var(--v9-paragraph-indent) !important;
+  text-indent: var(--v10-paragraph-indent) !important;
 }
 
 main .paragraph-tight-indent .home-links,
@@ -9407,7 +9413,7 @@ main .certificate-main-text .certificate-breakout-photo {
   text-indent: 0 !important;
 }
 
-/* Protect secondary text. */
+/* Protect metadata, captions, labels, and control text. */
 main .label,
 main .meta,
 main .contact-label {
@@ -9436,10 +9442,52 @@ main select {
   line-height: normal !important;
 }
 
-/* Contact calendar, correct from v7 being too low. */
+/* Popup gray metadata line:
+   smaller than popup/course title, treated as metadata. */
+main .course-modal-text .course-meta,
+main .course-modal-text .modal-course-meta,
+main .course-modal-text .course-card-meta,
+main .course-modal-text .course-code,
+main .course-modal-text .course-label,
+main .course-modal-text .kicker,
+main .course-modal-dialog .course-meta,
+main .course-modal-dialog .modal-course-meta,
+main .course-modal-dialog .course-card-meta,
+main .course-modal-dialog .course-code,
+main .course-modal-dialog .course-label,
+main .course-modal-dialog .kicker,
+main .syllabus-modal-header .course-meta,
+main .syllabus-modal-header .modal-course-meta,
+main .syllabus-modal-header .course-card-meta,
+main .syllabus-modal-header .course-code,
+main .syllabus-modal-header .course-label,
+main .syllabus-modal-header .kicker,
+main .modal-course-card .course-meta,
+main .modal-course-card .course-code,
+main .modal-course-card .course-label,
+main .modal-course-card .kicker {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  letter-spacing: .08em !important;
+  color: var(--muted) !important;
+  text-transform: uppercase !important;
+}
+
+/* If popup metadata is the first all-caps paragraph before title, keep it metadata-sized. */
+main .course-modal-text > p:first-child,
+main .course-modal-dialog .course-modal-text > p:first-child {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  letter-spacing: .08em !important;
+  color: var(--muted) !important;
+}
+
+/* Contact calendar:
+   keep Appointment title/text where they are, but do not push the calendar too low. */
 .contact-page .appointment-panel,
 .contact-page .appointment-widget,
-.contact-page .appointment-widget-copy,
 .contact-page .mini-calendar,
 .contact-page .calendar-widget,
 .contact-page iframe[src*="calendar"],
@@ -9447,11 +9495,69 @@ main select {
   margin-top: 24px !important;
 }
 
+/* Do not add the same margin to the explanatory text column itself. */
+.contact-page .appointment-widget-copy {
+  margin-top: 0 !important;
+}
+
+/* Contact globe/background:
+   reduce the white veil only on the Contact page, so the globe is more visible. */
+.contact-page::before,
+.contact-page::after,
+.contact-page .contact-shell::before,
+.contact-page .contact-shell::after,
+.contact-page .contact-page-shell::before,
+.contact-page .contact-page-shell::after,
+.contact-page .contact-wrap::before,
+.contact-page .contact-wrap::after,
+.contact-page .contact-card::before,
+.contact-page .contact-card::after,
+.contact-page .contact-action-row::before,
+.contact-page .contact-action-row::after {
+  opacity: .38 !important;
+}
+
+.contact-page,
+.contact-page .contact-shell,
+.contact-page .contact-page-shell,
+.contact-page .contact-wrap,
+.contact-page .contact-card,
+.contact-page .contact-action-row {
+  background-color: rgba(255,255,255,.72) !important;
+  background-blend-mode: normal !important;
+}
+
+/* Preserve form fields and appointment boxes as readable white surfaces. */
+.contact-page input,
+.contact-page textarea,
+.contact-page select,
+.contact-page .appointment-panel,
+.contact-page .appointment-widget,
+.contact-page .mini-calendar,
+.contact-page .calendar-widget {
+  background-color: #fff !important;
+}
+
+/* About second floating photo:
+   move it slightly upward so text wraps around it more like the Princeton photo.
+   Keep image size and the first photo unchanged. */
+.about-page .about-dual-wrap {
+  --dual-second-top: 1375px !important;
+}
+
+.about-page .about-dual-image--second,
+.about-page .about-dual-image.second,
+.about-page .about-dual-image:nth-of-type(2),
+.about-page .about-dual-image:nth-child(2) {
+  top: var(--dual-second-top) !important;
+  transform: translateY(-70px) !important;
+}
+
 /* Heading hierarchy */
 .home-intro h1,
 .page h1,
 .post-page h1 {
-  font-size: var(--v9-page-title) !important;
+  font-size: var(--v10-page-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9464,7 +9570,7 @@ main select {
 .teaching-shelf-heading h2,
 .contact-page .contact-section-title,
 .contact-page .appointment-widget-copy h2 {
-  font-size: var(--v9-section-title) !important;
+  font-size: var(--v10-section-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9473,7 +9579,7 @@ main select {
 .teaching-shelf h3,
 .teaching-shelf-heading h3,
 .research-continuous-page .research-subsection-heading h3 {
-  font-size: var(--v9-subsection-title) !important;
+  font-size: var(--v10-subsection-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9484,7 +9590,7 @@ main #publications .accordion-title,
 main #presentations .accordion-title,
 main .research-continuous-page #publications .accordion-title,
 main .research-continuous-page #presentations .accordion-title {
-  font-size: var(--v9-item-title) !important;
+  font-size: var(--v10-item-title) !important;
   line-height: 1.18 !important;
   font-weight: 650 !important;
   color: var(--ink) !important;
@@ -9522,14 +9628,13 @@ main .course-modal-text h3,
 main .syllabus-modal-header h3,
 main .cv-modal-header h2,
 main .share-popup-title {
-  font-size: var(--v9-card-title) !important;
+  font-size: var(--v10-card-title) !important;
   line-height: 1.1 !important;
   font-weight: 650 !important;
 }
 
-/* Strong removal of the white veil/slab around teaching card rows.
-   This targets not only normal backgrounds but also overlay pseudo-elements,
-   masks, gradients, and backdrop filters on slider containers. */
+/* Strong removal of the white veil/slab around teaching card rows and sliders.
+   Keep actual cards white, remove only row/slider frame overlays. */
 main .teaching-slider-frame,
 main .instructor-slider-frame,
 main .teaching-experience-page .teaching-shelf-row,
@@ -9540,7 +9645,12 @@ main .certificate-card-grid,
 main .teaching-home-page .teaching-landing-cards,
 main .teaching-page .teaching-options,
 main .card-grid,
-main .subpage-grid {
+main .subpage-grid,
+main .course-carousel,
+main .course-slider,
+main .slider-window,
+main .slider-track,
+main .teaching-carousel {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
@@ -9551,7 +9661,6 @@ main .subpage-grid {
   -webkit-mask-image: none !important;
 }
 
-/* Disable the side fade/veil pseudo-elements, while leaving arrow buttons intact. */
 main .teaching-slider-frame::before,
 main .teaching-slider-frame::after,
 main .instructor-slider-frame::before,
@@ -9563,7 +9672,15 @@ main .instructor-course-row::after,
 main .card-grid::before,
 main .card-grid::after,
 main .subpage-grid::before,
-main .subpage-grid::after {
+main .subpage-grid::after,
+main .course-carousel::before,
+main .course-carousel::after,
+main .course-slider::before,
+main .course-slider::after,
+main .slider-window::before,
+main .slider-window::after,
+main .teaching-carousel::before,
+main .teaching-carousel::after {
   content: none !important;
   display: none !important;
   opacity: 0 !important;
@@ -9589,16 +9706,25 @@ main .nav-directory-card {
   scroll-margin-top: 155px !important;
 }
 
+@media (max-width: 980px) {
+  .about-page .about-dual-image--second,
+  .about-page .about-dual-image.second,
+  .about-page .about-dual-image:nth-of-type(2),
+  .about-page .about-dual-image:nth-child(2) {
+    transform: none !important;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
-    --v9-body-size: 18px;
-    --v9-body-line: 1.25;
-    --v9-page-title: 22px;
-    --v9-section-title: 20px;
-    --v9-subsection-title: 18px;
-    --v9-item-title: 19px;
-    --v9-card-title: 18px;
-    --v9-paragraph-indent: 1.1em;
+    --v10-body-size: 18px;
+    --v10-body-line: 1.25;
+    --v10-page-title: 22px;
+    --v10-section-title: 20px;
+    --v10-subsection-title: 18px;
+    --v10-item-title: 19px;
+    --v10-card-title: 18px;
+    --v10-paragraph-indent: 1.1em;
   }
 
   .site-top .name,
@@ -9610,12 +9736,24 @@ main .nav-directory-card {
 
   .contact-page .appointment-panel,
   .contact-page .appointment-widget,
-  .contact-page .appointment-widget-copy,
   .contact-page .mini-calendar,
   .contact-page .calendar-widget,
   .contact-page iframe[src*="calendar"],
   .contact-page iframe[src*="calendly"] {
     margin-top: 16px !important;
+  }
+
+  .contact-page::before,
+  .contact-page::after,
+  .contact-page .contact-shell::before,
+  .contact-page .contact-shell::after,
+  .contact-page .contact-page-shell::before,
+  .contact-page .contact-page-shell::after,
+  .contact-page .contact-wrap::before,
+  .contact-page .contact-wrap::after,
+  .contact-page .contact-card::before,
+  .contact-page .contact-card::after {
+    opacity: .45 !important;
   }
 }
 

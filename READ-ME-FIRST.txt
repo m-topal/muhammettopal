@@ -1,6 +1,6 @@
 READ ME FIRST
 
-This is v9, built from the original uploaded website ZIP.
+This is v10, built from the original uploaded website ZIP.
 
 Replace these exact files in GitHub:
 assets/css/style.css
@@ -10,20 +10,20 @@ _layouts/default.html
 default.html
 _includes/footer.html
 
-Core standard:
+Included fixes:
 - all body paragraphs, intros, statements, and prose text are 18px
 - line-height is 1.25
 - paragraph rhythm is standardized
-- paragraph başı is standardized, including About right-column first paragraph
-
-Specific fixes:
-- Home, About, Research, Teaching Statement, Teaching Certificate, Service, Diversions, Contact explanatory text, and popup/modal text included
-- Presentations match Publications
-- Stronger removal of white veil/slab behind teaching card rows, including pseudo-elements and fade overlays
-- Actual cards remain white
+- Service and Diversions text forced into the same body standard
 - Contact calendar moved back upward after v7 was too low
+- teaching white veil/slab behind card rows removed more strongly
+- actual cards remain white
+- About second floating photo moved slightly upward so text wraps around it better
+- popup gray metadata line made smaller than popup title, like metadata
+- Contact globe/background made more visible by making the veil more transparent
+- Presentations match Publications
 - Muhammet Topal header teal and not bold
 - Main nav one hover underline only
-- Stylesheet cache-busted with ?v=standard-v9
+- Stylesheet cache-busted with ?v=standard-v10
 
 After replacing files, commit, wait for GitHub Pages, then open in incognito.
