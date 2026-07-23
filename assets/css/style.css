@@ -10055,3 +10055,104 @@ main .nav-directory-card {
     box-sizing: border-box !important;
   }
 }
+
+/* v115: mobile-only Beyond Academia repair plus restored Contact and Blog polish */
+@media (max-width: 900px) {
+  .about-page > #beyond-academia.about-beyond-section {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+
+    margin-top: 52px !important;
+    margin-left: calc(50% - 50vw + 20px) !important;
+    margin-right: 0 !important;
+
+    padding: 0 !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section > .section-heading-row,
+  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery,
+  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery,
+  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section figure,
+  .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose,
+  .about-page > #beyond-academia.about-beyond-section img {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section img {
+    display: block !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Restore the working Contact alignment without touching its layout structure. */
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    padding-bottom: 48px !important;
+  }
+}
+
+.contact-page .appointment-widget-compact > .mini-calendar {
+  margin-bottom: 5px !important;
+}
+
+.contact-page .contact-form .message-toolbar-submit,
+.contact-page .appointment-widget-compact .appointment-book-button {
+  min-height: 42px !important;
+  height: 42px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: var(--ink) !important;
+  box-sizing: border-box !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  line-height: 1 !important;
+}
+
+.contact-page .appointment-widget-compact .appointment-book-button {
+  display: flex !important;
+  width: max-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Restore Comment left and Share right in blog cards. */
+.blog-card-actions.social-actions {
+  width: 100% !important;
+  justify-content: space-between !important;
+}
+
+.blog-card-actions.social-actions > .share-menu-wrap {
+  margin-left: auto !important;
+}
+
+.blog-card-actions.social-actions > .share-menu-wrap > .share-menu-panel {
+  left: auto !important;
+  right: 0 !important;
+}
