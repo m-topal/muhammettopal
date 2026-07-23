@@ -9866,45 +9866,8 @@ main .nav-directory-card {
 }
 
 
-/* Final targeted fixes: About section navigation, Beyond Academia width, Contact vertical alignment */
 
-/* About uses the exact same section-nav component and sticky behavior as Teaching and Research. */
-.about-page .about-scroll-anchor {
-  height: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  overflow: hidden !important;
-  scroll-margin-top: 155px !important;
-}
-
-/* Keep the existing About text layout untouched. */
-.about-page > .about-dual-wrap {
-  width: 100%;
-}
-
-/* Give Beyond Academia the full About content width while preserving its internal image grids. */
-.about-page > .about-beyond-section {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box;
-  scroll-margin-top: 155px !important;
-}
-
-.about-page > .about-beyond-section > .diversions-lead-layout,
-.about-page > .about-beyond-section > .diversions-feature-grid,
-.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box;
-}
-
-/* Contact: spacing only. Match title line, note line, and first field/calendar line. */
+/* Contact alignment retained from the working live version. */
 .contact-page .contact-action-row {
   align-items: start !important;
 }
@@ -9934,39 +9897,6 @@ main .nav-directory-card {
   margin-top: 0 !important;
 }
 
-@media (max-width: 900px) {
-  .contact-page .contact-message-panel > .note,
-  .contact-page .appointment-widget-compact > .appointment-note {
-    min-height: 0 !important;
-  }
-}
-
-
-/* Precise follow-up: start About section tracking at the actual About content and align the calendar with the first form field. */
-.about-page > #about-me.about-dual-wrap.teaching-scroll-section {
-  margin-top: 1.5rem !important;
-  padding-top: .5rem !important;
-  border-top: 0 !important;
-  scroll-margin-top: 155px !important;
-}
-
-@media (min-width: 901px) {
-  .contact-page .appointment-widget-compact > .appointment-note {
-    margin-bottom: 75px !important;
-  }
-}
-
-
-/* Emergency precision fix: About nav placement, title wrapping, and contact vertical spacing only. */
-.about-page > .about-page-scroll-nav {
-  margin-top: 0 !important;
-  margin-bottom: 1.55rem !important;
-}
-
-.about-page > h1 {
-  white-space: nowrap !important;
-}
-
 @media (min-width: 901px) {
   .contact-page .appointment-widget-compact > .appointment-note {
     margin-bottom: 0 !important;
@@ -9974,365 +9904,121 @@ main .nav-directory-card {
   }
 }
 
-
-/* Navless About page and centered Beyond Academia section. */
-.about-page > .about-beyond-section {
-  width: min(100%, 1040px) !important;
-  max-width: 1040px !important;
-  margin: 72px auto 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.about-page > .about-beyond-section > .section-heading-row,
-.about-page > .about-beyond-section > .diversions-lead-layout,
-.about-page > .about-beyond-section > .diversions-feature-grid,
-.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box !important;
-}
-
 @media (max-width: 900px) {
-  .about-page > .about-beyond-section {
-    width: 100% !important;
-    margin-top: 52px !important;
+  .contact-page .contact-message-panel > .note,
+  .contact-page .appointment-widget-compact > .appointment-note {
+    min-height: 0 !important;
   }
 }
 
-/* Final Beyond Academia alignment: fill the About page width and stay centered on desktop and mobile. */
-.about-page > .about-beyond-section {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 72px 0 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
+/* Keep the About heading on one line without changing the About text or images. */
+.about-page > h1 {
+  white-space: nowrap !important;
 }
 
-.about-page > .about-beyond-section > .section-heading-row,
-.about-page > .about-beyond-section > .diversions-lead-layout,
-.about-page > .about-beyond-section > .diversions-feature-grid,
-.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Broaden the lead image/text row without changing image proportions. */
-.about-page > .about-beyond-section > .diversions-lead-layout {
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
-  gap: 36px !important;
-  align-items: start !important;
-}
-
-.about-page > .about-beyond-section .diversions-lead-figure,
-.about-page > .about-beyond-section .diversions-lead-prose,
-.about-page > .about-beyond-section .diversions-feature-grid figure,
-.about-page > .about-beyond-section .gallery-grid.caption-gallery figure {
-  min-width: 0 !important;
-  max-width: none !important;
-}
-
-.about-page > .about-beyond-section img {
-  max-width: 100% !important;
-}
-
-@media (max-width: 900px) {
-  .about-page > .about-beyond-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 52px 0 0 !important;
-    padding: 0 !important;
-  }
-
-  .about-page > .about-beyond-section > .diversions-lead-layout,
-  .about-page > .about-beyond-section > .diversions-feature-grid,
-  .about-page > .about-beyond-section > .gallery-grid.caption-gallery {
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    gap: 22px !important;
-  }
-}
-
-/* Beyond Academia: true centered breakout from the About page wrapper. */
+/* Clean Beyond Academia layout. This replaces all earlier accumulated overrides. */
 .about-page > #beyond-academia.about-beyond-section {
-  position: relative !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: min(1180px, calc(100vw - 48px)) !important;
-  max-width: none !important;
-  margin: 72px 0 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
+  position: static;
+  width: 100%;
+  max-width: 1040px;
+  margin: 72px auto 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .about-page > #beyond-academia.about-beyond-section > .section-heading-row,
 .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
 .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
 .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
-  max-width: none !important;
-}
-
-@media (min-width: 901px) {
-  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
-    gap: 42px !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .about-page > #beyond-academia.about-beyond-section {
-    width: calc(100vw - 40px) !important;
-    margin-top: 52px !important;
-  }
-
-  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
-    grid-template-columns: minmax(0, 1fr) !important;
-  }
-}
-
-/* Refine Beyond Academia to the same centered 1040px content line as the About text. */
-.about-page > #beyond-academia.about-beyond-section {
-  position: static !important;
-  left: auto !important;
-  transform: none !important;
-  width: 100% !important;
-  max-width: 1040px !important;
-  margin: 72px auto 0 !important;
-  padding: 0 !important;
-}
-
-@media (max-width: 900px) {
-  .about-page > #beyond-academia.about-beyond-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 52px auto 0 !important;
-  }
-}
-
-/* Final Beyond Academia alignment: match the About content line on desktop and stay fully visible on mobile. */
-.about-page > #beyond-academia.about-beyond-section {
-  position: static !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin: 72px 0 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  overflow: visible !important;
-}
-
-.about-page > #beyond-academia.about-beyond-section > .section-heading-row,
-.about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
-.about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
-.about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
 .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-  gap: 36px !important;
-  align-items: start !important;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
 }
 
 .about-page > #beyond-academia.about-beyond-section .diversions-lead-figure,
 .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
-  width: 100% !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
-.about-page > #beyond-academia.about-beyond-section img {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
+.about-page > #beyond-academia.about-beyond-section .diversions-lead-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Preserve the established gallery design and natural desktop card sizing. */
+.about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+.about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid figure,
+.about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery figure {
+  min-width: 0;
+}
+
+.about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid img,
+.about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 900px) {
   .about-page > #beyond-academia.about-beyond-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 52px 0 0 !important;
-    padding: 0 !important;
-    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 52px auto 0;
+    padding: 0;
+    overflow-x: clip;
   }
 
   .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
   .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
   .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 22px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    gap: 22px;
   }
 
-  .about-page > #beyond-academia.about-beyond-section .diversions-lead-figure,
-  .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose,
-  .about-page > #beyond-academia.about-beyond-section figure {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-}
-
-/* Beyond Academia gallery row alignment.
-   Keep two-column desktop rows level without affecting About Me or mobile. */
-@media (min-width: 901px) {
-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    align-items: start !important;
+  .about-page > #beyond-academia.about-beyond-section figure,
+  .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
   }
 
-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid figure,
-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery figure {
-    margin: 0 0 28px !important;
-    min-width: 0 !important;
-  }
-
+  .about-page > #beyond-academia.about-beyond-section img,
   .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid img,
   .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery img {
-    width: 100% !important;
-    height: 360px !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid img,
-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
-
-/* Beyond Academia final width and image-ratio correction.
-   Uses the section ID directly so it works regardless of optional classes. */
-#beyond-academia {
-  position: static !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-#beyond-academia > .section-heading-row,
-#beyond-academia > .photo-text,
-#beyond-academia > .diversions-lead-layout,
-#beyond-academia > .diversions-feature-grid,
-#beyond-academia > .gallery-grid,
-#beyond-academia > .gallery-grid.caption-gallery {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-@media (min-width: 901px) {
-  #beyond-academia > .diversions-lead-layout {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-    gap: 36px !important;
-    align-items: start !important;
-  }
-
-  #beyond-academia > .diversions-feature-grid,
-  #beyond-academia > .gallery-grid.caption-gallery {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 28px !important;
-    align-items: start !important;
-  }
-
-  /* Uniform gallery cards without distorting image proportions. */
-  #beyond-academia > .diversions-feature-grid img,
-  #beyond-academia > .gallery-grid.caption-gallery img {
-    display: block !important;
-    width: 100% !important;
-    height: 360px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-
-  /* The lead photograph keeps its natural ratio. */
-  #beyond-academia .diversions-lead-figure img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-}
-
-@media (max-width: 900px) {
-  #beyond-academia {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: visible !important;
-  }
-
-  #beyond-academia > .diversions-lead-layout,
-  #beyond-academia > .diversions-feature-grid,
-  #beyond-academia > .gallery-grid.caption-gallery {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 22px !important;
-  }
-
-  #beyond-academia figure,
-  #beyond-academia .diversions-lead-prose {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  #beyond-academia img {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
