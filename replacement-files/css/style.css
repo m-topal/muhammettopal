@@ -9250,226 +9250,184 @@ main {
   filter: grayscale(100%) contrast(1.04) !important;
 }
 
-/* v184: targeted typography, header, navigation, teaching, publication, and modal corrections */
+
+/* v150: requested typography, header, teaching, and carousel correction package */
 :root {
-  --topal-teal: #006871;
+  --topal-handwritten-teal: #1b7d85;
 }
 
+/* Force the live stylesheet to show the requested compact reading rhythm. */
+html,
 body {
   font-size: 16px !important;
   line-height: 1 !important;
 }
 
-/* Body and introductory prose, kept separate from labels, captions, buttons, and metadata. */
+body,
 .page,
 .prose,
 .post-content,
-.lead,
+.home-intro,
 .home-intro .lead,
-.teaching-shelf-intro,
-.teaching-continuous-intro,
-.teaching-continuous-intro > p,
-.research-continuous-intro,
-.research-continuous-intro > p,
+.lead,
+.page p:not(.label):not(.meta),
+.prose p,
+.post-content p,
+.section p,
 .about-dual-column,
 .about-dual-column p,
-.two-column-prose,
-.two-column-prose p,
-.teaching-continuous-page .certificate-main-text,
-.teaching-continuous-page .certificate-main-text p,
-.teaching-statement-text,
-.teaching-statement-text p,
+.teaching-shelf-intro,
+.teaching-continuous-intro,
+.teaching-continuous-intro p,
+.research-continuous-intro,
+.research-continuous-intro p,
 .course-modal-text,
-.course-modal-text p,
-.cv-modal-body,
-.cv-modal-body p,
-.syllabus-modal-body,
-.syllabus-modal-body p,
-.accordion-panel,
-.accordion-panel p {
+.course-modal-text p:not(.meta),
+.course-modal-text li,
+.teaching-course-card p:not(.meta),
+.certificate-card p:not(.meta),
+.teaching-home-text p,
+.teaching-landing-card p {
   font-size: 16px !important;
   line-height: 1 !important;
 }
 
+.page p:not(.label):not(.meta),
 .prose p,
-.page p,
 .post-content p,
-.lead,
+.section p,
+.about-dual-column p,
 .teaching-shelf-intro,
 .teaching-continuous-intro p,
 .research-continuous-intro p,
-.about-dual-column p,
-.two-column-prose p,
 .course-modal-text p,
-.accordion-panel p {
+.accordion-panel p,
+.teaching-course-card p:not(.meta),
+.certificate-card p:not(.meta),
+.teaching-home-text p,
+.teaching-landing-card p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.prose p + p,
-.page p + p,
-.post-content p + p,
-.teaching-continuous-intro p + p,
-.research-continuous-intro p + p,
-.about-dual-column p + p,
-.two-column-prose p + p,
-.course-modal-text p + p,
-.accordion-panel p + p {
-  margin-top: 0 !important;
-}
-
-/* Header identity, color matched to the teal in the handwritten Topal artwork. */
-.site-top .name,
-.name {
-  color: var(--topal-teal) !important;
-  font-size: 32px !important;
-  line-height: 1 !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.025em !important;
-}
-
+/* Header identity. */
 .site-top .site-header-wordmark-block,
 .site-top .home-header-mark {
   transform: translateY(5px) !important;
 }
 
 .site-top .name,
-.site-top .identity-sentence {
-  transform: translateY(5px) !important;
+.name {
+  color: var(--topal-handwritten-teal) !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.025em !important;
+  margin-top: 5px !important;
 }
 
-.site-top .identity-sentence {
+.site-top .identity-sentence,
+.identity-sentence {
   margin-top: 15px !important;
-  margin-bottom: 26px !important;
 }
 
-.sticky-nav,
-.nav-wrap.sticky-nav {
+.nav-wrap,
+.sticky-nav {
   margin-top: 10px !important;
 }
 
-main {
-  padding-top: 24px !important;
-}
-
-/* Single, non-stacked underline behavior for the main navigation. */
 .nav,
 .nav.simplified-nav {
   font-size: 16px !important;
 }
 
 .nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]),
-.nav.simplified-nav > a:not(.blog-pill),
+.nav summary,
 .nav .nav-dropdown > summary {
   font-size: 16px !important;
   font-weight: 400 !important;
-  text-decoration: none !important;
   border-bottom: 0 !important;
-  box-shadow: none !important;
+  text-decoration: none !important;
   background-image: none !important;
-  padding-bottom: 0 !important;
-}
-
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::before,
-.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::after,
-.nav.simplified-nav > a:not(.blog-pill)::before,
-.nav.simplified-nav > a:not(.blog-pill)::after,
-.nav .nav-dropdown > summary::before {
-  display: none !important;
-  content: none !important;
-  border: 0 !important;
   box-shadow: none !important;
-  background: none !important;
 }
 
 .nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):hover,
 .nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):focus-visible,
-.nav.simplified-nav > a:not(.blog-pill):hover,
-.nav.simplified-nav > a:not(.blog-pill):focus-visible,
+.nav summary:hover,
+.nav summary:focus-visible,
 .nav .nav-dropdown:hover > summary,
-.nav .nav-dropdown:focus-visible > summary {
+.nav .nav-dropdown[open] > summary {
   font-weight: 700 !important;
-  text-decoration-line: underline !important;
+  text-decoration: underline !important;
   text-decoration-thickness: 1px !important;
   text-underline-offset: 5px !important;
   border-bottom: 0 !important;
 }
 
-.nav a.active:not(:hover):not(:focus-visible),
-.nav .nav-dropdown.active > summary:not(:hover):not(:focus-visible) {
-  font-weight: 400 !important;
-  text-decoration: none !important;
-  border-bottom: 0 !important;
+.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::before,
+.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"])::after,
+.nav summary::before,
+.nav summary::after,
+.nav .nav-dropdown > summary::before,
+.nav .nav-dropdown > summary::after {
+  display: none !important;
+  content: none !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
-/* Title hierarchy. */
+/* Keep visible heading levels distinct instead of flattening every title. */
 .home-intro h1,
-.page h1,
-.post-page h1 {
+.page h1 {
   font-size: 24px !important;
-  line-height: 1.05 !important;
+  line-height: 1 !important;
   margin-bottom: 14px !important;
 }
 
-.section-heading-row h2,
 .section h2,
 .page h2,
-.teaching-shelf-heading h2,
-.publication-category h2,
-.research-continuous-page .publication-category-heading h2 {
+.teaching-continuous-page .teaching-records-title,
+.teaching-continuous-page .teaching-scroll-section > h2,
+.teaching-page .teaching-landing-card h2 {
   font-size: 20px !important;
-  line-height: 1.05 !important;
+  line-height: 1 !important;
   margin-bottom: 10px !important;
 }
 
 .prose h3,
-.research-continuous-page .research-subsection-heading h3,
+.page h3,
+.teaching-shelf-heading h2,
+.teaching-continuous-page .teaching-shelf-heading h2,
+.teaching-certificate-page .certificate-card h3,
+.teaching-continuous-page .certificate-card h3,
 .teaching-course-card h3,
+.teaching-continuous-page .teaching-course-card h3,
 .modal-course-card h3,
-.certificate-card h3,
 .course-modal-text h3,
 .syllabus-modal-header h3,
-.cv-modal-header h2,
 .share-popup-title,
-.accordion-title,
-.publication-trigger .accordion-title {
+.cv-modal-header h2 {
   font-size: 18px !important;
-  line-height: 1.05 !important;
+  line-height: 1 !important;
 }
 
-.prose h3,
-.research-continuous-page .research-subsection-heading,
-.teaching-shelf-heading {
-  margin-top: 22px !important;
-}
-
-.section,
-.teaching-shelf,
-.teaching-scroll-section,
-.research-scroll-section,
-.publication-category {
-  margin-top: 24px !important;
-}
-
-.rule {
-  margin: 24px 0 !important;
-}
-
-/* Publications and presentations use the same readable title size and closer rows. */
-.accordion-trigger,
-.publication-trigger {
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
-  background: transparent !important;
-}
-
+/* Publication and presentation entry titles should match each other. */
 .accordion-title,
-.publication-trigger .accordion-title {
-  color: var(--ink) !important;
+.publication-trigger .accordion-title,
+.presentation-trigger .accordion-title,
+.publications-page .accordion-title,
+.presentations-page .accordion-title {
+  font-size: 19px !important;
+  line-height: 1 !important;
 }
 
-.accordion-plus {
-  font-size: 22px !important;
+.accordion-trigger,
+.publication-trigger,
+.presentation-trigger {
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
 }
 
 .accordion-panel {
@@ -9480,70 +9438,64 @@ main {
   margin-bottom: 6px !important;
 }
 
-.publication-visible-date {
-  font-size: 14px !important;
+/* Teaching cards and popups, retain card/image structure but correct title scale. */
+.teaching-shelf {
+  margin-top: 24px !important;
 }
 
-/* Teaching card and popup hierarchy. */
-.teaching-shelf-heading h2 {
-  font-size: 20px !important;
+.teaching-shelf-heading {
+  margin-bottom: 10px !important;
 }
 
 .teaching-course-card h3,
-.modal-course-card .course-card-body h3,
 .teaching-continuous-page .teaching-course-card h3,
-.teaching-continuous-page .certificate-card h3,
-.course-modal-text h3 {
-  font-size: 18px !important;
-  line-height: 1.05 !important;
-  margin-top: 6px !important;
-  margin-bottom: 8px !important;
+.certificate-card h3,
+.course-modal-text h3,
+.syllabus-modal-header h3 {
+  font-weight: 600 !important;
 }
 
-.teaching-shelf-intro {
-  margin-bottom: 14px !important;
+.course-modal-text h3,
+.syllabus-modal-header h3 {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
 }
 
 .course-modal-dialog,
-.share-popup-dialog,
-.cv-modal-dialog,
+.course-modal-dialog-wide,
 .syllabus-modal-dialog {
   line-height: 1 !important;
 }
 
-.course-modal-text h3,
-.syllabus-modal-header h3,
-.cv-modal-header h2,
-.share-popup-title {
-  font-size: 18px !important;
-  line-height: 1.05 !important;
-  margin-bottom: 10px !important;
-}
-
-/* Remove the white side veil behind carousel card rows, without touching cards or image placement. */
+/* Remove the white fade layer outside the teaching carousel/cards, not the cards themselves. */
 .teaching-slider-frame::before,
-.teaching-slider-frame::after {
+.teaching-slider-frame::after,
+.teaching-continuous-page .teaching-slider-frame::before,
+.teaching-continuous-page .teaching-slider-frame::after,
+.teaching-slider-frame.is-simple-scroll::before,
+.teaching-slider-frame.is-simple-scroll::after {
   display: none !important;
   content: none !important;
+  background: none !important;
 }
 
 .teaching-slider-frame,
-.teaching-shelf-row,
-.instructor-course-row,
-.co-teaching-course-row,
-.other-teaching-course-row {
+.teaching-continuous-page .teaching-slider-frame {
   background: transparent !important;
 }
 
-/* Keep card dimensions and images intact while aligning title scale. */
-.teaching-course-card,
-.modal-course-card,
-.certificate-card {
-  background: #fff !important;
-}
-
-@media (max-width: 760px) {
-  body {
+/* Mobile keeps the same proportions without returning to older oversized rules. */
+@media (max-width: 700px) {
+  html,
+  body,
+  .page p:not(.label):not(.meta),
+  .prose p,
+  .post-content p,
+  .lead,
+  .teaching-shelf-intro,
+  .teaching-continuous-intro p,
+  .research-continuous-intro p,
+  .course-modal-text p:not(.meta) {
     font-size: 16px !important;
     line-height: 1 !important;
   }
@@ -9555,54 +9507,33 @@ main {
   }
 
   .home-intro h1,
-  .page h1,
-  .post-page h1 {
-    font-size: 22px !important;
+  .page h1 {
+    font-size: 23px !important;
   }
 
-  .section-heading-row h2,
   .section h2,
   .page h2,
-  .teaching-shelf-heading h2,
-  .publication-category h2,
-  .research-continuous-page .publication-category-heading h2 {
+  .teaching-continuous-page .teaching-records-title,
+  .teaching-continuous-page .teaching-scroll-section > h2 {
     font-size: 19px !important;
   }
 
   .prose h3,
-  .research-continuous-page .research-subsection-heading h3,
+  .page h3,
+  .teaching-shelf-heading h2,
   .teaching-course-card h3,
-  .modal-course-card h3,
-  .certificate-card h3,
   .course-modal-text h3,
   .syllabus-modal-header h3,
-  .cv-modal-header h2,
-  .share-popup-title,
   .accordion-title,
-  .publication-trigger .accordion-title {
+  .publication-trigger .accordion-title,
+  .presentation-trigger .accordion-title {
     font-size: 17px !important;
+    line-height: 1 !important;
   }
 
   .nav,
   .nav.simplified-nav,
-  .nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]),
-  .nav.simplified-nav > a:not(.blog-pill),
-  .nav .nav-dropdown > summary {
+  .nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]) {
     font-size: 16px !important;
-  }
-
-  .site-top .identity-sentence {
-    margin-top: 13px !important;
-    margin-bottom: 22px !important;
-  }
-
-  .sticky-nav,
-  .nav-wrap.sticky-nav {
-    margin-top: 8px !important;
-    margin-bottom: 12px !important;
-  }
-
-  main {
-    padding-top: 16px !important;
   }
 }
