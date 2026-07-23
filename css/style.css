@@ -9711,42 +9711,58 @@ main .nav-directory-card {
   }
 }
 
-/* About page sticky secondary navigation */
-.about-scroll-nav {
-  position: sticky;
-  top: 72px;
-  z-index: 50;
-  display: flex;
-  gap: 24px;
-  margin: 20px 0 36px;
-  padding: 12px 0;
-  background: #fff;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
+
+/* Repair patch: About subnavigation and Contact alignment */
+.about-page .about-scroll-anchor,
+.about-page .about-beyond-section {
+  scroll-margin-top: 155px;
 }
 
-.about-scroll-nav a {
-  color: inherit;
-  text-decoration: none;
+.about-page .about-beyond-section {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(120, 42, 42, .14);
 }
 
-.about-scroll-nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+/* Keep the original About dual-column layout as direct article content. */
+.about-page > .about-dual-wrap {
+  width: 100%;
 }
 
-.about-scroll-section {
-  scroll-margin-top: 150px;
+/* Undo legacy rules that push the appointment column and calendar downward. */
+.contact-page .appointment-widget.appointment-widget-compact {
+  margin-top: 0 !important;
 }
 
-#beyond-academia {
-  margin-top: 64px;
+.contact-page .contact-message-panel,
+.contact-page .appointment-widget-compact {
+  align-self: start;
 }
 
-@media (max-width: 760px) {
-  .about-scroll-nav {
-    top: 60px;
-    gap: 16px;
-    font-size: 14px;
+.contact-page .contact-message-panel .contact-section-title,
+.contact-page .appointment-widget-compact .contact-section-title {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+.contact-page .contact-message-panel > .note,
+.contact-page .appointment-widget-compact > .appointment-note {
+  min-height: 44px !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  line-height: 1.55;
+}
+
+.contact-page .appointment-widget-compact .mini-calendar {
+  display: block !important;
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  justify-content: initial !important;
+}
+
+@media (max-width: 900px) {
+  .contact-page .contact-message-panel > .note,
+  .contact-page .appointment-widget-compact > .appointment-note {
+    min-height: 0 !important;
   }
 }

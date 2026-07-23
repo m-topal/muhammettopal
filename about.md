@@ -7,12 +7,12 @@ permalink: /about/
   <p class="label">About Me</p>
   <h1>About Me</h1>
 
-  <nav class="about-scroll-nav" aria-label="About page sections">
-  <a href="#about-me">About Me</a>
-  <a href="#beyond-academia">Beyond Academia</a>
-</nav>
+  <nav class="teaching-scroll-nav about-scroll-nav" aria-label="About page sections">
+    <a href="#about-me">About Me</a>
+    <a href="#beyond-academia">Beyond Academia</a>
+  </nav>
 
-<section id="about-me" class="about-scroll-section">
+  <div id="about-me" class="about-scroll-anchor" aria-hidden="true"></div>
 
   <div class="about-cv-toolbar" aria-label="Curriculum vitae">
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
@@ -74,18 +74,17 @@ permalink: /about/
     </div>
   </div>
 
-    </section>
-
-    <section id="beyond-academia" class="about-scroll-section">
-  <p class="label">Diversions</p>
-  <h2>Beyond Academia</h2>
+  <section id="beyond-academia" class="about-beyond-section teaching-scroll-section">
+    <div class="section-heading-row">
+      <p class="label">Diversions</p>
+      <h2>Beyond Academia</h2>
+    </div>
 
   <div class="photo-text diversions-lead-layout">
     <figure class="diversions-lead-figure js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/grand-canyon-home.jpg' | relative_url }}" alt="Muhammet Topal at the Grand Canyon">
       <figcaption>My first camping trip at the Grand Canyon.</figcaption>
     </figure>
-
     <div class="prose diversions-lead-prose paragraph-tight-indent">
       <p>Moving from Istanbul and Paris to Arizona changed my sense of landscape. Coming from dense urban worlds into the desert, mountains, canyons, and open horizons of the American Southwest made hiking, climbing, and outdoor life part of how I think and live.</p>
       <p>Besides mountaineering, I enjoy creative writing and thinking through literature. I am especially drawn to Italo Calvino and Oğuz Atay as both turn narrative into a way of testing reality: Calvino through form, lightness, and speculative imagination, Atay through irony, fragmentation, self-consciousness, and the failures of modern intellectual life. Their work matters to me not as an escape from history or academia in general, but as another way of asking how people inhabit language, memory, and the worlds they fail or try to build.</p>
@@ -121,23 +120,27 @@ permalink: /about/
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
 
-    <figure>
-      <img src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
-      <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
-    </figure>
+<figure>
+  <img src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
+  <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
+</figure>
+
   </div>
 
-  <div class="gallery-grid caption-gallery">
-    <figure>
-      <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
-      <figcaption>In Truth or Consequences, New Mexico with my partner.</figcaption>
-    </figure>
 
-    <figure>
-      <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
-      <figcaption>In White Sands National Park with my partner.</figcaption>
-    </figure>
-  </div>
-</section>
-    
+<div class="gallery-grid caption-gallery">
+
+<figure>
+  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
+  <figcaption>In Truth or Consequences, New Mexico with my partner.</figcaption>
+</figure>
+
+<figure>
+  <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
+  <figcaption>In White Sands National Park with my partner.</figcaption>
+</figure>
+
+</div>
+  </section>
+
 </article>
