@@ -7,6 +7,13 @@ permalink: /about/
   <p class="label">About Me</p>
   <h1>About Me</h1>
 
+  <nav class="about-scroll-nav" aria-label="About page sections">
+  <a href="#about-me">About Me</a>
+  <a href="#beyond-academia">Beyond Academia</a>
+</nav>
+
+<section id="about-me" class="about-scroll-section">
+
   <div class="about-cv-toolbar" aria-label="Curriculum vitae">
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
   </div>
@@ -66,4 +73,7 @@ permalink: /about/
       </div>
     </div>
   </div>
+
+    </section>
+    
 </article>
