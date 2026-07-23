@@ -10105,3 +10105,22 @@ main .nav-directory-card {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 }
+
+/* Refine Beyond Academia to the same centered 1040px content line as the About text. */
+.about-page > #beyond-academia.about-beyond-section {
+  position: static !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin: 72px auto 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .about-page > #beyond-academia.about-beyond-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 52px auto 0 !important;
+  }
+}
