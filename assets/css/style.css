@@ -9426,8 +9426,9 @@ main {
 .top .name,
 a.name {
   color: var(--v13-header-teal) !important;
+  font-family: 'Raleway', sans-serif !important;
   font-size: 32px !important;
-  font-weight: 400 !important;
+  font-weight: 200 !important;
   line-height: 1 !important;
   letter-spacing: -0.025em !important;
 }
