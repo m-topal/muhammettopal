@@ -3,12 +3,7 @@ layout: default
 title: About Me
 permalink: /about/
 ---
-<article class="page wide about-page teaching-continuous-page" data-scroll-sections>
-  <nav class="teaching-scroll-nav about-page-scroll-nav" aria-label="About page sections">
-    <a href="#about-me">About Me</a>
-    <a href="#beyond-academia">Beyond Academia</a>
-  </nav>
-
+<article class="page wide about-page">
   <p class="label">About Me</p>
   <h1>About Me</h1>
 
@@ -16,7 +11,7 @@ permalink: /about/
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
   </div>
 
-  <div id="about-me" class="about-dual-wrap teaching-scroll-section">
+  <div id="about-me" class="about-dual-wrap">
     <figure class="about-dual-image about-dual-image-princeton js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
@@ -72,7 +67,7 @@ permalink: /about/
     </div>
   </div>
 
-  <section id="beyond-academia" class="about-beyond-section teaching-scroll-section">
+  <section id="beyond-academia" class="about-beyond-section">
     <div class="section-heading-row">
       <p class="label">Diversions</p>
       <h2>Beyond Academia</h2>

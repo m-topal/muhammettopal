@@ -9973,3 +9973,31 @@ main .nav-directory-card {
     padding-bottom: 56px !important;
   }
 }
+
+
+/* Navless About page and centered Beyond Academia section. */
+.about-page > .about-beyond-section {
+  width: min(100%, 1040px) !important;
+  max-width: 1040px !important;
+  margin: 72px auto 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.about-page > .about-beyond-section > .section-heading-row,
+.about-page > .about-beyond-section > .diversions-lead-layout,
+.about-page > .about-beyond-section > .diversions-feature-grid,
+.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .about-page > .about-beyond-section {
+    width: 100% !important;
+    margin-top: 52px !important;
+  }
+}
