@@ -9428,7 +9428,7 @@ a.name {
   color: var(--v13-header-teal) !important;
   font-family: 'Raleway', sans-serif !important;
   font-size: 32px !important;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   line-height: 1 !important;
   letter-spacing: -0.025em !important;
 }
@@ -9850,8 +9850,9 @@ main .nav-directory-card {
   .site-top .name,
   .top .name,
   a.name {
+    font-family: 'Raleway', sans-serif !important;
     font-size: 28px !important;
-    font-weight: 400 !important;
+    font-weight: 300 !important;
   }
 
   .contact-page .appointment-panel,
