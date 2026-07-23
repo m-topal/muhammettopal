@@ -9916,12 +9916,12 @@ main .nav-directory-card {
   white-space: nowrap !important;
 }
 
-/* Beyond Academia layout: preserve the working desktop width and center the mobile section. */
+/* Clean Beyond Academia layout. This replaces all earlier accumulated overrides. */
 .about-page > #beyond-academia.about-beyond-section {
   position: static;
-  width: calc(100% + 140px);
-  max-width: calc(100vw - 56px);
-  margin: 72px 0 0;
+  width: 100%;
+  max-width: 1040px;
+  margin: 72px auto 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -9986,15 +9986,11 @@ main .nav-directory-card {
 
 @media (max-width: 900px) {
   .about-page > #beyond-academia.about-beyond-section {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw - 40px);
-    max-width: none;
-    margin: 52px 0 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 52px auto 0;
     padding: 0;
-    overflow-x: visible;
-    box-sizing: border-box;
+    overflow-x: clip;
   }
 
   .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
@@ -10024,5 +10020,32 @@ main .nav-directory-card {
     max-width: 100%;
     height: auto;
     object-fit: contain;
+  }
+}
+
+/* Mobile-only correction: keep Beyond Academia inside the About page viewport */
+@media (max-width: 900px) {
+  .about-page > #beyond-academia.about-beyond-section {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 52px auto 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+  .about-page > #beyond-academia.about-beyond-section > .gallery-grid,
+  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
 }
