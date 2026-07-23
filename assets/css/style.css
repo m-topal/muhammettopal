@@ -10124,3 +10124,83 @@ main .nav-directory-card {
     margin: 52px auto 0 !important;
   }
 }
+
+/* Final Beyond Academia alignment: match the About content line on desktop and stay fully visible on mobile. */
+.about-page > #beyond-academia.about-beyond-section {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 72px 0 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.about-page > #beyond-academia.about-beyond-section > .section-heading-row,
+.about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+.about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+.about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 36px !important;
+  align-items: start !important;
+}
+
+.about-page > #beyond-academia.about-beyond-section .diversions-lead-figure,
+.about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.about-page > #beyond-academia.about-beyond-section img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 900px) {
+  .about-page > #beyond-academia.about-beyond-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 52px 0 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 22px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .about-page > #beyond-academia.about-beyond-section .diversions-lead-figure,
+  .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose,
+  .about-page > #beyond-academia.about-beyond-section figure {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
