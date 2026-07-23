@@ -9916,13 +9916,12 @@ main .nav-directory-card {
   white-space: nowrap !important;
 }
 
-/* Clean Beyond Academia layout. Keep the left edge aligned with About,
-   while extending the section to the same right-hand reading line. */
+/* Clean Beyond Academia layout. This replaces all earlier accumulated overrides. */
 .about-page > #beyond-academia.about-beyond-section {
   position: static;
-  width: calc(100% + 140px);
-  max-width: calc(100vw - 56px);
-  margin: 72px 0 0;
+  width: 100%;
+  max-width: 1040px;
+  margin: 72px auto 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -10022,4 +10021,72 @@ main .nav-directory-card {
     height: auto;
     object-fit: contain;
   }
+}
+
+/* v114: final responsive polish for About, Contact, and Blog actions */
+
+/* Center Beyond Academia in the mobile viewport without changing desktop layout. */
+@media (max-width: 900px) {
+  .about-page > #beyond-academia.about-beyond-section {
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Restore the same click-to-enlarge affordance for every Beyond Academia image. */
+.about-page > #beyond-academia.about-beyond-section .js-lightbox-figure,
+.about-page > #beyond-academia.about-beyond-section .js-lightbox-image {
+  cursor: zoom-in;
+}
+
+/* Raise the calendar slightly so its top aligns with the name field. */
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    padding-bottom: 48px !important;
+  }
+}
+
+/* Match the two action buttons and align them horizontally. */
+.contact-page .appointment-widget-compact > .mini-calendar {
+  margin-bottom: 5px !important;
+}
+
+.contact-page .contact-form .message-toolbar-submit,
+.contact-page .appointment-widget-compact .appointment-book-button {
+  min-height: 42px !important;
+  height: 42px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: var(--ink) !important;
+  box-sizing: border-box !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  line-height: 1 !important;
+}
+
+.contact-page .appointment-widget-compact .appointment-book-button {
+  display: flex !important;
+  width: max-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Place Comment on the left and Share on the right edge of each blog card. */
+.blog-card-actions.social-actions {
+  width: 100% !important;
+  justify-content: space-between !important;
+}
+
+.blog-card-actions.social-actions > .share-menu-wrap {
+  margin-left: auto !important;
+}
+
+.blog-card-actions.social-actions > .share-menu-wrap > .share-menu-panel {
+  left: auto !important;
+  right: 0 !important;
 }

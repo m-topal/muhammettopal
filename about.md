@@ -86,35 +86,35 @@ permalink: /about/
   </div>
 
   <div class="gallery-grid caption-gallery">
-    <figure>
-      <img src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing at Mt. Lemmon">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing at Mt. Lemmon">
       <figcaption>Mt. Lemmon rock climbing.</figcaption>
     </figure>
 
-    <figure>
-      <img src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
       <figcaption>Feeding the squirrels in the Grand Canyon.</figcaption>
     </figure>
   </div>
 
   <div class="diversions-feature-grid">
-    <figure class="diversions-feature-large">
-      <img src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Riding a mustang named Sequoia in Tucson">
+    <figure class="diversions-feature-large js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Riding a mustang named Sequoia in Tucson">
       <figcaption>Riding a mustang in Tucson. Her name is Sequoia.</figcaption>
     </figure>
 
-    <figure>
-      <img src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with my partner and her dog Clío">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with my partner and her dog Clío">
       <figcaption>Fishing trip with my partner and her dog Clío.</figcaption>
     </figure>
 
-    <figure>
-      <img src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
 
-<figure>
-  <img src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
+<figure class="js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
   <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
 </figure>
 
@@ -123,13 +123,13 @@ permalink: /about/
 
 <div class="gallery-grid caption-gallery">
 
-<figure>
-  <img src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
+<figure class="js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
   <figcaption>In Truth or Consequences, New Mexico with my partner.</figcaption>
 </figure>
 
-<figure>
-  <img src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
+<figure class="js-lightbox-figure">
+  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
   <figcaption>In White Sands National Park with my partner.</figcaption>
 </figure>
 
