@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" dir="{{ page.dir | default: 'ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+  {% if page.youtube_id %}
+    {% assign social_image = "https://img.youtube.com/vi/" | append: page.youtube_id | append: "/maxresdefault.jpg" %}
+  {% elsif page.image contains "http" %}
+    {% assign social_image = page.image %}
+  {% elsif page.image %}
+    {% assign social_image = page.image | absolute_url %}
+  {% else %}
+    {% assign social_image = '/assets/topal-wordmark-white-bg.png' | absolute_url %}
+    {% assign social_image_alt = '/assets/img/main-headshot.jpg' | absolute_url %}
+  {% endif %}
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+  <meta property="og:image" content="{{ social_image }}">
+  <meta property="og:image:secure_url" content="{{ social_image }}">
+  <meta property="og:image:alt" content="Muhammet Topal handwritten wordmark">
+  {% if social_image_alt %}
+  <meta property="og:image" content="{{ social_image_alt }}">
+  <meta property="og:image:secure_url" content="{{ social_image_alt }}">
+  <meta property="og:image:alt" content="Muhammet Topal portrait">
+  {% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+  <meta name="twitter:image" content="{{ social_image }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/academic-globe-v12.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/favicon-512x512.png?v=7' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg?v=7' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/favicon-48x48.png?v=7' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png?v=7' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png?v=7' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png?v=7' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/site.webmanifest?v=7' | relative_url }}">
+</head>
+<body>
+  <div id="academicTopMap" class="academic-top-map" aria-hidden="true"></div>
+  <div id="academicWorldScene" class="academic-world-scene" aria-hidden="true">
+    <div id="academicGlobe" class="academic-globe"></div>
+    <div id="schoolSatellite1" class="school-satellite"><img src="{{ '/assets/img/background/sorbonne-line.png' | relative_url }}" alt=""></div>
+    <div id="schoolSatellite2" class="school-satellite"><img src="{{ '/assets/img/background/anderson-hall-line.png' | relative_url }}" alt=""></div>
+    <div id="schoolSatellite3" class="school-satellite"><img src="{{ '/assets/img/background/old-main-line.png' | relative_url }}" alt=""></div>
+  </div>
+  <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="top site-top">
+      <div class="site-utility-bar split-utility-bar" aria-label="Site tools">
+        <div class="utility-left">
+          <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
+            <span class="utility-icon" aria-hidden="true">⌕</span>
+            <span>Advanced Search</span>
+          </a>
+        </div>
+
+        <div class="utility-right">
+          <details class="language-menu language-menu-top">
+            <summary>
+              <span class="translation-symbol" aria-hidden="true"><span>A</span><span>文</span></span>
+              <span>Language</span>
+            </summary>
+            <div class="language-panel">
+              <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
+              <a class="translate-link" href="#" data-lang="tr" target="_blank" rel="noopener">🇹🇷 Türkçe</a>
+              <a class="translate-link" href="#" data-lang="fr" target="_blank" rel="noopener">🇫🇷 Français</a>
+              <a class="translate-link" href="#" data-lang="ar" target="_blank" rel="noopener">🇸🇦 العربية</a>
+              <a class="translate-link" href="#" data-lang="ru" target="_blank" rel="noopener">🇷🇺 Русский</a>
+              <a class="translate-link" href="#" data-lang="fa" target="_blank" rel="noopener">🇮🇷 فارسی</a>
+              <span>Machine translation</span>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <a class="home-header-mark site-header-wordmark-block" href="{{ '/' | relative_url }}" aria-label="Muhammet Topal home">
+        <img class="home-header-wordmark" src="{{ '/assets/topal-wordmark-transparent.png' | relative_url }}" alt="Topal wordmark">
+      </a>
+
+      <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
+      <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
+    </header>
+
+    <div class="nav-wrap sticky-nav">
+      <nav class="nav simplified-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a class="{% if page.url contains '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About Me</a>
+
+        <a class="{% if page.url contains '/research/' or page.url contains '/publications/' or page.url contains '/presentations/' %}active{% endif %}" href="{{ '/research/' | relative_url }}">Research</a>
+
+        <a class="{% if page.url contains '/teaching/' %}active{% endif %}" href="{{ '/teaching/' | relative_url }}">Teaching</a>
+        <a class="{% if page.url contains '/extracurricular/' or page.url contains '/service/' %}active{% endif %}" href="{{ '/extracurricular/' | relative_url }}">Service</a>
+        <a class="{% if page.url contains '/diversions/' %}active{% endif %}" href="{{ '/diversions/' | relative_url }}">Diversions</a>
+        <a class="{% if page.url contains '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+      </nav>
+    </div>
+
+    <main>{{ content }}</main>
+
+    <footer class="footer">
+      <span>Designed and Developed by Muhammet Topal | © {{ site.time | date: '%Y' }}</span>
+      <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
+    </footer>
+  </div>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/academic-globe-v12.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
+</body>
+</html>
