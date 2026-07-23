@@ -1,0 +1,482 @@
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 628666a..90d53f5 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -9402,3 +9402,229 @@ main {
+     grid-auto-columns: minmax(260px, 82vw) !important;
+   }
+ }
++/* v184: requested typography, spacing, header, navigation, and list rhythm updates.
++   This is intentionally a narrow override block. Structural image, grid, column,
++   card, modal, and slider rules above remain intact. */
++:root {
++  --v184-header-teal: #006871;
++  --v184-body-size: 16px;
++  --v184-line-height: 1.25;
++  --v184-paragraph-gap: 4px;
++}
++
++/* Reading typography. Preserve the established 12–15px metadata, caption,
++   control, and utility sizes by targeting only reading and introductory copy. */
++body {
++  font-size: var(--v184-body-size);
++  line-height: var(--v184-line-height);
++}
++
++.prose,
++.prose p,
++.home-intro,
++.home-intro p,
++.home-wrap-prose,
++.home-wrap-prose p,
++.two-column-prose,
++.two-column-prose p,
++.post-content,
++.post-content p,
++.experience-card p,
++.accordion-panel p,
++.lead,
++.teaching-continuous-intro,
++.research-continuous-intro,
++.about-dual-column,
++.about-dual-column p {
++  font-size: var(--v184-body-size) !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++/* The visual gap between paragraphs matches the extra 4px created by
++   16px text at a 1.25 line-height. */
++.prose p,
++.home-intro p,
++.home-wrap-prose p,
++.two-column-prose p,
++.post-content p,
++.experience-card p,
++.accordion-panel p,
++.pub-reference,
++.about-dual-column p {
++  margin-bottom: var(--v184-paragraph-gap) !important;
++}
++
++/* Standard title hierarchy. Major section selectors are restored to 20px
++   after the general 16px rule for all other titles. */
++h1 {
++  font-size: 24px !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++h2,
++h3,
++h4,
++h5,
++h6,
++.accordion-title,
++.publication-trigger .accordion-title,
++.option-card span,
++.nav-directory-card span {
++  font-size: 16px !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++.section > h2,
++.page > h2,
++.publication-category > h2,
++.teaching-scroll-section > h2,
++.research-scroll-section > h2 {
++  font-size: 20px !important;
++}
++
++/* Standard, restrained title-to-copy and major-section spacing. */
++.home-intro h1,
++.page h1 {
++  margin-bottom: 16px !important;
++}
++
++.section > h2,
++.page > h2,
++.publication-category > h2,
++.teaching-scroll-section > h2,
++.research-scroll-section > h2 {
++  margin-bottom: 12px !important;
++}
++
++.prose h3,
++.page h3,
++.accordion-title {
++  margin-bottom: 8px;
++}
++
++.section,
++.publication-category {
++  margin-top: 24px !important;
++}
++
++/* Header identity. The color is sampled from the teal in the existing
++   handwritten Topal artwork. */
++.site-top .site-header-wordmark-block {
++  margin-top: 3px;
++  margin-bottom: 7px;
++}
++
++.site-top .name {
++  color: var(--v184-header-teal);
++  font-size: 32px !important;
++  line-height: 1.25 !important;
++}
++
++.site-top .identity-sentence {
++  margin-top: 15px;
++}
++
++/* Move the navigation 10px farther down without changing its internal height. */
++.site-top {
++  margin-bottom: 32px;
++}
++
++.nav {
++  font-size: 16px !important;
++  line-height: var(--v184-line-height);
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]) {
++  font-weight: 400 !important;
++  border-bottom-color: transparent !important;
++  text-decoration: none !important;
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):hover,
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):focus-visible {
++  font-weight: 700 !important;
++  border-bottom-color: currentColor !important;
++  text-decoration: underline !important;
++  text-underline-offset: 6px;
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]).active:not(:hover):not(:focus-visible) {
++  font-weight: 400 !important;
++  border-bottom-color: transparent !important;
++  text-decoration: none !important;
++}
++
++/* Bring publication and presentation accordion entries closer together. */
++.publication-category .accordion-trigger,
++.page > .accordion .accordion-trigger {
++  padding-top: 14px !important;
++  padding-bottom: 14px !important;
++}
++
++.publication-category .accordion-panel,
++.page > .accordion .accordion-panel {
++  padding-bottom: 16px !important;
++}
++
++.publication-category .accordion-meta,
++.page > .accordion .accordion-meta {
++  margin-bottom: 6px !important;
++}
++
++.publication-category .accordion-panel p,
++.page > .accordion .accordion-panel p {
++  margin-bottom: 8px !important;
++}
++
++/* The About page is a special two-column composition with two images floating
++   between the columns. Compact typography shortens both columns, so the image
++   anchors are proportionally raised to preserve balanced text on both sides. */
++.about-page .about-dual-wrap {
++  --dual-first-top: 190px;
++  --dual-second-top: 1030px;
++}
++
++/* Mobile follows the desktop hierarchy proportionally while preserving all
++   existing single-column image and card behavior. */
++@media (max-width: 760px) {
++  .site-top .site-header-wordmark-block {
++    margin-top: 2px;
++    margin-bottom: 6px;
++  }
++
++  .site-top .name {
++    font-size: 28px !important;
++  }
++
++  .site-top .identity-sentence {
++    margin-top: 12px;
++  }
++
++  .site-top {
++    margin-bottom: 24px;
++  }
++
++  h1 {
++    font-size: 22px !important;
++  }
++
++  .section > h2,
++  .page > h2,
++  .publication-category > h2,
++  .teaching-scroll-section > h2,
++  .research-scroll-section > h2 {
++    font-size: 18px !important;
++  }
++
++  h2,
++  h3,
++  h4,
++  h5,
++  h6,
++  .accordion-title,
++  .publication-trigger .accordion-title,
++  .option-card span,
++  .nav-directory-card span {
++    font-size: 16px !important;
++  }
++}
+diff --git a/default.html b/default.html
+index 76182ed..e65cc2d 100644
+--- a/default.html
++++ b/default.html
+@@ -254,7 +254,7 @@
+     <main>{{ content }}</main>
+ 
+     <footer class="footer">
+-      <span>© {{ site.time | date: '%Y' }} Muhammet Topal</span>
++      <span>Designed and Developed by Muhammet Topal | © {{ site.time | date: '%Y' }}</span>
+       <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
+     </footer>
+   </div>
+diff --git a/style.css b/style.css
+index ef65851..ef785e8 100644
+--- a/style.css
++++ b/style.css
+@@ -9177,3 +9177,230 @@ main {
+ .about-page .topal-live-about-divider {
+   display: none !important;
+ }
++
++/* v184: requested typography, spacing, header, navigation, and list rhythm updates.
++   This is intentionally a narrow override block. Structural image, grid, column,
++   card, modal, and slider rules above remain intact. */
++:root {
++  --v184-header-teal: #006871;
++  --v184-body-size: 16px;
++  --v184-line-height: 1.25;
++  --v184-paragraph-gap: 4px;
++}
++
++/* Reading typography. Preserve the established 12–15px metadata, caption,
++   control, and utility sizes by targeting only reading and introductory copy. */
++body {
++  font-size: var(--v184-body-size);
++  line-height: var(--v184-line-height);
++}
++
++.prose,
++.prose p,
++.home-intro,
++.home-intro p,
++.home-wrap-prose,
++.home-wrap-prose p,
++.two-column-prose,
++.two-column-prose p,
++.post-content,
++.post-content p,
++.experience-card p,
++.accordion-panel p,
++.lead,
++.teaching-continuous-intro,
++.research-continuous-intro,
++.about-dual-column,
++.about-dual-column p {
++  font-size: var(--v184-body-size) !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++/* The visual gap between paragraphs matches the extra 4px created by
++   16px text at a 1.25 line-height. */
++.prose p,
++.home-intro p,
++.home-wrap-prose p,
++.two-column-prose p,
++.post-content p,
++.experience-card p,
++.accordion-panel p,
++.pub-reference,
++.about-dual-column p {
++  margin-bottom: var(--v184-paragraph-gap) !important;
++}
++
++/* Standard title hierarchy. Major section selectors are restored to 20px
++   after the general 16px rule for all other titles. */
++h1 {
++  font-size: 24px !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++h2,
++h3,
++h4,
++h5,
++h6,
++.accordion-title,
++.publication-trigger .accordion-title,
++.option-card span,
++.nav-directory-card span {
++  font-size: 16px !important;
++  line-height: var(--v184-line-height) !important;
++}
++
++.section > h2,
++.page > h2,
++.publication-category > h2,
++.teaching-scroll-section > h2,
++.research-scroll-section > h2 {
++  font-size: 20px !important;
++}
++
++/* Standard, restrained title-to-copy and major-section spacing. */
++.home-intro h1,
++.page h1 {
++  margin-bottom: 16px !important;
++}
++
++.section > h2,
++.page > h2,
++.publication-category > h2,
++.teaching-scroll-section > h2,
++.research-scroll-section > h2 {
++  margin-bottom: 12px !important;
++}
++
++.prose h3,
++.page h3,
++.accordion-title {
++  margin-bottom: 8px;
++}
++
++.section,
++.publication-category {
++  margin-top: 24px !important;
++}
++
++/* Header identity. The color is sampled from the teal in the existing
++   handwritten Topal artwork. */
++.site-top .site-header-wordmark-block {
++  margin-top: 3px;
++  margin-bottom: 7px;
++}
++
++.site-top .name {
++  color: var(--v184-header-teal);
++  font-size: 32px !important;
++  line-height: 1.25 !important;
++}
++
++.site-top .identity-sentence {
++  margin-top: 15px;
++}
++
++/* Move the navigation 10px farther down without changing its internal height. */
++.site-top {
++  margin-bottom: 32px;
++}
++
++.nav {
++  font-size: 16px !important;
++  line-height: var(--v184-line-height);
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]) {
++  font-weight: 400 !important;
++  border-bottom-color: transparent !important;
++  text-decoration: none !important;
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):hover,
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]):focus-visible {
++  font-weight: 700 !important;
++  border-bottom-color: currentColor !important;
++  text-decoration: underline !important;
++  text-underline-offset: 6px;
++}
++
++.nav a:not(.blog-pill):not(.blog-link):not([href$="/blog/"]).active:not(:hover):not(:focus-visible) {
++  font-weight: 400 !important;
++  border-bottom-color: transparent !important;
++  text-decoration: none !important;
++}
++
++/* Bring publication and presentation accordion entries closer together. */
++.publication-category .accordion-trigger,
++.page > .accordion .accordion-trigger {
++  padding-top: 14px !important;
++  padding-bottom: 14px !important;
++}
++
++.publication-category .accordion-panel,
++.page > .accordion .accordion-panel {
++  padding-bottom: 16px !important;
++}
++
++.publication-category .accordion-meta,
++.page > .accordion .accordion-meta {
++  margin-bottom: 6px !important;
++}
++
++.publication-category .accordion-panel p,
++.page > .accordion .accordion-panel p {
++  margin-bottom: 8px !important;
++}
++
++/* The About page is a special two-column composition with two images floating
++   between the columns. Compact typography shortens both columns, so the image
++   anchors are proportionally raised to preserve balanced text on both sides. */
++.about-page .about-dual-wrap {
++  --dual-first-top: 190px;
++  --dual-second-top: 1030px;
++}
++
++/* Mobile follows the desktop hierarchy proportionally while preserving all
++   existing single-column image and card behavior. */
++@media (max-width: 760px) {
++  .site-top .site-header-wordmark-block {
++    margin-top: 2px;
++    margin-bottom: 6px;
++  }
++
++  .site-top .name {
++    font-size: 28px !important;
++  }
++
++  .site-top .identity-sentence {
++    margin-top: 12px;
++  }
++
++  .site-top {
++    margin-bottom: 24px;
++  }
++
++  h1 {
++    font-size: 22px !important;
++  }
++
++  .section > h2,
++  .page > h2,
++  .publication-category > h2,
++  .teaching-scroll-section > h2,
++  .research-scroll-section > h2 {
++    font-size: 18px !important;
++  }
++
++  h2,
++  h3,
++  h4,
++  h5,
++  h6,
++  .accordion-title,
++  .publication-trigger .accordion-title,
++  .option-card span,
++  .nav-directory-card span {
++    font-size: 16px !important;
++  }
++}
