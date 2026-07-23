@@ -9250,38 +9250,36 @@ main {
   filter: grayscale(100%) contrast(1.04) !important;
 }
 
-/* v10-final-noted-fixes
+/* v13-safe-about-photo-position
    Built from the original uploaded ZIP.
-   Applies the fixes noted after v9:
-   body text 18px/1.25 sitewide, Service and Diversions included,
-   contact calendar moved upward, teaching white veil removed more strongly,
-   About second floating photo moved upward, popup gray metadata made smaller,
-   Contact globe/background made more visible by reducing the veil. */
+   Fixes v12 About photo problem: do not override horizontal centering transform.
+   The second photo stays centered between columns and is moved upward only by
+   the page's existing --dual-second-top variable. */
 
 :root {
-  --v10-header-teal: #006871;
-  --v10-body-size: 18px;
-  --v10-body-line: 1.25;
-  --v10-paragraph-indent: 1.35em;
-  --v10-page-title: 24px;
-  --v10-section-title: 21px;
-  --v10-subsection-title: 18px;
-  --v10-item-title: 21px;
-  --v10-card-title: 18px;
+  --v13-header-teal: #006871;
+  --v13-body-size: 18px;
+  --v13-body-line: 1.25;
+  --v13-paragraph-indent: 1.35em;
+  --v13-page-title: 24px;
+  --v13-section-title: 21px;
+  --v13-subsection-title: 18px;
+  --v13-item-title: 21px;
+  --v13-card-title: 18px;
 }
 
 /* Header identity */
 .site-top .name,
 .top .name,
 a.name {
-  color: var(--v10-header-teal) !important;
+  color: var(--v13-header-teal) !important;
   font-size: 32px !important;
   font-weight: 400 !important;
   line-height: 1 !important;
   letter-spacing: -0.025em !important;
 }
 
-/* Main navigation, single underline only */
+/* Main navigation */
 .nav,
 .simplified-nav {
   font-size: 16px !important;
@@ -9320,8 +9318,7 @@ a.name {
   background-image: none !important;
 }
 
-/* SITEWIDE BODY TEXT STANDARD.
-   Normal prose, intros, statements, body paragraphs, accordion text, modal text. */
+/* SITEWIDE BODY TEXT STANDARD */
 body,
 main,
 .site-shell,
@@ -9350,8 +9347,8 @@ main .accordion-panel,
 main .course-modal-text,
 main .cv-modal,
 main .post-content {
-  font-size: var(--v10-body-size) !important;
-  line-height: var(--v10-body-line) !important;
+  font-size: var(--v13-body-size) !important;
+  line-height: var(--v13-body-line) !important;
 }
 
 main p:not(.label):not(.meta):not(.year):not(.accordion-meta):not(.publication-visible-date),
@@ -9383,13 +9380,13 @@ main .accordion-panel p,
 main .course-modal-text p,
 main .cv-modal p,
 main .post-content p {
-  font-size: var(--v10-body-size) !important;
-  line-height: var(--v10-body-line) !important;
+  font-size: var(--v13-body-size) !important;
+  line-height: var(--v13-body-line) !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* Paragraph başı standard, including the first paragraph in About right column. */
+/* Paragraph head */
 main .paragraph-tight-indent p,
 main .home-wrap-prose.paragraph-tight-indent p,
 main .about-page .paragraph-tight-indent p,
@@ -9400,7 +9397,7 @@ main .teaching-statement-flow.paragraph-tight-indent p,
 main .service-flow.paragraph-tight-indent p,
 main .diversions-lead-prose.paragraph-tight-indent p,
 main .teaching-continuous-page .certificate-main-text.paragraph-tight-indent > p {
-  text-indent: var(--v10-paragraph-indent) !important;
+  text-indent: var(--v13-paragraph-indent) !important;
 }
 
 main .paragraph-tight-indent .home-links,
@@ -9413,7 +9410,7 @@ main .certificate-main-text .certificate-breakout-photo {
   text-indent: 0 !important;
 }
 
-/* Protect metadata, captions, labels, and control text. */
+/* Metadata, captions, labels */
 main .label,
 main .meta,
 main .contact-label {
@@ -9442,8 +9439,7 @@ main select {
   line-height: normal !important;
 }
 
-/* Popup gray metadata line:
-   smaller than popup/course title, treated as metadata. */
+/* Popup gray metadata line smaller than popup title */
 main .course-modal-text .course-meta,
 main .course-modal-text .modal-course-meta,
 main .course-modal-text .course-card-meta,
@@ -9465,7 +9461,9 @@ main .syllabus-modal-header .kicker,
 main .modal-course-card .course-meta,
 main .modal-course-card .course-code,
 main .modal-course-card .course-label,
-main .modal-course-card .kicker {
+main .modal-course-card .kicker,
+main .course-modal-text > p:first-child,
+main .course-modal-dialog .course-modal-text > p:first-child {
   font-size: 13px !important;
   line-height: 1.2 !important;
   font-weight: 400 !important;
@@ -9474,18 +9472,7 @@ main .modal-course-card .kicker {
   text-transform: uppercase !important;
 }
 
-/* If popup metadata is the first all-caps paragraph before title, keep it metadata-sized. */
-main .course-modal-text > p:first-child,
-main .course-modal-dialog .course-modal-text > p:first-child {
-  font-size: 13px !important;
-  line-height: 1.2 !important;
-  font-weight: 400 !important;
-  letter-spacing: .08em !important;
-  color: var(--muted) !important;
-}
-
-/* Contact calendar:
-   keep Appointment title/text where they are, but do not push the calendar too low. */
+/* Contact calendar correction */
 .contact-page .appointment-panel,
 .contact-page .appointment-widget,
 .contact-page .mini-calendar,
@@ -9495,13 +9482,11 @@ main .course-modal-dialog .course-modal-text > p:first-child {
   margin-top: 24px !important;
 }
 
-/* Do not add the same margin to the explanatory text column itself. */
 .contact-page .appointment-widget-copy {
   margin-top: 0 !important;
 }
 
-/* Contact globe/background:
-   reduce the white veil only on the Contact page, so the globe is more visible. */
+/* SAFE Contact globe visibility fix, without forcing whole Contact page white */
 .contact-page::before,
 .contact-page::after,
 .contact-page .contact-shell::before,
@@ -9510,54 +9495,38 @@ main .course-modal-dialog .course-modal-text > p:first-child {
 .contact-page .contact-page-shell::after,
 .contact-page .contact-wrap::before,
 .contact-page .contact-wrap::after,
-.contact-page .contact-card::before,
-.contact-page .contact-card::after,
 .contact-page .contact-action-row::before,
 .contact-page .contact-action-row::after {
-  opacity: .38 !important;
+  opacity: .28 !important;
+  background-color: rgba(255,255,255,.28) !important;
 }
 
-.contact-page,
-.contact-page .contact-shell,
-.contact-page .contact-page-shell,
-.contact-page .contact-wrap,
-.contact-page .contact-card,
-.contact-page .contact-action-row {
-  background-color: rgba(255,255,255,.72) !important;
-  background-blend-mode: normal !important;
-}
-
-/* Preserve form fields and appointment boxes as readable white surfaces. */
 .contact-page input,
 .contact-page textarea,
-.contact-page select,
-.contact-page .appointment-panel,
-.contact-page .appointment-widget,
-.contact-page .mini-calendar,
-.contact-page .calendar-widget {
+.contact-page select {
   background-color: #fff !important;
 }
 
-/* About second floating photo:
-   move it slightly upward so text wraps around it more like the Princeton photo.
-   Keep image size and the first photo unchanged. */
+/* ABOUT SECOND PHOTO FIX:
+   Do NOT set transform here. Original CSS uses transform for horizontal centering.
+   v12 overwrote that and pushed the photo toward the right column.
+   This version only changes the vertical top variable.
+   Original was around 1500px. This moves it upward to 1320px. */
 .about-page .about-dual-wrap {
-  --dual-second-top: 1375px !important;
+  --dual-second-top: 1320px !important;
 }
 
+/* Guard against older generated v12 transform if browser/cache mixes CSS. */
 .about-page .about-dual-image--second,
-.about-page .about-dual-image.second,
-.about-page .about-dual-image:nth-of-type(2),
-.about-page .about-dual-image:nth-child(2) {
-  top: var(--dual-second-top) !important;
-  transform: translateY(-70px) !important;
+.about-page .about-dual-image.second {
+  transform: translateX(-50%) !important;
 }
 
 /* Heading hierarchy */
 .home-intro h1,
 .page h1,
 .post-page h1 {
-  font-size: var(--v10-page-title) !important;
+  font-size: var(--v13-page-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9570,7 +9539,7 @@ main .course-modal-dialog .course-modal-text > p:first-child {
 .teaching-shelf-heading h2,
 .contact-page .contact-section-title,
 .contact-page .appointment-widget-copy h2 {
-  font-size: var(--v10-section-title) !important;
+  font-size: var(--v13-section-title) !important;
   line-height: 1.1 !important;
 }
 
@@ -9579,18 +9548,18 @@ main .course-modal-dialog .course-modal-text > p:first-child {
 .teaching-shelf h3,
 .teaching-shelf-heading h3,
 .research-continuous-page .research-subsection-heading h3 {
-  font-size: var(--v10-subsection-title) !important;
+  font-size: var(--v13-subsection-title) !important;
   line-height: 1.1 !important;
 }
 
-/* Publications and presentations match each other. */
+/* Publications and presentations match */
 main .accordion-trigger .accordion-title,
 main .publication-trigger .accordion-title,
 main #publications .accordion-title,
 main #presentations .accordion-title,
 main .research-continuous-page #publications .accordion-title,
 main .research-continuous-page #presentations .accordion-title {
-  font-size: var(--v10-item-title) !important;
+  font-size: var(--v13-item-title) !important;
   line-height: 1.18 !important;
   font-weight: 650 !important;
   color: var(--ink) !important;
@@ -9613,7 +9582,7 @@ main #presentations .accordion-panel {
   padding-bottom: 14px !important;
 }
 
-/* Card and popup titles match closest subsection level. */
+/* Card and popup titles */
 main .teaching-course-card h3,
 main .modal-course-card h3,
 main .course-card-body h3,
@@ -9628,13 +9597,12 @@ main .course-modal-text h3,
 main .syllabus-modal-header h3,
 main .cv-modal-header h2,
 main .share-popup-title {
-  font-size: var(--v10-card-title) !important;
+  font-size: var(--v13-card-title) !important;
   line-height: 1.1 !important;
   font-weight: 650 !important;
 }
 
-/* Strong removal of the white veil/slab around teaching card rows and sliders.
-   Keep actual cards white, remove only row/slider frame overlays. */
+/* Remove teaching row white veil */
 main .teaching-slider-frame,
 main .instructor-slider-frame,
 main .teaching-experience-page .teaching-shelf-row,
@@ -9689,7 +9657,7 @@ main .teaching-carousel::after {
   box-shadow: none !important;
 }
 
-/* Keep actual cards white. */
+/* Keep actual cards white */
 main .teaching-course-card,
 main .modal-course-card,
 main .certificate-card,
@@ -9700,7 +9668,7 @@ main .nav-directory-card {
   background: #fff !important;
 }
 
-/* Anchor offset under sticky navs */
+/* Anchor offset */
 .teaching-scroll-section,
 .research-scroll-section {
   scroll-margin-top: 155px !important;
@@ -9708,23 +9676,21 @@ main .nav-directory-card {
 
 @media (max-width: 980px) {
   .about-page .about-dual-image--second,
-  .about-page .about-dual-image.second,
-  .about-page .about-dual-image:nth-of-type(2),
-  .about-page .about-dual-image:nth-child(2) {
+  .about-page .about-dual-image.second {
     transform: none !important;
   }
 }
 
 @media (max-width: 760px) {
   :root {
-    --v10-body-size: 18px;
-    --v10-body-line: 1.25;
-    --v10-page-title: 22px;
-    --v10-section-title: 20px;
-    --v10-subsection-title: 18px;
-    --v10-item-title: 19px;
-    --v10-card-title: 18px;
-    --v10-paragraph-indent: 1.1em;
+    --v13-body-size: 18px;
+    --v13-body-line: 1.25;
+    --v13-page-title: 22px;
+    --v13-section-title: 20px;
+    --v13-subsection-title: 18px;
+    --v13-item-title: 19px;
+    --v13-card-title: 18px;
+    --v13-paragraph-indent: 1.1em;
   }
 
   .site-top .name,
@@ -9741,19 +9707,6 @@ main .nav-directory-card {
   .contact-page iframe[src*="calendar"],
   .contact-page iframe[src*="calendly"] {
     margin-top: 16px !important;
-  }
-
-  .contact-page::before,
-  .contact-page::after,
-  .contact-page .contact-shell::before,
-  .contact-page .contact-shell::after,
-  .contact-page .contact-page-shell::before,
-  .contact-page .contact-page-shell::after,
-  .contact-page .contact-wrap::before,
-  .contact-page .contact-wrap::after,
-  .contact-page .contact-card::before,
-  .contact-page .contact-card::after {
-    opacity: .45 !important;
   }
 }
 
