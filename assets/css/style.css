@@ -9940,3 +9940,18 @@ main .nav-directory-card {
     min-height: 0 !important;
   }
 }
+
+
+/* Precise follow-up: start About section tracking at the actual About content and align the calendar with the first form field. */
+.about-page > #about-me.about-dual-wrap.teaching-scroll-section {
+  margin-top: 1.5rem !important;
+  padding-top: .5rem !important;
+  border-top: 0 !important;
+  scroll-margin-top: 155px !important;
+}
+
+@media (min-width: 901px) {
+  .contact-page .appointment-widget-compact > .appointment-note {
+    margin-bottom: 75px !important;
+  }
+}

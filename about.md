@@ -12,13 +12,11 @@ permalink: /about/
     <a href="#beyond-academia">Beyond Academia</a>
   </nav>
 
-  <section id="about-me" class="teaching-scroll-section about-scroll-anchor" aria-hidden="true"></section>
-
   <div class="about-cv-toolbar" aria-label="Curriculum vitae">
     <button class="cv-modal-trigger about-cv-button" type="button" data-cv-modal="aboutCvModal">View CV PDF</button>
   </div>
 
-  <div class="about-dual-wrap">
+  <div id="about-me" class="about-dual-wrap teaching-scroll-section">
     <figure class="about-dual-image about-dual-image-princeton js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/about/library-research-portrait.jpg' | relative_url }}" alt="Muhammet Topal reading in a library">
       <figcaption>Working at the Princeton University Firestone Library among late Ottoman texts.</figcaption>
