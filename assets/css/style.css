@@ -9865,3 +9865,78 @@ main .nav-directory-card {
   }
 }
 
+
+/* Final targeted fixes: About section navigation, Beyond Academia width, Contact vertical alignment */
+
+/* About uses the exact same section-nav component and sticky behavior as Teaching and Research. */
+.about-page .about-scroll-anchor {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  scroll-margin-top: 155px !important;
+}
+
+/* Keep the existing About text layout untouched. */
+.about-page > .about-dual-wrap {
+  width: 100%;
+}
+
+/* Give Beyond Academia the full About content width while preserving its internal image grids. */
+.about-page > .about-beyond-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  scroll-margin-top: 155px !important;
+}
+
+.about-page > .about-beyond-section > .diversions-lead-layout,
+.about-page > .about-beyond-section > .diversions-feature-grid,
+.about-page > .about-beyond-section > .gallery-grid.caption-gallery {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* Contact: spacing only. Match title line, note line, and first field/calendar line. */
+.contact-page .contact-action-row {
+  align-items: start !important;
+}
+
+.contact-page .contact-message-panel,
+.contact-page .appointment-widget.appointment-widget-compact {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  align-self: start !important;
+}
+
+.contact-page .contact-message-panel > .contact-section-title,
+.contact-page .appointment-widget-compact > .contact-section-title {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+.contact-page .contact-message-panel > .note,
+.contact-page .appointment-widget-compact > .appointment-note {
+  min-height: 44px !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  line-height: 1.55 !important;
+}
+
+.contact-page .appointment-widget-compact > .mini-calendar {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .contact-page .contact-message-panel > .note,
+  .contact-page .appointment-widget-compact > .appointment-note {
+    min-height: 0 !important;
+  }
+}
