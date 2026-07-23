@@ -9249,3 +9249,376 @@ main {
 .teaching-continuous-page .co-teaching-course-row [data-course-modal="people-history-modern-middle-east-modal"] .course-card-image img {
   filter: grayscale(100%) contrast(1.04) !important;
 }
+
+/* v5-standardized-readable-site-fixes
+   Purpose: one final, stronger override for the visible problems reported from
+   About, Research, Teaching, Service, Publications, Presentations, and popups.
+   This block standardizes body text and hierarchy without changing page content,
+   image files, carousel scripts, or HTML structure. */
+:root {
+  --v5-header-teal: #006871;
+  --v5-body-size: 16px;
+  --v5-body-line: 1.2;
+  --v5-paragraph-indent: 1.35em;
+  --v5-paragraph-gap: 0px;
+  --v5-page-title: 24px;
+  --v5-main-section-title: 21px;
+  --v5-subsection-title: 18px;
+  --v5-card-title: 18px;
+}
+
+/* Standard body text. This deliberately covers all main reading areas that had
+   separate late overrides before, including About, Research, Teaching, Service,
+   statements, certificate prose, accordions, and popup bodies. */
+html body,
+body,
+.site-shell,
+main,
+.page,
+.prose,
+.post-content,
+.home-intro,
+.home-wrap-prose,
+.two-column-prose,
+.about-dual-column,
+.about-page .about-dual-column,
+.research-flow,
+.research-continuous-intro,
+.research-scroll-section > .prose,
+.teaching-continuous-intro,
+.teaching-statement-flow,
+.teaching-certificate-page .certificate-main-text,
+.service-flow,
+.extracurricular-page .center-wrap-text,
+.course-modal-text,
+.cv-modal-dialog,
+.accordion-panel,
+.experience-card,
+.teaching-detail-notes {
+  font-size: var(--v5-body-size) !important;
+  line-height: var(--v5-body-line) !important;
+}
+
+/* Standard paragraph behavior: same size, same line-height, same paragraph başı,
+   same zero paragraph gap across the main body prose. */
+.page p,
+.prose p,
+.post-content p,
+.home-intro p,
+.home-wrap-prose p,
+.two-column-prose p,
+.about-page .about-dual-column p,
+.about-page .paragraph-tight-indent p,
+.research-flow.paragraph-tight-indent p,
+.research-continuous-intro p,
+.research-scroll-section > .prose p,
+.teaching-continuous-intro p,
+.teaching-statement-flow.paragraph-tight-indent p,
+.teaching-certificate-page .certificate-main-text > p,
+.service-flow.paragraph-tight-indent p,
+.extracurricular-page .center-wrap-text p,
+.accordion-panel p,
+.course-modal-text p,
+.cv-modal-dialog p,
+.experience-card p,
+.teaching-detail-notes p {
+  font-size: var(--v5-body-size) !important;
+  line-height: var(--v5-body-line) !important;
+  margin-top: 0 !important;
+  margin-bottom: var(--v5-paragraph-gap) !important;
+  text-indent: var(--v5-paragraph-indent) !important;
+}
+
+/* The first paragraph of About's second column must begin like a real paragraph,
+   not like a continuation with no paragraph başı. */
+.about-page .about-dual-column-right > p.about-column-continuation,
+.about-page .about-dual-column-right > p:first-of-type,
+.extracurricular-page .center-wrap-text-right > p:first-of-type {
+  text-indent: var(--v5-paragraph-indent) !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Keep non-paragraph interface elements and media captions from inheriting paragraph başı. */
+.label,
+.meta,
+.year,
+figcaption,
+.button,
+.course-card-action,
+.certificate-website-line,
+.certificate-website-inline,
+.home-links,
+.nav,
+.nav a,
+.footer,
+.footer a,
+.share-popup-option,
+.share-popup-url,
+.contact-label,
+.contact-value,
+.teaching-course-card .meta,
+.modal-course-card .meta,
+.course-modal-text .meta,
+.cv-modal-actions,
+.cv-modal-actions a {
+  text-indent: 0 !important;
+}
+
+/* Header identity: teal, smaller, not bold. */
+.site-top .name,
+.top .name,
+a.name {
+  color: var(--v5-header-teal) !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.site-top .identity-sentence {
+  margin-top: 10px !important;
+}
+
+/* Main navigation: 16px, normal by default, a single underline only on hover. */
+.nav,
+.simplified-nav {
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.nav a:not(.blog-pill),
+.simplified-nav a:not(.blog-pill) {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+.nav a:not(.blog-pill):hover,
+.nav a:not(.blog-pill):focus-visible,
+.simplified-nav a:not(.blog-pill):hover,
+.simplified-nav a:not(.blog-pill):focus-visible {
+  font-weight: 700 !important;
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 6px !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+.nav a.active:not(.blog-pill):not(:hover):not(:focus-visible),
+.simplified-nav a.active:not(.blog-pill):not(:hover):not(:focus-visible) {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Page and section hierarchy. */
+.home-intro h1,
+.page h1,
+.post-page h1 {
+  font-size: var(--v5-page-title) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 14px !important;
+}
+
+.section > h2,
+.page > h2,
+.publication-category > h2,
+.teaching-scroll-section > h2,
+.research-scroll-section > h2,
+.teaching-shelf-heading h2,
+.teaching-home-page .teaching-landing-card h2 {
+  font-size: var(--v5-main-section-title) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 10px !important;
+}
+
+.prose h3,
+.page h3,
+.teaching-shelf h3,
+.teaching-shelf-heading h3,
+.research-subsection-heading,
+.course-modal-text h3,
+.syllabus-modal-header h3,
+.share-popup-title,
+.cv-modal-header h2 {
+  font-size: var(--v5-subsection-title) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 8px !important;
+}
+
+/* Card titles equal their closest subsection headers. Popup titles are the same. */
+.teaching-course-card h3,
+.modal-course-card h3,
+.course-card-body h3,
+.certificate-card h3,
+.experience-card h3,
+.option-card span,
+.nav-directory-card span,
+.course-modal-dialog h2,
+.course-modal-dialog h3,
+.course-modal-text h2,
+.course-modal-text h3,
+.syllabus-modal-header h3 {
+  font-size: var(--v5-card-title) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+}
+
+/* Publications and presentations must use the same visual scale and rhythm. */
+.accordion-title,
+.publication-trigger .accordion-title,
+.presentation-trigger .accordion-title,
+.publication-category .accordion-title,
+.research-continuous-page .accordion-title,
+.publications-page .accordion-title,
+.presentations-page .accordion-title {
+  font-size: var(--v5-card-title) !important;
+  line-height: 1.12 !important;
+  font-weight: 600 !important;
+  color: var(--ink) !important;
+}
+
+.accordion-trigger,
+.publication-category .accordion-trigger,
+.page > .accordion .accordion-trigger {
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+}
+
+.accordion-panel,
+.publication-category .accordion-panel,
+.page > .accordion .accordion-panel {
+  padding-bottom: 12px !important;
+}
+
+.accordion-meta,
+.publication-visible-date {
+  margin-bottom: 4px !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+}
+
+/* Remove the white veil/slab behind card rows and carousels while keeping the
+   actual cards white. */
+.teaching-experience-page .teaching-shelf-row,
+.teaching-experience-page .instructor-course-row,
+.teaching-shelf-row,
+.instructor-course-row,
+.certificate-card-grid,
+.teaching-home-page .teaching-landing-cards,
+.teaching-page .teaching-options,
+.card-grid,
+.subpage-grid,
+.slideshow,
+.slideshow-track,
+.carousel-track,
+.course-carousel,
+.teaching-carousel,
+.slider-track,
+.teaching-slider,
+.teaching-scroll-section .teaching-shelf-row,
+.teaching-scroll-section .instructor-course-row {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.teaching-course-card,
+.modal-course-card,
+.certificate-card,
+.experience-card,
+.teaching-home-page .teaching-landing-card,
+.option-card,
+.nav-directory-card,
+.course-card-with-image,
+.flyer-card {
+  background: #fff !important;
+}
+
+/* Anchor scrolling under sticky navs. */
+:target,
+.teaching-scroll-section,
+.research-scroll-section,
+.publication-category {
+  scroll-margin-top: 150px !important;
+}
+
+.section,
+.publication-category,
+.teaching-shelf,
+.research-scroll-section,
+.teaching-scroll-section {
+  margin-top: 24px !important;
+}
+
+@media (max-width: 760px) {
+  .site-top .name,
+  .top .name,
+  a.name {
+    font-size: 28px !important;
+    font-weight: 400 !important;
+  }
+
+  .home-intro h1,
+  .page h1,
+  .post-page h1 {
+    font-size: 22px !important;
+  }
+
+  .section > h2,
+  .page > h2,
+  .publication-category > h2,
+  .teaching-scroll-section > h2,
+  .research-scroll-section > h2,
+  .teaching-shelf-heading h2 {
+    font-size: 20px !important;
+  }
+
+  .accordion-title,
+  .publication-trigger .accordion-title,
+  .presentation-trigger .accordion-title,
+  .teaching-course-card h3,
+  .modal-course-card h3,
+  .course-card-body h3,
+  .certificate-card h3,
+  .experience-card h3,
+  .course-modal-dialog h2,
+  .course-modal-dialog h3,
+  .course-modal-text h2,
+  .course-modal-text h3,
+  .share-popup-title,
+  .cv-modal-header h2 {
+    font-size: 17px !important;
+  }
+
+  .page p,
+  .prose p,
+  .post-content p,
+  .home-intro p,
+  .home-wrap-prose p,
+  .two-column-prose p,
+  .about-page .about-dual-column p,
+  .research-flow.paragraph-tight-indent p,
+  .research-continuous-intro p,
+  .teaching-continuous-intro p,
+  .teaching-statement-flow.paragraph-tight-indent p,
+  .teaching-certificate-page .certificate-main-text > p,
+  .service-flow.paragraph-tight-indent p,
+  .extracurricular-page .center-wrap-text p,
+  .accordion-panel p,
+  .course-modal-text p,
+  .cv-modal-dialog p {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    text-indent: 1.1em !important;
+  }
+}
+

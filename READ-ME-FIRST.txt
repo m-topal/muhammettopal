@@ -1,26 +1,30 @@
 READ ME FIRST
 
-This ZIP changes ONE file only:
+This ZIP contains actual replacement files, not only a patch.
+
+Use the files in this ZIP to replace the same paths in GitHub. Do not upload this ZIP itself as a site file.
+
+Replace these paths if they exist in your repository:
 
 assets/css/style.css
+css/style.css
+style.css
+_layouts/default.html
+default.html
+_includes/footer.html
 
-Do not upload this ZIP as a website file.
+Most important file: assets/css/style.css
 
-Use it this way:
-1. Unzip this ZIP.
-2. Open your GitHub repository.
-3. Go to assets/css/style.css.
-4. Replace that file with the style.css inside this ZIP.
-5. Commit the change.
-6. Open the site in an incognito/private window or hard refresh.
+What v5 fixes:
+- Standardizes main body, intro, statement, About, Research, Teaching, Service, certificate, accordion, and popup body text to 16px.
+- Standardizes line-height to 1.2.
+- Standardizes paragraph başı to 1.35em on prose paragraphs, including the first paragraph in the About right column.
+- Keeps paragraph gaps at 0 for the compact paragraph style.
+- Makes Muhammet Topal header teal, 32px, and normal weight, not bold.
+- Sets nav to 16px, normal weight by default, bold and single-underlined only on hover.
+- Makes presentation accordion titles match publication accordion titles.
+- Sets card and popup titles to the nearest subsection level, 18px.
+- Removes white veil/slab backgrounds behind teaching card rows while preserving white cards.
+- Adds a cache-busting stylesheet URL in the layout.
 
-This one-file update targets:
-- body text at 16px
-- body and paragraph line-height at 1
-- no extra paragraph gap
-- Muhammet Topal header normal weight, not bold
-- nav 16px with only one hover underline
-- smaller popup headers
-- consistent publication and presentation title size
-- clearer teaching title hierarchy
-- removal of the white slab behind card rows, while preserving white cards
+After committing, wait for GitHub Pages to finish building, then open the site in an incognito/private window.
