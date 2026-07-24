@@ -1,11 +1,20 @@
-REPLACEMENT FILES FOR MUHAMMETTOPAL WEBSITE
+PATCH 1 — HEADER, FOOTER, ABOUT MOBILE, HOMEPAGE TITLE
 
-Upload these files to the repository using the same paths and replace the existing copies:
+Replace these exact repository files:
 
-assets/css/style.css
-_layouts/default.html
-_includes/footer.html
-style.css
+1. updated/default.html  ->  _layouts/default.html
+2. updated/style.css     ->  assets/css/style.css
+3. updated/site.js       ->  assets/js/site.js
 
-Do not upload the outer folder as a new folder in the repository. Preserve each path exactly.
-The live Jekyll site primarily uses assets/css/style.css and _layouts/default.html.
+Do not upload the "original" folder. It is included only for rollback.
+
+After uploading, wait for GitHub Pages to finish building, then hard-refresh the website.
+On iPhone Safari, close the tab and reopen it if the old CSS remains cached.
+
+ROLLBACK
+Replace the same three repository files using the copies inside the "original" folder.
+
+NOTES
+- The QR button creates a QR code for the current page through api.qrserver.com.
+- Desktop navigation remains unchanged.
+- Mobile navigation changes only at 900px and below.
