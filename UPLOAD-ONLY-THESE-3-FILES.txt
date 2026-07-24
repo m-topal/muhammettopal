@@ -1,0 +1,10 @@
+UPLOAD THESE EXACT PATHS TO THE REPOSITORY ROOT:
+
+1. _layouts/default.html
+2. assets/css/style.css
+3. assets/js/site.js
+
+Do not upload default.html, style.css, or site.js to the repository root.
+The folders in this ZIP already match the correct GitHub paths.
+
+After committing, wait for GitHub Pages deployment to finish, then hard refresh once.

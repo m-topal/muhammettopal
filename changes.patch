@@ -1,0 +1,608 @@
+--- _layouts/default.html	2026-07-23 21:31:12.000000000 +0000
++++ /mnt/data/muhammettopal-corrected-patch/_layouts/default.html	2026-07-24 04:44:23.101790875 +0000
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+-  <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
++  <title>{% if page.url == "/" %}Muhammet Topal | PhD Candidate | History &amp; MENAS{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}</title>
+   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+   {% if page.youtube_id %}
+     {% assign social_image = "https://img.youtube.com/vi/" | append: page.youtube_id | append: "/maxresdefault.jpg" %}
+@@ -15,7 +15,7 @@
+     {% assign social_image = '/assets/topal-wordmark-white-bg.png' | absolute_url %}
+     {% assign social_image_alt = '/assets/img/main-headshot.jpg' | absolute_url %}
+   {% endif %}
+-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
++  <meta property="og:title" content="{% if page.url == "/" %}Muhammet Topal | PhD Candidate | History &amp; MENAS{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}">
+   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+   <meta property="og:image" content="{{ social_image }}">
+   <meta property="og:image:secure_url" content="{{ social_image }}">
+@@ -28,13 +28,13 @@
+   <meta property="og:url" content="{{ page.url | absolute_url }}">
+   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+   <meta name="twitter:card" content="summary_large_image">
+-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
++  <meta name="twitter:title" content="{% if page.url == "/" %}Muhammet Topal | PhD Candidate | History &amp; MENAS{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}">
+   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+   <meta name="twitter:image" content="{{ social_image }}">
+-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=standard-v13' | relative_url }}">
++  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=patch-20260723-2' | relative_url }}">
+   <link rel="stylesheet" href="{{ '/assets/css/academic-globe-v12.css' | relative_url }}">
+   <link rel="icon" href="{{ '/favicon.ico?v=7' | relative_url }}" sizes="any">
+-  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/favicon-512x512.png?v=7' | relative_url }}">
++  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/icon-512.png?v=7' | relative_url }}">
+   <link rel="icon" href="{{ '/assets/favicon.svg?v=7' | relative_url }}" type="image/svg+xml">
+   <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/favicon-48x48.png?v=7' | relative_url }}">
+   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png?v=7' | relative_url }}">
+@@ -57,17 +57,21 @@
+     <header class="top site-top">
+       <div class="site-utility-bar split-utility-bar" aria-label="Site tools">
+         <div class="utility-left">
+-          <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
+-            <span class="utility-icon" aria-hidden="true">⌕</span>
+-            <span>Advanced Search</span>
++          <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Search this website" title="Search">
++            <span class="utility-svg-icon" aria-hidden="true">
++              <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.2 4.2"></path></svg>
++            </span>
++            <span class="utility-text">Advanced Search</span>
+           </a>
+         </div>
+ 
+         <div class="utility-right">
+           <details class="language-menu language-menu-top">
+-            <summary>
+-              <span class="translation-symbol" aria-hidden="true"><span>A</span><span>文</span></span>
+-              <span>Language</span>
++            <summary aria-label="Choose language" title="Language">
++              <span class="utility-svg-icon" aria-hidden="true">
++                <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3.5 12h17M12 3c2.4 2.5 3.7 5.5 3.7 9S14.4 18.5 12 21M12 3C9.6 5.5 8.3 8.5 8.3 12s1.3 6.5 3.7 9"></path></svg>
++              </span>
++              <span class="utility-text">Language</span>
+             </summary>
+             <div class="language-panel">
+               <a href="{{ '/' | relative_url }}">🇬🇧 English</a>
+@@ -79,6 +83,18 @@
+               <span>Machine translation</span>
+             </div>
+           </details>
++
++          <button class="utility-icon-button mobile-only-tool" id="siteShareButton" type="button" aria-label="Share this page" title="Share">
++            <span class="utility-svg-icon" aria-hidden="true">
++              <svg viewBox="0 0 24 24" focusable="false"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="m8.2 10.8 7.5-4.4M8.2 13.2l7.5 4.4"></path></svg>
++            </span>
++          </button>
++
++          <button class="utility-icon-button mobile-only-tool" id="siteQrButton" type="button" aria-label="Show QR code for this page" title="QR code">
++            <span class="utility-svg-icon" aria-hidden="true">
++              <svg viewBox="0 0 24 24" focusable="false"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v4h-2zM14 18h4v2h-4z"></path></svg>
++            </span>
++          </button>
+         </div>
+       </div>
+ 
+@@ -86,12 +102,17 @@
+         <img class="home-header-wordmark" src="{{ '/assets/topal-wordmark-transparent.png' | relative_url }}" alt="Topal wordmark">
+       </a>
+ 
+-      <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
++      <div class="mobile-identity-row">
++        <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
++        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mainNavigation" aria-label="Open navigation menu">
++          <span></span><span></span><span></span>
++        </button>
++      </div>
+       <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
+     </header>
+ 
+     <div class="nav-wrap sticky-nav">
+-      <nav class="nav simplified-nav" aria-label="Main navigation">
++      <nav class="nav simplified-nav" id="mainNavigation" aria-label="Main navigation">
+         <a href="{{ '/' | relative_url }}">Home</a>
+         <a class="{% if page.url contains '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About Me</a>
+ 
+@@ -107,11 +128,21 @@
+ 
+     <footer class="footer">
+       <span>Designed and Developed by Muhammet Topal | © {{ site.time | date: '%Y' }}</span>
+-      <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
++      <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a></span>
+     </footer>
+   </div>
+ 
+-  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
++  <div class="site-qr-modal" id="siteQrModal" role="dialog" aria-modal="true" aria-labelledby="siteQrTitle" hidden>
++    <div class="site-qr-dialog">
++      <button class="site-qr-close" type="button" aria-label="Close QR code">×</button>
++      <h2 id="siteQrTitle">Scan this page</h2>
++      <img id="siteQrImage" alt="QR code for the current page" width="260" height="260">
++      <p id="siteQrPageTitle"></p>
++      <button class="site-qr-copy" id="siteQrCopyButton" type="button">Copy link</button>
++    </div>
++  </div>
++
++  <script src="{{ '/assets/js/site.js?v=patch-20260723-2' | relative_url }}"></script>
+   <script src="{{ '/assets/js/academic-globe-v12.js' | relative_url }}"></script>
+   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+   <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
+--- assets/css/style.css	2026-07-23 21:31:12.000000000 +0000
++++ /mnt/data/muhammettopal-corrected-patch/assets/css/style.css	2026-07-24 04:44:22.565790864 +0000
+@@ -9916,11 +9916,11 @@
+   white-space: nowrap !important;
+ }
+ 
+-/* Beyond Academia layout: preserve the working desktop width and center the mobile section. */
++/* Beyond Academia: one desktop rule and one mobile rule. */
+ .about-page > #beyond-academia.about-beyond-section {
+   position: static;
+-  width: calc(100% + 140px);
+-  max-width: calc(100vw - 56px);
++  width: 100%;
++  max-width: 100%;
+   margin: 72px 0 0;
+   padding: 0;
+   box-sizing: border-box;
+@@ -9931,7 +9931,7 @@
+ .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+ .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+   width: 100%;
+-  max-width: none;
++  max-width: 100%;
+   margin-left: 0;
+   margin-right: 0;
+   box-sizing: border-box;
+@@ -9939,7 +9939,7 @@
+ 
+ .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout {
+   display: grid;
+-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
++  grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 34px;
+   align-items: start;
+ }
+@@ -9947,10 +9947,9 @@
+ .about-page > #beyond-academia.about-beyond-section .diversions-lead-figure,
+ .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
+   width: 100%;
+-  max-width: none;
++  max-width: 100%;
+   min-width: 0;
+-  margin-left: 0;
+-  margin-right: 0;
++  margin: 0;
+   box-sizing: border-box;
+ }
+ 
+@@ -9961,7 +9960,6 @@
+   object-fit: contain;
+ }
+ 
+-/* Preserve the established gallery design and natural desktop card sizing. */
+ .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+ .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+   display: grid;
+@@ -9973,6 +9971,8 @@
+ .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid figure,
+ .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery figure {
+   min-width: 0;
++  margin-left: 0;
++  margin-right: 0;
+ }
+ 
+ .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid img,
+@@ -9986,91 +9986,13 @@
+ 
+ @media (max-width: 900px) {
+   .about-page > #beyond-academia.about-beyond-section {
+-    position: relative;
+-    left: 50%;
+-    transform: translateX(-50%);
+-    width: calc(100vw - 40px);
+-    max-width: none;
+-    margin: 52px 0 0;
+-    padding: 0;
+-    overflow-x: visible;
+-    box-sizing: border-box;
+-  }
+-
+-  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid,
+-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery {
+-    grid-template-columns: minmax(0, 1fr);
+-    width: 100%;
+-    max-width: 100%;
+-    gap: 22px;
+-  }
+-
+-  .about-page > #beyond-academia.about-beyond-section figure,
+-  .about-page > #beyond-academia.about-beyond-section .diversions-lead-prose {
+-    width: 100%;
+-    max-width: 100%;
+-    min-width: 0;
+-    margin-left: 0;
+-    margin-right: 0;
+-    box-sizing: border-box;
+-  }
+-
+-  .about-page > #beyond-academia.about-beyond-section img,
+-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid img,
+-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery img {
+-    display: block;
+-    width: 100%;
+-    max-width: 100%;
+-    height: auto;
+-    object-fit: contain;
+-  }
+-}
+-
+-/* Mobile-only Beyond Academia viewport alignment. Desktop rules above remain unchanged. */
+-@media (max-width: 900px) {
+-  .about-page > #beyond-academia.about-beyond-section {
+     position: static !important;
+     left: auto !important;
+     right: auto !important;
+     transform: none !important;
+-    width: calc(100vw - 40px) !important;
+-    max-width: calc(100vw - 40px) !important;
+-    margin-top: 52px !important;
+-    margin-right: calc(50% - 50vw + 20px) !important;
+-    margin-left: calc(50% - 50vw + 20px) !important;
+-    padding: 0 !important;
+-    overflow: visible !important;
+-    box-sizing: border-box !important;
+-  }
+-
+-  .about-page > #beyond-academia.about-beyond-section > .section-heading-row,
+-  .about-page > #beyond-academia.about-beyond-section > .diversions-lead-layout,
+-  .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery,
+-  .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid {
+     width: 100% !important;
+     max-width: 100% !important;
+-    margin-left: 0 !important;
+-    margin-right: 0 !important;
+-    box-sizing: border-box !important;
+-  }
+-}
+-
+-/* v115: mobile-only Beyond Academia repair plus restored Contact and Blog polish */
+-@media (max-width: 900px) {
+-  .about-page > #beyond-academia.about-beyond-section {
+-    position: static !important;
+-    left: auto !important;
+-    right: auto !important;
+-    transform: none !important;
+-
+-    width: calc(100vw - 40px) !important;
+-    max-width: calc(100vw - 40px) !important;
+-
+-    margin-top: 52px !important;
+-    margin-left: calc(50% - 50vw + 20px) !important;
+-    margin-right: 0 !important;
+-
++    margin: 52px 0 0 !important;
+     padding: 0 !important;
+     overflow: visible !important;
+     box-sizing: border-box !important;
+@@ -10091,6 +10013,7 @@
+   .about-page > #beyond-academia.about-beyond-section > .gallery-grid.caption-gallery,
+   .about-page > #beyond-academia.about-beyond-section > .diversions-feature-grid {
+     grid-template-columns: minmax(0, 1fr) !important;
++    gap: 22px !important;
+   }
+ 
+   .about-page > #beyond-academia.about-beyond-section figure,
+@@ -10156,3 +10079,205 @@
+   left: auto !important;
+   right: 0 !important;
+ }
++
++
++/* v183: three-line mobile header, icon tools, hamburger navigation, and compact footer. */
++.utility-svg-icon,
++.utility-svg-icon svg {
++  display: block;
++  width: 21px;
++  height: 21px;
++}
++.utility-svg-icon svg {
++  fill: none;
++  stroke: currentColor;
++  stroke-width: 1.7;
++  stroke-linecap: round;
++  stroke-linejoin: round;
++}
++.utility-icon-button {
++  border: 1px solid var(--line);
++  background: #fff;
++  color: var(--ink);
++  width: 38px;
++  height: 38px;
++  border-radius: 50%;
++  padding: 0;
++  display: inline-grid;
++  place-items: center;
++  cursor: pointer;
++}
++.utility-icon-button:hover,
++.utility-icon-button:focus-visible {
++  border-color: var(--ink);
++}
++.mobile-only-tool,
++.mobile-menu-toggle {
++  display: none;
++}
++.mobile-identity-row {
++  display: contents;
++}
++
++.site-qr-modal[hidden] { display: none; }
++.site-qr-modal {
++  position: fixed;
++  inset: 0;
++  z-index: 5000;
++  display: grid;
++  place-items: center;
++  padding: 20px;
++  background: rgba(0,0,0,.48);
++}
++.site-qr-dialog {
++  position: relative;
++  width: min(360px, 100%);
++  padding: 28px;
++  border-radius: 14px;
++  background: #fff;
++  text-align: center;
++  box-shadow: 0 24px 70px rgba(0,0,0,.24);
++}
++.site-qr-dialog h2 { margin: 0 0 18px; font-size: 25px; }
++.site-qr-dialog img { display: block; width: 260px; max-width: 100%; height: auto; margin: 0 auto 14px; }
++.site-qr-dialog p { margin: 0 0 16px; overflow-wrap: anywhere; font: 13px/1.45 var(--sans); color: var(--muted); }
++.site-qr-close {
++  position: absolute;
++  top: 8px;
++  right: 11px;
++  border: 0;
++  background: transparent;
++  font-size: 28px;
++  line-height: 1;
++  cursor: pointer;
++}
++.site-qr-copy { border: 1px solid var(--ink); background: #fff; padding: 9px 14px; font: 14px var(--sans); cursor: pointer; }
++.site-qr-copy:hover { background: var(--ink); color: #fff; }
++
++@media (max-width: 900px) {
++  :root { --v181-main-nav-mobile-height: 58px; }
++
++  .site-top {
++    display: grid;
++    grid-template-rows: auto auto auto;
++    gap: 0;
++    margin-bottom: 0 !important;
++    text-align: initial;
++  }
++
++  .site-top .site-utility-bar {
++    grid-row: 1;
++    width: 100%;
++    min-height: 42px;
++    margin: 0 0 5px !important;
++    justify-content: flex-end !important;
++    gap: 8px;
++  }
++  .site-top .utility-left,
++  .site-top .utility-right {
++    justify-content: flex-end;
++    gap: 8px;
++  }
++  .site-top .utility-left { margin-left: auto; }
++  .site-top .utility-link,
++  .site-top .language-menu-top summary,
++  .site-top .utility-icon-button {
++    width: 40px;
++    height: 40px;
++    min-width: 40px;
++    padding: 0;
++    border-radius: 50%;
++    display: inline-grid;
++    place-items: center;
++    background: rgba(255,255,255,.92);
++  }
++  .site-top .utility-text { display: none !important; }
++  .site-top .mobile-only-tool { display: inline-grid; }
++  .site-top .language-menu-top .language-panel { right: 0; top: 46px; }
++
++  .site-top .site-header-wordmark-block {
++    grid-row: 2;
++    justify-self: center;
++    margin: -2px 0 2px !important;
++  }
++  .site-top .home-header-wordmark {
++    width: min(235px, 70vw) !important;
++    height: auto !important;
++  }
++
++  .site-top .mobile-identity-row {
++    grid-row: 3;
++    display: flex;
++    align-items: center;
++    justify-content: space-between;
++    min-height: 54px;
++    width: 100%;
++    border-top: 1px solid rgba(0,0,0,.08);
++  }
++  .site-top .name {
++    margin: 0;
++    font-size: clamp(24px, 7.5vw, 32px) !important;
++    line-height: 1;
++    letter-spacing: -.035em;
++  }
++  .site-top .identity-sentence { display: none; }
++
++  .mobile-menu-toggle {
++    display: inline-flex;
++    width: 44px;
++    height: 44px;
++    padding: 10px;
++    border: 0;
++    background: transparent;
++    flex-direction: column;
++    justify-content: center;
++    gap: 5px;
++    cursor: pointer;
++  }
++  .mobile-menu-toggle span {
++    display: block;
++    width: 24px;
++    height: 1.5px;
++    margin-left: auto;
++    background: var(--ink);
++    transition: transform .2s ease, opacity .2s ease;
++  }
++  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
++  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
++  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
++
++  .nav-wrap.sticky-nav {
++    position: sticky;
++    top: 0;
++    z-index: 900;
++    margin: 0 -20px 12px !important;
++    padding: 0 20px;
++  }
++  .nav-wrap .nav.simplified-nav {
++    display: none;
++    flex-direction: column;
++    align-items: stretch;
++    justify-content: flex-start;
++    gap: 0;
++    min-height: 0;
++    padding: 8px 0 14px;
++    overflow: visible;
++  }
++  .nav-wrap.is-mobile-open .nav.simplified-nav { display: flex; }
++  .nav-wrap .nav.simplified-nav a {
++    width: 100%;
++    padding: 12px 2px;
++    border-bottom: 1px solid var(--line) !important;
++    font-size: 16px;
++  }
++
++  .footer { align-items: center !important; }
++  .footer .footer-links { margin-left: auto; justify-content: flex-end !important; }
++  .footer .footer-blog-pill { margin-right: 0; }
++}
++
++@media (max-width: 520px) {
++  .footer { flex-wrap: nowrap; gap: 12px; font-size: 11px; }
++  .footer > span:first-child { min-width: 0; }
++  .footer .footer-links { flex: 0 0 auto; }
++}
+--- assets/js/site.js	2026-07-23 21:31:12.000000000 +0000
++++ /mnt/data/muhammettopal-corrected-patch/assets/js/site.js	2026-07-24 04:44:22.001790853 +0000
+@@ -2243,3 +2243,105 @@
+     openMobilePdf(event, trigger);
+   }, true);
+ })();
++
++
++/* v183: mobile menu, native sharing, and current-page QR modal. */
++(function () {
++  function setupSiteHeaderTools() {
++    var menuButton = document.querySelector('.mobile-menu-toggle');
++    var navWrap = document.querySelector('.nav-wrap');
++    var nav = document.getElementById('mainNavigation');
++
++    function setMenu(open) {
++      if (!menuButton || !navWrap) return;
++      menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
++      menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
++      navWrap.classList.toggle('is-mobile-open', open);
++    }
++
++    if (menuButton && navWrap) {
++      menuButton.addEventListener('click', function () {
++        setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
++      });
++      if (nav) {
++        nav.addEventListener('click', function (event) {
++          if (event.target.closest('a')) setMenu(false);
++        });
++      }
++      window.addEventListener('resize', function () {
++        if (window.innerWidth > 900) setMenu(false);
++      });
++    }
++
++    var shareButton = document.getElementById('siteShareButton');
++    if (shareButton) {
++      shareButton.addEventListener('click', async function () {
++        var data = { title: document.title, text: document.title, url: window.location.href };
++        try {
++          if (navigator.share) {
++            await navigator.share(data);
++          } else if (navigator.clipboard) {
++            await navigator.clipboard.writeText(window.location.href);
++            var oldLabel = shareButton.getAttribute('aria-label');
++            shareButton.setAttribute('aria-label', 'Link copied');
++            shareButton.title = 'Link copied';
++            setTimeout(function () {
++              shareButton.setAttribute('aria-label', oldLabel || 'Share this page');
++              shareButton.title = 'Share';
++            }, 1400);
++          }
++        } catch (error) {
++          if (error && error.name !== 'AbortError') window.prompt('Copy this link:', window.location.href);
++        }
++      });
++    }
++
++    var modal = document.getElementById('siteQrModal');
++    var qrButton = document.getElementById('siteQrButton');
++    var closeButton = modal && modal.querySelector('.site-qr-close');
++    var copyButton = document.getElementById('siteQrCopyButton');
++    var qrImage = document.getElementById('siteQrImage');
++    var qrTitle = document.getElementById('siteQrPageTitle');
++    var lastFocus = null;
++
++    function openQr() {
++      if (!modal || !qrImage) return;
++      lastFocus = document.activeElement;
++      var url = window.location.href;
++      qrImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=520x520&margin=18&data=' + encodeURIComponent(url);
++      if (qrTitle) qrTitle.textContent = document.title;
++      modal.hidden = false;
++      document.body.style.overflow = 'hidden';
++      if (closeButton) closeButton.focus();
++    }
++
++    function closeQr() {
++      if (!modal) return;
++      modal.hidden = true;
++      document.body.style.overflow = '';
++      if (qrImage) qrImage.removeAttribute('src');
++      if (lastFocus && lastFocus.focus) lastFocus.focus();
++    }
++
++    if (qrButton) qrButton.addEventListener('click', openQr);
++    if (closeButton) closeButton.addEventListener('click', closeQr);
++    if (modal) modal.addEventListener('click', function (event) { if (event.target === modal) closeQr(); });
++    document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && modal && !modal.hidden) closeQr(); });
++
++    if (copyButton) {
++      copyButton.addEventListener('click', async function () {
++        try {
++          await navigator.clipboard.writeText(window.location.href);
++          var old = copyButton.textContent;
++          copyButton.textContent = 'Copied';
++          setTimeout(function () { copyButton.textContent = old; }, 1400);
++        } catch (error) {
++          window.prompt('Copy this link:', window.location.href);
++        }
++      });
++    }
++  }
++
++  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupSiteHeaderTools);
++  else setupSiteHeaderTools();
++})();
