@@ -4,7 +4,6 @@ title: Research
 permalink: /research/
 ---
 <article class="page wide research-continuous-page" data-scroll-sections>
-  <p class="label">Research</p>
   <h1>Research</h1>
 
 
@@ -63,7 +62,6 @@ permalink: /research/
 
   <section id="research-trajectory" class="teaching-scroll-section research-scroll-section">
     <div class="section-heading-row">
-      <p class="label">Research</p>
       <h2>Research Trajectory</h2>
     </div>
 <div class="prose two-column-prose research-flow paragraph-tight-indent">
@@ -144,7 +142,6 @@ permalink: /research/
 
   <section id="publications" class="teaching-scroll-section research-scroll-section">
     <div class="section-heading-row">
-      <p class="label">Research</p>
       <h2>Publications</h2>
     </div>
 <section class="publication-category">
@@ -222,7 +219,6 @@ permalink: /research/
 
   <section id="presentations" class="teaching-scroll-section research-scroll-section">
     <div class="section-heading-row">
-      <p class="label">Research</p>
       <h2>Presentations</h2>
     </div>
 <div class="slideshow">
