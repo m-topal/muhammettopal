@@ -10627,3 +10627,12 @@ main .nav-directory-card {
 .nav.simplified-nav a.active::after {
   background: currentColor;
 }
+.site-top > .name {
+  transform: translateY(-45px);
+  margin-bottom: -45px;
+}
+
+.nav-wrap {
+  transform: translateY(-30px);
+  margin-bottom: -30px !important;
+}
