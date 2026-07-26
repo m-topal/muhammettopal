@@ -59,6 +59,12 @@
             <span>Advanced Search</span>
           </a>
         </div>
+        
+        <div class="utility-center">
+  <button class="utility-qr-button" type="button" aria-label="Show QR code for this page">
+    <span class="qr-symbol" aria-hidden="true">▦</span>
+  </button>
+</div>
 
         <div class="utility-right">
           <details class="language-menu language-menu-top">
@@ -86,6 +92,13 @@
       <a class="name" href="{{ '/' | relative_url }}"><span class="first-name">Muhammet</span><span class="surname">Topal</span></a>
       
     </header>
+    <div class="qr-share-modal" id="qrShareModal" hidden>
+  <button class="qr-share-close" type="button" aria-label="Close QR code">×</button>
+  <div class="qr-share-card">
+    <img id="qrShareImage" alt="QR code for this page">
+    <p>Scan to open this page</p>
+  </div>
+</div>
 
     <div class="nav-wrap sticky-nav">
   <a class="mobile-nav-name" href="{{ '/' | relative_url }}">
