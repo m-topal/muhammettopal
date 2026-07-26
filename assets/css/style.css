@@ -10801,3 +10801,71 @@ main .nav-directory-card {
     overflow: hidden;
   }
 }
+@media (max-width: 700px) {
+  /* Mountains slightly lower */
+  .academic-top-map {
+    top: 18px !important;
+  }
+
+  /* Handwritten Topal centered and higher */
+  .site-top .site-header-wordmark-block {
+    display: block !important;
+    position: relative !important;
+    top: -18px !important;
+    transform: none !important;
+    width: fit-content !important;
+    margin: 0 auto -8px !important;
+    z-index: 5;
+  }
+
+  .site-top .home-header-wordmark {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Prevent the full-screen menu from being clipped */
+  .nav-wrap.sticky-nav {
+    overflow: visible !important;
+  }
+
+  .nav-wrap.menu-open {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    z-index: 5000 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: #fff !important;
+  }
+
+  .nav-wrap.menu-open .nav.simplified-nav {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    overflow: visible !important;
+    background: #fff !important;
+    z-index: 5001 !important;
+  }
+
+  .nav-wrap.menu-open .mobile-nav-name,
+  .nav-wrap.menu-open .mobile-menu-toggle {
+    position: absolute !important;
+    top: 18px !important;
+    z-index: 5002 !important;
+  }
+
+  .nav-wrap.menu-open .mobile-nav-name {
+    left: 22px !important;
+  }
+
+  .nav-wrap.menu-open .mobile-menu-toggle {
+    right: 22px !important;
+  }
+}
