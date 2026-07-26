@@ -10487,36 +10487,7 @@ main .nav-directory-card {
   text-decoration-thickness: 2px !important;
   text-underline-offset: 6px !important;
 }
-/* Raise only the central identity and navigation */
 
-.site-top .site-header-wordmark-block {
-  transform: translateY(-85px) !important;
-}
-
-.site-top > .name {
-  position: relative;
-  transform: translateY(-85px) !important;
-}
-
-.site-top {
-  margin-bottom: -85px !important;
-}
-
-.nav-wrap {
-  transform: translateY(-85px) !important;
-  margin-bottom: -67px !important;
-}
-
-.site-header-wordmark-block,
-.site-top > .name,
-.nav-wrap {
-  position: relative;
-  top: -85px;
-}
-
-.site-top {
-  margin-bottom: -85px;
-}
 /* Utility controls: icons only */
 
 .utility-search-link > span:last-child,
