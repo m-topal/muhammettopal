@@ -11232,7 +11232,7 @@ main .nav-directory-card {
   /* Mountains: move the entire rendered layer farther down */
   #academicTopMap.academic-top-map {
     top: 0 !important;
-    transform: translateY(110px) !important;
+    transform: translateY(60px) !important;
   }
 
   /* Keep the top utility buttons above the wordmark */
@@ -11301,4 +11301,9 @@ main .nav-directory-card {
     backdrop-filter: blur(14px) !important;
     -webkit-backdrop-filter: blur(14px) !important;
   }
+}
+.utility-search-link .utility-icon {
+  font-weight: 300 !important;
+  -webkit-text-stroke: 0 !important;
+  transform: scaleX(-1) scale(0.92) !important;
 }
