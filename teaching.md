@@ -294,9 +294,8 @@ permalink: /teaching/
   </div>
 
   <section class="certificate-coursework-cards">
-    <h2>Certificate Outcomes</h2>
-
-        <div class="certificate-card-grid">
+    <div class="certificate-card-grid">
+      
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
             <h3>Course Design</h3>
           </article>
