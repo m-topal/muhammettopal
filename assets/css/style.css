@@ -10487,7 +10487,25 @@ main .nav-directory-card {
   text-decoration-thickness: 2px !important;
   text-underline-offset: 6px !important;
 }
-/* Raise the central header block over the mountain background */
+/* Raise only the central identity and navigation */
+
+.site-top .site-header-wordmark-block {
+  transform: translateY(-85px) !important;
+}
+
+.site-top > .name {
+  position: relative;
+  transform: translateY(-85px) !important;
+}
+
+.site-top {
+  margin-bottom: -85px !important;
+}
+
+.nav-wrap {
+  transform: translateY(-85px) !important;
+  margin-bottom: -67px !important;
+}
 
 .site-header-wordmark-block,
 .site-top > .name,
@@ -10540,4 +10558,45 @@ main .nav-directory-card {
 .utility-right {
   display: flex;
   align-items: center;
+}
+/* Search and language controls: icons only */
+
+.utility-search-link > span:last-child,
+.language-menu-top > summary > span:last-child {
+  display: none !important;
+}
+
+.utility-search-link,
+.language-menu-top > summary {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  padding: 2px !important;
+  gap: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove the circle around the search icon */
+
+.utility-search-link .utility-icon {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-size: 27px !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+/* Keep the translation icon at a similar size */
+
+.language-menu-top .translation-symbol {
+  width: 28px !important;
+  height: 23px !important;
+  transform: scale(1.08);
+  transform-origin: center;
 }
