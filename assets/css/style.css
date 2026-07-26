@@ -10480,3 +10480,10 @@ main .nav-directory-card {
   object-position: center 10%;
   margin: 0 !important;
 }
+.nav.simplified-nav a.active,
+.nav.simplified-nav a.active:hover,
+.nav.simplified-nav a.active:focus {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 6px !important;
+}
