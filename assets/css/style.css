@@ -10156,3 +10156,16 @@ main .nav-directory-card {
   left: auto !important;
   right: 0 !important;
 }
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-links {
+  margin-left: auto;
+}
+
+.footer-blog-pill {
+  margin-right: 0;
+}
