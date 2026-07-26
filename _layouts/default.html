@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal</title>
+<title>{% if page.url == '/' %}Muhammet Topal: Academic Portfolio and Personal Blog{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   {% if page.youtube_id %}
     {% assign social_image = "https://img.youtube.com/vi/" | append: page.youtube_id | append: "/maxresdefault.jpg" %}
@@ -84,7 +84,7 @@
       </a>
 
       <a class="name" href="{{ '/' | relative_url }}">Muhammet Topal</a>
-      <p class="identity-sentence">Academic Portfolio and Personal Blog</p>
+      
     </header>
 
     <div class="nav-wrap sticky-nav">
