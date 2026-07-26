@@ -232,27 +232,22 @@ permalink: /research/
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/center-of-power-slide.jpg' | relative_url }}" alt="Center of Power: Social Networks and Agency in Late Ottoman Istanbul.">
-      <div class="slide-caption">Center of Power: Social Networks and Agency in Late Ottoman Istanbul.</div>
+      <div class="slide-caption">Texas A&M University, 2025.</div>
     </div>
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/education-ottoman-text.jpg' | relative_url }}" alt="Finding a Place in the World: presentation image.">
-      <div class="slide-caption">Finding a Place in the World: presentation image.</div>
+      <div class="slide-caption">Galatasaray University, 2025.</div>
     </div>
 
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/education-title.jpg' | relative_url }}" alt="Finding a Place in the World: title slide.">
-      <div class="slide-caption">Finding a Place in the World: title slide.</div>
+     <div class="slide">
+      <img src="{{ '/assets/img/presentations/rise-fall.jpg' | relative_url }}" alt="The Rise and Fall of a Young Turk Leader.">
+      <div class="slide-caption">Boğaziçi University, 2025.</div>
     </div>
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/mesa-intellectual.jpg' | relative_url }}" alt="Speaking Truth to Power: presentation image.">
-      <div class="slide-caption">Speaking Truth to Power: presentation image.</div>
-    </div>
-
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/mesa-speaking.jpg' | relative_url }}" alt="Speaking Truth to Power: title slide.">
-      <div class="slide-caption">Speaking Truth to Power: title slide.</div>
+      <div class="slide-caption">59th MESA Conference, Washington, 2025.</div>
     </div>
 
     <div class="slide">
@@ -262,7 +257,7 @@ permalink: /research/
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Empire of Translations at Rutgers University.">
-      <div class="slide-caption">Empire of Translations at Rutgers University.</div>
+      <div class="slide-caption">Rutgers University, 2026.</div>
     </div>
 
     <div class="slide">
@@ -278,21 +273,6 @@ permalink: /research/
     <div class="slide">
       <img src="{{ '/assets/img/presentations/tamu-center-power.jpg' | relative_url }}" alt="Center of Power at Texas A&amp;M.">
       <div class="slide-caption">Center of Power at Texas A&amp;M.</div>
-    </div>
-
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/panel-discussion.jpg' | relative_url }}" alt="Panel discussion at Boğaziçi University.">
-      <div class="slide-caption">Panel discussion at Boğaziçi University.</div>
-    </div>
-
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/rise-fall.jpg' | relative_url }}" alt="The Rise and Fall of a Young Turk Leader.">
-      <div class="slide-caption">The Rise and Fall of a Young Turk Leader.</div>
-    </div>
-
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/class-group.jpg' | relative_url }}" alt="Ottoman Turkish Summer School workshop presentation.">
-      <div class="slide-caption">Ottoman Turkish Summer School workshop presentation.</div>
     </div>
 
   </div>
