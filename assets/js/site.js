@@ -2243,3 +2243,36 @@ window.addEventListener("resize", updateReadingProgress);
     openMobilePdf(event, trigger);
   }, true);
 })();
+/* Horizontal presentations gallery controls */
+
+document.querySelectorAll(".presentation-gallery").forEach(function (gallery) {
+  const row = gallery.querySelector(".presentation-gallery-row");
+  const leftArrow = gallery.querySelector(".presentation-gallery-arrow-left");
+  const rightArrow = gallery.querySelector(".presentation-gallery-arrow-right");
+
+  if (!row || !leftArrow || !rightArrow) {
+    return;
+  }
+
+  function scrollGallery(direction) {
+    const firstSlide = row.querySelector(".slide");
+    const gap = 18;
+
+    const distance = firstSlide
+      ? firstSlide.getBoundingClientRect().width + gap
+      : row.clientWidth * 0.8;
+
+    row.scrollBy({
+      left: direction * distance,
+      behavior: "smooth"
+    });
+  }
+
+  leftArrow.addEventListener("click", function () {
+    scrollGallery(-1);
+  });
+
+  rightArrow.addEventListener("click", function () {
+    scrollGallery(1);
+  });
+});
