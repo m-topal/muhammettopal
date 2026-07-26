@@ -10600,3 +10600,30 @@ main .nav-directory-card {
   transform: scale(1.08);
   transform-origin: center;
 }
+/* One clean underline for active and hovered navigation links */
+
+.nav.simplified-nav a,
+.nav.simplified-nav a:hover,
+.nav.simplified-nav a:focus,
+.nav.simplified-nav a.active,
+.nav.simplified-nav a.active:hover {
+  position: relative;
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+}
+
+.nav.simplified-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  background: transparent;
+}
+
+.nav.simplified-nav a:hover::after,
+.nav.simplified-nav a:focus-visible::after,
+.nav.simplified-nav a.active::after {
+  background: currentColor;
+}
