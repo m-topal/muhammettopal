@@ -10487,3 +10487,15 @@ main .nav-directory-card {
   text-decoration-thickness: 2px !important;
   text-underline-offset: 6px !important;
 }
+/* Raise the central header block over the mountain background */
+
+.site-header-wordmark-block,
+.site-top > .name,
+.nav-wrap {
+  position: relative;
+  top: -85px;
+}
+
+.site-top {
+  margin-bottom: -85px;
+}
