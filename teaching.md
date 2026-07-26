@@ -113,7 +113,7 @@ permalink: /teaching/
     <section class="teaching-shelf">
         <div class="teaching-shelf-heading">
           <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-co-teaching" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="18" cy="17" r="6"></circle><path d="M7 39v-5c0-6 5-10 11-10s11 4 11 10v5z"></path><circle cx="33" cy="21" r="4"></circle><path d="M30 39v-4c0-4 3-7 7-7 2 0 4 .7 5 2"></path></svg></span></span>
-          <h2>Co-Teaching</h2>
+          <h2>Graduate Teaching Associate</h2>
         </div>
         <p class="teaching-shelf-intro">In these courses, I supported instruction as a teaching assistant and co-teacher. My work included grading, office hours, discussion sessions, guidance on readings and assignments, and occasional lectures or substitute class meetings in coordination with the primary instructor.</p>
 
@@ -310,7 +310,7 @@ permalink: /teaching/
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-technology-modal" role="button" tabindex="0" aria-label="Open teaching and learning technologies details">
-            <h3>Teaching and Learning Technologies</h3>
+            <h3>Teaching & Learning Technologies</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-tar-modal" role="button" tabindex="0" aria-label="Open teaching as research details">
