@@ -301,7 +301,7 @@ permalink: /teaching/
   </div>
 
   <div class="prose certificate-main-text">
-    <figure class="certificate-breakout-photo creative-breakout-figure js-lightbox-figure">
+    <figure class="certificate-breakout-photo js-lightbox-figure">
       <img
         class="js-lightbox-image"
         src="{{ '/assets/img/teaching/college-teaching-certificate-group.jpg' | relative_url }}"
