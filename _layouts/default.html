@@ -47,9 +47,6 @@
   <div id="academicTopMap" class="academic-top-map" aria-hidden="true"></div>
   <div id="academicWorldScene" class="academic-world-scene" aria-hidden="true">
     <div id="academicGlobe" class="academic-globe"></div>
-    <div id="schoolSatellite1" class="school-satellite"><img src="{{ '/assets/img/background/sorbonne-line.png' | relative_url }}" alt=""></div>
-    <div id="schoolSatellite2" class="school-satellite"><img src="{{ '/assets/img/background/anderson-hall-line.png' | relative_url }}" alt=""></div>
-    <div id="schoolSatellite3" class="school-satellite"><img src="{{ '/assets/img/background/old-main-line.png' | relative_url }}" alt=""></div>
   </div>
   <div id="readingProgress" class="reading-progress" aria-hidden="true"></div>
 
@@ -107,8 +104,12 @@
 
     <footer class="footer">
       <span>Designed and Developed by Muhammet Topal | © {{ site.time | date: '%Y' }}</span>
-      <span class="footer-links"><a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}" href="{{ '/blog/' | relative_url }}">My Blog</a><a href="mailto:muhammettopal29@arizona.edu">Email</a> · <a href="https://orcid.org/0009-0001-3403-0414">ORCID</a> · <a href="https://arizona.academia.edu/MuhammetTopal">Academia.edu</a> · <a href="https://www.linkedin.com/in/muhammettopal29/?skipRedirect=true">LinkedIn</a></span>
-    </footer>
+      
+      <span class="footer-links">
+        <a class="blog-pill footer-blog-pill {% if page.url contains '/blog/' %}active{% endif %}"
+           href="{{ '/blog/' | relative_url }}">My Blog</a>
+     </span>
+   </footer>
   </div>
 
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
