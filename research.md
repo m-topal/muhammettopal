@@ -235,9 +235,9 @@ permalink: /research/
       <div class="slide-caption">Texas A&M University, 2025.</div>
     </div>
 
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/education-ottoman-text.jpg' | relative_url }}" alt="Finding a Place in the World: presentation image.">
-      <div class="slide-caption">Galatasaray University, 2025.</div>
+     <div class="slide">
+      <img src="{{ '/assets/img/presentations/chicago-organizing-exit-2.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
+      <div class="slide-caption">40th MEHAT Conference, University of Chicago, 2026.</div>
     </div>
 
      <div class="slide">
@@ -248,6 +248,11 @@ permalink: /research/
     <div class="slide">
       <img src="{{ '/assets/img/presentations/mesa-intellectual.jpg' | relative_url }}" alt="Speaking Truth to Power: presentation image.">
       <div class="slide-caption">59th MESA Conference, Washington, 2025.</div>
+    </div>
+
+      <div class="slide">
+      <img src="{{ '/assets/img/presentations/education-ottoman-text.jpg' | relative_url }}" alt="Finding a Place in the World: presentation image.">
+      <div class="slide-caption">Galatasaray University, 2025.</div>
     </div>
 
     <div class="slide">
@@ -262,11 +267,6 @@ permalink: /research/
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-organizing-exit-1.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
-      <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
-    </div>
-
-    <div class="slide">
-      <img src="{{ '/assets/img/presentations/chicago-organizing-exit-2.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
       <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
     </div>
 
