@@ -20,7 +20,7 @@ permalink: /teaching/
   </div>
 
   <div class="prose teaching-experience-main-image">
-    <figure class="teaching-experience-photo creative-breakout-figure js-lightbox-figure">
+    <figure class="teaching-experience-photo js-lightbox-figure">
       <img
         class="js-lightbox-image"
         src="{{ '/assets/img/teaching/teaching-experience-group.jpg' | relative_url }}"
