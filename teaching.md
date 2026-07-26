@@ -4,7 +4,6 @@ title: Teaching
 permalink: /teaching/
 ---
 <article class="page wide teaching-continuous-page" data-scroll-sections>
-  <p class="label">Teaching</p>
   <h1>Teaching</h1>
 
 
@@ -16,7 +15,6 @@ permalink: /teaching/
 
   <section class="teaching-scroll-section" id="teaching-experience" data-scroll-title="Teaching Experience">
     <div class="section-heading-row">
-      <p class="label">Teaching</p>
       <h2>Teaching Experience</h2>
     </div>
     <section class="teaching-shelf instructor-section">
@@ -391,7 +389,6 @@ permalink: /teaching/
 
   <section class="teaching-scroll-section" id="teaching-statement" data-scroll-title="Teaching Statement">
     <div class="section-heading-row">
-      <p class="label">Teaching</p>
       <h2>Teaching Statement</h2>
     </div>
     <div class="prose two-column-prose teaching-statement-flow paragraph-tight-indent">
