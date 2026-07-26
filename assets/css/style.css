@@ -10639,3 +10639,7 @@ main .nav-directory-card {
   display: none !important;
   content: none !important;
 }
+.name .surname {
+  color: #005f66;
+  font-weight: 600;
+}
