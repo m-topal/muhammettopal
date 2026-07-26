@@ -10628,11 +10628,12 @@ main .nav-directory-card {
   background: currentColor;
 }
 .site-top > .name {
-  transform: translateY(-45px);
-  margin-bottom: -45px;
+  position: relative;
+  top: -70px;
+  margin-bottom: 0;
 }
 
 .nav-wrap {
-  transform: translateY(-30px);
-  margin-bottom: -30px !important;
+  transform: translateY(-55px);
+  margin-bottom: 18px !important;
 }
