@@ -279,22 +279,22 @@ permalink: /teaching/
   <section class="teaching-scroll-section" id="college-teaching" data-scroll-title="College Teaching Certificate">
     <div class="section-heading-row">
       <p class="label">Pedagogical Training</p>
-      <h2>College Teaching Certificate</h2>
-    </div>
-    <div class="prose two-column-prose certificate-main-text paragraph-tight-indent">
-        <p>At the University of Arizona, I completed the Graduate Certificate in College Teaching. The certificate gave formal structure to my teaching experience and helped me think more systematically about course design, classroom practice, assessment, student participation, and the use of educational technologies. The certificate coursework and related teaching development work included <strong>Course Design</strong>, <strong>Learner Centered Teaching</strong>, <strong>Teaching Sensitive Subjects</strong>, <strong>Teaching and Learning Technologies</strong>, <strong>Teaching as Research</strong>, and <strong>College Teaching Practice</strong>. Together, these areas connected practical classroom experience with the scholarship of teaching and learning, from syllabus construction and discussion design to reflective assessment and accessible course materials.</p>
+     <h2>College Teaching Certificate</h2>
+  </div>
 
-        <p class="certificate-website-line"><a class="course-card-action" href="https://sites.google.com/arizona.edu/uofatarprojects/" target="_blank" rel="noopener">See the website</a></p>
+  <div class="prose certificate-main-text">
+    <figure class="certificate-breakout-photo creative-breakout-figure js-lightbox-figure">
+      <img
+        class="js-lightbox-image"
+        src="{{ '/assets/img/teaching/college-teaching-certificate-group.jpg' | relative_url }}"
+        alt="Graduate teaching certificate cohort"
+      >
+      <figcaption>Graduate teaching certificate cohort and teaching development work.</figcaption>
+    </figure>
+  </div>
 
-        <figure class="certificate-breakout-photo creative-breakout-figure js-lightbox-figure">
-          <img class="js-lightbox-image" src="{{ '/assets/img/teaching/college-teaching-certificate-group.jpg' | relative_url }}" alt="Graduate teaching certificate cohort">
-          <figcaption>Graduate teaching certificate cohort and teaching development work.</figcaption>
-        </figure>
-
-      </div>
-
-      <section class="certificate-coursework-cards">
-        <h2>Certificate Outcomes</h2>
+  <section class="certificate-coursework-cards">
+    <h2>Certificate Outcomes</h2>
 
         <div class="certificate-card-grid">
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-course-design-modal" role="button" tabindex="0" aria-label="Open course design details">
