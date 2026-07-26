@@ -10169,3 +10169,12 @@ main .nav-directory-card {
 .footer-blog-pill {
   margin-right: 0;
 }
+.certificate-breakout-photo {
+  width: min(720px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certificate-coursework-cards {
+  margin-top: 2rem;
+}
