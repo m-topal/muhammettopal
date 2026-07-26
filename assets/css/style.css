@@ -10889,3 +10889,108 @@ main .nav-directory-card {
     margin-bottom: -54px !important;
   }
 }
+@media (max-width: 700px) {
+  /* Show more of the mountains */
+  .academic-top-map {
+    top: 58px !important;
+  }
+
+  /* Search left, QR center, language right */
+  .site-utility-bar.split-utility-bar {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .utility-left {
+    justify-self: start;
+  }
+
+  .utility-center {
+    justify-self: center;
+  }
+
+  .utility-right {
+    justify-self: end;
+  }
+
+  .utility-qr-button {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .qr-symbol {
+    font-size: 27px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .utility-qr-button:hover .qr-symbol {
+    transform: scale(1.15);
+  }
+
+  /* Slightly transparent opened hamburger menu */
+  .nav-wrap.menu-open,
+  .nav-wrap.menu-open .nav.simplified-nav {
+    background: rgba(255, 255, 255, 0.91) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* QR popup */
+
+.qr-share-modal[hidden] {
+  display: none !important;
+}
+
+.qr-share-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 7000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.qr-share-card {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.qr-share-card img {
+  display: block;
+  width: min(260px, 70vw);
+  height: auto;
+}
+
+.qr-share-card p {
+  margin: 14px 0 0;
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
+.qr-share-close {
+  position: fixed;
+  top: 22px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #111;
+  background: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
