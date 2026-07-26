@@ -10608,3 +10608,34 @@ main .nav-directory-card {
   transform: translateY(-85px);
   margin-bottom: 18px !important;
 }
+/* Larger search icon, handle on lower-right, hover effect */
+
+.utility-search-link .utility-icon {
+  font-size: 40px !important;
+  transform: scaleX(-1) !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.utility-search-link:hover .utility-icon {
+  transform: scaleX(-1) scale(1.15) !important;
+  opacity: 0.65;
+}
+/* Final navigation underline fix */
+
+.nav.simplified-nav > a {
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important;
+  padding-bottom: 5px;
+}
+
+.nav.simplified-nav > a:hover,
+.nav.simplified-nav > a:focus-visible,
+.nav.simplified-nav > a.active {
+  text-decoration: none !important;
+  border-bottom-color: currentColor !important;
+}
+
+.nav.simplified-nav > a::after {
+  display: none !important;
+  content: none !important;
+}
