@@ -10477,6 +10477,6 @@ main .nav-directory-card {
   max-width: none !important;
   height: 420px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 10%;
   margin: 0 !important;
 }
