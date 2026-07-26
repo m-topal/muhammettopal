@@ -262,7 +262,7 @@ permalink: /research/
 
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Empire of Translations at Rutgers University.">
-      <div class="slide-caption">Rutgers University, 2026.</div>
+      <div class="slide-caption">6th Mid-Atlantic Conference, Rutgers University, 2026.</div>
     </div>
 
     <div class="slide">
