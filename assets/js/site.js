@@ -2276,3 +2276,36 @@ document.querySelectorAll(".presentation-gallery").forEach(function (gallery) {
     scrollGallery(1);
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const navWrap = document.querySelector(".nav-wrap");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menuLinks = document.querySelectorAll(".nav.simplified-nav a");
+
+  if (!navWrap || !toggle) return;
+
+  const closeMenu = () => {
+    navWrap.classList.remove("menu-open");
+    document.body.classList.remove("mobile-menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation menu");
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = navWrap.classList.toggle("menu-open");
+
+    document.body.classList.toggle("mobile-menu-open", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) closeMenu();
+  });
+});
