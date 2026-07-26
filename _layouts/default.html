@@ -88,7 +88,21 @@
     </header>
 
     <div class="nav-wrap sticky-nav">
-      <nav class="nav simplified-nav" aria-label="Main navigation">
+  <a class="mobile-nav-name" href="{{ '/' | relative_url }}">
+    <span>Muhammet</span><strong>Topal</strong>
+  </a>
+
+  <button
+    class="mobile-menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="main-navigation">
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="main-navigation" class="nav simplified-nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a class="{% if page.url contains '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About Me</a>
 
