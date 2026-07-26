@@ -10668,7 +10668,7 @@ main .nav-directory-card {
   content: none !important;
 }
 .about-page > #beyond-academia.about-beyond-section {
-  width: calc(100% + 130px) !important;
+  width: calc(100% + 132px) !important;
   max-width: calc(100vw - 56px) !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
