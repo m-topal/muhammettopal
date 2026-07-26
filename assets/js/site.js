@@ -2309,3 +2309,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth > 700) closeMenu();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const qrButton = document.querySelector(".utility-qr-button");
+  const qrModal = document.getElementById("qrShareModal");
+  const qrImage = document.getElementById("qrShareImage");
+  const qrClose = document.querySelector(".qr-share-close");
+
+  if (!qrButton || !qrModal || !qrImage || !qrClose) return;
+
+  const closeQr = () => {
+    qrModal.hidden = true;
+  };
+
+  qrButton.addEventListener("click", () => {
+    const pageUrl = window.location.href;
+    qrImage.src =
+      "https://quickchart.io/qr?size=400&text=" +
+      encodeURIComponent(pageUrl);
+
+    qrModal.hidden = false;
+  });
+
+  qrClose.addEventListener("click", closeQr);
+
+  qrModal.addEventListener("click", (event) => {
+    if (event.target === qrModal) closeQr();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeQr();
+  });
+});
