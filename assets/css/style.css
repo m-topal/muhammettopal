@@ -10643,3 +10643,27 @@ main .nav-directory-card {
   color: #005f66;
   font-weight: 600;
 }
+/* Active tab stays bold. Hovered tab becomes bold and underlined. */
+
+.nav.simplified-nav > a {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+
+.nav.simplified-nav > a.active {
+  font-weight: 700 !important;
+}
+
+.nav.simplified-nav > a:hover,
+.nav.simplified-nav > a:focus-visible {
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 6px !important;
+}
+
+.nav.simplified-nav > a::after {
+  display: none !important;
+  content: none !important;
+}
