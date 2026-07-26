@@ -310,7 +310,7 @@ permalink: /teaching/
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-technology-modal" role="button" tabindex="0" aria-label="Open teaching and learning technologies details">
-            <h3>Teaching & Learning Technologies</h3>
+            <h3>Education Technologies</h3>
           </article>
 
           <article class="certificate-card certificate-detail-card course-modal-trigger" data-course-modal="certificate-tar-modal" role="button" tabindex="0" aria-label="Open teaching as research details">
