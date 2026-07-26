@@ -10629,11 +10629,11 @@ main .nav-directory-card {
 }
 .site-top > .name {
   position: relative;
-  top: -70px;
+  top: -105px;
   margin-bottom: 0;
 }
 
 .nav-wrap {
-  transform: translateY(-55px);
+  transform: translateY(-85px);
   margin-bottom: 18px !important;
 }
