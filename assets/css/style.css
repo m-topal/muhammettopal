@@ -10295,3 +10295,18 @@ main .nav-directory-card {
     right: 6px;
   }
 }
+.teaching-experience-main-image {
+  width: 100%;
+  max-width: none;
+}
+
+.teaching-experience-photo {
+  width: min(720px, 100%);
+  margin: 0 auto 2rem;
+}
+
+.teaching-experience-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
