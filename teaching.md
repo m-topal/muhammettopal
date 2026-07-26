@@ -276,10 +276,10 @@ permalink: /teaching/
 
   </section>
 
-  <section class="teaching-scroll-section" id="college-teaching" data-scroll-title="College Teaching Certificate">
-    <div class="section-heading-row">
-      <p class="label">Pedagogical Training</p>
-     <h2>College Teaching Certificate</h2>
+<section class="teaching-scroll-section" id="college-teaching" data-scroll-title="College Teaching Certificate">
+  <div class="section-heading-row">
+    <p class="label">Pedagogical Training</p>
+    <h2>College Teaching Certificate</h2>
   </div>
 
   <div class="prose certificate-main-text">
