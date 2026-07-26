@@ -11141,3 +11141,90 @@ main .nav-directory-card {
     -webkit-backdrop-filter: blur(14px) !important;
   }
 }
+@media (max-width: 700px) {
+  .utility-center {
+    transform: translateY(-12px) !important;
+  }
+
+  .utility-qr-button {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .share-symbol {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .share-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 2;
+  }
+
+  .share-dot-top {
+    top: 1px;
+    right: 1px;
+  }
+
+  .share-dot-left {
+    left: 1px;
+    top: 9px;
+  }
+
+  .share-dot-right {
+    right: 1px;
+    bottom: 1px;
+  }
+
+  .share-line {
+    position: absolute;
+    left: 5px;
+    width: 13px;
+    height: 1.5px;
+    background: currentColor;
+    transform-origin: left center;
+    z-index: 1;
+  }
+
+  .share-line-one {
+    top: 10px;
+    transform: rotate(-27deg);
+  }
+
+  .share-line-two {
+    top: 12px;
+    transform: rotate(27deg);
+  }
+
+  .utility-qr-button:hover .share-symbol {
+    transform: scale(1.12);
+    opacity: 0.65;
+  }
+
+  .academic-top-map {
+    top: 168px !important;
+    background-position: center top !important;
+  }
+
+  .nav-wrap.menu-open,
+  .nav-wrap.menu-open .nav.simplified-nav {
+    background: rgba(255, 255, 255, 0.50) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+}
