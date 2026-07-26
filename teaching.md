@@ -13,13 +13,36 @@ permalink: /teaching/
     <a href="#teaching-statement">Teaching Statement</a>
   </nav>
 
-  <section class="teaching-scroll-section" id="teaching-experience" data-scroll-title="Teaching Experience">
-    <div class="section-heading-row">
-      <h2>Teaching Experience</h2>
-    </div>
-    <section class="teaching-shelf instructor-section">
-        <div class="teaching-shelf-heading">
-          <span class="teaching-shelf-icon" aria-hidden="true"><span class="line-icon line-icon-instructor" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><circle cx="15" cy="18" r="5"></circle><path d="M6 39v-5c0-6 4-10 9-10s9 4 9 10v5z"></path><path d="M25 12h17v17H30"></path><path d="M30 29l-5 5"></path></svg></span></span>
+<section class="teaching-scroll-section" id="teaching-experience" data-scroll-title="Teaching Experience">
+  <div class="section-heading-row">
+    <p class="label">Teaching</p>
+    <h2>Teaching Experience</h2>
+  </div>
+
+  <div class="prose teaching-experience-main-image">
+    <figure class="teaching-experience-photo creative-breakout-figure js-lightbox-figure">
+      <img
+        class="js-lightbox-image"
+        src="{{ '/assets/img/teaching/teaching-experience-group.jpg' | relative_url }}"
+        alt="Academic presentation in a university lecture hall"
+      >
+      <figcaption>Academic presentation and discussion in a university lecture hall.</figcaption>
+    </figure>
+  </div>
+
+  <section class="teaching-shelf instructor-section">
+    <div class="teaching-shelf-heading">
+      <span class="teaching-shelf-icon" aria-hidden="true">
+        <span class="line-icon line-icon-instructor" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <circle cx="15" cy="18" r="5"></circle>
+            <path d="M6 39v-5c0-6 4-10 9-10s9 4 9 10v5z"></path>
+            <path d="M25 12h17v17H30"></path>
+            <path d="M30 29l-5 5"></path>
+          </svg>
+        </span>
+      </span>
+      
           <h2>Instructor of Record</h2>
         </div>
         <p class="teaching-shelf-intro">As instructor of record, I designed and taught these courses as the primary instructor. My responsibilities included syllabus and course design, learning objectives, lectures, classroom facilitation, assessment design, grading, office hours, student communication, and ongoing adjustment of course materials to support student learning.</p>
