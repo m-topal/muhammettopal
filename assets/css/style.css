@@ -11003,3 +11003,68 @@ main .nav-directory-card {
     display: block;
   }
 }
+@media (max-width: 700px) {
+  /* QR higher */
+  .utility-center {
+    transform: translateY(-12px) !important;
+  }
+
+  /* Creative QR icon */
+  .qr-lettermark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .qr-lettermark .qr-left,
+  .qr-lettermark .qr-right {
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .qr-lettermark .qr-divider {
+    display: block;
+    width: 1px;
+    height: 14px;
+    background: #111;
+  }
+
+  .utility-qr-button {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .utility-qr-button:hover .qr-lettermark {
+    transform: scale(1.08);
+    opacity: 0.75;
+  }
+
+  /* Mountains lower */
+  .academic-top-map {
+    top: 78px !important;
+    background-position: center top !important;
+  }
+
+  /* Open hamburger menu, 40% transparent */
+  .nav-wrap.menu-open,
+  .nav-wrap.menu-open .nav.simplified-nav {
+    background: rgba(255, 255, 255, 0.60) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+}
