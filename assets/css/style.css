@@ -10457,3 +10457,26 @@ main .nav-directory-card {
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
+#college-teaching .certificate-main-text {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+#college-teaching .certificate-breakout-photo {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 2rem !important;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+#college-teaching .certificate-breakout-photo img {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 20%;
+  margin: 0 !important;
+}
