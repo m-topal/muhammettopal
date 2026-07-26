@@ -10881,3 +10881,11 @@ main .nav-directory-card {
     margin-bottom: -30px !important;
   }
 }
+@media (max-width: 700px) {
+  .site-top .site-header-wordmark-block {
+    position: relative !important;
+    top: auto !important;
+    transform: translateY(-66px) !important;
+    margin-bottom: -54px !important;
+  }
+}
