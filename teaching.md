@@ -15,7 +15,6 @@ permalink: /teaching/
 
 <section class="teaching-scroll-section" id="teaching-experience" data-scroll-title="Teaching Experience">
   <div class="section-heading-row">
-    <p class="label">Teaching</p>
     <h2>Teaching Experience</h2>
   </div>
 
@@ -26,7 +25,6 @@ permalink: /teaching/
         src="{{ '/assets/img/teaching/teaching-experience-group.jpg' | relative_url }}"
         alt="Academic presentation in a university lecture hall"
       >
-      <figcaption>Academic presentation and discussion in a university lecture hall.</figcaption>
     </figure>
   </div>
 
