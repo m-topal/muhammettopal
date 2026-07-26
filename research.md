@@ -16,7 +16,6 @@ permalink: /research/
 
   <section id="dissertation" class="teaching-scroll-section research-scroll-section">
     <div class="section-heading-row">
-      <p class="label">Research</p>
       <h2>Dissertation</h2>
     </div>
 <div class="prose two-column-prose research-flow paragraph-tight-indent">
@@ -124,7 +123,6 @@ permalink: /research/
 
   </div>
     <div class="research-subsection-heading">
-      <p class="label">Research</p>
       <h3>Future Directions</h3>
     </div>
 <div class="prose two-column-prose research-flow paragraph-tight-indent">
@@ -221,67 +219,92 @@ permalink: /research/
     <div class="section-heading-row">
       <h2>Presentations</h2>
     </div>
-<div class="slideshow">
-    <div class="slide-frame">
-    <div class="slide active">
+<div class="presentation-gallery">
+  <button
+    class="presentation-gallery-arrow presentation-gallery-arrow-left"
+    type="button"
+    aria-label="Scroll presentation images left"
+  >
+    ‹
+  </button>
+
+  <div class="presentation-gallery-row">
+
+    <div class="slide">
       <img src="{{ '/assets/img/presentations/center-of-power-slide.jpg' | relative_url }}" alt="Center of Power: Social Networks and Agency in Late Ottoman Istanbul.">
       <div class="slide-caption">Center of Power: Social Networks and Agency in Late Ottoman Istanbul.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/education-ottoman-text.jpg' | relative_url }}" alt="Finding a Place in the World: presentation image.">
       <div class="slide-caption">Finding a Place in the World: presentation image.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/education-title.jpg' | relative_url }}" alt="Finding a Place in the World: title slide.">
       <div class="slide-caption">Finding a Place in the World: title slide.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/mesa-intellectual.jpg' | relative_url }}" alt="Speaking Truth to Power: presentation image.">
       <div class="slide-caption">Speaking Truth to Power: presentation image.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/mesa-speaking.jpg' | relative_url }}" alt="Speaking Truth to Power: title slide.">
       <div class="slide-caption">Speaking Truth to Power: title slide.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/mesa-panel.jpg' | relative_url }}" alt="MESA panel.">
       <div class="slide-caption">MESA panel.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-wide.jpg' | relative_url }}" alt="Empire of Translations at Rutgers University.">
       <div class="slide-caption">Empire of Translations at Rutgers University.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-organizing-exit-1.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
       <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/chicago-organizing-exit-2.jpg' | relative_url }}" alt="Organizing Exit at the University of Chicago.">
       <div class="slide-caption">Organizing Exit at the University of Chicago.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/tamu-center-power.jpg' | relative_url }}" alt="Center of Power at Texas A&amp;M.">
       <div class="slide-caption">Center of Power at Texas A&amp;M.</div>
     </div>
+
     <div class="slide">
-      <img src="{{ '/assets/img/presentations/panel-discussion.jpg' | relative_url }}" alt="Panel discussion at Bogazici University.">
+      <img src="{{ '/assets/img/presentations/panel-discussion.jpg' | relative_url }}" alt="Panel discussion at Boğaziçi University.">
       <div class="slide-caption">Panel discussion at Boğaziçi University.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/rise-fall.jpg' | relative_url }}" alt="The Rise and Fall of a Young Turk Leader.">
       <div class="slide-caption">The Rise and Fall of a Young Turk Leader.</div>
     </div>
+
     <div class="slide">
       <img src="{{ '/assets/img/presentations/class-group.jpg' | relative_url }}" alt="Ottoman Turkish Summer School workshop presentation.">
       <div class="slide-caption">Ottoman Turkish Summer School workshop presentation.</div>
     </div>
-    </div>
-    <div class="slide-controls">
-      <button id="slidePrev">Previous</button>
-      <span id="slideCounter">1 / 13</span>
-      <button id="slideNext">Next</button>
-    </div>
+
   </div>
+
+  <button
+    class="presentation-gallery-arrow presentation-gallery-arrow-right"
+    type="button"
+    aria-label="Scroll presentation images right"
+  >
+    ›
+  </button>
+</div>
 
   <section class="publication-category presentation-category">
     <h2 class="publication-category-heading"><span class="publication-category-icon publication-category-icon-panel-chair" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4.75 6.75h8.5a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H9l-3.25 2.5v-2.5H4.75a2 2 0 0 1-2-2v-4.5a2 2 0 0 1 2-2Z"/><path d="M14.75 9.25h4.5a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-.75v2.25l-2.95-2.25h-.8"/></svg></span><span>Panel Chair</span></h2>
