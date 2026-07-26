@@ -10452,3 +10452,8 @@ main .nav-directory-card {
     height: 280px;
   }
 }
+.nav a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
