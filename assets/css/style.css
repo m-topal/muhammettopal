@@ -11068,3 +11068,76 @@ main .nav-directory-card {
     -webkit-backdrop-filter: blur(14px) !important;
   }
 }
+@media (max-width: 700px) {
+  /* Raise QR slightly */
+  .utility-center {
+    transform: translateY(-12px) !important;
+  }
+
+  /* Smaller QR lettermark, no circle */
+  .qr-lettermark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 24px;
+    height: 22px;
+    color: #111;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .qr-lettermark .qr-left,
+  .qr-lettermark .qr-right {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /* Horizontal line crossing through Q and R */
+  .qr-lettermark .qr-divider {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 50%;
+    width: auto;
+    height: 1px;
+    background: #111;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .utility-qr-button {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .utility-qr-button:hover .qr-lettermark {
+    transform: scale(1.1);
+    opacity: 0.65;
+  }
+
+  /* Move mountains much farther down */
+  .academic-top-map {
+    top: 118px !important;
+    background-position: center top !important;
+  }
+
+  /* Open hamburger menu: 50% opacity */
+  .nav-wrap.menu-open,
+  .nav-wrap.menu-open .nav.simplified-nav {
+    background: rgba(255, 255, 255, 0.50) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+}
