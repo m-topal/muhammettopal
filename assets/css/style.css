@@ -10310,3 +10310,27 @@ main .nav-directory-card {
   width: 100%;
   height: auto;
 }
+.teaching-experience-main-image {
+  width: 100%;
+  max-width: none;
+}
+
+.teaching-experience-photo {
+  width: min(720px, 100%);
+  margin: 0 auto 2rem;
+  float: none;
+  transform: none;
+}
+
+.teaching-experience-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 16px;
+}
+
+.teaching-experience-photo figcaption {
+  width: 100%;
+  box-sizing: border-box;
+}
