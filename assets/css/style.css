@@ -10178,3 +10178,12 @@ main .nav-directory-card {
 .certificate-coursework-cards {
   margin-top: 2rem;
 }
+.certificate-main-text {
+  width: 100%;
+  max-width: none;
+}
+
+.certificate-breakout-photo {
+  width: min(720px, 100%);
+  margin: 0 auto 2rem;
+}
