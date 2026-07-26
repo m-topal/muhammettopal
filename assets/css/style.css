@@ -10499,3 +10499,45 @@ main .nav-directory-card {
 .site-top {
   margin-bottom: -85px;
 }
+/* Utility controls: icons only */
+
+.utility-search-link > span:last-child,
+.language-menu-top > summary > span:last-child {
+  display: none;
+}
+
+/* Remove pill and circle appearance */
+
+.utility-search-link,
+.language-menu-top > summary {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 4px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Make the search icon similar in size to the language icon */
+
+.utility-search-link .utility-icon {
+  display: block;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.language-menu-top .translation-symbol {
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* Keep both controls positioned at the sides */
+
+.utility-left,
+.utility-right {
+  display: flex;
+  align-items: center;
+}
