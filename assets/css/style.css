@@ -10994,3 +10994,12 @@ main .nav-directory-card {
   font-size: 28px;
   cursor: pointer;
 }
+.utility-center {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .utility-center {
+    display: block;
+  }
+}
