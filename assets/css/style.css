@@ -11232,7 +11232,7 @@ main .nav-directory-card {
   /* Mountains: move the entire rendered layer farther down */
   #academicTopMap.academic-top-map {
     top: 0 !important;
-    transform: translateY(220px) !important;
+    transform: translateY(110px) !important;
   }
 
   /* Keep the top utility buttons above the wordmark */
@@ -11274,24 +11274,25 @@ main .nav-directory-card {
 
   /* Make the clickable Topal box fit the visible wordmark */
   .site-top .site-header-wordmark-block {
-    display: block !important;
-    width: 180px !important;
-    max-width: 42vw !important;
-    height: 58px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: hidden !important;
-    z-index: 10 !important;
-    pointer-events: auto !important;
-  }
+  display: block !important;
+  width: 180px !important;
+  max-width: 48vw !important;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow: visible !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
 
-  .site-top .home-header-wordmark {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 auto !important;
-    object-fit: contain !important;
-  }
+.site-top .home-header-wordmark {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 76px !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+}
 
   /* Open hamburger menu: 40% white opacity */
   .nav-wrap.menu-open,
