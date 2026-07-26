@@ -11228,3 +11228,76 @@ main .nav-directory-card {
     -webkit-backdrop-filter: blur(14px) !important;
   }
 }
+@media (max-width: 700px) {
+  /* Mountains: move the entire rendered layer farther down */
+  #academicTopMap.academic-top-map {
+    top: 0 !important;
+    transform: translateY(220px) !important;
+  }
+
+  /* Keep the top utility buttons above the wordmark */
+  .site-top .site-utility-bar {
+    position: relative !important;
+    z-index: 300 !important;
+    overflow: visible !important;
+  }
+
+  /* Keep the center share/QR trigger slightly higher */
+  .site-top .utility-center {
+    position: relative !important;
+    z-index: 310 !important;
+    transform: translateY(-12px) !important;
+  }
+
+  /* Larger touch area while keeping the visible icon small */
+  .site-top .utility-qr-button {
+    position: relative !important;
+    z-index: 320 !important;
+    display: grid !important;
+    place-items: center !important;
+    width: 46px !important;
+    height: 46px !important;
+    margin: -9px !important;
+    padding: 9px !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #111 !important;
+    cursor: pointer !important;
+    touch-action: manipulation;
+  }
+
+  /* Keep the visible three-dot share symbol small */
+  .site-top .share-symbol {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  /* Make the clickable Topal box fit the visible wordmark */
+  .site-top .site-header-wordmark-block {
+    display: block !important;
+    width: 180px !important;
+    max-width: 42vw !important;
+    height: 58px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+  }
+
+  .site-top .home-header-wordmark {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Open hamburger menu: 40% white opacity */
+  .nav-wrap.menu-open,
+  .nav-wrap.menu-open .nav.simplified-nav {
+    background: rgba(255, 255, 255, 0.40) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+}
