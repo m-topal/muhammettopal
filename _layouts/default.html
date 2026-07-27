@@ -54,11 +54,41 @@
     <header class="top site-top">
       <div class="site-utility-bar split-utility-bar" aria-label="Site tools">
         <div class="utility-left">
-          <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
-            <span class="utility-icon" aria-hidden="true">⌕</span>
-            <span>Advanced Search</span>
-          </a>
-        </div>
+  <a class="utility-link utility-search-link" href="{{ '/search/' | relative_url }}" aria-label="Advanced search">
+    <span class="utility-icon" aria-hidden="true">⌕</span>
+    <span>Advanced Search</span>
+  </a>
+
+  <details class="background-picker">
+    <summary aria-label="Choose background color" title="Background color">
+      <span class="background-picker-icon" aria-hidden="true"></span>
+    </summary>
+
+    <div class="background-picker-panel">
+      <label for="siteBackgroundColor">Background color</label>
+
+      <input
+        id="siteBackgroundColor"
+        class="background-color-input"
+        type="color"
+        value="#fbfaf7"
+      >
+
+      <div class="background-color-swatches" aria-label="Background color suggestions">
+        <button type="button" data-background-color="#fbfaf7" style="--swatch:#fbfaf7" aria-label="Warm white"></button>
+        <button type="button" data-background-color="#f3efe7" style="--swatch:#f3efe7" aria-label="Soft cream"></button>
+        <button type="button" data-background-color="#e8eef2" style="--swatch:#e8eef2" aria-label="Pale blue"></button>
+        <button type="button" data-background-color="#e7eee9" style="--swatch:#e7eee9" aria-label="Pale green"></button>
+        <button type="button" data-background-color="#eee8ed" style="--swatch:#eee8ed" aria-label="Pale mauve"></button>
+        <button type="button" data-background-color="#0b1624" style="--swatch:#0b1624" aria-label="Dark navy"></button>
+      </div>
+
+      <button class="background-color-reset" type="button">
+        Use theme background
+      </button>
+    </div>
+  </details>
+</div>
         
       <div class="utility-center">
   <button class="utility-qr-button" type="button" aria-label="Show QR code for this page">
