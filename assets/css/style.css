@@ -11434,3 +11434,20 @@ html[data-theme="dark"] .contact-page .message-character-count {
   background: transparent !important;
   box-shadow: none !important;
 }
+.theme-toggle-icon {
+  font-family: "Arial Unicode MS", Arial, sans-serif !important;
+  font-variant-emoji: text;
+  color: currentColor !important;
+}
+
+@media (max-width: 700px) {
+  .theme-toggle-icon {
+    font-family: Arial, sans-serif !important;
+    font-variant-emoji: text;
+    color: var(--ink) !important;
+  }
+
+  html[data-theme="dark"] .theme-toggle-icon {
+    color: #fff !important;
+  }
+}
