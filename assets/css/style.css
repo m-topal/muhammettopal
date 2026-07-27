@@ -11782,3 +11782,10 @@ html.has-custom-background .site-shell {
 html[data-theme="dark"] .site-name {
   color: #f3efe7 !important;
 }
+html[data-theme="dark"] .name .first-name {
+  color: #f3efe7 !important;
+}
+
+html[data-theme="dark"] .name .surname {
+  color: #ffffff !important;
+}
