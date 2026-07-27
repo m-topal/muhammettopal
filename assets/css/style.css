@@ -11610,3 +11610,22 @@ html[data-theme="dark"] .presentation-gallery .slide-caption {
   color: var(--muted) !important;
   border-top-color: var(--line) !important;
 }
+/* Language menu panel, transparent like the nav bar */
+
+.language-menu-top .language-panel {
+  background: rgba(251, 250, 247, 0.54) !important;
+  backdrop-filter: blur(12px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.02) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .language-menu-top .language-panel {
+  background: rgba(11, 22, 36, 0.54) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .language-menu-top .language-panel a,
+html[data-theme="dark"] .language-menu-top .language-panel span {
+  color: var(--text) !important;
+}
