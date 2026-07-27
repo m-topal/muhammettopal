@@ -11546,3 +11546,34 @@ html[data-theme="dark"] .pub-reference {
 html[data-theme="dark"] .accordion-panel a {
   color: #dce6ef !important;
 }
+/* Dark mode: make expanded publication details clearly readable */
+
+html[data-theme="dark"] .publication-entry .accordion-panel,
+html[data-theme="dark"] .publication-entry .accordion-panel p,
+html[data-theme="dark"] .publication-entry .pub-reference,
+html[data-theme="dark"] .publication-entry .accordion-meta,
+html[data-theme="dark"] #publications .accordion-panel,
+html[data-theme="dark"] #publications .accordion-panel p,
+html[data-theme="dark"] #publications .pub-reference,
+html[data-theme="dark"] #publications .accordion-meta,
+html[data-theme="dark"] #presentations .accordion-panel,
+html[data-theme="dark"] #presentations .accordion-panel p,
+html[data-theme="dark"] #presentations .accordion-meta {
+  color: #d5dde6 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="dark"] .accordion-panel em,
+html[data-theme="dark"] .accordion-panel strong,
+html[data-theme="dark"] .accordion-panel span {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="dark"] .accordion-panel a,
+html[data-theme="dark"] .publication-entry .accordion-panel a {
+  color: #f2f4f6 !important;
+  opacity: 1 !important;
+}
