@@ -59,35 +59,42 @@
     <span>Advanced Search</span>
   </a>
 
-  <details class="background-picker">
-    <summary aria-label="Choose background color" title="Background color">
-      <span class="background-picker-icon" aria-hidden="true"></span>
-    </summary>
+<details class="background-picker">
+  <summary aria-label="Choose background color" title="Background color">
+    <span class="background-picker-icon" aria-hidden="true"></span>
+  </summary>
 
-    <div class="background-picker-panel">
-      <label for="siteBackgroundColor">Background color</label>
+  <div class="background-picker-panel">
+    <div class="background-picker-heading">Background color</div>
 
-      <input
-        id="siteBackgroundColor"
-        class="background-color-input"
-        type="color"
-        value="#fbfaf7"
-      >
+    <div class="background-tone-grid" aria-label="Background colors">
+      <button type="button" data-background-color="#fbfaf7" style="--swatch:#fbfaf7" aria-label="Warm white"></button>
+      <button type="button" data-background-color="#f3efe7" style="--swatch:#f3efe7" aria-label="Cream"></button>
+      <button type="button" data-background-color="#ebe3d6" style="--swatch:#ebe3d6" aria-label="Sand"></button>
+      <button type="button" data-background-color="#e8ddd2" style="--swatch:#e8ddd2" aria-label="Clay"></button>
+      <button type="button" data-background-color="#eee8ed" style="--swatch:#eee8ed" aria-label="Mauve"></button>
+      <button type="button" data-background-color="#e5e0ea" style="--swatch:#e5e0ea" aria-label="Lavender"></button>
 
-      <div class="background-color-swatches" aria-label="Background color suggestions">
-        <button type="button" data-background-color="#fbfaf7" style="--swatch:#fbfaf7" aria-label="Warm white"></button>
-        <button type="button" data-background-color="#f3efe7" style="--swatch:#f3efe7" aria-label="Soft cream"></button>
-        <button type="button" data-background-color="#e8eef2" style="--swatch:#e8eef2" aria-label="Pale blue"></button>
-        <button type="button" data-background-color="#e7eee9" style="--swatch:#e7eee9" aria-label="Pale green"></button>
-        <button type="button" data-background-color="#eee8ed" style="--swatch:#eee8ed" aria-label="Pale mauve"></button>
-        <button type="button" data-background-color="#0b1624" style="--swatch:#0b1624" aria-label="Dark navy"></button>
-      </div>
+      <button type="button" data-background-color="#e8eef2" style="--swatch:#e8eef2" aria-label="Pale blue"></button>
+      <button type="button" data-background-color="#dce7ee" style="--swatch:#dce7ee" aria-label="Mist blue"></button>
+      <button type="button" data-background-color="#d9e8e7" style="--swatch:#d9e8e7" aria-label="Pale teal"></button>
+      <button type="button" data-background-color="#e7eee9" style="--swatch:#e7eee9" aria-label="Pale green"></button>
+      <button type="button" data-background-color="#e3eadf" style="--swatch:#e3eadf" aria-label="Sage"></button>
+      <button type="button" data-background-color="#ecebdc" style="--swatch:#ecebdc" aria-label="Pale olive"></button>
 
-      <button class="background-color-reset" type="button">
-        Use theme background
-      </button>
+      <button type="button" data-background-color="#d8c4b6" style="--swatch:#d8c4b6" aria-label="Warm taupe"></button>
+      <button type="button" data-background-color="#bcc7cf" style="--swatch:#bcc7cf" aria-label="Blue grey"></button>
+      <button type="button" data-background-color="#aebfba" style="--swatch:#aebfba" aria-label="Muted green"></button>
+      <button type="button" data-background-color="#b9aebd" style="--swatch:#b9aebd" aria-label="Muted purple"></button>
+      <button type="button" data-background-color="#657383" style="--swatch:#657383" aria-label="Slate"></button>
+      <button type="button" data-background-color="#26384b" style="--swatch:#26384b" aria-label="Deep blue"></button>
     </div>
-  </details>
+
+    <button class="background-color-reset" type="button">
+      Restore theme background
+    </button>
+  </div>
+</details>
 </div>
         
       <div class="utility-center">
