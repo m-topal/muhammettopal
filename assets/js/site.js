@@ -2372,3 +2372,49 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(nextTheme);
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
+  const picker = document.querySelector(".background-picker");
+  const colorInput = document.querySelector("#siteBackgroundColor");
+  const swatches = document.querySelectorAll("[data-background-color]");
+  const resetButton = document.querySelector(".background-color-reset");
+
+  if (!picker || !colorInput || !resetButton) return;
+
+  const applyBackgroundColor = (color) => {
+    root.style.setProperty("--custom-page-background", color);
+    root.classList.add("has-custom-background");
+    colorInput.value = color;
+    localStorage.setItem("site-background-color", color);
+  };
+
+  const savedColor = localStorage.getItem("site-background-color");
+
+  if (savedColor) {
+    applyBackgroundColor(savedColor);
+  }
+
+  colorInput.addEventListener("input", () => {
+    applyBackgroundColor(colorInput.value);
+  });
+
+  swatches.forEach((swatch) => {
+    swatch.addEventListener("click", () => {
+      const color = swatch.dataset.backgroundColor;
+      applyBackgroundColor(color);
+    });
+  });
+
+  resetButton.addEventListener("click", () => {
+    root.style.removeProperty("--custom-page-background");
+    root.classList.remove("has-custom-background");
+    localStorage.removeItem("site-background-color");
+    picker.removeAttribute("open");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!picker.contains(event.target)) {
+      picker.removeAttribute("open");
+    }
+  });
+});
