@@ -2351,7 +2351,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.documentElement.setAttribute("data-theme", theme);
 
-    icon.textContent = isDark ? "☀" : "☾";
+    icon.textContent = isDark ? "☼" : "☾";
     toggle.setAttribute("aria-pressed", String(isDark));
     toggle.setAttribute(
       "aria-label",
