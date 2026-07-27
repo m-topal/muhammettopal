@@ -11629,3 +11629,146 @@ html[data-theme="dark"] .language-menu-top .language-panel a,
 html[data-theme="dark"] .language-menu-top .language-panel span {
   color: var(--text) !important;
 }
+/* Independent background-color picker */
+
+.utility-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.background-picker {
+  position: relative;
+  z-index: 5200;
+}
+
+.background-picker > summary {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  opacity: 0.78;
+}
+
+.background-picker > summary::-webkit-details-marker {
+  display: none;
+}
+
+.background-picker > summary:hover,
+.background-picker > summary:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.background-picker-icon {
+  width: 13px;
+  height: 13px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0 42%,
+      currentColor 43% 57%,
+      transparent 58% 100%
+    );
+}
+
+.background-picker-panel {
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 0;
+  width: 190px;
+  padding: 13px;
+  border: 1px solid rgba(42, 54, 66, 0.12);
+  border-radius: 14px;
+  background: rgba(251, 250, 247, 0.68);
+  box-shadow: none;
+  backdrop-filter: blur(14px) saturate(1.04);
+  -webkit-backdrop-filter: blur(14px) saturate(1.04);
+  font-family: var(--sans);
+}
+
+.background-picker-panel label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.background-color-input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.background-color-swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-top: 11px;
+}
+
+.background-color-swatches button {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid rgba(80, 90, 100, 0.28);
+  border-radius: 6px;
+  background: var(--swatch);
+  cursor: pointer;
+}
+
+.background-color-swatches button:hover,
+.background-color-swatches button:focus-visible {
+  transform: scale(1.1);
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.background-color-reset {
+  width: 100%;
+  margin-top: 12px;
+  padding: 7px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+html[data-theme="dark"] .background-picker > summary {
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .background-picker-panel {
+  background: rgba(11, 22, 36, 0.68);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+html[data-theme="dark"] .background-picker-panel label,
+html[data-theme="dark"] .background-color-reset {
+  color: var(--ink);
+}
+
+/* Custom color changes only the page background */
+html.has-custom-background,
+html.has-custom-background body,
+html.has-custom-background .site-shell {
+  background-color: var(--custom-page-background) !important;
+}
