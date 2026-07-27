@@ -11768,9 +11768,12 @@ html[data-theme="dark"] .background-color-reset {
 
 /* Custom color changes only the page background */
 html.has-custom-background,
-html.has-custom-background body,
-html.has-custom-background .site-shell {
+html.has-custom-background body {
   background-color: var(--custom-page-background) !important;
+}
+
+html.has-custom-background .site-shell {
+  background: transparent !important;
 }
 /* Background color picker */
 
