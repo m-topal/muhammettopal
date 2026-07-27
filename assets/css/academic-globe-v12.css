@@ -3427,3 +3427,22 @@ html[data-theme="dark"] .academic-mountain-art-footer img {
   filter: none !important;
   mix-blend-mode: normal !important;
 }
+/* Language panel, translucent like the navigation */
+
+.language-menu-top .language-panel {
+  background: rgba(251, 250, 247, 0.54) !important;
+  border-color: rgba(42, 54, 66, 0.10) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(12px) saturate(1.02) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.02) !important;
+}
+
+html[data-theme="dark"] .language-menu-top .language-panel {
+  background: rgba(11, 22, 36, 0.54) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-theme="dark"] .language-menu-top .language-panel a,
+html[data-theme="dark"] .language-menu-top .language-panel span {
+  color: #dce2e8 !important;
+}
