@@ -2340,3 +2340,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") closeQr();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".theme-toggle");
+  const icon = document.querySelector(".theme-toggle-icon");
+
+  if (!toggle || !icon) return;
+
+  const applyTheme = (theme) => {
+    const isDark = theme === "dark";
+
+    document.documentElement.setAttribute("data-theme", theme);
+
+    icon.textContent = isDark ? "☀" : "☾";
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+  };
+
+  const savedTheme = localStorage.getItem("site-theme") || "light";
+  applyTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    const currentTheme =
+      document.documentElement.getAttribute("data-theme") || "light";
+
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+    localStorage.setItem("site-theme", nextTheme);
+    applyTheme(nextTheme);
+  });
+});
