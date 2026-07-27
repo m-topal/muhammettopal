@@ -11451,3 +11451,16 @@ html[data-theme="dark"] .contact-page .message-character-count {
     color: #fff !important;
   }
 }
+/* Dark mode: suppress the globe's pale glow behind the text */
+
+html[data-theme="dark"] #academicWorldScene {
+  opacity: 0.22 !important;
+  filter: brightness(0.38) contrast(1.35) !important;
+  mix-blend-mode: normal !important;
+}
+
+html[data-theme="dark"] #academicGlobe,
+html[data-theme="dark"] #academicGlobe canvas {
+  background: transparent !important;
+  box-shadow: none !important;
+}
