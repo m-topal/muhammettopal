@@ -3353,3 +3353,31 @@ html {
     display: none !important;
   }
 }
+/* Dark mode: remove text mist and restore mountain lines */
+
+html[data-theme="dark"] .home-intro::before,
+html[data-theme="dark"] .about-dual-column::before,
+html[data-theme="dark"] .research-continuous-intro::before,
+html[data-theme="dark"] .teaching-continuous-intro::before,
+html[data-theme="dark"] .research-scroll-section::before,
+html[data-theme="dark"] .teaching-scroll-section::before,
+html[data-theme="dark"] .prose::before,
+html[data-theme="dark"] .post-content::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Make top and footer mountain drawings visible in dark mode */
+html[data-theme="dark"] .academic-mountain-art-top img,
+html[data-theme="dark"] .academic-mountain-art-footer img {
+  mix-blend-mode: screen !important;
+  filter: grayscale(1) invert(1) contrast(1.25) brightness(1.25) !important;
+}
+
+html[data-theme="dark"] .academic-mountain-art-top img {
+  opacity: 0.38 !important;
+}
+
+html[data-theme="dark"] .academic-mountain-art-footer img {
+  opacity: 0.44 !important;
+}
