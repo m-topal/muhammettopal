@@ -2378,6 +2378,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const colorInput = document.querySelector("#siteBackgroundColor");
   const swatches = document.querySelectorAll("[data-background-color]");
   const resetButton = document.querySelector(".background-color-reset");
+  const themeToggle = document.querySelector(".theme-toggle");
 
   if (!picker || !colorInput || !resetButton) return;
 
@@ -2386,6 +2387,13 @@ document.addEventListener("DOMContentLoaded", () => {
     root.classList.add("has-custom-background");
     colorInput.value = color;
     localStorage.setItem("site-background-color", color);
+  };
+
+  const restoreThemeBackground = () => {
+    root.style.removeProperty("--custom-page-background");
+    root.classList.remove("has-custom-background");
+    localStorage.removeItem("site-background-color");
+    picker.removeAttribute("open");
   };
 
   const savedColor = localStorage.getItem("site-background-color");
@@ -2400,17 +2408,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   swatches.forEach((swatch) => {
     swatch.addEventListener("click", () => {
-      const color = swatch.dataset.backgroundColor;
-      applyBackgroundColor(color);
+      applyBackgroundColor(swatch.dataset.backgroundColor);
     });
   });
 
-  resetButton.addEventListener("click", () => {
-    root.style.removeProperty("--custom-page-background");
-    root.classList.remove("has-custom-background");
-    localStorage.removeItem("site-background-color");
-    picker.removeAttribute("open");
-  });
+  resetButton.addEventListener("click", restoreThemeBackground);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", restoreThemeBackground);
+  }
 
   document.addEventListener("click", (event) => {
     if (!picker.contains(event.target)) {
