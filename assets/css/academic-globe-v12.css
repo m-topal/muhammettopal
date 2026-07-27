@@ -3381,3 +3381,7 @@ html[data-theme="dark"] .academic-mountain-art-top img {
 html[data-theme="dark"] .academic-mountain-art-footer img {
   opacity: 0.44 !important;
 }
+html[data-theme="dark"] .academic-globe {
+  opacity: 0.18 !important;
+  filter: grayscale(0.25) brightness(0.55) contrast(1.1) !important;
+}
