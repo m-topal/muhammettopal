@@ -11779,3 +11779,6 @@ html.has-custom-background .site-shell {
   background: rgba(11, 22, 36, 0.82);
   border-color: rgba(255, 255, 255, 0.14);
 }
+html[data-theme="dark"] .site-name {
+  color: #f3efe7 !important;
+}
