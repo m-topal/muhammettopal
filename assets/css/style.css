@@ -11307,3 +11307,99 @@ main .nav-directory-card {
   -webkit-text-stroke: 0 !important;
   transform: scaleX(-1) scale(0.92) !important;
 }
+/* Minimal light and dark mode toggle */
+
+.utility-right {
+  gap: 14px !important;
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle-icon {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+  transform: rotate(-12deg) scale(1.08);
+  opacity: 0.65;
+}
+
+/* Dark mode colors */
+
+html[data-theme="dark"] {
+  --bg: #111514;
+  --soft: #181d1c;
+  --ink: #f1f1ec;
+  --text: #deded8;
+  --muted: #a4aaa7;
+  --line: #343b39;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .site-shell {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .nav-wrap,
+html[data-theme="dark"] .sticky-nav {
+  background: rgba(17, 21, 20, 0.96) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .nav.simplified-nav,
+html[data-theme="dark"] .nav.simplified-nav > a,
+html[data-theme="dark"] .mobile-nav-name,
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .utility-link,
+html[data-theme="dark"] .language-menu summary {
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .language-panel,
+html[data-theme="dark"] .qr-share-card,
+html[data-theme="dark"] .blog-card,
+html[data-theme="dark"] .option-card,
+html[data-theme="dark"] .teaching-course-card,
+html[data-theme="dark"] .accordion-trigger {
+  background: var(--soft) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] img {
+  opacity: 0.92;
+}
+
+html[data-theme="dark"] .translation-symbol span {
+  background: var(--bg) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .mobile-menu-toggle span {
+  background: var(--ink) !important;
+}
+
+html[data-theme="dark"] .nav-wrap.menu-open,
+html[data-theme="dark"] .nav-wrap.menu-open .nav.simplified-nav {
+  background: rgba(17, 21, 20, 0.60) !important;
+}
