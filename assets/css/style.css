@@ -11464,3 +11464,48 @@ html[data-theme="dark"] #academicGlobe canvas {
   background: transparent !important;
   box-shadow: none !important;
 }
+/* Final dark-mode fixes */
+
+/* Let the header mountains remain visible through the central site area */
+html[data-theme="dark"] .site-shell {
+  background: transparent !important;
+}
+
+/* Attach button */
+html[data-theme="dark"] .contact-page .message-toolbar-attach {
+  background: transparent !important;
+  color: #f1f1ec !important;
+  border-color: rgba(241, 241, 236, 0.6) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .contact-page .message-toolbar-attach:hover,
+html[data-theme="dark"] .contact-page .message-toolbar-attach:focus-within {
+  background: rgba(241, 241, 236, 0.1) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Book an Appointment button */
+html[data-theme="dark"]
+  .contact-page
+  .appointment-widget-compact
+  .appointment-book-button {
+  background: transparent !important;
+  color: #f1f1ec !important;
+  border-color: rgba(241, 241, 236, 0.6) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"]
+  .contact-page
+  .appointment-widget-compact
+  .appointment-book-button:hover,
+html[data-theme="dark"]
+  .contact-page
+  .appointment-widget-compact
+  .appointment-book-button:focus {
+  background: rgba(241, 241, 236, 0.1) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
