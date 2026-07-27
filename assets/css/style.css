@@ -11598,3 +11598,15 @@ body[data-page="publications"] .accordion-trigger .accordion-title {
     line-height: 1.25 !important;
   }
 }
+/* Dark mode: remove white areas from presentation image cards */
+
+html[data-theme="dark"] .presentation-gallery .slide {
+  background: var(--soft) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .presentation-gallery .slide-caption {
+  background: var(--soft) !important;
+  color: var(--muted) !important;
+  border-top-color: var(--line) !important;
+}
