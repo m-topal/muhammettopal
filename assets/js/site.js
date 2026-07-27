@@ -2375,18 +2375,17 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const picker = document.querySelector(".background-picker");
-  const colorInput = document.querySelector("#siteBackgroundColor");
   const swatches = document.querySelectorAll("[data-background-color]");
   const resetButton = document.querySelector(".background-color-reset");
   const themeToggle = document.querySelector(".theme-toggle");
 
-  if (!picker || !colorInput || !resetButton) return;
+  if (!picker || !resetButton) return;
 
   const applyBackgroundColor = (color) => {
     root.style.setProperty("--custom-page-background", color);
     root.classList.add("has-custom-background");
-    colorInput.value = color;
     localStorage.setItem("site-background-color", color);
+    picker.removeAttribute("open");
   };
 
   const restoreThemeBackground = () => {
@@ -2401,10 +2400,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedColor) {
     applyBackgroundColor(savedColor);
   }
-
-  colorInput.addEventListener("input", () => {
-    applyBackgroundColor(colorInput.value);
-  });
 
   swatches.forEach((swatch) => {
     swatch.addEventListener("click", () => {
