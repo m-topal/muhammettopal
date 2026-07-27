@@ -3385,3 +3385,45 @@ html[data-theme="dark"] .academic-globe {
   opacity: 0.18 !important;
   filter: grayscale(0.25) brightness(0.55) contrast(1.1) !important;
 }
+/* Final dark-mode corrections */
+
+/* Contact action buttons */
+html[data-theme="dark"] .contact-message-panel button,
+html[data-theme="dark"] .contact-message-panel .button,
+html[data-theme="dark"] .contact-message-panel label[for*="file"],
+html[data-theme="dark"] .appointment-widget button,
+html[data-theme="dark"] .appointment-widget .button,
+html[data-theme="dark"] .appointment-widget a.button {
+  background: transparent !important;
+  color: #f1f1ec !important;
+  border-color: rgba(241, 241, 236, 0.55) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .contact-message-panel button:hover,
+html[data-theme="dark"] .contact-message-panel .button:hover,
+html[data-theme="dark"] .contact-message-panel label[for*="file"]:hover,
+html[data-theme="dark"] .appointment-widget button:hover,
+html[data-theme="dark"] .appointment-widget .button:hover,
+html[data-theme="dark"] .appointment-widget a.button:hover {
+  background: rgba(241, 241, 236, 0.10) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Apply the light-line treatment to the entire mountain layer.
+   This also works when mobile uses a background image. */
+html[data-theme="dark"] .academic-mountain-art-top,
+html[data-theme="dark"] .academic-mountain-art-footer {
+  opacity: 0.42 !important;
+  filter: grayscale(1) invert(1) contrast(1.35) brightness(1.35) !important;
+  mix-blend-mode: screen !important;
+}
+
+/* Prevent the image itself from being inverted twice */
+html[data-theme="dark"] .academic-mountain-art-top img,
+html[data-theme="dark"] .academic-mountain-art-footer img {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
