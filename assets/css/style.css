@@ -11403,3 +11403,34 @@ html[data-theme="dark"] .nav-wrap.menu-open,
 html[data-theme="dark"] .nav-wrap.menu-open .nav.simplified-nav {
   background: rgba(17, 21, 20, 0.60) !important;
 }
+/* Dark mode: remove white clouds and white counter background */
+
+html[data-theme="dark"] main figure,
+html[data-theme="dark"] main .creative-breakout-figure,
+html[data-theme="dark"] main .research-inline-figure,
+html[data-theme="dark"] main .about-dual-image,
+html[data-theme="dark"] main .about-breakout-library,
+html[data-theme="dark"] main .extra-breakout-workshop,
+html[data-theme="dark"] main .certificate-breakout-photo,
+html[data-theme="dark"] main .center-image-middle,
+html[data-theme="dark"] main .teaching-slider-frame,
+html[data-theme="dark"] main .teaching-course-card,
+html[data-theme="dark"] main .certificate-detail-card {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Keep image captions dark instead of white */
+html[data-theme="dark"] main figcaption,
+html[data-theme="dark"] main .slide-caption {
+  background: var(--soft) !important;
+  color: var(--muted) !important;
+  border-color: var(--line) !important;
+}
+
+/* Remove the white background behind the 1000-character counter */
+.contact-page .message-character-count,
+html[data-theme="dark"] .contact-page .message-character-count {
+  background: transparent !important;
+  box-shadow: none !important;
+}
