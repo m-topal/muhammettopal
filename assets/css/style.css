@@ -11509,3 +11509,40 @@ html[data-theme="dark"]
   color: #fff !important;
   border-color: #fff !important;
 }
+/* Dark mode: keep publication and presentation rows transparent */
+
+html[data-theme="dark"] .accordion,
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .accordion-trigger,
+html[data-theme="dark"] .accordion-panel,
+html[data-theme="dark"] .publication-trigger,
+html[data-theme="dark"] .publication-entry,
+html[data-theme="dark"] .publication-list {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Keep only subtle divider lines between entries */
+html[data-theme="dark"] .accordion-item,
+html[data-theme="dark"] .publication-entry {
+  border-color: rgba(220, 226, 232, 0.12) !important;
+}
+/* Dark mode: readable text inside opened accordions */
+
+html[data-theme="dark"] .accordion-item.open .accordion-panel,
+html[data-theme="dark"] .accordion-item.open .accordion-panel p,
+html[data-theme="dark"] .accordion-item.open .accordion-meta,
+html[data-theme="dark"] .accordion-item.open .pub-reference,
+html[data-theme="dark"] .accordion-panel,
+html[data-theme="dark"] .accordion-panel p,
+html[data-theme="dark"] .accordion-meta,
+html[data-theme="dark"] .pub-reference {
+  color: #b9c4cf !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+
+html[data-theme="dark"] .accordion-panel a {
+  color: #dce6ef !important;
+}
