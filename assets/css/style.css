@@ -11577,3 +11577,24 @@ html[data-theme="dark"] .publication-entry .accordion-panel a {
   color: #f2f4f6 !important;
   opacity: 1 !important;
 }
+#presentations .accordion-trigger .accordion-title,
+.presentations-page .accordion-trigger .accordion-title,
+body[data-page="presentations"] .accordion-trigger .accordion-title,
+#publications .accordion-trigger .accordion-title,
+.publications-page .accordion-trigger .accordion-title,
+body[data-page="publications"] .accordion-trigger .accordion-title {
+  font-size: clamp(20px, 2.2vw, 24px) !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 900px) {
+  #presentations .accordion-trigger .accordion-title,
+  .presentations-page .accordion-trigger .accordion-title,
+  body[data-page="presentations"] .accordion-trigger .accordion-title,
+  #publications .accordion-trigger .accordion-title,
+  .publications-page .accordion-trigger .accordion-title,
+  body[data-page="publications"] .accordion-trigger .accordion-title {
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+  }
+}
