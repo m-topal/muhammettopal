@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Extra Curricular
-permalink: /extra-curricular/
+permalink: /extracurricular/
 description: Extra curricular activities and diversions.
 ---
 <article class="page wide directory-page extra-directory-page">
