@@ -5,4 +5,5 @@ url: "https://muhammettopal.com"
 baseurl: ""
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-plugins: []
+plugins:
+  - jekyll-sitemap
