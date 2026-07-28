@@ -11789,3 +11789,81 @@ html[data-theme="dark"] .name .first-name {
 html[data-theme="dark"] .name .surname {
   color: #ffffff !important;
 }
+/* Dark mode corrections for captions, blog controls, and search forms */
+
+/* Service and presentation image captions */
+html[data-theme="dark"] .presentation-gallery .slide,
+html[data-theme="dark"] .presentation-gallery .slide-caption,
+html[data-theme="dark"] .caption-gallery figure,
+html[data-theme="dark"] .caption-gallery figcaption {
+  background: var(--soft) !important;
+  color: var(--muted) !important;
+  border-color: var(--line) !important;
+}
+
+/* Blog Comment and Share buttons */
+html[data-theme="dark"] .blog-page .social-action-button,
+html[data-theme="dark"] .blog-page .social-actions a.social-action-button,
+html[data-theme="dark"] .blog-page .social-actions button.social-action-button,
+html[data-theme="dark"] .post-page .social-action-button,
+html[data-theme="dark"] .post-page .social-actions a.social-action-button,
+html[data-theme="dark"] .post-page .social-actions button.social-action-button {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: rgba(220, 226, 232, 0.38) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .blog-page .social-action-button:hover,
+html[data-theme="dark"] .blog-page .social-action-button:focus-visible,
+html[data-theme="dark"] .blog-page .social-actions a.social-action-button:hover,
+html[data-theme="dark"] .blog-page .social-actions button.social-action-button:hover,
+html[data-theme="dark"] .post-page .social-action-button:hover,
+html[data-theme="dark"] .post-page .social-action-button:focus-visible {
+  background: rgba(220, 226, 232, 0.08) !important;
+  color: var(--ink) !important;
+  border-color: var(--ink) !important;
+}
+
+/* Blog search box */
+html[data-theme="dark"] .blog-page .blog-advanced-tools {
+  background: rgba(17, 31, 48, 0.72) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .blog-page .advanced-blog-grid input,
+html[data-theme="dark"] .blog-page .advanced-blog-grid select {
+  background: rgba(11, 22, 36, 0.56) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .blog-page .advanced-blog-grid input::placeholder {
+  color: var(--muted) !important;
+  opacity: 1 !important;
+}
+
+/* Advanced Search page */
+html[data-theme="dark"] .site-search-box {
+  background: rgba(17, 31, 48, 0.72) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .site-search-box input,
+html[data-theme="dark"] .advanced-search-grid input,
+html[data-theme="dark"] .advanced-search-grid select {
+  background: rgba(11, 22, 36, 0.56) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .site-search-box input::placeholder,
+html[data-theme="dark"] .advanced-search-grid input::placeholder {
+  color: var(--muted) !important;
+  opacity: 1 !important;
+}
+
+/* Calendar icons and dropdown controls remain visible */
+html[data-theme="dark"] input[type="date"] {
+  color-scheme: dark;
+}
