@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.url == '/' %}Muhammet Topal: Academic Portfolio and Personal Blog{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.url == '/' %}Muhammet Topal is a historian and PhD candidate specializing in Ottoman intellectual history, political thought, education, and public intellectual life.{% else %}Academic Portfolio and Personal Blog of Muhammet Topal.{% endif %}">  {% if page.youtube_id %}
+<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.url == '/' %}Muhammet Topal is a historian and PhD candidate specializing in Ottoman intellectual history, political thought, hsitorical sociology of knowledge, and public intellectual life.{% else %}Academic Portfolio and Personal Blog of Muhammet Topal.{% endif %}">  {% if page.youtube_id %}
     {% assign social_image = "https://img.youtube.com/vi/" | append: page.youtube_id | append: "/maxresdefault.jpg" %}
   {% elsif page.image contains "http" %}
     {% assign social_image = page.image %}
