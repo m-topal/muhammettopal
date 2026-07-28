@@ -11867,3 +11867,9 @@ html[data-theme="dark"] .advanced-search-grid input::placeholder {
 html[data-theme="dark"] input[type="date"] {
   color-scheme: dark;
 }
+html[data-theme="dark"] .extracurricular-page .extra-breakout-workshop,
+html[data-theme="dark"] .extracurricular-page .extra-breakout-workshop figcaption {
+  background: var(--soft) !important;
+  color: var(--muted) !important;
+  border-color: var(--line) !important;
+}
