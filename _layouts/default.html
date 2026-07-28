@@ -15,7 +15,7 @@
     {% assign social_image = '/assets/topal-wordmark-white-bg.png' | absolute_url %}
     {% assign social_image_alt = '/assets/img/main-headshot.jpg' | absolute_url %}
   {% endif %}
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
+  <meta property="og:title" content="{% if page.url == '/' %}Muhammet Topal: Academic Portfolio and Personal Blog{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta property="og:image" content="{{ social_image }}">
   <meta property="og:image:secure_url" content="{{ social_image }}">
@@ -28,8 +28,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Muhammet Topal">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
+<meta name="twitter:title" content="{% if page.url == '/' %}Muhammet Topal: Academic Portfolio and Personal Blog{% elsif page.title %}{{ page.title }} | Muhammet Topal{% else %}Muhammet Topal{% endif %}">  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Academic Portfolio and Personal Blog{% endif %}">
   <meta name="twitter:image" content="{{ social_image }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=standard-v14' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/academic-globe-v12.css' | relative_url }}">
