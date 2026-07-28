@@ -52,6 +52,29 @@
 }
 </script>
 {% endif %}
+{% if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammet Topal",
+  "url": "{{ '/' | absolute_url }}",
+  "jobTitle": "Historian and PhD Candidate",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Arizona"
+  },
+  "knowsAbout": [
+    "Ottoman intellectual history",
+    "Political thought",
+    "Middle Eastern history",
+    "History of education",
+    "Public intellectuals"
+  ]
+}
+</script>
+{% endif %}
+
 </head>
 <body>
   <div id="academicTopMap" class="academic-top-map" aria-hidden="true"></div>
