@@ -11952,10 +11952,3 @@ body.dark-mode .wordmark-dark {
 html[data-theme="dark"] .home-header-wordmark {
   content: url("../topal-wordmark-dark.png");
 }
-html[data-theme="dark"] .home-header-wordmark {
-  content: url("../topal-wordmark-dark.png");
-  width: 90% !important;
-  height: auto !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
