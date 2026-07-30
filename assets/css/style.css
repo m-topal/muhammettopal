@@ -11954,6 +11954,8 @@ html[data-theme="dark"] .home-header-wordmark {
 }
 html[data-theme="dark"] .home-header-wordmark {
   content: url("../topal-wordmark-dark.png");
-  transform: scale(0.9);
-  transform-origin: center;
+  width: 90% !important;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
