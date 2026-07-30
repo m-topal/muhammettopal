@@ -11873,3 +11873,59 @@ html[data-theme="dark"] .extracurricular-page .extra-breakout-workshop figcaptio
   color: var(--muted) !important;
   border-color: var(--line) !important;
 }
+/* Dark mode: all teaching, course, syllabus, and CV popups */
+
+html[data-theme="dark"] .course-modal-dialog,
+html[data-theme="dark"] .syllabus-modal-dialog,
+html[data-theme="dark"] .cv-modal-dialog {
+  background: var(--soft) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .48) !important;
+}
+
+html[data-theme="dark"] .course-modal-text,
+html[data-theme="dark"] .course-modal-text p,
+html[data-theme="dark"] .course-modal-text h2,
+html[data-theme="dark"] .course-modal-text h3,
+html[data-theme="dark"] .syllabus-modal-header,
+html[data-theme="dark"] .syllabus-modal-header h3,
+html[data-theme="dark"] .cv-modal-header,
+html[data-theme="dark"] .cv-modal-header h2 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .course-modal-close,
+html[data-theme="dark"] .cv-modal-close {
+  background: var(--bg) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .course-modal-close:hover,
+html[data-theme="dark"] .course-modal-close:focus-visible,
+html[data-theme="dark"] .cv-modal-close:hover,
+html[data-theme="dark"] .cv-modal-close:focus-visible {
+  background: rgba(220, 226, 232, .08) !important;
+}
+
+html[data-theme="dark"] .course-syllabus-scroll,
+html[data-theme="dark"] .cv-mobile-pages {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+html[data-theme="dark"] .course-modal-dialog a,
+html[data-theme="dark"] .syllabus-modal-dialog a,
+html[data-theme="dark"] .cv-modal-dialog a {
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .course-modal-dialog .course-card-action,
+html[data-theme="dark"] .syllabus-modal-dialog .course-card-action,
+html[data-theme="dark"] .cv-modal-actions a {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: rgba(220, 226, 232, .42) !important;
+}
