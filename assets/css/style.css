@@ -11929,3 +11929,23 @@ html[data-theme="dark"] .cv-modal-actions a {
   color: var(--text) !important;
   border-color: rgba(220, 226, 232, .42) !important;
 }
+.wordmark-dark {
+  display: none;
+}
+
+body.dark-mode .wordmark-light {
+  display: none;
+}
+
+body.dark-mode .wordmark-dark {
+  display: block;
+}
+.site-header-wordmark-block {
+  position: relative;
+}
+
+.site-header-wordmark-block .home-header-wordmark {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
