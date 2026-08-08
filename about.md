@@ -104,11 +104,6 @@ permalink: /about/
     </figure>
 
     <figure class="js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Fishing trip with my partner and her dog Clío">
-      <figcaption>Fishing trip with my partner and her dog Clío.</figcaption>
-    </figure>
-
-    <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
     </figure>
@@ -122,16 +117,6 @@ permalink: /about/
 
 
 <div class="gallery-grid caption-gallery">
-
-<figure class="js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="In Truth or Consequences, New Mexico with my partner">
-  <figcaption>In Truth or Consequences, New Mexico with my partner.</figcaption>
-</figure>
-
-<figure class="js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="In White Sands National Park with my partner">
-  <figcaption>In White Sands National Park with my partner.</figcaption>
-</figure>
 
 </div>
   </section>
