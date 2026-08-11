@@ -53,11 +53,11 @@ permalink: /about/
           <h2 id="aboutCvModalTitle">Curriculum Vitae</h2>
         </div>
         <div class="cv-modal-actions">
-          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
-          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}" download>Download PDF</a>
+          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_August.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
+          <a href="{{ '/assets/cv/Muhammet_Topal_CV_2026_August.pdf' | relative_url }}" download>Download PDF</a>
         </div>
       </div>
-      <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_July.pdf' | relative_url }}#toolbar=1" title="Muhammet Topal CV PDF"></iframe>
+      <iframe class="cv-modal-frame" src="{{ '/assets/cv/Muhammet_Topal_CV_2026_August.pdf' | relative_url }}#toolbar=1" title="Muhammet Topal CV PDF"></iframe>
       <div class="cv-mobile-pages" aria-label="Muhammet Topal CV pages">
         <img src="{{ '/assets/cv/pages/cv-page-1.jpg' | relative_url }}" alt="Curriculum Vitae page 1">
         <img src="{{ '/assets/cv/pages/cv-page-2.jpg' | relative_url }}" alt="Curriculum Vitae page 2">
