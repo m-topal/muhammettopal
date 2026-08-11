@@ -100,7 +100,7 @@ permalink: /about/
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Canoeing with our dog">
-      <figcaption>Canoeing with my partner's dog.</figcaption>
+      <figcaption>Canoeing with my partner's dog, Clìo.</figcaption>
     </figure>
 
     <figure class="js-lightbox-figure">
