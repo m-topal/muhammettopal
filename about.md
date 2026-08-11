@@ -87,18 +87,6 @@ permalink: /about/
 
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing at Mt. Lemmon">
-      <figcaption>Mt. Lemmon rock climbing.</figcaption>
-    </figure>
-
-    <figure class="js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
-      <figcaption>Feeding the squirrels in the Grand Canyon.</figcaption>
-    </figure>
-  </div>
-
-  <div class="gallery-grid caption-gallery">
-    <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="White Sands">
       <figcaption>White Sands, New Mexico with my partner.</figcaption>
     </figure>
@@ -118,6 +106,18 @@ permalink: /about/
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
       <figcaption>My cats Mona and Rosa.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery-grid caption-gallery">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/climbing.jpg' | relative_url }}" alt="Rock climbing at Mt. Lemmon">
+      <figcaption>Mt. Lemmon rock climbing.</figcaption>
+    </figure>
+
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/squirrel.jpg' | relative_url }}" alt="Feeding squirrels in the Grand Canyon">
+      <figcaption>Feeding the squirrels in the Grand Canyon.</figcaption>
     </figure>
   </div>
 
