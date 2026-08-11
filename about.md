@@ -100,19 +100,19 @@ permalink: /about/
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="White Sands">
-      <figcaption>White Sands, New Mexico.</figcaption>
+      <figcaption>White Sands, New Mexico with my partner.</figcaption>
     </figure>
 
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="Truth or Consequences">
-      <figcaption>Truth or Consequences, New Mexico.</figcaption>
+      <figcaption>Truth or Consequences, New Mexico with my partner.</figcaption>
     </figure>
   </div>
 
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Canoeing with our dog">
-      <figcaption>Canoeing with our dog.</figcaption>
+      <figcaption>Canoeing with my partner's dog.</figcaption>
     </figure>
 
     <figure class="js-lightbox-figure">
