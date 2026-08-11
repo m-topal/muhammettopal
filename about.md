@@ -97,6 +97,30 @@ permalink: /about/
     </figure>
   </div>
 
+  <div class="gallery-grid caption-gallery">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}" alt="White Sands">
+      <figcaption>White Sands, New Mexico.</figcaption>
+    </figure>
+
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}" alt="Truth or Consequences">
+      <figcaption>Truth or Consequences, New Mexico.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery-grid caption-gallery">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Canoeing with our dog">
+      <figcaption>Canoeing with our dog.</figcaption>
+    </figure>
+
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
+      <figcaption>My cats Mona and Rosa.</figcaption>
+    </figure>
+  </div>
+
   <div class="diversions-feature-grid">
     <figure class="diversions-feature-large js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/horse.jpg' | relative_url }}" alt="Riding a mustang named Sequoia in Tucson">
@@ -104,21 +128,10 @@ permalink: /about/
     </figure>
 
     <figure class="js-lightbox-figure">
-      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/cats-mona-rosa.jpg' | relative_url }}" alt="Mona and Rosa by the bookshelf">
-      <figcaption>My cats Mona and Rosa.</figcaption>
+      <img class="js-lightbox-image" src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
+      <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
     </figure>
-
-<figure class="js-lightbox-figure">
-  <img class="js-lightbox-image" src="{{ '/assets/img/diversions/mt-lemmon-first-top.jpeg' | relative_url }}" alt="My first time at the top of Mt. Lemmon">
-  <figcaption>My first time at the top of Mt. Lemmon.</figcaption>
-</figure>
-
   </div>
-
-
-<div class="gallery-grid caption-gallery">
-
-</div>
   </section>
 
 </article>
