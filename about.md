@@ -84,7 +84,21 @@ permalink: /about/
       <p class="home-links">For more, see <a href="{{ '/blog/' | relative_url }}">My Blog</a>.</p>
     </div>
   </div>
+  <div class="gallery-grid caption-gallery">
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image"
+           src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}"
+           alt="In Truth or Consequences, New Mexico">
+      <figcaption>In Truth or Consequences, New Mexico.</figcaption>
+    </figure>
 
+    <figure class="js-lightbox-figure">
+      <img class="js-lightbox-image"
+           src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}"
+           alt="In White Sands, New Mexico">
+      <figcaption>At White Sands National Park, New Mexico.</figcaption>
+    </figure>
+  </div>
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image" src="{{ '/assets/img/diversions/canoe-dog.jpg' | relative_url }}" alt="Canoeing with our dog">
