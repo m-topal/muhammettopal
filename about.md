@@ -87,14 +87,14 @@ permalink: /about/
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image"
-           src="{{ '/assets/img/diversions/Truth-or-Consequences.jpeg' | relative_url }}"
+           src="{{ '/assets/img/diversions/Truth-or-Consequence.jpeg' | relative_url }}"
            alt="In Truth or Consequences, New Mexico">
       <figcaption>In Truth or Consequences, New Mexico.</figcaption>
     </figure>
 
     <figure class="js-lightbox-figure">
       <img class="js-lightbox-image"
-           src="{{ '/assets/img/diversions/white-sands.jpeg' | relative_url }}"
+           src="{{ '/assets/img/diversions/white-sand.jpeg' | relative_url }}"
            alt="In White Sands, New Mexico">
       <figcaption>At White Sands National Park, New Mexico.</figcaption>
     </figure>
