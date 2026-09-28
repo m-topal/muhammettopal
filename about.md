@@ -107,6 +107,14 @@ permalink: /about/
       </video>
       <figcaption>Celebrating my birthday with my partner at the Sky Island Falconry in Tucson.</figcaption>
     </figure>
+
+    <figure class="js-lightbox-figure">
+    <img class="js-lightbox-image"
+         src="{{ '/assets/img/diversions/hawk-1.HEIC' | relative_url }}"
+         alt="At Sky Island Falconry in Tucson">
+    <figcaption>At Sky Island Falconry in Tucson.</figcaption>
+  </figure>
+</div>
     
   </div>
   <div class="gallery-grid caption-gallery">
