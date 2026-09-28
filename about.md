@@ -114,7 +114,6 @@ permalink: /about/
          alt="At Sky Island Falconry in Tucson">
     <figcaption>At Sky Island Falconry in Tucson.</figcaption>
   </figure>
-</div>
     
   </div>
   <div class="gallery-grid caption-gallery">
