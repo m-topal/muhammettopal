@@ -110,7 +110,7 @@ permalink: /about/
 
     <figure class="js-lightbox-figure">
     <img class="js-lightbox-image"
-         src="{{ '/assets/img/diversions/hawk-1.jpeg' | relative_url }}"
+         src="{{ '/assets/img/diversions/hawkk.jpg' | relative_url }}"
          alt="At Sky Island Falconry in Tucson">
     <figcaption>At Sky Island Falconry in Tucson.</figcaption>
   </figure>
