@@ -98,6 +98,16 @@ permalink: /about/
            alt="In White Sands, New Mexico">
       <figcaption>With my partner at White Sands National Park, New Mexico.</figcaption>
     </figure>
+
+        <figure>
+      <video controls playsinline preload="metadata"
+             style="width: 100%; height: auto; display: block;">
+        <source src="{{ '/assets/img/diversions/hawk.mp4' | relative_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Celebrating my birthday with my partner at the Sky Island Falconry in Tucson.</figcaption>
+    </figure>
+    
   </div>
   <div class="gallery-grid caption-gallery">
     <figure class="js-lightbox-figure">
