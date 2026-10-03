@@ -33,7 +33,7 @@ permalink: /about/
   <h1>Page Temporarily Unavailable</h1>
   <p>
 
-This page cannot be displayed at this time due to an issue processing uploaded mp4 content.
+This page cannot be displayed at this time due to an issue processing uploaded MP4 content.
 
 Please try again later.
 
