@@ -3,6 +3,45 @@ layout: default
 title: About Me
 permalink: /about/
 ---
+
+<!-- TEMPORARILY DISABLE ABOUT PAGE -->
+<style>
+  .about-page {
+    display: none !important;
+  }
+
+  .temporary-unavailable {
+    max-width: 760px;
+    margin: 120px auto;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .temporary-unavailable h1 {
+    margin-bottom: 18px;
+  }
+
+  .temporary-unavailable p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.75;
+  }
+</style>
+
+<section class="temporary-unavailable">
+  <p class="label">About Me</p>
+  <h1>Page Temporarily Unavailable</h1>
+  <p>
+
+This page cannot be displayed at this time due to an issue processing uploaded content.
+
+Please try again later.
+
+  </p>
+</section>
+<!-- END TEMPORARY DISABLE -->
+
+
 <article class="page wide about-page">
   <p class="label">About Me</p>
   <h1>About Me</h1>
