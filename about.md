@@ -4,6 +4,99 @@ title: About Me
 permalink: /about/
 ---
 
+
+<!-- SIMULATED IMAGE LOADING FAILURE -->
+<div id="image-loading-overlay">
+  <div class="loading-spinner"></div>
+  <p id="loading-status">Loading high-resolution images...</p>
+  <div class="loading-track">
+    <div id="loading-progress"></div>
+  </div>
+  <small id="loading-info">Downloading image assets...</small>
+</div>
+
+<style>
+#image-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.loading-spinner {
+  width: 27px;
+  height: 27px;
+  border: 3px solid #ddd;
+  border-top-color: #888;
+  border-radius: 50%;
+  animation: image-spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes image-spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-track {
+  width: 260px;
+  height: 4px;
+  background: #e5e5e5;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+#loading-progress {
+  width: 0%;
+  height: 100%;
+  background: #999;
+  transition: width 2s ease;
+}
+
+#loading-info {
+  color: #999;
+  font-size: 11px;
+}
+</style>
+
+<script>
+(function () {
+  let progress = 0;
+
+  const bar = document.getElementById("loading-progress");
+  const status = document.getElementById("loading-status");
+  const info = document.getElementById("loading-info");
+
+  const timer = setInterval(function () {
+    progress = Math.min(progress + Math.random() * 9, 94);
+    bar.style.width = progress + "%";
+
+    if (progress < 35) {
+      status.textContent = "Loading high-resolution images...";
+    } else if (progress < 65) {
+      status.textContent = "Processing large image files...";
+    } else if (progress < 90) {
+      status.textContent = "Waiting for image resources...";
+    } else {
+      status.textContent = "Image loading is taking longer than expected...";
+      info.textContent = "Waiting for server response...";
+    }
+
+    if (progress >= 94) {
+      clearInterval(timer);
+    }
+  }, 2500);
+})();
+</script>
+<!-- END SIMULATED LOADING -->
+
+
 <article class="page wide about-page">
   <p class="label">About Me</p>
   <h1>About Me</h1>
